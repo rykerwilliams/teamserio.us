@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "TSO @ All-American Warren - 2022.07.23"
+date:   2022-07-23 16:20:59 +0000
+author: Rajah James
+categories: 
+---
 12 Players gathered for the first time at All-American Cards and Comics, including 7 Seriousos. Some of us met for breakfast at the Mocha House. It was good :) 
 
 We played Swiss +1 rounds with no cut, with payout to T4. Here are the standings and archetypes.

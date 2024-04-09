@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Serious Champ - NA Vintage 2022"
+date:   2022-12-23 16:06:12 +0000
+author: Rajah James
+categories: 
+---
 **Intro**
 This write up is for me and also for my friends. It is very long and I don’t expect folks to get through the whole thing. I have broken it up so hopefully people can find the bits they are most interested in.
 

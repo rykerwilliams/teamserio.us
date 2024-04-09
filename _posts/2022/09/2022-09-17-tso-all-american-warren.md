@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "TSO @ All-American Warren - 2022.09.17"
+date:   2022-09-17 16:20:59 +0000
+author: Rajah James
+categories: 
+---
 **Summary**
 8 wizards gathered to battle for glory in  my 'birthday' Vintage! Paper Vintage is (hopefully) becoming more regular in NEO, with All-American Cards and Comics hosting us again, now for the second time. Big thanks to them as always!
 

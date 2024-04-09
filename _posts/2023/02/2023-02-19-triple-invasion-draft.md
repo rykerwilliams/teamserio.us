@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "'THE' Kyle Wells Triple Invasion Draft"
+date:   2023-02-19 16:06:12 +0000
+author: Rajah James
+categories: 
+---
 # "THE" Kyle Wells Triple Invasion Draft
 
 Did you know that a sealed Invasion box costs about $1100 as of 20 JAN 2023? Kyle Wells knows. 

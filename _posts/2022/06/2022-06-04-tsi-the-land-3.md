@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "TSI: The Land 3 - Mishra’s Twerkshop - 6/3, 6/4 2022"
+date:   2022-06-04 16:20:59 +0000
+author: Rajah James
+categories: 
+---
 TSI: The Land 3 - Mishra’s Twerkshop - 6/3, 6/4 2022
 
 We had 34 players signed up for the Vintage portion of TSI: The Land 3 - Mishra’s Twerkshop (vaccinations were required for attendance). 
