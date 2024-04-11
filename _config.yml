@@ -25,12 +25,73 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://teamserio.us" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+github_username:  rykerwilliams
+timezone: America/New_York
+og_image: assets/images/index/SeriousManaHR-blacklogo.png
+author:
+  name: Rajah James
+  avatar: https://avatars.githubusercontent.com/u/310221
+  location: Ohio, US
+  links:
+    - url: https://bsky.app/profile/cleverpseudonym.bsky.social
+      label: "My personal bsky"
+    - url: https://x.com/rykerwilliams
+      icon: "fab fa-twitter"
+      label: "My personal X"
+    - url: https://www.facebook.com/rajah.james
+      icon: "fab fa-facebook"
+      label: "My personal FB"
+search:
+  provider: lunr
+navbar:
+  style :  dual 
+  brand:
+    title:
+    img: "./assets/images/site/ohio.png"
+  nav:
+  - title: One-level link #Label
+    url: /url1/  #url
+  - title: Two-level link #Label
+    child:
+    - title: Second level first item
+      url: /url2-1
+    - title: Second level second item
+      url: /url2-2
+  - title: One-level link #Label
+    url: /url1/  #url
+footer:
+  copyright: "&copy; 2024 Team Serious"
+  links:
+    - label: "RSS"
+      icon: "fa fa-rss"
+      url:  "./atom.xml"
+    # - label: "Twitter"
+    #   icon: "fab fa-twitter"
+    #   url: https://twitter.com/
+    # - label: "Facebook"
+    #   icon: "fab fa-facebook"
+    #   url: https://www.facebook.com
+
+# Themeing Section
+chulapa-skin: 
+  skin   : twitter-dim
+
+# Chulapa Defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
 
 # Build settings
-theme: minima
+# theme: minima
+# theme: jekyll-theme-basically-basic
+# theme: bulma-clean-theme
+theme: chulapa-jekyll
 plugins:
   - jekyll-feed
 

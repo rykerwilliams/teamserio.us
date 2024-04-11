@@ -3,6 +3,7 @@ layout: post
 title:  "'THE' Kyle Wells Triple Invasion Draft"
 date:   2023-02-19 16:06:12 +0000
 author: Rajah James
+tags: draft
 categories: 
 ---
 # "THE" Kyle Wells Triple Invasion Draft
