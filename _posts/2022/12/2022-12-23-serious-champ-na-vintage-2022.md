@@ -1,9 +1,24 @@
 ---
-layout: post
+layout: default
 title:  "Serious Champ - NA Vintage 2022"
-date:   2022-12-23 16:06:12 +0000
-author: Rajah James
-categories: 
+date:    2022-12-23 16:06:12 +0000
+author:
+  name: Rajah James
+  avatar: https://avatars.githubusercontent.com/u/310221
+  location: Ohio, US
+  links:
+    - url: https://bsky.app/profile/cleverpseudonym.bsky.social
+      icon: "fab fa-bluesky"
+      label: "My personal bsky"
+    - url: https://x.com/rykerwilliams
+      icon: "fab fa-twitter"
+      label: "My personal X"
+    - url: https://www.facebook.com/rajah.james
+      icon: "fab fa-facebook"
+      label: "My personal FB"
+categories: event-report
+tags: vintage, eternal weekend
+include_on_feed: true
 ---
 **Intro**
 This write up is for me and also for my friends. It is very long and I don’t expect folks to get through the whole thing. I have broken it up so hopefully people can find the bits they are most interested in.

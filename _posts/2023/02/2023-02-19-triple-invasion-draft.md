@@ -1,11 +1,26 @@
 ---
-layout: post
+layout: default
 title:  "'THE' Kyle Wells Triple Invasion Draft"
 date:   2023-02-19 16:06:12 +0000
-author: Rajah James
-tags: draft
-categories: 
+author:
+  name: Rajah James
+  avatar: https://avatars.githubusercontent.com/u/310221
+  location: Ohio, US
+  links:
+    - url: https://bsky.app/profile/cleverpseudonym.bsky.social
+      icon: "fab fa-bluesky"
+      label: "My personal bsky"
+    - url: https://x.com/rykerwilliams
+      icon: "fab fa-twitter"
+      label: "My personal X"
+    - url: https://www.facebook.com/rajah.james
+      icon: "fab fa-facebook"
+      label: "My personal FB"
+categories: event-report
+tags: vintage, draft
+include_on_feed: true
 ---
+
 # "THE" Kyle Wells Triple Invasion Draft
 
 Did you know that a sealed Invasion box costs about $1100 as of 20 JAN 2023? Kyle Wells knows. 

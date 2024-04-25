@@ -1,0 +1,20 @@
+---
+layout: minimal
+title: 'Tag Page'
+subtitle: "Tag and Bag"
+excerpt: Latest news
+---
+<main class="container-lg pb-3 flex-fill">
+  <div class="row pt-2 mt-3">
+    <section class="col-md-8 offset-md-2">
+
+      {% assign tag_count = alldocs | map: 'tags' | count_by_item %}
+      {{- tag_count -}}
+      {% for t in tag_count %}
+      {{- t -}}
+      {% endfor %}
+      
+    </section>
+  </div>
+</main>
+

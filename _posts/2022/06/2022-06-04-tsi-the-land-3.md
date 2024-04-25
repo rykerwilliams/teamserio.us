@@ -8,6 +8,7 @@ author:
   location: Ohio, US
   links:
     - url: https://bsky.app/profile/cleverpseudonym.bsky.social
+      icon: "fab fa-bluesky"
       label: "My personal bsky"
     - url: https://x.com/rykerwilliams
       icon: "fab fa-twitter"
@@ -68,7 +69,7 @@ Top 8 after Swiss:
 2: Kevin Lewandoski
 3: Jacob Hilty
 4: Kai Schafroth
-5: 	Stuart Ziarnik
+5: Stuart Ziarnik
 6: Guhstin Dewey
 7: Bryan Hockey
 8: Bob Agra

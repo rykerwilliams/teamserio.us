@@ -1,17 +1,6 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
+theme: chulapa-jekyll
+
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -21,9 +10,7 @@
 title: TeamSerio.us
 email: we-do-not-have-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Web Home Of Team Serious.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://teamserio.us" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
@@ -43,16 +30,37 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
+
+# Search providers
+# Available free search engines:
+# - lunr https://lunrjs.com/
 search:
-  provider: lunr
+  provider              : lunr #Select a provider for enable search: lunr, algolia, google
+  label                 :  #default ["Search"] Text on navbar when search is enabled
+  landing_page          :  #default ["/search"] Link on navbar
+  lunr_maxwords         :  #default [30] lunr only - May slow down your site build
+
+comments:
+  provider:         #Use 'disqus' https://disqus.com/ or 'giscus' https://giscus.app/
+  disqus_shortname: #Your site id : check your address https://{{ disqus.shortname }}.disqus.com/admin/
+
+# Navbar:
+#   "brand" options would be set on the left side of your navbar
+#   "nav" would be set on the right side. Two-level nav links available
 navbar:
-  style :  dual 
+  style : dual 
   brand:
     title:
     img: "./assets/images/site/ohio.png"
   nav:
-  - title: One-level link #Label
-    url: /url1/  #url
+  - title: Blog #Label
+    url: /blog/  #url
+  - title   : Extras
+    child   :
+      - title : Tags
+        url   : /tags
+      - title : Categories
+        url   : /categories
   - title: Two-level link #Label
     child:
     - title: Second level first item
@@ -74,26 +82,73 @@ footer:
     #   icon: "fab fa-facebook"
     #   url: https://www.facebook.com
 
-# Themeing Section
-chulapa-skin: 
-  skin   : twitter-dim
+# C. Theme Settings
+# Google Fonts https://fonts.google.com/, add as many as you need
+googlefonts:
+ # - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
 
-# Chulapa Defaults
+# Theme and colors
+chulapa-skin:
+  skin   : twitter-dim
+  highlight   : "ZENBURN" #or any other name, default is 'DEFAULT' style
+  autothemer    :  false # Bool: Use autotheming
+  vars          :
+    primary     : lightskyblue #default ["#007bff"] - Bootstrap blue
+
+# D. Jekyll Defaults and collections: see https://jekyllrb.com/
+
+# Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
+paginate: 4
+paginate_path: "/blog/page:num/"
+paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
+
+# Collections https://jekyllrb.com/docs/step-by-step/09-collections/
+collections:
+  posts:
+    output: true
+    permalink : /blog/:year:month:day_:title
+collections_dir     :
+permalink           : /:year:month:day_:title/
+
+# Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
+
+# Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
   -
     scope:
       path: ""
     values:
       layout: "default"
-
+      header_type: "base"
+      include_on_search   : false
+      cloudtag_url        : /tags #This is where the link on tags would redirect
+      cloudcategory_url   : /categories #This is where the link on categories would redirect
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      header_type       : "post"
+      include_on_search : true
+      include_on_feed   : true
+      show_date         : true
+      show_related      : true
+      show_bottomnavs   : true
+      show_sociallinks  : true
+      show_comments     : true
+      show_tags         : true
+      show_categories   : true
+      show_author       : true
+      show_breadcrumb   : true
+      breadcrumb_list   :
+        - label: Blog
+          url: /blog
 
 # Build settings
-# theme: minima
-# theme: jekyll-theme-basically-basic
-# theme: bulma-clean-theme
-theme: chulapa-jekyll
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-include-cache
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -114,3 +169,31 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+include:
+ - _pages
+ - _plugins
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  footnote_backlink: '&uarr;'
+  entity_output: as_char
+  toc_levels: 2..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+ # Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
