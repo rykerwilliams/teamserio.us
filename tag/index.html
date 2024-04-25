@@ -8,12 +8,9 @@ excerpt: Latest news
   <div class="row pt-2 mt-3">
     <section class="col-md-8 offset-md-2">
 
-      {%- assign tag_count = posts | map: 'tags' | count_by_item -%}
-        {{- tag_count -}}
-      {%- assign init= 1 -%}
-      {{- init -}}
+      {% assign tag_count = site.documents | map: 'tags' | count_by_item %}
       {%- for t in tag_count -%}
-        {{- t -}}
+        {{ t[0] }} - {{ t[1] }}
       {%- endfor -%}
       
     </section>

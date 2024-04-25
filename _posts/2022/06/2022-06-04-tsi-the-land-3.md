@@ -17,7 +17,7 @@ author:
       icon: "fab fa-facebook"
       label: "My personal FB"
 categories: 
-tags: vintage, middle-school, invitational
+tags: vintage middle-school invitational
 include_on_feed: true
 ---
 TSI: The Land 3 - Mishra’s Twerkshop - 6/3, 6/4 2022
