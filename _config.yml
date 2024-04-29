@@ -1,5 +1,7 @@
 theme: chulapa-jekyll
-
+github: [metadata]
+ 
+repository: dieghernan/chulapa-jekyll-101
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -30,6 +32,15 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
+
+fa_version: #default ["6"] Use 6 or 5
+fa_kit_code: # Your FontAwesome kit code. If not provided a free hosted version (slower) will be loaded:  https://fontawesome.com/
+fa_v4_support: #Bool Add FontAwesome 4 support
+# Web tracking - Google services https://analytics.google.com/analytics/web/
+# gtag_id is the preferred option, see https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=en
+# analytics provided for backwards compatibility
+gtag_id                 :
+analytics_id   :
 
 # Search providers
 # Available free search engines:
@@ -143,9 +154,15 @@ defaults:
       breadcrumb_list   :
         - label: Blog
           url: /blog
+# XX. Other settings - no need to modify
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  blanklines: true
 
-# Build settings
 plugins:
+  - jekyll-github-metadata
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
@@ -158,17 +175,16 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - LICENSE
+  - README.md
+  - vendor
 
 include:
  - _pages
