@@ -1,7 +1,5 @@
-theme: chulapa-jekyll
-github: [metadata]
- 
-repository: dieghernan/chulapa-jekyll-101
+remote_theme: dieghernan/chulapa
+
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
