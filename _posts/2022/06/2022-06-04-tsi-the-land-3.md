@@ -25,7 +25,7 @@ include_on_feed: true
 We had 34 players signed up for the Vintage portion of TSI: The Land 3 - Mishraâ€™s Twerkshop (vaccinations were required for attendance). 
 
 #### Pictures
-![Pre Land Provisions](https://lh3.googleusercontent.com/pw/AM-JKLX6RSTPj7_pODf7SWJEDZwIbrtoUnJs5e-PHeF80Ei3k_c0SqaRix9Bjx4ohJ2YMsQ3i7HxpBzgq3IxgNkbkxoknXX_UXTaJY6xvMGezPYQWxEsm__1CjY46QfRpih3MzRL3idMLKEi4lmV8sfm8evM=w703-h937-no?authuser=0)
+![Pre Land Provisions](..\..\..\assets\images\2022\06\PXL_20220603_145732751.jpg)
 
 ![A Beacon of Hope - Driving In](https://lh3.googleusercontent.com/pw/AM-JKLU-hLYla6bdabw1J8yCmQxJp0eyVeRv-xcIbG339W9HMXTvMbr52Sh2NSB4c_8eV88TfIKr3-UPSJNCdzciLk87ZMMJt3QDJXS3lIfleVovWKfAW9fCrK8kYpiw31WEU4h1egtVoTJ820B6Qlw1hN87JA=w1250-h937-no?authuser=0)
 
@@ -35,7 +35,7 @@ We had 34 players signed up for the Vintage portion of TSI: The Land 3 - Mishraâ
 
 ![The View from the Island](https://lh3.googleusercontent.com/pw/AM-JKLUL5ov3HW8e-fvtmYrAk6vu-tZMH5dK7C94Q6P3lhsW7WpxngkSUx6vTSH9w7ZV_hgm1-LJX__wG9OcapIekyCnK7NF0KngvMgw_98byx96vP2uN3mrITuBQwEfzl1O762VqFw5C0bFFC5KjBHubhtM=w1250-h937-no?authuser=0)
 
-![Do the Hard Dew](https://lh3.googleusercontent.com/pw/AM-JKLUVoPqzVXydIq3iuSVzzPjtYPdFesHWcaj8wkHi0mqIkQofYQ2j105u7F216NnIkUtZJwtY_WqQ0mODGrlQIRmAOwA7NeBP3L0PgoMFO-ChZgdF4q9H0FnyeIBPJ17Z5sSXYTWhYgg7XRNa1BOdVkVSKQ=w703-h937-no?authuser=0)
+![Do the Hard Dew](..\..\..\assets\images\2022\06\67599727747__A3C60E62-A5F0-4540-BABC-0845638A53B0.jpg)
 
 [<img src="https://lh3.googleusercontent.com/pw/AM-JKLU-9rRvZOTWds5GmGpaw5oZdyepRMU19yzYE5RgvlGAkQK84cQSYNkCxym7_DjEKgaWsmCK88xudMKGT-xX2YAPZ0ST-teWlXKrV0Obnt4YK9az92n1hv3-ZVgoHk5s9cUm2a-n9jzG-6t0SUs2qcJP=w660-h880-no?authuser=0">](https://www.laureltwist.com/cookies)
 
