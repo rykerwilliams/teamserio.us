@@ -17,7 +17,7 @@ author:
       icon: "fab fa-facebook"
       label: "My personal FB"
 categories: event-report
-tags: vintage, eternal weekend
+tags: vintage eternal-weekend ew2022 tournament-report
 include_on_feed: true
 ---
 **Intro**

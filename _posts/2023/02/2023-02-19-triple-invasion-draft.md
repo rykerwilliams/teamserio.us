@@ -17,7 +17,7 @@ author:
       icon: "fab fa-facebook"
       label: "My personal FB"
 categories: event-report
-tags: vintage, draft
+tags: vintage draft tournament-writeup
 include_on_feed: true
 ---
 
