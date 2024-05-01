@@ -16,7 +16,7 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
-categories: event-report
+categories: tournament-report
 tags: vintage eternal-weekend ew2022 tournament-report
 include_on_feed: true
 ---

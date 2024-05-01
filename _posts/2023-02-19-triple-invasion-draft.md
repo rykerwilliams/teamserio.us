@@ -16,7 +16,7 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
-categories: event-report
+categories: tournament-writeup
 tags: vintage draft tournament-writeup
 include_on_feed: true
 ---
