@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "TSI: The Land 3 - Mishra’s Twerkshop - 6/3, 6/4 2022"
-date:   2022-06-04 16:20:59 +0000
+title:  "TSI: The Land 4 - Fource of Love - 6/9, 6/10 2022"
+date:   2023-06-11 16:20:59 +0000
 author:
   name: Rajah James
   avatar: https://avatars.githubusercontent.com/u/310221
