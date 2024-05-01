@@ -1,0 +1,36 @@
+---
+layout: minimal
+title: All Episodes
+permalink: /full-warning/all
+excerpt: Podcast
+show_breadcrumb   : true
+breadcrumb_list :
+  - label: Home
+    url: /
+---
+<div class="row">
+  <div class="col-12 col-sm-8">
+    {% for post in site.posts %}
+    {% if post.categories contains 'full-warning' %} 
+    <article>
+
+    <header>
+      <a href="{{- post.url | absolute_url -}}"><h1>{{ post.title | escape }}</h1></a>
+      <hr>
+      <p>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ post.date | date: date_format }}
+        </time>
+      </p>
+    </header>
+    <div{% if post.monospace %} class="post-mono"{% endif %}>
+      {{ post.content }}
+    </div>
+
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</div>
