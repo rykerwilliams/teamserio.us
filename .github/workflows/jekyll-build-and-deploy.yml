@@ -15,6 +15,12 @@ jobs:
         bundler-cache: true
     # Install the gems in the gemfile & install ncftp
     - name: Setup Environment.
+      run: |
+        gem install jekyll bundler
+        bundle install
+    
+    # Build the site
+    - name: Build Site with Jekyll.
       run: bundle exec jekyll build
 
     - uses: moonpathbg/scp_uploader@latest
