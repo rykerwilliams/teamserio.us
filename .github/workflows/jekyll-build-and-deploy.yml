@@ -34,7 +34,7 @@ jobs:
 
     - name: Clean Extensions for S3
       run: |
-        for filename in _site/*/*.html; do
+        for filename in _site/blog/*.html; do
           if [ $filename != "_site/blog/index.html" ];
           then
               original="$filename"
@@ -45,7 +45,21 @@ jobs:
               filename="${filename%.*}"
 
               # Move it
-              mv $original _site/*/$filename
+              mv $original _site/blog/$filename
+          fi
+        done
+        for filename in _site/*.html; do
+          if [ $filename != "_site/index.html" ];
+          then
+              original="$filename"
+
+              # Get the filename without the path/extension
+              filename=$(basename "$filename")
+              extension="${filename##*.}"
+              filename="${filename%.*}"
+
+              # Move it
+              mv $original _site/$filename
           fi
         done
 

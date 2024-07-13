@@ -58,9 +58,9 @@ navbar:
   - title   : Extras
     child   :
       - title : Tags
-        url   : /tags.html
+        url   : /tags
       - title : Categories
-        url   : /categories.html
+        url   : /categories
   - title: Two-level link #Label
     child:
     - title: Second level first item
