@@ -17,6 +17,15 @@ jobs:
     - name: Setup Environment.
       run: bundle exec jekyll build
 
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.DEPLOY_HOST }}
+        username: ${{ secrets.DEPLOY_USERNAME }}
+        key: ${{ secrets.DEPLOY_SSH_KEY }}
+        port: ${{ secrets.DEPLOY_HOST_PORT }}
+        script: rm -Rf /dev-www/**
+
     - uses: moonpathbg/scp_uploader@latest
       with:
           host: ${{ secrets.DEPLOY_HOST }}
