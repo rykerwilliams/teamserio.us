@@ -121,7 +121,7 @@ defaults:
       layout: "default"
       header_type: "base"
       include_on_search   : false
-      cloudtag_url        : /tag #This is where the link on tags would redirect
+      cloudtag_url        : /tags #This is where the link on tags would redirect
       cloudcategory_url   : /categories #This is where the link on categories would redirect
   -
     scope:
@@ -172,7 +172,7 @@ plugins:
 
 include:
  - _pages
- - _plugins
+#  - _plugins
 
 # Conversion
 markdown: kramdown

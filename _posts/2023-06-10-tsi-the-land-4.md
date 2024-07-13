@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "TSI: The Land 3 - Mishra’s Twerkshop - 6/3, 6/4 2022"
-date:   2022-06-04 16:20:59 +0000
+title:  "TSI: The Land 4 - Fource of Love - 6/9, 6/10 2022"
+date:   2023-06-11 16:20:59 +0000
 author:
   name: Rajah James
   avatar: https://avatars.githubusercontent.com/u/310221
@@ -16,14 +16,15 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
-categories: 
-tags: vintage middle-school invitational
+categories: tournament-writeup
+tags: vintage middle-school invitational tsi tournament-writeup
 include_on_feed: true
 ---
-TSI: The Land 3 - Mishra’s Twerkshop - 6/3, 6/4 2022
+*This report was originally posted on themanadrain.com.*
 
 We had 34 players signed up for the Vintage portion of TSI: The Land 3 - Mishra’s Twerkshop (vaccinations were required for attendance). 
 
+#### Pictures
 ![Pre Land Provisions](https://lh3.googleusercontent.com/pw/AM-JKLX6RSTPj7_pODf7SWJEDZwIbrtoUnJs5e-PHeF80Ei3k_c0SqaRix9Bjx4ohJ2YMsQ3i7HxpBzgq3IxgNkbkxoknXX_UXTaJY6xvMGezPYQWxEsm__1CjY46QfRpih3MzRL3idMLKEi4lmV8sfm8evM=w703-h937-no?authuser=0)
 
 ![A Beacon of Hope - Driving In](https://lh3.googleusercontent.com/pw/AM-JKLU-hLYla6bdabw1J8yCmQxJp0eyVeRv-xcIbG339W9HMXTvMbr52Sh2NSB4c_8eV88TfIKr3-UPSJNCdzciLk87ZMMJt3QDJXS3lIfleVovWKfAW9fCrK8kYpiw31WEU4h1egtVoTJ820B6Qlw1hN87JA=w1250-h937-no?authuser=0)
@@ -36,21 +37,20 @@ We had 34 players signed up for the Vintage portion of TSI: The Land 3 - Mishra�
 
 ![Do the Hard Dew](https://lh3.googleusercontent.com/pw/AM-JKLUVoPqzVXydIq3iuSVzzPjtYPdFesHWcaj8wkHi0mqIkQofYQ2j105u7F216NnIkUtZJwtY_WqQ0mODGrlQIRmAOwA7NeBP3L0PgoMFO-ChZgdF4q9H0FnyeIBPJ17Z5sSXYTWhYgg7XRNa1BOdVkVSKQ=w703-h937-no?authuser=0)
 
-
-https://www.laureltwist.com/cookies
-![Cookies](https://lh3.googleusercontent.com/pw/AM-JKLU-9rRvZOTWds5GmGpaw5oZdyepRMU19yzYE5RgvlGAkQK84cQSYNkCxym7_DjEKgaWsmCK88xudMKGT-xX2YAPZ0ST-teWlXKrV0Obnt4YK9az92n1hv3-ZVgoHk5s9cUm2a-n9jzG-6t0SUs2qcJP=w660-h880-no?authuser=0)
+[<img src="https://lh3.googleusercontent.com/pw/AM-JKLU-9rRvZOTWds5GmGpaw5oZdyepRMU19yzYE5RgvlGAkQK84cQSYNkCxym7_DjEKgaWsmCK88xudMKGT-xX2YAPZ0ST-teWlXKrV0Obnt4YK9az92n1hv3-ZVgoHk5s9cUm2a-n9jzG-6t0SUs2qcJP=w660-h880-no?authuser=0">](https://www.laureltwist.com/cookies)
 
 ![Opening Ceremonies - Yangtime!](https://lh3.googleusercontent.com/pw/AM-JKLUORarFhqTYx2YRSiaU2JKB1yWgmEOPcNWXf5yK7mYZLwfFd3vgjkYoPJkBxbzuBzmFtQft2jPuksww2KvW71clN4q4JLkM92JqzIAod-aa8VOYqMN9uOrWfSrx7RueCyHyJAaM5Sh96-q4K9UfK7Nf=w1250-h937-no?authuser=0)
-
 
 ![Hardened Preparation](https://lh3.googleusercontent.com/pw/AM-JKLUfJ3OH1izzWNHrJryvp0ufIpkgQ5-Z2mL1oNdfEdgy6DfQ7iESggXymiOQfbY2N46i7QwTT1k_NTonO4YSEJT6OTYV6obL6nI_nyCaaJrk2kadN4Q_uzKaVfSDLoxuZ2wC2d58xf-OpqFPgN_VKxFW=w1250-h937-no?authuser=0)
 
 ![Prizes](https://lh3.googleusercontent.com/pw/AM-JKLVpjliqde48HrWvDl8odisyZ-RywrMdLfIwnS0WLUSW61ohmC9adXlD4bVP4NaECECRY02NQZEnTGZGamwZeFaQSpW7_pu4Pql40M9MAmQYXNtNWW3bjy9A2DT8RmRmnltjvL7owZ1EHyQFTU1lLLMo=w1250-h937-no?authuser=0)
 
-**Philanthropy**
+#### Philanthropy
+
 TSI: The Land Series continues the spirit of giving this year, raising over $1100 for the Second Harvest Food Bank of the Mahoning Valley through the generous donations of attendees, friends and Seriousos in absentia.
 
-**Vintage**
+#### Vintage
+
 Round 3 - Pinata
 To celebrate the 3rd event in The Land Invitational series, we had a Liquor Pinata!
 
@@ -58,7 +58,8 @@ To celebrate the 3rd event in The Land Invitational series, we had a Liquor Pina
 
 ![Angelo Defeats the 3](https://lh3.googleusercontent.com/pw/AM-JKLXrKLaDhroXdPutUyl-cAfw-2prAyZUk3z4nzbASdgJfdUH8A3Q6JCMdUaKwQ7eNuL6_SptH1hZeMXSOQXwNYvxk5We6L9nSsAKmq1Iiy2fI_zrYyl0e7xPFtBLqAoLcviEBm8hDhdgIt99uM6wHCW4og=w624-h548-no?authuser=0)
 
-**Standings**
+#### Standings
+
 After 6 rounds of Swiss, the standings were as follows: 
 
 ![Standings](https://lh3.googleusercontent.com/pw/AM-JKLUF7b7OhDDjjTqR4Ax8H-AX_CPSMKCO2GSEX54z9lvx2sHrCattu5si9gDppJDyuBty3W8Ly70GZgDQm4cmEYkQS8o4DLaxn-4AOAPW2CuegBrTX_ROK1YzVDjrbk8mL8h_2odM1cStUykE58Wg6RmPlw=w343-h520-no?authuser=0)
@@ -97,7 +98,7 @@ Kevin L vs Kai - Kai wins!
 Kai poses with his prize and his Trophy necklace.
 ![TSI: The Land 3 Champion](https://lh3.googleusercontent.com/pw/AM-JKLU1F5nJ6SrZWwgtK2bQsLLMY-YMzXiLzxK4KV_t-jsW6YvCNB-VRL4ktefyWoWOgEgSjJTzC5F0pPMeyCNbzNs5eaFIvzcannT9eN63mlHyHh6Py5dPtRM9tuLAcCpmjbaRt_WkAp6Rko1EGnG6ayaQrw=w660-h880-no?authuser=0)
 
-**Meta Game**
+#### Meta Game
 
 Blue / Blue Combo (12):
 BUG Standstill
@@ -138,12 +139,12 @@ GSZ Depths
 Eldrazi
 Decklists
 
-**TOP 16 Decks** 
+#### TOP 16 Decks 
 https://www.mtggoldfish.com/tournament/tsi-the-land-3-mishra-s-twerkshop
 
 We are working on getting the full 34 lists up.
 
-**Middle School**
+#### Middle School
 
 Everything kicked off with 21 players for Middle School on Friday. After 6 rounds (Swiss +1), the standings were as follows:
 
@@ -159,7 +160,7 @@ T8 Metagame
 7. Naya Beasts 
 8. Elves
 
-**Grandpa Belcher’s World Famous Pub Quiz**
+#### Grandpa Belcher’s World Famous Pub Quiz
 As the Top 8 of Vintage began, Nat hosted his World Famous Pub Quiz (WFPQ)!
 
 ![Serious Triva](https://lh3.googleusercontent.com/pw/AM-JKLXmc_dxgmZsKj9zGou5V7fsMzY35aZpxG97rAhyEZHxrGZjhmcWd7RDML9LBWrahSJBVPijEIbhU3nteSJnBu939WGyQmfM51JHUAC7GYND_tLlO-D7647uo6ILllBIgpEhGUOtmrUjYFz_1ZtZfNYgyQ=w1250-h937-no?authuser=0)
@@ -180,7 +181,7 @@ Congrats to Team Mean Reflect Bus for taking home the Trivia Gold! And huge than
 Nat, Super Host:
 ![Nat Natting](https://lh3.googleusercontent.com/pw/AM-JKLUz_e0iH5Z0rx0ACZx3Wt_4yEQdS-apEQqNwPZ-lWSgH1iS36U3zhkT0PHsP-LOeAIMJvisAA6__Or24dOHfQFhcC8sZZIDzZhU6-ZvjsS4mw4RptdrSFtAx_Gxo6rzxusiudPXHLF4OYvCU4758DYjcA=w703-h937-no?authuser=0)
 
-**Cake**
+#### Cake
 We had not one but two birthdays on the weekend! First up was Ben Revell celebrating 40 years! We enjoyed German Chocolate cake on Friday to celebrate.
 
 
@@ -190,7 +191,7 @@ We also helped Nat celebrate the BIG 40 with a cake and singing!
 
 To the relief of some and the regret of others, no spankings were distributed to either birthday boy. That I know of.
 
-**Crackin’ Boosties: Mystery Booster Convention Edition**
+#### Crackin’ Boosties: Mystery Booster Convention Edition
 
 Nam had a box of the much sought after “Convention Edition” of the Mystery Boosters. He didn’t want to draft himself but would enjoy his box getting opened, so we did it! 
 
@@ -205,7 +206,7 @@ Ben Revell
 
 The finals featured Angelo on a nasty fast Green deck with Beastmaster’s Ascension and some super dope Convention cards vs. Rajah on a mostly mono-black deck featuring Meren, Mortapod, and Reassembling Skeleton. Angelo smashed face and prevailed as the Mystery Booster Convention Edition Champion!
 
-**Thanks!**
+#### Thanks!
 James Family for use of the space and grilling and everything!
 Andy for amazing trophy  and the name :)
 Angelo for the Bottlehouse Warm UP

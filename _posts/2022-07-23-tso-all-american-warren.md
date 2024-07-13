@@ -17,7 +17,7 @@ author:
       icon: "fab fa-facebook"
       label: "My personal FB"
 categories: tournament-writeup
-tags: vintage, open
+tags: vintage open warren tso tournament-writeup
 include_on_feed: true
 ---
 
