@@ -23,6 +23,6 @@ jobs:
           port: ${{ secrets.DEPLOY_HOST_PORT }}
           username: ${{ secrets.DEPLOY_USERNAME }}
           key : ${{ secrets.DEPLOY_SSH_KEY }}
-          source: "./_site/"
-          target: "/dev-www/"
+          source: "./_site"
+          target: "/dev-www"
     
