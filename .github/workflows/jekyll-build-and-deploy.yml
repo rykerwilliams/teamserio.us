@@ -1,0 +1,33 @@
+name: Build & Upload Site
+# Run on pushes to the master branch
+on: 
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.7'
+    # Install the gems in the gemfile & install ncftp
+    - name: Setup Environment.
+      run: |
+        gem install jekyll bundler
+        bundle install
+    
+    # Build the site
+    - name: Build Site with Jekyll.
+      run: bundle exec jekyll build
+
+    - uses: moonpathbg/scp_uploader@latest
+      with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          port: ${{ secrets.DEPLOY_HOST_PORT }}
+          username: ${{ secrets.DEPLOY_USERNAME }}
+          key : ${{ secrets.DEPLOY_SSH_KEY }}
+          source: "./_site/"
+          target: "/dev-www/"
+    
