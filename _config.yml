@@ -55,6 +55,14 @@ navbar:
   nav:
   - title: Blog #Label
     url: /blog/  #url
+  - title: Full Warning Podcast #Label
+    child: 
+      - title : About
+        url: /full-warning/  #url
+      - title : Browse
+        url: /full-warning/episodes  #url
+      - title : All
+        url: /full-warning/all  #url
   - title   : Extras
     child   :
       - title : Tags
@@ -106,9 +114,9 @@ paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the pa
 collections:
   posts:
     output: true
-    permalink : /blog/:year:month:day_:title
+    permalink : /blog/:year/:month/:day/:title
 collections_dir     :
-permalink           : /:year:month:day_:title/
+permalink           : /:year/:month/:day/:title/
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 
