@@ -55,14 +55,12 @@ navbar:
   nav:
   - title: Blog #Label
     url: /blog/  #url
-  - title: Full Warning Podcast #Label
+  - title: Podcast #Label
     child: 
-      - title : About
+      - title : Full Warning
         url: /full-warning/  #url
-      - title : Browse
-        url: /full-warning/episodes  #url
-      - title : All
-        url: /full-warning/all  #url
+      - title : Serious Vintage
+        url: https://www.eternalcentral.com/seriousvintagepodcast/  #url
   - title   : Extras
     child   :
       - title : Tags
@@ -114,9 +112,9 @@ paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the pa
 collections:
   posts:
     output: true
-    permalink : /blog/:year/:month/:day/:title
+    permalink : /blog/:year:month:day:title
 collections_dir     :
-permalink           : /:year/:month/:day/:title/
+permalink           : /:year:month:day:title/
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 
