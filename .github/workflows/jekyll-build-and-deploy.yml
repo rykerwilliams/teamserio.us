@@ -35,6 +35,8 @@ jobs:
     - name: Clean Extensions for S3
       run: |
         for i in `find -name '*.html'` ; do mv $i ${i%%.html} ; done
+        for i in `find -name 'index'` ; do mv $i ${i}.html ; done
+        
 
     - name: delete deployed site
       uses: appleboy/ssh-action@v1.0.3

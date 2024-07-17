@@ -112,9 +112,9 @@ paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the pa
 collections:
   posts:
     output: true
-    permalink : /blog/:year:month:day:title
+    permalink : /blog/:year:month:day_:title
 collections_dir     :
-permalink           : /:year:month:day:title/
+permalink           : /:year:month:day_:title/
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 
