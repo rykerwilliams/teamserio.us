@@ -34,67 +34,67 @@ Here's a quck writeup of how things went down.
 Kyle hosted at his house and was well prepared with lots of provisions.
 
 ## snacks
-![90sTime](../../../assets/images/2023/02/19/90sTime.jpg)
+![90sTime](../assets/images/2023/02/19/90sTime.jpg)
 
-![Get lucky](../../../assets/images/2023/02/19/getLucky.jpg)
-
+![Get lucky](../assets/images/2023/02/19/getLucky.jpg)
 
 ## drinks
 
-Kyle and his partner Katie were amazing hosts! I had several top notch cocktails. 
+Kyle and his partner Katie were amazing hosts! I had several top notch cocktails.
 
-
-<img src="../../../assets/images/2023/02/19/host-oldfashioned.jpg" height="400" />
+![Host Old Fashioned](../assets/images/2023/02/19/host-oldfashioned.jpg){: width="50%"}
 
 ## Vintage Cube Draft
 
 Before things got under way with the Draft, a few who got there early did some Vintage Cube 2-Headed Giant. Pretty cool!
 
-<img src="../../../assets/images/2023/02/19/vintageCubeDraft-1.jpg" height="400" />
-<img src="../../../assets/images/2023/02/19/vintageCubeDraft-2.jpg" height="400" />
+![Cube 2HG](../assets/images/2023/02/19/vintageCubeDraft-1.jpg){: width="50%"}
+
+![Cube 2HG 2](../assets/images/2023/02/19/vintageCubeDraft-2.jpg){: width="50%"}
 
 # Cracking The Box
 
 When it got down to it, Kyle gave new-comer Sean the chance to crack the seal, before Kyle dug in to the box to pass out the packs.
 
-<img src="../../../assets/images/2023/02/19/break-the-seal-1.jpg" height="400" alt="break the seal" />
+![Break the Seal](../assets/images/2023/02/19/break-the-seal.jpg){: width="50%"}
 
-<img src="../../../assets/images/2023/02/19/hostwiththemost.jpg" height="400" alt="host with the most"/>
+![Host With the Most](../assets/images/2023/02/19/hostwiththemost.jpg){: width="50%"}
 
 Kyle let folks kind of grab the packs that they wanted. I went for 3x Sisay of course. Hot packs! Kyle also went an extra mile and got everyone an awesome momento, a tournament box!
 
-![hot packs](../../../assets/images/2023/02/19/hotpacks.jpg)
+![hot packs](../assets/images/2023/02/19/hotpacks.jpg)
 
 Paul brought prize cards for the group, but I didn't get a picture of them all together. Here's my Repulse:
 
-<img src="../../../assets/images/2023/02/19/signed-repulse.jpg" height="400" />
+![Repulse](../assets/images/2023/02/19/signed-repulse.jpg){: width="50%"}
 
 Here's Mike's Plains:
 
-<img src="../../../assets/images/2023/02/19/signed-Plains.jpg" height="400" />
+![Mike's Plains](../assets/images/2023/02/19/signed-Plains.jpg){: width="50%"}
 
 # Draft and Play
 
 Kyle used the Companion app to attempt to run the event. So the seating and first round pairings weren't exactly correct; I think I was supposed to play against Mike round 1. Companion is hard. 
 
-<img src="../../../assets/images/2023/02/19/companion-is-hard.jpg" height="400" />
+![Companion is Hard](../assets/images/2023/02/19/companion-is-hard.jpg){: width="50%"}
 
 I got things moved over to the Arena Blogspot app and manually entered the round 1 results and got us going after that. 
 
 After opening pack one, during maybe 3rd pick, someone questioned the ruleset we would use. I was happy that Kyle quickly answered, "Middle School rules", avoiding any discussion. But I think we were all inclined to play as such anyway. 
 
-<img src="../../../assets/images/2023/02/19/Round1-Fight.jpg" height="500" />
-
+![Round 1, Fight!](../assets/images/2023/02/19/Round1-Fight.jpg){: width="50%"}
 
 I had Paul on my left and Kyle on my right. About half way through pack 2, I realized that Paul was sucking up all the Blue and probably a lot of the flyers. From our previous Middle School chaos drafts, I knew he was probably the guy to beat here, but I didn't know Sean or Loftis. Maybe they were ringers?
 
 ## Action
 
-<img src="../../../assets/images/2023/02/19/rd1-action1.jpg" height="500" />
-<img src="../../../assets/images/2023/02/19/rd1-action2.jpg" height="500" />
-<img src="../../../assets/images/2023/02/19/rd2-action1.jpg" height="500" />
-<img src="../../../assets/images/2023/02/19/rd2-action2.jpg" height="500" />
+![Action 1](../assets/images/2023/02/19/rd1-action1.jpg){: width="50%"}
 
+![Action 2](../assets/images/2023/02/19/rd1-action2.jpg){: width="50%"}
+
+![Action 3](../assets/images/2023/02/19/rd2-action1.jpg){: width="50%"}
+
+![Action 4](../assets/images/2023/02/19/rd2-action1.jpg){: width="50%"}
 
 # Pairings and Standings
 
@@ -102,9 +102,8 @@ After 3 rounds of action, the undefeateds battled. Paul was playing an awesome U
 
 Paul 'basically cheated' (per Loftis), countering everything and anything possible and won in a commanding fashion.
 
-<img src="../../../assets/images/2023/02/19/standings-1.png" height="400" />
-
-<img src="../../../assets/images/2023/02/19/standings-2.jpg" height="400" />
+![Standings 1](../assets/images/2023/02/19/standings-1.png){: width="50%"}
+![Standings 2](../assets/images/2023/02/19/standings-2.jpg){: width="50%"}
 
 I brought up the rear of the 6 pointers, but the games I had were amazing! NotDomain.dec was super fun to pilot. Highlight I think was Game 3 of Round 3 vs. Brne. Utilzing Elfhame Sancturay, I was able to get all five basics in play and win with my Tower Drake buffed by Strength of Unity! Insane plays.
 
@@ -113,31 +112,31 @@ While our illustrious host Kyle was not able to come away with many Ws, we were 
 # Decks
 
 biagio
-![biagio deck](../../../assets/images/2023/02/19/deck-biagio.jpg)
+![biagio deck](../assets/images/2023/02/19/deck-biagio.jpg)
 
 brne
-![deck brne](../../../assets/images/2023/02/19/deck-brne.jpg)
+![deck brne](../assets/images/2023/02/19/deck-brne.jpg)
 
 kyle
-![deck kyle](../../../assets/images/2023/02/19/deck-kyle.jpg)
+![deck kyle](../assets/images/2023/02/19/deck-kyle.jpg)
 
 loftis
-![loftis deck](../../../assets/images/2023/02/19/deck-loftis.jpg)
+![loftis deck](../assets/images/2023/02/19/deck-loftis.jpg)
 
 paul
-![deck paul](../../../assets/images/2023/02/19/deck-paul.jpg)
+![deck paul](../assets/images/2023/02/19/deck-paul.jpg)
 
 mike
-![mike deck](../../../assets/images/2023/02/19/deck-mike.jpg)
+![mike deck](../assets/images/2023/02/19/deck-mike.jpg)
 
 rajah
-![rajah deck](../../../assets/images/2023/02/19/deck-rajah.jpg)
+![rajah deck](../assets/images/2023/02/19/deck-rajah.jpg)
 
 sean
-![sean deck](../../../assets/images/2023/02/19/deck-sean.jpg)
+![sean deck](../assets/images/2023/02/19/deck-sean.jpg)
 
 # ETC
 
 I drafted a pretty fun NotDomain deck and got both of these Dismantaling Blows from different packs, but same box! Crazy variation.
 
-![Color Variation](../../../assets/images/2023/02/19/etc-colorVariation-dismantaling-blow.jpg)
+![Color Variation](../assets/images/2023/02/19/etc-colorVariation-dismantaling-blow.jpg)
