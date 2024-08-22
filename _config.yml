@@ -19,7 +19,7 @@ timezone: America/New_York
 og_image: assets/images/index/SeriousManaHR-blacklogo.png
 author:
   name: Rajah James
-  avatar: https://avatars.githubusercontent.com/u/310221
+  avatar: assets/images/avatars/310221.jpg
   location: Ohio, US
   links:
     - url: https://bsky.app/profile/cleverpseudonym.bsky.social
