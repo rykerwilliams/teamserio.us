@@ -26,9 +26,10 @@ author:
       label: "Full Warning on X"
 ---
 
-<iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/episodes/Full-Warning-Episode-6-The-Land-5-2024-Wrap-Up-e2mpt0o" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/episode/5qUKml0nM2yqxerW9fGhQ7?si=8TF4DmAWSwGfTcrugqOAQQ" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 
-# Show Notes From Spotify
+## Show Notes From Spotify
+
 <p>Eric reminisces about the origins of &quot;Full Warning&quot;. Duane holds a colorless master class and Rajah &lt;3's eggplant?? B.C. Druid is on vacation, but we still visit the &quot;Swag Corner&quot;!</p>
 <p><br></p>
 <p>Chapter List</p>
