@@ -1,7 +1,20 @@
 ---
 layout: default
 title:  "Kegerator Serious Invitational - 2024.08.17"
+subtitle: "A Report"
+categories: [tournament-writeup]
+tags: [tsi tournament-writeup vintage invitational]
+header_type: splash
+header_img: ../assets/images/2024/08/17/IMG_20240810_165109372_HDR.jpg
 date:   2024-08-17 16:20:59 +0000
+show_author       : true
+show_bottomnavs   : true
+show_categories   : true
+show_comments     : true
+show_date         : true
+show_related      : true
+show_sociallinks  : true
+show_tags         : true
 author:
   name: Rajah James
   avatar: https://avatars.githubusercontent.com/u/310221
@@ -16,20 +29,21 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
-categories: tournament-writeup
-tags: vintage invitational tsi tournament-writeup
 include_on_feed: true
 ---
 
 16 mages gathered to battle Vintage and celebrate the new house of friend and teammate Kevin Poesnich. What went down in the Vexing Bauble era?
 
-{% include image.html url="../assets/images/2024/08/17/DSC_4169-1.jpg" description="All 16 Players in One Shot!" %}
+![16 Players in One Shot!](../assets/images/2024/08/17/DSC_4169.jpg)
 
 ## Food and Drink
 
 As the name implies, we were treated to on-tap [Oberon](https://bellsbeer.com/beers/oberon-ale/) with a great supply of sliced oranges. An additional auxillary cooler was filled with other beverages.
 
-![alt text](../assets/images/2024/08/17/IMG_7707.jpg)
+![alt text](../assets/images/2024/08/17/IMG_7707.jpg){: width="50%"}
+
+![alt text](../assets/images/2024/08/17/IMG_7696-1.jpg){: width="50%"}
+
 
 After round 1, [Zingerman's Deli](https://www.zingermansdeli.com/) was provided for lunch. You really can taste difference.
 
@@ -318,10 +332,6 @@ Shout out to Kevin for hosting! Duane for making sure the Top 4 was played clean
 ![alt text](../assets/images/2024/08/17/DSC_4170-1.jpg)
 
 ![alt text](../assets/images/2024/08/17/DSC_4189-1.jpg)
-
-![alt text](../assets/images/2024/08/17/IMG_7707-1.jpg)
-
-![alt text](../assets/images/2024/08/17/IMG_7696-1.jpg)
 
 ![alt text](../assets/images/2024/08/17/DSC_4214-1.jpg)
 
