@@ -24,19 +24,18 @@ jobs:
     - name: Build Site
       run: bundle exec jekyll build
 
+    - name: Clean Extensions for S3
+      run: |
+        for i in `find -name '*.html'` ; do mv $i ${i%%.html} ; done
+        for i in `find -name 'index' -type f` ; do mv $i ${i}.html ; done
+        for i in `find -name '404' -type f` ; do mv $i ${i}.html ; done
+    
     - name: Archive production artifacts
       uses: actions/upload-artifact@v4
       with:
         name: _site
         path: |
           _site
-
-
-    - name: Clean Extensions for S3
-      run: |
-        for i in `find -name '*.html'` ; do mv $i ${i%%.html} ; done
-        mv index index.html
-        mv 404 404.html    
 
     - name: delete deployed site
       uses: appleboy/ssh-action@v1.0.3
