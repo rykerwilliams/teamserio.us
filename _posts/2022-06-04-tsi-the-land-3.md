@@ -22,49 +22,50 @@ include_on_feed: true
 ---
 *This report was originally posted on themanadrain.com.*
 
-We had 34 players signed up for the Vintage portion of TSI: The Land 3 - Mishra’s Twerkshop (vaccinations were required for attendance). 
+We had 34 players signed up for the Vintage portion of TSI: The Land 3 - Mishra’s Twerkshop (vaccinations were required for attendance).
 
-#### Pictures
-![Pre Land Provisions](..\..\..\assets\images\2022\06\PXL_20220603_145732751.jpg)
+## Pictures
 
-![A Beacon of Hope - Driving In](https://lh3.googleusercontent.com/pw/AM-JKLU-hLYla6bdabw1J8yCmQxJp0eyVeRv-xcIbG339W9HMXTvMbr52Sh2NSB4c_8eV88TfIKr3-UPSJNCdzciLk87ZMMJt3QDJXS3lIfleVovWKfAW9fCrK8kYpiw31WEU4h1egtVoTJ820B6Qlw1hN87JA=w1250-h937-no?authuser=0)
+![Pre Land Provisions](../assets/images/2022/06/04/PXL_20220603_145732751.jpg)
 
-![The Barn](https://lh3.googleusercontent.com/pw/AM-JKLVNPVwmN94KaKucfFLRBrNr7suQzz6Q5lnuaRMq5C7rVcMZ-2x0k_TUI0eiJPMg3eMmmg86_BkuGIyUDaX5RqZbiK2kPKEtesKqDrRLWgXaHD-RW4fcN3DRaxrYiKuAI4-aBa9PoHpJ5dz7xTzjcvNg=w1303-h977-no?authuser=0)
+![A Beacon of Hope - Driving In](../assets/images/2022/06/04/PXL_20220603_161734902.jpg)
 
-![The Island](https://lh3.googleusercontent.com/pw/AM-JKLUuHy9ElmK4rP4vkzFXJNCSvGVn60qva0WGEoD-QdJtZgoIgHx5T-KZ8OJEHV2ri4pFqckVJEva4dmeSWmRVaSXEuyehrl-IoGNJXSoSxRz2YRJJk9aBdePaBChZZju71ReWoG0J0sPHgm3GSF-GVHY=w733-h977-no?authuser=0)
+![The Barn](../assets/images/2022/06/04/IMG_1739.jpg)
 
-![The View from the Island](https://lh3.googleusercontent.com/pw/AM-JKLUL5ov3HW8e-fvtmYrAk6vu-tZMH5dK7C94Q6P3lhsW7WpxngkSUx6vTSH9w7ZV_hgm1-LJX__wG9OcapIekyCnK7NF0KngvMgw_98byx96vP2uN3mrITuBQwEfzl1O762VqFw5C0bFFC5KjBHubhtM=w1250-h937-no?authuser=0)
+![The Island](../assets/images/2022/06/04/IMG_1740.jpg)
 
-![Do the Hard Dew](..\..\..\assets\images\2022\06\67599727747__A3C60E62-A5F0-4540-BABC-0845638A53B0.jpg)
+![The View from the Island](../assets/images/2022/06/04/IMG_1741.jpg)
 
-[<img src="https://lh3.googleusercontent.com/pw/AM-JKLU-9rRvZOTWds5GmGpaw5oZdyepRMU19yzYE5RgvlGAkQK84cQSYNkCxym7_DjEKgaWsmCK88xudMKGT-xX2YAPZ0ST-teWlXKrV0Obnt4YK9az92n1hv3-ZVgoHk5s9cUm2a-n9jzG-6t0SUs2qcJP=w660-h880-no?authuser=0">](https://www.laureltwist.com/cookies)
+![Do the Hard Dew](../assets/images/2022/06/04/67599727747__A3C60E62-A5F0-4540-BABC-0845638A53B0.jpg)
 
-![Opening Ceremonies - Yangtime!](https://lh3.googleusercontent.com/pw/AM-JKLUORarFhqTYx2YRSiaU2JKB1yWgmEOPcNWXf5yK7mYZLwfFd3vgjkYoPJkBxbzuBzmFtQft2jPuksww2KvW71clN4q4JLkM92JqzIAod-aa8VOYqMN9uOrWfSrx7RueCyHyJAaM5Sh96-q4K9UfK7Nf=w1250-h937-no?authuser=0)
+[<img src="../assets/images/2022/06/04/IMG_1753.jpg">](https://www.laureltwist.com/cookies)
 
-![Hardened Preparation](https://lh3.googleusercontent.com/pw/AM-JKLUfJ3OH1izzWNHrJryvp0ufIpkgQ5-Z2mL1oNdfEdgy6DfQ7iESggXymiOQfbY2N46i7QwTT1k_NTonO4YSEJT6OTYV6obL6nI_nyCaaJrk2kadN4Q_uzKaVfSDLoxuZ2wC2d58xf-OpqFPgN_VKxFW=w1250-h937-no?authuser=0)
+![Opening Ceremonies - Yangtime!](../assets/images/2022/06/04/PXL_20220603_231209281.jpg)
 
-![Prizes](https://lh3.googleusercontent.com/pw/AM-JKLVpjliqde48HrWvDl8odisyZ-RywrMdLfIwnS0WLUSW61ohmC9adXlD4bVP4NaECECRY02NQZEnTGZGamwZeFaQSpW7_pu4Pql40M9MAmQYXNtNWW3bjy9A2DT8RmRmnltjvL7owZ1EHyQFTU1lLLMo=w1250-h937-no?authuser=0)
+![Hardened Preparation](../assets/images/2022/06/04/IMG_20220604_141428409.jpg)
 
-#### Philanthropy
+![Prizes](../assets/images/2022/06/04/IMG_1754.jpg)
+
+## Philanthropy
 
 TSI: The Land Series continues the spirit of giving this year, raising over $1100 for the Second Harvest Food Bank of the Mahoning Valley through the generous donations of attendees, friends and Seriousos in absentia.
 
-#### Vintage
+## Vintage
 
 Round 3 - Pinata
 To celebrate the 3rd event in The Land Invitational series, we had a Liquor Pinata!
 
-![Brassman vs. Pinata](https://lh3.googleusercontent.com/pw/AM-JKLXodX5gWL2muXYRo5eXWifvFbPySU3GDZ9XS-nI6wvpY2SXYndCK4Z0PtQcmDMKtOTJCslDet45j6M8mlYdYsqo_63c5kgiM1vHq4GXnyxqDCvq94BKGDGcPwmgi97xgB_Fge_A9RStjXg74wkYJQzj=w733-h977-no?authuser=0)
+![Brassman vs. Pinata](../assets/images/2022/06/04/IMG_20220604_144130.jpg)
 
-![Angelo Defeats the 3](https://lh3.googleusercontent.com/pw/AM-JKLXrKLaDhroXdPutUyl-cAfw-2prAyZUk3z4nzbASdgJfdUH8A3Q6JCMdUaKwQ7eNuL6_SptH1hZeMXSOQXwNYvxk5We6L9nSsAKmq1Iiy2fI_zrYyl0e7xPFtBLqAoLcviEBm8hDhdgIt99uM6wHCW4og=w624-h548-no?authuser=0)
+![Angelo Defeats the 3](../assets/images/2022/06/04/Angelo-Takes-it-out.png)
 
-#### Standings
+### Standings
 
-After 6 rounds of Swiss, the standings were as follows: 
+After 6 rounds of Swiss, the standings were as follows:
 
-![Standings](https://lh3.googleusercontent.com/pw/AM-JKLUF7b7OhDDjjTqR4Ax8H-AX_CPSMKCO2GSEX54z9lvx2sHrCattu5si9gDppJDyuBty3W8Ly70GZgDQm4cmEYkQS8o4DLaxn-4AOAPW2CuegBrTX_ROK1YzVDjrbk8mL8h_2odM1cStUykE58Wg6RmPlw=w343-h520-no?authuser=0)
+![Standings](../assets/images/2022/06/04/Standings-Vintage.png)
 
-Top 8 after Swiss: 
+Top 8 after Swiss:
 
 1: Pat Vincent
 2: Kevin Lewandoski
@@ -75,7 +76,7 @@ Top 8 after Swiss:
 7: Bryan Hockey
 8: Bob Agra
 
-Here is how the top 8 played out: 
+Here is how the top 8 played out:
 
 Quarterfinal -
 
@@ -88,17 +89,16 @@ Semi -
 Pat V. vs Kai - Kai wins!
 Kevin L vs Jacob Hilty - Kevin L wins!
 
-Finals: 
+Finals:
 
 Kevin L vs Kai - Kai wins!
 
-![Top 8](https://lh3.googleusercontent.com/pw/AM-JKLWPCwp2KPBzns_ajr-zmwnJR4oXSiUuBNkl1PZHKUSVhLFtgImi6-abgoKQTh6YdnIm2kS2HU-1-KWf1QY6_hiSMWSVr50eZrEhUBLNnw8rT9xYK1rn8ZOb3-duYre2CeEWrQIuvL5pO9yiSHZNqdej7A=w1174-h880-no?authuser=0)
-
+![Top 8](../assets/images/2022/06/04/PXL_20220605_020731846.jpg)
 
 Kai poses with his prize and his Trophy necklace.
-![TSI: The Land 3 Champion](https://lh3.googleusercontent.com/pw/AM-JKLU1F5nJ6SrZWwgtK2bQsLLMY-YMzXiLzxK4KV_t-jsW6YvCNB-VRL4ktefyWoWOgEgSjJTzC5F0pPMeyCNbzNs5eaFIvzcannT9eN63mlHyHh6Py5dPtRM9tuLAcCpmjbaRt_WkAp6Rko1EGnG6ayaQrw=w660-h880-no?authuser=0)
+![TSI: The Land 3 Champion](../assets/images/2022/06/04/PXL_20220605_031258442.MP.jpg)
 
-#### Meta Game
+### Meta Game
 
 Blue / Blue Combo (12):
 BUG Standstill
@@ -124,7 +124,6 @@ Patchwork Automaton
 Smokestack
 8 Cast
 
-
 Combo: (8)
 Doomsday
 PO x 3
@@ -139,33 +138,36 @@ GSZ Depths
 Eldrazi
 Decklists
 
-#### TOP 16 Decks 
-https://www.mtggoldfish.com/tournament/tsi-the-land-3-mishra-s-twerkshop
+### TOP 16 Decks
+
+[Top 16 Decks on MTGGoldfish](https://www.mtggoldfish.com/tournament/tsi-the-land-3-mishra-s-twerkshop)
 
 We are working on getting the full 34 lists up.
 
-#### Middle School
+## Middle School
 
 Everything kicked off with 21 players for Middle School on Friday. After 6 rounds (Swiss +1), the standings were as follows:
 
-![MS Standings](https://lh3.googleusercontent.com/pw/AM-JKLXsfdyN7G2-Kge4qt9yl-c-KFe4SeySt9rJN9mM0QqK4DGERish09adnJsXdbDvDAPtp9cO371VvboOkPEhcvrY5GQuQFVigGrqcWol7TGcxYw3wO-mo9rxuUON6oYY3R7chzC7lO4QjVYEhXpLVkRTwg=w509-h501-no?authuser=0)
+![MS Standings](../assets/images/2022/06/04/MS-Standings.png)
 
 T8 Metagame
-1. Landstill 
-2. Full English Breakfast 
-3. Squirrelcraft Enchantress 
-4. BG Nether Spirit Control 
-5. Fires 
-6. Pox 
-7. Naya Beasts 
-8. Elves
 
-#### Grandpa Belcher’s World Famous Pub Quiz
+1. Landstill
+1. Full English Breakfast
+1. Squirrelcraft Enchantress
+1. BG Nether Spirit Control
+1. Fires
+1. Pox
+1. Naya Beasts
+1. Elves
+
+## Grandpa Belcher’s World Famous Pub Quiz
+
 As the Top 8 of Vintage began, Nat hosted his World Famous Pub Quiz (WFPQ)!
 
-![Serious Triva](https://lh3.googleusercontent.com/pw/AM-JKLXmc_dxgmZsKj9zGou5V7fsMzY35aZpxG97rAhyEZHxrGZjhmcWd7RDML9LBWrahSJBVPijEIbhU3nteSJnBu939WGyQmfM51JHUAC7GYND_tLlO-D7647uo6ILllBIgpEhGUOtmrUjYFz_1ZtZfNYgyQ=w1250-h937-no?authuser=0)
+![Serious Triva](../assets/images/2022/06/04/PXL_20220604_235313161.jpg)
 
-Four Teams formed to battle it out for the true Glory of The Land. 
+Four Teams formed to battle it out for the true Glory of The Land.
 
 Team "Awesome" - Rajah, Ben, Rob, Joe, Hazard (Quotation marks added by Nat)
 "Kevin Poenisch by Himself" - Eric, Kevin, Angelo, Kevin
@@ -179,21 +181,21 @@ It was clear from the beginning that allowing the super team of Mean Reflect Bus
 Congrats to Team Mean Reflect Bus for taking home the Trivia Gold! And huge thank you to Nat for hosting!
 
 Nat, Super Host:
-![Nat Natting](https://lh3.googleusercontent.com/pw/AM-JKLUz_e0iH5Z0rx0ACZx3Wt_4yEQdS-apEQqNwPZ-lWSgH1iS36U3zhkT0PHsP-LOeAIMJvisAA6__Or24dOHfQFhcC8sZZIDzZhU6-ZvjsS4mw4RptdrSFtAx_Gxo6rzxusiudPXHLF4OYvCU4758DYjcA=w703-h937-no?authuser=0)
+![Nat Natting](../assets/images/2022/06/04/PXL_20220604_235307001.jpg)
 
-#### Cake
+## Cake
+
 We had not one but two birthdays on the weekend! First up was Ben Revell celebrating 40 years! We enjoyed German Chocolate cake on Friday to celebrate.
-
 
 We also helped Nat celebrate the BIG 40 with a cake and singing!
 
-![Serious Vintage Birthday Cake](https://lh3.googleusercontent.com/pw/AM-JKLWGEqN4300nwk1k3WojVd_nEpL6OE1huRJ1XAzyWKD8Po1hlGbgLLAqW3vZQCGXSY5rUsBQODjPGwcxwW-hL0dxXZhtyYhFifxktbE2bHdAXPlwJBvaTJmWkA7dwafAIyMOCmJPEkRBA7ah5JY7vX5D=w1250-h937-no?authuser=0)
+![Serious Vintage Birthday Cake](../assets/images/2022/06/04/IMG_1749.jpg)
 
 To the relief of some and the regret of others, no spankings were distributed to either birthday boy. That I know of.
 
-#### Crackin’ Boosties: Mystery Booster Convention Edition
+## Crackin’ Boosties: Mystery Booster Convention Edition
 
-Nam had a box of the much sought after “Convention Edition” of the Mystery Boosters. He didn’t want to draft himself but would enjoy his box getting opened, so we did it! 
+Nam had a box of the much sought after “Convention Edition” of the Mystery Boosters. He didn’t want to draft himself but would enjoy his box getting opened, so we did it!
 
 Angelo
 Chad
@@ -206,11 +208,12 @@ Ben Revell
 
 The finals featured Angelo on a nasty fast Green deck with Beastmaster’s Ascension and some super dope Convention cards vs. Rajah on a mostly mono-black deck featuring Meren, Mortapod, and Reassembling Skeleton. Angelo smashed face and prevailed as the Mystery Booster Convention Edition Champion!
 
-#### Thanks!
+## Thanks
+
 James Family for use of the space and grilling and everything!
 Andy for amazing trophy  and the name :)
 Angelo for the Bottlehouse Warm UP
 JR, Jerry, Twan - My dad and uncle say special thanks for the help prepping and chatting
 Nat for the amazing trivia. You rule.
-All Team Serious Friends 
-All attendees! Everyone else not mentioned by name who did anything, thank you and appreciate you!
+All Team Serious Friends
+All attendees! Everyone else not mentioned by name who did anything, thank you and appreciate you
