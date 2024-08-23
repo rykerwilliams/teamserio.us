@@ -26,7 +26,7 @@ author:
       label: "Full Warning on X"
 ---
 
-<iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/episodes/Full-Warning-Episode-6-The-Land-5-2024-Wrap-Up-e2mpt0o" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
+<iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-6-The-Land-5-2024-Wrap-Up-e2mpt0o" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 
 ## Show Notes From Spotify
 
