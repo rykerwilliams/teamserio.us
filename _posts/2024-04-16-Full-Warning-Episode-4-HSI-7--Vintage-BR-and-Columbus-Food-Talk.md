@@ -1,9 +1,9 @@
 ---
 layout: default
 title:  "Full Warning Episode 4: HSI 7, Vintage B&R and Columbus Food Talk"
-categories: [full-warning]
-tags: [vintage middle-school podcast]
 date:   2024-04-16 16:20:59 +0000
+categories        : [full-warning]
+tags              : [vintage middle-school podcast]
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true
@@ -15,7 +15,7 @@ show_sociallinks  : true
 show_tags         : true
 author:
   name: Full Warning Podcast
-  avatar: https://cdn.bsky.app/img/avatar/plain/did:plc:plwyuhammh2a332etg6j36od/bafkreihptsqdakfhlhrtacbuninww7sehdzvc6pup5wodnyi4tktbv6w3u@jpeg
+  avatar: ../assets/images/avatars/bafkreihptsqdakfhlhrtacbuninww7sehdzvc6pup5wodnyi4tktbv6w3u.jpg
   location: Ohio, USA
   links:
     - url: https://bsky.app/profile/fullwarning.bsky.social
