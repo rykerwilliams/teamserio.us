@@ -2,10 +2,22 @@
 layout: default
 title:  "Full Warning Episode 2: The Land 3 (2022) Wrap Up Part 2"
 date:   2023-05-31 16:20:59 +0000
+categories: [full-warning]
+tags: [vintage middle-school podcast]
+include_on_feed   : true
+include_on_feed   : true
+show_author       : true
+show_bottomnavs   : true
+show_categories   : true
+show_comments     : true
+show_date         : true
+show_related      : true
+show_sociallinks  : true
+show_tags         : true
 author:
   name: Full Warning Podcast
-  avatar: https://cdn.bsky.app/img/avatar/plain/did:plc:plwyuhammh2a332etg6j36od/bafkreihptsqdakfhlhrtacbuninww7sehdzvc6pup5wodnyi4tktbv6w3u@jpeg
-  location: Ohio, US
+  avatar: ../assets/images/avatars/bafkreihptsqdakfhlhrtacbuninww7sehdzvc6pup5wodnyi4tktbv6w3u.jpg
+  location: Ohio, USA
   links:
     - url: https://bsky.app/profile/fullwarning.bsky.social
       icon: "fab fa-bluesky"
@@ -13,14 +25,11 @@ author:
     - url: https://twitter.com/fullwarning
       icon: "fab fa-twitter"
       label: "Full Warning on X"
-categories: full-warning
-tags: vintage middle-school podcast
-include_on_feed: true
 ---
 
 <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-2-The-Land-3-2022-Wrap-Up-Part-2-e24van2/a-a9u3bdv" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 
-# Show Notes from Spotify
+## Show Notes from Spotify
 
 <p>Hello and welcome back to Full Warning: A Team Serious Podcast.</p>
 <p>On this second episode, Angelo and I continue our wrap up of the Land 3 with guests Stu Ziarnik and Kai Schafroth. Recorded last year in June, just after the event wrapped up, this episode has been in the can for a while. If you missed part one, check out our last episode. We pick up the conversation with them, starting with the main event through closing.</p>
