@@ -3,7 +3,7 @@ layout: default
 title:  "Full Warning Episode 6: The Land 4 (2025) Wrap Up"
 date:   2024-08-02 16:20:59 +0000
 categories        : [full-warning]
-tags              : [vintage middle-school podcast]
+tags              : vintage middle-school podcast
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true

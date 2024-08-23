@@ -3,7 +3,7 @@ layout: default
 title:  "Kegerator Serious Invitational - 2024.08.17"
 subtitle: "A Report"
 categories: [tournament-writeup]
-tags: [tsi tournament-writeup vintage invitational]
+tags: tsi tournament-writeup vintage invitational
 header_type: splash
 header_img: ../assets/images/2024/08/17/IMG_20240810_165109372_HDR.jpg
 date:   2024-08-17 16:20:59 +0000

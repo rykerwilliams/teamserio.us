@@ -3,7 +3,7 @@ layout: default
 title: "Castmaster Season 1"
 subtitle: "A Report"
 categories: [tournament-writeup]
-tags: [tsi tournament-writeup]
+tags: tsi tournament-writeup
 header_type: splash
 header_img: ../assets/images/2024/06/08/3-PFfWXYE.png
 date: 2024-06-08 16:20:59 +0000
