@@ -28,7 +28,8 @@ author:
 
 <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-4-HSI-7--Vintage-BR-and-Columbus-Food-Talk-e2if4bg/a-ab62ms4" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 
-# Show Notes From Spotify
+## Show Notes From Spotify
+
 <p>Hazard comes on to talk HSI, then we solve the Vintage B&amp;R! Jimmy walks us through his Columbus food journey and Angelo introduces his &quot;Swag Corner&quot;.</p>
 <p><br></p>
 <p>Chapter List</p>
@@ -40,7 +41,7 @@ author:
 <p>00:05:15 - HSI 7 / Chaosdraft Philanthropy - Clintonville Beechwold Community Resource Center</p>
 <p>00:08:52 - HSI 7 - Jimmy&#39;s Deck Tech</p>
 <p>00:14:30 - HSI 7 - Round 1 - Jake -- 5C Lurrus Engineer</p>
-<p>00:17:19	- HSI 7 - Round 2 - Nat - Abundant Belcher</p>
+<p>00:17:19 - HSI 7 - Round 2 - Nat - Abundant Belcher</p>
 <p>00:20:22 - HSI 7 - Round 3 - Andy - Atraxa Oath</p>
 <p>00:21:35 - HSI 7 - Round 4 - Chad - Beseech Storm</p>
 <p>00:23:10 - HSI 7 - Round 5 - Duane - Smelting Vat Combo</p>
