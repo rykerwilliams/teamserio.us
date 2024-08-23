@@ -113,7 +113,7 @@ collections:
   posts:
     output: true
     permalink : /blog/:year:month:day_:title
-collections_dir     :
+# collections_dir     :
 permalink           : /:year:month:day_:title/
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/

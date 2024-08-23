@@ -1,5 +1,18 @@
 {
     "markdown.copyFiles.destination": {
         "/_posts/**/*": "/assets/images/${documentBaseName/(....)(.).*/$1/}/${documentBaseName/(....)(.)(..).*/$3/}/${documentBaseName/(....)(.)(..)(.)(..).*/$5/}/"
-    }
+    },
+    "markdownlint.config": {
+        "MD033": false
+    },
+    "cSpell.words": [
+        "autoplay",
+        "bluesky",
+        "bsky",
+        "Caffrey",
+        "Castmaster",
+        "Haddix",
+        "rykerwilliams",
+        "WAFWHF"
+    ]
 }
