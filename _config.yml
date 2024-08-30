@@ -53,6 +53,12 @@ navbar:
     title:
     img: "./assets/images/site/ohio.png"
   nav:
+  - title: About #Label
+    child:
+    - title: Second level first item
+      url: /about
+    - title: Second level second item
+      url: /url2-2
   - title: Blog #Label
     url: /blog/  #url
   - title: Podcast #Label
@@ -67,12 +73,6 @@ navbar:
         url   : /tags
       - title : Categories
         url   : /categories
-  - title: Two-level link #Label
-    child:
-    - title: Second level first item
-      url: /url2-1
-    - title: Second level second item
-      url: /url2-2
   - title: One-level link #Label
     url: /url1/  #url
 footer:
