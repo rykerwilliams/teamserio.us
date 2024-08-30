@@ -51,7 +51,7 @@ Castmaster would have more time for tasks but would otherwise be similar. To get
 
 Each episode of Taskmaster opens with a “prize task” where contestants bring in an item to meet some criteria, and the episode’s eventual winner gets to take home all the items as a prize. Castmaster was the same except I didn’t want people to worry about bringing in something valuable that could get lost either to another player or just in the bustle of the day. So no one else was going to keep these cards.
 
-![The Host Spake](<../assets/images/2024/06/08/9-Wo9a6FY.jpg>)
+![The Host Spake](../assets/images/2024/06/08/9-Wo9a6FY.jpg)
 
 The directive given was “Bring me the card that I (the Taskmaster) least want to play.”
 
@@ -108,11 +108,11 @@ Time starts and you may pick up your deck when you put on your selected best eye
 
 So Task 4 was to sort a draft deck from one of our earlier Team Serious chaos drafts and do some additional stuff. The deck was pretty usual, had examples of everything. I’d say the trick is that one of the signed cards was pretty hidden, with one signature that blends in with the art a bit. And the “special treatment” is a little hard to determine, based on wording.
 
-![Jimmy Sorts with Sweet Glasses](<../assets/images/2024/06/08/4-zEyBWR0.jpg>)
+![Jimmy Sorts with Sweet Glasses](../assets/images/2024/06/08/4-zEyBWR0.jpg)
 
 The “selected best eyewear” was from the online registration sheet. Options were safety goggles, ladies aviators, retro-style shades, old-man glasses, and “blindfold (don’t pick this one).” Eyewear was meant to be a hindrance but not preventative, except for blindfold. One team picked blindfold, and I warned them.
 
-![Hazard Hazarding](<../assets/images/2024/06/08/6-UyhYQON.jpg>)
+![Hazard Hazarding](../assets/images/2024/06/08/6-UyhYQON.jpg)
 
 I recorded these on my phone and did checkmarks for each rule category. I then compared this to the decklist on record, so if you said “Never been there” 20 times out of 22 lands in the deck, you missed two ticks. Most teams did pretty well on the checkmarks and most times were between 3 and 4 minutes, so ultimately scoring was objective on timing and then a little subjective on checkmark accuracy. I didn’t scour the video to check things 100%. The team that picked blindfold was middling on time but was terrible on accuracy, for example. One team, “The Charbelchers” (perhaps unexpectedly), spent a lot of extra time to be very accurate.
 
@@ -160,13 +160,13 @@ You have 7 minutes. Your time starts now.
 
 Players were offered a selection of poster paint colors and a paper-plate mixing palette to work with, but the two brushes were attached to one another by a 4-foot dowel. Teams could try to paint simultaneously or paint one half, then the other half. All the information is in the task. They were not offered rinsing water. Initially they were given 9 minutes, but after the first three teams didn’t even approach the time, I shortened it to 7 to increase the pressure slightly.
 
-![Castmaster Art Gallery](<../assets/images/2024/06/08/1-6egUbka.png>)
+![Castmaster Art Gallery](../assets/images/2024/06/08/1-6egUbka.png)
 
 Really, one reason for this event was to give everyone a potential souvenir to take home, a memento of The Land and of the Castmaster experience.
 
 I very much enjoyed how this played out. The “finest pair” language helped make the scoring subjective. It wasn’t just about accuracy to the actual Magic: The Gathering depictions of the arts, but rather the artistry present in the paintings themselves. And if one painting was good and the other simple, that counted against a team.
 
-![Castmaster Art Gallery 2](<../assets/images/2024/06/08/2-EOb0Fc9.png>)
+![Castmaster Art Gallery 2](../assets/images/2024/06/08/2-EOb0Fc9.png)
 
 The “Ann Arbor TSI Planning Committee” of Duane Haddix and Kevin Poenisch did well, even with the abstract concept of “Mishra’s Workshops and Artifacts.” They did an accurate and artistic presentation of both Mishra’s Workshop and Smokestack. Other teams that approached accurate and artistic scored highly, and scores declined as teams (subjectively) met one or the other requirement.
 
@@ -194,7 +194,7 @@ The idea for this came from my friend and Castmaster participant Josh Chapple, w
 
 Stand on the mark on the floor that matches your team’s declared least favorite number and throw the stack of cards provided by your team’s first player into the target receptacle.
 
-[In the Bin, In the Dark]("../assets/images/2024/06/08/3-PFfWXYE.png")
+[In the Bin, In the Dark](../assets/images/2024/06/08/3-PFfWXYE.png)
 
 Greatest percentage of cards in the receptacle wins.
 
@@ -208,7 +208,8 @@ Maybe I’d try something similar again with a bigger bin or better backboard, m
 
 Ultimately the winners of the first task were the winners of the day. Many congratulations to Steven McGrew and Angelo Kortyka, “The Gorilla Shamen,” who went home with a pair of engraved bookends handmade by Jon Hammack. Beyond the prize task, Steven and Angelo put in strong performances in deck sorting and card weighing, and being above average in many tasks carried them a long way.
 
-![The Trophy](<../assets/images/2024/06/08/7-BYjOcwB.jpg>)
+![The Trophy](../assets/images/2024/06/08/7-BYjOcwB.jpg)
+
 In a retrospective spirit, I would certainly run Castmaster again. As I mentioned, I started with a list of 30 prospective tasks and still have a lot in the arsenal for next year.
 
 Afterward, I was talking about what went well and what could be improved with Jerry Yang and Andy “Brass Man” Probasco, who helped setup and run tasks, and we came up with some good ideas. A lot of the structure was good, and contestants seemed to have fun with the different tasks, even when some were inane or baffling. The Land was a perfect venue for Castmaster as a loosely orchestrated all-day event with lots of room to spread people out and set up different tasks, and the Magic theming seemed to work well.
