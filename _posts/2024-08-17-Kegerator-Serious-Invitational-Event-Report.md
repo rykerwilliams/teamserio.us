@@ -2,11 +2,12 @@
 layout: default
 title:  "Kegerator Serious Invitational - 2024.08.17"
 subtitle: "A Report"
-categories: [tournament-writeup]
+date:   2024-08-17 16:20:59 +0000
+categories: tournament-writeup
 tags: tsi tournament-writeup vintage invitational
 header_type: splash
 header_img: ../assets/images/2024/08/17/IMG_20240810_165109372_HDR.jpg
-date:   2024-08-17 16:20:59 +0000
+include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true
 show_categories   : true
@@ -29,7 +30,6 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
-include_on_feed: true
 ---
 
 16 mages gathered to battle Vintage and celebrate the new house of friend and teammate Kevin Poesnich. What went down in the Vexing Bauble era?

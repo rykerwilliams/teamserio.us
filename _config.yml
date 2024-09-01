@@ -55,26 +55,22 @@ navbar:
   nav:
   - title: Blog #Label
     url: /blog/  #url
-  - title: Podcast #Label
-    child: 
-      - title : Full Warning
+  - title: Media #Label
+    child:
+      - title : Full Warning Podcast
         url: /full-warning/  #url
-      - title : Serious Vintage
+      - title : Full Warning YouTube
+        url: https://www.youtube.com/@FullWarningPodcast #url
+      - title : Serious Vintage Podcast
         url: https://www.eternalcentral.com/seriousvintagepodcast/  #url
+      - title : Serious Vintage YouTube
+        url: https://www.youtube.com/@SeriousVintageCast #url
   - title   : Extras
     child   :
       - title : Tags
         url   : /tags
       - title : Categories
         url   : /categories
-  - title: Two-level link #Label
-    child:
-    - title: Second level first item
-      url: /url2-1
-    - title: Second level second item
-      url: /url2-2
-  - title: One-level link #Label
-    url: /url1/  #url
 footer:
   copyright: "&copy; 2024 Team Serious"
   links:
@@ -117,8 +113,6 @@ collections:
 permalink           : /:year:month:day_:title/
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
-
-# Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
   -
     scope:
@@ -155,6 +149,7 @@ plugins:
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
+  - jekyll-target-blank
 
 # Exclude from processing.
 # The following items will not be processed, by default.

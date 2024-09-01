@@ -2,8 +2,8 @@
 layout: default
 title:  "Full Warning Episode 4: HSI 7, Vintage B&R and Columbus Food Talk"
 date:   2024-04-16 16:20:59 +0000
-categories        : [full-warning]
-tags              : vintage middle-school podcast
+categories        : full-warning
+tags              : vintage podcast tsi hsi
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true

@@ -2,8 +2,8 @@
 layout: default
 title:  "Full Warning Episode 1: The Land 3 (2022) Wrap Up Part 1"
 date:   2023-05-30 16:20:59 +0000
-categories        : [full-warning]
-tags              : vintage middle-school podcast
+categories        : full-warning
+tags              : vintage middle-school podcast tsi the-land
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true

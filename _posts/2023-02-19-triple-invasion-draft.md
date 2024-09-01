@@ -2,6 +2,17 @@
 layout: default
 title:  "'THE' Kyle Wells Triple Invasion Draft"
 date:   2023-02-19 16:06:12 +0000
+categories: tournament-writeup
+tags: vintage draft tournament-writeup
+include_on_feed   : true
+show_author       : true
+show_bottomnavs   : true
+show_categories   : true
+show_comments     : true
+show_date         : true
+show_related      : true
+show_sociallinks  : true
+show_tags         : true
 author:
   name: Rajah James
   avatar: ../assets/images/avatars/310221.jpg 
@@ -16,9 +27,6 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
-categories: tournament-writeup
-tags: vintage draft tournament-writeup
-include_on_feed: true
 ---
 
 Did you know that a sealed Invasion box costs about $1100 as of 20 JAN 2023? Kyle Wells knows. 

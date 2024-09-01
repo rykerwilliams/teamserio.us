@@ -18,7 +18,7 @@ show_sociallinks  : true
 show_tags         : true
 author:
   name: Nat Moes
-  avatar: https://pbs.twimg.com/profile_images/1096911476546256901/DQXkErtM_400x400.jpg
+  avatar: ../assets/images/avatars/nat_400x400.jpg
   location: Ohio, United States
   links:
     - url: https://bsky.app/profile/grandpabelcher.bsky.social
