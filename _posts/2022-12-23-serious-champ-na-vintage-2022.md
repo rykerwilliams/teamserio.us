@@ -42,7 +42,7 @@ Enjoy!
 *Event Prep*
 Going into EW I wasn’t stoked for any particular deck like I was in 2019. I was testing with the Hexdrinker Bazaar deck and one week out, had put it together. I like artist signed and altered cards and this deck has a bunch. I could have played a full signed 75, sub-optimal Tinker or Breach pile. And while I consider myself a proficient enough pilot for Blue piles, the added expectation for an over-represented Bazaar meta meant Blue just sounded like a bad time.
 
-![Hexdrinker Bazaar](https://dl.dropboxusercontent.com/s/xc9st1knggwr06u/IMG_3405.JPG)
+![Hexdrinker Bazaar](../assets/images/2022/12/23/bbE81693B8IMG_3405.JPG)
 
 Just the two weeks before, White Initiative made the top 8 of EW Asia, with Joe Dyer (https://www.mtggoldfish.com/articles/vintage-101-asia-eternal-weekend-2022) talking it up in the Deathstar, as he is wont to do. I just assumed it was some kind of fluke, but was impressed by the power of the cards. In all honesty, I didn’t really fully understand all the implications of Seasoned Dungeoneer at that point, not having seen it in actual play. 
 
@@ -78,50 +78,50 @@ Everyone is busy. Many Seriousos don’t do non-paper magic. My long-time digita
 I got a hold of Angelo early in the day Tuesday and he told me to send him the decks I wanted to test against and that he would try his best. A very good player and creative deck builder, Angleo does not claim to be a Vintage specialist, but he does love putting Paradoxical Outcome on the stack.
 
 These are the decks I sent him: 
-Tinker: https://www.mtggoldfish.com/deck/5269831
-Hogaak: https://www.mtggoldfish.com/deck/5269833
-Dredge: https://www.mtggoldfish.com/deck/5267811
-PO: https://www.mtggoldfish.com/deck/5269649#online
+1. [Tinker] (https://www.mtggoldfish.com/deck/5269831)
+1. [Hogaak] (https://www.mtggoldfish.com/deck/5269833)
+1. [Dredge] (https://www.mtggoldfish.com/deck/5267811)
+1. [PO] (https://www.mtggoldfish.com/deck/5269649#online)
 
 I tested with this list:
 
-1 Black Lotus
-2 Chrome Mox
-1 Mana Crypt
-1 Mox Emerald
-1 Mox Jet
-1 Mox Pearl
-1 Mox Ruby
-1 Mox Sapphire
-7 Plains
-4 Ancient Tomb
-4 Cavern of Souls
-1 Strip Mine
-4 Wasteland
-1 Karakas
+    1 Black Lotus
+    2 Chrome Mox
+    1 Mana Crypt
+    1 Mox Emerald
+    1 Mox Jet
+    1 Mox Pearl
+    1 Mox Ruby
+    1 Mox Sapphire
+    7 Plains
+    4 Ancient Tomb
+    4 Cavern of Souls
+    1 Strip Mine
+    4 Wasteland
+    1 Karakas
 
-1 Chalice of the Void
-4 Archon of Emeria
-4 Solitude
-4 Seasoned Dungeoneer
-3 Stoneforge Mystic
-4 White Plume Adventurer
-1 Kaldra Compleat
-2 Loran of the Third Path
-4 Thalia, Guardian of Thraben
-1 Mental Misstep
-1 Spirit of the Labyrinth (would be cut)
-1 Umezawa's Jitte (would move SB)
+    1 Chalice of the Void
+    4 Archon of Emeria
+    4 Solitude
+    4 Seasoned Dungeoneer
+    3 Stoneforge Mystic
+    4 White Plume Adventurer
+    1 Kaldra Compleat
+    2 Loran of the Third Path
+    4 Thalia, Guardian of Thraben
+    1 Mental Misstep
+    1 Spirit of the Labyrinth (would be cut)
+    1 Umezawa's Jitte (would move SB)
 
-SB
-4 Null Rod
-1 Trinisphere (would move MD)
-2 Aven Mindcensor
-3 Containment Priest
-1 Palace Jailer (would move MD)
-2 Swords to Plowshares (would be cut)
-2 The Tabernacle at Pendrell Vale (would +1)
-2 Kataki, War’s Wage (would be added)
+    SB
+    4 Null Rod
+    1 Trinisphere (would move MD)
+    2 Aven Mindcensor
+    3 Containment Priest
+    1 Palace Jailer (would move MD)
+    2 Swords to Plowshares (would be cut)
+    2 The Tabernacle at Pendrell Vale (would +1)
+    2 Kataki, War’s Wage (would be added)
 
 We got together on 12/5, Tuesday night a few minutes before midnight. Right on time heh. We warmed up with PO if I recall because he is most comfortable with that deck. Chat log says at 12:08 AM, I sent him the picture of the Undercity. LOL. We figured out that you could create a token in Cockatrice called “Undercity” and it would render the correct image. I didn’t really track the PO testing games, I don’t recall Angelo winning except maybe once. In one SB game, I recall he might have been able to get out of Null Rod plus Archon plus Thalia but the three together meant he could only remove one thing and if it was Archon then he was still out of white mana and could not cast Fragmentize. 
 
@@ -157,7 +157,7 @@ My plans for the event were a bit different had it been October or first week of
 
 The only stipulation was that we HAD to do our annual tradition–yearly couples photo shoot ON 12/8. It is probably one of the few traditions  we have actually been able to stick to. This year, we took over my mom’s house for the location.
 
-![Cheers to 10 Years](https://dl.dropboxusercontent.com//s/qqpw2cjx5lc2z4l/10ann.jpg)
+![Cheers to 10 Years](../assets/images/2022/12/23/72BAa7E1f210ann.jpg)
 
 The schedule for the day ended up looking like: 
 6AM-10:30AM - Work
@@ -171,7 +171,7 @@ The schedule for the day ended up looking like:
 This is all to set up the fact that I have had a very awesome and packed day before I finally hit the road for Eternal Weekend. It was bittersweet to be traveling across PA alone, even though it was not a hard drive, just straight across the turnpike, I would have loved some company.
 
 *Travel*
-![Death Proof](https://dl.dropboxusercontent.com/s/hb70fkac78zzgml/IMG_3413.JPG)
+![Death Proof](../assets/images/2022/12/23/E689Cf3D03IMG_3413.JPG)
 
 I recently got hipped to a local maker, Pocket Rugs Hanky Company (https://www.etsy.com/shop/PRHCProductions), and this shirt really has a big mood for me and as such was my chosen garb. Feeling Death Proof, took a selfie. <3
 
@@ -184,22 +184,22 @@ I switched it up with one of my favorite classic rock listen throughs, Rush - 21
 *Arrival*
 Upon arrival in Philly, here’s how it went: 
 
-![Messaging with Duane](https://dl.dropboxusercontent.com/s/ul1n5ke660bsucr/image34.png)
+![Messaging with Duane](../assets/images/2022/12/23/aD3f6Fb19bimage34.png)
 
 After hoofing it from my parking deck (Love Park Garage) with all my bags, which is about a half mile, in the middle of the night, I get to the Sonder. I passed several cops on my walk and felt pretty safe overall.  
 
-![City Hall at 2AM](https://dl.dropboxusercontent.com/s/wzyms8lra5v9ujm/PXL_20221209_063014412.MP.jpg)
+![City Hall at 2AM](../assets/images/2022/12/23/2BFA9ec98aPXL_20221209_063014412.MP.jpg)
 
 First, I tried to get into the wrong room, punching the code into room 1010 several times and probably scaring someone inside. I finally found the correct room but it seemed that Duane had bolted the door to the room from the inside, from force of habit, and was passed out AF. But also good to know they can’t key in over top of that, as I had summoned the desk guy to help me. Probably there is some higher level keyfob that could be used for fire purposes, but who knows? Duane was safe and snoring anyway.
 
 *Sleep*
 Enter Tweedy, looking like my Savior! He randomly messages me at about the time I’m about to give up and sleep in the hallway. He’s still up! And in rare form after the Old School event on Thursday.
 
-![Messaging with Tweedy](https://dl.dropboxusercontent.com/s/7fvocf9sv29nd0g/image7.png)
+![Messaging with Tweedy](../assets/images/2022/12/23/E4ae73abADimage7.png)
 
 So I end up calling him, finding the Austin boys and begging for a spot on their floor. They do me one better and offer me half a couch. We are up for another couple hours bullshitting, visiting and figuring out Tweedy’s Polaroid. I help them register their decks on MTGMelee and we finally lay down at 4AM, planning to rise at 7AM and get ready. The blinds in the room are missing from one window and the neon white of the street light blazes through into the room. I lay down and pass out.
 
-![Found a Spot](https://dl.dropboxusercontent.com/s/9uehj4fow7yeng7/foundaSpot.jpg)
+![Found a Spot](../assets/images/2022/12/23/aAc2b33fd6foundaSpot.jpg)
 
 
 **Day 1 - Swiss**
@@ -207,15 +207,15 @@ I woke up and saw that Duane had called me probably 20 minutes after I passed ou
 
 We note passing about 7 cops on the short walk over to the Convention Center and we arrive with much time to spare overall. I think we were there 45 minutes prior to 9. Duane and I got a coffee at Starbucks.
 
-![Duane and Rajah get Starbucks 1](https://dl.dropboxusercontent.com/s/aqz99l02c7pcquc/IMG_3415.JPG)
-![Duane and Rajah get Starbucks 2](https://dl.dropboxusercontent.com/s/gkri26gq4a34upt/IMG_3414.JPG)
+![Duane and Rajah get Starbucks 1](../assets/images/2022/12/23/B42fb4534DIMG_3415.JPG)
+![Duane and Rajah get Starbucks 2](../assets/images/2022/12/23/31BF36Df00IMG_3414.JPG)
 
 I also had some time to drop off my Dark Ritual to Ken Meyer. Then, all of the sudden, we started. They had us sit down for Round 1 and I assumed they would be doing the Player meeting and then repairing us. I was at table 2 and made a joke about it being the highest I’d be all day. They did not do pairings again. We were off!
 
 *Round 1	Tom Dahl	Esper Combo*
 https://mtgmelee.com/Decklist/View/263617
 
-![Round 1 - Table 2 woo](https://dl.dropboxusercontent.com/s/fn1n3yhu0cneadh/FB_IMG_1670901714810.jpg)
+![Round 1 - Table 2 woo](../assets/images/2022/12/23/4dDBB07e89FB_IMG_1670901714810.jpg)
 
 G1 - M: OTP, 7 Cards, Y: 6 Cards
 Tom was great to play and a nice way to open up the day. I brought out the Rock, Paper, Scissors game and he chuckled. He was interested! He picked a card and I told him to pick one for me too. We flipped up and I won, so I elected to go first. 
@@ -240,7 +240,7 @@ RPS 1-0
 *Round 2	Obert Chen	Colorless Shops*
 https://mtgmelee.com/Decklist/View/263611
 
-![Metalworker Sighting woot](https://dl.dropboxusercontent.com/s/0xa6d06hbuc96cj/IMG_3417.JPG)
+![Metalworker Sighting woot](../assets/images/2022/12/23/BCa8EBAb2CIMG_3417.JPG)
 
 Another stellar opponent, Obert was super nice and he was playing some great spice with Metalworker Shops. IIRC, he was on the fence about playing until just that week. I’m glad he decided to play. He was stoked to play Rock, Paper, Scissors and he even messaged me after the tournament to congratulate me!
 
@@ -320,13 +320,13 @@ G2: M: OTD, 7 Cards, Y: 7 Cards
 SB: No Changes
 I still wasn’t exactly sure what Doug was up to but I suspected some kind of Wrenn and Six deck. Nothing I could do if he gets going Vintage style, so just try to kill him fast. That plan starts off well. Not sure the exact sequence of my creatures, but he went 20->18->17->16->11->6 which implies something like Thalia, into fetch, into Archon getting Forced, into White Plume, into second initiative creature causing a Trap. He does end up casting W&6 and Oko in this game.
 
-![Serious Vintage Fan](https://dl.dropboxusercontent.com/s/h8nfbrky344h8gs/IMG_3422.JPG)
+![Serious Vintage Fan](../assets/images/2022/12/23/61A75A0872IMG_3422.JPG)
 
 During this round, I met Dave (I think Crowley from looking at the lists). He saw my shirt and wanted to let me know he was a big fan of the Serious Vintage podcast (https://www.eternalcentral.com/seriousvintagepodcast/) and that he loved the White Hatebears deck that is so near and dear to our hearts. Big up to Nat Moes, Geoff Moes and Josh Chapple for creating the pod and spreading the Vintage Love. Also shout out to Jake “GarbageAggro” Hilty for pioneering the (usually unpowered) archetype within the team. I benefit from the goodwill you all have created and we pose for a picture.
 
 I also got to pick up my alter from KMJ, so I’m feeling pretty good after this round.
 
-![Ken Posing with Rajah Ritual](https://dl.dropboxusercontent.com/s/6ogt1czfpeyzwnh/IMG_3418.JPG)
+![Ken Posing with Rajah Ritual](../assets/images/2022/12/23/e81B0f1e7fIMG_3418.JPG)
 
 Games: Y Y
 Round 3-1
@@ -374,7 +374,7 @@ I produce an Archon via a Cavern of Souls. He proceeds to top deck more artifact
 
 This is where things go off the rails a bit and I received my first Game Rules Violation on the day. Hopefully I get this sequence right but of course we are a few days out; details get hazy. After topdecking back and forth for a while, I finally topdeck a White Plume Adventurer, and excitedly tap my Chrome Mox to cast it. My opponent is in a haze, wondering why his deck keeps providing him artifacts off the top, when he clearly needs action. He allows my spell to resolve and I take the Initiative, entering the Secret Entrance and searching up a Plains.
 
-![GRV Time Featuring Sullivan Brophy](https://dl.dropboxusercontent.com/s/r6msqxc07bs4lw4/FB_IMG_1670901447792.jpg)
+![GRV Time Featuring Sullivan Brophy](../assets/images/2022/12/23/7db8603E6dFB_IMG_1670901447792.jpg)
 
 At this point I see movement behind my opponent, his friend astutely recognizing my illegal play. I look down at the board, and realize why the friend is moving to the judge, at which point I call the judge on myself.
 
@@ -428,7 +428,7 @@ Going into this round, some of the top players were able to draw into the Top 8.
 
 So of course, then a judge came over and told us to come to the feature match area. I was pretty excited now that I could hopefully achieve my goal to get on camera. Things are coming up Rajah again. I’m feeling like I can’t lose.
 
-![Feature Match Area, Round 8](https://dl.dropboxusercontent.com/s/0r0tieg1bo5of9u/IMG_3111.jpg)
+![Feature Match Area, Round 8](../assets/images/2022/12/23/A25FcDc60BIMG_3111.jpg)
 
 So we sat down in the feature area and I got to meet Anurag finally. They explain how the stream will run, how to use the life pad, and to ask for any tokens we need. As we start to shuffle up, I pull out the Rock, Scissors, Paper cards and offer them to my opponent. “Do you wanna play?” 
 
@@ -490,7 +490,7 @@ On my Turn 6, I Forge. I put the counters on Mindcensor but this is probably wro
 
 I draw a land for turn, attack him to 3 and pass. On his Turn 6, he draws. Then fetches. He doesn’t find the land he was looking for and concedes to damage on board.
 
-![Win and In, Round 8](https://dl.dropboxusercontent.com/s/6azmgn8yw6u8p5v/FB_IMG_1670901575224.jpg)
+![Win and In, Round 8](../assets/images/2022/12/23/ca7c6CeF86FB_IMG_1670901575224.jpg)
 
 G3 - M: OTD, 7 Cards, Y: 7 Cards
 SB: No Changes
@@ -522,13 +522,13 @@ RPS 6-1
 *Celebration*
 Round 8 was also a win-and-in for my crewmate Mike O’Malley. He was coming off a banner year, claiming runner-up at the recent RtS invitational. He had been able to fight for a draw in his Round 7 against a RG Hollowvine mirror. This put him in a position to make Top 8 but it would come down to his breakers most likely.
 
-![Mike’s Round 7 Draw](https://dl.dropboxusercontent.com/s/6x5cwbv8tc9kqw5/FB_IMG_1670901544731.jpg)
+![Mike’s Round 7 Draw](../assets/images/2022/12/23/88aB90dE8BFB_IMG_1670901544731.jpg)
 
 So we kind of milled around waiting to hear the announcement after the round ended. The announced read off, I had the 3rd seed. When he got to 7th, he announced that 3 players had 19 points… someone was going to be left out, 9th on breakers.
 
 7th place, Peter Coloyan. 8th place, Mike O’Malley! We screamed like idiots. 2 of the crew were on to the Top 8!
 
-![Top 8 Couch Buddies](https://dl.dropboxusercontent.com/s/jr8hzximygflgq1/IMG_3113.jpg)
+![Top 8 Couch Buddies](../assets/images/2022/12/23/16bbe61aE0IMG_3113.jpg)
 
 *Where there’s a Bar, There’s a Way*
 Now for the real, best part of Eternal Weekend. I didn’t expect it to be, but Friday night turned into a celebration night. Tweedy, being the owner of Austin night spot Hotel Vegas, was enamored with a place he had been years before; it was still around!
@@ -543,11 +543,11 @@ Bob and Barbara’s was super unique, with a neighborhood bar atmosphere, in the
 
 We posted up in the outside patio area to talk. 
 
-![Duane anot kinda Tweedy pictured](https://dl.dropboxusercontent.com/s/9hs0pbcj37axu29/IMG_3425.JPG)
+![Duane anot kinda Tweedy pictured](../assets/images/2022/12/23/2E5Be5CadBIMG_3425.JPG)
 
 I was drinking Sea Quench Sours. We had 3 or 4 drinks at B&Bs before starting a walk home. We diverted into some kind of Christmas bar that was very brightly lit and also heated!
 
-![Great Lighting, Great Looking Dudes](https://dl.dropboxusercontent.com/s/776d8jnir0wh3ov/PXL_20221210_020244395.MP.jpg)
+![Great Lighting, Great Looking Dudes](../assets/images/2022/12/23/839aBd2F1BPXL_20221210_020244395.MP.jpg)
 
 After a while here, we find a table and start winding down. Everyone is pretty burnt from the long day and travel the day before. We head back to our spot but soon head back out again to 7-11 for late night snacks. I eat a Ham and Cheese Hot Pocket and head upstairs..
 
@@ -563,13 +563,13 @@ I think we both had offset alarms. His alarm went off, I was snoring, so he went
 
 With a slight hangover at that point, we decided we shouldn’t try to put the deck together for testing that AM. StuZ had most of the deck together from the Swiss and I just planned to wait and test against him. I was not worried about it too much at this time. Duane and I got to shoot the shit while I guzzled caffeine. Soon enough it was time for Duane to depart. We hug it out and he wishes me luck, while I wish him safe travels.
 
-![So Many Unsigned Cards](https://dl.dropboxusercontent.com/s/ob1tpzrb4fa0mnl/PXL_20221210_170128174.jpg)
+![So Many Unsigned Cards](../assets/images/2022/12/23/E328B7e6a4PXL_20221210_170128174.jpg)
 
 I decided to take a deck picture, took a shower and got ready to meet the Austin boys at the convention center. Hopefully one of them was winning a Mox Pearl. I thought about how ugly my deck was with so many unsigned cards but I was excited to make some more new memories with my Lotus.
 
 I rolled into the convention center and ended up finding the crew. We bullshitted and Tweedy played magic. No one was winning a Mox Pearl.
 
-![Tweedy at the High Roller Table](https://dl.dropboxusercontent.com/s/29twal418io65c5/FB_IMG_1670901264472.jpg)
+![Tweedy at the High Roller Table](../assets/images/2022/12/23/EdAbb4aBbdFB_IMG_1670901264472.jpg)
 
 I bought an Alpha swamp and asked Dan Frazier to ‘do something Philadelphia, with a Monster’. He asked if it should be scary or cartoonish. I said scary, I think, and that I liked the One-eyed Purple monster, that he was cute. “That’s not scary!”, he says.
 
@@ -581,7 +581,7 @@ Stu was waiting to add me to the Morimoto reservation, but they didn’t open un
 We headed to the Reading Terminal Market https://readingterminalmarket.org/ and did a lap and half, just checking places out. There was an Indian place that we thought about but in the end Mike, Tweedy and I went for a cheesesteak of one type (Spataro’s), Stuz went for a cheesesteak of another type (Carmen’s). I had mine with whiz, onions and mushrooms. Austin builds were suspect. No sandwiches were punched; I don’t think any of them are “in” but they ate surprisingly defensively if not. I didn’t mention the Sandwich Punch game. We got an awesome picture in the ‘photo booth’ area. 
 
 
-![Sisters With Voices](https://dl.dropboxusercontent.com/s/lmo3irxzlyzeg50/IMG_3427.JPG)
+![Sisters With Voices](../assets/images/2022/12/23/EA84EE8919IMG_3427.JPG)
 
 *Now Testing, but also then Dinner*
 
@@ -589,7 +589,7 @@ After smashing cheesesteak, we walked it off back to the spot. After getting Stu
 
 As we sat there setting up to test, I was very happy for my friends. I had specifically not brought my laptop with me, but I wondered what I would do to test if these guys weren’t here? I imagined maybe some of my T8 opponents on their laptops, testing the matchup with friends online. I hope they are having fun too.
 
-![Good, Old-Fashioned Testing](https://dl.dropboxusercontent.com/s/7vi4o3ma2ay8dne/image0%20%283%29.jpg)
+![Good, Old-Fashioned Testing](../assets/images/2022/12/23/b9afFBbA4Eimage0%20%283%29.jpg)
 
 StuZ and I got down to business pretty quick. Meanwhile, Tweedy had basically all the cards for the Hans deck and Mike worked on putting that together. Tweedy tested the polaroid and provided commentary on what Mike needed to watch out for (Lavinia).
 
@@ -597,7 +597,7 @@ StuZ just finished playing the deck the day before and he had gotten all the bad
 
 Looking at my deck vs Somers, StuZ had good feedback as we played. We tested a few Game 1’s before I got my pad out. I won 5 of 7 pre board games I recorded. My 5 main deck Swords effects were generally enough to win the race. The games he won generally came from a very annoying name by Anointed Peacekeeper. Kaldra proved to be very good at just bashing through and taking initiative back. As we played, it became clear that the Protection from Creature clause on Seasoned Dungeoneer would be able to win a game on its own almost; it was almost always game over when it stuck around. Anointed Peacekeeper being a Cleric type was good for a target too.
 
-![Game 1 Testing](https://dl.dropboxusercontent.com/s/ub73dg89hkntnei/PXL_20221216_043016236.jpg)
+![Game 1 Testing](../assets/images/2022/12/23/2228cBFBfDPXL_20221216_043016236.jpg)
 
 We decided that his likely sideboarding would be:
 
@@ -618,7 +618,7 @@ While playing with Mike, Stu gets me into the Morimoto reservation, and we also 
 
 StuZ and I then return to testing a potential Game 3 where I would go second. We played 10 games. I won only 2.
 
-![Testing G2 & G3](https://dl.dropboxusercontent.com/s/9f1yqhnjyrvkwrh/PXL_20221216_043117089.jpg)
+![Testing G2 & G3](../assets/images/2022/12/23/5509DB533dPXL_20221216_043117089.jpg)
 
 From the testing, we learned that the Swords to Plowshares let Somer’s Deck keep a slower hand, especially on the draw. Being able to simply remove the first threat for one white, he can take back the Initiative on Turn 3 without worry. Additionally, by this time, the deck is one or two turns away from hard casting the Solitudes. 
 
@@ -629,47 +629,47 @@ I felt like a drunk asking for ‘just one more”, as we kept shuffling up. As 
 *Morimoto, Finally*
 We were way underdressed. Probably some couples were there for their anniversary. They have us wait in the upstairs lounge while our table is prepped. They lead us to a huge 8 person table in the middle of the restaurant. No one really looks at us.
 
-![Morimoto Morey Photo](https://dl.dropboxusercontent.com/s/n8y49a8byx3pd34/IMG_3119.jpg)
+![Morimoto Morey Photo](../assets/images/2022/12/23/EC40504D2eIMG_3119.jpg)
 
 We get the menus and are talked into the Omasake menu. I’m extremely susceptible to not having to think at this point, and this option is a chef’s tasting menu. The price is outrageous but we all go for it. Thanks Ty for capturing the pics of each dish!
 
 Course 1 - Seaweed Flan
 This was pretty good. Some kind of egg based dish with a seaweed reduction? Also with a bit of nuts and caviar on the top. I liked the taste of that bit but the texture of the egg wasn’t great. I wanted to get the full Omasake experience so I made sure to eat it all. Recommended eating was to take a very small bit of the topping with each bite.
-![Seaweed Flan](https://dl.dropboxusercontent.com/s/mkee8kqe2dch9zd/20221210_215549.jpg)
+![Seaweed Flan](../assets/images/2022/12/23/d72cDFa4D920221210_215549.jpg)
 
 Course 2 - Tuna Tartare
 This was very good. The tuna was finely diced with sesame seeds throughout. The top was green onion and caviar. The sauce in the bottom was a soy type sauce. They recommend taking vertical bites that include each component. 
-![Tuna Tartare](https://dl.dropboxusercontent.com/s/6g8mja7lewxzz4o/20221210_221341.jpg)
+![Tuna Tartare](../assets/images/2022/12/23/FefEA0d0af20221210_221341.jpg)
 
 Course 3 - Rose Fish
 There was a nice explanation of the presentation which I don’t remember exactly. The Rose color is from beets. The small ‘eye’ is a caper or a berry, I don’t remember. I believe the fish is Escolar. You just eat this one, no special instructions.
-![Rose Fish](https://dl.dropboxusercontent.com/s/jec4qgox37ivi2b/20221210_222525.jpg)
+![Rose Fish](../assets/images/2022/12/23/FcdFDC1f0220221210_222525.jpg)
 
 Course 4 - Wagyu Beef Amuse-bouche
 This course is a single bite of Wagyu Tartare, with cilantro and onion. The serving suggestion is to eat as one bite. It was stellar. Yes, Nat, my -bouche was Amused.
-![Wagyu, Wagyu, same difference](https://dl.dropboxusercontent.com/s/kbf4v9lj70ocue8/20221210_223502.jpg)
+![Wagyu, Wagyu, same difference](../assets/images/2022/12/23/1Df7e26A3A20221210_223502.jpg)
 
 Course 5 - Lobster 3 Ways
 This course was Lobster 3 ways. First, a tail shelled and sectioned, served on an oak barrel. Then a lobster bisque reduction. Then finally a lobster portion served with radish. Serving suggestion was to dip the lobster tail into the reduction, then eat the radish dish separately.  
-![Lobsters of 3, Something, Something, Seas](https://dl.dropboxusercontent.com/s/fsrtuarsyq17vj8/20221210_224825.jpg)
+![Lobsters of 3, Something, Something, Seas](../assets/images/2022/12/23/d30faeBBaC20221210_224825.jpg)
 
 Course 6 - Caviar Encrusted Sea Bass with Lemon Herb
 This was great as was the rest of the courses so far. A cooked dish that really helped to clear the way in the stomach. 
-![Encrusted](https://dl.dropboxusercontent.com/s/86bq8hztruv3fh2/20221210_230318.jpg)
+![Encrusted](../assets/images/2022/12/23/fbF25Dce1E20221210_230318.jpg)
 
 Course 7 - Sushi Rolls
 I don’t know what each was. Far right was a lobster roll. This was the final savory course and they were all delicious. During this course, Mike makes a big deal about eating all his ginger and loving it. The staff takes note of his ginger love, and asks if we are here for some special occasion. The guys point to me and Mike and say we are in Philly to play Magic cards and we are preparing for the Top 8 tomorrow. She doesn’t know what that is but is happy for us!
-![Sushi Rolls](https://dl.dropboxusercontent.com/s/t0p9imai57pd73l/20221210_232642.jpg)
+![Sushi Rolls](../assets/images/2022/12/23/F9f8271fEc20221210_232642.jpg)
 
 Course 8 - Desert - Seaweed Foam Blueberry Cake with Chocolate Drizzle
 This was very tasty, if a bit heavy. The chocolate drizzle did a lot of the lifting. 
-![Cheesecake, Pre-Drizzle](https://dl.dropboxusercontent.com/s/uf4fya38gtv6xk1/20221210_234931.jpg)
-![The Drizzle](https://dl.dropboxusercontent.com/s/03523gey5cjqap3/20221210_234955.jpg)
+![Cheesecake, Pre-Drizzle](../assets/images/2022/12/23/C090EEF4bE20221210_234931.jpg)
+![The Drizzle](../assets/images/2022/12/23/f3f8dcED0F20221210_234955.jpg)
 
 Course 9 - Special Ginger Boy Power Desert
 The server hadn’t heard of Magic but apparently someone in the back had, and this coupled with Mike’s apparent ginger obsession had them bring out one more thing, which was a special Ginger Tea cake dessert, with candles even! Mike and I smashed one each to the face while letting the other guys split the 3rd one.
 
-![Ginger Power](https://dl.dropboxusercontent.com/s/k9mig5ict0fhmcz/IMG_3124.jpg)
+![Ginger Power](../assets/images/2022/12/23/DE5FEce06fIMG_3124.jpg)
 
 
 Feeling great and full of ginger, we all realize it is 12:30 AM! At this point we get a ride back to the Sonder, which takes longer than it would have to walk, but is warmer. We all go to proper beds and sleep.
@@ -682,15 +682,15 @@ We have been told to get to the venue by 10. Tweedy’s flight out is early, 9AM
 So we get there at 10. And then we are told that we start at 11. All good, I’m not nervous. I am nervous.
 
 I pass Mark’s booth and Mark calls out to me that Dan has finished my alter. I also pick up some signed cards Mark had brought for me. So that’s something to do. We also got a picture! 
-![Me, Mark and Dan](https://dl.dropboxusercontent.com/s/2zq67bkpamlytrd/PXL_20221211_153904599.MP.jpg)
-![Cute Little Swamp Monster](https://dl.dropboxusercontent.com/s/fc44e7z0z0dfst9/IMG_3436%20%281%29.JPG)
+![Me, Mark and Dan](../assets/images/2022/12/23/dd37a1443DPXL_20221211_153904599.MP.jpg)
+![Cute Little Swamp Monster](../assets/images/2022/12/23/C16B05b002IMG_3436%20%281%29.JPG)
 
 Just before 11AM, I got a message from my wife, wishing me luck.
-![Good Luck Daddy, We Heart U](https://dl.dropboxusercontent.com/s/92airf8hpjzonzv/PXL_20221211_155112417.MP.jpg)
+![Good Luck Daddy, We Heart U](../assets/images/2022/12/23/Cd0f37C8BCPXL_20221211_155112417.MP.jpg)
 
 Soon, the Top 8 are gathered together and they take a few pictures of the Top 8 and individuals.
-![Top 8](https://dl.dropboxusercontent.com/s/onply877bz3qhrz/FB_IMG_1670901128116.jpg)
-![1000% Happy to Be Here](https://dl.dropboxusercontent.com/s/4qtzjp8qqvf5bte/FB_IMG_1670901088545.jpg)
+![Top 8](../assets/images/2022/12/23/F8406Ef0EaFB_IMG_1670901128116.jpg)
+![1000% Happy to Be Here](../assets/images/2022/12/23/cee0BDd80BFB_IMG_1670901088545.jpg)
 
 *Quarterfinal - Stu Somers - Mono White Initiative*
 https://mtgmelee.com/Decklist/View/263864
@@ -735,7 +735,7 @@ On Somers' turn, he draws and coverage shows it is another Plains. He ends up pl
 On my turn, I Trap him to 11 life. I activate Stoneforge Mystic on my turn and put Kaldra Compleat into play. I turn the Dungeoneer and Kaldra sideways and say, “Attack”. At this point, Somers calls for the judge. He nitpicks about the germ token and me not representing it / the trigger. I get it, but state that we were told the tokens would be in the coverage area, and I hadn’t brought my tokens. Additionally, he can respond to the trigger if he wants but I know what is in his deck, so it is either Swords or Solitude. He can do either one before attacks, if he wants, I’m still turning the other guy sideways.
 
 
-![Quarter Finals. Mike and Hans Foreground, Somers and Me Background](https://dl.dropboxusercontent.com/s/bmygflmx9fmxrbm/FB_IMG_1670901035814.jpg)
+![Quarter Finals. Mike and Hans Foreground, Somers and Me Background](../assets/images/2022/12/23/fE8dBef09bFB_IMG_1670901035814.jpg)
 
 The judge tells me it doesn’t matter what my opponent says, that he will rule on what will happen next. He asks me if I have been representing the Germ today and I say I have been using my Domino Marvel Masterpieces card to do so, but I left the token box in the room. I appreciate the judging that has gone on so far and hope that everything comes out ok. In the end, I’m told that I need to represent the Germ token and be more careful about it next time. I get the Germ, attack with no response from my opponent and he goes to 2 life. I then cast the Archon in my hand or a bomb I just ripped. Somers concedes and we are on to Game 3.
 
@@ -754,7 +754,7 @@ This match seemed super fast and it felt easy. I don’t know how my opponent fe
 Game 1 - M: OTP, 7 Cards, Y: 7 Cards
 I don’t remember a ton from this game. His life points went from 20-> 19-> 17 -> 15. This would mean either Archon or Thalia is attacking. I don’t have notes past this. 
 
-![Semi Final - Peter Shuffles Up](https://dl.dropboxusercontent.com/s/egu2lk3jhf94jxg/FB_IMG_1670900357608.jpg)
+![Semi Final - Peter Shuffles Up](../assets/images/2022/12/23/6fb9C7dDcEFB_IMG_1670900357608.jpg)
 
 Game 2 - M: OTD, 7 Cards, Y: 7 Cards
 SB: -3 Stoneforge Mystic, -1 Kaldra Compleat; +2 Aven Mindcensor, +2 Kataki
@@ -773,7 +773,7 @@ Next I go for Archon of Emeria, which also resolves! So likely a land is on top 
 
 After this action, I end my turn with both Orc and Archon on my team.
 
-![Semi Final - I am Thinking](https://dl.dropboxusercontent.com/s/npt1shqg5ybb767/FB_IMG_1670901020907.jpg)
+![Semi Final - I am Thinking](../assets/images/2022/12/23/2Ad612Dd1cFB_IMG_1670901020907.jpg)
 
 On his turn 2, he untaps with access to Island and Sol Ring. He draws his card for the turn and takes a peek at the top card via Citadel. He decides to cast his one spell here, resolving Ancestral Recall for one life off the top, leaving him at 18. 
 
@@ -808,7 +808,7 @@ https://mtgmelee.com/Decklist/View/263454
 
 Hans had real end boss vibes. I was not feeling intimidated, but I could tell he was used to being here; he seemed less nervous than I was anyway. When we finally sat down, he had just finished what looked like a very mentally exhausting set against Brian Palus on Doomsday. Hans was in good spirits though and did smile during our pre-game chats. He was human! We made some small talk about Finals.I mentioned that it would be cool for my deck to win because of the new angle, and that this time could be remembered as “White Winter”, a cool storyline, right? He counters that him winning could also be a good storyline because he would be the first person to win 3 paintings! I laughed at that, and was a little intimidated, but nothing could really impact my high at being in the Final and I was genuinely excited.
 
-![Finals - Shuffling Up](https://dl.dropboxusercontent.com/s/owgljafm7jmi6g8/image0%20%282%29.jpg)
+![Finals - Shuffling Up](../assets/images/2022/12/23/01eb117ca0image0%20%282%29.jpg)
 
 Game 1 - M: OTD, 7 Cards, Y: 7 Cards
 Since I’m the 3 seed and Hans the 1 seed, he gets to go first. Against his deck, this is not as scary as Doomsday or TInker combo; I should get a turn. He shows me ‘his pokemon card’, as he called it (Lurrus) and we are off to the races.
@@ -840,7 +840,7 @@ So I go for Palace Jailer. It resolves and I snag Lavinia, clearing the way for 
 
 On his turn Turn 5, I untap the Thalia, he untaps 2 Volcanics and a Tundra, with Black Lotus up. Hans draws his card and tanks for a minute. I see on coverage he has a Tundra in his hand. On this turn, Hans takes a long time to decide on his play. The judge gently reminds him that he needs to make a play. Hans is facing down lethal damage on board, and heading into the Trap next turn.
  
-![Finals - Hans in the Tank](https://dl.dropboxusercontent.com/s/rcxp7l7velrdi7i/FB_IMG_1670900284855.jpg)
+![Finals - Hans in the Tank](../assets/images/2022/12/23/6Efe0F437cFB_IMG_1670900284855.jpg)
 
 Finally, Hans decides that the lifelink of Lurrus might be the only way to save himself. He adds the second Tundra to his board, fetches and plays Lurrus, and replays the Lotus off Lurrus, then passes, with just Lotus up.
 
@@ -854,7 +854,7 @@ SB: No Changes
 
 I debate on bringing in Mindcensor and that probably was correct to do so, but I didn’t want to give up the Stoneforge package because of the amount of pressure it applies. With this strategy, I probably should have cut one Loran for the Jitte, which when loaded, can remove most of his team with 2 counters. On the other hand, Loran felt like it could be very powerful based on his Mox light configuration, if it came on time.
 
-![Finals - Judges Looking on](https://dl.dropboxusercontent.com/s/1z6oqnkyaij6ob6/FB_IMG_1670900291401.jpg)
+![Finals - Judges Looking on](../assets/images/2022/12/23/c67CDE29ecFB_IMG_1670900291401.jpg)
 
 From having played the Hans deck and from my Game 2 in the Quarterfinal, I knew I could keep a threat dense hand, even if it was not super fast. He would need a Swords and then an active Arcanist to keep me from progressing, but I could add more threats than he could, hopefully faster.
 
@@ -889,7 +889,7 @@ For Turn 6, Hans draws and goes into the tank. He doesn’t want to lose Lavinia
 He hands it back and decides to remove Thalia with Prismatic Ending, and then he has to attack with Lavinia. I don’t block and let him take the Initiative. He enters the Secret Room but he fails to find an Island in his deck I know one card in his hand now. He plays Misty Rainforest and passes.
 
 On my Turn 6, I draw, and then put Kaldra Compleat into play via Stoneforge Mystic, taking back the Initiative and putting him at 11 life. I enter the Catacombs for the first time today, and I create a 4/1 Black Skeleton creature token with menace. I don’t have this token and neither does anyone else in the coverage area. I am handed a blue sleeved card to use as a token. I pass.
-![Skeleton Token](https://cards.scryfall.io/png/front/c/f/cf4c245f-af2f-46a7-81f3-670a04940901.png?1654171461)
+![Skeleton Token](../assets/images/2022/12/23/4766AAF4e2cf4c245f-af2f-46a7-81f3-670a04940901.png)
 
 On his Turn 7, he draws and decides to attack with Lavinia, un-Goaded, into the Skeleton. I block to keep the Initiative. I want to enter Throne of the Dead Three on my upkeep.
 
@@ -904,14 +904,14 @@ I take my draw for turn and attack for 6, leaving him at 5 life. My draw for tur
 On Turn 8, he plays the Island he has had in hand, casts Dreadhorde Arcanist, then passes.
 
 On my Turn 8, I Forge onto the Stoneforge Mystic, making it a 3 / 4. I draw for turn and play Mox Ruby, then Plains. I have Palace Jailer and I debate waiting around for another mana. I also have Solitude, but would need to pitch the Jailer. I decide to put him to the test here, and go for Solitude pre-combat, targeting the Dreadhorde Arcanist. This results in Hans extending his hand to me; the match is over.
-![Holding the Painting](https://dl.dropboxusercontent.com/s/9m49cpjyw7lwas5/FB_IMG_1670900214496.jpg)
+![Holding the Painting](../assets/images/2022/12/23/Af1Fbb2666FB_IMG_1670900214496.jpg)
 
 I am the 2022 NA Vintage Champion.
 
 *Trophy Plus Serious Connections*
 Shout out to the judging staff for the event, they were top notch and all seemed genuinely excited to be there. The head judge seemed excited to be able to officially present the trophy. I was excited to receive it!
-![Trophy Presentation](https://dl.dropboxusercontent.com/s/vzuy3oak26n34di/FB_IMG_1670900277109.jpg)
-![Stunned](https://dl.dropboxusercontent.com/s/jtpma80k7hi4q47/FB_IMG_1670900273449.jpg)
+![Trophy Presentation](../assets/images/2022/12/23/e3E1a7E0eFFB_IMG_1670900277109.jpg)
+![Stunned](../assets/images/2022/12/23/a50AD67D8BFB_IMG_1670900273449.jpg)
 
 So I get this amazing painting trophy and then I want to know if they kept the box? I walk around a bit aimlessly, in shock, holding the painting. I am getting daps and congrats. A guy from a sales group on FB comes up to me and recognized my name. He congratulates me! I am then approached by a guy who lets me know he is the man of the hour, and not to worry, he has kept all the packaging, knowing that the winners would want to pack them back up. So he leads me to the area where he stashed everything and we get to talking.
 
@@ -955,7 +955,7 @@ Duane, thank you for being a Colorless soldier and coming out to EW and hanging 
 
 RtS Crew, StuZ, Tweedy, MikeO, thank you for allowing me to meld with your crew and supporting me the whole weekend. Stu, thank you for testing with me all those games and helping me with my mental state. You are a baller’s baller. Rob for producing the stream. I wouldn't have seen the deck otherwise. Hockey, thank you for the list and all the other chats. Mike, the couch was phenomenal, 10/10 would crash again. Kai, I’m coming for that Chain baby. Jake, hope to see ya again next year! Keep brewing those crazy decks. Tweedy, I hope to get down to SXSW and experience the crazy with y’all. See you in the Top8 again next time MikeO, great run.
 
-![RtS Rootwala](https://dl.dropboxusercontent.com/s/7ndmq2cwzdyxefo/FB_IMG_1670901703101.jpg)
+![RtS Rootwala](../assets/images/2022/12/23/9035a42d63FB_IMG_1670901703101.jpg)
 
 For Jaco and Nathan and Bob and the network of ballers they put me on to. LOTP crew, too many of y’all to name all of you, David, Ian, Carter, Lorien, Moss, Tyler, Shane, see? I missed a bunch. Shout out to my fellow “Thrulls” and the Lords alike, love you all. Maybe I can get one of those cool patches one day, gotta practice some flips. 3 Rivers Wizards, Bob, JC, Kevin, Twan, love you guys. Music City Old School crew, Casey and Alan, Knights Taplar, Toronto 93/94 crew, Jame, Hacks crew, Tusk Crew and all the crews that let me share the love of the game with them, this is for you all too. Thanx.
 
@@ -969,7 +969,7 @@ SOs and Partners, thanks for putting up with us and all the support. To my kids,
 
 Whether you play on paper, with proxy, on MTGO, or whatever, if you play and love the Vintage format, thank you. And if you dream of being the Vintage Champ someday, and hoisting the painting above your head, don’t stop dreaming! Dreams can come true 🙂
 
-![Woo Painting](https://dl.dropboxusercontent.com/s/3hnc56lajb8z8g9/FB_IMG_1670900168466.jpg)
+![Woo Painting](../assets/images/2022/12/23/D3DE98FAf2FB_IMG_1670900168466.jpg)
 
 *Until Next Time*
 I thought about it watching coverage, that this event was missing a lot of big names. Of course there were some amazing players registered for the event, and you can question every Vintage champion ever in this way, I think (well so-and-so wasn’t there so it isn’t legit). Of course, I would love to have prevailed over a larger field that included more of my friends. I mean, THE Vintage duo wasn’t even there competing, they were doing the commentary! But so it goes.
@@ -980,4 +980,4 @@ On the other hand, one huge thing they could do is to include the World Wide Vin
 
 No matter what happens with the Mothership, I hope that the stars align again and whenever and wherever the next Vintage Champs is announced, I will be there, slanging spells. Seriously.
 
-![Spoils of the Weekend](https://dl.dropboxusercontent.com/s/wnsvmpc5he1p6uu/IMG_3435.JPG)
+![Spoils of the Weekend](../assets/images/2022/12/23/E57790Bc70IMG_3435.JPG)
