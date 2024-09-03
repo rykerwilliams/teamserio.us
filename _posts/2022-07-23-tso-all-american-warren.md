@@ -27,8 +27,6 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
-
-include_on_feed: true
 ---
 
 12 Players gathered for the first time at All-American Cards and Comics, including 7 Seriousos. Some of us met for breakfast at the Mocha House. It was good 🙂
