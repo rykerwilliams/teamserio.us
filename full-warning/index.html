@@ -1,18 +1,27 @@
 ---
 layout: minimal
 title: Full Warning Episodes
-permalink: /full-warning/episodes
+subtitle: A Life and Times podcast of Team Serious; mostly targeted at our future selves.
+permalink: /full-warning/
 excerpt: Podcast
 show_breadcrumb   : true
 breadcrumb_list :
   - label: Home
     url: /
 ---
+
+
 {%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
 <main class="container-lg pb-3 flex-fill">
+  
   <div class="row pt-2 mt-3">
     <section class="col-md-8 offset-md-2">
-
+      <center>
+        <a href="https://open.spotify.com/show/2iRw7gqLL8hoMvs5wWXB99?si=c41eb82049a34d18" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/images/icons/icons8-spotify-48.png">
+          Full Warning on Spotify</a>
+      </center>
+      <p></p>
 {% for post in site.posts %}
 {% if post.categories contains 'full-warning' %} 
 
