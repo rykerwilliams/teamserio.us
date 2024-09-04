@@ -2,10 +2,21 @@
 layout: default
 title:  "Full Warning Episode 1: The Land 3 (2022) Wrap Up Part 1"
 date:   2023-05-30 16:20:59 +0000
+categories        : full-warning
+tags              : vintage middle-school podcast tsi the-land
+include_on_feed   : true
+show_author       : true
+show_bottomnavs   : true
+show_categories   : true
+show_comments     : true
+show_date         : true
+show_related      : true
+show_sociallinks  : true
+show_tags         : true
 author:
   name: Full Warning Podcast
-  avatar: https://cdn.bsky.app/img/avatar/plain/did:plc:plwyuhammh2a332etg6j36od/bafkreihptsqdakfhlhrtacbuninww7sehdzvc6pup5wodnyi4tktbv6w3u@jpeg
-  location: Ohio, US
+  avatar: ../assets/images/avatars/bafkreihptsqdakfhlhrtacbuninww7sehdzvc6pup5wodnyi4tktbv6w3u.jpg
+  location: Ohio, USA
   links:
     - url: https://bsky.app/profile/fullwarning.bsky.social
       icon: "fab fa-bluesky"
@@ -13,14 +24,11 @@ author:
     - url: https://twitter.com/fullwarning
       icon: "fab fa-twitter"
       label: "Full Warning on X"
-categories: full-warning
-tags: vintage middle-school podcast
-include_on_feed: true
 ---
 
 <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-1-The-Land-3-2022-Wrap-Up-Part-1-e24ujjf/a-a9u18r3" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 
-# Show Notes from Spotify
+## Show Notes from Spotify
 
 <p><strong>What </strong></p>
 <p>This is Full Warning: A Team Serious podcast, spiritual cousin to the Serious Vintage podcast. This space will be home to the magical, both vintage non-vintage, and of course the non magical exploits of Team Serious. And as always, food talk.</p>

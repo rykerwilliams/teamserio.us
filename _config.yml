@@ -12,14 +12,14 @@ email: we-do-not-have-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Web Home Of Team Serious.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://teamserio.us" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dev.teamserio.us" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  rykerwilliams
 timezone: America/New_York
 og_image: assets/images/index/SeriousManaHR-blacklogo.png
 author:
   name: Rajah James
-  avatar: https://avatars.githubusercontent.com/u/310221
+  avatar: assets/images/avatars/310221.jpg
   location: Ohio, US
   links:
     - url: https://bsky.app/profile/cleverpseudonym.bsky.social
@@ -53,30 +53,22 @@ navbar:
     title:
     img: "./assets/images/site/ohio.png"
   nav:
-  - title: Blog #Label
-    url: /blog/  #url
-  - title: Full Warning Podcast #Label
-    child: 
-      - title : About
-        url: /full-warning/  #url
-      - title : Browse
-        url: /full-warning/episodes  #url
-      - title : All
-        url: /full-warning/all  #url
-  - title   : Extras
-    child   :
-      - title : Tags
-        url   : /tags
-      - title : Categories
-        url   : /categories
-  - title: Two-level link #Label
+  - title   : Posts #Label
+    url     : /posts/  #url
+  - title   : Tags
+    url     : /tags
+  - title   : Categories
+    url     : /categories
+  - title   : Media #Label
     child:
-    - title: Second level first item
-      url: /url2-1
-    - title: Second level second item
-      url: /url2-2
-  - title: One-level link #Label
-    url: /url1/  #url
+      - title : Full Warning Podcast
+        url: /full-warning/  #url
+      - title : Full Warning YouTube
+        url: https://www.youtube.com/@FullWarningPodcast #url
+      - title : Serious Vintage Podcast
+        url: https://www.eternalcentral.com/seriousvintagepodcast/  #url
+      - title : Serious Vintage YouTube
+        url: https://www.youtube.com/@SeriousVintageCast #url
 footer:
   copyright: "&copy; 2024 Team Serious"
   links:
@@ -107,18 +99,16 @@ chulapa-skin:
 
 # Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
 paginate: 4
-paginate_path: "/blog/page:num/"
+paginate_path: "/posts/page:num/"
 paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
 
 # Collections https://jekyllrb.com/docs/step-by-step/09-collections/
 collections:
   posts:
     output: true
-    permalink : /blog/:year/:month/:day/:title
-collections_dir     :
-permalink           : /:year/:month/:day/:title/
-
-# Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
+    permalink : /posts/:year:month:day_:title
+# collections_dir     :
+permalink           : /:year:month:day_:title/
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
@@ -149,15 +139,15 @@ defaults:
       show_author       : true
       show_breadcrumb   : true
       breadcrumb_list   :
-        - label: Blog
-          url: /blog
+        - label: Posts
+          url: /posts
 
 # Build settings
 plugins:
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
-
+  
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

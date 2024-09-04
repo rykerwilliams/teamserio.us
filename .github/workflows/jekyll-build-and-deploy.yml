@@ -1,0 +1,56 @@
+name: Build & Upload Site
+# Run on pushes to the master branch
+on: 
+  push:
+    branches:
+      - dev
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2.4'
+        bundler-cache: true
+    - name: Setup Environment.
+      run: |
+        gem install jekyll bundler
+        bundle install
+    
+    - name: Build Site
+      run: bundle exec jekyll build
+
+    - name: Clean Extensions for S3
+      run: |
+        for i in `find -name '*.html'` ; do mv $i ${i%%.html} ; done
+        for i in `find -name 'index' -type f` ; do mv $i ${i}.html ; done
+    
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: _site
+        path: |
+          _site
+
+    - name: delete deployed site
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.DEPLOY_HOST }}
+        username: ${{ secrets.DEPLOY_USERNAME }}
+        key: ${{ secrets.DEPLOY_SSH_KEY }}
+        port: ${{ secrets.DEPLOY_HOST_PORT }}
+        script: rm -Rf /dev-www/**
+
+    - uses: moonpathbg/scp_uploader@latest
+      with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          port: ${{ secrets.DEPLOY_HOST_PORT }}
+          username: ${{ secrets.DEPLOY_USERNAME }}
+          key : ${{ secrets.DEPLOY_SSH_KEY }}
+          source: "./_site/**"
+          target: "/dev-www"
+    
