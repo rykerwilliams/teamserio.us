@@ -12,7 +12,7 @@ email: we-do-not-have-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Web Home Of Team Serious.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dev.teamserio.us" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://teamserio.us" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  rykerwilliams
 timezone: America/New_York
