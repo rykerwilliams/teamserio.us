@@ -1,5 +1,6 @@
 name: Build & Upload Site
 # Run on pushes to the master branch
+
 on: 
   push:
     branches:
@@ -16,6 +17,15 @@ jobs:
       with:
         ruby-version: '3.2.4'
         bundler-cache: true
+    
+    - name: Set environment for branch
+      run: |
+        if [[ $GITHUB_REF_NAME == 'dev' ]]; then
+            echo "DEPLOY_HOST_DIR=dev-www" >> "$GITHUB_ENV"
+        else
+            echo "DEPLOY_HOST_DIR=prod-www" >> "$GITHUB_ENV"
+        fi
+
     - name: Setup Environment.
       run: |
         gem install jekyll bundler
@@ -43,7 +53,7 @@ jobs:
         username: ${{ secrets.DEPLOY_USERNAME }}
         key: ${{ secrets.DEPLOY_SSH_KEY }}
         port: ${{ secrets.DEPLOY_HOST_PORT }}
-        script: rm -Rf /dev-www/**
+        script: rm -Rf /${{ DEPLOY_HOST_DIR }}/**
 
     - uses: moonpathbg/scp_uploader@latest
       with:
@@ -52,5 +62,5 @@ jobs:
           username: ${{ secrets.DEPLOY_USERNAME }}
           key : ${{ secrets.DEPLOY_SSH_KEY }}
           source: "./_site/**"
-          target: "/dev-www"
+          target: "/${{ DEPLOY_HOST_DIR }}"
     
