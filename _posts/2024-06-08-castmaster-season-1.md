@@ -221,3 +221,14 @@ So potential ideas to get a bigger audience for other peoples’ tasks: Spread t
 Some of this is my thinking out loud (OK, in writing), but I’m also saying you could probably do something similar if you were so inclined and there are good options for making it fit your time and space. If you do, please feel free to reach out and let me know. I’d love to hear about it.
 
 Thanks again to Rajah James and everyone else who helps for hosting The Land. Thanks to Jon Hammack for making the bookends as prizes. I was jealous to give those away. Thanks to Jerry and Brass Man for helping me setup and run events. There’s no way I could have done it without help. And thanks, of course, to all the teams and all the players who participated and were the guinea pigs for the first season of Castmaster.
+
+<!-- 
+  Wrap the code blocks for a nicer reading experience. 
+    It isn't really code.
+-->
+<style>
+  code {
+    white-space : pre-wrap !important;
+    word-break: break-word;
+  }
+</style>
