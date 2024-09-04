@@ -93,18 +93,18 @@ I intended tasks 4, 5, and 6 to take place between tournament rounds. For each t
 
 Anyway, the directive:
 
-Shuffle this draft deck and sort it into piles by card color and alphabetically.
+    Shuffle this draft deck and sort it into piles by card color and alphabetically.
 
-As you sort, follow these rules:
-For each legendary creature, say “Save a kill spell for this.”
-For each artifact, say “Ooh, shiny.”
-For each land, say “Never been there.”
-For each signed card, say “These Ohio guys are idiots.”
-For each special treatment (e.g. foil) or frame (e.g. retro), say “No way!”
+    As you sort, follow these rules:
+    For each legendary creature, say “Save a kill spell for this.”
+    For each artifact, say “Ooh, shiny.”
+    For each land, say “Never been there.”
+    For each signed card, say “These Ohio guys are idiots.”
+    For each special treatment (e.g. foil) or frame (e.g. retro), say “No way!”
 
-Fastest, best sort wins.
+    Fastest, best sort wins.
 
-Time starts and you may pick up your deck when you put on your selected best eyewear.
+    Time starts and you may pick up your deck when you put on your selected best eyewear.
 
 So Task 4 was to sort a draft deck from one of our earlier Team Serious chaos drafts and do some additional stuff. The deck was pretty usual, had examples of everything. I’d say the trick is that one of the signed cards was pretty hidden, with one signature that blends in with the art a bit. And the “special treatment” is a little hard to determine, based on wording.
 
@@ -126,11 +126,11 @@ I liked this task, but scores felt muddy in the middle. Thank goodness there wer
 
 I had high hopes for this task. It was interesting and fun to set up and it just didn’t pan out how I wanted.
 
-Put these cups of LaCroix-brand sparkling water in order. The odd one out should be last.
+    Put these cups of LaCroix-brand sparkling water in order. The odd one out should be last.
 
-You have 6 minutes.
+    You have 6 minutes.
 
-Your time starts now.
+    Your time starts now.
 
 As I explained when presenting the scoring (and which no one got during the actual task), the LaCroix flavors aligned with Magic: The Gathering colors, with one extra. The order should have been white, blue, black, red, green, tangerine. Coconut is white; plain is blue (because of the can); black razzberry is black, watermelon is red, lime is green, and tangerine is orange, which is not a Magic color.
 
@@ -148,13 +148,13 @@ I’d try this again but somehow make it more obvious? Differentiate between the
 
 This was my favorite task of the day, and I think everyone else enjoyed it too. On the signup sheet, teams were asked to declare their favorite two-card Magic: The Gathering combo. And then:
 
-With your teammate, paint your declared favorite Magic: The Gathering two-card combo. Each of you must paint half of the combo using the materials provided.
+    With your teammate, paint your declared favorite Magic: The Gathering two-card combo. Each of you must paint half of the combo using the materials provided.
 
-You may not separate the brushes from one another or from their linking rod.
+    You may not separate the brushes from one another or from their linking rod.
 
-Finest pair of paintings wins.
+    Finest pair of paintings wins.
 
-You have 7 minutes. Your time starts now.
+    You have 7 minutes. Your time starts now.
 
 <video controls src="../assets/images/2024/06/08/5-wyoZN7z.mp4" title="Jimmy and JR Paint"></video>
 
@@ -176,7 +176,7 @@ Great to watch teams work together and lovely to hang up all the paintings as an
 
 I also liked how this one played out, but I wish it hadn’t fed into such a downer. Spoiler alert.
 
-Reach under the sheet into the box and create a stack of Magic: The Gathering cards that weighs closest in ounces to your team’s declared favorite number.
+    Reach under the sheet into the box and create a stack of Magic: The Gathering cards that weighs closest in ounces to your team’s declared favorite number.
 
 Teams had declared their favorite numbers on the signup spreadsheet. The objective with the sheet was to hide how big the stack of cards was, but I ended up running things together and people holding the cards in their hands was obfuscation enough, so we didn’t use the sheet. This task ended up being pretty fun. I’d do something like it again, except that I think a lot of players got the idea, and I’d worry about it being too easy.
 
@@ -192,7 +192,7 @@ This ended up being much more of a challenge than I expected. I went to a colleg
 
 The idea for this came from my friend and Castmaster participant Josh Chapple, who once (two decades ago) had a Stasis deck with no win condition. I remember another friend, Steve, playing against said deck and asking, “Hey, how do you kill me?” And Josh replied, “You just concede,” and then Steve threw the deck toward a nearby open trash can. Anyway.
 
-Stand on the mark on the floor that matches your team’s declared least favorite number and throw the stack of cards provided by your team’s first player into the target receptacle.
+    Stand on the mark on the floor that matches your team’s declared least favorite number and throw the stack of cards provided by your team’s first player into the target receptacle.
 
 [In the Bin, In the Dark](../assets/images/2024/06/08/3-PFfWXYE.png)
 
