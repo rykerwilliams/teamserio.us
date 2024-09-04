@@ -194,9 +194,7 @@ The idea for this came from my friend and Castmaster participant Josh Chapple, w
 
     Stand on the mark on the floor that matches your team’s declared least favorite number and throw the stack of cards provided by your team’s first player into the target receptacle.
 
-[In the Bin, In the Dark](../assets/images/2024/06/08/3-PFfWXYE.png)
-
-Greatest percentage of cards in the receptacle wins.
+    Greatest percentage of cards in the receptacle wins.
 
 Putting it nicely, nobody did particularly well.  It was a largeish plastic beach bucket
 
