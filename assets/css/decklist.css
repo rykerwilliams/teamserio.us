@@ -1,5 +1,9 @@
+.decklist-content {
+  color:#fdce93;
+  background-color:#3f3f3f;
+}
+
 .card-link {
-  color: blue;
   text-decoration: none;
   position: relative;
 }
@@ -8,12 +12,13 @@
   text-decoration: underline;
 }
 
+
 .card-link:hover::after {
   content: "";
   display: block;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 200%;
   width: 250px;
   height: 350px;
   background-color: white;
@@ -24,4 +29,16 @@
 
 .card-link:hover::after {
   background-image: var(--hover-card-image);
+}
+
+.copyable-decklist {
+
+  display: none;
+  visibility: hidden;
+}
+
+.decklist-copy-btn {
+  position: absolute;
+  right: 30px;
+  margin-top: -0.3rem;
 }

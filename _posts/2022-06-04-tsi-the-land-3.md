@@ -1,6 +1,7 @@
 ---
 layout: default
-title:  "TSI: The Land 3 - Mishra’s Twerkshop - 6/3, 6/4 2022"
+title:  "TSI: The Land 3"
+subtitle: Mishra’s Twerkshop - 6/3, 6/4 2022
 date:   2022-06-04 16:20:59 +0000
 categories: tournament-writeup
 tags: vintage middle-school invitational tsi tournament-writeup the-land tmd
@@ -60,7 +61,8 @@ TSI: The Land Series continues the spirit of giving this year, raising over $110
 
 ## Vintage
 
-Round 3 - Pinata
+### Round 3 - Pinata
+
 To celebrate the 3rd event in The Land Invitational series, we had a Liquor Pinata!
 
 ![Brassman vs. Pinata](../assets/images/2022/06/04/IMG_20220604_144130.jpg)
@@ -75,29 +77,30 @@ After 6 rounds of Swiss, the standings were as follows:
 
 Top 8 after Swiss:
 
-1: Pat Vincent
-2: Kevin Lewandoski
-3: Jacob Hilty
-4: Kai Schafroth
-5: Stuart Ziarnik
-6: Guhstin Dewey
-7: Bryan Hockey
-8: Bob Agra
+1. Pat Vincent
+2. Kevin Lewandoski
+3. Jacob Hilty
+4. Kai Schafroth
+5. Stuart Ziarnik
+6. Guhstin Dewey
+7. Bryan Hockey
+8. Bob Agra
 
 Here is how the top 8 played out:
 
-Quarterfinal -
+### Quarterfinal
 
-Pat V. vs. Mcgrew - Pat wins!
-Kai vs. Stu - Kai wins!
-Kevin L. vs Bryan H. - Kevin Wins!
-Jacob Hilty vs Guhstin - Jake wins!
+- Pat V. vs. Mcgrew - Pat wins!
+- Kai vs. Stu - Kai wins!
+- Kevin L. vs Bryan H. - Kevin Wins!
+- Jacob Hilty vs Guhstin - Jake wins!
 
-Semi -  
-Pat V. vs Kai - Kai wins!
-Kevin L vs Jacob Hilty - Kevin L wins!
+### Semi
 
-Finals:
+- Pat V. vs Kai - Kai wins!
+- Kevin L vs Jacob Hilty - Kevin L wins!
+
+### Finals
 
 Kevin L vs Kai - Kai wins!
 
@@ -109,42 +112,46 @@ Kai poses with his prize and his Trophy necklace.
 ### Meta Game
 
 Blue / Blue Combo (12):
-BUG Standstill
-BUG
-Bird Blade x 2
-Bant Archon
-Grixis Tinker
-Yorion
-Ledger Shredder
-UR Ragavan
-BUG Abdel
-BUG Chainsmokers
-Castatrolabe
+
+- BUG Standstill
+- BUG
+- Bird Blade x 2
+- Bant Archon
+- Grixis Tinker
+- Yorion
+- Ledger Shredder
+- UR Ragavan
+- BUG Abdel
+- BUG Chainsmokers
+- Castatrolabe
 
 Bazaar (3):
-Dredge
-Hogaak
+
+- Dredge
+- Hogaak
 
 Workshops: (6)
-Hardened Scales x 2
-Cyberdrive Aggro
-Patchwork Automaton
-Smokestack
-8 Cast
+
+- Hardened Scales x 2
+- Cyberdrive Aggro
+- Patchwork Automaton
+- Smokestack
+- 8 Cast
 
 Combo: (8)
-Doomsday
-PO x 3
-UR Belcher
-Abundant Belcher
-Underworld Dreams
-DPS x2
+
+- Doomsday
+- PO x 3
+- UR Belcher
+- Abundant Belcher
+- Underworld Dreams
+- DPS x2
 
 Misc: (3)
-Merfolk
-GSZ Depths
-Eldrazi
-Decklists
+
+- Merfolk
+- GSZ Depths
+- Eldrazi
 
 ### TOP 16 Decks
 
@@ -177,10 +184,13 @@ As the Top 8 of Vintage began, Nat hosted his World Famous Pub Quiz (WFPQ)!
 
 Four Teams formed to battle it out for the true Glory of The Land.
 
-Team "Awesome" - Rajah, Ben, Rob, Joe, Hazard (Quotation marks added by Nat)
-"Kevin Poenisch by Himself" - Eric, Kevin, Angelo, Kevin
-Team Mean Reflect Bus - JR, Andy, Jimmy, David
-"Dr. Steven B. Morbius" - Steven, Mike O, Jake B., Bob
+1. Team "Awesome" - Rajah, Ben, Rob, Joe, Hazard (Quotation marks added by Nat)
+
+1. "Kevin Poenisch by Himself" - Eric, Kevin, Angelo, Kevin
+
+1. Team Mean Reflect Bus - JR, Andy, Jimmy, David
+
+1. "Dr. Steven B. Morbius" - Steven, Mike O, Jake B., Bob
 
 Rounds included classic Pub themes such as *Dogs* and *Blues Brothers*, along with Magic related categories and an amazing Lightning Round.
 

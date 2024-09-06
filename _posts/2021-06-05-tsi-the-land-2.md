@@ -33,15 +33,15 @@ author:
 
 We had 28 players signed up for the Vintage portion of TSI: The Land 2 (vaccinations were required for attendance).
 
-**The Land**
+### The Land
 
 ![The Land 1](https://i.imgur.com/KmdpHBR.jpg)
 
-**Koi Fish**
+### Koi Fish
 
 ![Koi Fish](https://imgur.com/sZf4GD3.jpg)
 
-**The Drinks**
+### The Drinks
 
 ![The Drinks](https://i.imgur.com/T34QCNo.jpg)
 
@@ -49,7 +49,7 @@ We had 28 players signed up for the Vintage portion of TSI: The Land 2 (vaccinat
 
 ![The Drinks 3](https://i.imgur.com/1nrJLg6.jpg)
 
-**Some Action Shots**
+### Some Action Shots
 
 ![Action Shot 1](https://i.imgur.com/39kn3CM.jpg)
 
@@ -69,11 +69,13 @@ We had 28 players signed up for the Vintage portion of TSI: The Land 2 (vaccinat
 
 ![Action Shot 9](https://lh3.googleusercontent.com/pw/ACtC-3fcY9jzZ9aJyQ6ZT9Phm7BYNezvI9ziUz8sEATX2bb4BqBhI1hp59wcC2ar2iwMvW3CcOI4IKXSjUdi5tTVdlEZJhwJVLXVMIL4TylRZLrmvB9jnnrgpVh6xgF--0xiOZzrpy-5cuVRhs_LLxX5pbrp=w1292-h970-no?authuser=0)
 
-**The Donated Prizes**
+### The Donated Prizes
 
 ![Prizes1](https://lh3.googleusercontent.com/pw/ACtC-3eXVUdBflY9JBi5sV4qa0qdh1PUTK6i1S8DWG6j1wekRbwWj3Fh4QPmkjwVRevYTsDC97ALKTZeeI-hpPEqxhbMBRWkVfWq4Rv8IqSCzk3eNVOoeuauZrSKcbSOAXRx6ApYRz_6sJHOScV6NJYU-Y1s=w1292-h970-no?authuser=0)
 
 ![Prizes 2](https://lh3.googleusercontent.com/pw/ACtC-3fW0JRUS-eeoBh_uACrqPK7Rz7sl9b3DcU-0wuu8ShbRhJYI0AzyJZh0rOPzgZrkLDnMe1tXt98dBJuXYvCF7fJISoEfmSIjEyqYNiP1OAzpqL28-XFmfrGNctJJc-ncTiyiNB4hrr0HMVihei2O6DJ=w1292-h970-no?authuser=0)
+
+### Top 8
 
 After 5 rounds of Swiss, the top 8 standings were as follows:
 
@@ -88,19 +90,17 @@ After 5 rounds of Swiss, the top 8 standings were as follows:
 
 Here is how the top 8 played out:
 
-**Top 8:**
-
 Kevin Lewandoski vs Steve McGrew - Steve wins!
 Chad Frazier vs Roland Chang - Chad wins!
 Joe Palazzo  vs Max Gibson - Joe P wins!
 Justin Dewey vs David Lance - Justin wins!
 
-**Top 4:**
+### Top 4
 
 Chad Frazier vs Joe Palazzo- Chad wins!
 Justin Dewey vs. Steve McGrew - Steve wins!
 
-**Top 2:**
+### Top 2
 
 Chad Frazier vs Steve McGrew - Chad wins!
 
@@ -108,9 +108,9 @@ Congrats to Chad for winning his first Vintage tournament and his first TSI!
 
 We also raised $750 for a local foodbank through donations!
 
-Decklists:
+### Decklists
 
-First place: Chad Frazier - Car Shops
+#### First place: Chad Frazier - Car Shops
 
 {% decklist %}
 1 Traxos, Scourge of Kroog
@@ -122,10 +122,10 @@ First place: Chad Frazier - Car Shops
 4 Walking Ballista
 4 Chief of the Foundry
 1 Sol Ring
-1 Thorn of Amethyst 
+1 Thorn of Amethyst
 1 Mox Pearl
-1 Mox Emerald 
-1 Mox Sapphire 
+1 Mox Emerald
+1 Mox Sapphire
 1 Mox Ruby
 1 Mox Jet
 1 Black Lotus
@@ -133,31 +133,31 @@ First place: Chad Frazier - Car Shops
 1 Mana Crypt
 1 Trinisphere
 1 Chalice of the Void
-3 Fleetwheel Cruiser 
-4 Sphere of Resistance 
-1 Tolarian Academy 
+3 Fleetwheel Cruiser
+4 Sphere of Resistance
+1 Tolarian Academy
 1 Strip Mine
 4 Mishra’s Workshop
-4 Mishra’s Factory 
-4 Wasteland 
+4 Mishra’s Factory
+4 Wasteland
 4 Ancient Tomb
- 
+
 Sideboard
 
 1 Grafdigger’s Cage
 1 Sorcerous Spyglass
 1 Pithing Needle
 1 Mental Mistep
-1 Wurmcoil Engine 
+1 Wurmcoil Engine
 2 Skysovereign, Consul Flagship
 2 Mindbreak Trap
 2 Ravenous Trap
 4 Leyline of the Void
 {% enddecklist %}
 
-```
-Second Place: Steve McGrew - GWB Hatebears
+#### Second Place: Steve McGrew - GWB Hatebears
 
+{% decklist %}
 1 Black Lotus
 1 Mox Emerald
 1 Mox Jet
@@ -187,9 +187,7 @@ Second Place: Steve McGrew - GWB Hatebears
 1 Strip Mine
 3 Wasteland
 4 Green Sun's Zenith
-
-Sideboard: 
-
+Sideboard
 2 Endurance
 1 Elvish Reclaimer
 1 Kambal, Consul of Allocation
@@ -200,10 +198,11 @@ Sideboard:
 1 Maze of Ith
 1 Wasteland
 1 Bojuka Bog
-```
-```
-Third place: Joe Palazzo - BUG Witch (Chainsmoker Combo)
- 
+{% enddecklist %}
+
+#### Third place: Joe Palazzo - BUG Witch (Chainsmoker Combo)
+
+{% decklist %}
 2 Abrupt Decay
 1 Ancestral Recall
 1 Assassin's Trophy
@@ -241,8 +240,8 @@ Third place: Joe Palazzo - BUG Witch (Chainsmoker Combo)
 3 Underground Sea
 2 Wasteland
 1 Witherbloom Apprentice
- 
-Sideboard: 
+
+Sideboard
 
 1 Collector Ouphe
 2 Energy Flux
@@ -256,10 +255,11 @@ Sideboard:
 2 Surgical Extraction
 1 Volcanic Island
 1 Yixlid Jailer
-```
-```
-Fourth place: Gühstin Dewey - 2 Card Muddy
+{% enddecklist %}
 
+#### Fourth place: Gühstin Dewey - 2 Card Muddy
+
+{% decklist %}
 4 Ancient Tomb
 1 Black Lotus
 3 Grindstone
@@ -289,7 +289,7 @@ Fourth place: Gühstin Dewey - 2 Card Muddy
 1 Walking Ballista
 4 Wasteland
 
-Sideboard: 
+Sideboard:
 
 3 Defense Grid
 2 Duplicant
@@ -298,10 +298,11 @@ Sideboard:
 1 Psychosis Crawler
 2 Steel Hellkite
 3 Wurmcoil Engine
-```
-```
-Fifth place: Kevin Lewandoski- Grixis Sedgemoor Witch
+{% enddecklist %}
 
+#### Fifth place: Kevin Lewandoski- Grixis Sedgemoor Witch
+
+{% decklist %}
 1 Lightning Bolt
 1 Tinker
 1 Pyroblast
@@ -342,7 +343,7 @@ Fifth place: Kevin Lewandoski- Grixis Sedgemoor Witch
 3 Underground Sea
 1 Mystic Sanctuary
 
-Sideboard: 
+Sideboard
 
 1 Pyroblast
 2 Ravenous Trap
@@ -353,10 +354,11 @@ Sideboard:
 1 Mountain
 1 Blightsteel Colossus
 1 Opposition Agent
-```
-```
-Sixth place: David Lance - Golos Shops 
+{% enddecklist %}
 
+#### Sixth place: David Lance - Golos Shops
+
+{% decklist %}
 4 Ancient Tomb
 1 Black Lotus
 1 Chalice of the Void
@@ -388,17 +390,18 @@ Sixth place: David Lance - Golos Shops
 1 Urborg, Tomb of Yawgmoth
 4 Wasteland
 
-Sideboard: 
+Sideboard:
 
 2 Pithing Needle
 4 Grafdigger's Cage
 4 Mindbreak Trap
 3 Stonecoil Serpent
 2 Wurmcoil Engine
-```
-```
-Seventh Place: Max Gibson - DPS
+{% enddecklist %}
 
+#### Seventh Place: Max Gibson - DPS
+
+{% decklist %}
 1 Ancestral Recall
 1 Black Lotus
 1 Bloodstained Mire
@@ -440,7 +443,7 @@ Seventh Place: Max Gibson - DPS
 1 Vampiric Tutor
 1 Yawgmoth's Will
 
-Sideboard: 
+Sideboard
 
 1 Blightsteel Colossus
 3 Bontu's Last Reckoning
@@ -450,10 +453,11 @@ Sideboard:
 1 Mindbreak Trap
 2 Surgical Extraction
 2 Tormod's Crypt
-```
-```
-Eighth place: Roland Chang - BUG
+{% enddecklist %}
 
+#### Eighth place: Roland Chang - BUG
+
+{% decklist %}
 3 Abrupt Decay
 1 Ancestral Recall
 1 Black Lotus
@@ -490,7 +494,7 @@ Eighth place: Roland Chang - BUG
 3 Verdant Catacombs
 4 Wasteland
 
-Sideboard: 
+Sideboard:
 
 2 Energy Flux
 2 Flusterstorm
@@ -500,8 +504,9 @@ Sideboard:
 3 Ravenous Trap
 2 Surgical Extraction
 1 The Tabernacle at Pendrell Vale
-```
-Metagame Breakdown:
+{% enddecklist %}
+
+### Metagame Breakdown
 
 Blue decks: (11)
 
@@ -538,7 +543,7 @@ DredgOath
 
 Before the Vintage event, there was an early morning Middle School Event as well.
 
-**Middle School**
+### Middle School
 
 10 people woke up early and played 4 rounds of Middle School before playing Vintage.
 
