@@ -1,0 +1,27 @@
+.card-link {
+  color: blue;
+  text-decoration: none;
+  position: relative;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-link:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  background-image: url('');
+  background-size: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-link:hover::after {
+  background-image: var(--hover-card-image);
+}

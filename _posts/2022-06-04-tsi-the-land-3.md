@@ -3,7 +3,7 @@ layout: default
 title:  "TSI: The Land 3 - Mishra’s Twerkshop - 6/3, 6/4 2022"
 date:   2022-06-04 16:20:59 +0000
 categories: tournament-writeup
-tags: vintage middle-school invitational tsi tournament-writeup
+tags: vintage middle-school invitational tsi tournament-writeup the-land tmd
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true
