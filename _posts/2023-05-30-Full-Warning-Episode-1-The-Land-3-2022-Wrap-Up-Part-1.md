@@ -25,6 +25,7 @@ author:
       icon: "fab fa-twitter"
       label: "Full Warning on X"
 ---
+<p>This is Full Warning: A Team Serious podcast, spiritual cousin to the Serious Vintage podcast. This space will be home to the magical, both vintage non-vintage, and of course the non magical exploits of Team Serious. And as always, food talk.</p>
 
 <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-1-The-Land-3-2022-Wrap-Up-Part-1-e24ujjf/a-a9u18r3" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 

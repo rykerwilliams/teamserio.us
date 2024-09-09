@@ -75,7 +75,7 @@ After 6 rounds of Swiss, the standings were as follows:
 
 ![Standings](../assets/images/2022/06/04/Standings-Vintage.png)
 
-Top 8 after Swiss:
+### Top 8 after Swiss
 
 1. Pat Vincent
 2. Kevin Lewandoski
@@ -165,7 +165,7 @@ Everything kicked off with 21 players for Middle School on Friday. After 6 round
 
 ![MS Standings](../assets/images/2022/06/04/MS-Standings.png)
 
-T8 Metagame
+### T8 Metagame
 
 1. Landstill
 1. Full English Breakfast

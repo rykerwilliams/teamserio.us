@@ -25,6 +25,7 @@ author:
       icon: "fab fa-twitter"
       label: "Full Warning on X"
 ---
+On this second episode, Angelo and I continue our wrap up of the Land 3 with guests Stu Ziarnik and Kai Schafroth.
 
 <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-2-The-Land-3-2022-Wrap-Up-Part-2-e24van2/a-a9u3bdv" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 

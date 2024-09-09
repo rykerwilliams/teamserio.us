@@ -25,6 +25,7 @@ author:
       icon: "fab fa-twitter"
       label: "Full Warning on X"
 ---
+Introducing THE Kyle Wells! We make him play &quot;Magic or Yu-Gi-Oh! Card?&quot; and reminisce about how he first met Angelo. The Cleveland Rocs invade Michigan for Kumite 7; we talk food in Jackson, Ohio Ante, Pai Gao and Angelo&#39;s Swag corner.
 
 <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-5-Kumite-7-Old-School--Ohio-Ante-Association-and-Jackson-Food-Talk-e2jg10j/a-ab8kegc" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 

@@ -25,6 +25,7 @@ author:
       icon: "fab fa-twitter"
       label: "Full Warning on X"
 ---
+In this third episode, Angelo and I run down The Land 4 with guests Max Gibson and Patrick Vincent. Recorded last year in June 2023, just after the event wrapped up, this release represents just 10 months of editing time for this 2 hour plus mega cast!
 
 <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-3-The-Land-4-2023-Wrap-Up-e2hel4l/a-ab3j82a" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 

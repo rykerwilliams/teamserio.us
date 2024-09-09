@@ -25,6 +25,7 @@ author:
       icon: "fab fa-twitter"
       label: "Full Warning on X"
 ---
+<p>Hazard comes on to talk HSI, then we solve the Vintage B&amp;R! Jimmy walks us through his Columbus food journey and Angelo introduces his &quot;Swag Corner&quot;.</p>
 
 <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-4-HSI-7--Vintage-BR-and-Columbus-Food-Talk-e2if4bg/a-ab62ms4" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe>
 
