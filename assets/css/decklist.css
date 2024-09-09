@@ -13,7 +13,7 @@
 }
 
 
-.card-link:hover::after {
+/* .card-link:hover::after {
   content: "";
   display: block;
   position: absolute;
@@ -29,8 +29,20 @@
 
 .card-link:hover::after {
   background-image: var(--hover-card-image);
-}
+} */
 
+.card-preview {
+  content: "";
+  position: absolute;
+  border-radius: 18px;
+  right: 25px;
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  background-image: url('../images/magic/card-back-collectors-edition.jpg');
+  background-size: cover;
+  margin-top: 2em;
+}
 .copyable-decklist {
 
   display: none;
@@ -39,6 +51,6 @@
 
 .decklist-copy-btn {
   position: absolute;
-  right: 30px;
+  right: 15px;
   margin-top: -0.3rem;
 }

@@ -147,7 +147,7 @@ Sideboard
 1 Grafdigger’s Cage
 1 Sorcerous Spyglass
 1 Pithing Needle
-1 Mental Mistep
+1 Mental Misstep
 1 Wurmcoil Engine
 2 Skysovereign, Consul Flagship
 2 Mindbreak Trap
@@ -508,65 +508,65 @@ Sideboard:
 
 ### Metagame Breakdown
 
-Blue decks: (11)
+#### Blue decks: (11)
 
-Grixis Sedgemoor Witch (3)
-BUG (3)
-BUG Witch (Chainsmoker Combo) (2)
-WURG Showdown of the Skalds
-Lurrus BreachStill
-Jeskai Breach Gifts
+- Grixis Sedgemoor Witch (3)
+- BUG (3)
+- BUG Witch (Chainsmoker Combo) (2)
+- WURG Showdown of the Skalds
+- Lurrus BreachStill
+- Jeskai Breach Gifts
 
-Workshops: (6)
+#### Workshops: (6)
 
-MUD (3)
-B/G Stax
-Shops
-U/R Welder
+- MUD (3)
+- B/G Stax
+- Shops
+- U/R Welder
 
-Combo: (8)
+#### Combo: (8)
 
-2 Card Monte
-DPS
-Esper Thassa’s Oracle
-BUG Magecraft
-Dragon
-Thoughtlash Oracle
-Singleton Grixis Combo
-PO
+- 2 Card Monte
+- DPS
+- Esper Thassa’s Oracle
+- BUG Magecraft
+- Dragon
+- Thoughtlash Oracle
+- Singleton Grixis Combo
+- PO
 
 Misc: (3)
 
-Hatebears
-Dredge
-DredgOath
+- Hatebears
+- Dredge
+- DredgOath
+
+## Middle School
 
 Before the Vintage event, there was an early morning Middle School Event as well.
 
-### Middle School
-
 10 people woke up early and played 4 rounds of Middle School before playing Vintage.
 
-Metagame
+### Metagame
 
-David Lance: Pox
-Rajah James : Elves
-Kevin: UB TogStill / ZI
-Bob: The Rock
-Eric Caffrey: Cartographer Slide
-Roland Chang: UG Madness
-Angelo: BR Discard
-Twan: Monogreen Hidden Creatures
-Alan Finney: TurboLand Turns
-Chad Frazier: TortEx
+- David Lance: Pox
+- Rajah James : Elves
+- Kevin: UB TogStill / ZI
+- Bob: The Rock
+- Eric Caffrey: Cartographer Slide
+- Roland Chang: UG Madness
+- Angelo: BR Discard
+- Twan: Monogreen Hidden Creatures
+- Alan Finney: TurboLand Turns
+- Chad Frazier: TortEx
 
-Participation Cards and Trophy Card
+### Participation Cards and Trophy Card
 
 Bob threw down a bunch of WB goodness for people to snag event cards from, with a sweet altered GB monolith going to the top player.
 
 ![MS Prizes](https://lh5.googleusercontent.com/HgKzMKLvGMazTo_KeqdpfNnCVRsE6N7qpMAtHnBBcOK1-sMb_9ajiXTZQnRk3oIyLlfFqDe2nXlxT_5o66RBD5hjVsNcyr6pBHERDbiZ)
 
-Standings
+### Standings
 
 After four rounds of swiss, the standings were as follows:
 
