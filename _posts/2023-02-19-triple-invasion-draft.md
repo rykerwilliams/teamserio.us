@@ -29,7 +29,7 @@ author:
       label: "My personal FB"
 ---
 
-Did you know that a sealed Invasion box costs about $1100 as of 20 JAN 2023? Kyle Wells knows. 
+Did you know that a sealed Invasion box costs about $1100 as of 20 JAN 2023? Kyle Wells knows.
 
 And thus, he decided it was time to go back in time, and smell the cardboard from over 20 years ago. I was lucky enough to get an invite AND actually be able to attend. 8 Mages gathered to crack boosters and share memories.
 
@@ -40,6 +40,7 @@ Here's a quck writeup of how things went down.
 Kyle hosted at his house and was well prepared with lots of provisions.
 
 ### snacks
+
 ![90sTime](../assets/images/2023/02/19/90sTime.jpg){: width="90%"}
 
 ![Get lucky](../assets/images/2023/02/19/getLucky.jpg){: width="90%"}
@@ -80,13 +81,13 @@ Here's Mike's Plains:
 
 ## Draft and Play
 
-Kyle used the Companion app to attempt to run the event. So the seating and first round pairings weren't exactly correct; I think I was supposed to play against Mike round 1. Companion is hard. 
+Kyle used the Companion app to attempt to run the event. So the seating and first round pairings weren't exactly correct; I think I was supposed to play against Mike round 1. Companion is hard.
 
 ![Companion is Hard](../assets/images/2023/02/19/companion-is-hard.jpg){: width="50%"}
 
-I got things moved over to the Arena Blogspot app and manually entered the round 1 results and got us going after that. 
+I got things moved over to the Arena Blogspot app and manually entered the round 1 results and got us going after that.
 
-After opening pack one, during maybe 3rd pick, someone questioned the ruleset we would use. I was happy that Kyle quickly answered, "Middle School rules", avoiding any discussion. But I think we were all inclined to play as such anyway. 
+After opening pack one, during maybe 3rd pick, someone questioned the ruleset we would use. I was happy that Kyle quickly answered, "Middle School rules", avoiding any discussion. But I think we were all inclined to play as such anyway.
 
 ![Round 1, Fight!](../assets/images/2023/02/19/Round1-Fight.jpg){: width="50%"}
 
