@@ -25,12 +25,59 @@ author:
       icon: "fab fa-twitter"
       label: "Full Warning on X"
 ---
-Steven joins us to review his T4 run at the KSI 2024. Angelo reveals his nemesis and Rajah just tries to keep everyone on time. We chat on the tournament, the kegerator, Orms-By-Gore, and on Shaman Ben and Brother Andrew's "Classic" return to Wintage. Yangtime!
+<p>Steven joins us to review his T4 run at the KSI 2024. Angelo reveals his nemesis and Rajah just tries to keep everyone on time. Plus, Shaman Ben's 'Classic' return to Vintage! We chat on the tournament, the kegerator and Orms-By-Gore. Yangtime!<br /></p>
 
 <!-- <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-6-The-Land-5-2024-Wrap-Up-e2mpt0o" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe> -->
 
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/11x8pVDxj4btB4F0TV4gVa?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" scrolling="no"></iframe>
+
 ## Show Notes From Spotify
 
+<p><strong>Chapter List</strong></p>
+<p>00:00:00 - Do Ya Thing - Katty K. Intro</p>
+<p>00:01:00 - Steven: Who are you? And what are you doing here?</p>
+<p>00:02:32 - Discovering Magic: From Zillions to Goblins</p>
+<p>00:11:25 - Vintage Beginnings: Exploring Proxies and Powering up from Legacy</p>
+<p>00:13:40 - Evolving Deck Choices for KSI</p>
+<p>00:21:30 - Vintage Play Round 1</p>
+<p>00:28:20 - Vintage Play Round 2</p>
+<p>00:34:03 - Yangtime Break</p>
+<p>00:35:05 - Vintage Play Round 3</p>
+<p>00:40:08 - Vintage Play Round 4</p>
+<p>00:46:25 - Retreat in the Woods: An Ideal Pad in Ann Arbor</p>
+<p>00:48:20 - Lunch Food Talk: Kegerator and Zingerman&#39;s</p>
+<p>00:50:30 - World Famous Team Serious Invitational Prize Table</p>
+<p>01:01:15 - Cut to T4</p>
+<p>01:12:00 - Kitten Wins!</p>
+<p>01:12:53 - BC Druid&#39;s Swag Corner</p>
+<p>01:18:48 - Final Thoughts</p>
+<p>01:20:10 - Outro - Precise Danger - Oldominion</p>
+<p><br></p>
+<p><strong>Show Notes</strong></p>
+<p>
+What time is it? Yangtime! Journey back with your hosts to a simpler time, when Vexing Bauble and Urza&#39;s Saga were played in multiples, <em>*in one deck*</em>!</p>
+<p><br>This episode took me a long time to edit, and not just because of the crazy ambient noise levels. This podcast is about a Vintage format that no longer exists, a lame duck format if you will. And so I found it was very unmotivating to edit this podcast, while looking forward to Eternal Weekend; the meta will discuss herein is gone.<br></p>
+<p>But we knew we owed to our dedicated fanbase (all 7 of them) to make sure that this show saw the light of day. WAFWHF and such. First we go deep with our guest Steven McGrew, and we learn about his magical background and his journey to Teams Seroius and Vintage.<br></p>
+<p>We review Vintage in a play-by-play format and opine on the current (old) state of Vintage, thinking at the time that we are praticing for Eternal Weekend. We review the food, the prize table and the &quot;Retreat in the Woods&quot;, Kevin&#39;s amazing new home and location of the tournament. And of course, we don&#39;t forget the SWAG.<br></p>
+<p>The outro song is by Oldominion, a hip-hop group from Seattle. It is from the old <em>mp3.com</em>. I did&#39;t get clearance exactly so we&#39;ll see if they flag it.</p>
+<p><br></p>
+
+### Links
+
+- [Zingerman's](https://www.zingermansdeli.com/)
+- [Oberon](https://bellsbeer.com/beers/oberon-ale/)
+- [VODs - Youtube](https://www.youtube.com/playlist?list=PL7mT2eVHGBPGFElec5FTIbNC_NwiZw7_1)
+- [KSI Event Report]({% post_url 2024-08-17-Kegerator-Serious-Invitational-Event-Report %})
+
+### Extra Media
+
+*YangTime!*
+![alt text](../assets/images/2024/08/17/YangClock.JPG)
+
+*KSI STP*
+![alt text](../assets/images/2024/08/17/IMG_8227.JPG)
+
+<!-- Pre-write up section
 ### Chapter List
 
 <p>00:00:00 - Do Ya Thing - Katty K. Intro</p>
@@ -46,13 +93,13 @@ Steven joins us to review his T4 run at the KSI 2024. Angelo reveals his nemesis
 <p>00:46:25 - Retreat in the Woods: An Ideal Pad in Ann Arbor</p>
 <p>00:48:20 - Lunch Food Talk: Kegerator and Zingerman's</p>
 <p>00:50:30 - World Famous Team Serious Invitational Prize Table</p>
-<p>01:00:35 - Cut to T4</p>
+<p>01:01:15 - Cut to T4</p>
 <p>01:12:00 - Kitten Wins!</p>
-<p>01:12:50 - BC Druid's Swag Corner</p>
+<p>01:12:53 - BC Druid's Swag Corner</p>
 <p>01:18:48 - Final Thoughts</p>
 <p>01:20:10 - Outro - Precise Danger - Oldominion</p>
 
-### Episode Description
+### Show Notes
 
 What time is it? Yangtime! Journey back with your hosts to a simpler time, when Vexing Bauble and Urza's Saga were played in multiples, *in one deck*!
 
@@ -78,6 +125,7 @@ The outro song is by Oldominion, a hip-hop group from Seattle. It is from the ol
 
 *KSI STP*
 ![alt text](../assets/images/2024/08/17/IMG_8227.JPG)
+-->
 
 <!-- 
 ## AI Generated Notes
