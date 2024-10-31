@@ -44,7 +44,6 @@ As the name implies, we were treated to on-tap [Oberon](https://bellsbeer.com/be
 
 ![alt text](../assets/images/2024/08/17/IMG_7696-1.jpg){: width="50%"}
 
-
 After round 1, [Zingerman's Deli](https://www.zingermansdeli.com/) was provided for lunch. You really can taste difference.
 
 ![alt text](../assets/images/2024/08/17/DSC_4265.jpg)
@@ -61,18 +60,22 @@ Blue / Blue Combo (6):
 - UW Kitten Mage - Hockey
 
 Bazaar (2):
+
 - Hogaak - Mike O.
 - Dredge - Kevin
 
 Workshops: (4)
+
 - KCI - Steven
 - Null Rod Shops (2) - Duane, Nam
 - Fleshraker / Smelting Vat - Angelo
 
 Combo: (1)
+
 - Doomsday - Rolko
 
 Misc: (3)
+
 - GR Hate - Caffrey
 - Classic Mono Black Null Rod - Shaman Ben
 - Classic Food Chain Goblins - Andrew
