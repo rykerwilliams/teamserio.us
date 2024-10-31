@@ -56,7 +56,7 @@ author:
 <p><strong>Show Notes</strong></p>
 <p>
 What time is it? Yangtime! Journey back with your hosts to a simpler time, when Vexing Bauble and Urza&#39;s Saga were played in multiples, <em>*in one deck*</em>!</p>
-<p><br>This episode took me a long time to edit, and not just because of the crazy ambient noise levels. This podcast is about a Vintage format that no longer exists, a lame duck format if you will. And so I found it was very unmotivating to edit this podcast, while looking forward to Eternal Weekend; the meta will discuss herein is gone.<br></p>
+<p>This episode took me a long time to edit, and not just because of the crazy ambient noise levels. This podcast is about a Vintage format that no longer exists, a lame duck format if you will. And so I found it was very unmotivating to edit this podcast, while looking forward to Eternal Weekend; the meta will discuss herein is gone.<br></p>
 <p>But we knew we owed to our dedicated fanbase (all 7 of them) to make sure that this show saw the light of day. WAFWHF and such. First we go deep with our guest Steven McGrew, and we learn about his magical background and his journey to Teams Seroius and Vintage.<br></p>
 <p>We review Vintage in a play-by-play format and opine on the current (old) state of Vintage, thinking at the time that we are praticing for Eternal Weekend. We review the food, the prize table and the &quot;Retreat in the Woods&quot;, Kevin&#39;s amazing new home and location of the tournament. And of course, we don&#39;t forget the SWAG.<br></p>
 <p>The outro song is by Oldominion, a hip-hop group from Seattle. It is from the old <em>mp3.com</em>. I did&#39;t get clearance exactly so we&#39;ll see if they flag it.</p>
