@@ -66,14 +66,17 @@ The outro song is by Oldominion, a hip-hop group from Seattle. It is from the ol
 
 ### Links
 
-[Zingerman's](https://www.zingermansdeli.com/)
-[Oberon](https://bellsbeer.com/beers/oberon-ale/)
-[VODs - Youtube](https://www.youtube.com/playlist?list=PL7mT2eVHGBPGFElec5FTIbNC_NwiZw7_1)
-[KSI Event Report]{% post_url 2024-08-17-Kegerator-Serious-Invitational-Event-Report %}
+- [Zingerman's](https://www.zingermansdeli.com/)
+- [Oberon](https://bellsbeer.com/beers/oberon-ale/)
+- [VODs - Youtube](https://www.youtube.com/playlist?list=PL7mT2eVHGBPGFElec5FTIbNC_NwiZw7_1)
+- [KSI Event Report]({% post_url 2024-08-17-Kegerator-Serious-Invitational-Event-Report %})
 
 ### Extra Media
 
+*YangTime!*
 ![alt text](../assets/images/2024/08/17/YangClock.JPG)
+
+*KSI STP*
 ![alt text](../assets/images/2024/08/17/IMG_8227.JPG)
 
 <!-- 
