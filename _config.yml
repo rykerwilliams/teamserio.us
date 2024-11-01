@@ -16,7 +16,7 @@ url: "https://dev.teamserio.us" # the base hostname & protocol for your site, e.
 #twitter_username: jekyllrb
 github_username:  rykerwilliams
 timezone: America/New_York
-og_image: assets/images/index/SeriousManaHR-blacklogo-gray.png
+og_image: assets/images/site/SeriousManaHR-blacklogo-gray.png
 author:
   name: Rajah James
   avatar: assets/images/avatars/310221.jpg
