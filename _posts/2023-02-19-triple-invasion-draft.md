@@ -101,7 +101,7 @@ I had Paul on my left and Kyle on my right. About half way through pack 2, I rea
 
 ![Action 3](../assets/images/2023/02/19/rd2-action1.jpg){: width="50%"}
 
-![Action 4](../assets/images/2023/02/19/rd2-action1.jpg){: width="50%"}
+![Action 4](../assets/images/2023/02/19/rd2-action2.jpg){: width="50%"}
 
 ## Pairings and Standings
 
