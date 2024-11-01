@@ -44,6 +44,19 @@ THE Kyle Wells pitched in with a flyer for the event. His wife Katie thought his
 *THE Katie Flyer*
 ![Katie's Canva Flyer](../assets/images/2024/10/12/Katie_Flyer.png){: width="80%"}
 
+## Metagame
+
+There was a diverse field of decks chosen for battle this day.
+
+- Dream Halls
+- Burn
+- Sligh
+- Mono Black Sui
+- Dragon
+- 5c Negator Zoo
+- UG Survival Madness
+- Dragonstorm
+
 ## Prizes
 
 Eric put together some killer prizes, not just for the winner, but also for last place and most creative.
@@ -70,7 +83,7 @@ Eric put together some killer prizes, not just for the winner, but also for last
 
 ## Winners
 
-After the dust settled, Chad Frazier was the lone 9 pointer, while Jerry Yang achieved perfectly evil tiebreakers.
+After the dust settled, Chad Frazier was the lone 9 pointer on Dream Halls, while Jerry Yang achieved perfectly evil tiebreakers.
 
 ![Standings](../assets/images/2024/10/12/EventStandings.jpg)
 
