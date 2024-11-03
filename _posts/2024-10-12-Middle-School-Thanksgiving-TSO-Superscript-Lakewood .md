@@ -31,7 +31,6 @@ author:
       icon: "fab fa-facebook"
       label: "My personal FB"
 ---
-
 Eric Caffrey hosted a Middle School format Team Serious Open! Held at SuperScript in Lakewood, OH, the event was a Thanksgiving theme, with all the fixings! 8 Serious Mages gathered to sling old spells and break bread together.
 
 ## Flyers
@@ -95,6 +94,10 @@ After the dust settled, Chad Frazier was the lone 9 pointer on Dream Halls, whil
 
 *Steven McGrew, Most Creative*
 ![Steven McGrew, Most Creative](../assets/images/2024/10/12/Winner-MostCreative-Steven.jpg){: width="50%"}
+
+![Negator Hungry](../assets/images/2024/10/12/PXL_20241012_183933008~2.jpg){: width="70%"}
+
+![Negator Decklist](../assets/images/2024/10/12/PXL_20241012_201648550~2.jpg)
 
 ## Thanks and Ups
 
