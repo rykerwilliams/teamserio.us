@@ -15,7 +15,7 @@ show_sociallinks  : true
 show_tags         : true
 author:
   name: Full Warning Podcast
-  avatar: ../assets/images/avatars/bafkreihptsqdakfhlhrtacbuninww7sehdzvc6pup5wodnyi4tktbv6w3u.jpg
+  avatar: ../assets/images/avatars/fw-avatar.jpg
   location: Ohio, USA
   links:
     - url: https://bsky.app/profile/fullwarning.bsky.social
@@ -24,6 +24,12 @@ author:
     - url: https://twitter.com/fullwarning
       icon: "fab fa-twitter"
       label: "Full Warning on X"
+    - url: https://open.spotify.com/show/2iRw7gqLL8hoMvs5wWXB99
+      icon: "fa fa-spotify"
+      label: "Full Warning on Spotify"
+    - url: https://podcasts.apple.com/us/podcast/full-warning-a-team-serious-podcast/id1739246826
+      icon: "fa fa-apple"
+      label: "Full Warning on Apple Podcasts"
 ---
 <p>Steven joins us to review his T4 run at the KSI 2024. Angelo reveals his nemesis and Rajah just tries to keep everyone on time. Plus, Shaman Ben's 'Classic' return to Vintage! We chat on the tournament, the kegerator and Orms-By-Gore. Yangtime!<br /></p>
 
@@ -131,8 +137,6 @@ The outro song is by Oldominion, a hip-hop group from Seattle. It is from the ol
 ## AI Generated Notes
 
 We use a service called cleanvoice.ai to help clean up the sound on the cast.
-
-### Vintage Metagame Shake-Up: Simplifying the Hammer Approach
 
 ### Episode Title
 
