@@ -15,7 +15,7 @@ show_sociallinks  : true
 show_tags         : true
 author:
   name: Full Warning Podcast
-  avatar: ../assets/images/avatars/bafkreihptsqdakfhlhrtacbuninww7sehdzvc6pup5wodnyi4tktbv6w3u.jpg
+  avatar: ../assets/images/avatars/fw-avatar.jpg
   location: Ohio, USA
   links:
     - url: https://bsky.app/profile/fullwarning.bsky.social
@@ -24,6 +24,12 @@ author:
     - url: https://twitter.com/fullwarning
       icon: "fab fa-twitter"
       label: "Full Warning on X"
+    - url: https://open.spotify.com/show/2iRw7gqLL8hoMvs5wWXB99
+      icon: "fab fa-spotify"
+      label: "Full Warning on Spotify"
+    - url: https://podcasts.apple.com/us/podcast/full-warning-a-team-serious-podcast/id1739246826
+      icon: "fab fa-apple"
+      label: "Full Warning on Apple Podcasts"
 ---
 In this third episode, Angelo and I run down The Land 4 with guests Max Gibson and Patrick Vincent. Recorded last year in June 2023, just after the event wrapped up, this release represents just 10 months of editing time for this 2 hour plus mega cast!
 
