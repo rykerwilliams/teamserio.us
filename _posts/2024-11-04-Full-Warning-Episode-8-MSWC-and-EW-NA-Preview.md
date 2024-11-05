@@ -33,6 +33,8 @@ author:
 ---
 TO Eric Caffrey joins us to preview Middle School World Championships at Eternal Weekend! We review the post-restriction Vintage metagame and Asia EW results, plus No Banned List Commander! Featuring Swag Corner: Food Edition.
 
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1QOEFl2oFBHQlNU0n2d8OX?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" scrolling="no"></iframe>
+
 <!-- <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/full-warning/embed/episodes/Full-Warning-Episode-6-The-Land-5-2024-Wrap-Up-e2mpt0o" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" width="100%" height="152"  scrolling="no"></iframe> -->
 
 ## Show Notes From Spotify
@@ -76,9 +78,9 @@ TO Eric Caffrey joins us to preview Middle School World Championships at Eternal
 
 [![World Championship Flyer](../assets/images/2024/11/05/IMG_4886.jpg)](https://melee.gg/Tournament/View/160933)
 
-[Middle School World Championships Registration](https://melee.gg/Tournament/View/160933)
+[Middle School World Championship Registration](https://melee.gg/Tournament/View/160933)
 
-[Eternal Weekend Vintage Champs Registration](https://melee.gg/Tournament/View/160879)
+[EW Vintage 2024 Registration](https://melee.gg/Tournament/View/160879)
 
 [Greater Pittsburgh Community Food Bank](https://pittsburghfoodbank.org/)
 
