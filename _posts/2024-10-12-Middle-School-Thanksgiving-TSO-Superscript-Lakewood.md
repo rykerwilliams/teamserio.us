@@ -4,7 +4,7 @@ title:  "Middle School Thanksgiving - Superscript Lakewood - 2024.10.12"
 subtitle: "A Report"
 date:   2024-10-12 16:20:59 +0000
 categories: tournament-writeup
-tags: tsi tournament-writeup middle-school open
+tags: tso tournament-writeup middle-school open
 header_type: splash
 header_img: ../assets/images/2024/10/12/Food-FitForAJuzam.jpg
 include_on_feed   : true
