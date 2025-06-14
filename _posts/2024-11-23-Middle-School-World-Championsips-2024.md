@@ -89,20 +89,16 @@ After the dust settled, The B.C. Druid ended up on top, followed closely by Twan
 
 ![Standings](../assets/images/2024/11/23/EventStandings.png){: width="50%"}
 
-*Top 3*
-![Top 3 - L to R: Max, 3rd; Angelo, 1st; Twan, 2nd](../assets/images/2024/11/23/trophy-IMG_8842.JPG)
+*Top 3 - L to R: Max, 3rd; Angelo, 1st; Twan, 2nd*
+![Top 3 - L to R: Max, 3rd; Angelo, 1st; Twan, 2nd](../assets/images/2024/11/23/trophy-IMG_8842.JPG){: width="80%"}
 
 *'Coolest' Deck and 'Dumpster' Dudes*
-![Spicy and Last Place](../assets/images/2024/11/23/trophy-IMG_8844.JPG)
+![Spicy and Last Place](../assets/images/2024/11/23/trophy-IMG_8844.JPG){: width="70%"}
 
 
 ## Middle School Play
-{% include image-gallery.html folder="/assets/images/2024/11/23" %}
 
-<!-- ![msplay](../assets/images/2024/11/23/IMG_5926.jpg) ![msplay](../assets/images/2024/11/23/IMG_5927.jpg) ![msplay](../assets/images/2024/11/23/IMG_8830.JPG) ![msplay](../assets/images/2024/11/23/IMG_8834.JPG) ![msplay](../assets/images/2024/11/23/IMG_8837.JPG) ![msplay](../assets/images/2024/11/23/IMG_8838.JPG) ![msplay](../assets/images/2024/11/23/IMG_8847.JPG)
-
-![text](../assets/images/2024/11/23/rd2-IMG_8832.JPG) ![text](../assets/images/2024/11/23/rd3-IMG_5921.jpg) ![text](../assets/images/2024/11/23/rd3-IMG_5922.jpg) ![text](../assets/images/2024/11/23/rd3-IMG_5929.jpg) ![text](../assets/images/2024/11/23/rd4-227D058C-9027-4ECC-814F-EFECDA2C8BB0.jpg) ![text](../assets/images/2024/11/23/rd4-PXL_20241124_003311665.jpg) ![text](../assets/images/2024/11/23/Rd5-IMG_5931.jpg) ![text](../assets/images/2024/11/23/rd6-0B8B6A0E-7457-4242-B4D5-5118D38FE45B.jpg) ![text](../assets/images/2024/11/23/table-IMG_5943.jpg) ![text](../assets/images/2024/11/23/table-IMG_8833.JPG) ![text](../assets/images/2024/11/23/table-PXL_20241124_002927498.jpg) ![text](../assets/images/2024/11/23/table-PXL_20241124_002940701.jpg) ![text](../assets/images/2024/11/23/table-PXL_20241124_002949322.jpg) -->
-
+{% include image-gallery-no-caption.html folder="/assets/images/2024/11/23/gameplay" %}
 
 ## Collected Decks
 
@@ -134,4 +130,10 @@ Here are some decks that were submitted from the event.
 
 ## Thanks and Ups
 
-Big Ups to SlyFox for hosting our event. Thanks to all the players that came out and made it a thing. And of course, big love and thanks to the man, Eric Caffrey. That's my man right there, we hold it down!
+Big Ups to SlyFox for hosting our event. Thanks to all the players that came out and made it a thing. And of course, big love and thanks to the man, Eric Caffrey. 
+
+Until next time...
+
+![Peace out MSWC](../assets/images/2024/11/23/z_PXL_20241124_031154093.jpg){: width="50%"}
+<div class="text-center">Peace out MSWC 2024</div><br>
+
