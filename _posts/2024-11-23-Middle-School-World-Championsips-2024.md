@@ -6,7 +6,7 @@ date:   2024-11-23 16:20:59 +0000
 categories: tournament-writeup
 tags: tournament-writeup middle-school open
 header_type: splash
-header_img: ../assets/images/2024/11/23/trophy-IMG_20241109_134521.JPG
+header_img: ../assets/images/2024/11/23/trophy-IMG_20241109_134521.jpg
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true
