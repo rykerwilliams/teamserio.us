@@ -1,12 +1,12 @@
 ---
 layout: default-with-decklists
-title:  "Middle School World Championships 2025"
+title:  "Middle School World Championships 2024"
 subtitle: "A Report"
-date:   2024-10-12 16:20:59 +0000
+date:   2024-11-23 16:20:59 +0000
 categories: tournament-writeup
 tags: tournament-writeup middle-school open
 header_type: splash
-header_img: ../assets/images/2024/10/12/Food-FitForAJuzam.jpg
+header_img: ../assets/images/2024/11/23/trophy-IMG_20241109_134521.JPG
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true
@@ -18,7 +18,7 @@ show_sociallinks  : true
 show_tags         : true
 author:
   name: Rajah James
-  avatar: https://avatars.githubusercontent.com/u/310221
+  avatar: ../assets/images/avatars/rajah_460x460.jpg
   location: Ohio, US
   links:
     - url: https://bsky.app/profile/cleverpseudonym.bsky.social
@@ -30,75 +30,108 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
+    - url: https://www.instagram.com/intelblaster/
+      icon: "fab fa-instagram"
+      label: "My personal Instagram"
+    - url: https://www.youtube.com/ridiculousdonny
+      icon: "fab fa-youtube"
+      label: "My personal YouTube"
 ---
-Eric Caffrey hosted a Middle School format Team Serious Open! Held at SuperScript in Lakewood, OH, the event was a Thanksgiving theme, with all the fixings! 8 Serious Mages gathered to sling old spells and break bread together.
+The Middle School World Championships returned to SlyFox for 2024, hosted by the incomparable Eric Caffrey! Held at the historic [Slyfox on the Highline](https://www.slyfoxbeer.com/pittsburgh-highline), in the South Side of Pittsburgh, 24 mages clashed to determine the 2024 Middle School World Champion!
 
-## Flyers
+![24? Wizards](../assets/images/2024/11/23/mswc-2025-group-photo-crop.jpg)
 
-THE Kyle Wells pitched in with a flyer for the event. His wife Katie thought his sucked, so she made us a nicer one. Thanks Katie! Thanks Kyle!
+## Media
 
-*THE Kyle Flyer*
-![Kyle's AI Flyer](../assets/images/2024/10/12/Kyle_Flyer.png){: width="80%"}
+THE Kyle Wells once again pitched in with a flyer for the event. Or maybe it was Katie? Thanks Katie! Thanks Kyle!
 
-*THE Katie Flyer*
-![Katie's Canva Flyer](../assets/images/2024/10/12/Katie_Flyer.png){: width="80%"}
+![WC CHamps Flyer](../assets/images/2024/11/23/Middle_WC_Flyer.jpg){: width="80%"}
 
 ## Metagame
 
-There was a diverse field of decks chosen for battle this day.
+There was a diverse field of decks chosen for battle this day. Unfortunately, I can't say exactly what they all were.
 
-- Dream Halls
-- Burn
-- Sligh
-- Mono Black Sui
 - Dragon
-- 5c Negator Zoo
-- UG Survival Madness
-- Dragonstorm
+- Sligh
+- Mono U Fliers
+- The Rock
+- Pink Shadow
+- Gro-a-Tog
+- Life
+- UG Madness
+- Terrageddon
+- Reanimator
+- Replenish
 
-## Prizes
+## Prizes and Such
 
 Eric put together some killer prizes, not just for the winner, but also for last place and most creative.
 
-*First Place Prize*
-![First Place Prize](../assets/images/2024/10/12/Prize-FirstPlace.jpg){: width="50%"}
+*Prize Table*
+![Prize Table](../assets/images/2024/11/23/trophy-IMG_5934.jpg)
 
-*Last Place Prize*
-![Last Place Prize](../assets/images/2024/10/12/Prize-LastPlace.jpg){: width="50%"}
+*Evilmailman Tatted Disenchant*
+![Evilmailman Tatted Disenchant](../assets/images/2024/11/23/trophy-IMG_5917.jpg){: width="50%"}
 
-*Most Creative Prize*
-![Most Creative Prize](../assets/images/2024/10/12/Prize-MostCreative.jpg){: width="50%"}
+*Trophies*
+![Trophies](../assets/images/2024/11/23/trophy-IMG_20241109_134521.jpg){: width="50%"}
+
+*Dumpster Deck Box*
+![Dumpster Deck Box](../assets/images/2024/11/23/trophy-IMG_5951.jpg){: width="50%"}
 
 ## Food
 
-*Before*
-![Before Food](../assets/images/2024/10/12/Food-Before.jpg)
-
-*After*
-![After Food](../assets/images/2024/10/12/Food-FullSpread-After.jpg)
-
-*Coffee Pot Gravy, Of Course*
-![Coffee Pot Gravy, Of Course](../assets/images/2024/10/12/Food-CoffePotGravy.jpg){: width="50%"}
+![text](../assets/images/2024/11/23/food-IMG_5910.jpg)![text](../assets/images/2024/11/23/food-IMG_5914.jpg) ![text](../assets/images/2024/11/23/food-IMG_8835.JPG)
 
 ## Winners
 
-After the dust settled, Chad Frazier was the lone 9 pointer on Dream Halls, while Jerry Yang achieved perfectly evil tiebreakers.
+After the dust settled, The B.C. Druid ended up on top, followed closely by Twan and then Max. Shout out to all the 4-2s that were in the hunt.
 
-![Standings](../assets/images/2024/10/12/EventStandings.jpg)
+![Standings](../assets/images/2024/11/23/EventStandings.png){: width="50%"}
 
-*Chad Frazier, Event Winner*
-![Chad Frazier, Event Winner](../assets/images/2024/10/12/Winner-Event-Chad.jpg){: width="80%"}
+*Top 3*
+![Top 3 - L to R: Max, 3rd; Angelo, 1st; Twan, 2nd](../assets/images/2024/11/23/trophy-IMG_8842.JPG)
 
-*Eric Caffrey, Last Place*
-![Eric Caffrey, Last Place](../assets/images/2024/10/12/Winner-LastPlace-Eric.jpg){: width="50%"}
+*'Coolest' Deck and 'Dumpster' Dudes*
+![Spicy and Last Place](../assets/images/2024/11/23/trophy-IMG_8844.JPG)
 
-*Steven McGrew, Most Creative*
-![Steven McGrew, Most Creative](../assets/images/2024/10/12/Winner-MostCreative-Steven.jpg){: width="50%"}
 
-![Negator Hungry](../assets/images/2024/10/12/PXL_20241012_183933008~2.jpg){: width="70%"}
+## Middle School Play
+{% include image-gallery.html folder="/assets/images/2024/11/23" %}
 
-![Negator Decklist](../assets/images/2024/10/12/PXL_20241012_201648550~2.jpg)
+<!-- ![msplay](../assets/images/2024/11/23/IMG_5926.jpg) ![msplay](../assets/images/2024/11/23/IMG_5927.jpg) ![msplay](../assets/images/2024/11/23/IMG_8830.JPG) ![msplay](../assets/images/2024/11/23/IMG_8834.JPG) ![msplay](../assets/images/2024/11/23/IMG_8837.JPG) ![msplay](../assets/images/2024/11/23/IMG_8838.JPG) ![msplay](../assets/images/2024/11/23/IMG_8847.JPG)
+
+![text](../assets/images/2024/11/23/rd2-IMG_8832.JPG) ![text](../assets/images/2024/11/23/rd3-IMG_5921.jpg) ![text](../assets/images/2024/11/23/rd3-IMG_5922.jpg) ![text](../assets/images/2024/11/23/rd3-IMG_5929.jpg) ![text](../assets/images/2024/11/23/rd4-227D058C-9027-4ECC-814F-EFECDA2C8BB0.jpg) ![text](../assets/images/2024/11/23/rd4-PXL_20241124_003311665.jpg) ![text](../assets/images/2024/11/23/Rd5-IMG_5931.jpg) ![text](../assets/images/2024/11/23/rd6-0B8B6A0E-7457-4242-B4D5-5118D38FE45B.jpg) ![text](../assets/images/2024/11/23/table-IMG_5943.jpg) ![text](../assets/images/2024/11/23/table-IMG_8833.JPG) ![text](../assets/images/2024/11/23/table-PXL_20241124_002927498.jpg) ![text](../assets/images/2024/11/23/table-PXL_20241124_002940701.jpg) ![text](../assets/images/2024/11/23/table-PXL_20241124_002949322.jpg) -->
+
+
+## Collected Decks
+
+Here are some decks that were submitted from the event.
+
+![Angelo](../assets/images/2024/11/23/deck-AngeloK.png)
+<div class="text-center">Angelo</div><br>
+
+![Eric](../assets/images/2024/11/23/deck-EricCaffrey.jpg) 
+<div class="text-center">Eric</div><br>
+
+![mailman](<../assets/images/2024/11/23/deck-Evil Mail Man.jpg>) 
+<div class="text-center">mailman</div><br>
+
+![Ian](../assets/images/2024/11/23/deck-IanFiles.jpeg) 
+<div class="text-center">Ian</div><br>
+
+![Demario](<../assets/images/2024/11/23/deck-jeff demario.jpg>) 
+<div class="text-center">Demario</div><br>
+
+![Kyle](<../assets/images/2024/11/23/deck-kyle wells.jpg>)
+<div class="text-center">Kyle</div><br>
+
+![Robin](../assets/images/2024/11/23/deck-RobinMannas-PXL_20241124_023643819.jpg)
+<div class="text-center">Robin</div><br>
+
+![McGrew](<../assets/images/2024/11/23/deck-Steven McGrew.jpg>)
+<div class="text-center">McGrew</div><br>
 
 ## Thanks and Ups
 
-Big Ups to Superscript for hosting our event. Thanks to all the players that came out and made it a thing. And of course, big love and thanks to the man, Eric Caffrey. That's my man right there, we hold it down!
+Big Ups to SlyFox for hosting our event. Thanks to all the players that came out and made it a thing. And of course, big love and thanks to the man, Eric Caffrey. That's my man right there, we hold it down!

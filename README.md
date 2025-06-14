@@ -1,5 +1,10 @@
 A jekyll site for teamserio.us.
 
+## Debugging
+
+    bundle install
+    bundle exec jekyll serve
+
 ## TODO Roadmap
 
 ### Backend / Doc / Build
