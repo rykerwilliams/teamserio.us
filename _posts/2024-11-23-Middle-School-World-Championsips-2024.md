@@ -51,6 +51,8 @@ THE Kyle Wells once again pitched in with a flyer for the event. Or maybe it was
 
 There was a diverse field of decks chosen for battle this day. Unfortunately, I can't say exactly what they all were.
 
+- Bogles
+- Rebels
 - Dragon
 - Sligh
 - Mono U Fliers
@@ -97,6 +99,8 @@ After the dust settled, The B.C. Druid ended up on top, followed closely by Twan
 
 
 ## Middle School Play
+
+![Group Shot - Wide](../assets/images/2024/11/23/IMG_9311.jpg){: width="80%"}
 
 {% include image-gallery-no-caption.html folder="/assets/images/2024/11/23/gameplay" %}
 
