@@ -120,6 +120,9 @@ Here are some decks that were submitted from the event.
 ![Ian](../assets/images/2024/11/23/deck-IanFiles.jpeg) 
 <div class="text-center">Ian</div><br>
 
+![Nam](<../assets/images/2024/11/23/deck-Nam_Tran-IMG_9310.jpg>)
+<div class="text-center">Nam</div><br>
+
 ![Demario](<../assets/images/2024/11/23/deck-jeff demario.jpg>) 
 <div class="text-center">Demario</div><br>
 
