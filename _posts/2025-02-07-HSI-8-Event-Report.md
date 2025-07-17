@@ -50,10 +50,6 @@ Players chose four packs that they wanted to play and one of the four was select
 
 ![The Bizarre Packs](../assets/images/2025/02/07/IMG_9191.JPG)
 
-
-<!-- 
-![Pack Breakdown](../assets/images/2025/02/07/image-1.png) -->
-
 | **Set Name**                                   | **\# Packs In Pool** |
 | ---------------------------------------------- | -------------------- |
 | Time Spiral Remastered                         | 4                    |
@@ -111,17 +107,19 @@ The draft and the main HSI event both benefitted the [Clintonville Community Res
 
 ## HSI 8
 
+Happy Birthday to you, Mr. Hazard!
+
+![alt text](../assets/images/2025/02/08/IMG_9210.JPG){: width="40%"}
+
 ### Vintage
 
 21 Wizards battled for the Glory of Hazard! Checkout the tournament on [mtgmelee](https://melee.gg/Tournament/View/213388).
 
-{% include image-gallery-no-caption.html folder="/assets/images/2025/02/08/gameplay" %}
+{% include image-gallery-no-caption-3-per.html folder="/assets/images/2025/02/08/gameplay" %}
 
 #### Top 8
 
 After 5 rounds of Swiss, the top 8 looked like this:
-
-The Top 8 after Swiss:
 
 1. Jimmy - Fleshraker
 1. Chad - Jewel
@@ -140,16 +138,15 @@ The final match was Chad on Jewel vs Andy on Oath. Andy won in 2 games.
 
 HSI is always in the winter time and we wanted to have a more tropical atmosphere, so anyone who could was encouraged to dress in their Hawaiian shirts!
 
-![alt text](../assets/images/2025/02/08/IMG_8683.jpg)
-![alt text](../assets/images/2025/02/08/IMG_8694.jpg)
+{% include image-gallery-no-caption-2-per.html folder="/assets/images/2025/02/08/hawaiian" %}
 
 ### Prizes
 
 As always the prize table was crazy! Notable inclusion was of course, the swords!
 
-![alt text](../assets/images/2025/02/08/prizes/IMG_8680.jpg)
+![alt text](../assets/images/2025/02/08/prizes/IMG_8680.jpg){: width="80%"}
 
-{% include image-gallery-no-caption.html folder="/assets/images/2025/02/08/prizes" %}
+{% include image-gallery-no-caption-3-per.html folder="/assets/images/2025/02/08/prizes" %}
 
 ## Thanks and Shout Outs
 
