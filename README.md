@@ -1,5 +1,9 @@
 A jekyll site for teamserio.us.
 
+## Install Jeykll locally
+
+[Ubuntu Install](https://jekyllrb.com/docs/installation/ubuntu/)
+
 ## Debugging
 
     bundle install
