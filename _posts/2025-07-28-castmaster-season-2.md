@@ -33,7 +33,7 @@ Last year, as part of Rajah James’s hosting of The Land, a Magic: The Gatherin
 
 Taskmaster is a British reality game show wherein, over the course of a 10-episode season, comedians are asked to perform “tasks”—various concocted mental and physical challenges—for the delight of the audience and the host. The host, Greg Davies, is styled as the Taskmaster, who adjudicates the tasks and assigns points, eventually crowning a champion at the end of the season and 50 tasks or so. Alex Horne, the creator of the game, is the cohost and also runs the tasks in the field.
 
-It’s a very bingeable show, very British, and the existing 19 seasons are all available online on YouTube (https://www.youtube.com/c/Taskmaster), as well as seasons from Australia, New Zealand, several Scandinavian countries, French Canada, and elsewhere. I highly recommend it. Season 19, which probably has ended its run by the time you read this, is an all-timer, featuring a rare American competitor, Jason Mantzoukas.
+It’s a very bingeable show, very British, and the existing 19 seasons are all available online on [YouTube] (https://www.youtube.com/c/Taskmaster), as well as seasons from Australia, New Zealand, several Scandinavian countries, French Canada, and elsewhere. I highly recommend it. Season 19, which probably has ended its run by the time you read this, is an all-timer, featuring a rare American competitor, Jason Mantzoukas.
 
 Castmaster similarly has mental and physical tasks judged by a taskmaster—me. It’s meant to be a diversion throughout a day-long Vintage tournament, as well as encouraging people to meet and mingle and have a memorable shared experience. At the end of the day, I crown a team of two players as the champion, and they win a handsome set of engraved bookend trophies, handmade by Team Serious’s Jon Hammack.
 
@@ -103,7 +103,8 @@ This was just to get people interacting with the cards, a random-looking stack o
 
 Most players sorted in color order and then alphabetically, like many Magic players do. One player sorted by expansion symbol, a bold gambit. And a couple sorted just alphabetically, but it didn’t help especially. Honestly, I didn’t care if it got sorted at all. This was just time to look at cards and process them mentally.
 
-At the end of 52 seconds, they put the deck away and were presented with a surprise second task, on a new paper with blanks on it: **Write down the titles of the cards you sorted. Most correct titles wins. You have 52 seconds. Your time starts now.**
+    
+    At the end of 52 seconds, they put the deck away and were presented with a surprise second task, on a new paper with blanks on it: Write down the titles of the cards you sorted. Most correct titles wins. You have 52 seconds. Your time starts now.
 
 This was great. There were some bail-outs, but most players jumped right in and started writing. Lists typically ended up in the 5, 6, 7 range, but there were some outstanding performers. Mike Solymossy put in a strong showing with 9 and a couple close misses, going well beyond the “Below Mediocrity” team name among the field. And Paul Blakely of “Didgeridoos and Don’ts” didgeridid it and listed 13, more than double the average. I was impressed!
 
