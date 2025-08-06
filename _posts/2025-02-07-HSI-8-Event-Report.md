@@ -150,4 +150,6 @@ As always the prize table was crazy! Notable inclusion was of course, the swords
 
 ## Thanks and Shout Outs
 
-Shout out to Matt for hosting!
+Everyone took home these dope proxies, courtesy of our host. Shout out to Matt for hosting!
+
+![Proxies](../assets/images/2025/02/08/Hazardous_Proxies.jpg){: width="80%"}
