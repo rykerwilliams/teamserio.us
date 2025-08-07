@@ -103,8 +103,9 @@ This was just to get people interacting with the cards, a random-looking stack o
 
 Most players sorted in color order and then alphabetically, like many Magic players do. One player sorted by expansion symbol, a bold gambit. And a couple sorted just alphabetically, but it didn’t help especially. Honestly, I didn’t care if it got sorted at all. This was just time to look at cards and process them mentally.
 
-    
-    At the end of 52 seconds, they put the deck away and were presented with a surprise second task, on a new paper with blanks on it: Write down the titles of the cards you sorted. Most correct titles wins. You have 52 seconds. Your time starts now.
+At the end of 52 seconds, they put the deck away and were presented with a surprise second task, on a new paper with blanks on it: 
+
+    Write down the titles of the cards you sorted. Most correct titles wins. You have 52 seconds. Your time starts now.
 
 This was great. There were some bail-outs, but most players jumped right in and started writing. Lists typically ended up in the 5, 6, 7 range, but there were some outstanding performers. Mike Solymossy put in a strong showing with 9 and a couple close misses, going well beyond the “Below Mediocrity” team name among the field. And Paul Blakely of “Didgeridoos and Don’ts” didgeridid it and listed 13, more than double the average. I was impressed!
 
