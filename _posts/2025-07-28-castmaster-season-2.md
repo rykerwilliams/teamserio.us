@@ -33,13 +33,13 @@ Last year, as part of Rajah James’s hosting of The Land, a Magic: The Gatherin
 
 Taskmaster is a British reality game show wherein, over the course of a 10-episode season, comedians are asked to perform “tasks”—various concocted mental and physical challenges—for the delight of the audience and the host. The host, Greg Davies, is styled as the Taskmaster, who adjudicates the tasks and assigns points, eventually crowning a champion at the end of the season and 50 tasks or so. Alex Horne, the creator of the game, is the cohost and also runs the tasks in the field.
 
-It’s a very bingeable show, very British, and the existing 19 seasons are all available online on [YouTube] (https://www.youtube.com/c/Taskmaster), as well as seasons from Australia, New Zealand, several Scandinavian countries, French Canada, and elsewhere. I highly recommend it. Season 19, which probably has ended its run by the time you read this, is an all-timer, featuring a rare American competitor, Jason Mantzoukas.
+It’s a very bingeable show, very British, and the existing 19 seasons are all available online on [YouTube](https://www.youtube.com/c/Taskmaster){:target="_blank"}, as well as seasons from Australia, New Zealand, several Scandinavian countries, French Canada, and elsewhere. I highly recommend it. Season 19, which probably has ended its run by the time you read this, is an all-timer, featuring a rare American competitor, Jason Mantzoukas.
 
 Castmaster similarly has mental and physical tasks judged by a taskmaster—me. It’s meant to be a diversion throughout a day-long Vintage tournament, as well as encouraging people to meet and mingle and have a memorable shared experience. At the end of the day, I crown a team of two players as the champion, and they win a handsome set of engraved bookend trophies, handmade by Team Serious’s Jon Hammack.
 
 ![Trophies](../assets/images/2025/07/28/01-image9.jpg)
 
-[You can read of the 2024 event here.]({% post_url 2024-06-08-castmaster-season-1 %})
+[You can read of the 2024 event here.]({% post_url 2024-06-08-castmaster-season-1 %}){:target="_blank"}
 
 This year’s event had new tasks and teams but followed the same format. Teams of two would have some homework tasks before the event, do one task that lasts throughout the day, do three tasks in between rounds, and come together at the end for a final opportunity and scoring. The between-round tasks are for player A, player B, and a team task for both players. So in five rounds, players need to get two tasks in. This year there were eight teams signed up (down from 10 last year, a bit of a personal disappointment, I admit). Eight teams meant tasks were scored from 1 to 8, but I’m the Castmaster and can be as subjective as I want.
 
