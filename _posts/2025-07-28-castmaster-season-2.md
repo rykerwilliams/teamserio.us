@@ -114,7 +114,7 @@ All in all, perfect task. I spent a while figuring out how many cards to use and
 
 ### Task 5 – Exquisite Corpse Dance
 
-Like last year, there was an art task. I like them because they allow teams to collaborate on something big. Maybe they even want to take their drawing home as a memento of their Castmaster adventure! This year’s taks was based on a surrealist collaborative game called Exquisite Corpse.
+Like last year, there was an art task. I like them because they allow teams to collaborate on something big. Maybe they even want to take their drawing home as a memento of their Castmaster adventure! This year’s task was based on a surrealist collaborative game called Exquisite Corpse.
 
 
     With your teammate, draw a portrait of your declared favorite Magic: The Gathering creature using the colors you selected in your sign-up form.
@@ -131,7 +131,7 @@ Like last year, there was an art task. I like them because they allow teams to c
 
 Players declared their favorite non-Human creatures on the sign-up form, and also picked colors from a list of 12 without knowing how the two were related, or that they were related at all. Interestingly, no team picked more than four colors or less than three. And except for “Duane and Ben Do Castmaster Good and Also Other Things Good” having to justify a hot pink Lodestone Golem, the teams’ colors were largely appropriate for their creature.
 
-I used big rolls of easel paper pre-folded into fifths, and except for doing this outside on the grilling patio where it was windy, this went great—very fun watching things come together, or absolutely fail to. Time was meant to be limiting, but not a hindrance. Some drawings (or at least sections of drawings) even had some real artistry to them. There were accent lines and colors, crosshatching… consummate V’s! Other drawings completely omitted heads, or had extras—as hoped. When everyone was done,we hung the drawings in the tournament hall for everyone to see and enjoy.
+I used big rolls of easel paper pre-folded into fifths, and except for doing this outside on the grilling patio where it was windy, this went great—very fun watching things come together, or absolutely fail to. Time was meant to be limiting, but not a hindrance. Some drawings (or at least sections of drawings) even had some real artistry to them. There were accent lines and colors, crosshatching… consummate V’s! Other drawings completely omitted heads, or had extras—as hoped. When everyone was done, we hung the drawings in the tournament hall for everyone to see and enjoy.
 
 Final results put themselves into tiers rather than individual scores, and with the very objective results of Tasks 3 and 4, I went with it. “The Vanishing Serras” Kyle Wells and Josh Burgoa got 8 points for a depiction of Serra Angel that started with an upraised sword, successfully connected it to an arm and appropriately sized head, included a feathered wing wrapped around a torso, and had a skirt with pleats. The drawing was complete, recognizable, and fun.
 
