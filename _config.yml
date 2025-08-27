@@ -55,6 +55,8 @@ navbar:
   nav:
   - title   : Posts #Label
     url     : /posts/  #url
+  - title   : Calendar
+    url     : /calendar
   - title   : Tags
     url     : /tags
   - title   : Categories

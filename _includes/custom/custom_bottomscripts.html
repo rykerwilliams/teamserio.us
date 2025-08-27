@@ -1,0 +1,76 @@
+<!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+<!-- ICAL.js -->
+<script src="https://cdn.jsdelivr.net/npm/ical.js@1.4.0/build/ical.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar');
+        const icsUrl = 'https://corsproxy.io/?url=' + encodeURIComponent('https://calendar.google.com/calendar/ical/7e9b3211f2ce55f311f896ae5888b0b23f9c65ac327fa1b493f6562b163e9ca2%40group.calendar.google.com/public/basic.ics');
+
+        if(calendarEl === null){
+            console.log("No Calendar on page.");
+        }
+        else
+        {
+            fetch(icsUrl)
+            .then(res => res.text())
+            .then(icsText => {
+            const jcalData = ICAL.parse(icsText);
+            const comp = new ICAL.Component(jcalData);
+            const vevents = comp.getAllSubcomponents('vevent');
+
+            const now = new Date();
+
+            const events = vevents
+                    .map(ve => new ICAL.Event(ve))
+                    .filter(evt => evt.startDate.toJSDate() >= now)
+                    .map(evt => {
+                        const desc = evt.description || '';
+                        const lines = desc.split(/\r?\n/).slice(0, 3).join(' ');
+
+                        return {
+                            title: lines ? `${evt.summary} — ${lines}` : evt.summary,
+                            start: evt.startDate.toJSDate(),
+                            end: evt.endDate.toJSDate(),
+                            description: lines
+                        };
+                    })
+                    .sort((a, b) => new Date(a.start) - new Date(b.start));
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'list',
+                headerToolbar: { left: '', center: 'title', right: '' },
+                visibleRange: function(currentDate) {
+                    return {
+                    start: currentDate,
+                    end: new Date(currentDate.getFullYear() + 2, 11, 31)
+                    };
+                },
+                eventClick: function(info) {
+                const date = info.event.start;
+                const yyyy = date.getFullYear();
+                const mm = String(date.getMonth() + 1).padStart(2, '0');
+                const dd = String(date.getDate()).padStart(2, '0');
+
+                const calendarId = '7e9b3211f2ce55f311f896ae5888b0b23f9c65ac327fa1b493f6562b163e9ca2@group.calendar.google.com';
+
+                const url = `https://calendar.google.com/calendar/u/0/embed?src=${encodeURIComponent(calendarId)}&dates=${yyyy}${mm}${dd}/${yyyy}${mm}${dd}`;
+
+                window.open(url, '_blank');
+                info.jsEvent.preventDefault();
+                },
+                events: events
+            });
+
+            calendar.render();
+            })
+            .catch(err => {
+            console.error('Failed to load ICS file', err);
+            calendarEl.innerHTML = '<p style="text-align:center;color:red;">Failed to load events.</p>';
+            });
+        }
+        
+    });
+</script>
