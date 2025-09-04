@@ -9,6 +9,10 @@ A jekyll site for teamserio.us.
     bundle install
     bundle exec jekyll serve
 
+## Special markups from plugins
+
+((Tezzeret, Cruel Captain)) due to the autocard plugin, renders as a link and you get a hover.
+
 ## TODO Roadmap
 
 ### Backend / Doc / Build
