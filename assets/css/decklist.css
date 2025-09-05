@@ -1,6 +1,14 @@
 .decklist-content {
-  color:#fdce93;
-  background-color:#3f3f3f;
+  color: #fdce93;
+  background-color: #3f3f3f;
+  position: relative; /* so absolutely positioned children anchor to this */
+  padding: 0.5rem;    /* make room for buttons inside */
+}
+
+.decklist-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.5rem;
 }
 
 .card-link {
@@ -11,25 +19,6 @@
 .card-link:hover {
   text-decoration: underline;
 }
-
-
-/* .card-link:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 200%;
-  width: 250px;
-  height: 350px;
-  background-color: white;
-  background-image: url('');
-  background-size: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card-link:hover::after {
-  background-image: var(--hover-card-image);
-} */
 
 .card-preview {
   content: "";
@@ -49,8 +38,27 @@
   visibility: hidden;
 }
 
-.decklist-copy-btn {
+/* .decklist-copy-btn {
   position: absolute;
   right: 15px;
   margin-top: -0.3rem;
+} */
+
+.decklist-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.decklist-actions .btn {
+  background: none;
+  border: none;
+  color: #fdce93;
+  cursor: pointer;
+}
+
+.decklist-actions .btn:hover {
+  text-decoration: underline;
 }

@@ -18,7 +18,7 @@ show_sociallinks  : true
 show_tags         : true
 author:
   name: Rajah James
-  avatar: https://avatars.githubusercontent.com/u/310221
+  avatar: ../assets/images/avatars/rajah_460x460.jpg
   location: Ohio, US
   links:
     - url: https://bsky.app/profile/cleverpseudonym.bsky.social
@@ -30,6 +30,12 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
+    - url: https://www.instagram.com/intelblaster/
+      icon: "fab fa-instagram"
+      label: "My personal Instagram"
+    - url: https://www.youtube.com/ridiculousdonny
+      icon: "fab fa-youtube"
+      label: "My personal YouTube"
 ---
 
 14 mages gathered to battle Vintage and celebrate in Ann Arbor, hosted by Kevin Poesnich! Featuring food, friendship and the debut of ((Tezzeret, Cruel Captain)).
@@ -38,7 +44,7 @@ author:
 
 ## Food and Drink
 
-This year, Kevin upgraded from a quarter keg to a half keg, and let flow [Bell's Two Hearted](https://bellsbeer.com/beers/two-hearted-ale/) with a great supply of sliced oranges. 
+This year, Kevin upgraded from a quarter keg to a half keg, and let flow [Bell's Two Hearted](https://bellsbeer.com/beers/two-hearted-ale/) with a great supply of sliced oranges.
 
 ![beer](../assets/images/2025/08/16/IMG_0509-beer.jpg){: width="50%"}
 
@@ -50,7 +56,26 @@ Of course, copious other foods were offered up by our gracious host. Many donuts
 
 {% include image-gallery-no-caption-2-per.html folder="/assets/images/2025/08/16/foods" %}
 
-___________
+### Decklists
+
+#### Top 4 Decks
+
+##### 1st After Swiss
+
+#### Other Decks
+
+##### ![Hilty](../assets/images/2025/08/16/KSI2/DSC_5373-hilty.jpg){: width="25%"}
+
+{% deckfile assets/files/2025/08/16/Jacob Hilty - KSI2 - Beseech.txt %}
+
+##### ![Caffrey](../assets/images/2025/08/16/KSI2/DSC_5316-eric.jpg){: width="25%"}
+
+{% deckfile assets/files/2025/08/16/Eric Caffrey - KSI2 - Warp Shops.txt %}
+
+##### ![THE Kyle Wells](../assets/images/2025/08/16/KSI2/DSC_5375-kyle.jpg){: width="60%"}
+
+{% deckfile assets/files/2025/08/16/Kyle Wells - KSI2 - Lurrus Dreadnought.txt %}
+
 End new
 ----
 

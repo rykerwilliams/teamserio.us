@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const data = await resp.json();
       img = document.createElement("img");
       img.src = data.image_uris.normal;
-      img.style.maxWidth = "250px";
+      img.style.maxWidth = "350px";
       img.style.border = "1px solid #333";
       img.style.borderRadius = "8px";
       tooltip.innerHTML = "";

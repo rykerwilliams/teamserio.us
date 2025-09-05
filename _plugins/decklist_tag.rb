@@ -28,19 +28,16 @@ module Jekyll
         
         newdecklist = decklist_txt.gsub("'", "&#39;")
         
-        "<div class='decklist-content'><button onclick='copyDecklist(this)' class='btn text-muted btn-sm decklist-copy-btn'><i class='far fa-copy'></i></button><div class='card-preview'></div><pre class='decklist-content'><div class='copyable-decklist'>#{newdecklist}</div><div class='display-decklist'>#{decklist_html}</div></pre></div>"
+        # "<div class='decklist-content'><button onclick='copyDecklist(this)' class='btn text-muted btn-sm decklist-copy-btn'><i class='far fa-copy'></i></button><div class='card-preview'></div><pre class='decklist-content'><div class='copyable-decklist'>#{newdecklist}</div><div class='display-decklist'>#{decklist_html}</div></pre></div>"
         
-        # "<div class='decklist-content'>
-        #   <div class='card-preview'></div>
-        #   <button onclick='copyDecklist(this)' class='btn text-muted btn-sm decklist-copy-btn'>
-        #     <i class='far fa-copy'></i>
-        #   </button>
-        #   <pre class='decklist-content'>
-        #     <div class='copyable-decklist'>#{newdecklist}</div>
-        #     <div class='display-decklist'>#{decklist_html}</div>
-        #   </pre>
-        # </div>"
-
+        "<div class='decklist-content'>
+          <button onclick='copyDecklist(this)' class='btn text-muted btn-sm decklist-copy-btn'>
+            <i class='far fa-copy'></i>
+          </button>
+          <div class='card-preview'></div>
+          <div class='copyable-decklist'><pre>#{newdecklist}</pre></div>
+          <div class='display-decklist'>#{decklist_html}</div>
+        </div>"
       end
   
       private
