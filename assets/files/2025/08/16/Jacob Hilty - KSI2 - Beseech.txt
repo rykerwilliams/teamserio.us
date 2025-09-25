@@ -7,7 +7,7 @@
 1 Manifold Key
 1 Karn, the Great Creator
 1 Tendrils of Agony
-2 Gitaxian Probe
+1 Gitaxian Probe
 1 Brainstorm
 1 Ancestral Recall
 1 Demonic Tutor
@@ -21,7 +21,7 @@
 4 Force of Will
 4 Dark Ritual
 1 Cabal Ritual
-2 Mox Ruby
+1 Mox Ruby
 1 Mox Pearl
 1 Mox Emerald
 1 Mox Opal
@@ -40,6 +40,8 @@
 1 Flooded Strand
 1 Mox Sapphire
 2 Thoughtseize
+1 Mox Jet
+1 Mental Misstep
 
 2 Hullbreacher
 2 Steel Sabotage
