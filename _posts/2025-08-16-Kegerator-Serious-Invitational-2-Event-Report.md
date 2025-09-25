@@ -146,6 +146,6 @@ Congratulations to Duane for taking down the title!
 
 Shout out to Kevin for hosting! Shout out to the Rajah Car, who was half the top 4! Shout out to Jimmy for running the pairing and keeping the stream assignments going smoothly. Thanks to all attendees for helping make Kegerator Serious Invitational such a great time. WAFWHF
 
-### Pictures
+## Pictures
 
 {% include image-gallery-no-caption.html folder="/assets/images/2025/08/16/gameplay" %}
