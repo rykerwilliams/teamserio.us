@@ -46,7 +46,7 @@ jobs:
         script: rm -Rf /dev-www/**
 
     - name: Copy file via SSH password
-      uses: appleboy/scp-action@v1.0.3
+      uses: appleboy/scp-action@v1
       with:
         host: ${{ secrets.DEPLOY_HOST }}
         username: ${{ secrets.DEPLOY_USERNAME }}
