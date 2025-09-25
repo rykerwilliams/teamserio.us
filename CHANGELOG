@@ -11,7 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - This CHANGELOG file to hopefully serve as an evolving example of a
   standardized open source project CHANGELOG.
-- Full Warning Episode 7 post
+- Added image-gallery-no-caption-XX includes
+- Added template for decklists from files
+- Added autocard mark up
 
 ### Changed
 

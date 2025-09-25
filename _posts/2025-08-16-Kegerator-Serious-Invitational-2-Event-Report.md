@@ -125,7 +125,7 @@ After 4 rounds of Swiss, the standings were as follows:
 
 ##### Rajah
 
-![Rajah](../assets/images/2025/08/16/gameplay/DSC_5312-rajah.jpg){: width="35%"}
+![Rajah](../assets/images/2025/08/16/KSI2/DSC_5312-rajah.jpg){: width="35%"}
 {% deckfile assets/files/2025/08/16/Rajah James - KSI2 - Raker PO.txt %}
 
 ### VODs
