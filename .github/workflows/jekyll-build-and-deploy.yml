@@ -54,4 +54,5 @@ jobs:
         port: ${{ secrets.DEPLOY_HOST_PORT }}
         source: _site/*
         target: /dev-www/
+        strip_components: 1
     
