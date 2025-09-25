@@ -129,8 +129,7 @@ Rajah vs. Hockey - Hockey Wins in 3!
 
 ![Rajah](../assets/images/2024/08/17/DSC_4251.jpg){: width="200px" }
 
-{% decklist %}
-1 Ancestral Recall
+{% decklist %}1 Ancestral Recall
 4 Atraxa, Grand Unifier
 1 Black Lotus
 2 Boseiju, Who Endures
