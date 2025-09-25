@@ -36,14 +36,14 @@ jobs:
         path: |
           _site
 
-    - name: delete deployed site
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USERNAME }}
-        key: ${{ secrets.DEPLOY_SSH_KEY }}
-        port: ${{ secrets.DEPLOY_HOST_PORT }}
-        script: rm -Rf /dev-www/**
+    # - name: delete deployed site
+    #   uses: appleboy/ssh-action@v1.0.3
+    #   with:
+    #     host: ${{ secrets.DEPLOY_HOST }}
+    #     username: ${{ secrets.DEPLOY_USERNAME }}
+    #     key: ${{ secrets.DEPLOY_SSH_KEY }}
+    #     port: ${{ secrets.DEPLOY_HOST_PORT }}
+    #     script: rm -Rf /dev-www/**
 
     - name: Copy file via SSH password
       uses: appleboy/scp-action@v1
@@ -52,6 +52,7 @@ jobs:
         username: ${{ secrets.DEPLOY_USERNAME }}
         key: ${{ secrets.DEPLOY_SSH_KEY }}
         port: ${{ secrets.DEPLOY_HOST_PORT }}
-        source: ./_site/**
+        source: _site/*
         target: /dev-www
+        rm: true
     
