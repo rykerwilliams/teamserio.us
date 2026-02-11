@@ -179,7 +179,7 @@ This would be a fun one with probably twice the number of people so there’s mo
 
 Thanks [as always]({% post_url 2024-06-08-castmaster-season-1 %}){:target="_blank" rel="noopener noreferrer"} for reading. I [write these]({% post_url 2025-07-28-castmaster-season-2 %}){:target="_blank" rel="noopener noreferrer"} with the hope that you can enjoy Castmaster vicariously and maybe you want to do something similar yourself. And you can probably tell I also do them to help keep notes for myself, in case I want to modify an event for use another time. Speaking of that…
 
-More Castmaster looms on the horizon. New tasks will be created for The Land, June 20-22 in the middle of nowhere, Ohio. This will be the third year for Castmaster and, to celebrate, teams will be composed of three players. Get yourselves organized now! Rajah and I will have information soon, with plenty of time before the event.
+More Castmaster looms on the horizon. New tasks will be created for The Land 7, June 12-14 in the middle of nowhere, Ohio. This will be the third year for Castmaster and, to celebrate, teams will be composed of three players. Get yourselves organized now! Rajah and I will have information soon, with plenty of time before the event.
 
 More players, more teamwork, more fun!
 
