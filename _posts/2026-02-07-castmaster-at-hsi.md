@@ -5,7 +5,7 @@ subtitle: "Head-to-Head-to-Head-to-Head-to-Head"
 categories: event-writeup
 tags: tsi event-writeup castmaster nat-moes
 header_type: splash
-header_img: ../assets/images/2025/07/28/header.jpg
+header_img: ../assets/images/2026/02/07/20260206_090624.jpg
 date: 2026-02-10 16:20:59 +0000
 include_on_feed   : true
 show_author       : true
