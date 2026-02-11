@@ -66,10 +66,11 @@ Pretty simple spelling bee structure for this one.
 This one I opened up to five players, but again we could have done more. The structure also allows some variation. I had initially thought about reversing direction whenever a vowel is said, but that’s a bit too often. There would be parts going back and forth between two players, but maybe that’s OK. Could also call on contestants to give the next letter, rather than going in order. You get the idea.
 
 I had words picked out beforehand and knew I wanted to drop the third word as the final blow. You can’t just lead with the author of the Underworld Cookbook, though players said they knew it was coming.
-DARKBLAST - pretty easy warmup, sure.
-LEGERDEMAIN - a little harder, uncommon, foreign.
-ASMORANOMARDICADAISTINACULDACAR - not actually that hard to spell, but easy to get lost in.
-NEBUCHADNEZZAR, SHAHRAZAD, PHTHISIS - winding down, and then “TY-SIS” doesn’t make any goddamn sense. If more than one person gets through the whole bee, I’d give them both a prize.
+
+- DARKBLAST - pretty easy warmup, sure.
+- LEGERDEMAIN - a little harder, uncommon, foreign.
+- ASMORANOMARDICADAISTINACULDACAR - not actually that hard to spell, but easy to get lost in.
+- NEBUCHADNEZZAR, SHAHRAZAD, PHTHISIS - winding down, and then “TY-SIS” doesn’t make any goddamn sense. If more than one person gets through the whole bee, I’d give them both a prize.
 
 Went about as I expected. Everyone got through Darkblast no problem. A couple of players got out on Legerdemain, and then Asmoranomardicadaistinaculdacar finished it. It’s mostly spelled like it sounds “Asmoranomardicadaistinaculdacar” but it’s easy to forget which syllable you’re on, particularly in the “dicadaist” section.
 
@@ -113,7 +114,12 @@ However! I wouldn’t do this one so close to a kitchen next time. Everyone exce
 
 The video doesn’t do it justice, but I remember and am still wincing watching Paul use a damn paring knife to open an icy box.
 
-  <video controls src="../assets/images/2026/02/07/1000010024.mp4" title="The Icebox"></video>
+<div style="width: 100%; max-width: 640px; margin: 0 auto;">
+    <video controls style="width: 100%; height: auto;">
+        <source src="../assets/images/2026/02/07/1000010024.mp4" title="The Icebox" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
 Paul extracted the Moss Monster from his deckbox just under the three-minute mark at 2:59. Chad had Hornet Cobra, John had Vampire Bats, and Eric, using a big honking kitchen knife, finally got to reveal Azure Drake.
 
