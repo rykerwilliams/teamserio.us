@@ -22,7 +22,7 @@ jobs:
         bundle install
     
     - name: Build Site
-      run: bundle exec jekyll build
+      run: JEKYLL_ENV=production bundle exec jekyll build
 
     - name: Clean Extensions for S3
       run: |

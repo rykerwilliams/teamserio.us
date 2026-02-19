@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
           .then(data => {
             if (data.data[0].image_uris && data.data[0].image_uris.normal) {
               // get the div to display the card preview
-              cardpreview = this.parentElement.parentElement.parentElement.querySelector('.card-preview')
+              cardpreview = this.closest('.decklist-content').querySelector('.card-preview')
       
               cardpreview.style.setProperty('background-image', `url(${data.data[0].image_uris.normal})`)
 
