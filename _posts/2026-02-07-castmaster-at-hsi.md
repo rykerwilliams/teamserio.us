@@ -6,7 +6,7 @@ categories: event-writeup
 tags: tsi event-writeup castmaster nat-moes
 header_type: splash
 header_img: ../assets/images/2026/02/07/20260206_090624.jpg
-date: 2026-02-10 16:20:59 +0000
+date: 2026-02-07 16:20:58 +0000
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true
