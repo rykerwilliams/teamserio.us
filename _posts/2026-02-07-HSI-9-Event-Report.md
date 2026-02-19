@@ -20,22 +20,6 @@ author:
   name: Nam Tran
   avatar: ../assets/images/avatars/namQ_277x325.png
   location: Ohio, US
-  links:
-    - url: https://bsky.app/profile/cleverpseudonym.bsky.social
-      icon: "fab fa-bluesky"
-      label: "My personal bsky"
-    - url: https://x.com/rykerwilliams
-      icon: "fab fa-twitter"
-      label: "My personal X"
-    - url: https://www.facebook.com/rajah.james
-      icon: "fab fa-facebook"
-      label: "My personal FB"
-    - url: https://www.instagram.com/intelblaster/
-      icon: "fab fa-instagram"
-      label: "My personal Instagram"
-    - url: https://www.youtube.com/ridiculousdonny
-      icon: "fab fa-youtube"
-      label: "My personal YouTube"
 ---
 
 We had 18 wizards gather in Columbus, OH for the 9th annual Hazard Serious Invitational Birthday extravaganza.
