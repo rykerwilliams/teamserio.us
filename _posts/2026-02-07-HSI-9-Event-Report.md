@@ -98,15 +98,15 @@ After 5 rounds of swiss, the top 8 was as follows:
 1. Nam Tran Golos Shops vs 8. Charles Rolko Grixis PO – Nam wins 2-0
 2. Paul Blakely MWI vs 7. Jimmy McCarthy Raker Shops – Paul wins 2-1
 3. Jacob Hilty Lurrus Maverick vs 6. Kyle Lenox Dimir Lurrus – Kyle wins 2-1
-4. Jerry Yang Jewel Shops vs 5 Andy Probasco Oath – Andy wins 2-1
+4. Jerry Yang Jewel Shops vs 5. Andy Probasco Oath – Andy wins 2-1
 
 <!-- This makes a gallery with 4 columns  -->
 {% include image-gallery-no-caption-3-per.html folder="/assets/images/2026/02/07/vintage-play/02" %}
 
 ### Semi Finals
 
-1. Nam Tran Golos Shops vs Andy Probasco Oath – Nam wins 2-1
-2. Paul Blakely MWI vs Kyle Lenox Dimir Lurrus – Kyle wins 2-1
+1. Nam Tran Golos Shops vs 5. Andy Probasco Oath – Nam wins 2-1
+2. Paul Blakely MWI vs 6. Kyle Lenox Dimir Lurrus – Kyle wins 2-1
 
 <!-- This makes a gallery with 4 columns  -->
 {% include image-gallery-no-caption-4-per.html folder="/assets/images/2026/02/07/vintage-play/03" %}
