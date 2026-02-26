@@ -96,7 +96,7 @@ After 5 rounds of swiss, the top 8 was as follows:
 ### Quarter Finals
 
 1. Nam Tran Golos Shops vs 8. Charles Rolko Grixis PO – Nam wins 2-0
-2. Paul Blakely MWI vs 7. Jimmy McCarthy Raker Shops – Paul wins 2-1
+2. Paul Blakeley MWI vs 7. Jimmy McCarthy Raker Shops – Paul wins 2-1
 3. Jacob Hilty Lurrus Maverick vs 6. Kyle Lenox Dimir Lurrus – Kyle wins 2-1
 4. Jerry Yang Jewel Shops vs 5. Andy Probasco Oath – Andy wins 2-1
 
@@ -106,7 +106,7 @@ After 5 rounds of swiss, the top 8 was as follows:
 ### Semi Finals
 
 1. Nam Tran Golos Shops vs 5. Andy Probasco Oath – Nam wins 2-1
-2. Paul Blakely MWI vs 6. Kyle Lenox Dimir Lurrus – Kyle wins 2-1
+2. Paul Blakeley MWI vs 6. Kyle Lenox Dimir Lurrus – Kyle wins 2-1
 
 <!-- This makes a gallery with 4 columns  -->
 {% include image-gallery-no-caption-4-per.html folder="/assets/images/2026/02/07/vintage-play/03" %}
@@ -120,17 +120,17 @@ After 5 rounds of swiss, the top 8 was as follows:
 ##### *Kyle Lenox* - 1st
 
 ![Kyle](<../assets/images/2026/02/07/top8/5 - kyle.jpg>){: width="30%"}
-{% deckfile /assets/files/2026/02/07/HSI 9 - Kyle Lennox - Dimir Lurrus.txt %}
+{% deckfile /assets/files/2026/02/07/HSI 9 - Kyle Lenox - Dimir Lurrus.txt %}
 
 ##### *Nam Tran* - 2nd
 
 ![Nam](../assets/images/2026/02/07/top8/namQ_460x527.jpg){: width="35%"}
 {% deckfile /assets/files/2026/02/07/HSI 9 - Nam Tran - Golos Shops.txt %}
 
-##### *Paul Blakely* - 3rd
+##### *Paul Blakeley* - 3rd
 
 ![Paul](<../assets/images/2026/02/07/top8/32 - Paul.jpg>){: width="35%"}
-{% deckfile /assets/files/2026/02/07/HSI 9 - Paul Blakely - MWI.txt %}
+{% deckfile /assets/files/2026/02/07/HSI 9 - Paul Blakeley - MWI.txt %}
 
 ##### *Andy Probasco* - 4th
 
