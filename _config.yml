@@ -1,22 +1,15 @@
 theme: chulapa-jekyll
-
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: TeamSerio.us
 email: we-do-not-have-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Web Home Of Team Serious.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://teamserio.us" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-github_username:  rykerwilliams
+baseurl: ""
+url: "https://teamserio.us"
+github_username: rykerwilliams
 timezone: America/New_York
 og_image: assets/images/site/SeriousManaHR-blacklogo-gray.png
+
 author:
   name: Rajah James
   avatar: assets/images/avatars/310221.jpg
@@ -31,157 +24,120 @@ author:
       icon: "fab fa-facebook"
       label: "My personal FB"
 
-# Search providers
-# Available free search engines:
-# - lunr https://lunrjs.com/
 search:
-  provider              : lunr #Select a provider for enable search: lunr, algolia, google
-  label                 :  #default ["Search"] Text on navbar when search is enabled
-  landing_page          :  #default ["/search"] Link on navbar
-  lunr_maxwords         :  #default [30] lunr only - May slow down your site build
+  provider : lunr
+  label :
+  landing_page :
+  lunr_maxwords :
 
 comments:
-  provider:         #Use 'disqus' https://disqus.com/ or 'giscus' https://giscus.app/
-  disqus_shortname: #Your site id : check your address https://{{ disqus.shortname }}.disqus.com/admin/
+  provider:
+  disqus_shortname:
 
-# Navbar:
-#   "brand" options would be set on the left side of your navbar
-#   "nav" would be set on the right side. Two-level nav links available
 navbar:
-  style : dual 
+  style : dual
   brand:
     title:
     img: "./assets/images/site/ohio.png"
   nav:
-  - title   : Posts #Label
-    url     : /posts/  #url
-  - title   : Calendar
-    url     : /calendar
-  - title   : Tags
-    url     : /tags
-  - title   : Categories
-    url     : /categories
-  - title   : Media #Label
-    child:
-      - title : Full Warning Podcast
-        url: /full-warning/  #url
-      - title : Full Warning YouTube
-        url: https://www.youtube.com/@FullWarningPodcast #url
-      - title : Serious Vintage Podcast
-        url: https://www.eternalcentral.com/seriousvintagepodcast/  #url
-      - title : Serious Vintage YouTube
-        url: https://www.youtube.com/@SeriousVintageCast #url
+    - title : Posts
+      url : /posts/
+    - title : Calendar
+      url : /calendar
+    - title : Tags
+      url : /tags
+    - title : Categories
+      url : /categories
+    - title : Merch
+      url : /merch/
+    - title : Media
+      child:
+        - title : Full Warning Podcast
+          url: /full-warning/
+        - title : Full Warning YouTube
+          url: https://www.youtube.com/@FullWarningPodcast
+        - title : Serious Vintage Podcast
+          url: https://www.eternalcentral.com/seriousvintagepodcast/
+        - title : Serious Vintage YouTube
+          url: https://www.youtube.com/@SeriousVintageCast
+
 footer:
   copyright: "&copy; 2024 Team Serious"
   links:
     - label: "RSS"
       icon: "fa fa-rss"
-      url:  "./atom.xml"
-    # - label: "Twitter"
-    #   icon: "fab fa-twitter"
-    #   url: https://twitter.com/
-    # - label: "Facebook"
-    #   icon: "fab fa-facebook"
-    #   url: https://www.facebook.com
+      url: "./atom.xml"
 
-# C. Theme Settings
-# Google Fonts https://fonts.google.com/, add as many as you need
 googlefonts:
- # - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
 
-# Theme and colors
 chulapa-skin:
-  skin   : twitter-dim
-  highlight   : "ZENBURN" #or any other name, default is 'DEFAULT' style
-  autothemer    :  false # Bool: Use autotheming
-  vars          :
-    primary     : lightskyblue #default ["#007bff"] - Bootstrap blue
+  skin : twitter-dim
+  highlight : "ZENBURN"
+  autothemer : false
+  vars :
+    primary : lightskyblue
 
-# D. Jekyll Defaults and collections: see https://jekyllrb.com/
-
-# Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
 paginate: 4
 paginate_path: "/posts/page:num/"
-paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
+paginator_maxnum: 3
 
-# Collections https://jekyllrb.com/docs/step-by-step/09-collections/
 collections:
   posts:
     output: true
     permalink : /posts/:year:month:day_:title
-# collections_dir     :
-permalink           : /:year:month:day_:title/
+  merch:
+    output: true
+    permalink: /merch/:name
 
-# Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
       header_type: "base"
-      include_on_search   : false
-      cloudtag_url        : /tags #This is where the link on tags would redirect
-      cloudcategory_url   : /categories #This is where the link on categories would redirect
-  -
-    scope:
+      include_on_search : false
+      cloudtag_url : /tags
+      cloudcategory_url : /categories
+  - scope:
       path: ""
       type: "posts"
     values:
-      header_type       : "post"
+      header_type : "post"
       include_on_search : true
-      include_on_feed   : true
-      show_date         : true
-      show_related      : true
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      show_comments     : true
-      show_tags         : true
-      show_categories   : true
-      show_author       : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
+      include_on_feed : true
+      show_date : true
+      show_related : true
+      show_bottomnavs : true
+      show_sociallinks : true
+      show_comments : true
+      show_tags : true
+      show_categories : true
+      show_author : true
+      show_breadcrumb : true
+      breadcrumb_list :
         - label: Posts
           url: /posts
+  - scope:
+      path: ""
+      type: "merch"
+    values:
+      layout: "merch-item"
+      include_on_search: false
 
-# Build settings
 plugins:
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
-  
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 
 include:
- - _pages
-#  - _plugins
+  - _pages
 
-# Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -193,8 +149,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
- # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-  
+  style: compressed
