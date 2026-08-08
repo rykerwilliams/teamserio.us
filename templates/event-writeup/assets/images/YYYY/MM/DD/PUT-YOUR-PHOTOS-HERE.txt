@@ -1,0 +1,4 @@
+Put your photos in this folder (rename YYYY/MM/DD to match the event's date).
+
+Delete this text file once you've added your photos — it's just a
+placeholder so the folder isn't empty in the zip file.

@@ -1,0 +1,5 @@
+Example subfolder for general candid photos shown in a gallery at the
+end of the post. Delete this text file once you've added your photos.
+
+If you don't want this gallery, delete this whole folder and remove the
+matching {% include ... %} line from the post.

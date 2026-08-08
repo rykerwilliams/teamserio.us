@@ -1,0 +1,7 @@
+Example subfolder for the optional side-by-side round-photo gallery
+mentioned in the post template. Put exactly the .jpg photos you want
+shown side-by-side here, then delete this text file.
+
+If you don't want this gallery, delete this whole folder and remove the
+matching {% include image-gallery-no-caption-3-per-responsive.html ... %}
+line from the post.

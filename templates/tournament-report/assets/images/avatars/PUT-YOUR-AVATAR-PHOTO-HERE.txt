@@ -1,0 +1,12 @@
+First time writing for us? Put a small square photo of yourself in this
+folder — it shows up next to your name on the post.
+
+Name it something like: your-name_400x400.jpg (a roughly square photo,
+at least 400x400 pixels, works best).
+
+Then point to it in the post's front matter:
+  author:
+    avatar: ../assets/images/avatars/your-name_400x400.jpg
+
+Already written for us before? You can skip this — just reuse the path
+to your existing avatar if you know it, or ask and we'll fill it in.

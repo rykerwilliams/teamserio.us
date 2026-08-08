@@ -1,0 +1,5 @@
+Put your general photos in this folder (rename YYYY/MM/DD to match the
+tournament's date). The banner photo referenced in the post's front
+matter (header_img) goes here too.
+
+Delete this text file once you've added your photos.
