@@ -1,0 +1,9 @@
+This is an example subfolder for the optional 3-photo side-by-side
+gallery described in the post template (_posts/YYYY-MM-DD-your-event-title.md).
+
+Put exactly the .jpg photos you want shown side-by-side in a folder like
+this one, then delete this text file.
+
+If you don't want a side-by-side gallery, just delete this whole folder
+and remove the {% include image-gallery-no-caption-3-per-responsive.html ... %}
+line from the post.

@@ -170,6 +170,9 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+exclude:
+  - templates/
+
 include:
  - _pages
 #  - _plugins
