@@ -1,0 +1,88 @@
+---
+layout: default
+title: Merch
+header_type: base
+permalink: /merch/
+---
+
+<div class="container mt-4 mb-5">
+  <div class="row mb-4">
+    <div class="col">
+      <h1>Team Serious Merch</h1>
+      <p class="lead text-muted">Gear, art, and accessories created by Team Serious members. Nothing here has an add-to-cart button &mdash; just reach out to the creator directly if something catches your eye.</p>
+    </div>
+  </div>
+
+  {% assign all_merch = site.merch %}
+  {% assign creators = all_merch | map: "creator" | uniq | sort %}
+
+  {% if all_merch.size > 0 %}
+
+  <!-- Filter bar -->
+  <div class="mb-4 d-flex flex-wrap align-items-center" id="merch-filters">
+    <span class="mr-2 text-muted small">Filter by creator:</span>
+    <button class="btn btn-sm btn-outline-light mr-1 mb-1 active" data-creator="all">All</button>
+    {% for creator in creators %}
+    <button class="btn btn-sm btn-outline-light mr-1 mb-1" data-creator="{{ creator | slugify }}">{{ creator }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="row" id="merch-grid">
+    {% for item in all_merch %}
+    <div class="merch-card-wrapper col-sm-6 col-md-4 col-lg-3 mb-4" data-creator="{{ item.creator | slugify }}">
+      <div class="card h-100" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);">
+        {% if item.header_img %}
+        <a href="{{ item.url | relative_url }}">
+          <img src="{{ item.header_img | relative_url }}" class="card-img-top" alt="{{ item.title }}" style="height:200px; object-fit:cover;">
+        </a>
+        {% endif %}
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <h5 class="card-title mb-0">
+              <a href="{{ item.url | relative_url }}" class="text-light">{{ item.title }}</a>
+            </h5>
+            {% if item.available %}
+            <span class="badge badge-success ml-2">Available</span>
+            {% else %}
+            <span class="badge badge-secondary ml-2">Unavailable</span>
+            {% endif %}
+          </div>
+          {% if item.item_type %}
+          <small class="text-muted mb-2">{{ item.item_type }}</small>
+          {% endif %}
+          {% if item.excerpt %}
+          <p class="card-text small mt-1" style="flex-grow:1;">{{ item.excerpt | strip_html | truncate: 100 }}</p>
+          {% endif %}
+          <div class="d-flex align-items-center mt-auto pt-2" style="border-top:1px solid rgba(255,255,255,0.08);">
+            {% if item.creator_avatar %}
+            <img src="{{ item.creator_avatar | relative_url }}" class="rounded-circle mr-2" width="28" height="28" alt="{{ item.creator }}" style="object-fit:cover;">
+            {% endif %}
+            <small class="text-muted">{{ item.creator }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% else %}
+  <div class="alert alert-info">No merch items yet &mdash; check back soon!</div>
+  {% endif %}
+</div>
+
+<script>
+(function() {
+  const buttons = document.querySelectorAll('#merch-filters button');
+  const cards = document.querySelectorAll('.merch-card-wrapper');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      buttons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      const filter = this.dataset.creator;
+      cards.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.creator === filter) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>

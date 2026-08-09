@@ -1,0 +1,76 @@
+---
+layout: default
+---
+{% assign item = page %}
+
+<div class="container mt-4 mb-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/merch/">Merch</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ item.title }}</li>
+    </ol>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      {% if item.header_img %}
+      <img src="{{ item.header_img | relative_url }}" class="img-fluid rounded shadow-sm mb-3" alt="{{ item.title }}" style="width:100%; max-height:420px; object-fit:cover;">
+      {% endif %}
+      {% if item.images %}
+      <div class="row no-gutters">
+        {% for img in item.images %}
+        <div class="col-4 p-1">
+          <a href="{{ img | relative_url }}" target="_blank">
+            <img src="{{ img | relative_url }}" class="img-fluid rounded" alt="{{ item.title }} {{ forloop.index }}" style="height:90px; width:100%; object-fit:cover;">
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="col-md-6">
+      <h1 class="mb-1">{{ item.title }}</h1>
+      {% if item.subtitle %}<p class="text-muted lead mb-3">{{ item.subtitle }}</p>{% endif %}
+
+      <div class="d-flex align-items-center mb-3">
+        {% if item.creator_avatar %}
+        <img src="{{ item.creator_avatar | relative_url }}" class="rounded-circle mr-3" width="48" height="48" alt="{{ item.creator }}" style="object-fit:cover;">
+        {% endif %}
+        <div>
+          <small class="text-muted d-block">Created by</small>
+          <strong>{{ item.creator }}</strong>
+          {% if item.creator_location %}<small class="text-muted ml-1">- {{ item.creator_location }}</small>{% endif %}
+        </div>
+      </div>
+
+      <div class="mb-3">
+        {% if item.item_type %}<span class="badge badge-info mr-1">{{ item.item_type }}</span>{% endif %}
+        {% if item.available %}<span class="badge badge-success">Available</span>
+        {% else %}<span class="badge badge-secondary">Not Currently Available</span>{% endif %}
+      </div>
+
+      <div class="merch-description mb-4">{{ content }}</div>
+
+      {% if item.available %}
+      <div class="alert alert-info">
+        <h5 class="alert-heading">Interested?</h5>
+        <p class="mb-0">{{ item.contact }}</p>
+      </div>
+      {% else %}
+      <div class="alert alert-secondary">
+        <h5 class="alert-heading">Not Currently Available</h5>
+        <p class="mb-0">Reach out to <strong>{{ item.creator }}</strong> for future availability.</p>
+      </div>
+      {% endif %}
+
+      {% if item.tags %}
+      <div class="mt-3">
+        {% for tag in item.tags %}
+        <a href="{{ site.cloudtag_url }}/{{ tag | slugify }}" class="badge badge-primary mr-1">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
