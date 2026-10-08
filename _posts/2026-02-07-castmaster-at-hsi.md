@@ -114,14 +114,7 @@ However! I wouldn’t do this one so close to a kitchen next time. Everyone exce
 
 The video doesn’t do it justice, but I remember and am still wincing watching Paul use a damn paring knife to open an icy box.
 
-<div class="ratio ratio-16x9 mx-auto" style="max-width: 640px;">
-    <iframe src="https://www.youtube.com/embed/zQbPDyv2xkI"
-            title="The Icebox — Castmaster at the Hazardserious Invitational 2026"
-            frameborder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen loading="lazy"></iframe>
-</div>
+{% include video-embed.html id="zQbPDyv2xkI" title="The Icebox — Castmaster at the Hazardserious Invitational 2026" %}
 
 Paul extracted the Moss Monster from his deckbox just under the three-minute mark at 2:59. Chad had Hornet Cobra, John had Vampire Bats, and Eric, using a big honking kitchen knife, finally got to reveal Azure Drake.
 
