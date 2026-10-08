@@ -520,13 +520,44 @@ Portrait:
    the repo. Note `.git` will not shrink either way, since history already contains them,
    and jsDelivr will not serve files this large, so YouTube is the only serving path.
 
-#### Steps
+#### Steps — COMPLETED 2026-10-08
 
-1. Upload the three clips; record the video IDs.
-2. Replace each `<video>` block with the matching iframe wrapper above.
-3. `git mv` the three MP4s into `assets/originals/` (or delete, per decision 4).
-4. Rebuild and confirm the published site drops to roughly **282 MB**.
-5. Check both posts render correctly on mobile, where the portrait embeds matter most.
+All three clips are on the **Full Warning** channel (`@FullWarningPodcast`), embedding
+confirmed enabled on each via the oEmbed endpoint before any markup was changed.
+
+| Clip | Video ID | Embed |
+|---|---|---|
+| The Icebox | `zQbPDyv2xkI` | `ratio-16x9`, 640px max width |
+| Sort of a Task | `Q4GFRmsJzK8` | 9:16 wrapper, 360px max width |
+| Paint Your Combo | `veUMvBcHlQE` | 9:16 wrapper, 360px max width |
+
+Source files moved to `assets/originals/` via `git mv` (decision 4), so they stay archived
+in the repo but out of the published site. All embeds use `loading="lazy"`.
+
+**Verified by a real build:**
+
+| Check | Result |
+|---|---|
+| Published `_site` | **282 MB** |
+| MP4 files in `_site` | 0 |
+| Originals leaked into `_site` | 0 |
+| Pages built | 43 (unchanged) |
+| YouTube embeds rendered | 3 across 2 pages |
+| Remaining `<video>` tags | 0 |
+
+Largest published files are now the exempt headers and decklist photos (4.3 MB, 3.8 MB,
+2.7 MB) — exactly as designed.
+
+Remaining: check both posts on mobile, where the portrait embeds matter most.
+
+### Phase 1 result
+
+| | Start | Now |
+|---|---|---|
+| Published site | **905 MB** | **282 MB** |
+| Headroom under the 1 GB cap | 8% | **72%** |
+
+Phase 1 is complete. The size blocker is resolved.
 
 ### Phase 2 — Validation on staging
 1. Deploy the slimmed site to staging.
