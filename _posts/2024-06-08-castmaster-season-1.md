@@ -118,7 +118,14 @@ I recorded these on my phone and did checkmarks for each rule category. I then c
 
 In the end, “The Mental Misteppers’” Dan Nelson did very well. He was both very accurate and very fast. Like, standout above all the rest—an easy 10 points. Others mostly got graded on time with a few misses.
 
-<video controls src="../assets/images/2024/06/08/8-n4xc8Fk.mp4" title="Sort Video"></video>
+<div class="ratio mx-auto" style="--bs-aspect-ratio: 177.78%; max-width: 360px;">
+    <iframe src="https://www.youtube.com/embed/Q4GFRmsJzK8"
+            title="Sort of a Task — Castmaster Season 1"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen loading="lazy"></iframe>
+</div>
 
 I liked this task, but scores felt muddy in the middle. Thank goodness there were some obvious outliers, and the average teams were all average and I could just score based on time. I thought this was fun. I wish eyewear had been more of a factor, but it was fun anyway.
 
