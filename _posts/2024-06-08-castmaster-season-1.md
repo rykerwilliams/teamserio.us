@@ -163,7 +163,14 @@ This was my favorite task of the day, and I think everyone else enjoyed it too. 
 
     You have 7 minutes. Your time starts now.
 
-<video controls src="../assets/images/2024/06/08/5-wyoZN7z.mp4" title="Jimmy and JR Paint"></video>
+<div class="ratio mx-auto" style="--bs-aspect-ratio: 177.78%; max-width: 360px;">
+    <iframe src="https://www.youtube.com/embed/veUMvBcHlQE"
+            title="Paint Your Combo — Castmaster Season 1"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen loading="lazy"></iframe>
+</div>
 
 Players were offered a selection of poster paint colors and a paper-plate mixing palette to work with, but the two brushes were attached to one another by a 4-foot dowel. Teams could try to paint simultaneously or paint one half, then the other half. All the information is in the task. They were not offered rinsing water. Initially they were given 9 minutes, but after the first three teams didn’t even approach the time, I shortened it to 7 to increase the pressure slightly.
 
