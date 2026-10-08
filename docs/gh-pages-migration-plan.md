@@ -247,7 +247,86 @@ plus 7 `image-gallery*.html` includes.
 **Recommendation: do not bundle this with the hosting move.** Migrate on 1.1.0 (a known-good
 build), then upgrade the theme as its own PR on `dev`. One variable at a time.
 
-### 5.4 Dev environment needs a new home — DECISION REQUIRED
+### 5.4 Dev environment — DECIDED: retire it
+
+**Decision 2026-10-08: the `dev` site is retired.** The `dev` *branch* stays for work; it
+just stops being deployed.
+
+The reason dev existed was not previewing content — it was distrust of deployment, because
+"the deployed site was sometimes wonky". That had four identifiable causes:
+
+1. **Deploys were not atomic.** `rm -Rf /dev-www/**` followed by SCP leaves the site empty
+   in between, and half-deployed if the copy fails. (`**` also skips dotfiles, so stale
+   files lingered.) GitHub Pages swaps an artifact atomically.
+2. **The build was mutated after Jekyll ran.** "Clean Extensions for S3" renamed every
+   `.html` post-build, so what was served was not what was built — including `404.html`,
+   which broke the custom 404. That step is deleted.
+3. **Galleries rendered completely differently in production** — see 5.6 below. This was
+   almost certainly the main source of "wonky", and dev "fixed" it only by warming the
+   proxy's cache against the dev URL before prod saw it.
+4. **A build-time network call that fails silently.** `calendar_fetcher.rb` rescues HTTP
+   failures to `nil`, so a transient blip yields a *successful* build with the calendar
+   quietly missing. Still outstanding — see 5.7.
+
+Points 1 and 2 are fixed by the migration itself, and 3 by the thumbnail work below. What
+replaces dev: the `dev` branch for work, `bundle exec jekyll serve` for content preview, and
+a PR build check so a broken build cannot reach `main`.
+
+**This also removes config divergence entirely.** With no dev site, `url:` never differs
+between branches, so `.gitattributes`' `_config.yml merge=ours` and the promote workflow's
+`git checkout HEAD -- _config.yml` can both be deleted. That fixes a live bug: config edits
+made on `dev` are currently discarded on promote, which would have silently swallowed the
+`repository:` line chulapa 2.1.0 needs.
+
+### 5.6 Gallery thumbnails — DONE, weserv dependency removed
+
+All 7 `image-gallery*.html` includes used to branch on `jekyll.environment`:
+
+- **production:** `images.weserv.nl/?url=<site.url>/<path>&w=350&h=350&q=50&t=square` — a
+  third-party proxy that fetched each photo *from the live site*
+- **development:** the local file at a fixed `350x350` with `object-fit: cover`
+
+So a local build never showed what production showed — different source, and different
+layout too (fluid `width:100%` in prod versus fixed 350px locally). Worse, on a freshly
+published post the proxy would fetch before the image was reachable, cache the miss and
+serve `wsrv.nl/placeholder.svg` instead of photos. Galleries could also break with no repo
+change at all, purely because someone else's service was down.
+
+**Replaced with real thumbnails generated at build-prep time.** `script/prep-images.sh`
+gained a thumbnail pass that reads gallery folders straight out of the posts
+(`{% include image-gallery-*.html folder="..." %}`), so new galleries are picked up
+automatically, and generates two trees:
+
+| Tree | Used by | Form |
+|---|---|---|
+| `assets/thumbs/sq/` | the 6 square includes | 700x700 centre-cropped |
+| `assets/thumbs/fit/` | `image-gallery-no-caption-3-per-responsive` | 700px max edge, proportional |
+
+700px because galleries render at 19%, 24%, 32% and 49% container width — the 2-per layout
+is roughly 440 CSS px, so the old 350px proxy requests were already soft on any modern
+display. The includes now have **one code path**, with `loading="lazy"` added.
+
+**Verified by a real build:**
+
+| Check | Result |
+|---|---|
+| Thumbnails generated | 123 across 17 galleries, 11 MB |
+| All square thumbs exactly 700x700 | 120/120 |
+| `weserv` references in built HTML | **0** |
+| Thumbnails referenced / present on disk | 123 / 123 |
+| Gallery click-through links resolving | 123 / 123 |
+| Published site | 282 MB -> **293 MB** |
+
+11 MB for an exactly-reproducible local build, no third-party runtime dependency, and
+thumbnails roughly 100 KB each instead of full-size images proxied on demand.
+
+### 5.7 Remaining: the calendar fetch fails silently
+
+`_plugins/calendar_fetcher.rb` fetches a Google Calendar ICS at build time and rescues any
+failure to `nil`. The build still succeeds; the calendar just disappears. Either make the
+failure fatal, or cache the ICS in the repo and refresh it deliberately. Not addressed yet.
+
+### 5.4b (superseded) Dev environment options considered
 One repo serves exactly one Pages site, so `dev.teamserio.us` cannot coexist with prod in
 this repo. Options:
 - **(a) Second public repo** (`teamserio.us-dev`) with its own Pages site + `dev.teamserio.us`. Deploy via PAT. Closest to current behavior.

@@ -33,6 +33,10 @@ MAX=2560
 QUALITY=85
 # Some files in this library have malformed JFIF headers (e.g. negative density)
 # that make ImageMagick spin indefinitely. Hard-cap every invocation.
+THUMB_MAX=700
+THUMB_QUALITY=80
+THUMBS_DIR="assets/thumbs"
+SKIP_THUMBS=0
 IDENTIFY_TIMEOUT=15
 CONVERT_TIMEOUT=90
 IM_LIMITS=(-limit memory 512MiB -limit map 1GiB -limit time 60)
@@ -48,7 +52,10 @@ while [[ $# -gt 0 ]]; do
     --path)      SCOPE="${2%/}"; shift 2 ;;
     --max)       MAX="$2"; shift 2 ;;
     --quality)   QUALITY="$2"; shift 2 ;;
-    --no-docker) USE_DOCKER=0; shift ;;
+    --no-docker)   USE_DOCKER=0; shift ;;
+    --skip-thumbs) SKIP_THUMBS=1; shift ;;
+    --thumbs-only) THUMBS_ONLY=1; shift ;;
+    --thumb-max)   THUMB_MAX="$2"; shift 2 ;;
     -h|--help)   sed -n '2,30p' "$0" | sed 's/^# \?//'; exit 0 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
@@ -81,7 +88,10 @@ DOCKERFILE
       -v "$PWD:/repo" -w /repo \
       "$IMAGE" \
       bash script/prep-images.sh --no-docker --path "$SCOPE" --max "$MAX" \
-        --quality "$QUALITY" $([[ $APPLY -eq 1 ]] && echo --apply)
+        --quality "$QUALITY" --thumb-max "$THUMB_MAX" \
+        $([[ $APPLY -eq 1 ]] && echo --apply) \
+        $([[ $SKIP_THUMBS -eq 1 ]] && echo --skip-thumbs) \
+        $([[ ${THUMBS_ONLY:-0} -eq 1 ]] && echo --thumbs-only)
   fi
   echo "ERROR: needs ImageMagick (apt install imagemagick) or Docker." >&2
   exit 1
@@ -231,8 +241,10 @@ while IFS= read -r -d '' f; do
       "$bucket" "$long" "$(human $size_before)" "$(human $size_after)" "${f#assets/images/}"
     shown=$((shown+1))
   fi
-done < <(find "$SCOPE" -type f \
-           \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -print0 | sort -z)
+done < <(if [[ ${THUMBS_ONLY:-0} -eq 1 ]]; then :; else
+           find "$SCOPE" -type f \
+             \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -print0 | sort -z
+         fi)
 
 (( n_resize > 12 )) && printf "  ... and %d more\n" $((n_resize - 12))
 
@@ -257,4 +269,95 @@ if (( b_before > 0 )); then
   awk -v b="$b_before" -v a="$b_after" 'BEGIN{ printf "   (%.1f%% smaller)\n", 100-(a*100/b) }'
 else echo; fi
 [[ $APPLY -eq 0 ]] && echo && echo "Dry run — nothing written. Re-run with --apply to commit these changes to disk."
+
+# --------------------------------------------------------------- thumbnails
+# Galleries used to point at images.weserv.nl, a third-party proxy that fetched
+# each photo from the live site. That made production render differently from a
+# local build, broke when the proxy cached a miss on a freshly published post,
+# and put a hard runtime dependency on someone else's service. Generating real
+# thumbnails removes all three problems and is faster for visitors.
+#
+# Six of the includes crop to a square; image-gallery-no-caption-3-per-responsive
+# keeps the photo's own proportions. Hence two trees:
+#   assets/thumbs/sq/   square-cropped
+#   assets/thumbs/fit/  proportional
+
+n_thumb_new=0 n_thumb_skip=0 n_thumb_fail=0
+
+make_thumb() {                       # $1 = source, $2 = dest, $3 = square|fit
+  local src="$1" dest="$2" mode="$3" tmp
+  if [[ -f "$dest" && "$dest" -nt "$src" ]]; then
+    n_thumb_skip=$((n_thumb_skip+1)); return
+  fi
+  if [[ $APPLY -eq 0 ]]; then n_thumb_new=$((n_thumb_new+1)); return; fi
+
+  mkdir -p "$(dirname "$dest")"
+  tmp="$dest.tmp.jpg"
+  if [[ "$mode" == square ]]; then
+    timeout "$CONVERT_TIMEOUT" convert "${IM_LIMITS[@]}" "$src[0]" -auto-orient \
+      -resize "${THUMB_MAX}x${THUMB_MAX}^" -gravity center \
+      -extent "${THUMB_MAX}x${THUMB_MAX}" -strip -interlace Plane \
+      -quality "$THUMB_QUALITY" "$tmp" 2>/dev/null
+  else
+    timeout "$CONVERT_TIMEOUT" convert "${IM_LIMITS[@]}" "$src[0]" -auto-orient \
+      -resize "${THUMB_MAX}x${THUMB_MAX}>" -strip -interlace Plane \
+      -quality "$THUMB_QUALITY" "$tmp" 2>/dev/null
+  fi
+
+  if [[ -s "$tmp" ]]; then
+    mv "$tmp" "$dest"; n_thumb_new=$((n_thumb_new+1)); return
+  fi
+  rm -f "$tmp"
+
+  if command -v vipsthumbnail >/dev/null 2>&1; then
+    local vopt=(--size "${THUMB_MAX}x${THUMB_MAX}")
+    [[ "$mode" == square ]] && vopt+=(--smartcrop centre)
+    if timeout "$CONVERT_TIMEOUT" vipsthumbnail "$src" "${vopt[@]}" \
+         -o "$tmp[Q=$THUMB_QUALITY,strip]" >/dev/null 2>&1 && [[ -s "$tmp" ]]; then
+      mv "$tmp" "$dest"; n_thumb_new=$((n_thumb_new+1)); n_vips=$((n_vips+1)); return
+    fi
+    rm -f "$tmp"
+  fi
+  echo "  !! thumbnail failed: ${src#assets/images/}"; n_thumb_fail=$((n_thumb_fail+1))
+}
+
+thumbs_for_folder() {                # $1 = /assets/images/... prefix, $2 = mode
+  local prefix="${1#/}" mode="$2" sub
+  [[ -d "$prefix" ]] || return 0
+  sub=$([[ "$mode" == square ]] && echo sq || echo fit)
+  while IFS= read -r -d '' src; do
+    make_thumb "$src" "$THUMBS_DIR/$sub/${src#assets/images/}" "$mode"
+  done < <(find "$prefix" -type f \
+             \( -iname '*.jpg' -o -iname '*.jpeg' \) -print0 | sort -z)
+}
+
+if [[ $SKIP_THUMBS -eq 0 ]]; then
+  echo
+  echo "Thumbnails (${THUMB_MAX}px, quality ${THUMB_QUALITY}) -> $THUMBS_DIR/"
+
+  # Gallery folders are declared in the posts themselves, so new galleries are
+  # picked up automatically. The include name tells us which crop to use.
+  n_gal=0
+  while IFS=$'\t' read -r inc folder; do
+    [[ -z "${folder:-}" ]] && continue
+    n_gal=$((n_gal+1))
+    if [[ "$inc" == *responsive* ]]; then
+      thumbs_for_folder "$folder" fit
+    else
+      thumbs_for_folder "$folder" square
+    fi
+  done < <(grep -rhoE '\{%[[:space:]]*include[[:space:]]+image-gallery[a-zA-Z0-9.-]*[^%]*folder="[^"]+"' \
+             _posts _pages index.md 2>/dev/null \
+           | sed -E 's/.*include[[:space:]]+(image-gallery[a-zA-Z0-9.-]*).*folder="([^"]+)".*/\1\t\2/' \
+           | sort -u)
+
+  printf "  galleries found       %4d\n" "$n_gal"
+  printf "  thumbnails %-10s %4d\n" "$([[ $APPLY -eq 1 ]] && echo written || echo 'to write')" "$n_thumb_new"
+  printf "  already current       %4d\n" "$n_thumb_skip"
+  (( n_thumb_fail > 0 )) && printf "  failed                %4d\n" "$n_thumb_fail"
+  if [[ $APPLY -eq 1 && -d "$THUMBS_DIR" ]]; then
+    printf "  thumbnail tree size   %s\n" "$(du -sh "$THUMBS_DIR" 2>/dev/null | cut -f1)"
+  fi
+fi
+
 exit 0
