@@ -638,6 +638,43 @@ Remaining: check both posts on mobile, where the portrait embeds matter most.
 
 Phase 1 is complete. The size blocker is resolved.
 
+### Phase 2a — Workflows — DONE 2026-10-08
+
+**Added `.github/workflows/deploy-pages.yml`** — builds on push to `main` and publishes via
+`upload-pages-artifact` + `deploy-pages`. No SSH, no SCP, no secrets, no `rm -Rf`, and
+critically **no "Clean Extensions" step**. Includes two gates:
+
+- **Size guard:** fails the build over 900 MB, warns over 500 MB. The 1 GB Pages limit is a
+  hard failure at publish time otherwise, which is a bad moment to discover it.
+- **Gallery integrity:** builds, then verifies every `/assets/thumbs/` src and every
+  full-size click-through href resolves to a real file (URL-decoded, so names with spaces
+  are handled). Catches the obvious regression of adding photos without running
+  `script/prep-images.sh`.
+
+**Added `.github/workflows/build-check.yml`** — same build and same checks on PRs and on
+every branch except `main`, publishing nothing. With the dev site retired this is what
+stops a broken build reaching `main`. Also warns on any image over 3 MB.
+
+**Deleted `.github/workflows/jekyll-build-and-deploy.yml`** — the dev-site deploy.
+
+**Deliberately kept `.github/workflows/jekyll-build-and-deploy-prod.yml`.** Until DNS moves,
+`teamserio.us` is still served by the AWS box, so main must keep deploying there. Running
+both means the two targets stay in sync and rollback stays a pure DNS change. Delete it in
+Phase 4.
+
+#### Two things deliberately NOT done yet
+
+**1. No `CNAME` file committed.** Adding it makes GitHub Pages claim `teamserio.us`
+immediately, and the `rykerwilliams.github.io/teamserio.us` URL then redirects to a domain
+still served by AWS — which makes staging validation impossible. Add it at cutover, or let
+repository Settings create it when the custom domain is set.
+
+**2. The config-divergence machinery is still in place.** Removing `_config.yml merge=ours`
+from `.gitattributes` and `git checkout HEAD -- _config.yml` from the promote workflow is
+correct *after* the `dev` branch's `_config.yml` is reconciled to the production `url:`.
+Doing it before would let the next promote push `url: https://dev.teamserio.us` into
+production. Order: align `dev`'s config first, then remove both guards.
+
 ### Phase 2 — Validation on staging
 1. Deploy the slimmed site to staging.
 2. Verify (extensionless resolution is already proven, but confirm for this site): post
@@ -648,7 +685,9 @@ Phase 1 is complete. The size blocker is resolved.
 3. Crawl staging for broken links and diff the URL inventory against the live site.
 
 ### Phase 3 — Cutover
-1. Set custom domain `teamserio.us` in repo settings; pull the generated `CNAME`.
+1. Enable Pages (Source: GitHub Actions) and confirm the site builds and serves on
+   `rykerwilliams.github.io/teamserio.us` **before** touching the domain.
+2. Set custom domain `teamserio.us` in repo settings; pull the generated `CNAME`.
 2. Lower TTL if needed (already 30 s) and update Namecheap A/AAAA records.
 3. Watch propagation; verify HTTPS; enable **Enforce HTTPS** once available.
 4. **Leave the AWS box running and untouched** for at least a week.

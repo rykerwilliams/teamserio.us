@@ -1,0 +1,76 @@
+name: Build Check
+
+# With the dev site retired, this is what stops a broken build reaching main.
+# It builds exactly as the deploy workflow does, runs the same checks, and
+# publishes nothing. Preview content locally with `bundle exec jekyll serve`.
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.4'
+          bundler-cache: true
+
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bundle exec jekyll build
+
+      - name: Check site size against the Pages limit
+        run: |
+          bytes=$(du -sb _site | cut -f1)
+          mb=$(( bytes / 1024 / 1024 ))
+          echo "Published site: ${mb} MB"
+          if [ "$mb" -gt 900 ]; then
+            echo "::error::Site is ${mb} MB. GitHub Pages hard-limits published sites to 1 GB."
+            exit 1
+          elif [ "$mb" -gt 500 ]; then
+            echo "::warning::Site is ${mb} MB, over half the 1 GB Pages limit."
+          fi
+
+      - name: Check gallery images and thumbnails resolve
+        run: |
+          python3 - <<'PY'
+          import re, os, glob, sys, urllib.parse
+          refs = set()
+          for h in glob.glob("_site/**/*.html", recursive=True):
+              html = open(h, encoding="utf-8", errors="ignore").read()
+              refs |= set(re.findall(r'src="(/assets/thumbs/[^"]+)"', html))
+              refs |= set(re.findall(r'href="(/assets/images/[^"]+\.(?:jpg|jpeg|JPG|JPEG))"', html))
+          missing = [r for r in refs if not os.path.isfile("_site" + urllib.parse.unquote(r))]
+          print(f"checked {len(refs)} gallery URLs, {len(missing)} missing")
+          for m in sorted(missing)[:20]:
+              print(f"::error::missing file for {m}")
+          if missing:
+              print("::error::Gallery assets are missing. Run: script/prep-images.sh --apply")
+              sys.exit(1)
+          PY
+
+      - name: Warn if any image exceeds the resize cap
+        run: |
+          if [ -x script/prep-images.sh ]; then
+            oversized=$(find assets/images -type f \( -iname '*.jpg' -o -iname '*.jpeg' \) \
+                        -size +3M | head -20)
+            if [ -n "$oversized" ]; then
+              echo "::warning::Images over 3 MB found - run script/prep-images.sh --apply"
+              echo "$oversized"
+            fi
+          fi
