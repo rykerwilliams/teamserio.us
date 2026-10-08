@@ -437,6 +437,97 @@ to 24 h; the option is greyed out until then).
 6. **Gate: published artifact must be ≤ 400 MB** (projection is ~255 MB). Add a CI check
    that fails the build if `_site` exceeds it, so this cannot silently recur.
 
+### Phase 1b — Video rehome to YouTube
+
+The three MP4s are the largest published files by an order of magnitude and the only
+remaining bandwidth hazard.
+
+| File | Resolution | Duration | Bitrate | Size | Used in |
+|---|---|---|---|---|---|
+| `2026/02/07/1000010024.mp4` "The Icebox" | 1280x720 **landscape** | 3:11 | 3750 kb/s | **85.6 MB** | `_posts/2026-02-07-castmaster-at-hsi.md:119` |
+| `2024/06/08/8-n4xc8Fk.mp4` "Sort Video" | 720x1280 **portrait** | 1:00 | 5979 kb/s | **42.8 MB** | `_posts/2024-06-08-castmaster-season-1.md:121` |
+| `2024/06/08/5-wyoZN7z.mp4` "Jimmy and JR Paint" | 720x1280 **portrait** | 1:00 | 3538 kb/s | **25.3 MB** | `_posts/2024-06-08-castmaster-season-1.md:159` |
+
+All three are plain HTML5 `<video>` tags — no player library to replace.
+
+#### Why not just re-encode and keep self-hosting?
+
+Measured (H.264 CRF 24, preset medium, AAC 128k):
+
+| | Before | After | Saving |
+|---|---|---|---|
+| Sort Video | 42.8 MB | 26.6 MB | 38% |
+| Jimmy and JR Paint | 25.3 MB | 16.7 MB | 34% |
+| The Icebox | 85.6 MB | 61.2 MB | 29% |
+| **Total** | **153.7 MB** | **104.5 MB** | **32%** |
+
+Not enough. 104 MB still sits in the published site and, more importantly, still streams out
+of the 100 GB/month soft bandwidth allowance on every play. YouTube removes the storage
+*and* the bandwidth, and gives seeking, captions, mobile playback and adaptive quality for
+free. **Recommendation: YouTube.**
+
+#### Tooling: is there an MCP for this?
+
+**No.** Connected servers are Gmail, Google Drive, Google Calendar and Claude Docs — none
+covers YouTube, and there is no `yt-dlp` or `gcloud` on this box. Options:
+
+1. **Manual upload via YouTube Studio — recommended.** Three one-off files, roughly ten
+   minutes total. No setup, no credentials, no new trust boundary.
+2. **YouTube Data API v3 script.** Needs a Google Cloud project, an OAuth client and a
+   consent flow. Quota is not the constraint (the default allocation covers far more than
+   three uploads); the setup effort is. Worth building only if video becomes a per-event
+   habit, in which case it belongs in the same script as the image prep.
+3. **A third-party YouTube MCP server.** Community-maintained, and would need write access
+   to the YouTube account. For three one-off uploads the setup and trust cost exceeds the
+   benefit.
+
+Note that under every option the upload authenticates as the account owner, so this step
+needs a human either way.
+
+#### Shape matters for the embeds
+
+Two of the three are **720x1280 portrait, exactly 1:00** — i.e. YouTube Shorts shape. A
+standard 16:9 iframe would letterbox them into thin slivers. Use a 16:9 wrapper for The
+Icebox and a 9:16 wrapper with a sane max-width for the two portrait clips, or they will
+dominate the page on desktop.
+
+Landscape (Bootstrap 5, which Chulapa already ships):
+```html
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="The Icebox"
+          frameborder="0" allowfullscreen loading="lazy"></iframe>
+</div>
+```
+
+Portrait:
+```html
+<div class="ratio mx-auto" style="--bs-aspect-ratio: 177.78%; max-width: 360px;">
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Sort Video"
+          frameborder="0" allowfullscreen loading="lazy"></iframe>
+</div>
+```
+
+#### Decisions needed
+
+1. **Which channel** — `@FullWarningPodcast` or `@SeriousVintageCast`? These are Castmaster
+   event clips, not episodes, so neither is an obvious home.
+2. **Visibility** — **unlisted** is suggested: embeds work normally and the clips stay off
+   the channel's public feed, which suits incidental event footage. Public if you want them
+   discoverable.
+3. **Shorts or regular** for the two portrait 1:00 clips.
+4. **Keep the source files?** Suggested: `git mv` them into `assets/originals/` rather than
+   deleting. They leave the published site (that directory is excluded) but stay archived in
+   the repo. Note `.git` will not shrink either way, since history already contains them,
+   and jsDelivr will not serve files this large, so YouTube is the only serving path.
+
+#### Steps
+
+1. Upload the three clips; record the video IDs.
+2. Replace each `<video>` block with the matching iframe wrapper above.
+3. `git mv` the three MP4s into `assets/originals/` (or delete, per decision 4).
+4. Rebuild and confirm the published site drops to roughly **282 MB**.
+5. Check both posts render correctly on mobile, where the portrait embeds matter most.
+
 ### Phase 2 — Validation on staging
 1. Deploy the slimmed site to staging.
 2. Verify (extensionless resolution is already proven, but confirm for this site): post
