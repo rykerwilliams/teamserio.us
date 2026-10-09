@@ -1,7 +1,11 @@
 # Design: digitalmeh.net → Jekyll
 
 **Status:** proposal, not started
-**Goal:** move the last site off the AWS box, so `3.139.113.70` can finally be decommissioned
+**Goal:** move `digitalmeh.net` off WordPress onto Jekyll
+
+**Not the goal:** retiring the AWS box. It also runs cheertime production and staging, which
+deploy every 10 minutes — see [../impl/aws-box/inventory.md](../impl/aws-box/inventory.md).
+Migrating this site removes one tenant, not the host.
 
 ---
 
@@ -136,8 +140,8 @@ Without this the project does not achieve its actual goal.
    certificate stalls at `not yet requested` — see
    [../impl/gh-pages-migration/cutover-runbook.md](../impl/gh-pages-migration/cutover-runbook.md).
 3. Soak, with the WordPress site still running as rollback.
-4. **Then decommission the instance** — which also retires the frozen teamserio.us copy and
-   closes out the remaining AWS items on the roadmap.
+4. **Retire the WordPress containers** (`swag`, `digitalmehnet-mariadb-1`) and reclaim
+   their disk. The host itself stays — cheertime lives there.
 
 ---
 
