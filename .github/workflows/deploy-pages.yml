@@ -48,6 +48,14 @@ jobs:
       # and stripping the extension would also rename 404.html and break the
       # custom 404 page.
 
+      # Pages binds a custom domain from the deployed artifact, not only from the
+      # repository setting. The preview deployment did not serve its domain until
+      # an artifact carrying this file was published, and the production domain
+      # behaved the same way: no certificate was requested until the artifact
+      # declared it.
+      - name: Set custom domain
+        run: echo "teamserio.us" > _site/CNAME
+
       - name: Check site size against the Pages limit
         run: |
           bytes=$(du -sb _site | cut -f1)
