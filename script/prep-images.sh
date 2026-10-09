@@ -335,6 +335,15 @@ if [[ $SKIP_THUMBS -eq 0 ]]; then
   echo
   echo "Thumbnails (${THUMB_MAX}px, quality ${THUMB_QUALITY}) -> $THUMBS_DIR/"
 
+  # The square gallery includes carry width="700" height="700" so browsers can
+  # reserve space before the image loads. Those attributes are the thumbnail's
+  # real size, so changing the cap without updating them reintroduces layout
+  # shift - and worse, a wrong aspect ratio.
+  if [[ "$THUMB_MAX" != 700 ]]; then
+    echo "  !! --thumb-max is $THUMB_MAX, but _includes/image-gallery*.html declare 700x700."
+    echo "     Update the width/height attributes in those includes to match."
+  fi
+
   # Gallery folders are declared in the posts themselves, so new galleries are
   # picked up automatically. The include name tells us which crop to use.
   n_gal=0
