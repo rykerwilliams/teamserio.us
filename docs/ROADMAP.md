@@ -9,12 +9,21 @@ marked; see [impl/gh-pages-migration/](impl/gh-pages-migration/).
 
 These have ordering constraints or deadlines attached.
 
-- [ ] **The AWS box is NOT retired — it also hosts `digitalmeh.net`.** teamserio.us no
+- [ ] **Read the box inventory in the `aws-docker` repo before planning anything involving
+      that host.** It runs two production applications, not just WordPress:
+      cheertime deploys to it **every 10 minutes**. Decommissioning is not on the table.
+- [ ] **Reclaim disk — the box is at 82%** with a disk-alert cron running. ~1.8 G of stale
+      digitalmeh backups in `~`, plus the now-obsolete `teamserio.us-prod` and `-dev`
+      containers. Archive the backups off-box first; stopping those containers permanently
+      ends the DNS rollback to AWS.
+- [ ] ~~**The AWS box is NOT retired — it also hosts `digitalmeh.net`.**~~ teamserio.us no
       longer depends on it, but the instance cannot be shut down. That site is
       **WordPress 6.5.13 on PHP 8.3.4**, served by the same openresty, with DNS at GoDaddy
       (`domaincontrol.com`) rather than Namecheap. Its A record points straight at
       `3.139.113.70`.
-- [ ] **Patch or replace `digitalmeh.net`.** WordPress 6.5.13 is well behind current, and
+- [ ] **Migrate `digitalmeh.net` off WordPress** — tracked in the **`digitalmeh.net` repo**,
+      not here. Phases 0–2 done; phase 3 awaits content decisions. This is what finally allows the instance to be decommissioned.
+- [ ] **Patch or replace `digitalmeh.net` in the meantime.** WordPress 6.5.13 is well behind current, and
       a public WordPress that stopped being maintained because the box was "about to be
       decommissioned" is worth a deliberate decision: update it, move it to managed hosting,
       or retire it. Dynamic PHP has a far larger attack surface than the static site that

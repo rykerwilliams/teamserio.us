@@ -6,6 +6,9 @@
 | [impl/](impl/) | How things were built — one folder per project |
 | [design/](design/) | Proposals, written before building |
 
+Work on other systems lives in their own repos: the **digitalmeh.net** WordPress migration
+in the `digitalmeh.net` repo, and the **AWS box inventory** in `aws-docker`.
+
 Nothing here is published: `docs/` is in the `exclude:` list in `_config.yml`.
 
 ## Layout
