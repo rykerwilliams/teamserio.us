@@ -137,6 +137,30 @@ so a broken build cannot reach `main`.
 - **Config edits on `dev` are silently discarded on promote** (`merge=ours` plus
   `git checkout HEAD -- _config.yml`). Not yet removed — see Open items.
 
+## Incident: calibreapp/image-actions destroyed the originals archive
+
+Opening the PR triggered `calibreapp/image-actions`, which recompressed 52 files and pushed
+the result as a bot commit. 32 of them were in `assets/originals/`:
+
+| | Before | After |
+|---|---|---|
+| Archived originals | **337.0 MB** | **72.6 MB** |
+| `DSC_5387.jpg` | 13.8 MB | 3.2 MB |
+
+About 78% of the archived full-resolution data, destroyed automatically, with no signal that
+anything was lost — the commit message simply read "Optimised images". It also took a
+further 5–8% off images `prep-images.sh` had already compressed at a chosen quality, and 76%
+off one PNG.
+
+Reverted, and the workflow deleted. It was redundant as well as harmful: once the prep
+script resizes and compresses deliberately, a second unaware compressor can only
+double-compress. Replaced by `prep-images.yml`, which runs the prep script in CI and commits
+the result, so image handling has one owner.
+
+**Worth remembering:** an automation that silently rewrites committed binaries is only safe
+while nothing in the repo treats those binaries as masters. Introducing `assets/originals/`
+changed that, and the existing workflow had no way to know.
+
 ## Verification performed
 
 - Built in a `ruby:3.2` container matching CI; 43 pages, build clean
