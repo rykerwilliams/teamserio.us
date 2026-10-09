@@ -31,15 +31,19 @@ still resolves to AWS, and `main` still deploys there. Everything below is on a 
 
 ## The main finding
 
-**The theme was never the blocker.** What failed was GitHub Pages' *native* Jekyll build,
-which ignores `_plugins/` and rejects non-allowlisted gem themes — and this site has five
-custom Ruby plugins (`calendar_fetcher`, `deckfile_tag`, `decklist_tag`, `grouptag`,
-`mtg_autocard`). That was a genuine hard stop.
+**The original decision to self-host was correct.** Chulapa is a non-allowlisted gem theme,
+and this site carries five custom Ruby plugins (`calendar_fetcher`, `deckfile_tag`,
+`decklist_tag`, `grouptag`, `mtg_autocard`). GitHub Pages' *native* Jekyll build ignores
+`_plugins/` and rejects themes outside its allowlist, so the site genuinely could not be
+published there. That was a hard stop, not a misdiagnosis.
 
-But Pages now deploys from a **GitHub Actions artifact**, which runs arbitrary Ruby with
-arbitrary plugins — and the repo *already* built that way in CI before any of this work,
-then SCP'd the result to AWS. The migration was unblocked the moment `actions/deploy-pages`
-existed, independent of the theme update.
+**What changed is the deployment mechanism, not the theme.** Pages now publishes a
+**GitHub Actions artifact**, which runs arbitrary Ruby with arbitrary plugins — and this
+repo already built that way in CI, then SCP'd the result to AWS. So the constraint lifted
+when Actions-based publishing arrived, and the theme update that prompted this attempt was
+not what made it possible. Worth knowing for the next "we tried that and it didn't work":
+check whether the thing that blocked you still exists, rather than whether the subject of
+the blockage has changed.
 
 **The actual blocker was size.** ~917 MB of assets against a 1 GB hard limit — about 8%
 headroom, which one event write-up would have consumed.
