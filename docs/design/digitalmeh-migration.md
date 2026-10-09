@@ -1,6 +1,6 @@
 # Design: digitalmeh.net → Jekyll
 
-**Status:** proposal, not started
+**Status:** phases 0 and 1 complete; phase 2 under way
 **Goal:** move `digitalmeh.net` off WordPress onto Jekyll
 
 **Not the goal:** retiring the AWS box. It also runs cheertime production and staging, which
@@ -44,7 +44,19 @@ a naive HTML→Markdown pass will mangle.
 
 ---
 
-## Phase 0 — Access *(blocking everything else)*
+## Phase 0 — Access — **DONE 2026-10-09**
+
+The key already syncs to phatmyth via Dropbox at
+`/files/data/nas/nas4-cloud/rajah/dropbox/awsKeys/rjPrivate`, so no key needed copying:
+
+```bash
+ssh -i /files/data/nas/nas4-cloud/rajah/dropbox/awsKeys/rjPrivate \
+    ubuntu@ec2-3-139-113-70.us-east-2.compute.amazonaws.com
+```
+
+Using the key in place rather than reading it keeps the private material out of any
+transcript. The original plan was to add a public key instead — kept below in case the
+Dropbox path ever goes away:
 
 1. Add phatmyth's public key to the box:
    ```
@@ -58,7 +70,38 @@ a naive HTML→Markdown pass will mangle.
 
 ---
 
-## Phase 1 — Full archive
+## Phase 1 — Full archive — **DONE 2026-10-09**
+
+Stored at **`/files/data/backups/digitalmeh.net/2026-10-09/`** on phatmyth. Streamed
+directly over SSH rather than staged on the box, because that disk is at 82%.
+
+| File | Size | Contents |
+|---|---|---|
+| `bitnami_wordpress.sql.gz` | 1.1 MB | full database |
+| `swag.tar.gz` | 1.1 GB | WordPress files + uploads, 12,619 entries |
+| `compose.tar.gz` | 595 B | compose definition |
+| `npm-proxy-hosts.tar.gz` | 1.2 KB | Nginx Proxy Manager routing |
+
+**Restore verified**, not just copied: the dump was loaded into a clean MariaDB container
+and every count matched the live site — 152 published posts, 5 pages, 321 attachments,
+499 tags, 20 categories, 25 tables.
+
+**3,880 files under `wp-content/uploads/`** against 321 media items, because WordPress keeps
+several resized variants per upload. Worth remembering when sizing the Jekyll site.
+
+> ⚠️ `swag.tar.gz` contains `wp-config.php` with database credentials and salts. It lives
+> outside any git repository and must stay there.
+
+### Discovered while verifying: the database container cannot be rebuilt
+
+`bitnami/mariadb:11.1.4` **no longer exists in the registry** — pulling it fails with
+`manifest unknown`. The running container survives only because its image is already on
+disk. If it is ever removed, or the host is rebuilt, the compose file will not come back up.
+The verification restore had to use the official `mariadb:11` image instead.
+
+That turns this migration from housekeeping into something with a deadline attached.
+
+### Original plan, for reference
 
 The point is a **restorable** archive, not merely a copy. An untested backup is a guess.
 
@@ -74,7 +117,55 @@ The point is a **restorable** archive, not merely a copy. An untested backup is 
 
 ---
 
-## Phase 2 — Inventory and decide
+## Phase 2 — Inventory and decide — **in progress**
+
+### What the database shows that the public API could not
+
+| | Published | Hidden |
+|---|---|---|
+| Posts | 152 | **84 draft**, 2 private |
+| Pages | 5 | 4 draft, 1 private |
+
+**84 drafts**, spanning 2006-05 to 2023-01 — but most are not really posts:
+
+- **17** have more than 500 characters of content
+- **16** are essentially empty (under 100 characters)
+- the remaining ~51 sit in between
+
+So the review set is realistically **17 substantive drafts**, not 84.
+
+### The tag problem, measured
+
+| Used | Tags |
+|---|---|
+| 0× | 17 |
+| **1×** | **390** |
+| 2× | 51 |
+| 3× | 18 |
+| 4×+ | 23 |
+
+**390 of 499 tags are used exactly once** — 78%. These are not a taxonomy, they are
+keywords typed once and never reused. Only about 16 tags are used five times or more:
+`mtg` (16), `windows` (12), `oldschool` (12), `vintage` (10), `ec` (9), `linux` (9),
+`ubuntu` (8), `combo` (8), `software` (8), `.net` (7), `gnu/linux` (6), `n85` (6).
+
+**The 20 categories are already a working taxonomy** and need far less surgery:
+`software` 55, `mtg` 37, `gnu/linux` 31, `media` 31, `hardware` 27, `web` 24, `sound` 22,
+`oldschool` 15, `vintage` 15, `ubuntu` 12, `image` 10, `gentoo` 9, `theState` 8, `apple` 8,
+`middle school` 6, `n85` 5, `food snob` 3, `sport` 2, `Uncategorized` 2, `middle school` 1.
+
+**Suggested direction:** carry the categories across as Jekyll categories mostly as-is, and
+rebuild tags from scratch from the ~16 that recur rather than migrating 499. Note the
+cleanup already visible above: `middle school` exists twice, and `mtg`, `oldschool`,
+`vintage`, `ubuntu`, `n85` and `gnu/linux` exist as *both* a category and a tag.
+
+### Still to do in this phase
+
+1. Traffic data from the access logs — which of the 152 posts anyone actually reads
+2. Media usage — which of the 3,880 upload files surviving posts reference
+3. The manifest: keep/drop, final slug, final tags, per post
+
+### Original plan, for reference
 
 Everything here is read-only analysis producing a written decision, not code.
 
