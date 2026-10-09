@@ -36,9 +36,15 @@ These have ordering constraints or deadlines attached.
       `_config.yml` (verified: it fails to build without it), deleting the now-obsolete
       `_plugins/grouptag.rb`, and renaming `search.lunr_maxwords` to `search.maxwords`.
       Check the custom includes and `_layouts/default-with-decklists.html` afterwards.
-- [ ] **Add `width`/`height` to gallery images.** They are `loading="lazy"` with no
-      dimensions, so they reserve no space and the page shifts as thumbnails load. Every
-      square thumbnail is 700×700, so this is a one-line change.
+- [x] ~~Add `width`/`height` to gallery images~~ — 2026-10-09. Measured with image bytes
+      blocked, so the browser could only use declared dimensions: the gallery went from
+      collapsing to 31px to reserving 332px. Applies to the six square includes; the
+      proportional `image-gallery-no-caption-3-per-responsive` is left alone because each
+      thumbnail has its own aspect ratio and Jekyll cannot read image dimensions without a
+      plugin. One gallery uses it.
+- [ ] *(optional)* Reserve space in the proportional gallery too, by having
+      `prep-images.sh` emit a thumbnail-dimension map into `_data/` for the include to read.
+      Only worth it if more galleries start using that layout.
 - [ ] Open external links with `target="_blank"`
 - [ ] Disqus comments
 - [ ] Two posts contain hardcoded `https://teamserio.us/posts/...` cross-links; make relative
