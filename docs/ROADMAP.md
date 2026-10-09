@@ -14,7 +14,10 @@ These have ordering constraints or deadlines attached.
       **WordPress 6.5.13 on PHP 8.3.4**, served by the same openresty, with DNS at GoDaddy
       (`domaincontrol.com`) rather than Namecheap. Its A record points straight at
       `3.139.113.70`.
-- [ ] **Patch or replace `digitalmeh.net`.** WordPress 6.5.13 is well behind current, and
+- [ ] **Migrate `digitalmeh.net` off WordPress** — designed in
+      [design/digitalmeh-migration.md](design/digitalmeh-migration.md). Blocked on SSH
+      access to the box. This is what finally allows the instance to be decommissioned.
+- [ ] **Patch or replace `digitalmeh.net` in the meantime.** WordPress 6.5.13 is well behind current, and
       a public WordPress that stopped being maintained because the box was "about to be
       decommissioned" is worth a deliberate decision: update it, move it to managed hosting,
       or retire it. Dynamic PHP has a far larger attack surface than the static site that
