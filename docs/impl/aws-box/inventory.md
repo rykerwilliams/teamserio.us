@@ -97,8 +97,12 @@ than deleted.
 
 ## Open questions
 
-- **`phase.teamserio.us`** — routed by NPM, has its own explicit A record (not the
-  wildcard), but HTTPS returns nothing. Dead, or misconfigured?
+- ~~**`phase.teamserio.us`**~~ — confirmed misconfigured (2026-10-09). Routed by NPM with
+  its own explicit A record, but serving nothing.
 - **`clevelandrocs.net`** — compose project present, nothing running. Retired?
-- **Ubuntu 20.04** reached end of standard support in April 2025. Separate decision from
-  everything above, but related to how long this host lives.
+- **Ubuntu 20.04** reached end of standard support in April 2025. This is the underlying
+  reason the host needs rebuilding, not a footnote — but one step at a time.
+- **`bitnami/mariadb:11.1.4` no longer exists in the registry.** The digitalmeh database
+  container cannot be recreated from its compose file; it survives only because the image
+  is already on disk. Discovered while verifying the archive. This gives the digitalmeh
+  migration a deadline it did not previously appear to have.
