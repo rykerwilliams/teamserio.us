@@ -9,6 +9,17 @@ module Jekyll
 
     def replace_cards(doc)
       return unless doc.content
+      # Only rewrite documents that render to HTML.
+      #
+      # site.pages includes every theme asset carrying front matter, so without
+      # this the card pattern also matches JavaScript. chulapa 2.x's search
+      # script contains arrow functions like
+      #     .map(([key, indices]) => ({ ... }))
+      # whose doubled parentheses look exactly like ((Card Name)), and an <a>
+      # tag injected mid-expression makes the file a syntax error - search dies
+      # with "Unexpected identifier 'href'". The 1.x search script happened not
+      # to contain that shape, so this stayed hidden.
+      return unless doc.respond_to?(:output_ext) && doc.output_ext == '.html'
 
       # Match <<Card Name>> OR ((Card Name))
       doc.content = doc.content.gsub(/(?:<<(.+?)>>|\(\((.+?)\)\))/) do

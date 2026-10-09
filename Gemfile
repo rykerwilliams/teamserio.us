@@ -33,4 +33,4 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # gem "jekyll-theme-basically-basic"
 # gem "bulma-clean-theme"
-gem "chulapa-jekyll"
+gem "chulapa-jekyll", "~> 2.1"
