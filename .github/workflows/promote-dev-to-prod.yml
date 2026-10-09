@@ -21,10 +21,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Merge dev into main (preserve _config.yml)
+      # _config.yml used to be reverted here, because dev carried
+      # url: https://dev.teamserio.us for the dev site. That site is retired and
+      # both branches now share one config, so discarding dev's version would
+      # silently throw away real config changes instead of protecting anything.
+      - name: Merge dev into main
         run: |
           git merge origin/dev --no-commit --no-ff
-          git checkout HEAD -- _config.yml
           git commit -m "Promote dev to production"
 
       - name: Push to main

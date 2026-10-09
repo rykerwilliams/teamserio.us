@@ -15,10 +15,10 @@ These have ordering constraints or deadlines attached.
 - [ ] **Dump the openresty config off the AWS box before decommissioning.** If it holds
       redirects or headers beyond extension handling, that is invisible from the repo and
       lost permanently.
-- [ ] **Align `dev`'s `_config.yml` to the production `url:`, *then* remove the guards** —
-      `_config.yml merge=ours` in `.gitattributes` and `git checkout HEAD -- _config.yml`
-      in `promote-dev-to-prod.yml`. In that order: reversing it pushes the dev URL into
-      production on the next promote. `dev` is also far behind `main` and needs reconciling.
+- [x] ~~Align `dev` and remove the config-divergence guards~~ — 2026-10-09. `dev` was 35
+      commits behind and held nothing worth keeping (its only unique files were two
+      decklists renamed to incorrect spellings), so it was reset to `main` rather than
+      merged. Recovery point if ever needed: `023bcef`. Both guards removed.
 - [ ] **Delete the `preview` DNS record** at Namecheap (the only preview leftover).
 - [ ] **Delete the five `DEPLOY_*` secrets** — `DEPLOY_HOST`, `DEPLOY_HOST_DIR`,
       `DEPLOY_HOST_PORT`, `DEPLOY_SSH_KEY`, `DEPLOY_USERNAME`. Unused now that the AWS
