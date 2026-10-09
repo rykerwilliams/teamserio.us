@@ -102,7 +102,8 @@ The five custom plugins — `calendar_fetcher.rb`, `deckfile_tag.rb`, `decklist_
 Actions they are ordinary code. `calendar_fetcher.rb` even makes a live HTTPS call to
 Google Calendar during build; verified working in the container (fetched 4,225 bytes).
 
-**So the theme update is not what unblocks this.** It was already unblocked the moment
+**The theme was a real blocker under the native build — that call was right at the time.**
+What lifted it is Actions-based publishing, not the theme update. It was unblocked the moment
 `actions/deploy-pages` existed. The theme upgrade is a separate, optional change.
 
 ---
