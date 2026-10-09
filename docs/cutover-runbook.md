@@ -113,10 +113,23 @@ separate upload step, no SSH, no secrets.
 ### Adding a new event write-up
 
 1. Drop photos in `assets/images/<year>/<month>/<day>/...` as you do now
-2. **Run `script/prep-images.sh --apply`** — resizes, archives DSLR originals, generates
-   gallery thumbnails. Forgetting this is caught by CI: the gallery-integrity check fails
-   the build if any thumbnail or click-through target is missing.
-3. Write the post, commit, merge to `main`
+2. Write the post, commit, push **to a branch** (not `main`)
+3. `prep-images.yml` runs automatically: it resizes, archives DSLR originals, generates
+   thumbnails and commits the result back to your branch. Pull before continuing.
+4. Merge to `main` — publishing is automatic
+
+You can still run `script/prep-images.sh --apply` locally if you prefer; the script is
+idempotent, so CI will simply find nothing to do.
+
+The workflow deliberately does not run on `main`, because a bot commit there would trigger a
+publish mid-flight. If unprepped images ever do reach `main`, the gallery-integrity check
+fails the build rather than publishing a page with missing thumbnails.
+
+> **`calibreapp/image-actions` was removed.** It recompressed images that `prep-images.sh`
+> had already compressed at a chosen quality — including `assets/originals/`, where it
+> destroyed about 78% of the archived full-resolution data (337 MB → 72.6 MB) as an
+> automatic bot commit. Do not reinstate it without excluding every path the prep script
+> manages.
 
 ### The guardrails that now exist
 
@@ -125,3 +138,4 @@ separate upload step, no SSH, no secrets.
 - **Calendar** — falls back to the committed snapshot and warns; fails the build only if
   there is no snapshot at all
 - **Oversized images** — warns on anything over 3 MB still in `assets/images/`
+- **Image prep** — runs automatically on branches and PRs, committing the result back
