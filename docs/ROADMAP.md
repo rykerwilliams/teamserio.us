@@ -22,8 +22,9 @@ These have ordering constraints or deadlines attached.
       (`domaincontrol.com`) rather than Namecheap. Its A record points straight at
       `3.139.113.70`.
 - [ ] **Migrate `digitalmeh.net` off WordPress** — designed in
-      [design/digitalmeh-migration.md](design/digitalmeh-migration.md). Blocked on SSH
-      access to the box. This is what finally allows the instance to be decommissioned.
+      [design/digitalmeh-migration.md](design/digitalmeh-migration.md). **Phases 0–2 done**
+      (access, verified archive, full inventory). Phase 3 is blocked on four content
+      decisions, not on tooling — see the end of that document. This is what finally allows the instance to be decommissioned.
 - [ ] **Patch or replace `digitalmeh.net` in the meantime.** WordPress 6.5.13 is well behind current, and
       a public WordPress that stopped being maintained because the box was "about to be
       decommissioned" is worth a deliberate decision: update it, move it to managed hosting,

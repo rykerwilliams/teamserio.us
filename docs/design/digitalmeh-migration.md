@@ -1,6 +1,6 @@
 # Design: digitalmeh.net → Jekyll
 
-**Status:** phases 0 and 1 complete; phase 2 under way
+**Status:** phases 0–2 complete; phase 3 awaiting decisions
 **Goal:** move `digitalmeh.net` off WordPress onto Jekyll
 
 **Not the goal:** retiring the AWS box. It also runs cheertime production and staging, which
@@ -117,7 +117,7 @@ The point is a **restorable** archive, not merely a copy. An untested backup is 
 
 ---
 
-## Phase 2 — Inventory and decide — **in progress**
+## Phase 2 — Inventory and decide — **DONE 2026-10-09**
 
 ### What the database shows that the public API could not
 
@@ -159,11 +159,68 @@ rebuild tags from scratch from the ~16 that recur rather than migrating 499. Not
 cleanup already visible above: `middle school` exists twice, and `mtg`, `oldschool`,
 `vintage`, `ubuntu`, `n85` and `gnu/linux` exist as *both* a category and a tag.
 
-### Still to do in this phase
+### Traffic, from the proxy access logs
 
-1. Traffic data from the access logs — which of the 152 posts anyone actually reads
-2. Media usage — which of the 3,880 upload files surviving posts reference
-3. The manifest: keep/drop, final slug, final tags, per post
+The log window (14 Sep – 9 Oct 2026, 347k lines) is dominated by abuse: **219,061 POST
+requests against 124,936 GET**, almost all of it `xmlrpc.php` spam from forged Jetpack user
+agents. Of the GETs, **30,672 are 404s**.
+
+Filtering bots, real reading traffic is modest and concentrated. **151 of 152 published
+posts saw at least one hit**, so there is no large tail of genuinely dead content — the
+published set is worth carrying across wholesale.
+
+#### A bug worth fixing during the move
+
+The **second most-requested page on the site returns 404**:
+
+```
+/2011/09/08/ajax-control-toolkit-with-sharepoint-2010/   404   (136 hits in the window)
+/ajax-control-toolkit-with-sharepoint-2010/              200
+```
+
+The permalink structure changed from dated to `/%postname%/` at some point and nothing
+redirects the old form. **504 requests in this window hit dated URLs that map to real
+posts.** Jekyll can fix this with `jekyll-redirect-from` — so the migration improves on
+WordPress rather than merely matching it.
+
+Also visible: **3,582 `502` responses**, meaning the backend intermittently fails.
+
+### Media — far smaller than it looks
+
+| | Files | Size | Disposition |
+|---|---|---|---|
+| **Referenced originals** | **200** | **215.6 MB** | migrate |
+| WordPress resized variants | 1,148 | 118.5 MB | regenerate instead |
+| Orphans, referenced nowhere | 2,496 | 644.5 MB | leave behind |
+| Total on disk | 3,844 | 978.6 MB | |
+
+Only **200 files** need to come across. Jekyll has no use for WordPress's resized variants —
+the same `prep-images.sh` approach generates its own. After resizing (the largest original
+is a 19.4 MB JPEG) the image budget should land comfortably under 60 MB.
+
+**11 referenced files are missing from disk** — broken images on the live site today,
+including several `OSPB19*Deck.jpg`. Worth deciding whether to find or drop them.
+
+### The manifest
+
+[digitalmeh/post-manifest.csv](digitalmeh/post-manifest.csv) — all 238 posts with a
+proposed action, traffic, size, taxonomy and comment count:
+
+| Action | Count | Basis |
+|---|---|---|
+| **keep** | 152 | every published post |
+| **review** | 19 | 17 substantive drafts + 2 private |
+| **drop** | 67 | draft stubs, most under 100 characters |
+
+Taxonomy proposal: [digitalmeh/taxonomy.md](digitalmeh/taxonomy.md) — keep the 20
+categories, rebuild tags from scratch, target 15–20 instead of 499.
+
+### Phase 2 is complete; decisions needed before phase 3
+
+1. Confirm **keep all 152 published** posts
+2. Walk the **19 review** rows — publish, migrate as drafts, or drop
+3. Approve or redraw the **taxonomy**
+4. Decide on the **11 missing images**
 
 ### Original plan, for reference
 
