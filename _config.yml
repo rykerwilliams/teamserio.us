@@ -1,5 +1,9 @@
 theme: chulapa-jekyll
 
+# Required by jekyll-github-metadata, a new dependency of chulapa 2.x.
+# Without it the build fails with "No repo name found".
+repository: rykerwilliams/teamserio.us
+
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -38,7 +42,7 @@ search:
   provider              : lunr #Select a provider for enable search: lunr, algolia, google
   label                 :  #default ["Search"] Text on navbar when search is enabled
   landing_page          :  #default ["/search"] Link on navbar
-  lunr_maxwords         :  #default [30] lunr only - May slow down your site build
+  maxwords              :  #default [30] lunr only - May slow down your site build
 
 comments:
   provider:         #Use 'disqus' https://disqus.com/ or 'giscus' https://giscus.app/

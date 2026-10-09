@@ -32,10 +32,11 @@ These have ordering constraints or deadlines attached.
 
 ## Backend / build
 
-- [ ] **Upgrade chulapa 1.1.0 → 2.1.0.** Needs `repository: rykerwilliams/teamserio.us` in
-      `_config.yml` (verified: it fails to build without it), deleting the now-obsolete
-      `_plugins/grouptag.rb`, and renaming `search.lunr_maxwords` to `search.maxwords`.
-      Check the custom includes and `_layouts/default-with-decklists.html` afterwards.
+- [x] ~~Upgrade chulapa 1.1.0 → 2.1.0~~ — 2026-10-09. Also uncovered a latent bug in
+      `_plugins/mtg_autocard.rb`, which rewrote `((Card Name))` across *every* page
+      including theme JavaScript assets; 2.x's search script contains
+      `.map(([key, indices]) => ({...}))`, whose doubled parens matched, breaking search
+      with a syntax error. The plugin is now scoped to HTML output.
 - [x] ~~Add `width`/`height` to gallery images~~ — 2026-10-09. Measured with image bytes
       blocked, so the browser could only use declared dimensions: the gallery went from
       collapsing to 31px to reserving 332px. Applies to the six square includes; the
