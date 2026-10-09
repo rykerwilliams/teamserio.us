@@ -172,6 +172,12 @@ plugins:
 
 exclude:
   - templates/
+  - docs/
+  - script/
+  # Full-resolution originals. Kept in git for archival and served for download
+  # via jsDelivr, but never published, so they cost nothing against the
+  # GitHub Pages 1 GB site limit. See docs/gh-pages-migration-plan.md
+  - assets/originals/
 
 include:
  - _pages

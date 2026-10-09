@@ -1,0 +1,25 @@
+{%- comment -%}
+Responsive YouTube embed.
+
+Deliberately framework-independent. The site currently loads Bootstrap 4.5,
+whose aspect-ratio helper is .embed-responsive; Bootstrap 5 renamed it to
+.ratio, and chulapa 2.x may switch versions. The padding-bottom technique
+below works regardless and cannot silently collapse if a class disappears.
+
+Usage:
+  {% include video-embed.html id="VIDEOID" title="Title" %}
+  {% include video-embed.html id="VIDEOID" title="Title" ratio="9x16" maxwidth="360px" %}
+{%- endcomment -%}
+{%- assign ratio = include.ratio | default: "16x9" -%}
+{%- if ratio == "9x16" -%}{%- assign pad = "177.78%" -%}{%- else -%}{%- assign pad = "56.25%" -%}{%- endif -%}
+{%- assign maxw = include.maxwidth | default: "640px" -%}
+<div style="max-width: {{ maxw }}; margin: 1rem auto;">
+  <div style="position: relative; padding-bottom: {{ pad }}; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/{{ include.id }}"
+            title="{{ include.title }}"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>

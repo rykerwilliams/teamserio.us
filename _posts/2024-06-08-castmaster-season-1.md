@@ -118,7 +118,7 @@ I recorded these on my phone and did checkmarks for each rule category. I then c
 
 In the end, “The Mental Misteppers’” Dan Nelson did very well. He was both very accurate and very fast. Like, standout above all the rest—an easy 10 points. Others mostly got graded on time with a few misses.
 
-<video controls src="../assets/images/2024/06/08/8-n4xc8Fk.mp4" title="Sort Video"></video>
+{% include video-embed.html id="Q4GFRmsJzK8" title="Sort of a Task — Castmaster Season 1" ratio="9x16" maxwidth="360px" %}
 
 I liked this task, but scores felt muddy in the middle. Thank goodness there were some obvious outliers, and the average teams were all average and I could just score based on time. I thought this was fun. I wish eyewear had been more of a factor, but it was fun anyway.
 
@@ -156,7 +156,7 @@ This was my favorite task of the day, and I think everyone else enjoyed it too. 
 
     You have 7 minutes. Your time starts now.
 
-<video controls src="../assets/images/2024/06/08/5-wyoZN7z.mp4" title="Jimmy and JR Paint"></video>
+{% include video-embed.html id="veUMvBcHlQE" title="Paint Your Combo — Castmaster Season 1" ratio="9x16" maxwidth="360px" %}
 
 Players were offered a selection of poster paint colors and a paper-plate mixing palette to work with, but the two brushes were attached to one another by a 4-foot dowel. Teams could try to paint simultaneously or paint one half, then the other half. All the information is in the task. They were not offered rinsing water. Initially they were given 9 minutes, but after the first three teams didn’t even approach the time, I shortened it to 7 to increase the pressure slightly.
 

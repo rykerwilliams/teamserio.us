@@ -1,0 +1,71 @@
+name: Prep Images
+
+# Runs script/prep-images.sh for you and commits the result, so adding a post
+# is just "drop photos in, write, commit".
+#
+# Resizes oversized photos, archives DSLR originals to assets/originals/, and
+# generates gallery thumbnails. Decklist photos and post headers are left at
+# full resolution by the script.
+#
+# Deliberately does NOT run on main: a bot commit there would trigger a publish
+# mid-flight. Prepare on a branch and merge. If unprepped images ever do reach
+# main, the gallery-integrity check in deploy-pages.yml fails the build rather
+# than publishing a page with missing thumbnails.
+#
+# This replaces calibreapp/image-actions, which recompressed images that this
+# script had already compressed deliberately - including the archived
+# originals, destroying about 78% of them.
+
+on:
+  pull_request:
+    paths: ['assets/images/**']
+  push:
+    branches-ignore: [main]
+    paths: ['assets/images/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Both the push and pull_request events fire for the same branch. Queue them
+  # rather than cancelling: a cancelled run reports as a failed check, and the
+  # second run finds a clean tree and exits anyway.
+  group: prep-images-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  prep:
+    # Without this the bot's own commit retriggers the workflow. The script is
+    # idempotent so it would settle anyway, but not on the first try.
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Install image tooling
+        run: |
+          sudo apt-get update -qq
+          # libvips is the fallback for files ImageMagick cannot read, such as
+          # the JPEG with a 65000 dots/cm JFIF density that hangs it outright.
+          sudo apt-get install -y -qq --no-install-recommends imagemagick libvips-tools
+
+      - name: Prepare images
+        run: ./script/prep-images.sh --apply --no-docker
+
+      - name: Commit any changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Images already prepared; nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A assets/
+          git status --short | head -20
+          git commit -m "Resize images and regenerate gallery thumbnails
+
+          Automated by .github/workflows/prep-images.yml."
+          git push
