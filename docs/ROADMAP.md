@@ -9,33 +9,28 @@ marked; see [impl/gh-pages-migration/](impl/gh-pages-migration/).
 
 These have ordering constraints or deadlines attached.
 
-- [ ] **Read the box inventory in the `aws-docker` repo before planning anything involving
-      that host.** It runs two production applications, not just WordPress:
-      cheertime deploys to it **every 10 minutes**. Decommissioning is not on the table.
-- [ ] **Reclaim disk — the box is at 82%** with a disk-alert cron running. ~1.8 G of stale
-      digitalmeh backups in `~`, plus the now-obsolete `teamserio.us-prod` and `-dev`
-      containers. Archive the backups off-box first; stopping those containers permanently
-      ends the DNS rollback to AWS.
-- [ ] ~~**The AWS box is NOT retired — it also hosts `digitalmeh.net`.**~~ teamserio.us no
-      longer depends on it, but the instance cannot be shut down. That site is
-      **WordPress 6.5.13 on PHP 8.3.4**, served by the same openresty, with DNS at GoDaddy
-      (`domaincontrol.com`) rather than Namecheap. Its A record points straight at
-      `3.139.113.70`.
+- [ ] **Read the box inventory in the private `aws-docker` repo before planning anything
+      involving that host.** It runs other production services; decommissioning is not on
+      the table.
+- [ ] **Retire the obsolete `teamserio.us-prod` and `-dev` containers on the old host** and
+      reclaim their space. Doing so permanently ends the DNS rollback to AWS, so make it a
+      decision rather than an accident. Host details are in the private `aws-docker` repo.
+- [ ] **The AWS box is not retired.** teamserio.us no longer depends on it, but other
+      tenants do and the instance cannot be shut down. Details are in the private
+      `aws-docker` repo rather than here — this repository is public, and a public
+      inventory of an unpatched host's software versions is free reconnaissance.
 - [ ] **Migrate `digitalmeh.net` off WordPress** — tracked in the **`digitalmeh.net` repo**,
       not here. Phases 0–2 done; phase 3 awaits content decisions. This is what finally allows the instance to be decommissioned.
-- [ ] **Patch or replace `digitalmeh.net` in the meantime.** WordPress 6.5.13 is well behind current, and
-      a public WordPress that stopped being maintained because the box was "about to be
-      decommissioned" is worth a deliberate decision: update it, move it to managed hosting,
-      or retire it. Dynamic PHP has a far larger attack surface than the static site that
-      just left this box.
+- [ ] **Patch or replace `digitalmeh.net` in the meantime.** Tracked in that repo. A
+      WordPress install that stopped being maintained because the box was "about to be
+      decommissioned" deserves a deliberate decision rather than drift.
 - [ ] **Decide what happens to the frozen teamserio.us copy on that box.** It stopped
       receiving deploys on 2026-10-09, so it holds a snapshot from that date. A DNS rollback
       still works but would serve that snapshot rather than anything published since — which
       gets staler and more misleading over time. Either refresh it deliberately, or delete
       it and accept that rollback is no longer an option.
-- [ ] **Dump the openresty config off the AWS box.** It now matters for two reasons: any
-      redirects or headers it held for teamserio.us are invisible from this repo, and it
-      also carries the vhost config for the WordPress site still running there.
+- [ ] **Dump the reverse-proxy config off the old host.** Any redirects or headers it held
+      for teamserio.us are invisible from this repo and would be lost.
 - [x] ~~Align `dev` and remove the config-divergence guards~~ — 2026-10-09. `dev` was 35
       commits behind and held nothing worth keeping (its only unique files were two
       decklists renamed to incorrect spellings), so it was reset to `main` rather than
@@ -48,8 +43,8 @@ These have ordering constraints or deadlines attached.
       and the `gh-pages-migration` branch deleted 2026-10-09
 - [x] ~~Delete `jekyll-build-and-deploy-prod.yml`~~ — deleted 2026-10-09
 - [ ] **Decide what `*.teamserio.us` should point at.** The wildcard still sends every
-      subdomain, including `dev`, to the AWS box. Verified safe to change: `digitalmeh.net`
-      is a separate domain with its own A record, so it does not depend on this wildcard.
+      subdomain, including `dev`, to the old host. Verified safe to change: the other
+      tenants use their own domains or explicit records, so nothing depends on the wildcard.
 - [ ] **Raise the apex TTL** back from 1 minute once the deployment is settled.
 
 ## Backend / build
