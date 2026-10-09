@@ -198,7 +198,11 @@ changed that, and the existing workflow had no way to know.
    space and the page shifts as thumbnails load. Every square thumb is 700×700 now, so this
    is a one-line fix.
 5. **Wildcard DNS** — `*.teamserio.us` points at the AWS box, so `dev.teamserio.us` and
-   every other subdomain keep resolving there. Revisit when decommissioning.
+   every other subdomain keep resolving there. Revisit carefully: the box also hosts an old
+   WordPress site, which may be reached through one of those names.
+5b. **The AWS box is not being retired.** It also hosts `digitalmeh.net`
+   (WordPress 6.5.13 / PHP 8.3.4, DNS at GoDaddy), so "decommission the instance" was never
+   the right end state — only teamserio.us moved off it.
 6. **Two hardcoded `https://teamserio.us` cross-links** in post bodies.
 7. **Dump the openresty config** before decommissioning — if it holds redirects or headers
    beyond extension handling, that is invisible from the repo and would be lost.
