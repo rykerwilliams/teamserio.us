@@ -9,12 +9,18 @@ marked; see [impl/gh-pages-migration/](impl/gh-pages-migration/).
 
 These have ordering constraints or deadlines attached.
 
-- [ ] **Decommission the AWS box.** It no longer receives deploys, so it holds a frozen
-      copy of the site as of 2026-10-09. A DNS rollback still works but would serve that
-      snapshot, not anything published since.
-- [ ] **Dump the openresty config off the AWS box before decommissioning.** If it holds
-      redirects or headers beyond extension handling, that is invisible from the repo and
-      lost permanently.
+- [ ] **The AWS box is NOT retired — it still hosts an old WordPress site.** teamserio.us
+      no longer depends on it, but the instance cannot simply be shut down. openresty is
+      serving multiple vhosts there (the default vhost answers "Default Site"), so work out
+      what else is on it before touching anything.
+- [ ] **Decide what happens to the frozen teamserio.us copy on that box.** It stopped
+      receiving deploys on 2026-10-09, so it holds a snapshot from that date. A DNS rollback
+      still works but would serve that snapshot rather than anything published since — which
+      gets staler and more misleading over time. Either refresh it deliberately, or delete
+      it and accept that rollback is no longer an option.
+- [ ] **Dump the openresty config off the AWS box.** It now matters for two reasons: any
+      redirects or headers it held for teamserio.us are invisible from this repo, and it
+      also carries the vhost config for the WordPress site still running there.
 - [x] ~~Align `dev` and remove the config-divergence guards~~ — 2026-10-09. `dev` was 35
       commits behind and held nothing worth keeping (its only unique files were two
       decklists renamed to incorrect spellings), so it was reset to `main` rather than
@@ -27,7 +33,9 @@ These have ordering constraints or deadlines attached.
       and the `gh-pages-migration` branch deleted 2026-10-09
 - [x] ~~Delete `jekyll-build-and-deploy-prod.yml`~~ — deleted 2026-10-09
 - [ ] **Decide what `*.teamserio.us` should point at.** The wildcard still sends every
-      subdomain, including `dev`, to the AWS box.
+      subdomain, including `dev`, to the AWS box. Check first whether the WordPress site is
+      reached through one of those subdomains — if so, the wildcard is load-bearing and
+      removing it would take that site offline.
 - [ ] **Raise the apex TTL** back from 1 minute once the deployment is settled.
 
 ## Backend / build
