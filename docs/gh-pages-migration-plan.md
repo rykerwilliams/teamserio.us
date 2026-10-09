@@ -675,6 +675,44 @@ correct *after* the `dev` branch's `_config.yml` is reconciled to the production
 Doing it before would let the next promote push `url: https://dev.teamserio.us` into
 production. Order: align `dev`'s config first, then remove both guards.
 
+### 5.8 Previews load production's CSS — fixed with a config overlay
+
+chulapa emits **absolute** URLs built from `site.url` for stylesheets, navbar links,
+canonical/og tags and the brand image:
+
+```html
+<link rel="stylesheet" id="maincss" href="https://teamserio.us/assets/css/main.css">
+<a class="nav-link" href="https://teamserio.us/posts/">
+```
+
+That is correct in production, where `site.url` *is* the site being served. But any preview
+or staging build then **loads its CSS from, and navigates to, the live production site** —
+roughly 1,918 absolute references across 43 pages. A local preview renders with
+production's stylesheet and bounces to teamserio.us on the first click, which makes it
+nearly useless as a check on changes, and would have quietly undermined staging validation
+on a `github.io` URL too.
+
+**Fixed by `_config_preview.yml`**, which sets `url: ""` so `absolute_url` emits
+root-relative paths:
+
+```bash
+bundle exec jekyll serve --config _config.yml,_config_preview.yml
+```
+
+Absolute references drop from ~1,918 to 2 (the only hardcoded ones, in post bodies).
+Verified in a browser: **0 requests to teamserio.us, 0 links to teamserio.us**, CSS served
+locally (1,781–3,317 rules applied), the `twitter-dim` skin rendering at
+`rgb(21, 32, 43)`, and 0 broken images.
+
+Never use this overlay for the production build.
+
+**Consequence for staging:** validating on `rykerwilliams.github.io/teamserio.us` is
+awkward regardless, because `baseurl` is empty and root-relative asset paths would 404 on a
+subpath. The cleaner options are (a) validate locally with the overlay, now that it is
+trustworthy, or (b) point a spare subdomain such as `preview.teamserio.us` at a Pages
+deployment — a real Pages host at a real domain with `baseurl` empty, costing one Namecheap
+CNAME and touching nothing in production.
+
 ### Phase 2 — Validation on staging
 1. Deploy the slimmed site to staging.
 2. Verify (extensionless resolution is already proven, but confirm for this site): post

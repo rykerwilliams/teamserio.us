@@ -1,0 +1,19 @@
+# Overlay for local previews and staging builds.
+#
+# chulapa emits absolute URLs from site.url for stylesheets, navbar links,
+# canonical/og tags and the brand image. That is correct in production, where
+# site.url IS the site being served - but it means a preview or staging build
+# loads its CSS from, and navigates to, the live production site. A local
+# preview would therefore render with production's stylesheet and silently
+# bounce you to teamserio.us on the first click.
+#
+# Setting url to empty makes absolute_url emit root-relative paths, so the
+# build is entirely self-contained.
+#
+# Usage:
+#   bundle exec jekyll serve --config _config.yml,_config_preview.yml
+#   bundle exec jekyll build --config _config.yml,_config_preview.yml
+#
+# Never use this for the production build.
+url: ""
+baseurl: ""
