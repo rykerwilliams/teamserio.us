@@ -765,6 +765,9 @@ Delete this workflow, `_config_staging.yml` and the `preview` DNS record.
 1. Enable Pages (Source: GitHub Actions) and confirm the site builds and serves on
    `rykerwilliams.github.io/teamserio.us` **before** touching the domain.
 2. Set custom domain `teamserio.us` in repo settings, **then re-run the deploy workflow**.
+   If `.https_certificate.state` stays `not yet requested` for more than ~5 minutes, **remove
+   the custom domain and add it back** — a fresh assignment is what triggers provisioning.
+   See the cutover runbook; this cost a 20 minute HTTPS outage on the real cutover.
    Setting the domain on an already-published site is not enough: the edge kept serving
    "Site not found" for `/` until a fresh deployment bound it. Observed on the preview
    deployment 2026-10-09.

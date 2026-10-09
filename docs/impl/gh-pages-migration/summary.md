@@ -2,7 +2,7 @@
 
 **Dates:** 2026-10-08 → 2026-10-09
 **Branch:** `gh-pages-migration`
-**Detail:** [gh-pages-migration-plan.md](gh-pages-migration-plan.md)
+**Detail:** [gh-pages-migration-plan.md](plan.md)
 
 ---
 

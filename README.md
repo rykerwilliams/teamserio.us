@@ -1,52 +1,33 @@
-A jekyll site for teamserio.us.
+A Jekyll site for [teamserio.us](https://teamserio.us), hosted on GitHub Pages.
 
-## Install Jeykll locally
+## Running it locally
 
-[Ubuntu Install](https://jekyllrb.com/docs/installation/ubuntu/)
+```bash
+bundle install
+bundle exec jekyll serve --config _config.yml,_config_preview.yml
+```
 
-## Debugging
+The `_config_preview.yml` overlay matters: without it the theme builds absolute URLs from
+`site.url`, so a local preview loads its CSS from the live site and navigates there on the
+first click.
 
-    bundle install
-    bundle exec jekyll serve
+## Publishing
 
-## Special markups from plugins
+**Push to `main` and it publishes.** `deploy-pages.yml` builds and deploys to GitHub Pages;
+there is no upload step.
 
-((Tezzeret, Cruel Captain)) due to the autocard plugin, renders as a link and you get a hover.
+Adding a post with photos: drop them in `assets/images/<year>/<month>/<day>/`, write the
+post, and commit **to a branch**. CI resizes them, archives DSLR originals and generates
+gallery thumbnails, committing the result back. Then merge.
 
-## TODO Roadmap
+You can run `script/prep-images.sh --apply` yourself if you prefer; it is idempotent.
 
-### Backend / Doc / Build
+## Special markup from plugins
 
-1. Document how the site is built and the architecture of deployement (dev,prod)
-1. Open links with target="_blank"
-1. Consolidate build scripts to one instead of different for each branch
-1. Build step to change config.yml before jeykll build
-1. Disqus comments
+`((Tezzeret, Cruel Captain))` renders as a Scryfall link with a hover preview, via the
+autocard plugin.
 
-### Cosmetic / Layout / CSS
-1. Social media links to show on articles
-1. 
+## Documentation
 
-### Posts Content
-
-1. media page for songs and videos
-1. decklists locally
-1. Bios collection - team serious CV pages
-
-- Favorite team serious member
-- Straight up: black licorice?
-- What magic card looks most appetizing to you?
-- You can ask Richard Garfield any question. What would it be
-- What percentage of your card collection is old enough to drive? Drink? Rent a car?
-- Favorite magic color, because it's corny AF.
-- what's your favorite fruit themed card?
-- Which magic card would look better with a pentagram on it?
-- What would your cumulative upkeep be if you had one?
-- Who else in your family plays magic? What does your mother or father think about your playing magic?
-- Sandwich punch? In?
-- How many hot dogs could you eat in under 10 mins?
-- Hour power or Edward 40 Hands?
-- Stadium mustard or ballpark mustard.
-- notable finishes?
-
-1. Old posts from tmd
+See [docs/](docs/) — [roadmap](docs/ROADMAP.md), [implementation records](docs/impl/),
+[designs](docs/design/).

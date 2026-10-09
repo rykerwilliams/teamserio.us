@@ -44,8 +44,34 @@ work", so only one variable is in play at a time.
 ## Step 3 — Point Pages at the apex (me)
 
 1. Set the Pages custom domain to `teamserio.us`
-2. **Re-run `deploy-pages.yml`** — required, see the note above
-3. `preview.teamserio.us` stops working at this point. Expected.
+2. **Re-run `deploy-pages.yml`** — the artifact binds the domain
+3. **Watch `.https_certificate.state`. If it stays `not yet requested` for more than ~5
+   minutes, remove the custom domain and add it back.** This is the step that matters, and
+   it cost a ~20 minute HTTPS outage to learn.
+
+   On the real cutover the certificate sat at `not yet requested` for 20 minutes with
+   nothing wrong: no CAA record, DNS correct at three of four public resolvers, GitHub's
+   edge already serving the apex over HTTP with a 200. Re-asserting the same domain did
+   nothing. Writing `CNAME` into the artifact did nothing. **Removing the domain and
+   re-adding it moved the state to `authorized` immediately, and the certificate was live
+   about 30 seconds later.** A fresh domain *assignment* is what triggers provisioning —
+   not a deploy, and not setting the same value again.
+
+   ```bash
+   gh api -X PUT repos/<owner>/<repo>/pages -f cname=""
+   gh api -X PUT repos/<owner>/<repo>/pages -f cname=teamserio.us
+   gh api repos/<owner>/<repo>/pages --jq '.https_certificate.state'
+   ```
+
+   Until the certificate exists, GitHub's edge presents its `*.github.io` certificate, so
+   every HTTPS request reaching Pages fails with a name-mismatch warning. Browsers try HTTPS
+   first, so this is a real outage for whatever share of traffic has already moved — not a
+   cosmetic warning.
+
+   **Rolling back does not help:** the certificate can only be issued while DNS points at
+   Pages, so reverting forfeits it and restarts the clock. The way out is forward.
+
+4. `preview.teamserio.us` stops working at this point. Expected.
 
 Pages is now ready to serve the apex, but DNS still sends visitors to AWS, so nothing
 changes for them yet.
