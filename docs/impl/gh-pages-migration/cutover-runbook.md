@@ -102,10 +102,14 @@ errors on requests that still land on AWS (that box has no cert for a Pages-issu
 Once the certificate issues — minutes in the preview's case, up to 24 h worst case — turn on
 **Enforce HTTPS** in Settings > Pages.
 
-## Step 6 — Soak, at least a week
+## Step 6 — Soak
 
-Leave the AWS box running and the AWS workflow in place. Both targets stay current, so
-**rollback is restoring one `A` record**.
+Originally: leave the AWS box and its workflow in place so both targets stay current.
+
+**Changed 2026-10-09** — the AWS workflow was removed once Pages was verified. The box still
+answers and still holds the site as of that date, so a DNS rollback works, but it serves a
+frozen snapshot rather than current content. Weigh that before rolling back after new posts
+have been published.
 
 ## Step 7 — Cleanup (only after the soak)
 

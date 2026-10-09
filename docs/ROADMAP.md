@@ -9,8 +9,9 @@ marked; see [impl/gh-pages-migration/](impl/gh-pages-migration/).
 
 These have ordering constraints or deadlines attached.
 
-- [ ] **Soak the Pages deployment for a week**, then decommission AWS. Until then `main`
-      deploys to both and rollback is restoring one A record.
+- [ ] **Decommission the AWS box.** It no longer receives deploys, so it holds a frozen
+      copy of the site as of 2026-10-09. A DNS rollback still works but would serve that
+      snapshot, not anything published since.
 - [ ] **Dump the openresty config off the AWS box before decommissioning.** If it holds
       redirects or headers beyond extension handling, that is invisible from the repo and
       lost permanently.
@@ -18,10 +19,13 @@ These have ordering constraints or deadlines attached.
       `_config.yml merge=ours` in `.gitattributes` and `git checkout HEAD -- _config.yml`
       in `promote-dev-to-prod.yml`. In that order: reversing it pushes the dev URL into
       production on the next promote. `dev` is also far behind `main` and needs reconciling.
-- [ ] **Remove the preview scaffolding:** `deploy-pages-preview.yml`, `_config_staging.yml`,
-      the `preview` DNS record, and the `gh-pages-migration` branch.
-- [ ] **Delete `jekyll-build-and-deploy-prod.yml` and the four `DEPLOY_*` secrets** once AWS
-      is retired.
+- [ ] **Delete the `preview` DNS record** at Namecheap (the only preview leftover).
+- [ ] **Delete the five `DEPLOY_*` secrets** — `DEPLOY_HOST`, `DEPLOY_HOST_DIR`,
+      `DEPLOY_HOST_PORT`, `DEPLOY_SSH_KEY`, `DEPLOY_USERNAME`. Unused now that the AWS
+      workflow is gone; an unused SSH key in a public repo's secrets is worth retiring.
+- [x] ~~Remove the preview scaffolding~~ — `deploy-pages-preview.yml`, `_config_staging.yml`
+      and the `gh-pages-migration` branch deleted 2026-10-09
+- [x] ~~Delete `jekyll-build-and-deploy-prod.yml`~~ — deleted 2026-10-09
 - [ ] **Decide what `*.teamserio.us` should point at.** The wildcard still sends every
       subdomain, including `dev`, to the AWS box.
 - [ ] **Raise the apex TTL** back from 1 minute once the deployment is settled.
