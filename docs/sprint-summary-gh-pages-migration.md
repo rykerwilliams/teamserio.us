@@ -153,7 +153,13 @@ so a broken build cannot reach `main`.
 
 ## Open items
 
-1. **`calendar_fetcher.rb` fails silently** — make it fatal, or cache the ICS in the repo.
+1. ~~**`calendar_fetcher.rb` fails silently**~~ — **FIXED 2026-10-09.** It was worse than
+   silent: a failed fetch produced a *successful* build whose calendar page told visitors
+   "Calendar data not available. Please rebuild the site." Loud on the live site, invisible
+   in CI. Now it fetches with timeouts, validates the response is a real VCALENDAR, falls
+   back to a committed snapshot at `_data/calendar.ics` (warning in GitHub Actions format
+   with the snapshot's age), and fails the build only when there is neither. Verified in all
+   three states.
 2. **Config divergence guards** — remove `merge=ours` and the promote workflow's
    `git checkout HEAD -- _config.yml`, but **only after** aligning `dev`'s `_config.yml` to
    the production `url:`. Removing them first would push the dev URL into production.
