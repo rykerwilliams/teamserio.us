@@ -28,8 +28,11 @@ permissions:
   contents: write
 
 concurrency:
+  # Both the push and pull_request events fire for the same branch. Queue them
+  # rather than cancelling: a cancelled run reports as a failed check, and the
+  # second run finds a clean tree and exits anyway.
   group: prep-images-${{ github.head_ref || github.ref_name }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   prep:
