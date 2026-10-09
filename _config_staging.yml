@@ -1,0 +1,9 @@
+# Overlay for the preview.teamserio.us deployment.
+#
+# chulapa builds absolute URLs from site.url, so a staging deploy must declare
+# its own hostname. Without this the preview site would load CSS from, and link
+# to, production - see docs/gh-pages-migration-plan.md section 5.8.
+#
+# Used only by .github/workflows/deploy-pages-preview.yml.
+url: "https://preview.teamserio.us"
+baseurl: ""

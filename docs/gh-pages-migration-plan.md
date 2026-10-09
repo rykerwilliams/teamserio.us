@@ -713,7 +713,46 @@ trustworthy, or (b) point a spare subdomain such as `preview.teamserio.us` at a 
 deployment — a real Pages host at a real domain with `baseurl` empty, costing one Namecheap
 CNAME and touching nothing in production.
 
-### Phase 2 — Validation on staging
+### Phase 2 — Validation on preview.teamserio.us — DECIDED
+
+Validate on a real GitHub Pages host at a real domain, with `baseurl` empty, before the apex
+moves. Production stays on AWS throughout. Uses the **same repository** — the repo's Pages
+site points at `preview.teamserio.us` during validation, then the custom domain changes to
+`teamserio.us` at cutover.
+
+**Added `_config_staging.yml`** (`url: https://preview.teamserio.us`) and
+**`.github/workflows/deploy-pages-preview.yml`**, which builds that branch with the overlay,
+writes `preview.teamserio.us` into `_site/CNAME` (in the artifact, so the production branch
+never carries a preview domain), and refuses to publish if the build still references
+production or exceeds the size limit.
+
+Verified locally before wiring it up: stylesheet and navbar resolve to
+`https://preview.teamserio.us/...`, 2,694 preview references, and only 2 production
+references — both hardcoded post cross-links in article bodies, not infrastructure.
+
+#### One-time setup
+
+1. Repo **Settings > Pages > Source: GitHub Actions**
+2. Namecheap: **CNAME `preview` -> `rykerwilliams.github.io`**
+3. Repo **Settings > Environments > github-pages**: allow the `gh-pages-migration` branch
+   to deploy (the environment may otherwise be restricted to the default branch)
+4. Push the branch; the workflow deploys on every push to it
+
+#### What to check once it is up
+
+Every post URL **without** `.html`; the custom 404 returning a real 404; `/all`, `/search`,
+`/posts/`, `/calendar`, `/tags`, `/categories`, `/full-warning`; `sitemap.xml`, `feed.xml`,
+`atom.xml`; lunr search; the Google Calendar block; decklist and `<<Card Name>>` autocard
+rendering; gallery thumbnails; all three YouTube embeds, **including on a phone** where the
+portrait Shorts wrappers matter most.
+
+Then diff the URL inventory against the live site before moving DNS.
+
+#### Teardown at cutover
+
+Delete this workflow, `_config_staging.yml` and the `preview` DNS record.
+
+### Phase 2 (superseded) — Validation on staging
 1. Deploy the slimmed site to staging.
 2. Verify (extensionless resolution is already proven, but confirm for this site): post
    URLs resolve **without** `.html`; the custom 404 returns 404 with the themed page; `/all`, `/search`, `/posts/`, `/calendar`, `/tags`,
