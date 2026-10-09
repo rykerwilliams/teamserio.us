@@ -9,10 +9,16 @@ marked; see [impl/gh-pages-migration/](impl/gh-pages-migration/).
 
 These have ordering constraints or deadlines attached.
 
-- [ ] **The AWS box is NOT retired — it still hosts an old WordPress site.** teamserio.us
-      no longer depends on it, but the instance cannot simply be shut down. openresty is
-      serving multiple vhosts there (the default vhost answers "Default Site"), so work out
-      what else is on it before touching anything.
+- [ ] **The AWS box is NOT retired — it also hosts `digitalmeh.net`.** teamserio.us no
+      longer depends on it, but the instance cannot be shut down. That site is
+      **WordPress 6.5.13 on PHP 8.3.4**, served by the same openresty, with DNS at GoDaddy
+      (`domaincontrol.com`) rather than Namecheap. Its A record points straight at
+      `3.139.113.70`.
+- [ ] **Patch or replace `digitalmeh.net`.** WordPress 6.5.13 is well behind current, and
+      a public WordPress that stopped being maintained because the box was "about to be
+      decommissioned" is worth a deliberate decision: update it, move it to managed hosting,
+      or retire it. Dynamic PHP has a far larger attack surface than the static site that
+      just left this box.
 - [ ] **Decide what happens to the frozen teamserio.us copy on that box.** It stopped
       receiving deploys on 2026-10-09, so it holds a snapshot from that date. A DNS rollback
       still works but would serve that snapshot rather than anything published since — which
@@ -33,9 +39,8 @@ These have ordering constraints or deadlines attached.
       and the `gh-pages-migration` branch deleted 2026-10-09
 - [x] ~~Delete `jekyll-build-and-deploy-prod.yml`~~ — deleted 2026-10-09
 - [ ] **Decide what `*.teamserio.us` should point at.** The wildcard still sends every
-      subdomain, including `dev`, to the AWS box. Check first whether the WordPress site is
-      reached through one of those subdomains — if so, the wildcard is load-bearing and
-      removing it would take that site offline.
+      subdomain, including `dev`, to the AWS box. Verified safe to change: `digitalmeh.net`
+      is a separate domain with its own A record, so it does not depend on this wildcard.
 - [ ] **Raise the apex TTL** back from 1 minute once the deployment is settled.
 
 ## Backend / build
