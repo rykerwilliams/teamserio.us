@@ -25,7 +25,11 @@ module Jekyll
       doc.content = doc.content.gsub(/(?:<<(.+?)>>|\(\((.+?)\)\))/) do
         card = Regexp.last_match(1) || Regexp.last_match(2)
         card.strip!
-        %Q{<a href="https://scryfall.com/card?q=#{CGI.escape(card)}" class="autocard" data-card="#{card}">#{card}</a>}
+        # /search?q= , not /card?q= . /card is not a Scryfall endpoint and
+        # returns 404; /search redirects straight to the card page when the name
+        # matches exactly. decklist.js has always used /search -- this brings the
+        # plugin in line with it.
+        %Q{<a href="https://scryfall.com/search?q=#{CGI.escape(card)}" class="autocard" data-card="#{card}">#{card}</a>}
       end
     end
   end
