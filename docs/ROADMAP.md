@@ -9,8 +9,8 @@ marked; see [impl/gh-pages-migration/](impl/gh-pages-migration/).
 
 These have ordering constraints or deadlines attached.
 
-- [ ] **Read [impl/aws-box/inventory.md](impl/aws-box/inventory.md) before planning anything
-      involving that host.** It runs two production applications, not just WordPress:
+- [ ] **Read the box inventory in the `aws-docker` repo before planning anything involving
+      that host.** It runs two production applications, not just WordPress:
       cheertime deploys to it **every 10 minutes**. Decommissioning is not on the table.
 - [ ] **Reclaim disk — the box is at 82%** with a disk-alert cron running. ~1.8 G of stale
       digitalmeh backups in `~`, plus the now-obsolete `teamserio.us-prod` and `-dev`
@@ -21,10 +21,8 @@ These have ordering constraints or deadlines attached.
       **WordPress 6.5.13 on PHP 8.3.4**, served by the same openresty, with DNS at GoDaddy
       (`domaincontrol.com`) rather than Namecheap. Its A record points straight at
       `3.139.113.70`.
-- [ ] **Migrate `digitalmeh.net` off WordPress** — designed in
-      [design/digitalmeh-migration.md](design/digitalmeh-migration.md). **Phases 0–2 done**
-      (access, verified archive, full inventory). Phase 3 is blocked on four content
-      decisions, not on tooling — see the end of that document. This is what finally allows the instance to be decommissioned.
+- [ ] **Migrate `digitalmeh.net` off WordPress** — tracked in the **`digitalmeh.net` repo**,
+      not here. Phases 0–2 done; phase 3 awaits content decisions. This is what finally allows the instance to be decommissioned.
 - [ ] **Patch or replace `digitalmeh.net` in the meantime.** WordPress 6.5.13 is well behind current, and
       a public WordPress that stopped being maintained because the box was "about to be
       decommissioned" is worth a deliberate decision: update it, move it to managed hosting,
