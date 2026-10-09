@@ -169,9 +169,36 @@ so a broken build cannot reach `main`.
 7. **Dump the openresty config** before decommissioning — if it holds redirects or headers
    beyond extension handling, that is invisible from the repo and would be lost.
 
+## Preview is live — 2026-10-09
+
+**https://preview.teamserio.us** is serving the migration branch from GitHub Pages, with
+HTTPS. Verified against the real host:
+
+| Check | Result |
+|---|---|
+| `/`, `/posts/`, `/all`, `/search`, `/tags`, `/categories`, `/404` | 200 |
+| `/calendar`, `/full-warning` | 301 (directory redirect, as in production) |
+| **Extensionless post URLs** (all three sampled) | **200** |
+| `sitemap.xml`, `feed.xml`, `atom.xml`, `rss.xml` | 200 |
+| CSS, gallery thumbnails | 200 |
+| Old self-hosted `.mp4` path | 404 (correctly gone) |
+| Nonexistent path | 404 (correct) |
+
+That settles the central bet: GitHub Pages resolves `/posts/foo` to `posts/foo.html` on
+this site, so removing the extension-stripping step preserves every live URL.
+
+**Ordering lesson for cutover: set the custom domain, then re-run the deployment.** Setting
+the domain on an already-published site left the edge serving "Site not found" for the root
+while other paths worked. A redeploy bound it immediately and the certificate issued within
+a couple of minutes. Expect the same sequence when switching the domain to `teamserio.us`.
+
+Also expect DNS flapping during propagation: the existing `*.teamserio.us` wildcard keeps
+answering from resolver caches until its TTL expires, and requests that land on AWS fail TLS
+because that box has no certificate for the new hostname. It settles on its own.
+
 ## Remaining steps
 
-1. Add Namecheap CNAME `preview` → `rykerwilliams.github.io` (overrides the wildcard)
+1. ~~Add Namecheap CNAME `preview`~~ — done 2026-10-09
 2. Validate on `preview.teamserio.us`, **including on a phone** for the portrait embeds
 3. Set the custom domain to `teamserio.us`, repoint the apex to the four Pages IPs, enable
    Enforce HTTPS

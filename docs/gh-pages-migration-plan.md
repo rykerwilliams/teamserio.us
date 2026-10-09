@@ -764,7 +764,10 @@ Delete this workflow, `_config_staging.yml` and the `preview` DNS record.
 ### Phase 3 — Cutover
 1. Enable Pages (Source: GitHub Actions) and confirm the site builds and serves on
    `rykerwilliams.github.io/teamserio.us` **before** touching the domain.
-2. Set custom domain `teamserio.us` in repo settings; pull the generated `CNAME`.
+2. Set custom domain `teamserio.us` in repo settings, **then re-run the deploy workflow**.
+   Setting the domain on an already-published site is not enough: the edge kept serving
+   "Site not found" for `/` until a fresh deployment bound it. Observed on the preview
+   deployment 2026-10-09.
 2. Lower TTL if needed (already 30 s) and update Namecheap A/AAAA records.
 3. Watch propagation; verify HTTPS; enable **Enforce HTTPS** once available.
 4. **Leave the AWS box running and untouched** for at least a week.
