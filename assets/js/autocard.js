@@ -7,18 +7,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.querySelectorAll("a.autocard").forEach(link => {
     let img;
-    link.addEventListener("mouseenter", async e => {
-      const cardName = link.dataset.card;
-      const resp = await fetch(`https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}`);
-      const data = await resp.json();
-      img = document.createElement("img");
-      img.src = data.image_uris.normal;
-      img.style.maxWidth = "350px";
-      img.style.border = "1px solid #333";
-      img.style.borderRadius = "8px";
-      tooltip.innerHTML = "";
-      tooltip.appendChild(img);
-      tooltip.style.display = "block";
+    link.addEventListener("mouseenter", function () {
+      // Cached, de-duplicated, and null rather than a thrown error when the card
+      // is double-faced or the name is not recognised.
+      window.TSCards.image(link.dataset.card, "exact").then(function (url) {
+        if (!url) return;
+        img = document.createElement("img");
+        img.src = url;
+        img.alt = "";
+        img.style.maxWidth = "350px";
+        img.style.border = "1px solid #333";
+        img.style.borderRadius = "8px";
+        tooltip.innerHTML = "";
+        tooltip.appendChild(img);
+        tooltip.style.display = "block";
+      });
     });
     link.addEventListener("mousemove", e => {
       tooltip.style.left = e.pageX + 15 + "px";
