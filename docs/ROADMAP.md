@@ -80,7 +80,18 @@ These have ordering constraints or deadlines attached.
 
 - [ ] Media page for songs and videos
 - [ ] Decklists locally
-- [ ] Old posts from TMD
+- [ ] **Port the TSI/TSO write-ups off The Mana Drain.** The forum reorganised and those
+      threads now 404; they survive only in the Internet Archive. **39 candidate reports,
+      deck techs and metagame pieces**, inventoried with snapshot links in
+      [tmd-archive-reports.md](tmd-archive-reports.md), rebuildable with
+      `script/tmd-inventory.py`. Several are other people's write-ups — Nat Moes
+      (`grandpabelcher`), Jimmy (`lhc`), `presidentskroob`, `thallidtosser` — so check the
+      author on each thread and credit them. **Coverage is incomplete**: only
+      `grandpabelcher` and `xxhazardxx` have archived `/topics` listings, so for everyone
+      else a write-up is only found if its title happens to match a keyword. Rajah's and
+      Nam Tran's own TMD handles are not identified yet; adding them would help more than
+      more keywords. Once a report lands here, the five `digitalmeh.net` posts linking
+      these threads should point at the new post instead of the archive snapshot.
 - [ ] **Bios collection** — Team Serious CV pages. Interview questions:
   - Favorite Team Serious member
   - Straight up: black licorice?
