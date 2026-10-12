@@ -78,6 +78,19 @@ window.TSCards = (function () {
         // /search returns a list; /named returns the card itself.
         var card = data.data ? data.data[0] : data;
         var got = pick(card);
+        if (got) return got;
+        // not:reprint can legitimately match nothing -- a card whose only
+        // printings are all flagged as reprints. Fall back to the plain lookup
+        // so there is still a preview, just not the first printing.
+        if (mode === "original") {
+          return fetch(url(name, "exact"))
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (d2) { return pick(d2); })
+            .catch(function () { return null; });
+        }
+        return null;
+      })
+      .then(function (got) {
         remember(k, got);                  // cache misses too, so we ask once
         return got;
       })

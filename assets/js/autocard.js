@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     link.addEventListener("mouseenter", function () {
       // Cached, de-duplicated, and null rather than a thrown error when the card
       // is double-faced or the name is not recognised.
-      window.TSCards.image(link.dataset.card, "exact").then(function (url) {
+      // "original" prefers the first printing. named?exact= returns Scryfall's
+      // default, which is usually a modern reprint -- Black Lotus comes back as
+      // Vintage Masters 2014 rather than Alpha.
+      window.TSCards.image(link.dataset.card, "original").then(function (url) {
         if (!url) return;
         img = document.createElement("img");
         img.src = url;
