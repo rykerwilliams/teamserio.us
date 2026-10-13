@@ -1,3 +1,4 @@
+require "cgi"
 require 'uri'
 
 module Jekyll
@@ -68,7 +69,13 @@ module Jekyll
           quantity = $1
           card_name = $2.strip
           card_url = "https://scryfall.com/search?q=#{URI.encode_www_form_component(card_name)}"
-          card_html = "<a href='#{card_url}' class='card-link' data-cardname='#{URI.encode_www_form_component(card_name)}' target='_blank'>#{card_name}</a>"
+          # data-cardname carries the card's REAL name. It used to be
+        # form-encoded, which the hover code then passed to Scryfall verbatim
+        # (and encodeURIComponent'd a second time) -- so "Swords to Plowshares"
+        # went out as "Swords+to+Plowshares" and 404'd. Only single-word cards
+        # resolved, which is why most previews were blank but a few worked.
+        # The href stays URL-encoded; that one really is a URL.
+        card_html = "<a href='#{card_url}' class='card-link' data-cardname=\"#{CGI.escapeHTML(card_name)}\" target='_blank'>#{card_name}</a>"
           "#{quantity} #{card_html}<br>"
         else
           # Handle lines that don't match the quantity pattern
@@ -77,7 +84,7 @@ module Jekyll
             ""
           else
             card_url = "https://scryfall.com/search?q=#{URI.encode_www_form_component(card_name)}"
-            "<a href='#{card_url}' class='card-link' data-cardname='#{card_name}' target='_blank'>#{card_name}</a><br>"
+            "<a href='#{card_url}' class='card-link' data-cardname=\"#{CGI.escapeHTML(card_name)}\" target='_blank'>#{card_name}</a><br>"
           end
         end
       end
