@@ -77,6 +77,24 @@ These have ordering constraints or deadlines attached.
       `deploy-pages.yml`; the dev site is retired
 - [x] ~~Build step to change `_config.yml` before the Jekyll build~~ — config overlays
       (`_config_preview.yml`, `_config_staging.yml`) instead of mutating the tracked file
+- [x] ~~**Outbound links open in a new tab**~~ — 2026-10-13 (#35).
+      `_plugins/external_links.rb` adds `target="_blank" rel="noopener noreferrer"` to
+      every external link at render time, so contributors need not remember it. It also
+      normalised what was there by hand: **41 anchors said `noreferer`**, one `r`, which
+      is not a real rel token, so those links were still sending a referrer. A
+      `:post_render` hook rather than a Generator, because at generator time the content
+      is still Markdown and holds no `<a>` tags. Trap worth remembering: the first version
+      rescued `URI.parse` failures and treated the link as internal — several hrefs end in
+      an invisible U+2060 WORD JOINER and one has a trailing space, so they were skipped
+      silently. Failing open is the wrong default for a security attribute.
+- [x] ~~**MTGO download buttons pointed at a host called `assets`**~~ — 2026-10-13 (#36).
+      `deckfile_tag.rb` built the href as `"/" + rel_path`, so a tag argument written with
+      a leading slash produced `href="//assets/files/..."`. A browser reads a leading `//`
+      as **protocol-relative**, resolving it to `https://assets/...` — a host that does not
+      exist — so every download button on the HSI-9 post was dead on the live site. Eight
+      posts use the leading-slash form and eight do not, which is why it went unnoticed,
+      and all five examples in the contributor templates teach the broken form. Normalised
+      to exactly one leading slash, so both spellings work.
 - [ ] **Port `?v=` cache-busting from `digitalmeh.net`.** Asset URLs here are unversioned,
       so a browser holding an old `main.css` against new HTML has nothing to invalidate it.
       That site appends `?v={{ modified_time }}` to its asset links. Note this guards the
@@ -102,6 +120,21 @@ These have ordering constraints or deadlines attached.
       and no email addresses in public files — visitors collect items, copy a list grouped by
       maker, and message that person on Slack or Discord. Prices are free text, so `$25`,
       `trade` and `ask` all work; only numeric ones are totalled.
+- [x] ~~**First contributor-kit submission published**~~ — 2026-10-13 (#33). Mike
+      Klements' Middle School Intercontinental Championship report from TSI7, the first
+      write-up to come back through the template kit.
+
+      **What to expect from a returned kit.** It arrived as two zips. The newer one's
+      Markdown read cleanly but was a condensed rewrite that had lost roughly half the
+      piece — the standings cut from 27 players to 11, the guest round-by-round report
+      dropped entirely, placeholders left unfilled, and the author recorded as a deck name
+      rather than a person. The older zip was faithful but had been through a
+      Word-to-Markdown converter that escaped everything, including the `---` front matter
+      delimiter. **Prefer the author's original document**, which that zip also contained,
+      and verify the result against it rather than against either Markdown file.
+
+      Worth adding to the kit READMEs: say plainly that sending the original Word document
+      alongside is welcome, and that a Markdown export is not required.
 - [ ] **Get the first real merch item.** `/merch/` ships **empty** — the one example is
       `published: false`, so nothing appears until a real item lands. The member kit is
       `templates/merch-item/`.
