@@ -205,8 +205,12 @@ def main():
     for dk in decks:
         fn = f"{dk['name']} - {args.event}.txt"
         path = os.path.join(outdir, fn)
+        # A bare blank line separates main from sideboard. Do NOT write the
+        # word "Sideboard": deckfile_tag.rb emits that heading for either a
+        # blank line or a line reading "Sideboard", so including it renders
+        # the heading twice.
         body = "\n".join(norm(c) for c in dk["main"]) + \
-               "\n\nSideboard\n" + "\n".join(norm(c) for c in dk["side"]) + "\n"
+               "\n\n" + "\n".join(norm(c) for c in dk["side"]) + "\n"
         if args.apply:
             os.makedirs(outdir, exist_ok=True)
             with open(path, "w", encoding="utf-8") as f:
