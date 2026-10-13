@@ -21,10 +21,33 @@ module Jekyll
       # to contain that shape, so this stayed hidden.
       return unless doc.respond_to?(:output_ext) && doc.output_ext == '.html'
 
-      # Match <<Card Name>> OR ((Card Name))
-      doc.content = doc.content.gsub(/(?:<<(.+?)>>|\(\((.+?)\)\))/) do
-        card = Regexp.last_match(1) || Regexp.last_match(2)
-        card.strip!
+      doc.content = transform(doc.content)
+    end
+
+    # Match <<Card Name>> OR ((Card Name))
+    CARD = /(?:<<(.+?)>>|\(\((.+?)\)\))/
+
+    # Regions that must never be rewritten. The output_ext guard above only keeps
+    # the plugin away from assets that render to .js -- it does nothing for an
+    # HTML page that *contains* JavaScript, and that is the dangerous case.
+    #
+    # On digitalmeh.net the search page contains
+    #     var out = esc((from ? '...' : '') + text.slice(from, to) ...)
+    # and the ((...)) pattern turned that into an <a> tag mid-expression, so the
+    # page became a syntax error and search silently stopped working on the live
+    # site. Nothing here triggers it today; this is so nothing has to.
+    SKIP = %r{(<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>|
+               <pre\b[^>]*>.*?</pre>|<code\b[^>]*>.*?</code>)}mix
+
+    def transform(content)
+      content.split(SKIP).map do |part|
+        part =~ /\A<(script|style|pre|code)\b/im ? part : rewrite(part)
+      end.join
+    end
+
+    def rewrite(text)
+      text.gsub(CARD) do
+        card = (Regexp.last_match(1) || Regexp.last_match(2)).strip
         %Q{<a href="https://scryfall.com/card?q=#{CGI.escape(card)}" class="autocard" data-card="#{card}">#{card}</a>}
       end
     end
