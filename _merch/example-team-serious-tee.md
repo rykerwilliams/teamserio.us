@@ -1,4 +1,9 @@
 ---
+# Not published. This file is the template for adding a real item: copy it,
+# change the values, and set published: true. Left unpublished so the gallery
+# is empty rather than advertising a t-shirt that does not exist, and because
+# its header_img points at a placeholder that was never committed.
+published: false
 layout: merch-item
 title: "Team Serious T-Shirt"
 subtitle: "Classic logo tee"
