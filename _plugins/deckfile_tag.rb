@@ -35,6 +35,13 @@ module Jekyll
 
       # Ensure file path is web-accessible (strip site source)
       rel_path = @file_path.sub(/^#{Regexp.escape(site.source)}\//, "")
+      # The tag argument may or may not be written with a leading slash, and
+      # both spellings are in use across the posts. Concatenating "/" onto a
+      # path that already had one produced href="//assets/files/...", which a
+      # browser reads as PROTOCOL-relative: it resolves to https://assets/...,
+      # a host that does not exist, so every download button on that post was
+      # dead. Normalise to exactly one leading slash.
+      href_path = "/" + rel_path.sub(%r{\A/+}, "")
 
       <<~HTML
         <div class="decklist-content">
@@ -43,7 +50,7 @@ module Jekyll
             <button onclick="copyDecklist(this)" class="btn btn-sm decklist-copy-btn">
               <i class="far fa-copy"></i> Copy
             </button>
-            <a href="/#{rel_path}" download class="btn btn-sm decklist-download-btn">
+            <a href="#{href_path}" download class="btn btn-sm decklist-download-btn">
               <i class="fas fa-download"></i> MTGO
             </a>
           </div>
