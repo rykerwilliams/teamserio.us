@@ -1,4 +1,5 @@
 require 'uri'
+require "cgi"
 
 module Jekyll
     class DecklistTag < Liquid::Block
@@ -49,7 +50,12 @@ module Jekyll
           card_url = "https://scryfall.com/search?q=#{URI.encode_www_form_component(card_name)}"
           # card_image_url = "https://c1.scryfall.com/file/scryfall-cards/large/front/#{URI.encode_www_form_component(card_name).downcase.gsub(' ', '-')}.jpg"
           #card_html = "<a href='#{card_url}' class='card-link' data-cardname='#{card_name}' data-imageurl='#{card_image_url}' target='_blank'>#{card_name}</a>"
-          card_html = "<a href='#{card_url}' class='card-link' data-cardname='#{URI.encode_www_form_component(card_name)}' target='_blank'>#{card_name}</a>"
+          # data-cardname must carry the card's REAL name: the hover handler passes
+        # this attribute straight to Scryfall, which encodes it again. Form
+        # encoding here sent "Lodestone Golem" out as "Lodestone+Golem" and got
+        # a 404, so only single-word cards ever previewed. Same bug as
+        # deckfile_tag.rb had. The href stays encoded; that one is a URL.
+        card_html = "<a href='#{card_url}' class='card-link' data-cardname=\"#{CGI.escapeHTML(card_name)}\" target='_blank'>#{card_name}</a>"
           "#{quantity} #{card_html}<br>"
         else
           # Handle lines that don't match the quantity pattern
@@ -59,7 +65,7 @@ module Jekyll
           else
             card_url = "https://scryfall.com/search?q=#{URI.encode_www_form_component(card_name)}"
             # card_image_url = "https://c1.scryfall.com/file/scryfall-cards/large/front/#{URI.encode_www_form_component(card_name).downcase.gsub(' ', '-')}.jpg"
-            "<a href='#{card_url}' class='card-link' data-cardname='#{card_name}' target='_blank'>#{card_name}</a><br>"
+            "<a href='#{card_url}' class='card-link' data-cardname=\"#{CGI.escapeHTML(card_name)}\" target='_blank'>#{card_name}</a><br>"
           end
         end
       end
