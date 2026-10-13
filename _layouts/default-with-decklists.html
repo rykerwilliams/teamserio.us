@@ -9,6 +9,8 @@ layout: default
 
 {{ content }}
 
-<!-- Additional scripts -->
+<!-- Additional scripts. scryfall-cache.js must come first: both of the
+     scripts below call window.TSCards.image(). -->
+<script src="{{ '../assets/js/scryfall-cache.js' | relative_url }}"></script>
 <script src="{{ '../assets/js/decklist.js' | relative_url }}"></script>
 <script src="{{ '../assets/js/autocard.js' | relative_url }}"></script>

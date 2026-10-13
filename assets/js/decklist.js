@@ -1,30 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const cardLinks = document.querySelectorAll('.card-link');
-  
-    cardLinks.forEach(link => {
-      
-      link.addEventListener('mouseenter', function() {
-        const cardName = this.getAttribute('data-cardname');
-        const cardImageURL = `https://api.scryfall.com/cards/search?q=!"${cardName}"+not%3Areprint`;
+document.addEventListener("DOMContentLoaded", function () {
+  // One delegated listener rather than one per link. An event report here can
+  // carry 332 card links, and a decklist page several hundred more.
+  var HOVER_DELAY = 120;   // so running the cursor down a list fetches nothing
+  var timer = null;
 
-        // Fetch card details from Scryfall
-        fetch(cardImageURL)
-          .then(response => response.json())
-          .then(data => {
-            if (data.data[0].image_uris && data.data[0].image_uris.normal) {
-              // get the div to display the card preview
-              cardpreview = this.closest('.decklist-content').querySelector('.card-preview')
-      
-              cardpreview.style.setProperty('background-image', `url(${data.data[0].image_uris.normal})`)
+  document.addEventListener("mouseover", function (ev) {
+    var link = ev.target.closest && ev.target.closest(".card-link");
+    if (!link) return;
 
-              // Update the CSS variable with the card image URL
-              // this.style.setProperty('--hover-card-image', `url(${data.image_uris.normal})`);
-            }
-          })
-          .catch(error => console.error('Error fetching card image:', error));
+    var name = link.getAttribute("data-cardname");
+    var pane = link.closest(".decklist-content");
+    pane = pane && pane.querySelector(".card-preview");
+    if (!name || !pane) return;
+
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      // Cached and de-duplicated; resolves to null rather than throwing on a
+      // double-faced card or a name Scryfall does not recognise.
+      window.TSCards.image(name, "original").then(function (url) {
+        if (url) pane.style.setProperty("background-image", "url(" + url + ")");
       });
-    });
-    
+    }, HOVER_DELAY);
+  });
 });
 
 function copyDecklist(button) {
