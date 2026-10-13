@@ -1,0 +1,28 @@
+4 Battlefield Forge
+2 City of Brass
+4 Gemstone Mine
+4 Goblin Legionnaire
+1 Grim Lavamancer
+4 Jackal Pup
+4 Jungle Lion
+4 Karplusan Forest
+4 Lightning Bolt
+4 Mogg Fanatic
+3 Rancor
+4 Rith's Grove
+4 Savannah Lions
+2 Seal of Fire
+4 Swords to Plowshares
+1 Thran Quarry
+1 Undiscovered Paradise
+3 Wax // Wane
+3 Winter Orb
+
+Sideboard
+2 Absolute Law
+1 Pyroblast
+2 Red Elemental Blast
+4 Seal of Cleansing
+2 Simoon
+3 Tormod's Crypt
+1 Warmth

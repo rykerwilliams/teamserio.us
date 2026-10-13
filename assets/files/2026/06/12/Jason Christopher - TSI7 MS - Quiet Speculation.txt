@@ -1,0 +1,31 @@
+4 Ancient Spring
+4 Archaeological Dig
+3 Balancing Act
+4 Burning Wish
+2 Crystal Vein
+2 Deep Analysis
+4 Geothermal Crevice
+4 Impulse
+2 Irrigation Ditch
+4 Lion's Eye Diamond
+4 Lotus Petal
+4 Orim's Chant
+4 Quiet Speculation
+1 Ravaged Highlands
+1 Recoup
+4 Roar of the Wurm
+4 Ruins of Trokair
+1 Seafloor Debris
+2 Svyelunite Temple
+2 Tinder Farm
+
+Sideboard
+1 Balancing Act
+2 Chain of Vapor
+1 Devastating Dreams
+1 Obliterate
+1 Overmaster
+2 Pyroblast
+3 Pyroclasm
+2 Ray of Revelation
+2 Tormod's Crypt

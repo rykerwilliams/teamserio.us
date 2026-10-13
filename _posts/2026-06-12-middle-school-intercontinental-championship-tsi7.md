@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-with-decklists
 title:  "Middle School Intercontinental Championship 2026 @ TSI7"
 subtitle: "Tournament Report"
 date:   2026-06-12 12:00:00 +0000
@@ -113,6 +113,40 @@ Melee Results: [melee.gg/Tournament/View/435351](https://melee.gg/Tournament/Vie
 ##### *Paul Blakeley – Black MUD*
 
 ![Paul Blakeley](../assets/images/2026/06/12/decklists/13-paul-blakeley.jpg){: width="35%"}
+
+## Submitted Decklists
+
+*Fifteen of the twenty-seven players submitted a list to [Melee](https://melee.gg/Tournament/View/435351). They are reproduced here as submitted — card names corrected to their official spellings so the card links work, nothing else changed. Listed by finish.*
+
+{% deckfile /assets/files/2026/06/12/Jason Hallman - TSI7 MS - Terrageddon.txt %}
+
+{% deckfile /assets/files/2026/06/12/Steven McGrew - TSI7 MS - Shadow-Geddon.txt %}
+
+{% deckfile /assets/files/2026/06/12/Angelo - TSI7 MS - Mono U Fliers.txt %}
+
+{% deckfile /assets/files/2026/06/12/Tom Basketball - TSI7 MS - RG Survival.txt %}
+
+{% deckfile /assets/files/2026/06/12/Yatskiva - TSI7 MS - Goblins.txt %}
+
+{% deckfile /assets/files/2026/06/12/Stuart Ziarnik - TSI7 MS - Naya Zoo.txt %}
+
+{% deckfile /assets/files/2026/06/12/Jimmy McCarthy - TSI7 MS - Reanimator-nought.txt %}
+
+{% deckfile /assets/files/2026/06/12/Transcendence - TSI7 MS - Tide Nought.txt %}
+
+{% deckfile /assets/files/2026/06/12/Eric Caffrey - TSI7 MS - Ponza.txt %}
+
+{% deckfile /assets/files/2026/06/12/tmagrinijr - TSI7 MS - Zombie Infestation.txt %}
+
+{% deckfile /assets/files/2026/06/12/Mike Klements - TSI7 MS - Elves.txt %}
+
+{% deckfile /assets/files/2026/06/12/Mitch Harmon - TSI7 MS - Miracle Gro.txt %}
+
+{% deckfile /assets/files/2026/06/12/Kyle Wells - TSI7 MS - UR Prison.txt %}
+
+{% deckfile /assets/files/2026/06/12/sillysam71 - TSI7 MS - Turbolands.txt %}
+
+{% deckfile /assets/files/2026/06/12/Jason Christopher - TSI7 MS - Quiet Speculation.txt %}
 
 ## Recap
 

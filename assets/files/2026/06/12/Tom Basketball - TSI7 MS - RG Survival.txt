@@ -1,0 +1,41 @@
+1 Anger
+4 Birds of Paradise
+3 Deranged Hermit
+7 Forest
+2 Fyndhorn Elves
+4 Gaea's Cradle
+1 Genesis
+2 Goblin Bombardment
+3 Karplusan Forest
+2 Llanowar Elves
+1 Masticore
+1 Mountain
+2 Multani's Acolyte
+2 Nantuko Vigilante
+1 Orcish Settlers
+1 Quirion Ranger
+4 Rishadan Port
+1 Skyshroud Poacher
+1 Squee, Goblin Nabob
+4 Survival of the Fittest
+2 Thornscape Battlemage
+2 Wall of Blossoms
+2 Wall of Roots
+2 Wirewood Symbiote
+4 Wooded Foothills
+1 Yavimaya Elder
+
+Sideboard
+2 Tormod's Crypt
+2 Natural Order
+1 Phantom Nishoba
+1 Uktabi Orangutan
+1 Goblin Tinkerer
+1 Goblin Sharpshooter
+1 Naturalize
+1 Hull Breach
+1 Fire // Ice
+1 Spike Feeder
+1 Caller of the Claw
+1 Winter Orb
+1 Ravenous Baloth
