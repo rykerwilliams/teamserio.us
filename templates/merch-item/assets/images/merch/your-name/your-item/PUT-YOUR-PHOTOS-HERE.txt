@@ -1,0 +1,11 @@
+Put photos of your item in this folder.
+
+Rename the two folders above this one:
+  your-name  ->  your name, lowercase with dashes, e.g. rajah-james
+  your-item  ->  the item, lowercase with dashes, e.g. logo-tee
+
+Name the main photo main.jpg (or main.png) and point the header_img line
+in your .md file at it. Simple names, no spaces.
+
+Delete this text file once you've added your photos — it's just a
+placeholder so the folder isn't empty in the zip file.
