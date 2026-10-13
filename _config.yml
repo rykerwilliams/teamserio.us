@@ -42,7 +42,15 @@ search:
   provider              : lunr #Select a provider for enable search: lunr, algolia, google
   label                 :  #default ["Search"] Text on navbar when search is enabled
   landing_page          :  #default ["/search"] Link on navbar
-  maxwords              :  #default [30] lunr only - May slow down your site build
+  maxwords              : 1000 #default [30], which indexed only the first 30 words of
+                               #each post -- 841 words across the whole site, so a card or
+                               #an opponent named mid-report was simply unfindable.
+                               #1000 fully indexes 15 of 28 posts and 19,729 words.
+                               #Full coverage would need 20000 (one 16k-word outlier) and
+                               #cost 103 KB gzipped rather than roughly 40.
+                               #of each post were indexed -- 841 words across the whole
+                               #site -- so a card or opponent named mid-report was
+                               #unfindable. 2000 covers every post here in full.
 
 comments:
   provider:         #Use 'disqus' https://disqus.com/ or 'giscus' https://giscus.app/
