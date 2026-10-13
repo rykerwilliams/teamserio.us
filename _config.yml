@@ -73,6 +73,8 @@ navbar:
     url     : /tags
   - title   : Categories
     url     : /categories
+  - title   : Merch
+    url     : /merch/
   - title   : Media #Label
     child:
       - title : Full Warning Podcast
@@ -121,6 +123,9 @@ collections:
   posts:
     output: true
     permalink : /posts/:year:month:day_:title
+  merch:
+    output: true
+    permalink: /merch/:name
 # collections_dir     :
 permalink           : /:year:month:day_:title/
 
@@ -137,6 +142,13 @@ defaults:
       cloudcategory_url   : /categories #This is where the link on categories would redirect
   -
     scope:
+      path: ""
+      type: "merch"
+    values:
+      layout            : "merch-item"
+      include_on_search : true
+      include_on_feed   : false
+  - scope:
       path: ""
       type: "posts"
     values:
