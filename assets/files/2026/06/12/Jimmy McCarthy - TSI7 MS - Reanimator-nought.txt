@@ -21,7 +21,6 @@
 3 Vision Charm
 4 Entomb
 
-Sideboard
 2 Rushing River
 1 Skeletal Scrying
 1 Null Rod

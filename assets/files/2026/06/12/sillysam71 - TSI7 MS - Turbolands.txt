@@ -19,7 +19,6 @@
 2 Undiscovered Paradise
 4 Yavimaya Coast
 
-Sideboard
 1 Annul
 2 Chill
 3 Compost

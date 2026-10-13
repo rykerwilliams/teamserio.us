@@ -17,7 +17,6 @@
 4 Vision Charm
 3 Wasteland
 
-Sideboard
 3 Annul
 3 Blue Elemental Blast
 2 Chill

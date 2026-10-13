@@ -14,7 +14,6 @@
 2 Sigil of Sleep
 4 Winter Orb
 
-Sideboard
 2 Annul
 4 Chill
 2 Cursed Totem

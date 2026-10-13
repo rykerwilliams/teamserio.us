@@ -23,7 +23,6 @@
 3 Weathered Wayfarer
 4 Windswept Heath
 
-Sideboard
 1 Aura of Silence
 1 Cataclysm
 2 Cursed Totem

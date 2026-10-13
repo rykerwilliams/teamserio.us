@@ -18,7 +18,6 @@
 3 Sleight of Hand
 2 Fire // Ice
 
-Sideboard
 2 Engineered Plague
 4 Blue Elemental Blast
 2 Seal of Cleansing

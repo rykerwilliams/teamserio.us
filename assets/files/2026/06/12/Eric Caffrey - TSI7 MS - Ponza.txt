@@ -21,7 +21,6 @@
 1 Plains
 1 Island
 
-Sideboard
 2 Wrath of God
 2 Warmth
 2 Compost

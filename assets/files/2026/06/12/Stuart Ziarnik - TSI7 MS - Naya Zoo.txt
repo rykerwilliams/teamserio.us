@@ -18,7 +18,6 @@
 3 Wax // Wane
 3 Winter Orb
 
-Sideboard
 2 Absolute Law
 1 Pyroblast
 2 Red Elemental Blast

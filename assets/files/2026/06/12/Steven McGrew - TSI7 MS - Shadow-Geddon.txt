@@ -17,7 +17,6 @@
 4 Undiscovered Paradise
 1 Zuran Orb
 
-Sideboard
 1 Argivian Find
 1 Aura Fracture
 2 Cursed Totem

@@ -16,7 +16,6 @@
 1 Wonder
 1 Psychatog
 
-Sideboard
 2 Powder Keg
 4 Annul
 3 Engineered Plague

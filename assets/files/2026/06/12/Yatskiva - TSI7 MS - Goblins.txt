@@ -18,7 +18,6 @@
 3 Wasteland
 4 Wooded Foothills
 
-Sideboard
 2 Anarchy
 1 Goblin Tinkerer
 4 Pyroblast

@@ -22,7 +22,6 @@
 1 Tsabo's Web
 4 Winter Orb
 
-Sideboard
 3 Chill
 2 Defense Grid
 1 Ensnaring Bridge

@@ -25,7 +25,6 @@
 4 Wooded Foothills
 1 Yavimaya Elder
 
-Sideboard
 2 Tormod's Crypt
 2 Natural Order
 1 Phantom Nishoba
