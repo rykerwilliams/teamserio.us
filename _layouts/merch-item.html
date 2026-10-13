@@ -62,10 +62,12 @@ layout: default
           static and sends nothing, and a mailto: would put their address in
           the page source for scrapers.
         {%- endcomment -%}
+        {% if item.price %}<p class="h5 mb-3">{{ item.price }}</p>{% endif %}
         <button type="button" class="btn btn-primary btn-sm"
                 data-merch-add="{{ item.slug | default: page.slug }}"
                 data-merch-title="{{ item.title | escape }}"
                 data-merch-creator="{{ item.creator | escape }}"
+                data-merch-price="{{ item.price | escape }}"
                 data-merch-handle="{{ item.creator_handle | escape }}">Add to enquiry</button>
         <a href="{{ '/merch/#enquiry' | relative_url }}" class="btn btn-outline-secondary btn-sm ml-1">
           View enquiry <span data-cart-count>0</span>

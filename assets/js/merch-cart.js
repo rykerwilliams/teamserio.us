@@ -51,6 +51,14 @@
     save();
   }
 
+  // Prices are free text so "25", "$25", "trade" and "ask" all work. Pull out a
+  // number where there is one; everything else is left as written and simply
+  // does not count towards the total.
+  function amount(price) {
+    var m = String(price || "").match(/-?\d+(?:[.,]\d+)?/);
+    return m ? parseFloat(m[0].replace(",", ".")) : null;
+  }
+
   // One block per maker, so a cart spanning two people gives you two things to
   // paste rather than one message naming someone else's items.
   function summary() {
@@ -59,13 +67,37 @@
       (makers[c.creator] = makers[c.creator] || []).push(c);
     });
     return Object.keys(makers).sort().map(function (who) {
+      var width = Math.max.apply(null, makers[who].map(function (c) {
+        return (c.qty + "x  " + c.title).length;
+      }));
+      var total = 0, counted = 0, uncounted = 0, symbol = "";
       var lines = makers[who].map(function (c) {
-        return "  " + c.qty + "x  " + c.title;
+        var label = c.qty + "x  " + c.title;
+        var pad = new Array(Math.max(1, width - label.length + 3)).join(" ");
+        var n = amount(c.price);
+        if (n === null) {
+          if (c.price) uncounted += 1;
+          return "  " + label + (c.price ? pad + c.price : "");
+        }
+        // Reuse whatever symbol the prices are written with, rather than
+        // assuming one. These are friends in more than one country.
+        if (!symbol) {
+          var sym = String(c.price).match(/^[^\d\s-]+/);
+          if (sym) symbol = sym[0];
+        }
+        total += n * c.qty;
+        counted += 1;
+        return "  " + label + pad + c.price + (c.qty > 1 ? " ea" : "");
       });
       var handle = makers[who][0].handle;
+      var foot = "";
+      if (counted) {
+        foot = "\n  roughly " + symbol + (Math.round(total * 100) / 100) +
+               (uncounted ? "  (plus the items priced otherwise)" : "") + "\n";
+      }
       return "Team Serious merch — enquiry for " + who +
              (handle ? " (" + handle + ")" : "") + "\n\n" +
-             lines.join("\n") + "\n\n" +
+             lines.join("\n") + "\n" + foot + "\n" +
              "  from " + window.location.origin + "/merch/";
     }).join("\n\n----\n\n");
   }
@@ -114,7 +146,8 @@
         slug: addBtn.dataset.merchAdd,
         title: addBtn.dataset.merchTitle || addBtn.dataset.merchAdd,
         creator: addBtn.dataset.merchCreator || "Team Serious",
-        handle: addBtn.dataset.merchHandle || ""
+        handle: addBtn.dataset.merchHandle || "",
+        price: addBtn.dataset.merchPrice || ""
       });
       addBtn.textContent = "Added ✓";
       setTimeout(function () { addBtn.textContent = "Add to enquiry"; }, 1400);
