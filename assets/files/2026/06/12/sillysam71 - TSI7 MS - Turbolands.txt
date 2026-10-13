@@ -1,0 +1,29 @@
+1 Capsize
+4 Counterspell
+4 Exploration
+4 Force of Will
+5 Forest
+1 Future Sight
+2 Gaea's Blessing
+4 Gush
+4 Horn of Greed
+4 Impulse
+10 Island
+1 Morphling
+4 Oath of Druids
+1 Scroll Rack
+1 Spike Feeder
+1 Spike Weaver
+2 Time Warp
+1 Treetop Village
+2 Undiscovered Paradise
+4 Yavimaya Coast
+
+1 Annul
+2 Chill
+3 Compost
+2 Dust Bowl
+2 Future Sight
+1 Hydroblast
+2 Naturalize
+2 Powder Keg

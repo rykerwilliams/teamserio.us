@@ -3,6 +3,10 @@
   background-color: #3f3f3f;
   position: relative; /* so absolutely positioned children anchor to this */
   padding: 0.5rem;    /* make room for buttons inside */
+  /* Posts that stack several lists with nothing between them -- a decklist
+     dump rather than one list per player section -- had the blocks touching,
+     with no gap to show where one deck ended and the next began. */
+  margin-bottom: 1.75rem;
 }
 
 .decklist-title {
