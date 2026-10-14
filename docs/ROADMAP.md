@@ -111,10 +111,26 @@ These have ordering constraints or deadlines attached.
 
 ## Cosmetic / layout / CSS
 
-- [ ] **Rotate the site tagline on each deploy.** The `description` in `_config.yml` is
-      what follows the site name in the browser tab and in link previews. It currently
-      reads **"testing"**, and has been live that way — every tab, every shared link, and
-      every search result says `TeamSerio.us | testing`.
+- [ ] **Rotate the site tagline on each deploy.** The home page title currently reads
+      `TeamSerio.us | testing`. The word "testing" is not in this repo -- grepping for it
+      finds nothing but prose inside posts. It comes from the **GitHub repository's own
+      description field**, by way of chulapa's `_includes/head.html`, which on the home
+      page alone builds the title as:
+
+          metatitle1 = site.title
+          metatitle2 = site.subtitle | default: site.github.project_tagline
+
+      `subtitle:` is not set in `_config.yml`, so `metatitle2` falls through to
+      `site.github.project_tagline` -- the repo description, which is literally `testing`.
+      Every other page is unaffected: there `metatitle1` is the page title and
+      `metatitle2` is `site.title`. Link previews are also unaffected, because
+      `<meta name="description">` and `og:description` come from `description:` in
+      `_config.yml`, which correctly reads "Web Home Of Team Serious."
+
+      Two ways to stop it immediately: set `subtitle:` in `_config.yml` (keeps the fix in
+      the repo, where it is reviewable), or edit the repo description on GitHub. Prefer
+      the former -- the repo description is invisible from a checkout and the next person
+      to go looking will waste the same time I did.
 
       Wanted: a set of taglines that rotates per deploy rather than one fixed string. The
       build already runs on every push, so picking one at build time is enough; it does not
