@@ -310,6 +310,40 @@ handles out of it, add them, re-run.
 It also corrected one: **Nam Tran is `nartman99`**, not `nartman` — the latter has no
 archived pages at all, the former has eight including `/topics`.
 
+## Things that look like bugs but are the source
+
+- **`0 Mishra's Workshop`** leads Duane Haddix's list in #2786. It is deliberate:
+  he usually plays Workshops and brought Karn Eldrazi instead, so he opened the
+  list by saying he had none. The deck is 60/15 without it. Confirmed with
+  Rajah; leave it. Do not add a pass that strips zero-quantity lines without
+  checking for this.
+- **58-card main deck** in James Crouch's list in #1483. Posted that way in
+  2017, not a parse error.
+- **61-card main decks** for Ben Perry and Frank Singel in #1639. Also as
+  posted.
+
+Totalling a decklist does not catch any of these -- the first sums to 60 and
+the others are simply what someone wrote. They are only visible by reading the
+list, which is the argument for a human reading each ported post before it
+publishes.
+
+## Dropbox is supporting material, not a source
+
+Rajah's Dropbox has an event archive at `mtgo/ts/` -- roughly 940 files, with
+folders matching several of the threads below (`land2`..`land6`, `hazard6`,
+`KSI 2024`, `hsi7 - 2024`, `tsl`), including decklists already in text form and
+event photos.
+
+**It is secondary material only.** The scope of this work is what is stranded
+on The Mana Drain; the inventory comes from the archive and nothing else. Do
+not browse `mtgo/ts/` to discover events, and do not port a post because a
+folder exists for it.
+
+Consult it only for a thread already found on TMD, and only to fill a gap that
+thread has -- a decklist the snapshot truncated, a photo the Archive never
+captured. Reached live with `rclone` against the `dp:` remote; the NAS copy
+under `nas4-cloud` is a mirror and may be stale.
+
 ## Porting notes
 
 - **Attribution matters.** Several are other people's write-ups — Nat Moes
