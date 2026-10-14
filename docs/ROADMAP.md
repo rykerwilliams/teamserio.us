@@ -111,6 +111,22 @@ These have ordering constraints or deadlines attached.
 
 ## Cosmetic / layout / CSS
 
+- [ ] **Rotate the site tagline on each deploy.** The `description` in `_config.yml` is
+      what follows the site name in the browser tab and in link previews. It currently
+      reads **"testing"**, and has been live that way — every tab, every shared link, and
+      every search result says `TeamSerio.us | testing`.
+
+      Wanted: a set of taglines that rotates per deploy rather than one fixed string. The
+      build already runs on every push, so picking one at build time is enough; it does not
+      need to change per page view. A `_data/taglines.yml` list plus a line in the layout
+      that selects by build number or date would do it, and keeps the list editable without
+      touching the config.
+
+      Worth deciding whether the rotation should be deterministic (same deploy, same
+      tagline) so a rebuild of the same commit is reproducible, or genuinely random.
+      Deterministic is easier to reason about when a link preview looks wrong.
+
+
 - [ ] Social media links on articles
 
 ## Content
