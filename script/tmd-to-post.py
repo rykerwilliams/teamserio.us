@@ -709,7 +709,7 @@ def deck_owner(md_before, lines):
 
     return None, None, None, lines
 
-def write_deckfile(lines, event_date, event_label, player, deck, seq):
+def write_deckfile(lines, event_date, event_label, player, deck, seq, rank=None):
     """Write a decklist as its own .txt and return the path to reference.
 
     Preferred over an inline {% decklist %} block: the list stays a plain text
@@ -721,7 +721,14 @@ def write_deckfile(lines, event_date, event_label, player, deck, seq):
     y, m, d = (event_date or "0000-00-00").split("-")[:3]
     out_dir = os.path.join(DECK_DIR, y, m, d)
     who = player or f"Deck {seq}"
-    name = f"{who} - {event_label} - {deck}.txt" if deck else f"{who} - {event_label}.txt"
+    # The rank belongs in the filename because deckfile_tag renders the
+    # filename as the block's title. Putting it in a Markdown heading above
+    # instead printed the player and deck twice -- once in the heading, again
+    # in the title bar directly under it, and a third time in the standings
+    # table on posts that have one.
+    lead = f"{int(rank):02d}. " if rank and str(rank).isdigit() else ""
+    name = (f"{lead}{who} - {event_label} - {deck}.txt" if deck
+            else f"{lead}{who} - {event_label}.txt")
     name = re.sub(r"[/\\]", "-", name)
     path = os.path.join(out_dir, name)
 
@@ -822,16 +829,7 @@ def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
         # The introducing line is the last thing in the markdown chunk above.
         rank, player, deck, lines = deck_owner(chunks[-1] if chunks else "", lines)
         path = write_deckfile(lines, meta.get("event_date") or meta.get("date", "")[:10],
-                              label, player, deck, seq)
-        # When the placing line lived inside the block it has just been consumed
-        # into the filename, so without this the post loses who finished where.
-        # When it came from a standings row above, that row is still on the page
-        # and a second heading would only repeat it.
-        if player and rank and not (chunks and "\t" in (chunks[-1] or "")):
-            head = f"### {rank}. {player}"
-            if deck:
-                head += f" \u2014 {deck}"
-            chunks.append(head)
+                              label, player, deck, seq, rank)
         chunks.append("{%% deckfile %s %%}" % path)
     body = "\n\n".join(c for c in chunks if c.strip())
 
@@ -856,7 +854,6 @@ def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
                 rpath = write_deckfile(
                     dl, meta.get("event_date") or meta.get("date", "")[:10],
                     label, who, rd, nonlocal_seq[0])
-                head = f"### {who}" + (f" \u2014 {rd}" if rd else "")
                 # Naming the handle as well is only worth it when it is a
                 # different person from the one the deck is filed under --
                 # "Rajah James ... posted as a reply by cleverpseudonym" is
@@ -865,7 +862,7 @@ def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
                      _key(author_entry(r["username"]).get("name")) == _key(who) \
                      else f" by {r['username']}"
                 from_decks.append(
-                    f'{head}\n\n*Posted as a reply{by}.*\n\n'
+                    f'*Posted as a reply{by}.*\n\n'
                     f'{"{%% deckfile %s %%}" % rpath}')
             # Strip BOTH decklist forms from the prose. <pre> was handled; the
             # widget was not, so its cards rendered as a wall of inline links

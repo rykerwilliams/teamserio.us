@@ -97,37 +97,21 @@ Congrats to Andy for his first TSI win!
 
 Top 8 decklists based on final standings:
 
-### 1. Andy Probasco — Death Survives
+{% deckfile /assets/files/2019/06/15/01. Andy Probasco - TSI The Land 2019.06.15 - Death Survives.txt %}
 
-{% deckfile /assets/files/2019/06/15/Andy Probasco - TSI The Land 2019.06.15 - Death Survives.txt %}
+{% deckfile /assets/files/2019/06/15/02. Sullivan Brophy - TSI The Land 2019.06.15 - Dredge.txt %}
 
-### 2. Sullivan Brophy — Dredge
+{% deckfile /assets/files/2019/06/15/03. Kevin Poenisch - TSI The Land 2019.06.15 - Dredge.txt %}
 
-{% deckfile /assets/files/2019/06/15/Sullivan Brophy - TSI The Land 2019.06.15 - Dredge.txt %}
+{% deckfile /assets/files/2019/06/15/04. Frank Singel - TSI The Land 2019.06.15 - Survival.txt %}
 
-### 3. Kevin Poenisch — Dredge
+{% deckfile /assets/files/2019/06/15/05. Jason Jaco - TSI The Land 2019.06.15 - Survival.txt %}
 
-{% deckfile /assets/files/2019/06/15/Kevin Poenisch - TSI The Land 2019.06.15 - Dredge.txt %}
+{% deckfile /assets/files/2019/06/15/06. Steve McGrew - TSI The Land 2019.06.15 - Dreadhorde Control, Bad Dredge Sideboard Edition.txt %}
 
-### 4. Frank Singel — Survival
+{% deckfile /assets/files/2019/06/15/07. Duane Haddix - TSI The Land 2019.06.15 - Karn Eldrazi.txt %}
 
-{% deckfile /assets/files/2019/06/15/Frank Singel - TSI The Land 2019.06.15 - Survival.txt %}
-
-### 5. Jason Jaco — Survival
-
-{% deckfile /assets/files/2019/06/15/Jason Jaco - TSI The Land 2019.06.15 - Survival.txt %}
-
-### 6. Steve McGrew — Dreadhorde Control, Bad Dredge Sideboard Edition
-
-{% deckfile /assets/files/2019/06/15/Steve McGrew - TSI The Land 2019.06.15 - Dreadhorde Control, Bad Dredge Sideboard Edition.txt %}
-
-### 7. Duane Haddix — Karn Eldrazi
-
-{% deckfile /assets/files/2019/06/15/Duane Haddix - TSI The Land 2019.06.15 - Karn Eldrazi.txt %}
-
-### 8. Rajah James — Dredge
-
-{% deckfile /assets/files/2019/06/15/Rajah James - TSI The Land 2019.06.15 - Dredge.txt %}
+{% deckfile /assets/files/2019/06/15/08. Rajah James - TSI The Land 2019.06.15 - Dredge.txt %}
 
 Thanks to everyone that came out! Hope you had a blast at this Team Serious Invitational! Special thanks to Scott, Dennis and Granny for opening up their home to us and for all the cooking, cleaning and prepping they did for us! Much appreciated!
 

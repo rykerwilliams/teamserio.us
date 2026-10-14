@@ -26,27 +26,17 @@ event_date: 2018-02-03
 
 We had 16 people show up to battle some vintage in Sandusky Ohio! We did Swiss + 1 now instead of a top 8 playoff so after 5 rounds, the top 5 finishers were as follows:
 
-### 1. Joe Reuschel — Ravager Shops
+{% deckfile /assets/files/2018/02/03/01. Joe Reuschel - TSO Pop Shop 2018.02.03 - Ravager Shops.txt %}
 
-{% deckfile /assets/files/2018/02/03/Joe Reuschel - TSO Pop Shop 2018.02.03 - Ravager Shops.txt %}
-
-### 2. Steven McGrew — Ravager Shops
-
-{% deckfile /assets/files/2018/02/03/Steven McGrew - TSO Pop Shop 2018.02.03 - Ravager Shops.txt %}
+{% deckfile /assets/files/2018/02/03/02. Steven McGrew - TSO Pop Shop 2018.02.03 - Ravager Shops.txt %}
 
 - *The list should be -3 Sorcerous Spyglass and +2 Walking Ballista and +1 Mana Crypt but the deck was built in a rush.*
 
-### 3. Tyler Wilcox — Grixis Thieves
+{% deckfile /assets/files/2018/02/03/03. Tyler Wilcox - TSO Pop Shop 2018.02.03 - Grixis Thieves.txt %}
 
-{% deckfile /assets/files/2018/02/03/Tyler Wilcox - TSO Pop Shop 2018.02.03 - Grixis Thieves.txt %}
+{% deckfile /assets/files/2018/02/03/04. Dan Luchesa - TSO Pop Shop 2018.02.03 - U-R Delver.txt %}
 
-### 4. Dan Luchesa — U/R Delver
-
-{% deckfile /assets/files/2018/02/03/Dan Luchesa - TSO Pop Shop 2018.02.03 - U-R Delver.txt %}
-
-### 5. Paul Blakeley — Big Fish, Little Fish
-
-{% deckfile /assets/files/2018/02/03/Paul Blakeley - TSO Pop Shop 2018.02.03 - Big Fish, Little Fish.txt %}
+{% deckfile /assets/files/2018/02/03/05. Paul Blakeley - TSO Pop Shop 2018.02.03 - Big Fish, Little Fish.txt %}
 
 Metagame Breakdown:
 
@@ -76,8 +66,6 @@ Misc: 2
 - Dredge
 
 Thanks to everyone that came! It was a fun event! We should be announcing the next TSO soon! Likely it will be at Kidforce Collectibles in Berea Ohio! Hope to see you there!
-
-### Rajah James — Dragon 2018?
 
 *Posted as a reply.*
 

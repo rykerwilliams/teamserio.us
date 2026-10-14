@@ -70,48 +70,24 @@ Bazaar - 4 (Hogaak, Dredge, 2xHollowVine)
 
 ## Decklists
 
-### 1  Dave Ketterer  Ravager Shops  12
-
 {% deckfile /assets/files/2022/07/23/Dave Ketterer - TSO Warren 2022.07.23 - Ravager Shops.txt %}
 
-### 2  Max Gibson  Underworld Breach  12
-
 {% deckfile /assets/files/2022/07/23/Max Gibson - TSO Warren 2022.07.23 - Underworld Breach.txt %}
-### 3  Rajah James  Paradoxical Outcome  9
-
 {% deckfile /assets/files/2022/07/23/Rajah James - TSO Warren 2022.07.23 - Paradoxical Outcome.txt %}
-### 4  Chad Proctor-Frazier  Doomsday  9
-
 {% deckfile /assets/files/2022/07/23/Chad Proctor-Frazier - TSO Warren 2022.07.23 - Doomsday.txt %}
-
-### 5  Ken Riddle  Hogaak Vine  9
 
 {% deckfile /assets/files/2022/07/23/Ken Riddle - TSO Warren 2022.07.23 - Hogaak Vine.txt %}
 
-### 6  Jared Cassarly  Dredge  9
-
 {% deckfile /assets/files/2022/07/23/Jared Cassarly - TSO Warren 2022.07.23 - Dredge.txt %}
-
-### 7  John Poggemeyer  Infect  6
 
 {% deckfile /assets/files/2022/07/23/John Poggemeyer - TSO Warren 2022.07.23 - Infect.txt %}
 
-### 8  Paul Blakeley  Bant Control  6
-
 {% deckfile /assets/files/2022/07/23/Paul Blakeley - TSO Warren 2022.07.23 - Bant Control.txt %}
-
-### 9  Angelo Kortyka  Paradoxical Outcome  6
 
 {% deckfile /assets/files/2022/07/23/Angelo Kortyka - TSO Warren 2022.07.23 - Paradoxical Outcome.txt %}
 
-### 10  Mark Trogdon  Metalworker Prison  6
-
 {% deckfile /assets/files/2022/07/23/Mark Trogdon - TSO Warren 2022.07.23 - Metalworker Prison.txt %}
 
-### 11  Marshall Arthurs  HollowVine  3
-
 {% deckfile /assets/files/2022/07/23/Marshall Arthurs - TSO Warren 2022.07.23 - HollowVine.txt %}
-
-### 12  Jerry Yang  HollowVine  3
 
 {% deckfile /assets/files/2022/07/23/Jerry Yang - TSO Warren 2022.07.23 - HollowVine.txt %}

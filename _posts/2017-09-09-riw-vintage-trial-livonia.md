@@ -69,35 +69,21 @@ Final Standings after 5 rounds of Swiss and 3 Elimination rounds:
 
 ## Top 8 Lists:
 
-### 1. Kevin Cron — BUGstill
+{% deckfile /assets/files/2017/09/09/01. Kevin Cron - RIW Vintage Trial 2017.09.09 - BUGstill.txt %}
 
-{% deckfile /assets/files/2017/09/09/Kevin Cron - RIW Vintage Trial 2017.09.09 - BUGstill.txt %}
+{% deckfile /assets/files/2017/09/09/02. Jim Hall - RIW Vintage Trial 2017.09.09 - UR Delver.txt %}
 
-### 2. Jim Hall — UR Delver
+{% deckfile /assets/files/2017/09/09/03. Marland Moore - RIW Vintage Trial 2017.09.09 - Saheeli Oath.txt %}
 
-{% deckfile /assets/files/2017/09/09/Jim Hall - RIW Vintage Trial 2017.09.09 - UR Delver.txt %}
+{% deckfile /assets/files/2017/09/09/04. James Crouch - RIW Vintage Trial 2017.09.09 - BUG.txt %}
 
-### 3. Marland Moore — Saheeli Oath
+{% deckfile /assets/files/2017/09/09/05. Paul Blakeley - RIW Vintage Trial 2017.09.09 - Red Deck Wins.txt %}
 
-{% deckfile /assets/files/2017/09/09/Marland Moore - RIW Vintage Trial 2017.09.09 - Saheeli Oath.txt %}
-
-### 4. James Crouch — BUG
-
-{% deckfile /assets/files/2017/09/09/James Crouch - RIW Vintage Trial 2017.09.09 - BUG.txt %}
-
-### 5. Paul Blakeley — Red Deck Wins
-
-{% deckfile /assets/files/2017/09/09/Paul Blakeley - RIW Vintage Trial 2017.09.09 - Red Deck Wins.txt %}
-
-### 6. Justin Waller — Bomberman
-
-{% deckfile /assets/files/2017/09/09/Justin Waller - RIW Vintage Trial 2017.09.09 - Bomberman.txt %}
+{% deckfile /assets/files/2017/09/09/06. Justin Waller - RIW Vintage Trial 2017.09.09 - Bomberman.txt %}
 
 {% deckfile /assets/files/2017/09/09/Jon Johnson - RIW Vintage Trial 2017.09.09 - 4 Color Control.txt %}
 
-### 8. Charles Rolko — Turbo Depths
-
-{% deckfile /assets/files/2017/09/09/Charles Rolko - RIW Vintage Trial 2017.09.09 - Turbo Depths.txt %}
+{% deckfile /assets/files/2017/09/09/08. Charles Rolko - RIW Vintage Trial 2017.09.09 - Turbo Depths.txt %}
 
 Thanks to everyone that came out and played in this great event.
 

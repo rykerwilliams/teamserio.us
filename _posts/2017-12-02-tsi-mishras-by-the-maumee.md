@@ -154,13 +154,9 @@ Miscellaneous: 8
 - G/W Survival
 - 4 Color Vial Smasher
 
-### Rajah James
-
 *Posted as a reply.*
 
 {% deckfile /assets/files/2017/12/02/Rajah James - TSI Mishras Maumee 2017.12.02.txt %}
-
-### zodiacboyscout
 
 *Posted as a reply.*
 
