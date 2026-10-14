@@ -200,12 +200,13 @@ These have ordering constraints or deadlines attached.
       **state** on a given day. Working out what was actually legal in, say, spring 1999
       means replaying every announcement from 1994 forward and hoping none were missed.
 
-      ⚠️ **The Schools of Magic piece is an argument, not a dataset.** It is Menendian's
+      ⚠️ **Do not use the Schools of Magic piece as a source.** It is Menendian's
       *alternative* history: counted mechanically it carries **23 "should have been
       restricted/banned" statements against 3 describing what actually happened**. Scraping
-      it naively would silently blend the real list with the author's counterfactual one.
-      Use it for narrative and reasoning; take the actual actions from the timeline page
-      cross-checked against WotC's own B&R announcements.
+      it would silently blend the real list with the author's counterfactual one, and
+      people would be building tournament decks from the result. It is worth reading for
+      the reasoning behind each decision; it is not a record of them. Take the actual
+      actions from the timeline page, cross-checked against WotC's own B&R announcements.
 
       **Data model.** One append-only list of events — `{date, card, action}` where action is
       restrict / unrestrict / ban / unban — replayed to any date to get the state. Kept as a
