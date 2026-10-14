@@ -11,12 +11,12 @@
 1 Mindbreak Trap
 2 Flusterstorm
 4 Oath of Druids
-1 Yawgmoth’s Will
+1 Yawgmoth's Will
 1 Demonic Tutor
 1 Vampiric Tutor
 1 Demonic Consultation
 1 Jace, the Mind Sculptor
-1 Tezzeret, the Seeker
+1 Tezzeret the Seeker
 1 Time Vault
 1 Voltaic Key
 1 Engineered Explosives
@@ -46,8 +46,8 @@
 4 Leyline of the Void
 1 Rest in Peace
 2 Energy Flux
-1 Hurkyl’s Recall
-2 Nature’s Claim
+1 Hurkyl's Recall
+2 Nature's Claim
 2 Abrupt Decay
 1 Engineered Explosives
 1 Griselbrand

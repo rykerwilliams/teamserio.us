@@ -1,41 +1,41 @@
-4 delta
-1 catacobs
-4 sea
-2 swamp
-1 island
-1 lotus
-1 jet
-1 sapphire
-1 petal
-1 crypt
-1 mana vault
-1 sol ring
-4 chrome mox
-4 ad nauseam
-4 dark rit
-4 duress
-4 pact of negation
-3 mental
-3 preordain
-2 peek
-2 tendrils
-1 chain
-1 acall
-1 vamp
-1 mystical
-1 imp seal
-1 D-con
-1 brainstorm
-1 ponder
-1 probe
-1 will
-1 DT
+4 Polluted Delta
+1 Verdant Catacombs
+4 Underground Sea
+2 Swamp
+1 Island
+1 Black Lotus
+1 Mox Jet
+1 Mox Sapphire
+1 Lotus Petal
+1 Mana Crypt
+1 Mana Vault
+1 Sol Ring
+4 Chrome Mox
+4 Ad Nauseam
+4 Dark Ritual
+4 Duress
+4 Pact of Negation
+3 Mental Misstep
+3 Preordain
+2 Peek
+2 Tendrils of Agony
+1 Chain of Vapor
+1 Ancestral Recall
+1 Vampiric Tutor
+1 Mystical Tutor
+1 Imperial Seal
+1 Demonic Consultation
+1 Brainstorm
+1 Ponder
+1 Probe
+1 Yawgmoth's Will
+1 Demonic Tutor
 
-1 tropcial
-1 bayou
-4 xantid
-1 chain
-4 hurkyls
-2 extirpate
-1 doomsday
-1 sad sac
+1 Tropical Island
+1 Bayou
+4 Xantid Swarm
+1 Chain of Vapor
+4 Hurkyl's Recall
+2 Extirpate
+1 Doomsday
+1 Sadistic Sacrament

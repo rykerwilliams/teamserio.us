@@ -1,7 +1,7 @@
 1 Snapcaster Mage
 2 Harsh Mentor
 3 Young Pyromancer
-4 Delver of Secrets
+4 Delver of Secrets // Insectile Aberration
 1 Ancestral Recall
 1 Brainstorm
 1 Daze
@@ -34,7 +34,7 @@
 4 Energy Flux
 1 Daze
 1 Pyroblast
-2 Grafdigger’s Cage
+2 Grafdigger's Cage
 1 Mindbreak Trap
 2 Ravenous Trap
-2 Tormod’s Crypt```
+2 Tormod's Crypt

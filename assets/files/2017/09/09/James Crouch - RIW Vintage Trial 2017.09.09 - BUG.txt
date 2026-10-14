@@ -1,40 +1,40 @@
-4 deathrite shaman
-4 dark confidant
-3 leovold, emissary of trest
-2 jace, vryn's prodigy
-1 trygon predator
-4 force of will
-2 flusterstorm
-2 mental misstep
-2 jace, the mind sculptor
-2 abrupt decay
-1 fatal push
-1 snuff out
-1 time walk
-1 demonic tutor
-1 ancestral recall
-1 ponder
-1 brainstorm
-2 null rod
-1 black lotus
-1 mox emerald
-1 mox jet
-1 mox sapphire
-4 wasteland
-1 strip mine
-4 polluted delta
-3 misty rainforest
-3 underground sea
-2 tropical island
-1 bayou
-1 snow-covered island
+4 Deathrite Shaman
+4 Dark Confidant
+3 Leovold, Emissary of Trest
+2 Jace, Vryn's Prodigy // Jace, Telepath Unbound
+1 Trygon Predator
+4 Force of Will
+2 Flusterstorm
+2 Mental Misstep
+2 Jace, the Mind Sculptor
+2 Abrupt Decay
+1 Fatal Push
+1 Snuff Out
+1 Time Walk
+1 Demonic Tutor
+1 Ancestral Recall
+1 Ponder
+1 Brainstorm
+2 Null Rod
+1 Black Lotus
+1 Mox Emerald
+1 Mox Jet
+1 Mox Sapphire
+4 Wasteland
+1 Strip Mine
+4 Polluted Delta
+3 Misty Rainforest
+3 Underground Sea
+2 Tropical Island
+1 Bayou
+1 Snow-Covered Island
 
-3 grafdigger's cage
-3 ravenous trap
-3 nature's claim
-1 null rod
-1 energy flux
-1 fatal push
-1 dismember
-1 toxic deluge
-1 engineered explosives
+3 Grafdigger's Cage
+3 Ravenous Trap
+3 Nature's Claim
+1 Null Rod
+1 Energy Flux
+1 Fatal Push
+1 Dismember
+1 Toxic Deluge
+1 Engineered Explosives

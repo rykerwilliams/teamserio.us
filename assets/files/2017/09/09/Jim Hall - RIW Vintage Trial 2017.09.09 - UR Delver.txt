@@ -17,7 +17,7 @@
 4 Mental Misstep
 2 Snapcaster Mage
 4 Young Pyromancer
-4 Delver of Secrets
+4 Delver of Secrets // Insectile Aberration
 4 Flooded Strand
 4 Polluted Delta
 4 Wasteland
@@ -26,7 +26,7 @@
 4 Volcanic Island
 1 Library of Alexandria
 
-3 flusterstorm
-4 grafdigger's cage
-4 ingot chewer
-4 pyroblast
+3 Flusterstorm
+4 Grafdigger's Cage
+4 Ingot Chewer
+4 Pyroblast

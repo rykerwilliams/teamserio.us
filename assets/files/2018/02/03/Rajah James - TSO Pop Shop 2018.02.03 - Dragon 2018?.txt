@@ -14,7 +14,7 @@
 1 Imperial Seal
 1 Intuition
 1 Island
-3 Jace, Vryn's Prodigy
+3 Jace, Vryn's Prodigy // Jace, Telepath Unbound
 1 Mana Crypt
 1 Mox Emerald
 1 Mox Jet

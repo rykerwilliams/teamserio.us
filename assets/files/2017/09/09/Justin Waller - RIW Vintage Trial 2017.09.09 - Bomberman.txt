@@ -1,51 +1,51 @@
-1 mox sapphire
-1 mox ruby
-1 mox pearl
-1 mox emerald
-1 black lotus
-1 mana crypt
-1 sol ring
-2 sensei's divining top
-1 monastery mentor
-1 auriok salvagers
-2 trinket mage
-2 jace, vryn's prodigy
-1 walking ballista
-1 snapcaster mage
-1 jace, the mind sculptor
-1 dack fayden
-3 counterbalance
-1 abrade
-1 gush
-1 time walk
-3 preordain
-3 mental misstep
-1 ponder
-1 brainstorm
-4 force of will
-1 dig through time
-1 ancestral recall
-1 flusterstorm
-2 swords to plowshares
-1 balance
-1 engineered explosives
-3 scalding tarn
-3 tundra
-4 flooded strand
-2 volcanic island
-1 strip mine
-1 plains
-2 island
+1 Mox Sapphire
+1 Mox Ruby
+1 Mox Pearl
+1 Mox Emerald
+1 Black Lotus
+1 Mana Crypt
+1 Sol Ring
+2 Sensei's Divining Top
+1 Monastery Mentor
+1 Auriok Salvagers
+2 Trinket Mage
+2 Jace, Vryn's Prodigy // Jace, Telepath Unbound
+1 Walking Ballista
+1 Snapcaster Mage
+1 Jace, the Mind Sculptor
+1 Dack Fayden
+3 Counterbalance
+1 Abrade
+1 Gush
+1 Time Walk
+3 Preordain
+3 Mental Misstep
+1 Ponder
+1 Brainstorm
+4 Force of Will
+1 Dig Through Time
+1 Ancestral Recall
+1 Flusterstorm
+2 Swords to Plowshares
+1 Balance
+1 Engineered Explosives
+3 Scalding Tarn
+3 Tundra
+4 Flooded Strand
+2 Volcanic Island
+1 Strip Mine
+1 Plains
+2 Island
 
-2 containment priest
-2 grafdigger's cage
-2 rest in peace
-1 wear/tear
-1 terminus
-1 mountain
-1 pyroblast
-1 mindbreak trap
-1 engineered explosives
-1 pithing needle
-1 fragmentize
-1 tormod's crypt
+2 Containment Priest
+2 Grafdigger's Cage
+2 Rest in Peace
+1 Wear // Tear
+1 Terminus
+1 Mountain
+1 Pyroblast
+1 Mindbreak Trap
+1 Engineered Explosives
+1 Pithing Needle
+1 Fragmentize
+1 Tormod's Crypt

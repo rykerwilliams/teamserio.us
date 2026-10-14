@@ -19,12 +19,12 @@
 1 Ponder
 1 Tinker
 1 Sol Ring
-1 Yawgmoth’s Will
+1 Yawgmoth's Will
 1 Counterspell
 3 Mental Misstep
 2 Flusterstorm
 2 Mana Drain
-1 Search for Azcanta
+1 Search for Azcanta // Azcanta, the Sunken Ruin
 1 Mox Jet
 1 Voltaic Key
 1 Time Vault
@@ -42,12 +42,12 @@
 3 Volcanic Island
 
 1 Ravenous Trap
-2 Tormod’s Crypt
+2 Tormod's Crypt
 2 Surgical Extraction
 2 Thoughtseize
 2 Flusterstorm
 2 Abrade
-1 Hurkyl’s Recall
+1 Hurkyl's Recall
 1 Snapcaster Mage
 1 Toxic Deluge
 1 Shattering Spree

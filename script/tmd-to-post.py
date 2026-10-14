@@ -17,7 +17,7 @@ the conventions of the one that was ported by hand
   script/tmd-to-post.py --thread 1639 --out _posts/2017-12-02-tsi-mishras.md
   script/tmd-to-post.py --thread 3824 --stdout      # compare against the hand port
 """
-import argparse, html as htmllib, os, re, sys
+import argparse, html as htmllib, os, re, sys, time, urllib.parse
 
 HTML_CACHE = os.environ.get("TMD_HTML_CACHE", "/tmp/tmd-html")
 # Thread images -- standings screenshots, decklist photos, event shots -- are
@@ -352,6 +352,193 @@ def split_pres(body_html):
 
 
 DECK_DIR = "assets/files"
+NAME_CACHE = os.environ.get("TMD_NAME_CACHE", "/tmp/tmd-cardnames.json")
+
+# Player shorthand, resolved before Scryfall sees it. Fuzzy search would get
+# some of these wrong rather than fail -- "DT" is not a near-miss for "Demonic
+# Tutor", it is a different string entirely -- so guessing here is safer than
+# letting the API guess. Keyed loosely: case and punctuation are folded.
+ALIASES = {
+    "dcon": "Demonic Consultation",
+    "dconsult": "Demonic Consultation",
+    "dt": "Demonic Tutor",
+    "xantid": "Xantid Swarm",
+    "sadsac": "Sadistic Sacrament",
+    # Standard Vintage shorthand, from a list written entirely this way.
+    "acall": "Ancestral Recall",
+    "vamp": "Vampiric Tutor",
+    "mystical": "Mystical Tutor",
+    "mental": "Mental Misstep",
+    "tendrils": "Tendrils of Agony",
+    "petal": "Lotus Petal",
+    "jet": "Mox Jet",
+    "sapphire": "Mox Sapphire",
+    "sea": "Underground Sea",
+    "delta": "Polluted Delta",
+    "hurkyls": "Hurkyl's Recall",
+    "catacobs": "Verdant Catacombs",
+    "tropcial": "Tropical Island",
+    # "chain" is Chain of Vapor here, confirmed. Worth re-checking if a red
+    # deck ever ports: Chain Lightning is the other candidate for that word.
+    "lotus": "Black Lotus",
+    "crypt": "Mana Crypt",
+    "chain": "Chain of Vapor",
+    # Read as Yawgmoth's Will from context -- an Ad Nauseam list. Not
+    # confirmed; the alternative readings are all far less likely in Vintage.
+    "will": "Yawgmoth's Will",
+}
+
+_names = {}
+
+
+def _fuzzy_ok(written, card):
+    """Is a fuzzy match safe enough to accept unseen?
+
+    Scryfall's fuzzy search returns its best guess, not a confident one, and on
+    player shorthand that guess can be a different card entirely: "crypt" came
+    back as Cryptex rather than Mana Crypt, and "lotus" as a token named Lotus
+    rather than Black Lotus. Both would have gone into a decklist looking
+    perfectly ordinary.
+
+    So accept only when the written form appears as a whole word in the
+    result -- "xantid" in "Xantid Swarm" passes, "crypt" in "Cryptex" does not
+    -- and never accept a token. Anything else wants a human in ALIASES.
+    """
+    name = card.get("name") or ""
+    if card.get("layout") == "token" or "Token" in (card.get("type_line") or ""):
+        return False
+    w = re.sub(r"[^a-z0-9 ]", " ", written.lower()).split()
+    words = re.sub(r"[^a-z0-9 ]", " ", name.lower()).split()
+    if not w:
+        return False
+    # Every written word must at least begin a word of the result, and one of
+    # them must match a whole word. "dark rit" -> Dark Ritual passes on "dark";
+    # "imp seal" -> Imperial Seal passes on "seal"; "crypt" -> Cryptex has only
+    # the one word and it is a prefix, not a match, so it fails.
+    def close(a, b):
+        """One edit apart, for words long enough that it is a typo not a guess."""
+        if min(len(a), len(b)) < 6 or abs(len(a) - len(b)) > 1:
+            return False
+        prev = list(range(len(b) + 1))
+        for i, ca in enumerate(a, 1):
+            cur = [i]
+            for j, cb in enumerate(b, 1):
+                cur.append(min(prev[j] + 1, cur[j - 1] + 1,
+                               prev[j - 1] + (ca != cb)))
+            prev = cur
+        return prev[-1] <= 1
+
+    def strong(x):
+        return any(x == y or close(x, y) for y in words)
+
+    # Every written word must at least begin a word of the result, or be one
+    # typo away from it. And one word must match strongly -- exactly, or as a
+    # typo -- so a bare prefix alone is never enough: "dark rit" -> Dark Ritual
+    # passes on "dark", "Enginnered Explosives" passes on "explosives", but
+    # "crypt" -> Cryptex has only the one word and only prefixes it.
+    if not all(strong(x) or any(len(x) >= 3 and y.startswith(x) for y in words)
+               for x in w):
+        return False
+    if not any(strong(x) for x in w):
+        return False
+    # A single short word that merely appears somewhere in a longer card name
+    # is not evidence: "sea" matches Sea Serpent exactly, while in a Vintage
+    # list it means Underground Sea. Require a one-word result, or that the
+    # word is distinctive enough and leads the name.
+    if len(w) == 1 and len(words) > 1:
+        return len(w[0]) >= 6 and words[0] == w[0]
+    return True
+
+
+def resolve_names(names):
+    """Map each submitted card name to Scryfall's spelling.
+
+    Forum posters type these by hand, so a ported thread carries whatever they
+    wrote: 144 distinct names across the first five threads start lowercase,
+    and one list was typed entirely that way. Scryfall matches case
+    insensitively so nothing was broken, but "4 black lotus" next to
+    "4 Black Lotus" in the next deck reads like a transcription error.
+
+    Bulk endpoint first (75 per request), fuzzy only for what it misses. Cached
+    on disk so re-running a port is free.
+    """
+    import json as _json
+    import urllib.error
+    import urllib.request
+    global _names
+    if not _names:
+        try:
+            _names = _json.load(open(NAME_CACHE, encoding="utf-8"))
+        except Exception:
+            _names = {}
+    for n in names:
+        a = ALIASES.get(re.sub(r"[^a-z0-9]", "", (n or "").lower()))
+        if a:
+            _names[n] = a
+    todo = sorted({n for n in names if n and n not in _names})
+    if not todo:
+        return _names
+    ua = {"User-Agent": "teamserio-tmd-import/1.0 (+https://teamserio.us)",
+          "Accept": "application/json"}
+
+    def req(url, data=None):
+        h = dict(ua)
+        if data:
+            h["Content-Type"] = "application/json"
+        for i in range(4):
+            try:
+                r = urllib.request.Request(url, data=data, headers=h)
+                return _json.loads(urllib.request.urlopen(r, timeout=40).read())
+            except urllib.error.HTTPError as e:
+                if e.code == 404:
+                    return None
+                time.sleep(2 ** i)
+            except Exception:
+                time.sleep(2 ** i)
+        return None
+
+    missed = []
+    for i in range(0, len(todo), 75):
+        chunk = todo[i:i + 75]
+        r = req("https://api.scryfall.com/cards/collection",
+                _json.dumps({"identifiers": [{"name": n} for n in chunk]}).encode())
+        if not r:
+            missed.extend(chunk)
+            continue
+        found = {c["name"].lower(): c["name"] for c in r.get("data", [])}
+        nf = {(x.get("name") or "").lower() for x in r.get("not_found", [])}
+        for n in chunk:
+            if n.lower() in nf:
+                missed.append(n)
+            else:
+                hit = found.get(n.lower())
+                if hit is None:
+                    key = re.sub(r"[^a-z0-9]", "", n.lower())
+                    hit = next((v for k, v in found.items()
+                                if re.sub(r"[^a-z0-9]", "", k) == key), None)
+                if hit:
+                    _names[n] = hit
+                else:
+                    missed.append(n)
+        time.sleep(0.15)
+    for n in missed:
+        r = req("https://api.scryfall.com/cards/named?fuzzy=" + urllib.parse.quote(n))
+        got = (r or {}).get("name")
+        if got and _fuzzy_ok(n, r):
+            _names[n] = got
+        else:
+            # Leave it exactly as posted rather than guess. A wrong card in a
+            # decklist is worse than an unprettified one.
+            why = f" (rejected {got!r})" if got else ""
+            print(f"    card name unresolved, left as written: {n!r}{why}",
+                  file=sys.stderr)
+        time.sleep(0.2)
+    try:
+        _json.dump(_names, open(NAME_CACHE, "w", encoding="utf-8"))
+    except Exception:
+        pass
+    return _names
+
 
 
 SIDEBOARD = re.compile(r"^\s*(side\s*board|sideboard|sb)\s*:?\s*$", re.I)
@@ -519,7 +706,12 @@ def write_deckfile(lines, event_date, event_label, player, deck, seq):
             continue
         if not l.strip():
             continue
-        (side if cur is side else main).append(l.strip())
+        m = re.match(r"^(\d+)\s+(.+?)\s*$", l.strip())
+        if m:
+            qty, nm = m.group(1), m.group(2)
+            (side if cur is side else main).append(f"{qty} {_names.get(nm, nm)}")
+        else:
+            (side if cur is side else main).append(l.strip())
     os.makedirs(out_dir, exist_ok=True)
     body = "\n".join(main) + ("\n\n" + "\n".join(side) if side else "") + "\n"
     open(path, "w", encoding="utf-8").write(body)
@@ -573,6 +765,20 @@ def front_matter(meta):
 
 def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
           event_label=None):
+    # One batch for the whole post, before anything is written: 500-odd names
+    # across a thread, and the bulk endpoint takes 75 at a time.
+    all_names = []
+    for src in [owner_html] + [r["html"] for r in replies]:
+        for kind, text in split_pres(src):
+            if kind != "deck":
+                continue
+            for l in deck_lines(text):
+                m = re.match(r"^\d+\s+(.+?)\s*$", l.strip())
+                if m:
+                    all_names.append(m.group(1))
+    if all_names:
+        resolve_names(all_names)
+
     chunks = []
     seq = 0
     nonlocal_seq = [0]

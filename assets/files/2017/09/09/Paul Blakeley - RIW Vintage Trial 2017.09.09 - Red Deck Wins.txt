@@ -1,28 +1,28 @@
-4 simian spirit guide
-4 magus of the moon
-4 scab-clan berserker
-2 phyrexian revoker
-1 ingot chewer
-4 blood moon
-2 eidolon of the great revel
-1 pyrostatic pillar
-4 lightning bolt
-1 price of progress
-1 abrade
-3 chandra, torch of defiance
-4 null rod
-3 ensnaring bridge
-1 trinisphere
-1 chalice of the void
-1 lotus petal
-1 mox ruby
-10 mountain
-4 ancient tomb
-4 city of traitors
+4 Simian Spirit Guide
+4 Magus of the Moon
+4 Scab-Clan Berserker
+2 Phyrexian Revoker
+1 Ingot Chewer
+4 Blood Moon
+2 Eidolon of the Great Revel
+1 Pyrostatic Pillar
+4 Lightning Bolt
+1 Price of Progress
+1 Abrade
+3 Chandra, Torch of Defiance
+4 Null Rod
+3 Ensnaring Bridge
+1 Trinisphere
+1 Chalice of the Void
+1 Lotus Petal
+1 Mox Ruby
+10 Mountain
+4 Ancient Tomb
+4 City of Traitors
 
-4 ravenous trap
-4 grafdigger's cage
-2 ingot chewer
-3 by force
-1 abrade
-1 ensnaring bridge
+4 Ravenous Trap
+4 Grafdigger's Cage
+2 Ingot Chewer
+3 By Force
+1 Abrade
+1 Ensnaring Bridge

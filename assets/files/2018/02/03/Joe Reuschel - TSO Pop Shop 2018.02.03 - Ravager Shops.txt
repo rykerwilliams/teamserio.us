@@ -19,15 +19,15 @@
 1 Mox Pearl
 1 Black Lotus
 1 Mox Ruby
-4 Mishra’s Workshop
-4 Mishra’s Factory
+4 Mishra's Workshop
+4 Mishra's Factory
 4 Ancient Tomb
 4 Wasteland
 1 Tolarian Academy
 1 Strip Mine
 
-4 Grafdigger’s Cage
-3 Tormod’s Crypt
+4 Grafdigger's Cage
+3 Tormod's Crypt
 2 Wurmcoil Engine
 2 Ratchet Bomb
 2 Precursor Golem
