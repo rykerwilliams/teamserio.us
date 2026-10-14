@@ -1,0 +1,32 @@
+1 Black Lotus
+1 Mox Ruby
+1 Mox Sapphire
+2 Null Rod
+1 Ponder
+1 Gush
+1 Brainstorm
+1 Treasure Cruise
+1 Dig Through Time
+1 Time Walk
+1 Ancestral Recall
+4 Preordain
+2 Smash to Smithereens
+3 Lightning Bolt
+2 Spell Pierce
+4 Force of Will
+4 Mental Misstep
+2 Snapcaster Mage
+4 Young Pyromancer
+4 Delver of Secrets
+4 Flooded Strand
+4 Polluted Delta
+4 Wasteland
+1 Strip Mine
+1 Island
+4 Volcanic Island
+1 Library of Alexandria
+
+3 flusterstorm
+4 grafdigger's cage
+4 ingot chewer
+4 pyroblast

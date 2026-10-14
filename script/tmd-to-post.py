@@ -49,7 +49,7 @@ AUTHORS = {
     # Goes by "Shaman Ben" online rather than a full name, so the display name
     # is deliberately not expanded. Michigan Team Serious; the RIW Livonia
     # threads are his.
-    "shaman-ben": {"name": "Shaman Ben", "location": "Michigan, US", "links": []},
+    "shaman-ben": {"name": "Shaman Ben", "location": "Leng", "links": []},
     # UNCONFIRMED -- Rajah's recollection, not verified against the forum
     # profile. Worth checking before this is published under his name.
     "infant_no_1": {"name": "Josh McCurley", "links": []},
@@ -286,15 +286,30 @@ def split_pres(body_html):
 DECK_DIR = "assets/files"
 
 
+SIDEBOARD = re.compile(r"^\s*(side\s*board|sideboard|sb)\s*:?\s*$", re.I)
+MAINDECK = re.compile(r"^\s*(main\s*deck|maindeck|deck|md)\s*:?\s*$", re.I)
+
+
+def _key(x):
+    """Fold a handle or display name to something comparable."""
+    return re.sub(r"[^a-z0-9]+", "", (x or "").lower())
+
+
 def author_entry(handle):
-    """AUTHORS lookup that tolerates the forum's inconsistent handle casing."""
+    """AUTHORS lookup by handle OR display name.
+
+    The forum reports whichever it feels like: a thread by "shaman-ben" has
+    author "Shaman Ben", and Nat appears as both "grandpabelcher" and
+    "GrandpaBelcher". Matching the raw string missed all of those, so Shaman
+    Ben's ported post came out with his name but no location.
+    """
     if not handle:
         return {}
     if handle in AUTHORS:
         return AUTHORS[handle]
-    low = handle.lower()
-    for k, v in AUTHORS.items():
-        if k.lower() == low:
+    k = _key(handle)
+    for key, v in AUTHORS.items():
+        if _key(key) == k or _key(v.get("name")) == k:
             return v
     return {}
 
@@ -302,7 +317,7 @@ def author_entry(handle):
 def deck_lines(text):
     """The card lines of a <pre> block, with the source's leading 'Deck' dropped."""
     lines = [l.rstrip() for l in text.strip().splitlines()]
-    while lines and lines[0].strip().lower() in ("deck", "deck:", ""):
+    while lines and (not lines[0].strip() or MAINDECK.match(lines[0])):
         lines.pop(0)
     while lines and not lines[-1].strip():
         lines.pop()
@@ -344,8 +359,7 @@ def deck_owner(md_before, lines):
         if len(idx) < n:
             return lines
         body = lines[idx[n - 1][0] + 1:]
-        while body and body[0].strip().lower().rstrip(":") in (
-                "main deck", "maindeck", "deck", ""):
+        while body and (not body[0].strip() or MAINDECK.match(body[0])):
             body = body[1:]
         return body
 
@@ -421,7 +435,7 @@ def write_deckfile(lines, event_date, event_label, player, deck, seq):
 
     main, side, cur = [], [], None
     for l in lines:
-        if l.strip().lower().rstrip(":") == "sideboard":
+        if SIDEBOARD.match(l):
             cur = side
             continue
         if not l.strip():
