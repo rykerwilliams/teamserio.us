@@ -603,14 +603,15 @@ def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
         chunks.append("{%% deckfile %s %%}" % path)
     body = "\n\n".join(c for c in chunks if c.strip())
 
+    from_decks = []
     if replies:
         body += "\n\n## Replies and relevant bits\n"
         for r in replies:
             # Someone posting their list in a reply is still a decklist, and
             # dropping it loses content the thread had -- #1738 has one that
-            # belongs to nobody in the top five. Write it as a file like any
-            # other, credited to whoever posted it.
-            reply_decks = []
+            # belongs to nobody in the top five. The list goes up with the other
+            # decklists rather than down here, since that is where a reader
+            # looking for decklists will be; the reply keeps whatever it said.
             for kind, text in split_pres(r["html"]):
                 if kind != "deck":
                     continue
@@ -623,15 +624,35 @@ def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
                 rpath = write_deckfile(
                     dl, meta.get("event_date") or meta.get("date", "")[:10],
                     label, who, rd, nonlocal_seq[0])
-                reply_decks.append("{%% deckfile %s %%}" % rpath)
-            prose = md_from(re.sub(r"<pre[^>]*>.*?</pre>", "", r["html"], flags=re.S | re.I))
-            if not prose.strip() and not reply_decks:
+                head = f"### {who}" + (f" \u2014 {rd}" if rd else "")
+                # Naming the handle as well is only worth it when it is a
+                # different person from the one the deck is filed under --
+                # "Rajah James ... posted as a reply by cleverpseudonym" is
+                # the same person twice.
+                by = "" if _key(who) == _key(r["username"]) or \
+                     _key(author_entry(r["username"]).get("name")) == _key(who) \
+                     else f" by {r['username']}"
+                from_decks.append(
+                    f'{head}\n\n*Posted as a reply{by}.*\n\n'
+                    f'{"{%% deckfile %s %%}" % rpath}')
+            # Strip BOTH decklist forms from the prose. <pre> was handled; the
+            # widget was not, so its cards rendered as a wall of inline links
+            # immediately above the very deckfile block they had become.
+            stripped = re.sub(r"<pre[^>]*>.*?</pre>", "", r["html"], flags=re.S | re.I)
+            stripped = WIDGET.sub("", stripped)
+            prose = md_from(stripped)
+            if not prose.strip():
                 continue
             body += f'\n**Reply from {r["username"]}:**\n\n'
             if prose.strip():
                 body += f"{prose}\n"
-            for d in reply_decks:
-                body += f"\n{d}\n"
+
+    if from_decks:
+        marker = "\n\n## Replies and relevant bits\n"
+        block = "\n\n" + "\n\n".join(from_decks)
+        body = (body.replace(marker, block + marker, 1) if marker in body
+                else body + block)
+
     # Rewrite forum uploads to local copies, reporting what happened to each.
     notes = []
     snap_ts = re.search(r"/web/(\d{14})", meta.get("snapshot", "") or "")

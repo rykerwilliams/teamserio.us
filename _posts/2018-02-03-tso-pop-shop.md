@@ -77,6 +77,12 @@ Misc: 2
 
 Thanks to everyone that came! It was a fun event! We should be announcing the next TSO soon! Likely it will be at Kidforce Collectibles in Berea Ohio! Hope to see you there!
 
+### Rajah James — Dragon 2018?
+
+*Posted as a reply.*
+
+{% deckfile /assets/files/2018/02/03/Rajah James - TSO Pop Shop 2018.02.03 - Dragon 2018?.txt %}
+
 ## Replies and relevant bits
 
 **Reply from garbageaggro:**
@@ -106,6 +112,4 @@ Super fun event. Not far from home, and good to see [@Prkchpsndwiches](http://ww
 Anyway, this is the pile I played. Super fun times going 2-3.
 
 Mainly chose to play it because I have wanted to try the deck but can not reasonably play it on MTGO due to time restrictions.
-
-{% deckfile /assets/files/2018/02/03/Rajah James - TSO Pop Shop 2018.02.03 - Dragon 2018?.txt %}
 
