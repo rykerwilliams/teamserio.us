@@ -6,7 +6,9 @@ the conventions of the one that was ported by hand
 (_posts/2022-07-23-tso-all-american-warren.md):
 
   - layout: default-with-decklists
-  - <pre> blocks become {% decklist %} ... {% enddecklist %}
+  - <pre> blocks are written to assets/files/YYYY/MM/DD/ as .txt and
+    referenced with {% deckfile %}; --inline-decklists keeps the old
+    inline {% decklist %} form
   - the author block comes from AUTHORS, keyed by TMD handle
   - replies land in a "Replies and relevant bits" section, each marked
     "Reply from <handle>", while any decklist in a reply is absorbed above
@@ -234,6 +236,66 @@ def split_pres(body_html):
     return parts
 
 
+DECK_DIR = "assets/files"
+
+
+def deck_lines(text):
+    """The card lines of a <pre> block, with the source's leading 'Deck' dropped."""
+    lines = [l.rstrip() for l in text.strip().splitlines()]
+    while lines and lines[0].strip().lower() in ("deck", "deck:", ""):
+        lines.pop(0)
+    while lines and not lines[-1].strip():
+        lines.pop()
+    return lines
+
+
+def deck_owner(md_before):
+    """Pull (rank, player, deck) out of the line that introduces a decklist.
+
+    The forum posts these as a tab-separated row lifted from a spreadsheet --
+    "1\tDave Ketterer\tRavager Shops\t12" -- which is also what becomes the
+    standings table. Returns None when the line is not that shape, and the
+    caller falls back to a positional name."""
+    for line in reversed((md_before or "").strip().splitlines()):
+        if not line.strip():
+            continue
+        cells = [c.strip() for c in line.split("\t") if c.strip()]
+        if len(cells) >= 3 and re.fullmatch(r"\d+", cells[0]):
+            return cells[0], cells[1], cells[2]
+        return None
+    return None
+
+
+def write_deckfile(lines, event_date, event_label, player, deck, seq):
+    """Write a decklist as its own .txt and return the path to reference.
+
+    Preferred over an inline {% decklist %} block: the list stays a plain text
+    file someone can download and import, and the post just points at it.
+
+    Main and sideboard are separated by a bare blank line. Do NOT write the
+    word "Sideboard" -- deckfile_tag.rb emits that heading for either a blank
+    line or a line reading "Sideboard", so including it renders it twice."""
+    y, m, d = (event_date or "0000-00-00").split("-")[:3]
+    out_dir = os.path.join(DECK_DIR, y, m, d)
+    who = player or f"Deck {seq}"
+    name = f"{who} - {event_label} - {deck}.txt" if deck else f"{who} - {event_label}.txt"
+    name = re.sub(r"[/\\]", "-", name)
+    path = os.path.join(out_dir, name)
+
+    main, side, cur = [], [], None
+    for l in lines:
+        if l.strip().lower().rstrip(":") == "sideboard":
+            cur = side
+            continue
+        if not l.strip():
+            continue
+        (side if cur is side else main).append(l.strip())
+    os.makedirs(out_dir, exist_ok=True)
+    body = "\n".join(main) + ("\n\n" + "\n".join(side) if side else "") + "\n"
+    open(path, "w", encoding="utf-8").write(body)
+    return "/" + path.replace(os.sep, "/")
+
+
 def decklist_block(text):
     """A {% decklist %} block. The source's leading 'Deck' line is dropped -- the
     hand-ported post does not carry it, and the tag supplies its own heading."""
@@ -279,10 +341,26 @@ def front_matter(meta):
     return "\n".join(out)
 
 
-def build(meta, owner_html, replies, fetch_images=True):
+def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
+          event_label=None):
     chunks = []
+    seq = 0
+    label = event_label or meta.get("event_label") or "TMD"
     for kind, text in split_pres(owner_html):
-        chunks.append(decklist_block(text) if kind == "deck" else md_from(text))
+        if kind != "deck":
+            chunks.append(md_from(text))
+            continue
+        seq += 1
+        lines = deck_lines(text)
+        if not deckfiles:
+            chunks.append("{% decklist %}\n" + "\n".join(lines) + "\n{% enddecklist %}")
+            continue
+        # The introducing line is the last thing in the markdown chunk above.
+        owner = deck_owner(chunks[-1] if chunks else "")
+        rank, player, deck = owner if owner else (None, None, None)
+        path = write_deckfile(lines, meta.get("event_date") or meta.get("date", "")[:10],
+                              label, player, deck, seq)
+        chunks.append("{%% deckfile %s %%}" % path)
     body = "\n\n".join(c for c in chunks if c.strip())
 
     if replies:
@@ -316,6 +394,16 @@ def main():
     ap.add_argument("--stdout", action="store_true")
     ap.add_argument("--title")
     ap.add_argument("--tags", default="vintage tournament-writeup")
+    ap.add_argument("--event", help='short label for decklist filenames, '
+                    'e.g. "TSO Warren 2022.07.23"')
+    ap.add_argument("--event-date", help="YYYY-MM-DD the event was held. Sets the "
+                    "post date and the assets/files/ folder. The site's URLs are "
+                    "built from the post date and the hand port uses the event "
+                    "date, not the day it was posted to the forum -- slug parsing "
+                    "only recovers it for some threads, so pass it explicitly.")
+    ap.add_argument("--inline-decklists", action="store_true",
+                    help="emit inline decklist blocks instead of writing .txt "
+                         "files and referencing them with the deckfile tag")
     ap.add_argument("--no-images", action="store_true",
                     help="leave image urls remote instead of downloading them")
     a = ap.parse_args()
@@ -369,7 +457,13 @@ def main():
     meta["date"] = (meta["posted"][:19].replace("T", " ") + " +0000") if meta["posted"] else ""
     meta["tags"] = a.tags
 
-    text = build(meta, owner["html"], replies, fetch_images=not a.no_images)
+    if a.event_date:
+        meta["event_date"] = a.event_date
+        # The post date drives the URL; the forum posting date stays in
+        # tmd_snapshot as provenance.
+        meta["date"] = a.event_date + meta.get("date", "")[10:]
+    text = build(meta, owner["html"], replies, fetch_images=not a.no_images,
+                 deckfiles=not a.inline_decklists, event_label=a.event)
     if a.stdout or not a.out:
         print(text)
     else:
