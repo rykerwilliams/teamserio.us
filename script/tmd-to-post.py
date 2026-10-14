@@ -46,6 +46,13 @@ AUTHORS = {
     "nartman99": {"name": "Nam Tran",
                   "avatar": "../assets/images/avatars/namQ_277x325.png",
                   "location": "Ohio, US", "links": []},
+    # Goes by "Shaman Ben" online rather than a full name, so the display name
+    # is deliberately not expanded. Michigan Team Serious; the RIW Livonia
+    # threads are his.
+    "shaman-ben": {"name": "Shaman Ben", "location": "Michigan, US", "links": []},
+    # UNCONFIRMED -- Rajah's recollection, not verified against the forum
+    # profile. Worth checking before this is published under his name.
+    "infant_no_1": {"name": "Josh McCurley", "links": []},
     # Nat: _posts/2024-06-08-castmaster-season-1.md
     "grandpabelcher": {"name": "Nat Moes",
                        "avatar": "../assets/images/avatars/nat_400x400.jpg",
@@ -164,6 +171,12 @@ def tabbed_table(text):
     rows = [l for l in text.splitlines() if "\t" in l]
     if len(rows) < 2:
         return None
+    # "\u2022\tBig Fish, Little Fish" is a bulleted list that happens to use a tab
+    # for indentation, not a two-column table. Treating it as one produced rows
+    # of "| \u2022 | Big Fish, Little Fish |" with separator lines spliced through
+    # the middle of the metagame breakdown.
+    if all(BULLET.match(r) for r in rows):
+        return None
     cells = [[c.strip() for c in r.split("\t")] for r in rows]
     width = max(len(c) for c in cells)
     cells = [c + [""] * (width - len(c)) for c in cells]
@@ -173,6 +186,9 @@ def tabbed_table(text):
     for r in body:
         out.append("| " + " | ".join(r) + " |")
     return "\n".join(out)
+
+
+BULLET = re.compile(r"^\s*[\u2022\u00b7\u25aa\u25cf*]\s*\t?\s*")
 
 
 def md_from(node):
@@ -222,7 +238,10 @@ def md_from(node):
         run.clear()
 
     for ln in lines:
-        if "\t" in ln:
+        if BULLET.match(ln):
+            flush()
+            out.append("- " + BULLET.sub("", ln).strip())
+        elif "\t" in ln:
             run.append(ln)
         elif ln.strip() == "" and run:
             continue                 # blank line inside a pasted table
@@ -234,6 +253,12 @@ def md_from(node):
 
     s = re.sub(r"[ \t]+\n", "\n", s)
     s = re.sub(r"\n{3,}", "\n\n", s)
+    # Bullets arrive as <br/>-separated lines inside one <p>, and paragraph
+    # normalisation then puts a blank line between each, so a five-item
+    # metagame breakdown rendered as five separate paragraphs. Close them up
+    # so consecutive items are one list.
+    s = re.sub(r"(?m)^(- .+)\n\n(?=- )", r"\1\n", s)
+    s = re.sub(r"(?m)^(- .+)\n\n(?=- )", r"\1\n", s)
     return s.strip()
 
 
