@@ -53,6 +53,13 @@ AUTHORS = {
     # UNCONFIRMED -- Rajah's recollection, not verified against the forum
     # profile. Worth checking before this is published under his name.
     "infant_no_1": {"name": "Josh McCurley", "links": []},
+    # None of these three have written here under their own name yet, so there
+    # is no existing author block to match and no avatar in the repo. They get
+    # a name and nothing else; tmd-inventory.py --avatars can pull their forum
+    # avatar later if one was archived.
+    "brassman": {"name": "Andy Probasco", "links": []},
+    "lhc": {"name": "Jimmy McCarthy", "links": []},
+    "cutlex": {"name": "Duane Haddix", "links": []},
     # Nat: _posts/2024-06-08-castmaster-season-1.md
     "grandpabelcher": {"name": "Nat Moes",
                        "avatar": "../assets/images/avatars/nat_400x400.jpg",

@@ -64,6 +64,11 @@ HANDLES = [
     "presidentskroob",
     "thallidtosser",
     "bscheidemann",
+    # Added once their real names were identified: a handle that is not listed
+    # here is never enumerated, so any thread they started is invisible to the
+    # inventory unless its title happens to match a keyword.
+    "brassman",          # Andy Probasco
+    "cutlex",            # Duane Haddix
 ]
 
 # Venues these events ran at, for a location field on the ported post. Titles are
