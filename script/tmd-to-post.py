@@ -309,6 +309,9 @@ def deck_lines(text):
     return lines
 
 
+MONTHS = ["January","February","March","April","May","June","July",
+          "August","September","October","November","December"]
+
 ORDINALS = {"first":1,"second":2,"third":3,"fourth":4,"fifth":5,"sixth":6,"seventh":7,
             "eighth":8,"ninth":9,"tenth":10,"eleventh":11,"twelfth":12,
             "thirteenth":13,"fourteenth":14,"fifteenth":15,"sixteenth":16}
@@ -520,6 +523,20 @@ def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
     for name, note in notes:
         print(f"    image {name}: {note}", file=sys.stderr)
 
+    # Say where this came from, in the post itself rather than only in front
+    # matter. These threads 404 on the live forum, so the Wayback copy is the
+    # only thing a reader can check the port against.
+    snap = meta.get("snapshot")
+    if snap:
+        posted = (meta.get("posted") or "")[:10]
+        when = ""
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", posted):
+            y, m, d = posted.split("-")
+            when = f" on {int(d)} {MONTHS[int(m) - 1]} {y}"
+        body = (f"*Originally posted to The Mana Drain{when}. The forum has since "
+                f"reorganised and the thread is gone; this is ported from the "
+                f"[archived copy]({snap}).*\n\n") + body
+
     return front_matter(meta) + "\n\n" + body + "\n"
 
 
@@ -530,6 +547,8 @@ def main():
     ap.add_argument("--stdout", action="store_true")
     ap.add_argument("--title")
     ap.add_argument("--tags", default="vintage tournament-writeup")
+    ap.add_argument("--no-archive-tag", action="store_true",
+                    help="omit the tmd-archive tag this script otherwise adds")
     ap.add_argument("--event", help='short label for decklist filenames, '
                     'e.g. "TSO Warren 2022.07.23"')
     ap.add_argument("--event-date", help="YYYY-MM-DD the event was held. Sets the "
@@ -567,7 +586,7 @@ def main():
     ts, url = m.group(1), m.group(2).replace("_", "/")
     # recover the real url from the cached filename's shape
     url = re.sub(r"^http/", "http://", url)
-    meta, err = inv.thread_meta(a.thread, ts, _url_from_cache(name))
+    meta, err = inv.thread_meta(a.thread, ts, _url_from_cache(name, a.thread))
     if err:
         sys.exit(f"could not parse cached page: {err}")
 
@@ -591,6 +610,16 @@ def main():
     meta["tid"] = a.thread
     meta["title"] = a.title or _title_from_slug(slug, meta)
     meta["date"] = (meta["posted"][:19].replace("T", " ") + " +0000") if meta["posted"] else ""
+    # Every post this script produces is a thread rescued from The Mana Drain,
+    # and they should be findable as a group. Deliberately NOT the existing
+    # "tmd" tag: that is already in use on posts which merely cite a TMD thread
+    # (tsi-the-land-2, tsi-the-land-3, serious-champ-na-vintage-2022), none of
+    # which are ports. "tmd-archive" means the post IS one.
+    if not a.no_archive_tag:
+        tags = (a.tags or "").split()
+        if "tmd-archive" not in tags:
+            tags.append("tmd-archive")
+        a.tags = " ".join(tags)
     meta["tags"] = a.tags
 
     if a.event_date:
@@ -609,8 +638,41 @@ def main():
               file=sys.stderr)
 
 
-def _url_from_cache(name):
-    """Rebuild the archived url from the cache filename tmd-inventory.py wrote."""
+CDX_CACHE = os.environ.get("TMD_CACHE", "/tmp/tmd-cdx.txt")
+_cdx_urls = None
+
+
+def _cdx_lookup(ts, tid):
+    """The real archived url for a thread, from the CDX index.
+
+    The cache filename cannot be reversed into a url: tmd-inventory.py builds it
+    with re.sub(r"[^A-Za-z0-9]+", "_", ...), which collapses "/", "?", "=" and
+    "-" all into the same character. Reconstructing from it produced
+    ".../topic-1738-team-serious-open-...-1-lang-en-US", which 404s, and that
+    string was going into every ported post as its provenance link.
+    """
+    global _cdx_urls
+    if _cdx_urls is None:
+        _cdx_urls = {}
+        try:
+            with open(CDX_CACHE, encoding="utf-8", errors="replace") as fh:
+                for line in fh:
+                    m = re.search(r"(\d{14})\s+(\S*?/topic/(\d+)/[^\s]*)", line)
+                    if m:
+                        _cdx_urls.setdefault((m.group(1), m.group(3)), m.group(2))
+        except OSError:
+            pass
+    return _cdx_urls.get((ts, str(tid)))
+
+
+def _url_from_cache(name, tid=None):
+    """The archived url for a cached page, from the CDX index where possible."""
+    ts = re.match(r"^(\d{14})_", name)
+    if ts and tid:
+        hit = _cdx_lookup(ts.group(1), tid)
+        if hit:
+            return hit
+    # Last resort, and known to be unreliable -- see _cdx_lookup.
     body = re.sub(r"^\d{14}_", "", name)[:-len(".html")]
     body = body.replace("http_www_themanadrain_com_", "http://www.themanadrain.com/")
     body = body.replace("http_themanadrain_com_", "http://themanadrain.com/")

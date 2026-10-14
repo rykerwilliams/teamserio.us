@@ -3,7 +3,7 @@ layout: default-with-decklists
 title:  "TSO @ All-American Warren - 2022.07.23"
 date:   2022-07-23 16:20:59 +0000
 categories: tournament-writeup
-tags: vintage open warren tso tournament-writeup
+tags: vintage open warren tso tournament-writeup tmd-archive
 include_on_feed   : true
 show_author       : true
 show_bottomnavs   : true
@@ -27,6 +27,8 @@ author:
     - url: https://www.facebook.com/rajah.james
       icon: "fab fa-facebook"
       label: "My personal FB"
+tmd_thread: 3824
+tmd_snapshot: https://web.archive.org/web/20230205014206/http://themanadrain.com/topic/3824/2022-07-23-team-serious-open-all-american-cards-and-comics-warren-oh-results
 ---
 
 12 Players gathered for the first time at All-American Cards and Comics, including 7 Seriousos. Some of us met for breakfast at the Mocha House. It was good 🙂
