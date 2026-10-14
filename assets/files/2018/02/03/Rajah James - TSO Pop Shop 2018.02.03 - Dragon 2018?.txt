@@ -1,0 +1,47 @@
+1 Ancestral Recall
+2 Animate Dead
+1 Badlands
+4 Bazaar of Baghdad
+1 Black Lotus
+1 By Force
+1 Chain of Vapor
+3 Collective Brutality
+2 Dance of the Dead
+1 Demonic Tutor
+1 Dig Through Time
+2 Flusterstorm
+1 Gitaxian Probe
+1 Imperial Seal
+1 Intuition
+1 Island
+3 Jace, Vryn's Prodigy
+1 Mana Crypt
+1 Mox Emerald
+1 Mox Jet
+1 Mox Pearl
+1 Mox Ruby
+1 Mox Sapphire
+1 Necromancy
+4 Polluted Delta
+2 Pull from Tomorrow
+2 Pyroblast
+3 Scalding Tarn
+1 Sol Ring
+1 Tasigur, the Golden Fang
+2 Thoughtseize
+1 Time Walk
+1 Treasure Cruise
+3 Underground Sea
+1 Vampiric Tutor
+2 Volcanic Island
+3 Worldgorger Dragon
+
+1 Blightsteel Colossus
+3 Defense Grid
+1 Helm of Obedience
+2 Ingot Chewer
+4 Leyline of the Void
+1 Tezzeret the Seeker
+1 Time Vault
+1 Tinker
+1 Voltaic Key

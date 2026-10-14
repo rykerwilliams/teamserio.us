@@ -150,9 +150,15 @@ Transforms it applies, each one worked out by diffing against the hand port:
 Front matter carries `tmd_thread` and `tmd_snapshot` so every ported post says where it
 came from, plus `event_date`, `venue` and `players`.
 
-Note the post `date:` should be the **event** date, not the TMD posting date — that is what
-the hand port does, and it is what the site's URL is built from. The posting date stays as
-provenance.
+Note the post `date:` is the day the write-up went up on **The Mana Drain**, not the day
+the event was held, so the site's dates line up with the threads they came from. They
+differ by a few days on every thread, and the site's URL is built from this date. The
+event date is kept in `event_date`, and is what files the decklists under
+`assets/files/YYYY/MM/DD`.
+
+This reverses the earlier convention, which followed the hand port and used the event
+date. Changing it moved every ported post's URL, including two that were already live;
+there is no redirect plugin here, so those old URLs now 404.
 
 ### Still worth considering
 
@@ -309,6 +315,59 @@ handles out of it, add them, re-run.
 
 It also corrected one: **Nam Tran is `nartman99`**, not `nartman` — the latter has no
 archived pages at all, the former has eight including `/topics`.
+
+## Threads the site already covers -- do not port these
+
+Check before porting. Two candidate threads correspond to posts that already
+exist, and porting either would publish a duplicate.
+
+| thread | existing post | state |
+|---|---|---|
+| `#3824` | `_posts/2022-07-24-tso-all-american-warren.md` | Ported. Was the hand port; replaced by the converted version, verified 12 of 12 decklists identical at 464 card lines. |
+| `#3862` | `_posts/2022-09-18-tso-all-american-warren.md` | Ported. Also a hand port -- every phrase of its prose traces back to the thread -- replaced by the converted version, verified 8 of 8 decklists identical at 321 card lines. |
+
+Both carry a `tmd_thread` marker now, which is what lets a batch run skip them.
+Rajah's rule: one post per event, and where a hand-written port and a converted
+one both exist, keep the converted one -- its decklists are files.
+
+Near misses that are NOT duplicates:
+
+- `#2653` "team serious middle school chaos draft report" is dated three days
+  before `2019-06-15-tsi-the-land.md`. Same weekend, different event. Port it.
+
+## Things that look like bugs but are the source
+
+- **`0 Mishra's Workshop`** leads Duane Haddix's list in #2786. It is deliberate:
+  he usually plays Workshops and brought Karn Eldrazi instead, so he opened the
+  list by saying he had none. The deck is 60/15 without it. Confirmed with
+  Rajah; leave it. Do not add a pass that strips zero-quantity lines without
+  checking for this.
+- **58-card main deck** in James Crouch's list in #1483. Posted that way in
+  2017, not a parse error.
+- **61-card main decks** for Ben Perry and Frank Singel in #1639. Also as
+  posted.
+
+Totalling a decklist does not catch any of these -- the first sums to 60 and
+the others are simply what someone wrote. They are only visible by reading the
+list, which is the argument for a human reading each ported post before it
+publishes.
+
+## Dropbox is supporting material, not a source
+
+Rajah's Dropbox has an event archive at `mtgo/ts/` -- roughly 940 files, with
+folders matching several of the threads below (`land2`..`land6`, `hazard6`,
+`KSI 2024`, `hsi7 - 2024`, `tsl`), including decklists already in text form and
+event photos.
+
+**It is secondary material only.** The scope of this work is what is stranded
+on The Mana Drain; the inventory comes from the archive and nothing else. Do
+not browse `mtgo/ts/` to discover events, and do not port a post because a
+folder exists for it.
+
+Consult it only for a thread already found on TMD, and only to fill a gap that
+thread has -- a decklist the snapshot truncated, a photo the Archive never
+captured. Reached live with `rclone` against the `dp:` remote; the NAS copy
+under `nas4-cloud` is a mirror and may be stale.
 
 ## Porting notes
 

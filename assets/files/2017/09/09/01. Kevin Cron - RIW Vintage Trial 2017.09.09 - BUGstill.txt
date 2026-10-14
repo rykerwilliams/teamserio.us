@@ -1,0 +1,43 @@
+4 Deathrite Shaman
+3 Leovold, Emissary of Trest
+1 Ramunap Excavator
+3 Jace, the Mind Sculptor
+4 Standstill
+1 Ancestral Recall
+1 Brainstorm
+1 Vampiric Tutor
+1 Null Rod
+1 Dismember
+3 Abrupt Decay
+1 Pernicious Deed
+1 Toxic Deluge
+4 Force of Will
+3 Mental Misstep
+2 Mindbreak Trap
+2 Mana Drain
+1 Black Lotus
+1 Mox Sapphire
+1 Mox Jet
+1 Mox Emerald
+1 Strip Mine
+3 Wasteland
+1 Creeping Tar Pit
+1 Treetop Village
+1 Mishra's Factory
+4 Misty Rainforest
+1 Polluted Delta
+1 Verdant Catacombs
+1 Forest
+2 Tropical Island
+3 Underground Sea
+1 Bayou
+
+1 Null Rod
+2 Nature's Claim
+1 Dismember
+1 Engineered Explosives
+3 Energy Flux
+1 Wasteland
+1 Trygon Predator
+1 Grafdigger's Cage
+4 Leyline of the Void

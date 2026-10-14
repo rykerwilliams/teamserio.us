@@ -1,0 +1,50 @@
+1 Ancestral Recall
+1 Black Lotus
+1 Brainstorm
+1 Chain of Vapor
+2 Dark Petition
+4 Dark Ritual
+1 Demonic Tutor
+1 Dig Through Time
+2 Doomsday
+2 Duress
+3 Flusterstorm
+1 Gitaxian Probe
+1 Gush
+1 Hurkyl's Recall
+1 Lion's Eye Diamond
+1 Lotus Petal
+1 Mana Crypt
+3 Mental Misstep
+1 Mox Jet
+1 Mox Sapphire
+1 Necropotence
+1 Ponder
+4 Preordain
+2 Sensei's Divining Top
+1 Skeletal Scrying
+1 Sol Ring
+1 Tendrils of Agony
+3 Thoughtseize
+1 Timetwister
+1 Vampiric Tutor
+1 Yawgmoth's Will
+1 Bloodstained Mire
+1 Flooded Strand
+2 Island
+4 Polluted Delta
+1 Scalding Tarn
+1 Swamp
+3 Underground Sea
+
+2 Fatal Push
+2 Hurkyl's Recall
+1 Chain of Vapor
+1 Island
+1 Laboratory Maniac
+2 Pithing Needle
+2 Ravenous Trap
+1 Extirpate
+1 Toxic Deluge
+1 Virulent Plague
+1 Yixlid Jailer

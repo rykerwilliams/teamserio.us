@@ -1,0 +1,40 @@
+4 Bazaar of Baghdad
+1 Bojuka Bog
+3 Dark Depths
+1 Forest
+2 Ghost Quarter
+1 Glacial Chasm
+1 Misty Rainforest
+3 Riftstone Portal
+1 Strip Mine
+2 Taiga
+2 The Tabernacle at Pendrell Vale
+4 Thespian's Stage
+1 Verdant Catacombs
+4 Wasteland
+1 Windswept Heath
+1 Wooded Foothills
+3 Ancient Grudge
+1 Chalice of the Void
+3 Crop Rotation
+4 Exploration
+1 Fastbond
+3 Gamble
+4 Life from the Loam
+3 Manabond
+2 Mental Misstep
+3 Mox Diamond
+1 Mox Emerald
+1 Mox Ruby
+
+1 Bojuka Bog
+1 Glacial Chasm
+2 Grafdigger's Cage
+2 Mindbreak Trap
+2 Nature's Claim
+2 Null Rod
+1 Pithing Needle
+1 Pyroblast
+1 Ramunap Excavator
+1 Red Elemental Blast
+1 Song of the Dryads

@@ -1,0 +1,40 @@
+1 Snapcaster Mage
+2 Harsh Mentor
+3 Young Pyromancer
+4 Delver of Secrets
+1 Ancestral Recall
+1 Brainstorm
+1 Daze
+1 Dig Through Time
+1 Flusterstorm
+1 Gush
+1 Pyroblast
+2 Spell Pierce
+4 Force of Will
+4 Lightning Bolt
+4 Mental Misstep
+1 Gitaxian Probe
+1 Ponder
+1 Time Walk
+1 Treasure Cruise
+4 Preordain
+1 Dack Fayden
+1 Black Lotus
+1 Mox Ruby
+1 Mox Sapphire
+1 Mountain
+1 Strip Mine
+2 Island
+3 Polluted Delta
+2 Flooded Strand
+4 Volcanic Island
+4 Wasteland
+
+2 Null Rod
+4 Energy Flux
+1 Daze
+1 Pyroblast
+2 Grafdigger's Cage
+1 Mindbreak Trap
+2 Ravenous Trap
+2 Tormod's Crypt

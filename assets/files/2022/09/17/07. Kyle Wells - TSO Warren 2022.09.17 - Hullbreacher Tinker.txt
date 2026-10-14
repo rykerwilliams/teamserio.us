@@ -1,0 +1,56 @@
+1 Polluted Delta
+1 Flooded Strand
+1 Mountain
+1 Volcanic Island
+1 Tolarian Academy
+1 Misty Rainforest
+4 Urza's Saga
+2 Scalding Tarn
+2 Underground Sea
+2 Island
+1 Mox Emerald
+1 Mox Jet
+1 Mox Pearl
+1 Mox Ruby
+1 Mox Sapphire
+1 Black Lotus
+1 Time Walk
+1 Timetwister
+1 Ancestral Recall
+1 Merchant Scroll
+1 Narset, Parter of Veils
+1 Dig Through Time
+1 Ponder
+1 Force of Negation
+1 Repeal
+1 Tinker
+1 Brainstorm
+1 Gitaxian Probe
+4 Force of Will
+1 Mental Misstep
+1 Flusterstorm
+1 Sol Ring
+1 Demonic Tutor
+1 Sensei's Divining Top
+1 Mana Crypt
+1 Yawgmoth's Will
+1 Bolas's Citadel
+2 Ragavan, Nimble Pilferer
+2 Dack Fayden
+4 Hullbreacher
+1 Voltaic Key
+1 Time Vault
+1 Pithing Needle
+2 Pyroblast
+1 Abrade
+
+4 Leyline of the Void
+1 Sphinx of the Steel Wind
+1 Grafdigger's Cage
+1 Nihil Spellbomb
+2 Fatal Push
+1 Abrade
+1 Hurkyl's Recall
+1 Surgical Extraction
+1 Pithing Needle
+2 Pyroblast

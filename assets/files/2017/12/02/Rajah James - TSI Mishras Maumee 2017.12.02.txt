@@ -1,0 +1,44 @@
+4 Ad Nauseam
+1 Ancestral Recall
+1 Black Lotus
+1 Bloodstained Mire
+1 Brainstorm
+1 Chain of Vapor
+4 Chrome Mox
+4 Dark Ritual
+1 Demonic Consultation
+1 Demonic Tutor
+4 Duress
+1 Gitaxian Probe
+1 Imperial Seal
+1 Island
+1 Lotus Petal
+1 Mana Crypt
+1 Mana Vault
+4 Mental Misstep
+1 Mox Emerald
+1 Mox Jet
+1 Mox Opal
+1 Mox Pearl
+1 Mox Ruby
+1 Mox Sapphire
+1 Mystical Tutor
+3 Pact of Negation
+4 Polluted Delta
+1 Ponder
+1 Preordain
+1 Sol Ring
+2 Swamp
+2 Tendrils of Agony
+4 Underground Sea
+1 Vampiric Tutor
+1 Yawgmoth's Will
+
+2 Ancient Tomb
+1 Bayou
+1 Chain of Vapor
+1 Extirpate
+4 Hurkyl's Recall
+1 Timetwister
+1 Tropical Island
+4 Xantid Swarm

@@ -1,0 +1,41 @@
+4 Leyline of the Void
+4 Helm of Obedience
+4 Painter's Servant
+4 Grindstone
+1 Trinisphere
+3 Defense Grid
+3 Red Elemental Blast
+1 Disenchant
+1 Ancient Grudge
+1 Demonic Tutor
+1 Vampiric Tutor
+1 Demonic Consultation
+1 Ancestral Recall
+1 Tinker
+1 Timetwister
+1 Wheel of Fortune
+1 Memory Jar
+1 Black Lotus
+1 Mana Crypt
+1 Mana Vault
+1 Sol Ring
+1 Mox Sapphire
+1 Mox Jet
+1 Mox Ruby
+1 Mox Emerald
+1 Mox Pearl
+4 Mana Confluence
+4 Gemstone Mine
+4 Ancient Tomb
+4 Mishra's Workshop
+1 Urborg, Tomb of Yawgmoth
+1 Tolarian Academy
+
+3 Mindbreak Trap
+3 Containment Priest
+4 Nature's Claim
+1 Red Elemental Blast
+1 Sphinx of the Steel Wind
+1 City of Brass
+1 Balance
+1 Ancient Grudge

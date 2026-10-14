@@ -1,0 +1,40 @@
+4 Glistener Elf
+4 Noble Hierarch
+4 Blighted Agent
+1 Allosaurus Shepherd
+1 Oko, Thief of Crowns
+1 Mox Emerald
+1 Mox Sapphire
+1 Black Lotus
+1 Ancestral Recall
+2 Preordain
+2 Berserk
+1 Flusterstorm
+1 Brainstorm
+1 Gitaxian Probe
+1 Crop Rotation
+2 Scale Up
+2 Vines of Vastwood
+4 Daze
+4 Invigorate
+1 Ponder
+1 Mental Misstep
+4 Force of Will
+1 Time Walk
+4 Inkmoth Nexus
+4 Tropical Island
+2 Verdant Catacombs
+2 Misty Rainforest
+1 Wooded Foothills
+1 Forest
+1 Pendelhaven
+
+3 Leyline of the Void
+2 Force of Vigor
+1 Bojuka Bog
+1 The Tabernacle at Pendrell Vale
+1 Karakas
+2 Archive Trap
+2 Energy Flux
+2 Seeds of Innocence
+1 Collector Ouphe

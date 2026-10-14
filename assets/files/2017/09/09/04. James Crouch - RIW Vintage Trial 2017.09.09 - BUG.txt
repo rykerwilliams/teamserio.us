@@ -1,0 +1,40 @@
+4 Deathrite Shaman
+4 Dark Confidant
+3 Leovold, Emissary of Trest
+2 Jace, Vryn's Prodigy
+1 Trygon Predator
+4 Force of Will
+2 Flusterstorm
+2 Mental Misstep
+2 Jace, the Mind Sculptor
+2 Abrupt Decay
+1 Fatal Push
+1 Snuff Out
+1 Time Walk
+1 Demonic Tutor
+1 Ancestral Recall
+1 Ponder
+1 Brainstorm
+2 Null Rod
+1 Black Lotus
+1 Mox Emerald
+1 Mox Jet
+1 Mox Sapphire
+4 Wasteland
+1 Strip Mine
+4 Polluted Delta
+3 Misty Rainforest
+3 Underground Sea
+2 Tropical Island
+1 Bayou
+1 Snow-Covered Island
+
+3 Grafdigger's Cage
+3 Ravenous Trap
+3 Nature's Claim
+1 Null Rod
+1 Energy Flux
+1 Fatal Push
+1 Dismember
+1 Toxic Deluge
+1 Engineered Explosives

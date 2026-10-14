@@ -36,6 +36,9 @@ CACHE = os.environ.get("TMD_CACHE", "/tmp/tmd-cdx.txt")
 # through can be re-run to fill the gaps without re-fetching what already worked.
 AUTHOR_CACHE = os.environ.get("TMD_AUTHOR_CACHE", "/tmp/tmd-authors.json")
 HTML_CACHE = os.environ.get("TMD_HTML_CACHE", "/tmp/tmd-html")
+# archive.org 429s readily and this pass walks every page of every candidate,
+# so it is deliberately unhurried. Overridable for a retry of a short tail.
+SLEEP = float(os.environ.get("TMD_SLEEP", "12"))
 AVATAR_DIR = "assets/images/avatars"
 
 # Team Serious people. Used to find threads they STARTED, and to attribute.
@@ -61,6 +64,11 @@ HANDLES = [
     "presidentskroob",
     "thallidtosser",
     "bscheidemann",
+    # Added once their real names were identified: a handle that is not listed
+    # here is never enumerated, so any thread they started is invisible to the
+    # inventory unless its title happens to match a keyword.
+    "brassman",          # Andy Probasco
+    "cutlex",            # Duane Haddix
 ]
 
 # Venues these events ran at, for a location field on the ported post. Titles are
@@ -332,10 +340,35 @@ def event_date(slug, posted=""):
 
 
 POST_LI = re.compile(
-    r'<li[^>]*component="post"(?P<attrs>[^>]*)>(?P<rest>.*?)(?=<li[^>]*component="post"|\Z)',
+    # NodeBB renders a post as <li> in some snapshots and <div> in others --
+    # #1639 is a <div> one, and matching only <li> found zero posts on a page
+    # that plainly had four.
+    r'<(?:li|div)[^>]*component="post"(?P<attrs>[^>]*)>(?P<rest>.*?)'
+    r'(?=<(?:li|div)[^>]*component="post"|\Z)',
     re.S)
-POST_BODY = re.compile(
-    r'<div[^>]*component="post/content"[^>]*>(?P<html>.*?)</div>\s*(?:<!--|</div>|<div)', re.S)
+POST_OPEN = re.compile(r'<div[^>]*component="post/content"[^>]*>', re.I)
+DIV_TAG = re.compile(r'<div\b[^>]*>|</div\s*>', re.I)
+
+
+def post_body(rest):
+    """The post's content div, matched by counting nested <div>s.
+
+    This used to be a non-greedy regex ending at the first "</div>" followed by
+    "<div", which silently truncated any post whose body contained a nested
+    div. TMD's own decklist widget opens with two of them, so a thread using it
+    kept its first card and lost everything after -- forty cards per list, and
+    whatever prose followed.
+    """
+    m = POST_OPEN.search(rest)
+    if not m:
+        return ""
+    depth, i = 1, m.end()
+    for t in DIV_TAG.finditer(rest, m.end()):
+        depth += -1 if t.group(0).startswith("</") else 1
+        if depth == 0:
+            return rest[m.end():t.start()].strip()
+        i = t.end()
+    return rest[m.end():].strip()
 
 
 def posts_in(html):
@@ -353,7 +386,7 @@ def posts_in(html):
             a = re.search(rf'{name}="([^"]*)"', attrs)
             return a.group(1) if a else ""
 
-        body = POST_BODY.search(rest)
+        body_html = post_body(rest)
         out.append({
             "index": attr("data-index"),
             "pid": attr("data-pid"),
@@ -361,7 +394,7 @@ def posts_in(html):
             "username": attr("data-username"),
             "timestamp": attr("data-timestamp"),
             "owner": "topic-owner-post" in attrs,
-            "html": (body.group("html").strip() if body else ""),
+            "html": body_html,
         })
     return out
 
@@ -572,6 +605,36 @@ def main():
 
     rep = {k: v for k, v in cand.items() if REPORT.search(v["slug"])}
     other = {k: v for k, v in cand.items() if k not in rep}
+
+    # --meta exists so the doc can carry the real post date, author and venue
+    # rather than guessing from the slug, AND so every page of every candidate
+    # lands in HTML_CACHE for tmd-to-post.py. thread_meta() was written but
+    # never called, which made the flag a silent no-op: it printed an inventory
+    # and fetched nothing.
+    if a.meta:
+        todo = sorted(rep.items())
+        print(f"  --meta: scraping {len(todo)} candidate threads", file=sys.stderr)
+        for i, (tid, c) in enumerate(todo, 1):
+            raw = re.sub(r"^https://web\.archive\.org/web/\d+/", "", c["url"])
+            try:
+                info, err = thread_meta(tid, c["ts"], raw)
+            except Exception as e:
+                info, err = None, f"{type(e).__name__}: {e}"
+            if err:
+                print(f"    [{i}/{len(todo)}] #{tid} FAILED: {err}", file=sys.stderr)
+                time.sleep(SLEEP)
+                continue
+            if info:
+                for k in ("posted", "modified", "section", "event_date", "venue",
+                          "players", "author", "pages"):
+                    if info.get(k):
+                        c[k] = info[k]
+                if info.get("author") and not c.get("author"):
+                    c["author"] = info["author"]
+            print(f"    [{i}/{len(todo)}] #{tid} "
+                  f"{(c.get('posted') or '')[:10]} {c.get('author') or '-'} "
+                  f"decks={info.get('decklist_blocks', 0)}", file=sys.stderr)
+            time.sleep(SLEEP)
 
     def table(d):
         out = ["| thread | snapshot | author | title |", "|---|---|---|---|"]
