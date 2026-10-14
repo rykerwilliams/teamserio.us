@@ -70,24 +70,24 @@ Bazaar - 4 (Hogaak, Dredge, 2xHollowVine)
 
 ## Decklists
 
-{% deckfile /assets/files/2022/07/23/Dave Ketterer - TSO Warren 2022.07.23 - Ravager Shops.txt %}
+{% deckfile /assets/files/2022/07/23/01. Dave Ketterer - TSO Warren 2022.07.23 - Ravager Shops.txt %}
 
-{% deckfile /assets/files/2022/07/23/Max Gibson - TSO Warren 2022.07.23 - Underworld Breach.txt %}
-{% deckfile /assets/files/2022/07/23/Rajah James - TSO Warren 2022.07.23 - Paradoxical Outcome.txt %}
-{% deckfile /assets/files/2022/07/23/Chad Proctor-Frazier - TSO Warren 2022.07.23 - Doomsday.txt %}
+{% deckfile /assets/files/2022/07/23/02. Max Gibson - TSO Warren 2022.07.23 - Underworld Breach.txt %}
+{% deckfile /assets/files/2022/07/23/03. Rajah James - TSO Warren 2022.07.23 - Paradoxical Outcome.txt %}
+{% deckfile /assets/files/2022/07/23/04. Chad Proctor-Frazier - TSO Warren 2022.07.23 - Doomsday.txt %}
 
-{% deckfile /assets/files/2022/07/23/Ken Riddle - TSO Warren 2022.07.23 - Hogaak Vine.txt %}
+{% deckfile /assets/files/2022/07/23/05. Ken Riddle - TSO Warren 2022.07.23 - Hogaak Vine.txt %}
 
-{% deckfile /assets/files/2022/07/23/Jared Cassarly - TSO Warren 2022.07.23 - Dredge.txt %}
+{% deckfile /assets/files/2022/07/23/06. Jared Cassarly - TSO Warren 2022.07.23 - Dredge.txt %}
 
-{% deckfile /assets/files/2022/07/23/John Poggemeyer - TSO Warren 2022.07.23 - Infect.txt %}
+{% deckfile /assets/files/2022/07/23/07. John Poggemeyer - TSO Warren 2022.07.23 - Infect.txt %}
 
-{% deckfile /assets/files/2022/07/23/Paul Blakeley - TSO Warren 2022.07.23 - Bant Control.txt %}
+{% deckfile /assets/files/2022/07/23/08. Paul Blakeley - TSO Warren 2022.07.23 - Bant Control.txt %}
 
-{% deckfile /assets/files/2022/07/23/Angelo Kortyka - TSO Warren 2022.07.23 - Paradoxical Outcome.txt %}
+{% deckfile /assets/files/2022/07/23/09. Angelo Kortyka - TSO Warren 2022.07.23 - Paradoxical Outcome.txt %}
 
-{% deckfile /assets/files/2022/07/23/Mark Trogdon - TSO Warren 2022.07.23 - Metalworker Prison.txt %}
+{% deckfile /assets/files/2022/07/23/10. Mark Trogdon - TSO Warren 2022.07.23 - Metalworker Prison.txt %}
 
-{% deckfile /assets/files/2022/07/23/Marshall Arthurs - TSO Warren 2022.07.23 - HollowVine.txt %}
+{% deckfile /assets/files/2022/07/23/11. Marshall Arthurs - TSO Warren 2022.07.23 - HollowVine.txt %}
 
-{% deckfile /assets/files/2022/07/23/Jerry Yang - TSO Warren 2022.07.23 - HollowVine.txt %}
+{% deckfile /assets/files/2022/07/23/12. Jerry Yang - TSO Warren 2022.07.23 - HollowVine.txt %}
