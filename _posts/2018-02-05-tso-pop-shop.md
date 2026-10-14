@@ -1,7 +1,7 @@
 ---
 layout: default-with-decklists
 title:  "TSO @ the POP! Shop - 2018.02.03"
-date:   2018-02-03 12:00:00 +0000
+date:   2018-02-05 12:00:00 +0000
 categories: tournament-writeup
 tags: vintage open sandusky tso tournament-writeup tmd-archive
 include_on_feed   : true

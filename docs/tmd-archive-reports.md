@@ -317,13 +317,12 @@ exist, and porting either would publish a duplicate.
 
 | thread | existing post | state |
 |---|---|---|
-| `#3824` | `_posts/2022-07-23-tso-all-american-warren.md` | Ported. Was hand-written, migrated in place -- same file, same URL, decklists moved to files and provenance added. |
-| `#3862` | `_posts/2022-09-17-tso-all-american-warren.md` | **Not ported, and should not be.** A native post covering the same event. Compared against the thread: 8 decklists in each, same eight players, nothing in the thread the post lacks. |
+| `#3824` | `_posts/2022-07-24-tso-all-american-warren.md` | Ported. Was the hand port; replaced by the converted version, verified 12 of 12 decklists identical at 464 card lines. |
+| `#3862` | `_posts/2022-09-18-tso-all-american-warren.md` | Ported. Also a hand port -- every phrase of its prose traces back to the thread -- replaced by the converted version, verified 8 of 8 decklists identical at 321 card lines. |
 
-`#3862` carries no `tmd_thread` marker, so nothing stops a batch run from
-porting it. Either give it the same migration `#3824` had -- decklists to
-files, `tmd_thread`/`tmd_snapshot` added -- or record it as covered. The
-migration is the better option, because the marker is what makes it skippable.
+Both carry a `tmd_thread` marker now, which is what lets a batch run skip them.
+Rajah's rule: one post per event, and where a hand-written port and a converted
+one both exist, keep the converted one -- its decklists are files.
 
 Near misses that are NOT duplicates:
 

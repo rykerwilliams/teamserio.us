@@ -1,7 +1,7 @@
 ---
 layout: default-with-decklists
 title:  "Vintage Trial @ RIW Hobbies, Livonia MI - 2017.09.09"
-date:   2017-09-09 12:00:00 +0000
+date:   2017-09-10 12:00:00 +0000
 categories: tournament-writeup
 tags: vintage trial michigan riw tournament-writeup tmd-archive
 include_on_feed   : true

@@ -994,15 +994,20 @@ def main():
     meta["tags"] = a.tags
 
     if a.event_date:
+        # The event date files the decklists and photos under
+        # assets/files/YYYY/MM/DD, and is recorded in front matter.
         meta["event_date"] = a.event_date
-        # The post date drives the URL; the forum posting date stays in
-        # tmd_snapshot as provenance.
-        #
-        # Fixed at midday UTC rather than carrying the forum's posting time.
-        # The site renders in America/New_York, so a thread posted at 01:04 UTC
-        # became the previous day locally and the post built as
-        # /posts/20171201_... for an event held on the 2nd.
-        meta["date"] = a.event_date + " 12:00:00 +0000"
+    # The post date is the day the write-up went up on The Mana Drain, not the
+    # day the event was held -- Rajah's call, so the site's dates line up with
+    # the thread they came from. The two differ by a few days on every thread.
+    #
+    # Pinned to midday UTC rather than carrying the forum's exact time: the
+    # site renders in America/New_York, so a thread posted at 01:04 UTC became
+    # the previous day locally and built as /posts/20171201_... for a thread
+    # posted on the 2nd.
+    posted = (meta.get("posted") or "")[:10]
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", posted):
+        meta["date"] = posted + " 12:00:00 +0000"
     text = build(meta, owner["html"], replies, fetch_images=not a.no_images,
                  deckfiles=not a.inline_decklists, event_label=a.event)
     if a.stdout or not a.out:

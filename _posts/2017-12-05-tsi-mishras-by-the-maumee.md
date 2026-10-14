@@ -1,7 +1,7 @@
 ---
 layout: default-with-decklists
 title:  "TSI: Mishra's By the Maumee - 2017.12.02"
-date:   2017-12-02 12:00:00 +0000
+date:   2017-12-05 12:00:00 +0000
 categories: tournament-writeup
 tags: vintage invitational tsi tournament-writeup tmd-archive
 include_on_feed   : true

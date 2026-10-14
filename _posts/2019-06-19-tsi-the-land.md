@@ -1,7 +1,7 @@
 ---
 layout: default-with-decklists
 title:  "TSI: The Land - 2019.06.15"
-date:   2019-06-15 12:00:00 +0000
+date:   2019-06-19 12:00:00 +0000
 categories: tournament-writeup
 tags: vintage invitational tsi the-land tournament-writeup tmd-archive
 include_on_feed   : true
