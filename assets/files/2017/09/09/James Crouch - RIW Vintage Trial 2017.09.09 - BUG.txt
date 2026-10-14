@@ -1,7 +1,7 @@
 4 Deathrite Shaman
 4 Dark Confidant
 3 Leovold, Emissary of Trest
-2 Jace, Vryn's Prodigy // Jace, Telepath Unbound
+2 Jace, Vryn's Prodigy
 1 Trygon Predator
 4 Force of Will
 2 Flusterstorm

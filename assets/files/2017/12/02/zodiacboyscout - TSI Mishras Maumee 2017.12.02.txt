@@ -27,7 +27,7 @@
 1 Demonic Consultation
 1 Brainstorm
 1 Ponder
-1 Probe
+1 Gitaxian Probe
 1 Yawgmoth's Will
 1 Demonic Tutor
 

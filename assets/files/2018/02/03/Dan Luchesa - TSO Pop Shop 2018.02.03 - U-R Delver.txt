@@ -1,7 +1,7 @@
 1 Snapcaster Mage
 2 Harsh Mentor
 3 Young Pyromancer
-4 Delver of Secrets // Insectile Aberration
+4 Delver of Secrets
 1 Ancestral Recall
 1 Brainstorm
 1 Daze

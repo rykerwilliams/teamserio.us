@@ -24,7 +24,7 @@
 3 Mental Misstep
 2 Flusterstorm
 2 Mana Drain
-1 Search for Azcanta // Azcanta, the Sunken Ruin
+1 Search for Azcanta
 1 Mox Jet
 1 Voltaic Key
 1 Time Vault

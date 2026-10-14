@@ -380,6 +380,7 @@ ALIASES = {
     "tropcial": "Tropical Island",
     # "chain" is Chain of Vapor here, confirmed. Worth re-checking if a red
     # deck ever ports: Chain Lightning is the other candidate for that word.
+    "probe": "Gitaxian Probe",
     "lotus": "Black Lotus",
     "crypt": "Mana Crypt",
     "chain": "Chain of Vapor",
@@ -389,6 +390,23 @@ ALIASES = {
 }
 
 _names = {}
+
+
+def _card_name(card):
+    """The name to write into a decklist file.
+
+    A transforming card is imported by its FRONT FACE: "Delver of Secrets",
+    not "Delver of Secrets // Insectile Aberration", which is what Scryfall
+    reports as its name and what MTGO will not accept. Split cards are the
+    other way round -- "Wear // Tear" and "Fire // Ice" are the real names and
+    both halves belong in the file.
+    """
+    name = card.get("name") or ""
+    if card.get("layout") in ("transform", "modal_dfc", "flip", "reversible_card"):
+        faces = card.get("card_faces") or []
+        if faces and faces[0].get("name"):
+            return faces[0]["name"]
+    return name
 
 
 def _fuzzy_ok(written, card):
@@ -505,7 +523,15 @@ def resolve_names(names):
         if not r:
             missed.extend(chunk)
             continue
-        found = {c["name"].lower(): c["name"] for c in r.get("data", [])}
+        # Key on both the full name and the importable one: a transforming
+        # card comes back as "Delver of Secrets // Insectile Aberration" while
+        # the list says "Delver of Secrets", and without the second key every
+        # one of them would fall through to a needless fuzzy lookup.
+        found = {}
+        for c in r.get("data", []):
+            importable = _card_name(c)
+            found[c["name"].lower()] = importable
+            found.setdefault(importable.lower(), importable)
         nf = {(x.get("name") or "").lower() for x in r.get("not_found", [])}
         for n in chunk:
             if n.lower() in nf:
@@ -523,7 +549,7 @@ def resolve_names(names):
         time.sleep(0.15)
     for n in missed:
         r = req("https://api.scryfall.com/cards/named?fuzzy=" + urllib.parse.quote(n))
-        got = (r or {}).get("name")
+        got = _card_name(r) if r else None
         if got and _fuzzy_ok(n, r):
             _names[n] = got
         else:

@@ -17,7 +17,7 @@
 4 Mental Misstep
 2 Snapcaster Mage
 4 Young Pyromancer
-4 Delver of Secrets // Insectile Aberration
+4 Delver of Secrets
 4 Flooded Strand
 4 Polluted Delta
 4 Wasteland

@@ -9,7 +9,7 @@
 1 Monastery Mentor
 1 Auriok Salvagers
 2 Trinket Mage
-2 Jace, Vryn's Prodigy // Jace, Telepath Unbound
+2 Jace, Vryn's Prodigy
 1 Walking Ballista
 1 Snapcaster Mage
 1 Jace, the Mind Sculptor

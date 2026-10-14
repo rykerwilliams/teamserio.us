@@ -5,7 +5,7 @@
 2 Pull from Tomorrow
 3 Pyroblast
 1 Vampiric Tutor
-3 Jace, Vryn's Prodigy // Jace, Telepath Unbound
+3 Jace, Vryn's Prodigy
 1 Tasigur, the Golden Fang
 3 Worldgorger Dragon
 2 Animate Dead
