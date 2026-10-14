@@ -249,22 +249,68 @@ def deck_lines(text):
     return lines
 
 
-def deck_owner(md_before):
-    """Pull (rank, player, deck) out of the line that introduces a decklist.
+ORDINALS = {"first":1,"second":2,"third":3,"fourth":4,"fifth":5,"sixth":6,"seventh":7,
+            "eighth":8,"ninth":9,"tenth":10,"eleventh":11,"twelfth":12,
+            "thirteenth":13,"fourteenth":14,"fifteenth":15,"sixteenth":16}
 
-    The forum posts these as a tab-separated row lifted from a spreadsheet --
-    "1\tDave Ketterer\tRavager Shops\t12" -- which is also what becomes the
-    standings table. Returns None when the line is not that shape, and the
-    caller falls back to a positional name."""
+
+def deck_owner(md_before, lines):
+    """Work out whose deck this is, and what it was called.
+
+    Three shapes turn up across the threads, so all three are tried before
+    falling back to a positional name:
+
+      1. a tab-separated standings row in the text ABOVE the block --
+         "1\tDave Ketterer\tRavager Shops\t12"      (#3824)
+      2. a prose placing line as the FIRST LINE INSIDE the block --
+         "First place - Joe Reuschel - Ravager Shops" (#1738)
+      3. markdown headers inside the block --
+         "# BUGstill (1st)" then "## Kevin Cron"      (#1483)
+
+    Returns (rank, player, deck, body_lines) -- body_lines has any consumed
+    header lines removed, so they do not end up in the decklist file.
+    """
+    head = [l for l in lines[:4]]
+
+    # 2. "First place - Player - Deck" / "1st - Player - Deck"
+    if head:
+        first = head[0].strip()
+        parts = [c.strip() for c in re.split(r"\s+[-\u2013\u2014]\s+", first) if c.strip()]
+        if len(parts) >= 3:
+            word = parts[0].lower().replace(" place", "").strip()
+            rank = ORDINALS.get(word)
+            if rank is None:
+                m = re.match(r"(\d+)", word)
+                rank = int(m.group(1)) if m else None
+            if rank:
+                return str(rank), parts[1], parts[2], lines[1:]
+
+    # 3. "# Deck (1st)" + "## Player"
+    if len(head) >= 2 and head[0].lstrip().startswith("#"):
+        deck = re.sub(r"^#+\s*", "", head[0]).strip()
+        rank = None
+        m = re.search(r"\((\d+)(?:st|nd|rd|th)\)\s*$", deck, re.I)
+        if m:
+            rank = m.group(1)
+            deck = deck[:m.start()].strip()
+        player = re.sub(r"^#+\s*", "", head[1]).strip() if head[1].lstrip().startswith("#") else None
+        body = lines[2:] if player else lines[1:]
+        while body and body[0].strip().lower().rstrip(":") in ("main deck", "maindeck", "deck"):
+            body = body[1:]
+        # A lone "## Dragon 2018?" with no player under it still names the deck;
+        # the caller falls back to the posting handle for who.
+        return rank, player, deck, body
+
+    # 1. tab-separated standings row above the block
     for line in reversed((md_before or "").strip().splitlines()):
         if not line.strip():
             continue
         cells = [c.strip() for c in line.split("\t") if c.strip()]
         if len(cells) >= 3 and re.fullmatch(r"\d+", cells[0]):
-            return cells[0], cells[1], cells[2]
-        return None
-    return None
+            return cells[0], cells[1], cells[2], lines
+        break
 
+    return None, None, None, lines
 
 def write_deckfile(lines, event_date, event_label, player, deck, seq):
     """Write a decklist as its own .txt and return the path to reference.
@@ -345,33 +391,63 @@ def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
           event_label=None):
     chunks = []
     seq = 0
+    nonlocal_seq = [0]
     label = event_label or meta.get("event_label") or "TMD"
     for kind, text in split_pres(owner_html):
         if kind != "deck":
             chunks.append(md_from(text))
             continue
         seq += 1
+        nonlocal_seq[0] = seq
         lines = deck_lines(text)
         if not deckfiles:
             chunks.append("{% decklist %}\n" + "\n".join(lines) + "\n{% enddecklist %}")
             continue
         # The introducing line is the last thing in the markdown chunk above.
-        owner = deck_owner(chunks[-1] if chunks else "")
-        rank, player, deck = owner if owner else (None, None, None)
+        rank, player, deck, lines = deck_owner(chunks[-1] if chunks else "", lines)
         path = write_deckfile(lines, meta.get("event_date") or meta.get("date", "")[:10],
                               label, player, deck, seq)
+        # When the placing line lived inside the block it has just been consumed
+        # into the filename, so without this the post loses who finished where.
+        # When it came from a standings row above, that row is still on the page
+        # and a second heading would only repeat it.
+        if player and rank and not (chunks and "\t" in (chunks[-1] or "")):
+            head = f"### {rank}. {player}"
+            if deck:
+                head += f" \u2014 {deck}"
+            chunks.append(head)
         chunks.append("{%% deckfile %s %%}" % path)
     body = "\n\n".join(c for c in chunks if c.strip())
 
     if replies:
         body += "\n\n## Replies and relevant bits\n"
         for r in replies:
-            # A decklist inside a reply is absorbed above as event data; what is
-            # left is that person's commentary, so it is credited to them.
+            # Someone posting their list in a reply is still a decklist, and
+            # dropping it loses content the thread had -- #1738 has one that
+            # belongs to nobody in the top five. Write it as a file like any
+            # other, credited to whoever posted it.
+            reply_decks = []
+            for kind, text in split_pres(r["html"]):
+                if kind != "deck":
+                    continue
+                dl = deck_lines(text)
+                if not dl:
+                    continue
+                nonlocal_seq[0] += 1
+                _, rp, rd, dl = deck_owner("", dl)
+                who = rp or AUTHORS.get(r["username"], {}).get("name") or r["username"]
+                rpath = write_deckfile(
+                    dl, meta.get("event_date") or meta.get("date", "")[:10],
+                    label, who, rd, nonlocal_seq[0])
+                reply_decks.append("{%% deckfile %s %%}" % rpath)
             prose = md_from(re.sub(r"<pre[^>]*>.*?</pre>", "", r["html"], flags=re.S | re.I))
-            if not prose.strip():
+            if not prose.strip() and not reply_decks:
                 continue
-            body += f'\n**Reply from {r["username"]}:**\n\n{prose}\n'
+            body += f'\n**Reply from {r["username"]}:**\n\n'
+            if prose.strip():
+                body += f"{prose}\n"
+            for d in reply_decks:
+                body += f"\n{d}\n"
     # Rewrite forum uploads to local copies, reporting what happened to each.
     notes = []
     snap_ts = re.search(r"/web/(\d{14})", meta.get("snapshot", "") or "")
