@@ -704,7 +704,18 @@ def deck_owner(md_before, lines):
             continue
         cells = [c.strip() for c in line.split("\t") if c.strip()]
         if len(cells) >= 3 and re.fullmatch(r"\d+", cells[0]):
-            return cells[0], cells[1], cells[2], lines
+            # Column order is not fixed. The July 2022 Warren standings are
+            # Rank, Player, Deck, Points; the September ones are Rank, Points,
+            # Name, Deck. Assuming the first produced filenames like
+            # "01. 9 - ... - Rajah James", with the points as the player and
+            # the player as the deck. Decide from which cells are numeric:
+            # the player and deck never are.
+            rest = cells[1:]
+            rest = [c for c in rest if not re.fullmatch(r"\d+", c)]
+            if len(rest) >= 2:
+                return cells[0], rest[0], rest[1], lines
+            if len(rest) == 1:
+                return cells[0], rest[0], None, lines
         break
 
     return None, None, None, lines
