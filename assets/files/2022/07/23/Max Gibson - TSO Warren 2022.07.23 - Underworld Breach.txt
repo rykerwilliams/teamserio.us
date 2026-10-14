@@ -1,0 +1,54 @@
+1 Abrade
+1 Ancestral Recall
+1 Black Lotus
+1 Bolas's Citadel
+1 Brain Freeze
+1 Brainstorm
+1 Dack Fayden
+1 Demonic Tutor
+3 Flusterstorm
+1 Force of Negation
+4 Force of Will
+1 Gitaxian Probe
+4 Hullbreacher
+1 Mana Crypt
+1 Manifold Key
+1 Mental Misstep
+1 Merchant Scroll
+1 Mox Emerald
+1 Mox Jet
+1 Mox Pearl
+1 Mox Ruby
+1 Mox Sapphire
+1 Mystical Tutor
+1 Narset, Parter of Veils
+1 Pithing Needle
+3 Polluted Delta
+1 Ponder
+2 Pyroblast
+2 Scalding Tarn
+1 Sensei's Divining Top
+1 Snow-Covered Island
+1 Sol Ring
+1 Time Vault
+1 Time Walk
+1 Tinker
+1 Tolarian Academy
+2 Underground Sea
+1 Underworld Breach
+4 Urza's Saga
+1 Urza, Lord High Artificer
+1 Vampiric Tutor
+3 Volcanic Island
+
+1 Abrade
+1 Alpine Moon
+1 By Force
+1 Hurkyl's Recall
+4 Leyline of the Void
+2 Lightning Bolt
+1 Pyroblast
+1 Pyroclasm
+1 Soul-Guide Lantern
+1 Sphinx of the Steel Wind
+1 The Tabernacle at Pendrell Vale

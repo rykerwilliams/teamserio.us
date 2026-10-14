@@ -1,0 +1,34 @@
+1 Ancient Tomb
+1 Black Lotus
+3 Crucible of Worlds
+3 Expedition Map
+2 Ghost Quarter
+4 Leyline of the Void
+1 Lodestone Golem
+1 Mana Crypt
+1 Mana Vault
+4 Metalworker
+4 Mishra's Factory
+4 Mishra's Workshop
+1 Mox Emerald
+1 Mox Jet
+1 Mox Pearl
+1 Mox Ruby
+1 Mox Sapphire
+3 Phyrexian Metamorph
+4 Phyrexian Revoker
+1 Sol Ring
+4 Sphere of Resistance
+3 Staff of Domination
+1 Strip Mine
+1 The Tabernacle at Pendrell Vale
+1 Thorn of Amethyst
+1 Tolarian Academy
+3 Walking Ballista
+4 Wasteland
+
+1 Crucible of Worlds
+4 Grafdigger's Cage
+3 Pithing Needle
+4 Ravenous Trap
+3 Wurmcoil Engine

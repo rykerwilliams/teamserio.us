@@ -36,6 +36,9 @@ CACHE = os.environ.get("TMD_CACHE", "/tmp/tmd-cdx.txt")
 # through can be re-run to fill the gaps without re-fetching what already worked.
 AUTHOR_CACHE = os.environ.get("TMD_AUTHOR_CACHE", "/tmp/tmd-authors.json")
 HTML_CACHE = os.environ.get("TMD_HTML_CACHE", "/tmp/tmd-html")
+# archive.org 429s readily and this pass walks every page of every candidate,
+# so it is deliberately unhurried. Overridable for a retry of a short tail.
+SLEEP = float(os.environ.get("TMD_SLEEP", "12"))
 AVATAR_DIR = "assets/images/avatars"
 
 # Team Serious people. Used to find threads they STARTED, and to attribute.
@@ -572,6 +575,36 @@ def main():
 
     rep = {k: v for k, v in cand.items() if REPORT.search(v["slug"])}
     other = {k: v for k, v in cand.items() if k not in rep}
+
+    # --meta exists so the doc can carry the real post date, author and venue
+    # rather than guessing from the slug, AND so every page of every candidate
+    # lands in HTML_CACHE for tmd-to-post.py. thread_meta() was written but
+    # never called, which made the flag a silent no-op: it printed an inventory
+    # and fetched nothing.
+    if a.meta:
+        todo = sorted(rep.items())
+        print(f"  --meta: scraping {len(todo)} candidate threads", file=sys.stderr)
+        for i, (tid, c) in enumerate(todo, 1):
+            raw = re.sub(r"^https://web\.archive\.org/web/\d+/", "", c["url"])
+            try:
+                info, err = thread_meta(tid, c["ts"], raw)
+            except Exception as e:
+                info, err = None, f"{type(e).__name__}: {e}"
+            if err:
+                print(f"    [{i}/{len(todo)}] #{tid} FAILED: {err}", file=sys.stderr)
+                time.sleep(SLEEP)
+                continue
+            if info:
+                for k in ("posted", "modified", "section", "event_date", "venue",
+                          "players", "author", "pages"):
+                    if info.get(k):
+                        c[k] = info[k]
+                if info.get("author") and not c.get("author"):
+                    c["author"] = info["author"]
+            print(f"    [{i}/{len(todo)}] #{tid} "
+                  f"{(c.get('posted') or '')[:10]} {c.get('author') or '-'} "
+                  f"decks={info.get('decklist_blocks', 0)}", file=sys.stderr)
+            time.sleep(SLEEP)
 
     def table(d):
         out = ["| thread | snapshot | author | title |", "|---|---|---|---|"]
