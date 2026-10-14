@@ -310,6 +310,26 @@ handles out of it, add them, re-run.
 It also corrected one: **Nam Tran is `nartman99`**, not `nartman` — the latter has no
 archived pages at all, the former has eight including `/topics`.
 
+## Threads the site already covers -- do not port these
+
+Check before porting. Two candidate threads correspond to posts that already
+exist, and porting either would publish a duplicate.
+
+| thread | existing post | state |
+|---|---|---|
+| `#3824` | `_posts/2022-07-23-tso-all-american-warren.md` | Ported. Was hand-written, migrated in place -- same file, same URL, decklists moved to files and provenance added. |
+| `#3862` | `_posts/2022-09-17-tso-all-american-warren.md` | **Not ported, and should not be.** A native post covering the same event. Compared against the thread: 8 decklists in each, same eight players, nothing in the thread the post lacks. |
+
+`#3862` carries no `tmd_thread` marker, so nothing stops a batch run from
+porting it. Either give it the same migration `#3824` had -- decklists to
+files, `tmd_thread`/`tmd_snapshot` added -- or record it as covered. The
+migration is the better option, because the marker is what makes it skippable.
+
+Near misses that are NOT duplicates:
+
+- `#2653` "team serious middle school chaos draft report" is dated three days
+  before `2019-06-15-tsi-the-land.md`. Same weekend, different event. Port it.
+
 ## Things that look like bugs but are the source
 
 - **`0 Mishra's Workshop`** leads Duane Haddix's list in #2786. It is deliberate:
