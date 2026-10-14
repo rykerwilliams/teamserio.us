@@ -25,6 +25,10 @@ HTML_CACHE = os.environ.get("TMD_HTML_CACHE", "/tmp/tmd-html")
 IMAGE_DIR = "assets/images/tmd"
 
 # Keyed by TMD handle. Avatars already in the repo; see docs/tmd-archive-reports.md.
+# Keys are matched case-insensitively via author_entry(); the forum reports
+# handles inconsistently ("GrandpaBelcher" in a post header, "grandpabelcher"
+# in a profile URL) and the thread authors are nartman99 and shaman-ben, which
+# did not match the keys here at all.
 AUTHORS = {
     "cleverpseudonym": {
         "name": "Rajah James", "avatar": "../assets/images/avatars/310221.jpg",
@@ -35,10 +39,21 @@ AUTHORS = {
                   ("https://www.facebook.com/rajah.james", "fab fa-facebook",
                    "My personal FB")],
     },
-    "nartman": {"name": "Nam Tran",
-                "avatar": "../assets/images/avatars/namQ_460x527.jpg", "links": []},
+    # Both have written here under their own names already, so a ported post
+    # must reuse the author block from their existing posts rather than a stub
+    # -- otherwise the same person shows up twice with different avatars.
+    # Nam: _posts/2026-02-07-HSI-9-Event-Report.md
+    "nartman99": {"name": "Nam Tran",
+                  "avatar": "../assets/images/avatars/namQ_277x325.png",
+                  "location": "Ohio, US", "links": []},
+    # Nat: _posts/2024-06-08-castmaster-season-1.md
     "grandpabelcher": {"name": "Nat Moes",
-                       "avatar": "../assets/images/avatars/nat_400x400.jpg", "links": []},
+                       "avatar": "../assets/images/avatars/nat_400x400.jpg",
+                       "location": "Ohio, United States",
+                       "links": [("https://bsky.app/profile/grandpabelcher.bsky.social",
+                                  "fab fa-bluesky", "My personal bsky"),
+                                 ("https://x.com/GrandpaBelcher", "fab fa-twitter",
+                                  "My personal Twitter")]},
 }
 
 
@@ -239,6 +254,19 @@ def split_pres(body_html):
 DECK_DIR = "assets/files"
 
 
+def author_entry(handle):
+    """AUTHORS lookup that tolerates the forum's inconsistent handle casing."""
+    if not handle:
+        return {}
+    if handle in AUTHORS:
+        return AUTHORS[handle]
+    low = handle.lower()
+    for k, v in AUTHORS.items():
+        if k.lower() == low:
+            return v
+    return {}
+
+
 def deck_lines(text):
     """The card lines of a <pre> block, with the source's leading 'Deck' dropped."""
     lines = [l.rstrip() for l in text.strip().splitlines()]
@@ -354,7 +382,7 @@ def decklist_block(text):
 
 
 def front_matter(meta):
-    a = AUTHORS.get(meta["author"], {"name": meta["author"] or "Unknown", "links": []})
+    a = author_entry(meta["author"]) or {"name": meta["author"] or "Unknown", "links": []}
     out = ["---", "layout: default-with-decklists",
            f'title:  "{meta["title"]}"',
            f'date:   {meta["date"]}',
@@ -435,7 +463,7 @@ def build(meta, owner_html, replies, fetch_images=True, deckfiles=True,
                     continue
                 nonlocal_seq[0] += 1
                 _, rp, rd, dl = deck_owner("", dl)
-                who = rp or AUTHORS.get(r["username"], {}).get("name") or r["username"]
+                who = rp or author_entry(r["username"]).get("name") or r["username"]
                 rpath = write_deckfile(
                     dl, meta.get("event_date") or meta.get("date", "")[:10],
                     label, who, rd, nonlocal_seq[0])
