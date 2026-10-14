@@ -346,8 +346,29 @@ POST_LI = re.compile(
     r'<(?:li|div)[^>]*component="post"(?P<attrs>[^>]*)>(?P<rest>.*?)'
     r'(?=<(?:li|div)[^>]*component="post"|\Z)',
     re.S)
-POST_BODY = re.compile(
-    r'<div[^>]*component="post/content"[^>]*>(?P<html>.*?)</div>\s*(?:<!--|</div>|<div)', re.S)
+POST_OPEN = re.compile(r'<div[^>]*component="post/content"[^>]*>', re.I)
+DIV_TAG = re.compile(r'<div\b[^>]*>|</div\s*>', re.I)
+
+
+def post_body(rest):
+    """The post's content div, matched by counting nested <div>s.
+
+    This used to be a non-greedy regex ending at the first "</div>" followed by
+    "<div", which silently truncated any post whose body contained a nested
+    div. TMD's own decklist widget opens with two of them, so a thread using it
+    kept its first card and lost everything after -- forty cards per list, and
+    whatever prose followed.
+    """
+    m = POST_OPEN.search(rest)
+    if not m:
+        return ""
+    depth, i = 1, m.end()
+    for t in DIV_TAG.finditer(rest, m.end()):
+        depth += -1 if t.group(0).startswith("</") else 1
+        if depth == 0:
+            return rest[m.end():t.start()].strip()
+        i = t.end()
+    return rest[m.end():].strip()
 
 
 def posts_in(html):
@@ -365,7 +386,7 @@ def posts_in(html):
             a = re.search(rf'{name}="([^"]*)"', attrs)
             return a.group(1) if a else ""
 
-        body = POST_BODY.search(rest)
+        body_html = post_body(rest)
         out.append({
             "index": attr("data-index"),
             "pid": attr("data-pid"),
@@ -373,7 +394,7 @@ def posts_in(html):
             "username": attr("data-username"),
             "timestamp": attr("data-timestamp"),
             "owner": "topic-owner-post" in attrs,
-            "html": (body.group("html").strip() if body else ""),
+            "html": body_html,
         })
     return out
 

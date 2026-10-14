@@ -269,15 +269,83 @@ def md_from(node):
     return s.strip()
 
 
+# TMD's own decklist widget. Eight of the cached threads use it instead of a
+# <pre> block, and between them it holds 42 decklists -- which the <pre>-only
+# reader did not see at all, keeping just the first card of each and dropping
+# the rest. Those threads also report decks=0 in the inventory, because that
+# counts <pre>, so they look like standings-only posts when they are not.
+WIDGET = re.compile(r'<div class="tmd-decklist">(.*?)</div>\s*</div>', re.S | re.I)
+CARDROW = re.compile(r'<div>\s*(\d+)\s*<a[^>]*class="tmd-cardname"[^>]*>(.*?)</a>', re.S | re.I)
+H3 = re.compile(r'<h3[^>]*>(.*?)</h3>', re.S | re.I)
+
+
+def widget_deck(block_html):
+    """(title, lines) for one tmd-decklist widget, sideboard separated.
+
+    Returned in the same shape as a <pre> block so the caller cannot tell them
+    apart: card lines with a bare blank line before the sideboard.
+    """
+    heads = [htmllib.unescape(re.sub(r"<[^>]+>", "", t)).strip()
+             for t in H3.findall(block_html)]
+    # A widget whose first heading is "Sideboard:" has no title -- that word is
+    # a section marker. Prepending it as the title made write_deckfile read it
+    # as the separator and file the entire list as sideboard.
+    title = heads[0] if heads and not SIDEBOARD.match(heads[0]) else ""
+    # Walk the block in order so a "Sideboard:" heading switches sections.
+    main, side, cur = [], [], None
+    for m in re.finditer(r'<h3[^>]*>(.*?)</h3>|' + CARDROW.pattern,
+                         block_html, re.S | re.I):
+        if m.group(1) is not None:
+            h = htmllib.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
+            if SIDEBOARD.match(h):
+                cur = side
+            continue
+        qty = m.group(2)
+        name = htmllib.unescape(re.sub(r"<[^>]+>", "", m.group(3) or "")).strip()
+        if qty and name:
+            (side if cur is side else main).append(f"{qty} {name}")
+    # Emit the marker word, not a blank line: write_deckfile splits on the
+    # marker and skips blanks, so a blank separator put the whole sideboard
+    # into the main deck and every widget list came out 75/0.
+    lines = main + (["Sideboard"] + side if side else [])
+    return title, lines
+
+
 def split_pres(body_html):
-    """Split a post body into (markdown, decklist) chunks in document order."""
-    parts, last = [], 0
+    """Split a post body into (markdown, decklist) chunks in document order.
+
+    Decklists arrive either as a <pre> block or as TMD's own widget; both are
+    yielded as ("deck", text), with the widget carrying its <h3> title so the
+    caller can name the file from it.
+    """
+    spans = []
     for m in re.finditer(r"<pre[^>]*>(.*?)</pre>", body_html, re.S | re.I):
-        if m.start() > last:
-            parts.append(("md", body_html[last:m.start()]))
-        inner = re.sub(r"<[^>]+>", "", m.group(1))
-        parts.append(("deck", htmllib.unescape(inner)))
-        last = m.end()
+        spans.append((m.start(), m.end(),
+                      ("deck", htmllib.unescape(re.sub(r"<[^>]+>", "", m.group(1))))))
+    widgets = []
+    for m in WIDGET.finditer(body_html):
+        title, lines = widget_deck(m.group(1))
+        if not lines:
+            continue
+        # Some posts split a list across two widgets, the second titled
+        # "Sideboard:" or "SB". On its own that reads as a deck with no main
+        # board, so fold it into the one before it.
+        if widgets and SIDEBOARD.match(title or ""):
+            ws, _, wlines = widgets[-1]
+            widgets[-1] = (ws, m.end(), wlines + ["Sideboard"] + lines)
+            continue
+        widgets.append((m.start(), m.end(),
+                        ([title] if title else []) + lines))
+    for ws, we, wlines in widgets:
+        spans.append((ws, we, ("deck", "\n".join(wlines))))
+    spans.sort()
+
+    parts, last = [], 0
+    for start, end, chunk in spans:
+        if start > last:
+            parts.append(("md", body_html[last:start]))
+        parts.append(chunk)
+        last = max(last, end)
     if last < len(body_html):
         parts.append(("md", body_html[last:]))
     return parts
@@ -391,6 +459,17 @@ def deck_owner(md_before, lines):
                         rest(2))
             if parts:
                 return str(rank), parts[0], None, rest(2)
+
+    # 2c. "Nam Tran - 2 Card Monte" with no placing. This is the <h3> of a TMD
+    #     decklist widget, which names the deck but does not rank it. Only
+    #     accepted when the line splits cleanly in two and neither half looks
+    #     like a card line, so prose above a <pre> cannot be mistaken for it.
+    if head:
+        parts = [c.strip() for c in
+                 re.split(r"\s+[-\u2013\u2014]\s+", head[0].strip()) if c.strip()]
+        if (len(parts) == 2 and not re.match(r"^\d+\s", parts[0])
+                and all(len(x) < 60 for x in parts)):
+            return None, parts[0], parts[1], rest(1)
 
     # 3. "# Deck (1st)" + "## Player"
     if len(head) >= 2 and head[0].lstrip().startswith("#"):
