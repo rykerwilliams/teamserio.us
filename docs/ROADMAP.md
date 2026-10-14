@@ -189,6 +189,53 @@ These have ordering constraints or deadlines attached.
       Nam Tran's own TMD handles are not identified yet; adding them would help more than
       more keywords. Once a report lands here, the five `digitalmeh.net` posts linking
       these threads should point at the new post instead of the archive snapshot.
+- [ ] **"What was legal when" — a date-driven Vintage card pool.** Given a date, show the
+      Banned and Restricted list as it stood, and a Scryfall query for the legal pool, so a
+      throwback tournament can be run off a link.
+
+      **The problem with the existing sources.** Eternal Central's
+      [Timeline of Vintage](https://www.eternalcentral.com/timeline-of-vintage/) and
+      [Schools of Magic: History of Vintage](https://www.eternalcentral.com/history-of-vintage-schools-of-magic-an-alternative-history-of-the-banned-and-restricted-list/)
+      publish the *changes* — this card restricted, that one unrestricted — but never the
+      **state** on a given day. Working out what was actually legal in, say, spring 1999
+      means replaying every announcement from 1994 forward and hoping none were missed.
+
+      ⚠️ **The Schools of Magic piece is an argument, not a dataset.** It is Menendian's
+      *alternative* history: counted mechanically it carries **23 "should have been
+      restricted/banned" statements against 3 describing what actually happened**. Scraping
+      it naively would silently blend the real list with the author's counterfactual one.
+      Use it for narrative and reasoning; take the actual actions from the timeline page
+      cross-checked against WotC's own B&R announcements.
+
+      **Data model.** One append-only list of events — `{date, card, action}` where action is
+      restrict / unrestrict / ban / unban — replayed to any date to get the state. Kept as a
+      reviewable JSON file in the repo, not scraped at page load, so corrections are a diff
+      and the provenance of each entry can carry a source link.
+
+      **The Scryfall part works** — tested:
+
+      | query | result |
+      |---|---|
+      | `date<=1994-12-31 game:paper` | 981 cards |
+      | `date<=2003-12-31 game:paper -is:funny -is:digital` | 6,512 cards |
+      | same, with banned cards excluded by name | works; 20 exclusions is a 478-char query |
+
+      Vintage's *banned* list is short — ante cards, Chaos Orb, Falling Star, Shahrazad,
+      conspiracies — so excluding by name is practical. Restricted cards stay legal at one
+      copy, so they are a displayed list rather than a filter.
+
+      **Open questions before building.**
+      - `date<=` matches a *printing*, so a card reprinted later still matches on its early
+        printing — needs checking that this does not let a card in before it existed.
+      - Which sets were ever Vintage-legal needs stating explicitly (Un-sets, Alchemy and
+        other digital-only sets, Portal-era oddities).
+      - Announcement date vs effective date differ, especially in the 1990s; the list should
+        key off whichever one a tournament would have used.
+      - Cards renamed or errata'd since would need mapping to current Scryfall names.
+      - Verification: reconstruct the state at a handful of known dates and diff against
+        archived copies of WotC's B&R page. Without that the page is guesswork, and people
+        would be building decks from it.
+
 - [ ] **Bios collection** — Team Serious CV pages. Interview questions:
   - Favorite Team Serious member
   - Straight up: black licorice?
