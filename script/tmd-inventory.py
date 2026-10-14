@@ -340,7 +340,11 @@ def event_date(slug, posted=""):
 
 
 POST_LI = re.compile(
-    r'<li[^>]*component="post"(?P<attrs>[^>]*)>(?P<rest>.*?)(?=<li[^>]*component="post"|\Z)',
+    # NodeBB renders a post as <li> in some snapshots and <div> in others --
+    # #1639 is a <div> one, and matching only <li> found zero posts on a page
+    # that plainly had four.
+    r'<(?:li|div)[^>]*component="post"(?P<attrs>[^>]*)>(?P<rest>.*?)'
+    r'(?=<(?:li|div)[^>]*component="post"|\Z)',
     re.S)
 POST_BODY = re.compile(
     r'<div[^>]*component="post/content"[^>]*>(?P<html>.*?)</div>\s*(?:<!--|</div>|<div)', re.S)

@@ -333,7 +333,21 @@ def deck_owner(md_before, lines):
     Returns (rank, player, deck, body_lines) -- body_lines has any consumed
     header lines removed, so they do not end up in the decklist file.
     """
-    head = [l for l in lines[:4]]
+    # Keep the source index alongside each non-blank line: these blocks put a
+    # blank line between "First place" and the player, so inspecting lines[:4]
+    # directly made head[1] the blank and every deck fell back to "Deck N".
+    idx = [(i, l) for i, l in enumerate(lines[:8]) if l.strip()][:4]
+    head = [l for _, l in idx]
+
+    def rest(n):
+        """Everything after the nth non-blank header line."""
+        if len(idx) < n:
+            return lines
+        body = lines[idx[n - 1][0] + 1:]
+        while body and body[0].strip().lower().rstrip(":") in (
+                "main deck", "maindeck", "deck", ""):
+            body = body[1:]
+        return body
 
     # 2. "First place - Player - Deck" / "1st - Player - Deck"
     if head:
@@ -346,7 +360,23 @@ def deck_owner(md_before, lines):
                 m = re.match(r"(\d+)", word)
                 rank = int(m.group(1)) if m else None
             if rank:
-                return str(rank), parts[1], parts[2], lines[1:]
+                return str(rank), parts[1], parts[2], rest(1)
+
+    # 2b. placing on its own line, player and deck on the next --
+    #     "First place" / "Andy Probasco - \"Death Survives\""   (#2786)
+    if len(head) >= 2:
+        word = head[0].strip().lower().replace(" place", "").strip()
+        rank = ORDINALS.get(word)
+        if rank is None and re.fullmatch(r"\d+(?:st|nd|rd|th)?", word):
+            rank = int(re.match(r"\d+", word).group(0))
+        if rank:
+            parts = [c.strip() for c in
+                     re.split(r"\s+[-\u2013\u2014]\s+", head[1].strip()) if c.strip()]
+            if len(parts) >= 2:
+                return (str(rank), parts[0], parts[1].strip('"\u201c\u201d'),
+                        rest(2))
+            if parts:
+                return str(rank), parts[0], None, rest(2)
 
     # 3. "# Deck (1st)" + "## Player"
     if len(head) >= 2 and head[0].lstrip().startswith("#"):
@@ -357,9 +387,7 @@ def deck_owner(md_before, lines):
             rank = m.group(1)
             deck = deck[:m.start()].strip()
         player = re.sub(r"^#+\s*", "", head[1]).strip() if head[1].lstrip().startswith("#") else None
-        body = lines[2:] if player else lines[1:]
-        while body and body[0].strip().lower().rstrip(":") in ("main deck", "maindeck", "deck"):
-            body = body[1:]
+        body = rest(2) if player else rest(1)
         # A lone "## Dragon 2018?" with no player under it still names the deck;
         # the caller falls back to the posting handle for who.
         return rank, player, deck, body
@@ -626,7 +654,12 @@ def main():
         meta["event_date"] = a.event_date
         # The post date drives the URL; the forum posting date stays in
         # tmd_snapshot as provenance.
-        meta["date"] = a.event_date + meta.get("date", "")[10:]
+        #
+        # Fixed at midday UTC rather than carrying the forum's posting time.
+        # The site renders in America/New_York, so a thread posted at 01:04 UTC
+        # became the previous day locally and the post built as
+        # /posts/20171201_... for an event held on the 2nd.
+        meta["date"] = a.event_date + " 12:00:00 +0000"
     text = build(meta, owner["html"], replies, fetch_images=not a.no_images,
                  deckfiles=not a.inline_decklists, event_label=a.event)
     if a.stdout or not a.out:
