@@ -29,6 +29,16 @@ breadcrumb_list:
     every decision, which this page does not attempt to reproduce.
   </p>
 
+  <p class="vl-repo">
+    <strong>The data behind this page is open.</strong> It lives in
+    <a href="{{ br.generated_from }}"><code>rykerwilliams/type1</code></a>,
+    where every one of the {{ br.events | size }} announcements is a single
+    backdated commit &mdash; so <code>git log</code> is the timeline and
+    <code>git show &lt;sha&gt;:current.json</code> is the list as it stood that
+    day. A script replays the lot from January 1994 and checks the result
+    against Scryfall&rsquo;s live list; it reproduces it exactly.
+  </p>
+
   <p>
     Published sources list the <em>changes</em> to the Banned &amp; Restricted
     list &mdash; this card restricted, that one unrestricted. None of them list

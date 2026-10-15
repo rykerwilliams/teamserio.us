@@ -477,3 +477,11 @@
   background: rgba(184,134,11,.08);
   padding: .7rem .9rem; margin: 0 0 1rem; font-size: .92rem;
 }
+
+/* the data is open; say so near the top rather than in a footnote */
+.vl-repo {
+  font-size: .92rem; margin: 0 0 1rem; padding: .7rem .9rem;
+  border-left: 3px solid rgba(128,128,128,.45);
+  background: rgba(128,128,128,.09);
+}
+.vl-repo code { font-size: .92em; }
