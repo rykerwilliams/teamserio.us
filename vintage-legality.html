@@ -1,0 +1,122 @@
+---
+layout: default
+title: What Was Legal When
+subtitle: "The Vintage Banned &amp; Restricted list, on any date since 1994"
+header_type: hero
+permalink: /vintage-legality
+excerpt: "Scroll the timeline to see the Vintage B&R list as it stood on any date since 1994."
+show_breadcrumb: true
+breadcrumb_list:
+  - label: Home
+    url: /
+---
+
+{%- assign br = site.data.vintage_br -%}
+
+<link rel="stylesheet" href="{{ '/assets/css/autocard.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/vintage-legality.css' | relative_url }}">
+
+<p>
+  Published sources list the <em>changes</em> to the Banned &amp; Restricted
+  list &mdash; this card restricted, that one unrestricted. None of them list
+  the <em>state</em> on a given day. This does: scroll the timeline and the
+  list rebuilds itself at each announcement.
+</p>
+
+<p class="vl-noscript">
+  This page needs JavaScript to show the list as it stood on a given date. The
+  timeline below still records every announcement and what it changed.
+</p>
+
+{%- assign latest = br.events | last -%}
+<div id="vl-bar" class="vl-bar" role="button" tabindex="0">
+  {{ latest.date }}
+</div>
+
+<div class="vl-wrap">
+
+  {%- comment -%}
+    The rail is rendered server-side so the page is complete without JS: every
+    announcement and every card it touched is in the HTML. The sticky state
+    panel on the right is the enhancement.
+  {%- endcomment -%}
+  <nav class="vl-rail" aria-label="Banned and Restricted announcements">
+    <div class="vl-rail-title">{{ br.events | size }} announcements</div>
+    {%- for ev in br.events -%}
+      {%- assign n = ev.actions | size -%}
+      <button type="button" class="vl-ev" id="ev-{{ ev.date }}"
+              data-seq="{{ ev.seq }}">
+        <span class="vl-ev-date">{{ ev.date }}</span>
+        <span class="vl-ev-n">{{ n }}</span>
+        {%- if ev.precision != 'day' %}<span class="vl-flag" title="exact day unknown">{{ ev.precision }}</span>{% endif -%}
+        {%- if ev.disputed %}<span class="vl-flag" title="sources disagree on this date">disputed</span>{% endif -%}
+        <span class="vl-ev-sum">
+          {%- for a in ev.actions limit: 3 -%}
+            {{ a.action }} {{ a.card }}{% unless forloop.last %}; {% endunless %}
+          {%- endfor -%}
+          {%- if n > 3 %} &hellip; +{{ n | minus: 3 }}{% endif -%}
+        </span>
+      </button>
+    {%- endfor -%}
+  </nav>
+
+  <section class="vl-state" id="vl-state" aria-live="polite">
+    {%- comment -%} filled by vintage-legality.js {%- endcomment -%}
+  </section>
+</div>
+
+{%- comment -%}
+  No-JS fallback and crawlable content: the full chronological record.
+{%- endcomment -%}
+<noscript>
+  <h2>Every announcement</h2>
+  {%- for ev in br.events -%}
+    <h3>{{ ev.date }}{% if ev.precision != 'day' %} ({{ ev.precision }} precision){% endif %}</h3>
+    <ul>
+      {%- for a in ev.actions -%}
+        <li>{{ a.action }}: {{ a.card }}</li>
+      {%- endfor -%}
+    </ul>
+  {%- endfor -%}
+</noscript>
+
+<div class="vl-hist" id="vl-hist" role="dialog" aria-modal="true"
+     aria-label="Card history">
+  <div class="vl-hist-box" id="vl-hist-box"></div>
+</div>
+
+<hr>
+
+<h2>Where this comes from</h2>
+<p>
+  The data is built and verified in
+  <a href="{{ br.generated_from }}">the <code>type1</code> repository</a>,
+  where every announcement is one backdated commit, so its history <em>is</em>
+  this timeline. A script replays all {{ br.events | size }} announcements from
+  January 1994 and checks the result against Scryfall&rsquo;s live list; it
+  reproduces it exactly.
+</p>
+<ul>
+  {%- for s in br.sources -%}
+    <li><a href="{{ s[1].url }}">{{ s[1].title }}</a> &mdash; {{ s[1].note }}</li>
+  {%- endfor -%}
+</ul>
+
+<h3>Two things to know before you trust a date</h3>
+<p>
+  <strong>Announcement and effective dates are not the same thing</strong>, and
+  a tournament held between them used the <em>old</em> list. Only some
+  announcements record which of the two their date is; the panel says so for
+  each one rather than implying precision that is not there.
+</p>
+<p>
+  <strong>The sources disagree on about a dozen dates.</strong> Where they do,
+  the cited source wins and the other claim is shown alongside it, flagged
+  <span class="vl-flag">disputed</span> in the timeline. The ordering of
+  announcements is reliable; the exact days are still being pinned down.
+</p>
+
+<script type="application/json" id="vl-data">{{ br | jsonify }}</script>
+<script src="{{ '/assets/js/scryfall-cache.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/autocard.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vintage-legality.js' | relative_url }}"></script>

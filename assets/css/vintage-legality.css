@@ -1,0 +1,110 @@
+/* /vintage-legality -- scroll-driven B&R timeline.
+   Two columns on desktop: the timeline scrolls, the state panel is sticky.
+   One column on phones, with the state collapsed into a sticky summary bar. */
+
+.vl-wrap { display: grid; gap: 1.5rem; align-items: start; }
+@media (min-width: 992px) {
+  .vl-wrap { grid-template-columns: 22rem 1fr; }
+}
+
+/* ---- timeline rail ---- */
+.vl-rail { position: relative; }
+.vl-rail-title {
+  font-size: .75rem; letter-spacing: .12em; text-transform: uppercase;
+  opacity: .65; margin-bottom: .75rem;
+}
+.vl-ev {
+  position: relative; display: block; width: 100%; text-align: left;
+  background: none; border: 0; border-left: 3px solid rgba(128,128,128,.3);
+  padding: .55rem 0 .55rem 1rem; margin: 0; cursor: pointer;
+  color: inherit; font: inherit; transition: border-color .12s, background .12s;
+}
+.vl-ev:hover { background: rgba(128,128,128,.08); }
+.vl-ev.is-current { border-left-color: #b8860b; background: rgba(184,134,11,.1); }
+.vl-ev-date { font-weight: 600; font-variant-numeric: tabular-nums; }
+.vl-ev-n { float: right; opacity: .6; font-size: .85em; }
+.vl-ev-sum { display: block; font-size: .85em; opacity: .75; margin-top: .15rem; }
+.vl-flag {
+  display: inline-block; font-size: .7em; padding: 0 .35em; margin-left: .35em;
+  border: 1px solid currentColor; border-radius: 3px; opacity: .7;
+  vertical-align: middle;
+}
+
+/* ---- state panel ---- */
+@media (min-width: 992px) {
+  .vl-state { position: sticky; top: 1.5rem; max-height: calc(100vh - 3rem);
+              overflow-y: auto; }
+}
+.vl-asof { font-size: 1.35rem; font-weight: 700; margin: 0; }
+.vl-basis { font-size: .8rem; opacity: .7; margin: .15rem 0 0; }
+.vl-count {
+  margin: .9rem 0 .5rem; font-size: .75rem; letter-spacing: .1em;
+  text-transform: uppercase; opacity: .65;
+  border-top: 1px solid rgba(128,128,128,.25); padding-top: .6rem;
+}
+.vl-delta { margin: .5rem 0 1rem; font-size: .9rem; }
+.vl-delta div { margin: .12rem 0; }
+.vl-add::before { content: "+ "; color: #2e7d32; font-weight: 700; }
+.vl-rem::before { content: "\2212 "; color: #c62828; font-weight: 700; }
+.vl-rem a { text-decoration: line-through; opacity: .8; }
+
+.vl-cards { columns: 2; column-gap: 1.25rem; margin: 0; padding: 0;
+            list-style: none; font-size: .95rem; }
+@media (min-width: 1400px) { .vl-cards { columns: 3; } }
+.vl-cards li { break-inside: avoid; margin: .1rem 0; }
+.vl-cards .vl-new { font-weight: 700; }
+
+.vl-banned { font-size: .95rem; }
+.vl-cats { margin-top: .75rem; font-size: .85rem; }
+.vl-cats summary { cursor: pointer; opacity: .8; }
+.vl-cats li { margin: .3rem 0; }
+.vl-pool {
+  display: inline-block; margin-top: 1rem; font-size: .85rem;
+  padding: .35rem .7rem; border: 1px solid currentColor; border-radius: 4px;
+  text-decoration: none;
+}
+.vl-src { margin-top: 1rem; font-size: .78rem; opacity: .7; }
+.vl-src a { word-break: break-all; }
+.vl-dispute {
+  margin-top: .5rem; font-size: .78rem; padding: .5rem .6rem;
+  border-left: 3px solid #b8860b; background: rgba(184,134,11,.08);
+}
+
+/* ---- mobile sticky summary ---- */
+.vl-bar { display: none; }
+@media (max-width: 991px) {
+  .vl-bar {
+    display: block; position: sticky; top: 0; z-index: 1020;
+    padding: .6rem .8rem; margin: 0 -.8rem 1rem;
+    background: var(--vl-bar-bg, #f5f5f5);
+    border-bottom: 1px solid rgba(128,128,128,.3); cursor: pointer;
+  }
+  .vl-state { margin-top: 1rem; }
+}
+@media (prefers-color-scheme: dark) {
+  .vl-bar { --vl-bar-bg: #1d1d1d; }
+}
+
+/* ---- per-card history ---- */
+.vl-hist-open { cursor: pointer; }
+.vl-hist {
+  position: fixed; inset: 0; z-index: 1070; display: none;
+  align-items: center; justify-content: center; padding: 1rem;
+  background: rgba(0,0,0,.55);
+}
+.vl-hist[open], .vl-hist.is-open { display: flex; }
+.vl-hist-box {
+  background: var(--vl-box-bg, #fff); color: var(--vl-box-fg, inherit);
+  max-width: 34rem; width: 100%; max-height: 80vh; overflow-y: auto;
+  border-radius: 8px; padding: 1.25rem 1.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  .vl-hist-box { --vl-box-bg: #222; --vl-box-fg: #eee; }
+}
+.vl-hist-box h3 { margin-top: 0; }
+.vl-hist-box table { width: 100%; font-size: .9rem; }
+.vl-hist-box td { padding: .2rem .4rem; }
+.vl-hist-close { float: right; background: none; border: 0; font-size: 1.4rem;
+                 line-height: 1; cursor: pointer; color: inherit; }
+.vl-noscript { padding: .75rem 1rem; border-left: 3px solid #b8860b;
+               background: rgba(184,134,11,.08); font-size: .9rem; }
