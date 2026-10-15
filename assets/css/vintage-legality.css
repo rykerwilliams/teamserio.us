@@ -516,3 +516,13 @@
 /* detail about the announcement, in the left column under the controls */
 .vl-details { margin-top: 1.25rem; }
 .vl-details .vl-sec { margin-top: 1rem; }
+
+/* Reserve the detail column's full height so the block as a whole does not
+   move. Its content varies a lot between announcements -- a one-card change
+   with no class bans against a twenty-three card restriction with four --
+   and that was shifting everything below the app on every step. Only on the
+   two-column layout: on a phone the column is in normal flow and reserving
+   space would just push the page down. */
+@media (min-width: 1150px) {
+  .vl-details { min-height: 32rem; }
+}

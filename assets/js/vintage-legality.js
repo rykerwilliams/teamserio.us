@@ -40,6 +40,10 @@
     var hi = ev.era;
     if (!hi) return [];
     return ERAS.filter(function (e) {
+      // must RECORD a change. Without this an era with no changes text fell
+      // back to its own name, so "Time Vault Wars" -- the name of era 61 --
+      // was listed as though something called that had happened.
+      if (!e.changes || !e.changes.trim()) return false;
       return e.era > (lo || 0) && e.era < hi &&
              (e.change_kinds || []).some(function (k) {
                return k !== "set_release";
@@ -593,6 +597,58 @@
              "<p><em>No individually banned cards yet.</em></p>");
     }
 
+    // The link and the citation are fixed height, so they go FIRST: below
+    // the class bans and the change list they moved on every step, because
+    // those vary in length.
+    d.push('<a class="vl-pool" target="_blank" rel="noopener noreferrer" href="' +
+           "https://scryfall.com/search?q=" +
+           encodeURIComponent(poolQuery(ev, st)) +
+           '"><i class="fa fa-magnifying-glass" aria-hidden="true"></i> Legal card pool on this date</a>');
+
+    // what happened in the format between the last announcement and this one
+    var between = erasBetween(i, ev);
+    if (between.length) {
+      d.push('<div class="vl-sec">Since the last announcement</div>');
+      d.push('<ul class="vl-between">');
+      between.forEach(function (e) {
+        var tags = (e.change_kinds || [])
+          .filter(function (k) { return k !== "set_release"; })
+          .map(function (k) {
+            return '<span class="vl-kind vl-kind-' + esc(k) + '" title="' +
+                   esc(KINDS[k] || k) + '">' + esc(k.replace("_", " ")) +
+                   "</span>";
+          }).join(" ");
+        d.push("<li>" + tags + " " + esc(e.changes) +
+               (e.citation && e.citation.url
+                 ? ' <a href="' + esc(e.citation.url) + '" target="_blank" ' +
+                   'rel="noopener noreferrer">source</a>' +
+                   (e.citation.archived
+                     ? ' <a href="' + esc(e.citation.archived) +
+                       '" target="_blank" rel="noopener noreferrer">(archived)</a>'
+                     : "")
+                 : "") + "</li>");
+      });
+      d.push("</ul>");
+    }
+
+    var ann = ev.announcement;
+    if (ann && ann.url) {
+      d.push('<p class="vl-src"><strong>Announcement:</strong> ' +
+             '<a href="' + esc(ann.url) + '" target="_blank" ' +
+             'rel="noopener noreferrer">' + esc(ann.label || ann.url) + "</a>" +
+             (ann.archived
+               ? ' \u00b7 <a href="' + esc(ann.archived) + '" target="_blank" ' +
+                 'rel="noopener noreferrer">archived copy</a>'
+               : ' \u00b7 <span class="vl-noarchive">no archived copy</span>') +
+             "</p>");
+    } else if (ev.sources && ev.sources.length) {
+      d.push('<p class="vl-src">Source: ' + ev.sources.map(function (u) {
+        return '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' +
+               esc(u.replace(/^https?:\/\//, "").split("/")[0]) + "</a>";
+      }).join(", ") + "</p>");
+    }
+
+
     // Everything from here is detail rather than the list itself, and it
     // goes in the left column under the controls, which was otherwise empty
     // while the right column ran long with the cards.
@@ -624,54 +680,6 @@
       });
       d.push("</ul><p style=\"opacity:.7\">These were never tournament legal, " +
              "so no B&amp;R action ever applied to them.</p></details>");
-    }
-
-    d.push('<a class="vl-pool" target="_blank" rel="noopener noreferrer" href="' +
-           "https://scryfall.com/search?q=" +
-           encodeURIComponent(poolQuery(ev, st)) +
-           '"><i class="fa fa-magnifying-glass" aria-hidden="true"></i> Legal card pool on this date</a>');
-
-    // what happened in the format between the last announcement and this one
-    var between = erasBetween(i, ev);
-    if (between.length) {
-      d.push('<div class="vl-sec">Since the last announcement</div>');
-      d.push('<ul class="vl-between">');
-      between.forEach(function (e) {
-        var tags = (e.change_kinds || [])
-          .filter(function (k) { return k !== "set_release"; })
-          .map(function (k) {
-            return '<span class="vl-kind vl-kind-' + esc(k) + '" title="' +
-                   esc(KINDS[k] || k) + '">' + esc(k.replace("_", " ")) +
-                   "</span>";
-          }).join(" ");
-        d.push("<li>" + tags + " " + esc(e.changes || e.name || "") +
-               (e.citation && e.citation.url
-                 ? ' <a href="' + esc(e.citation.url) + '" target="_blank" ' +
-                   'rel="noopener noreferrer">source</a>' +
-                   (e.citation.archived
-                     ? ' <a href="' + esc(e.citation.archived) +
-                       '" target="_blank" rel="noopener noreferrer">(archived)</a>'
-                     : "")
-                 : "") + "</li>");
-      });
-      d.push("</ul>");
-    }
-
-    var ann = ev.announcement;
-    if (ann && ann.url) {
-      d.push('<p class="vl-src"><strong>Announcement:</strong> ' +
-             '<a href="' + esc(ann.url) + '" target="_blank" ' +
-             'rel="noopener noreferrer">' + esc(ann.label || ann.url) + "</a>" +
-             (ann.archived
-               ? ' \u00b7 <a href="' + esc(ann.archived) + '" target="_blank" ' +
-                 'rel="noopener noreferrer">archived copy</a>'
-               : ' \u00b7 <span class="vl-noarchive">no archived copy</span>') +
-             "</p>");
-    } else if (ev.sources && ev.sources.length) {
-      d.push('<p class="vl-src">Source: ' + ev.sources.map(function (u) {
-        return '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' +
-               esc(u.replace(/^https?:\/\//, "").split("/")[0]) + "</a>";
-      }).join(", ") + "</p>");
     }
 
     panel.innerHTML = h.join("");

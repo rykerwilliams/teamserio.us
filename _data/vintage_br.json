@@ -3269,7 +3269,8 @@
   "errata": "a card's wording was changed, which can alter the format without any B&R action",
   "rules": "a rules or policy change, such as a mulligan rule",
   "format": "the format itself changed -- renamed, or a set made legal",
-  "set_release": "new cards entered the pool"
+  "set_release": "new cards entered the pool",
+  "_note": "change_kinds describes what the era's own 'changes' text records. boundary_kinds describes the events that BOUND the era, which is not the same thing: an era bounded by an errata did not necessarily contain one."
  },
  "eras": [
   {
@@ -3393,7 +3394,6 @@
    },
    "notable_printings": [],
    "change_kinds": [
-    "banned_restricted",
     "format"
    ]
   },
@@ -3413,7 +3413,6 @@
     "Mystic Remora. Mana Crypt book promo redemption now possible"
    ],
    "change_kinds": [
-    "banned_restricted",
     "set_release"
    ]
   },
@@ -3725,7 +3724,6 @@
     "Metalworker"
    ],
    "change_kinds": [
-    "rules",
     "set_release"
    ]
   },
@@ -3857,7 +3855,6 @@
     "Standstill"
    ],
    "change_kinds": [
-    "errata",
     "set_release"
    ]
   },
@@ -4190,7 +4187,6 @@
     "Research/Development"
    ],
    "change_kinds": [
-    "errata",
     "set_release"
    ]
   },
@@ -4226,8 +4222,6 @@
     "Counterbalance"
    ],
    "change_kinds": [
-    "errata",
-    "rules",
     "set_release"
    ]
   },
@@ -4426,7 +4420,6 @@
     "Noble Hierarch"
    ],
    "change_kinds": [
-    "errata",
     "set_release"
    ]
   },
@@ -4498,7 +4491,6 @@
     "Lotus Cobra"
    ],
    "change_kinds": [
-    "rules",
     "set_release"
    ]
   },
@@ -5626,7 +5618,6 @@
     "Sink into Stupor"
    ],
    "change_kinds": [
-    "banned_restricted",
     "set_release"
    ]
   },
