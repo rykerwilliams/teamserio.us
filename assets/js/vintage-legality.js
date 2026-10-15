@@ -629,7 +629,7 @@
     d.push('<a class="vl-pool" target="_blank" rel="noopener noreferrer" href="' +
            "https://scryfall.com/search?q=" +
            encodeURIComponent(poolQuery(ev, st)) +
-           '">Legal card pool on this date →</a>');
+           '"><i class="fa fa-magnifying-glass" aria-hidden="true"></i> Legal card pool on this date</a>');
 
     // what happened in the format between the last announcement and this one
     var between = erasBetween(i, ev);
