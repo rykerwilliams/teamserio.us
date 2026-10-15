@@ -191,11 +191,14 @@
 /* ---- the B&R list as card art ---------------------------------------- */
 .vl-grid {
   display: grid; gap: .55rem; margin: .6rem 0 0; padding: 0; list-style: none;
-  grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
-  gap: .35rem;
+  grid-template-columns: repeat(auto-fill, minmax(62px, 1fr));
+  gap: .45rem;
 }
 @media (min-width: 992px) {
-  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); }
+  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); }
+}
+@media (min-width: 1500px) {
+  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); }
 }
 .vl-cell { position: relative; }
 .vl-cell a { display: block; text-decoration: none; color: inherit; }
@@ -236,8 +239,8 @@
   position: absolute; left: 0; right: 0; top: 0;
   aspect-ratio: 146 / 204;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem; font-weight: 900; color: var(--vl-rem);
-  text-shadow: 0 0 8px rgba(0,0,0,.95); pointer-events: none;
+  font-size: 2.1rem; font-weight: 900; color: var(--vl-rem);
+  text-shadow: 0 0 9px rgba(0,0,0,.95); pointer-events: none;
 }
 .vl-cell.is-gone .vl-cell-name {
   color: var(--vl-rem); opacity: 1; text-decoration: line-through;
@@ -556,3 +559,7 @@
   width: 1em; height: 1em; vertical-align: -.08em;
   margin: 0 .04em; display: inline-block;
 }
+
+/* The app comes first and the prose after it, so the heading below the app
+   needs the separation a page title would normally get from the header. */
+.vl-title { margin-top: .5rem; }

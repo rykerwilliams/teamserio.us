@@ -495,7 +495,7 @@
 
     var lay = LID_H[kind], slots = SLOT[kind];
     var lidH = lay.h, cols = lay.cols, rows = lay.rows;
-    var cardW = 8.5;                         // percent of lid width
+    var cardW = 10.5;                        // percent of lid width
     var cellW = (100 - 2) / cols;
     var cellH = (lidH - 34 - 14) / Math.max(rows, 1);
 
@@ -820,6 +820,7 @@
       try { localStorage.setItem("vl-view", VIEW); } catch (e) { /* private mode */ }
       paintViewBtn();
       render(idx);
+      reserveStateHeight();
     });
   }
 
@@ -981,14 +982,39 @@
     });
   }
 
+  // The shoebox lids are a fixed size, so that view never changes height. The
+  // grid does: nineteen cards is fewer rows than fifty-two, so the page tail
+  // moved every time you stepped. Reserve the tallest case once, so the grid
+  // behaves like the lids.
+  function reserveStateHeight() {
+    if (VIEW !== "grid") { panel.style.minHeight = ""; return; }
+    var maxI = 0, maxN = -1;
+    STATES.forEach(function (st, i) {
+      var n = st.restricted.length + st.removed.length +
+              st.banned.length + st.bRemoved.length;
+      if (n > maxN) { maxN = n; maxI = i; }
+    });
+    var keep = idx;
+    panel.style.minHeight = "";
+    render(maxI);
+    var h = Math.ceil(panel.getBoundingClientRect().height);
+    render(keep >= 0 ? keep : maxI);
+    panel.style.minHeight = h + "px";
+  }
+
   // a narrower lid can leave a card outside, so re-clamp when the box changes
   var resizeTimer = null;
   window.addEventListener("resize", function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () { containCards(panel); }, 120);
+    resizeTimer = setTimeout(function () {
+      reserveStateHeight();
+      containCards(panel);
+    }, 120);
   });
   // belt and braces: clamp again once the art has actually arrived
   window.addEventListener("load", function () { containCards(panel); });
+
+  reserveStateHeight();
 
   var ns = document.querySelector(".vl-noscript");
   if (ns) ns.remove();

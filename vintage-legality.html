@@ -20,29 +20,6 @@ breadcrumb_list:
 
 <div class="vl">
 
-  <header class="vl-title">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.subtitle }}</p>
-  </header>
-
-  <p class="vl-credit">
-    <strong>The data behind this page is open.</strong> It lives in
-    <a href="{{ br.generated_from }}"><code>rykerwilliams/type1</code></a>,
-    which in turn is built on <strong>Steve Menendian</strong>&rsquo;s
-    <a href="https://www.eternalcentral.com/timeline-of-vintage/">Timeline of
-    Vintage</a> at Eternal Central &mdash; the era chart that records what
-    changed, when, and where it was announced. Dates, era names and citations
-    here all come from his work. Go and read it: it has the reasoning behind
-    every decision, which this page does not attempt to reproduce.
-  </p>
-
-  <p>
-    Published sources list the <em>changes</em> to the Banned &amp; Restricted
-    list &mdash; this card restricted, that one unrestricted. None of them list
-    the <em>state</em> on a given day. This does. Drag the chart, scrub the
-    timeline, or press play and watch {{ br.events | size }} announcements go by.
-  </p>
-
   <p class="vl-noscript">
     The interactive timeline needs JavaScript. Every announcement and what it
     changed is still listed in full further down this page.
@@ -93,6 +70,29 @@ breadcrumb_list:
   </div>
 
   <hr>
+
+  <header class="vl-title">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </header>
+
+  <p>
+    Published sources list the <em>changes</em> to the Banned &amp; Restricted
+    list &mdash; this card restricted, that one unrestricted. None of them list
+    the <em>state</em> on a given day. This does. Drag the chart, scrub the
+    timeline, or press play and watch {{ br.events | size }} announcements go by.
+  </p>
+
+  <p class="vl-credit">
+    <strong>The data behind this page is open.</strong> It lives in
+    <a href="{{ br.generated_from }}"><code>rykerwilliams/type1</code></a>,
+    which in turn is built on <strong>Steve Menendian</strong>&rsquo;s
+    <a href="https://www.eternalcentral.com/timeline-of-vintage/">Timeline of
+    Vintage</a> at Eternal Central &mdash; the era chart that records what
+    changed, when, and where it was announced. Dates, era names and citations
+    here all come from his work. Go and read it: it has the reasoning behind
+    every decision, which this page does not attempt to reproduce.
+  </p>
 
   <h2>Where this comes from</h2>
   <p>
