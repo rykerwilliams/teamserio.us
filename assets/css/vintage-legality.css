@@ -567,3 +567,6 @@
 .vl-title { margin-top: .5rem; }
 
 .vl-btn i { margin-right: .35em; }
+
+/* The title sits above the app again, so it needs no extra top margin. */
+.vl-title { margin-top: 0; margin-bottom: .7rem; }
