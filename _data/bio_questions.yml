@@ -27,6 +27,10 @@ sections:
       - { id: photo,    origin: new, type: upload,
           q: "A photo of you",
           help: "Playing, holding a trophy, or just a face. We can also pull one from an event report if you'd rather." }
+      - { id: day_job,  origin: new, type: short,
+          q: "What do you do when you're not doing this?" }
+      - { id: other_life, origin: new, type: long,
+          q: "Kids, pets, bands, other hobbies, anything you'd want mentioned" }
       - { id: links,    origin: new, type: long,
           q: "Anywhere you want linked",
           help: "Podcast, YouTube, Bluesky, store, band. One per line." }
@@ -96,6 +100,13 @@ sections:
         origin: new
         type: long
         q: "The loss you still think about"
+      - id: underrated
+        origin: new
+        type: long
+        q: "Who deserves more credit than they get?"
+        help: >-
+          Player, organiser, driver, person who always brings the food. We will
+          probably quote you.
 
   - title: The Team Serious questionnaire
     blurb: >-
@@ -142,6 +153,49 @@ sections:
                     "Full proxy, more games", "Depends who's asking"] }
       - { id: worst_take,   origin: new, type: long,
           q: "Your worst Magic take, stated with full confidence" }
+      - { id: never_sleeve, origin: new, type: short,
+          q: "A card you would never sleeve, on principle" }
+      - { id: beat_up,      origin: new, type: long,
+          q: "Your most beat-up card, and why you won't replace it" }
+      - { id: traded_away,  origin: new, type: short,
+          q: "Something you traded away that still stings" }
+      - { id: ban_one,      origin: new, type: short,
+          q: "You may ban one card forever. Is the format grateful or furious?" }
+      - { id: sleeves,      origin: new, type: choice,
+          q: "Sleeves",
+          options: ["Matte", "Glossy", "Whatever is in the bag",
+                    "I have strong feelings and will be sharing them"] }
+      - { id: heckle,       origin: new, type: long,
+          q: "Best heckle you've given or taken" }
+      - { id: rule_wrong,   origin: new, type: short,
+          q: "A rule you had wrong for years" }
+      - { id: most_ts,      origin: new, type: long,
+          q: "The most Team Serious thing you have ever witnessed",
+          help: "You do not have to name names. You may name names." }
+      - { id: hall_of_fame, origin: new, type: short,
+          q: "One thing — not a person — for the Team Serious hall of fame" }
+      - { id: teach_one,    origin: new, type: short,
+          q: "You can teach someone one format. Which, and why that one?" }
+
+  - title: On the road
+    blurb: >-
+      Half of this is the driving and the eating, and everybody knows it.
+    questions:
+      - { id: radius,   origin: new, type: choice,
+          q: "How far will you go for an event?",
+          options: ["Across town", "A couple of hours", "Half a day's drive",
+                    "I will fly", "I have driven somewhere I should not have"] }
+      - { id: car_food, origin: new, type: short,
+          q: "What's in the car for a long drive?" }
+      - { id: best_meal, origin: new, type: long,
+          q: "Best meal on a Magic trip. Be specific — name the place.",
+          help: "This is a legitimate historical record and will be treated as one." }
+      - { id: worst_venue, origin: new, type: long,
+          q: "Worst venue you've played in, and would you go back?" }
+      - { id: gas_station, origin: new, type: short,
+          q: "Defend one gas station food item" }
+      - { id: travel_with, origin: new, type: short,
+          q: "Who are you usually in the car with?" }
 
   - title: The 20th anniversary interviews
     blurb: >-

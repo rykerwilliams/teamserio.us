@@ -34,6 +34,10 @@ function makeBioForm() {
   photo.setTitle("A photo of you");
   photo.setHelpText("Playing, holding a trophy, or just a face. We can also pull one from an event report if you'd rather.");
   photo.setAllowedFileTypes([DriveApp.FileType.IMAGE]).setMaxFileSize(10);
+  var day_job = form.addTextItem();
+  day_job.setTitle("What do you do when you're not doing this?");
+  var other_life = form.addParagraphTextItem();
+  other_life.setTitle("Kids, pets, bands, other hobbies, anything you'd want mentioned");
   var links = form.addParagraphTextItem();
   links.setTitle("Anywhere you want linked");
   links.setHelpText("Podcast, YouTube, Bluesky, store, band. One per line.");
@@ -69,6 +73,9 @@ function makeBioForm() {
   proudest.setTitle("The win you're proudest of, which may not be the biggest one");
   var beat = form.addParagraphTextItem();
   beat.setTitle("The loss you still think about");
+  var underrated = form.addParagraphTextItem();
+  underrated.setTitle("Who deserves more credit than they get?");
+  underrated.setHelpText("Player, organiser, driver, person who always brings the food. We will probably quote you.");
 
   form.addPageBreakItem().setTitle("The Team Serious questionnaire").setHelpText("The actual point of the exercise. Answer at whatever length you like; one-word answers are a valid personality.");
   var fav_member = form.addTextItem();
@@ -110,6 +117,44 @@ function makeBioForm() {
   proxy.setChoiceValues(["Real cards or nothing", "Proxy the power, own the rest", "Full proxy, more games", "Depends who's asking"]);
   var worst_take = form.addParagraphTextItem();
   worst_take.setTitle("Your worst Magic take, stated with full confidence");
+  var never_sleeve = form.addTextItem();
+  never_sleeve.setTitle("A card you would never sleeve, on principle");
+  var beat_up = form.addParagraphTextItem();
+  beat_up.setTitle("Your most beat-up card, and why you won't replace it");
+  var traded_away = form.addTextItem();
+  traded_away.setTitle("Something you traded away that still stings");
+  var ban_one = form.addTextItem();
+  ban_one.setTitle("You may ban one card forever. Is the format grateful or furious?");
+  var sleeves = form.addMultipleChoiceItem();
+  sleeves.setTitle("Sleeves");
+  sleeves.setChoiceValues(["Matte", "Glossy", "Whatever is in the bag", "I have strong feelings and will be sharing them"]);
+  var heckle = form.addParagraphTextItem();
+  heckle.setTitle("Best heckle you've given or taken");
+  var rule_wrong = form.addTextItem();
+  rule_wrong.setTitle("A rule you had wrong for years");
+  var most_ts = form.addParagraphTextItem();
+  most_ts.setTitle("The most Team Serious thing you have ever witnessed");
+  most_ts.setHelpText("You do not have to name names. You may name names.");
+  var hall_of_fame = form.addTextItem();
+  hall_of_fame.setTitle("One thing \u2014 not a person \u2014 for the Team Serious hall of fame");
+  var teach_one = form.addTextItem();
+  teach_one.setTitle("You can teach someone one format. Which, and why that one?");
+
+  form.addPageBreakItem().setTitle("On the road").setHelpText("Half of this is the driving and the eating, and everybody knows it.");
+  var radius = form.addMultipleChoiceItem();
+  radius.setTitle("How far will you go for an event?");
+  radius.setChoiceValues(["Across town", "A couple of hours", "Half a day's drive", "I will fly", "I have driven somewhere I should not have"]);
+  var car_food = form.addTextItem();
+  car_food.setTitle("What's in the car for a long drive?");
+  var best_meal = form.addParagraphTextItem();
+  best_meal.setTitle("Best meal on a Magic trip. Be specific \u2014 name the place.");
+  best_meal.setHelpText("This is a legitimate historical record and will be treated as one.");
+  var worst_venue = form.addParagraphTextItem();
+  worst_venue.setTitle("Worst venue you've played in, and would you go back?");
+  var gas_station = form.addTextItem();
+  gas_station.setTitle("Defend one gas station food item");
+  var travel_with = form.addTextItem();
+  travel_with.setTitle("Who are you usually in the car with?");
 
   form.addPageBreakItem().setTitle("The 20th anniversary interviews").setHelpText("For the anniversary we want to record a run of short \"life story\" interviews \u2014 about fifteen minutes each, two or three per episode, so nothing runs past half an hour. No prep and no wrong answers: how you found Magic, how you found us, one object you bring along, one story you always tell, and some rapid-fire nonsense. You finish by asking a question of whoever is up next, without knowing who that is.");
   var interview = form.addMultipleChoiceItem();
