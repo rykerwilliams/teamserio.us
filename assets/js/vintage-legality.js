@@ -285,6 +285,75 @@
     return u ? u.replace("/normal/", "/small/") : "";
   }
 
+  // ---- shoebox view ------------------------------------------------------
+  // Two lids, one for banned and one for restricted, with the cards thrown in
+  // face up. Scatter is DETERMINISTIC -- derived from a hash of the card name
+  // -- so a card always lands in the same spot and the pile does not reshuffle
+  // every time you move a step.
+  function hash32(str) {
+    var h = 2166136261;
+    for (var i = 0; i < str.length; i++) {
+      h ^= str.charCodeAt(i);
+      h = (h * 16777619) >>> 0;
+    }
+    return h;
+  }
+  // three independent 0..1 values from one name
+  function jitter(name) {
+    var h = hash32(name);
+    return [((h & 0x3ff) / 1023),
+            (((h >>> 10) & 0x3ff) / 1023),
+            (((h >>> 20) & 0x3ff) / 1023)];
+  }
+
+  function shoeboxHtml(current, removed, added, label, id) {
+    var shown = current.slice();
+    removed.forEach(function (n) { shown.push(n); });
+    shown.sort(cmp);
+
+    // lay them out on a jittered grid so the lid fills evenly but reads as a
+    // heap rather than a table
+    var n = Math.max(shown.length, 1);
+    var cols = Math.max(6, Math.ceil(Math.sqrt(n * 2.9)));
+    var rows = Math.ceil(n / cols);
+    var cellW = 100 / cols;                 // percent
+    var cardW = 8.5;                        // percent of lid width
+    var lidH = Math.max(150, rows * 44 + 62);
+
+    var out = ['<div class="vl-lid" id="' + id +
+               '" style="height:' + lidH + 'px">'];
+    out.push('<span class="vl-lid-label">' + esc(label) + " \u00b7 " +
+             current.length + "</span>");
+    shown.forEach(function (name, i) {
+      var gone = current.indexOf(name) < 0;
+      var isNew = added.indexOf(name) >= 0;
+      var j = jitter(name);
+      var col = i % cols, row = Math.floor(i / cols);
+      var left = col * cellW + (j[0] - 0.5) * cellW * 0.85;
+      left = Math.max(1, Math.min(100 - cardW - 1, left));
+      var top = 30 + row * ((lidH - 66) / Math.max(rows, 1)) +
+                (j[1] - 0.5) * 20;
+      var rot = (j[2] - 0.5) * 46;          // -23deg .. +23deg
+      var cls = "vl-thrown" + (gone ? " is-gone" : isNew ? " is-add" : "");
+      var art = smallArt(name);
+      out.push('<a href="#" class="' + cls + ' autocard vl-hist-open"' +
+               ' data-card="' + esc(name) + '" title="' + esc(name) + '"' +
+               ' style="left:' + left.toFixed(2) + "%;top:" + top.toFixed(0) +
+               "px;width:" + cardW + "%;--rot:" + rot.toFixed(1) + "deg;z-index:" +
+               (gone ? 999 : isNew ? 900 : 100 + i) + '">' +
+               (art ? '<img src="' + esc(art) + '" alt="' + esc(name) +
+                      '" loading="lazy">'
+                    : '<span class="vl-noart">' + esc(name) + "</span>") +
+               (gone ? '<span class="vl-thrown-x" aria-hidden="true">\u2715</span>' : "") +
+               "</a>");
+    });
+    if (!shown.length) {
+      out.push('<p class="vl-lid-empty"><em>empty</em></p>');
+    }
+    out.push("</div>");
+    return out.join("");
+  }
+
   function gridHtml(current, removed, added, id) {
     var shown = current.slice();
     removed.forEach(function (n) { shown.push(n); });
@@ -311,6 +380,9 @@
   }
 
 
+  var VIEW = "grid";
+  try { VIEW = localStorage.getItem("vl-view") || "grid"; } catch (e) { /* private mode */ }
+
   function render(i) {
     var ev = EVENTS[i], st = STATES[i];
 
@@ -323,25 +395,34 @@
            " · announcement " + ev.seq + " of " + EVENTS.length + "</p></div>");
     h.push("</div>");
 
-    // One line, not an art strip: the grids below already show every change
-    // in place, so a second copy of the same cards just pushed them off screen.
+    // The summary is rendered AFTER the grids, further down: it wraps to one
+    // or two lines depending on the announcement, and above the grid that
+    // shifted every card down a row as you stepped through.
     var chg = [];
     st.added.forEach(function (n) { chg.push('<span class="vl-chg-a">+ ' + esc(n) + "</span>"); });
     st.removed.forEach(function (n) { chg.push('<span class="vl-chg-r">\u2212 ' + esc(n) + "</span>"); });
     st.bAdded.forEach(function (n) { chg.push('<span class="vl-chg-r">banned ' + esc(n) + "</span>"); });
     st.bRemoved.forEach(function (n) { chg.push('<span class="vl-chg-a">unbanned ' + esc(n) + "</span>"); });
-    h.push('<p class="vl-chg">' + (chg.length ? chg.join(" ") :
-           '<em class="vl-nochange">No change to the list.</em>') + "</p>");
 
-    h.push('<div class="vl-sec">Restricted \u2014 one copy allowed <span class="vl-sec-n">'
-           + st.restricted.length + "</span></div>");
-    h.push(gridHtml(st.restricted, st.removed, st.added, "vl-list") ||
-           "<p><em>Nothing restricted yet.</em></p>");
+    if (VIEW === "shoebox") {
+      h.push(shoeboxHtml(st.restricted, st.removed, st.added,
+                         "Restricted", "vl-list"));
+    } else {
+      h.push('<div class="vl-sec">Restricted \u2014 one copy allowed <span class="vl-sec-n">'
+             + st.restricted.length + "</span></div>");
+      h.push(gridHtml(st.restricted, st.removed, st.added, "vl-list") ||
+             "<p><em>Nothing restricted yet.</em></p>");
+    }
 
-    h.push('<div class="vl-sec">Banned \u2014 not allowed at all <span class="vl-sec-n">'
-           + st.banned.length + "</span></div>");
-    h.push(gridHtml(st.banned, st.bRemoved, st.bAdded, "vl-banned-list") ||
-           "<p><em>No individually banned cards yet.</em></p>");
+    if (VIEW === "shoebox") {
+      h.push(shoeboxHtml(st.banned, st.bRemoved, st.bAdded,
+                         "Banned", "vl-banned-list"));
+    } else {
+      h.push('<div class="vl-sec">Banned \u2014 not allowed at all <span class="vl-sec-n">'
+             + st.banned.length + "</span></div>");
+      h.push(gridHtml(st.banned, st.bRemoved, st.bAdded, "vl-banned-list") ||
+             "<p><em>No individually banned cards yet.</em></p>");
+    }
 
     // Class bans are part of the banned list, so they are shown, not hidden
     // behind a toggle.
@@ -355,6 +436,10 @@
       });
       h.push("</ul>");
     }
+
+    h.push('<div class="vl-sec">What this announcement changed</div>');
+    h.push('<p class="vl-chg">' + (chg.length ? chg.join(" ") :
+           '<em class="vl-nochange">No change to the list.</em>') + "</p>");
 
     var pools = POOL.filter(function (p) { return !p.since || p.since <= ev.date; });
     if (pools.length) {
@@ -496,6 +581,23 @@
   if (playBtn) {
     playBtn.addEventListener("click", function () {
       timer ? stop() : play();
+    });
+  }
+
+  var viewBtn = document.getElementById("vl-view");
+  function paintViewBtn() {
+    if (!viewBtn) return;
+    viewBtn.textContent = VIEW === "shoebox" ? "\u25a6 Grid view"
+                                             : "\ud83d\udce6 Shoebox view";
+    viewBtn.setAttribute("aria-pressed", VIEW === "shoebox" ? "true" : "false");
+  }
+  if (viewBtn) {
+    paintViewBtn();
+    viewBtn.addEventListener("click", function () {
+      VIEW = VIEW === "shoebox" ? "grid" : "shoebox";
+      try { localStorage.setItem("vl-view", VIEW); } catch (e) { /* private mode */ }
+      paintViewBtn();
+      render(idx);
     });
   }
 

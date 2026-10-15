@@ -90,7 +90,11 @@
 
 /* ---------- state panel ---------- */
 .vl-head-row { display: flex; align-items: baseline; gap: .75rem;
-               flex-wrap: wrap; }
+               flex-wrap: wrap;
+               /* pinned: the basis note wraps on some announcements, and a
+                  header that changes height walks the grid up and down as you
+                  step through */
+               min-height: 4.2rem; }
 .vl-asof { font-size: 1.6rem; font-weight: 700; margin: 0; line-height: 1.1; }
 .vl-asof-n {
   font-variant-numeric: tabular-nums; font-size: 2.4rem; font-weight: 700;
@@ -159,10 +163,11 @@
 /* ---- the B&R list as card art ---------------------------------------- */
 .vl-grid {
   display: grid; gap: .55rem; margin: .6rem 0 0; padding: 0; list-style: none;
-  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+  gap: .35rem;
 }
 @media (min-width: 992px) {
-  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); }
 }
 .vl-cell { position: relative; }
 .vl-cell a { display: block; text-decoration: none; color: inherit; }
@@ -171,11 +176,12 @@
   border: 2px solid transparent; background: rgba(128,128,128,.14);
   transition: transform .18s, box-shadow .18s;
 }
-.vl-cell a:hover img { transform: translateY(-3px) scale(1.03); }
+.vl-cell a:hover img { transform: translateY(-4px) scale(1.5);
+                       position: relative; z-index: 50; }
+.vl-cell a:hover { position: relative; z-index: 50; }
 .vl-cell-name {
-  display: block; font-size: .64rem; line-height: 1.2; margin-top: .22rem;
-  opacity: .72; overflow: hidden; text-overflow: ellipsis;
-  white-space: nowrap;
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 .vl-noart {
   display: flex; align-items: center; justify-content: center; text-align: center;
@@ -186,7 +192,7 @@
 /* ADDED this announcement: green ring and glow */
 .vl-cell.is-add img {
   border-color: var(--vl-add);
-  box-shadow: 0 0 0 2px var(--vl-add), 0 0 18px rgba(67,209,106,.6);
+  box-shadow: 0 0 0 2px var(--vl-add), 0 0 14px rgba(67,209,106,.75);
 }
 .vl-cell.is-add .vl-cell-name { color: var(--vl-add); opacity: 1; font-weight: 700; }
 .vl-cell.is-add { animation: vl-pulse .8s cubic-bezier(.3,.9,.4,1) 1; }
@@ -202,8 +208,8 @@
   position: absolute; left: 0; right: 0; top: 0;
   aspect-ratio: 146 / 204;
   display: flex; align-items: center; justify-content: center;
-  font-size: 2.8rem; font-weight: 900; color: var(--vl-rem);
-  text-shadow: 0 0 10px rgba(0,0,0,.9); pointer-events: none;
+  font-size: 1.5rem; font-weight: 900; color: var(--vl-rem);
+  text-shadow: 0 0 8px rgba(0,0,0,.95); pointer-events: none;
 }
 .vl-cell.is-gone .vl-cell-name {
   color: var(--vl-rem); opacity: 1; text-decoration: line-through;
@@ -216,7 +222,7 @@
 }
 
 /* the one-line change summary above the grids */
-.vl-chg { margin: .5rem 0 0; font-size: .9rem; display: flex;
+.vl-chg { margin: .4rem 0 0; font-size: .9rem; display: flex;
           flex-wrap: wrap; gap: .3rem .75rem; }
 .vl-chg-a { color: var(--vl-add); font-weight: 700; }
 .vl-chg-r { color: var(--vl-rem); font-weight: 700; }
@@ -326,4 +332,81 @@
 @media (max-width: 600px) {
   .vl-dcard { width: 6.5rem; }
   .vl-asof-n { font-size: 1.9rem; }
+}
+
+
+/* ---- shoebox view ------------------------------------------------------
+   Two lids with the cards thrown in face up. Scatter is deterministic (see
+   jitter() in the JS), so a card keeps its spot and the pile does not
+   reshuffle every time you step. */
+.vl-lid {
+  position: relative; margin: 1rem 0 1.5rem; border-radius: 8px;
+  overflow: hidden;
+  /* corrugated cardboard */
+  background:
+    repeating-linear-gradient(90deg,
+      rgba(0,0,0,.05) 0 3px, rgba(255,255,255,.035) 3px 7px),
+    linear-gradient(165deg, #a98b5e 0%, #8d6e46 55%, #70552f 100%);
+  border: 9px solid #6d5230;
+  border-top-color: #7d5f39; border-bottom-color: #5b4427;
+  box-shadow: inset 0 0 48px rgba(0,0,0,.55),
+              inset 0 3px 0 rgba(255,255,255,.1),
+              0 6px 18px rgba(0,0,0,.4);
+}
+.vl-lid-label {
+  position: absolute; top: .45rem; left: .7rem; z-index: 1000;
+  font-size: .72rem; font-weight: 800; letter-spacing: .12em;
+  text-transform: uppercase; color: #f0e2c8;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8);
+  background: rgba(0,0,0,.3); padding: .1rem .45rem; border-radius: 3px;
+}
+.vl-lid-empty { position: absolute; inset: 0; display: flex;
+                align-items: center; justify-content: center;
+                color: #e8dcc4; opacity: .55; }
+
+.vl-thrown {
+  position: absolute; display: block; text-decoration: none;
+  transform: rotate(var(--rot)); transform-origin: 50% 50%;
+  transition: transform .18s ease, filter .18s ease;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.6));
+}
+.vl-thrown img { width: 100%; height: auto; display: block; border-radius: 6%; }
+.vl-thrown:hover {
+  transform: rotate(var(--rot)) scale(2.2) translateY(-6px);
+  z-index: 2000 !important;
+  filter: drop-shadow(0 8px 14px rgba(0,0,0,.75));
+}
+
+/* thrown in on this announcement */
+.vl-thrown.is-add img {
+  box-shadow: 0 0 0 2px var(--vl-add), 0 0 20px rgba(67,209,106,.75);
+}
+.vl-thrown.is-add { animation: vl-toss .62s cubic-bezier(.22,1.1,.36,1) 1; }
+@keyframes vl-toss {
+  0%   { transform: translate(60px, -260px) rotate(-180deg) scale(1.5);
+         opacity: 0; }
+  60%  { opacity: 1; }
+  100% { transform: rotate(var(--rot)); opacity: 1; }
+}
+
+/* pulled back out on this announcement */
+.vl-thrown.is-gone img {
+  filter: grayscale(.95) brightness(.5);
+  box-shadow: 0 0 0 2px var(--vl-rem), 0 0 20px rgba(255,90,82,.6);
+}
+.vl-thrown.is-gone { animation: vl-lift .7s ease-out 1 both; }
+@keyframes vl-lift {
+  0%   { transform: rotate(var(--rot)); }
+  100% { transform: translateY(-34px) rotate(var(--rot)) scale(1.08); }
+}
+.vl-thrown-x {
+  position: absolute; inset: 0; display: flex;
+  align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 900; color: var(--vl-rem);
+  text-shadow: 0 0 7px rgba(0,0,0,.95); pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-thrown.is-add, .vl-thrown.is-gone { animation: none; }
+  .vl-thrown:hover { transform: rotate(var(--rot)) scale(1.4); }
 }

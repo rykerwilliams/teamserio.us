@@ -1942,15 +1942,15 @@
    "total_paper_printings": 5
   },
   "Sword of the Ages": {
-   "type_line": null,
-   "mana_cost": null,
-   "set": null,
-   "set_name": null,
-   "released_at": null,
-   "rarity": null,
-   "scryfall_uri": null,
-   "image": null,
-   "total_paper_printings": null
+   "type_line": "Artifact",
+   "mana_cost": "{6}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/296/sword-of-the-ages?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/3/b37fd4cc-ab5c-4c65-80ff-8f905b31e801.jpg?1783948025",
+   "total_paper_printings": 1
   },
   "Underworld Dreams": {
    "type_line": "Enchantment",
