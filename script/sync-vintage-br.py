@@ -20,6 +20,12 @@ def main(repo):
     doc = json.load(io.open(os.path.join(repo, "events.json")))
     events, sources = doc["events"], doc["sources"]
     current = json.load(io.open(os.path.join(repo, "current.json")))
+    # the era chart: not every change to the format is a B&R action, and the
+    # errata and rules changes explain why some of the B&R ones happened
+    try:
+        eradoc = json.load(io.open(os.path.join(repo, "eras.json")))
+    except FileNotFoundError:
+        eradoc = {"eras": [], "change_kinds": {}}
 
     # Card detail, keyed by name, gathered from every snapshot so that cards
     # which were unrestricted along the way are still described.
@@ -75,6 +81,16 @@ def main(repo):
         "pool_exclusions": current.get("pool_exclusions", []),
         "events": slim,
         "cards": cards,
+        "change_kinds": eradoc.get("change_kinds", {}),
+        # only the eras that say something: a date range with no recorded
+        # change is not worth shipping to the browser
+        "eras": [
+            {k: v for k, v in e.items()
+             if k in ("era", "range_text", "start", "end", "name", "changes",
+                      "notable_printings", "citation", "change_kinds")}
+            for e in eradoc.get("eras", [])
+            if e.get("changes") or e.get("notable_printings")
+        ],
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     io.open(OUT, "w").write(json.dumps(out, indent=1, sort_keys=False) + "\n")

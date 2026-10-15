@@ -21,6 +21,30 @@
   var CATS = DATA.categories || [];
   var POOL = DATA.pool_exclusions || [];
   var SOURCES = DATA.sources || {};
+  var ERAS = DATA.eras || [];
+  var KINDS = DATA.change_kinds || {};
+  var ERA_BY_NO = {};
+  ERAS.forEach(function (e) { ERA_BY_NO[e.era] = e; });
+
+  // Eras between one announcement and the next. Not every change to the
+  // format is a B&R action: errata, rules changes and new sets move it too,
+  // and they are often why the next announcement happened at all.
+  function erasBetween(idx, ev) {
+    // walk back to the most recent announcement that HAS an era; using the
+    // immediately preceding one drags in eras from 1994 whenever it has none
+    var lo = 0;
+    for (var k = idx - 1; k >= 0; k--) {
+      if (EVENTS[k].era) { lo = EVENTS[k].era; break; }
+    }
+    var hi = ev.era;
+    if (!hi) return [];
+    return ERAS.filter(function (e) {
+      return e.era > (lo || 0) && e.era < hi &&
+             (e.change_kinds || []).some(function (k) {
+               return k !== "set_release";
+             });
+    });
+  }
 
   function cmp(a, b) { return a.localeCompare(b); }
   function esc(s) {
@@ -80,6 +104,11 @@
   var STATES = [];
   (function () {
     var restricted = [], banned = [];
+    // When a card last entered each lid. A card thrown in later must lie on
+    // top of the pile: you cannot toss a card into a box and have it slide
+    // underneath the ones already there. A card that leaves and comes back
+    // gets a new, higher entry, so it lands back on top.
+    var enteredR = {}, enteredB = {};
     EVENTS.forEach(function (ev) {
       // deltas are tracked for BOTH halves of the list: a card moving from
       // restricted to banned has to show as leaving one and joining the other
@@ -87,12 +116,18 @@
       ev.actions.forEach(function (a) {
         var ri = restricted.indexOf(a.card), bi = banned.indexOf(a.card);
         if (a.action === "restrict") {
-          if (ri < 0) { restricted.push(a.card); added.push(a.card); }
+          if (ri < 0) {
+            restricted.push(a.card); added.push(a.card);
+            enteredR[a.card] = ev.seq;
+          }
           if (bi >= 0) { banned.splice(bi, 1); bRemoved.push(a.card); }
         } else if (a.action === "unrestrict") {
           if (ri >= 0) { restricted.splice(ri, 1); removed.push(a.card); }
         } else if (a.action === "ban") {
-          if (bi < 0) { banned.push(a.card); bAdded.push(a.card); }
+          if (bi < 0) {
+            banned.push(a.card); bAdded.push(a.card);
+            enteredB[a.card] = ev.seq;
+          }
           if (ri >= 0) { restricted.splice(ri, 1); removed.push(a.card); }
         } else if (a.action === "unban") {
           if (bi >= 0) { banned.splice(bi, 1); bRemoved.push(a.card); }
@@ -101,7 +136,9 @@
       STATES.push({ restricted: restricted.slice().sort(cmp),
                     banned: banned.slice().sort(cmp),
                     added: added.sort(cmp), removed: removed.sort(cmp),
-                    bAdded: bAdded.sort(cmp), bRemoved: bRemoved.sort(cmp) });
+                    bAdded: bAdded.sort(cmp), bRemoved: bRemoved.sort(cmp),
+                    enteredR: Object.assign({}, enteredR),
+                    enteredB: Object.assign({}, enteredB) });
     });
   })();
 
@@ -320,53 +357,146 @@
   // Each lid has a FIXED height, sized once for the largest the list ever
   // gets, so the box does not grow and shrink as you step through. Early
   // announcements leave it sparse, which is the right trade.
+  // Each lid gets a stable SLOT for every card that ever appears in it.
+  // Pure hash placement kept a card still but clumped the pile: the banned
+  // lid had nineteen cards piled on top of each other with half the box
+  // empty. A slot per card spreads them evenly and still never moves one.
+  function rosterOf(pick) {
+    var all = {};
+    STATES.forEach(function (st) {
+      pick(st).forEach(function (n) { all[n] = 1; });
+    });
+    return Object.keys(all).sort(cmp);
+  }
+
+  var ROSTER = {
+    restricted: rosterOf(function (st) {
+      return st.restricted.concat(st.removed); }),
+    banned: rosterOf(function (st) {
+      return st.banned.concat(st.bRemoved); })
+  };
+  var SLOT = { restricted: {}, banned: {} };
+  Object.keys(ROSTER).forEach(function (k) {
+    ROSTER[k].forEach(function (n, i) { SLOT[k][n] = i; });
+  });
+
+  // Each lid gives every card that ever appears in it a stable SLOT. Placing
+  // by hash alone kept a card still but clumped the pile -- the banned lid had
+  // nineteen cards heaped in one corner with half the box empty. A slot per
+  // card spreads them across the lid and still never moves one.
+  function rosterOf(pick) {
+    var all = {};
+    STATES.forEach(function (st) {
+      pick(st).forEach(function (n) { all[n] = 1; });
+    });
+    return Object.keys(all).sort(cmp);
+  }
+  var ROSTER = {
+    restricted: rosterOf(function (st) {
+      return st.restricted.concat(st.removed); }),
+    banned: rosterOf(function (st) {
+      return st.banned.concat(st.bRemoved); })
+  };
+  var SLOT = { restricted: {}, banned: {} };
+  Object.keys(ROSTER).forEach(function (k) {
+    ROSTER[k].forEach(function (n, i) { SLOT[k][n] = i; });
+  });
+
   var LID_H = (function () {
     function maxOf(pick) {
       return STATES.reduce(function (m, st) {
         return Math.max(m, pick(st).length); }, 0);
     }
-    function heightFor(n) {
-      var cols = Math.max(6, Math.ceil(Math.sqrt(Math.max(n, 1) * 2.9)));
-      return Math.max(150, Math.ceil(Math.max(n, 1) / cols) * 44 + 62);
+    // sized for the whole roster, not the current count, so the box never
+    // changes size as you step through
+    function layout(n) {
+      var cols = Math.max(6, Math.ceil(Math.sqrt(Math.max(n, 1) * 2.6)));
+      var rows = Math.ceil(Math.max(n, 1) / cols);
+      return { cols: cols, rows: rows,
+               h: Math.max(150, rows * 46 + 64) };
     }
     return {
-      restricted: heightFor(maxOf(function (st) {
-        return st.restricted.concat(st.removed); })),
-      banned: heightFor(maxOf(function (st) {
-        return st.banned.concat(st.bRemoved); }))
+      restricted: layout(ROSTER.restricted.length),
+      banned: layout(ROSTER.banned.length)
     };
   })();
 
-  function shoeboxHtml(current, removed, added, label, id, lidH) {
+  // A lid contains its cards: none may sit on or over the rim. The lid's
+  // border IS the lip, so cards are kept inside the box within it.
+  //
+  // The maths is done on the UNTRANSFORMED layout box (offsetLeft/offsetWidth)
+  // and the rotated extent derived from it, rather than on
+  // getBoundingClientRect. A card that is being thrown in is mid-animation
+  // when this runs, so its measured box is wherever the animation currently
+  // has it -- which is how The Fantasticar kept landing outside the lid.
+  function containCards(root) {
+    (root || document).querySelectorAll(".vl-lid").forEach(function (lid) {
+      var innerW = lid.clientWidth;
+      var innerH = lid.clientHeight;
+      if (!innerW || !innerH) return;
+      var pad = 4;                        // clearance from the lip
+
+      lid.querySelectorAll(".vl-thrown").forEach(function (card) {
+        var w = card.offsetWidth, h = card.offsetHeight;
+        if (!w || !h) return;
+        var rot = parseFloat(
+          (card.style.getPropertyValue("--rot") || "0").replace("deg", "")) || 0;
+        var rad = Math.abs(rot * Math.PI / 180);
+        var c = Math.abs(Math.cos(rad)), si = Math.abs(Math.sin(rad));
+        var bw = w * c + h * si;          // rotated bounding box
+        var bh = h * c + w * si;
+        // a card being pulled out lifts upward; it must not lift over the rim
+        var lift = card.classList.contains("is-gone") ? 36 : 0;
+
+        var cx = card.offsetLeft + w / 2;
+        var cy = card.offsetTop + h / 2;
+        var minX = pad + bw / 2, maxX = innerW - pad - bw / 2;
+        var minY = pad + bh / 2 + lift, maxY = innerH - pad - bh / 2;
+        var nx = bw >= innerW - 2 * pad ? innerW / 2
+                                        : Math.max(minX, Math.min(cx, maxX));
+        var ny = bh + lift >= innerH - 2 * pad ? innerH / 2 + lift / 2
+                                               : Math.max(minY, Math.min(cy, maxY));
+        if (Math.abs(nx - cx) < 0.5 && Math.abs(ny - cy) < 0.5) return;
+        card.style.left = (((nx - w / 2) / innerW) * 100).toFixed(2) + "%";
+        card.style.top = (ny - h / 2).toFixed(0) + "px";
+      });
+    });
+  }
+
+  function shoeboxHtml(current, removed, added, label, id, kind, entered) {
     var shown = current.slice();
     removed.forEach(function (n) { shown.push(n); });
     shown.sort(cmp);
 
-    var cardW = 8.5;                        // percent of lid width
-    var cardAspect = 204 / 146;
+    var lay = LID_H[kind], slots = SLOT[kind];
+    var lidH = lay.h, cols = lay.cols, rows = lay.rows;
+    var cardW = 8.5;                         // percent of lid width
+    var cellW = (100 - 2) / cols;
+    var cellH = (lidH - 34 - 14) / Math.max(rows, 1);
 
     var out = ['<div class="vl-lid" id="' + id +
                '" style="height:' + lidH + 'px">'];
     out.push('<span class="vl-lid-label">' + esc(label) + " \u00b7 " +
              current.length + "</span>");
-    shown.forEach(function (name, i) {
+    shown.forEach(function (name) {
       var gone = current.indexOf(name) < 0;
       var isNew = added.indexOf(name) >= 0;
-      // Position comes ONLY from the card's own name. Deriving it from the
-      // card's index in the current list meant every card shifted whenever
-      // one was added or removed -- the whole pile reshuffled on every step.
-      // Hashing the name means a card lands in its spot and stays there.
+      // the slot holds the card in one place; the hash only tilts it and
+      // nudges it off the grid, so it reads as a heap rather than a table
+      var slot = slots[name] || 0;
       var j = jitter(name);
-      var left = 1 + j[0] * (100 - cardW - 2);
-      var top = 28 + j[1] * Math.max(10, lidH - 28 - 16 - cardW * 7.4 * cardAspect);
-      var rot = (j[2] - 0.5) * 46;          // -23deg .. +23deg
+      var col = slot % cols, row = Math.floor(slot / cols);
+      var left = 1 + col * cellW + (j[0] - 0.5) * cellW * 0.5;
+      left = Math.max(0.5, Math.min(100 - cardW - 0.5, left));
+      var top = 30 + row * cellH + (j[1] - 0.5) * cellH * 0.35;
+      var rot = (j[2] - 0.5) * 40;
       var cls = "vl-thrown" + (gone ? " is-gone" : isNew ? " is-add" : "");
       var art = smallArt(name);
       out.push('<a href="#" class="' + cls + ' autocard vl-hist-open"' +
                ' data-card="' + esc(name) + '" title="' + esc(name) + '"' +
                ' style="left:' + left.toFixed(2) + "%;top:" + top.toFixed(0) +
                "px;width:" + cardW + "%;--rot:" + rot.toFixed(1) + "deg;z-index:" +
-               (gone ? 999 : isNew ? 900 : 100 + (hash32(name) % 300)) + '">' +
+               (gone ? 9000 : 100 + ((entered && entered[name]) || 0)) + '">' +
                (art ? '<img src="' + esc(art) + '" alt="' + esc(name) +
                       '" loading="lazy">'
                     : '<span class="vl-noart">' + esc(name) + "</span>") +
@@ -436,7 +566,7 @@
 
     if (VIEW === "shoebox") {
       h.push(shoeboxHtml(st.restricted, st.removed, st.added,
-                         "Restricted", "vl-list", LID_H.restricted));
+                         "Restricted", "vl-list", "restricted", st.enteredR));
     } else {
       h.push('<div class="vl-sec">Restricted \u2014 one copy allowed <span class="vl-sec-n">'
              + st.restricted.length + "</span></div>");
@@ -446,7 +576,7 @@
 
     if (VIEW === "shoebox") {
       h.push(shoeboxHtml(st.banned, st.bRemoved, st.bAdded,
-                         "Banned", "vl-banned-list", LID_H.banned));
+                         "Banned", "vl-banned-list", "banned", st.enteredB));
     } else {
       h.push('<div class="vl-sec">Banned \u2014 not allowed at all <span class="vl-sec-n">'
              + st.banned.length + "</span></div>");
@@ -489,6 +619,32 @@
            encodeURIComponent(poolQuery(ev, st)) +
            '">Legal card pool on this date →</a>');
 
+    // what happened in the format between the last announcement and this one
+    var between = erasBetween(i, ev);
+    if (between.length) {
+      h.push('<div class="vl-sec">Since the last announcement</div>');
+      h.push('<ul class="vl-between">');
+      between.forEach(function (e) {
+        var tags = (e.change_kinds || [])
+          .filter(function (k) { return k !== "set_release"; })
+          .map(function (k) {
+            return '<span class="vl-kind vl-kind-' + esc(k) + '" title="' +
+                   esc(KINDS[k] || k) + '">' + esc(k.replace("_", " ")) +
+                   "</span>";
+          }).join(" ");
+        h.push("<li>" + tags + " " + esc(e.changes || e.name || "") +
+               (e.citation && e.citation.url
+                 ? ' <a href="' + esc(e.citation.url) + '" target="_blank" ' +
+                   'rel="noopener noreferrer">source</a>' +
+                   (e.citation.archived
+                     ? ' <a href="' + esc(e.citation.archived) +
+                       '" target="_blank" rel="noopener noreferrer">(archived)</a>'
+                     : "")
+                 : "") + "</li>");
+      });
+      h.push("</ul>");
+    }
+
     var ann = ev.announcement;
     if (ann && ann.url) {
       h.push('<p class="vl-src"><strong>Announcement:</strong> ' +
@@ -507,6 +663,7 @@
     }
 
     panel.innerHTML = h.join("");
+    containCards(panel);
 
   }
 
