@@ -22,6 +22,13 @@ sections:
       - { id: handle,   origin: new, type: short,
           q: "Handle(s) — TMD, Discord, wherever you post",
           help: "So we can credit old posts and decklists to the right person." }
+      - id: email
+        origin: new
+        type: email
+        q: "Email"
+        help: >-
+          Only so we can check something, or sort out an interview time.
+          Not published, not added to anything.
       - { id: where,    origin: new, type: short,
           q: "Where are you?",
           help: "City and state is plenty. 'Leng' is also an accepted answer." }
@@ -243,8 +250,6 @@ sections:
     questions:
       - { id: anything,  origin: new, type: long,
           q: "Anything we didn't ask that belongs on your page?" }
-      - { id: email,     origin: new, type: email,
-          q: "Email, in case we need to check something" }
       - { id: consent,   origin: new, type: choice, required: true,
           q: "Okay to publish these answers on teamserio.us?",
           options: ["Yes", "Yes, but check with me on the photo first",

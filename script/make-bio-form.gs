@@ -43,6 +43,9 @@ function makeBioForm() {
   var handle = form.addTextItem();
   handle.setTitle("Handle(s) \u2014 TMD, Discord, wherever you post");
   handle.setHelpText("So we can credit old posts and decklists to the right person.");
+  var email = form.addTextItem();
+  email.setTitle("Email");
+  email.setHelpText("Only so we can check something, or sort out an interview time. Not published, not added to anything.");
   var where = form.addTextItem();
   where.setTitle("Where are you?");
   where.setHelpText("City and state is plenty. 'Leng' is also an accepted answer.");
@@ -201,8 +204,6 @@ function makeBioForm() {
   var page_last_thing = form.addPageBreakItem().setTitle("Last thing");
   var anything = form.addParagraphTextItem();
   anything.setTitle("Anything we didn't ask that belongs on your page?");
-  var email = form.addTextItem();
-  email.setTitle("Email, in case we need to check something");
   var consent = form.addMultipleChoiceItem();
   consent.setTitle("Okay to publish these answers on teamserio.us?");
   consent.setChoiceValues(["Yes", "Yes, but check with me on the photo first", "Yes, but leave my last name off", "Ask me first"]);
