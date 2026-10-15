@@ -12,6 +12,7 @@
 
 sections:
   - title: Who you are
+    core: true
     blurb: >-
       The part that ends up at the top of your page. Keep it short; the
       interesting stuff is further down.
@@ -36,6 +37,7 @@ sections:
           help: "Podcast, YouTube, Bluesky, store, band. One per line." }
 
   - title: How you got here
+    core: true
     questions:
       - { id: started,  origin: new, type: short,
           q: "When did you start playing, and what pulled you in?" }
@@ -54,6 +56,7 @@ sections:
           help: "What it is, why you keep sleeving it, and what it never beats." }
 
   - title: The record
+    core: true
     blurb: >-
       Anything you want on the page as a credit. Modesty is not useful here,
       and neither is accuracy — if you think you won it, say you won it and
@@ -108,7 +111,45 @@ sections:
           Player, organiser, driver, person who always brings the food. We will
           probably quote you.
 
+  - title: The 20th anniversary interviews
+    core: true
+    blurb: >-
+      For the anniversary we want to record a run of short "life story"
+      interviews — about fifteen minutes each, two or three per episode, so
+      nothing runs past half an hour. No prep and no wrong answers: how you
+      found Magic, how you found us, one object you bring along, one story you
+      always tell, and some rapid-fire nonsense. You finish by asking a
+      question of whoever is up next, without knowing who that is.
+    questions:
+      - { id: interview, origin: new, type: choice, required: true,
+          q: "Want to do a 15-minute life story interview for the 20th?",
+          options: ["Yes",
+                    "Yes, but talk me through it first",
+                    "Maybe later in the year",
+                    "No thanks"] }
+      - { id: interview_when, origin: new, type: choice, multi: true,
+          q: "If yes, when are you usually free?",
+          help: "Rough is fine. We will work around you.",
+          options: ["Weekday evenings", "Weekend afternoons", "Weekend evenings",
+                    "During an event", "Ask me, it varies"] }
+      - { id: interview_how, origin: new, type: choice,
+          q: "How would you rather do it?",
+          options: ["Discord or Zoom", "Phone", "In person at an event",
+                    "Whatever is easiest for you"] }
+      - { id: interview_topics, origin: new, type: long,
+          q: "Anything you'd want to talk about — or anything to avoid?",
+          help: "A story you always tell, a year that mattered, someone who should get credit." }
+      - id: interview_artifact
+        origin: new
+        type: long
+        q: "If you did one: what object would you bring?"
+        help: >-
+          A card, a trophy, a receipt, a sleeve, a photo, a scar. It is the
+          only part you get told about in advance, because choosing it is half
+          the interview. No wrong answers, and you can change your mind.
+
   - title: The Team Serious questionnaire
+    optional: true
     blurb: >-
       The actual point of the exercise. Answer at whatever length you like;
       one-word answers are a valid personality.
@@ -178,6 +219,7 @@ sections:
           q: "You can teach someone one format. Which, and why that one?" }
 
   - title: On the road
+    optional: true
     blurb: >-
       Half of this is the driving and the eating, and everybody knows it.
     questions:
@@ -196,42 +238,6 @@ sections:
           q: "Defend one gas station food item" }
       - { id: travel_with, origin: new, type: short,
           q: "Who are you usually in the car with?" }
-
-  - title: The 20th anniversary interviews
-    blurb: >-
-      For the anniversary we want to record a run of short "life story"
-      interviews — about fifteen minutes each, two or three per episode, so
-      nothing runs past half an hour. No prep and no wrong answers: how you
-      found Magic, how you found us, one object you bring along, one story you
-      always tell, and some rapid-fire nonsense. You finish by asking a
-      question of whoever is up next, without knowing who that is.
-    questions:
-      - { id: interview, origin: new, type: choice, required: true,
-          q: "Want to do a 15-minute life story interview for the 20th?",
-          options: ["Yes",
-                    "Yes, but talk me through it first",
-                    "Maybe later in the year",
-                    "No thanks"] }
-      - { id: interview_when, origin: new, type: choice, multi: true,
-          q: "If yes, when are you usually free?",
-          help: "Rough is fine. We will work around you.",
-          options: ["Weekday evenings", "Weekend afternoons", "Weekend evenings",
-                    "During an event", "Ask me, it varies"] }
-      - { id: interview_how, origin: new, type: choice,
-          q: "How would you rather do it?",
-          options: ["Discord or Zoom", "Phone", "In person at an event",
-                    "Whatever is easiest for you"] }
-      - { id: interview_topics, origin: new, type: long,
-          q: "Anything you'd want to talk about — or anything to avoid?",
-          help: "A story you always tell, a year that mattered, someone who should get credit." }
-      - id: interview_artifact
-        origin: new
-        type: long
-        q: "If you did one: what object would you bring?"
-        help: >-
-          A card, a trophy, a receipt, a sleeve, a photo, a scar. It is the
-          only part you get told about in advance, because choosing it is half
-          the interview. No wrong answers, and you can change your mind.
 
   - title: Last thing
     questions:

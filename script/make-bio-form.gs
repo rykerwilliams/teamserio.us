@@ -13,14 +13,28 @@
 function makeBioForm() {
   var form = FormApp.create('Team Serious \u2014 Bios');
   form.setDescription(
-    'For the bios on teamserio.us. Most of it is optional; answer what you ' +
-    'feel like. One-word answers are a valid personality.');
-  form.setCollectEmail(false);
-  form.setProgressBar(true);
-  form.setAllowResponseEdits(true);
-  form.setConfirmationMessage('Got it. Shout if you want anything changed.');
+    'For the bios on teamserio.us. Only four questions are required \u2014 ' +
+    'answer whatever else you feel like. One-word answers are a valid ' +
+    'personality.\n\n' +
+    'It saves as you go and you can come back to it: finish the first few ' +
+    'pages, submit, and the confirmation email has a link that reopens your ' +
+    'answers exactly where you left them.');
 
-  form.addPageBreakItem().setTitle("Who you are").setHelpText("The part that ends up at the top of your page. Keep it short; the interesting stuff is further down.");
+  // Collecting the email is what makes "come back later" work: Google only
+  // sends the response receipt, which carries the edit link, when it has an
+  // address. Without this the link appears once on the confirmation screen
+  // and is gone the moment the tab closes.
+  form.setCollectEmail(true);
+  form.setAllowResponseEdits(true);
+  form.setProgressBar(true);
+  form.setConfirmationMessage(
+    'Got it \u2014 thank you.\n\n' +
+    'Check your email: there is a link in there that reopens this form with ' +
+    'your answers still in it, so you can finish the rest whenever you like, ' +
+    'or change anything you want back.');
+
+
+  var page_who_you_are = form.addPageBreakItem().setTitle("Who you are").setHelpText("The part that ends up at the top of your page. Keep it short; the interesting stuff is further down.");
   var name = form.addTextItem();
   name.setTitle("Name, as you want it on the site");
   name.setRequired(true);
@@ -42,7 +56,7 @@ function makeBioForm() {
   links.setTitle("Anywhere you want linked");
   links.setHelpText("Podcast, YouTube, Bluesky, store, band. One per line.");
 
-  form.addPageBreakItem().setTitle("How you got here");
+  var page_how_you_got_here = form.addPageBreakItem().setTitle("How you got here");
   var started = form.addTextItem();
   started.setTitle("When did you start playing, and what pulled you in?");
   var first_deck = form.addParagraphTextItem();
@@ -58,7 +72,7 @@ function makeBioForm() {
   pet_deck.setTitle("Your deck. The one people associate with you.");
   pet_deck.setHelpText("What it is, why you keep sleeving it, and what it never beats.");
 
-  form.addPageBreakItem().setTitle("The record").setHelpText("Anything you want on the page as a credit. Modesty is not useful here, and neither is accuracy \u2014 if you think you won it, say you won it and we'll go and check.");
+  var page_the_record = form.addPageBreakItem().setTitle("The record").setHelpText("Anything you want on the page as a credit. Modesty is not useful here, and neither is accuracy \u2014 if you think you won it, say you won it and we'll go and check.");
   var titles = form.addParagraphTextItem();
   titles.setTitle("Notable titles, nicknames, honorifics");
   titles.setHelpText("What people actually call you, who started it, and whether you accept it. Earned, inflicted and self-appointed all count.");
@@ -77,7 +91,33 @@ function makeBioForm() {
   underrated.setTitle("Who deserves more credit than they get?");
   underrated.setHelpText("Player, organiser, driver, person who always brings the food. We will probably quote you.");
 
-  form.addPageBreakItem().setTitle("The Team Serious questionnaire").setHelpText("The actual point of the exercise. Answer at whatever length you like; one-word answers are a valid personality.");
+  var page_the_20th_anniversary_interviews = form.addPageBreakItem().setTitle("The 20th anniversary interviews").setHelpText("For the anniversary we want to record a run of short \"life story\" interviews \u2014 about fifteen minutes each, two or three per episode, so nothing runs past half an hour. No prep and no wrong answers: how you found Magic, how you found us, one object you bring along, one story you always tell, and some rapid-fire nonsense. You finish by asking a question of whoever is up next, without knowing who that is.");
+  var interview = form.addMultipleChoiceItem();
+  interview.setTitle("Want to do a 15-minute life story interview for the 20th?");
+  interview.setChoiceValues(["Yes", "Yes, but talk me through it first", "Maybe later in the year", "No thanks"]);
+  interview.setRequired(true);
+  var interview_when = form.addCheckboxItem();
+  interview_when.setTitle("If yes, when are you usually free?");
+  interview_when.setHelpText("Rough is fine. We will work around you.");
+  interview_when.setChoiceValues(["Weekday evenings", "Weekend afternoons", "Weekend evenings", "During an event", "Ask me, it varies"]);
+  var interview_how = form.addMultipleChoiceItem();
+  interview_how.setTitle("How would you rather do it?");
+  interview_how.setChoiceValues(["Discord or Zoom", "Phone", "In person at an event", "Whatever is easiest for you"]);
+  var interview_topics = form.addParagraphTextItem();
+  interview_topics.setTitle("Anything you'd want to talk about \u2014 or anything to avoid?");
+  interview_topics.setHelpText("A story you always tell, a year that mattered, someone who should get credit.");
+  var interview_artifact = form.addParagraphTextItem();
+  interview_artifact.setTitle("If you did one: what object would you bring?");
+  interview_artifact.setHelpText("A card, a trophy, a receipt, a sleeve, a photo, a scar. It is the only part you get told about in advance, because choosing it is half the interview. No wrong answers, and you can change your mind.");
+  var keep_going = form.addMultipleChoiceItem();
+  keep_going.setTitle("That is everything we actually need. Keep going?");
+  keep_going.setHelpText(
+    "The rest is the fun half: the questionnaire, and the one about gas " +
+    "station food. Stopping here still gives us a page \u2014 and the " +
+    "link in your confirmation email brings you back to finish the rest.");
+  keep_going.setRequired(true);
+
+  var page_the_team_serious_questionnaire = form.addPageBreakItem().setTitle("The Team Serious questionnaire").setHelpText("The actual point of the exercise. Answer at whatever length you like; one-word answers are a valid personality.");
   var fav_member = form.addTextItem();
   fav_member.setTitle("Favorite Team Serious member");
   fav_member.setHelpText("Wrong answers will be published.");
@@ -140,7 +180,7 @@ function makeBioForm() {
   var teach_one = form.addTextItem();
   teach_one.setTitle("You can teach someone one format. Which, and why that one?");
 
-  form.addPageBreakItem().setTitle("On the road").setHelpText("Half of this is the driving and the eating, and everybody knows it.");
+  var page_on_the_road = form.addPageBreakItem().setTitle("On the road").setHelpText("Half of this is the driving and the eating, and everybody knows it.");
   var radius = form.addMultipleChoiceItem();
   radius.setTitle("How far will you go for an event?");
   radius.setChoiceValues(["Across town", "A couple of hours", "Half a day's drive", "I will fly", "I have driven somewhere I should not have"]);
@@ -156,26 +196,7 @@ function makeBioForm() {
   var travel_with = form.addTextItem();
   travel_with.setTitle("Who are you usually in the car with?");
 
-  form.addPageBreakItem().setTitle("The 20th anniversary interviews").setHelpText("For the anniversary we want to record a run of short \"life story\" interviews \u2014 about fifteen minutes each, two or three per episode, so nothing runs past half an hour. No prep and no wrong answers: how you found Magic, how you found us, one object you bring along, one story you always tell, and some rapid-fire nonsense. You finish by asking a question of whoever is up next, without knowing who that is.");
-  var interview = form.addMultipleChoiceItem();
-  interview.setTitle("Want to do a 15-minute life story interview for the 20th?");
-  interview.setChoiceValues(["Yes", "Yes, but talk me through it first", "Maybe later in the year", "No thanks"]);
-  interview.setRequired(true);
-  var interview_when = form.addCheckboxItem();
-  interview_when.setTitle("If yes, when are you usually free?");
-  interview_when.setHelpText("Rough is fine. We will work around you.");
-  interview_when.setChoiceValues(["Weekday evenings", "Weekend afternoons", "Weekend evenings", "During an event", "Ask me, it varies"]);
-  var interview_how = form.addMultipleChoiceItem();
-  interview_how.setTitle("How would you rather do it?");
-  interview_how.setChoiceValues(["Discord or Zoom", "Phone", "In person at an event", "Whatever is easiest for you"]);
-  var interview_topics = form.addParagraphTextItem();
-  interview_topics.setTitle("Anything you'd want to talk about \u2014 or anything to avoid?");
-  interview_topics.setHelpText("A story you always tell, a year that mattered, someone who should get credit.");
-  var interview_artifact = form.addParagraphTextItem();
-  interview_artifact.setTitle("If you did one: what object would you bring?");
-  interview_artifact.setHelpText("A card, a trophy, a receipt, a sleeve, a photo, a scar. It is the only part you get told about in advance, because choosing it is half the interview. No wrong answers, and you can change your mind.");
-
-  form.addPageBreakItem().setTitle("Last thing");
+  var page_last_thing = form.addPageBreakItem().setTitle("Last thing");
   var anything = form.addParagraphTextItem();
   anything.setTitle("Anything we didn't ask that belongs on your page?");
   var email = form.addTextItem();
@@ -184,6 +205,16 @@ function makeBioForm() {
   consent.setTitle("Okay to publish these answers on teamserio.us?");
   consent.setChoiceValues(["Yes", "Yes, but check with me on the photo first", "Yes, but leave my last name off", "Ask me first"]);
   consent.setRequired(true);
+
+  // Wired once every page exists: a choice cannot point at a page that has
+  // not been created yet. "Stop here" skips to the final page so the form can
+  // actually be submitted -- Forms has no part-way submit, and without this a
+  // long form means people who give up leave nothing behind at all.
+  keep_going.setChoices([
+    keep_going.createChoice("Keep going", page_the_team_serious_questionnaire),
+    keep_going.createChoice("Stop here \u2014 I will finish it later",
+                            page_last_thing)
+  ]);
 
   var ss = SpreadsheetApp.create('Team Serious \u2014 Bios (responses)');
   form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());

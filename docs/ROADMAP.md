@@ -219,6 +219,12 @@ These have ordering constraints or deadlines attached.
         archived copies of WotC's B&R page. Without that the page is guesswork, and people
         would be building decks from it.
 
+- [ ] **A Team Serious coloring sheet.** Rajah's idea; possibly a Castmaster
+      task for Nat over the summer. Line art of something recognisably ours —
+      a venue, a kegerator, the Ohio outline, a pile of power — printable on
+      one sheet. Good for events, good as a giveaway, and the sort of thing
+      the site can host as a PDF without any new machinery.
+
 - [ ] **Bios collection** — Team Serious CV pages. Interview questions:
   - Favorite Team Serious member
   - Straight up: black licorice?
