@@ -16,22 +16,24 @@ function makeBioForm() {
     'For the bios on teamserio.us. Only four questions are required \u2014 ' +
     'answer whatever else you feel like. One-word answers are a valid ' +
     'personality.\n\n' +
-    'It saves as you go and you can come back to it: finish the first few ' +
-    'pages, submit, and the confirmation email has a link that reopens your ' +
-    'answers exactly where you left them.');
+    'If you are signed in to a Google account it saves your progress as you ' +
+    'go, so you can close the tab and pick it up later. You can also stop ' +
+    'after the first few pages and submit what you have \u2014 there is a ' +
+    'point partway through that offers exactly that.');
 
-  // Collecting the email is what makes "come back later" work: Google only
-  // sends the response receipt, which carries the edit link, when it has an
-  // address. Without this the link appears once on the confirmation screen
-  // and is gone the moment the tab closes.
-  form.setCollectEmail(true);
+  // No email collection: nobody is made to hand over an address to answer a
+  // questionnaire about mustard. Forms autosaves a draft for signed-in
+  // respondents for 30 days, which covers coming back, and the fork partway
+  // through means a half-finished form can still be submitted rather than
+  // lost. There is an optional email question at the end for anyone willing.
+  form.setCollectEmail(false);
   form.setAllowResponseEdits(true);
   form.setProgressBar(true);
   form.setConfirmationMessage(
     'Got it \u2014 thank you.\n\n' +
-    'Check your email: there is a link in there that reopens this form with ' +
-    'your answers still in it, so you can finish the rest whenever you like, ' +
-    'or change anything you want back.');
+    'Keep the link on this page if you want to edit your answers later, or ' +
+    'just tell us and we will fix it. If you stopped early you can reopen ' +
+    'the form any time to do the rest.');
 
 
   var page_who_you_are = form.addPageBreakItem().setTitle("Who you are").setHelpText("The part that ends up at the top of your page. Keep it short; the interesting stuff is further down.");
@@ -113,8 +115,8 @@ function makeBioForm() {
   keep_going.setTitle("That is everything we actually need. Keep going?");
   keep_going.setHelpText(
     "The rest is the fun half: the questionnaire, and the one about gas " +
-    "station food. Stopping here still gives us a page \u2014 and the " +
-    "link in your confirmation email brings you back to finish the rest.");
+    "station food. Stopping here still gives us a page, and you " +
+    "can open the form again later to finish the rest.");
   keep_going.setRequired(true);
 
   var page_the_team_serious_questionnaire = form.addPageBreakItem().setTitle("The Team Serious questionnaire").setHelpText("The actual point of the exercise. Answer at whatever length you like; one-word answers are a valid personality.");

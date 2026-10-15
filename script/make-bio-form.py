@@ -9,10 +9,13 @@ longer be mapped back to an id, and the bio pages cannot be generated.
 
 Two things the form has to get right, because it is long:
 
-  * SAVE AND COME BACK. Google only emails a respondent the link back to
-    their answers if the form collects the email itself, so setCollectEmail
-    is on. Signed-in respondents also get Google's own draft autosave. The
-    confirmation message says so, because nobody reads form settings.
+  * SAVE AND COME BACK. Forms autosaves a draft for anyone signed in to a
+    Google account, for 30 days, and that is what the form leans on. It does
+    NOT collect email addresses: Google would then mail each respondent a
+    receipt containing a link back into their answers, which is a stronger
+    guarantee, but it is not worth making everyone hand over an address.
+    There is an optional email QUESTION at the end for anyone happy to give
+    one, and that lands in the sheet like any other answer.
 
   * A WAY OUT EARLY. Forms cannot be submitted part-way through: someone who
     gives up on page four leaves nothing at all behind. So the sections
@@ -52,22 +55,24 @@ function makeBioForm() {
     'For the bios on teamserio.us. Only four questions are required \\u2014 ' +
     'answer whatever else you feel like. One-word answers are a valid ' +
     'personality.\\n\\n' +
-    'It saves as you go and you can come back to it: finish the first few ' +
-    'pages, submit, and the confirmation email has a link that reopens your ' +
-    'answers exactly where you left them.');
+    'If you are signed in to a Google account it saves your progress as you ' +
+    'go, so you can close the tab and pick it up later. You can also stop ' +
+    'after the first few pages and submit what you have \\u2014 there is a ' +
+    'point partway through that offers exactly that.');
 
-  // Collecting the email is what makes "come back later" work: Google only
-  // sends the response receipt, which carries the edit link, when it has an
-  // address. Without this the link appears once on the confirmation screen
-  // and is gone the moment the tab closes.
-  form.setCollectEmail(true);
+  // No email collection: nobody is made to hand over an address to answer a
+  // questionnaire about mustard. Forms autosaves a draft for signed-in
+  // respondents for 30 days, which covers coming back, and the fork partway
+  // through means a half-finished form can still be submitted rather than
+  // lost. There is an optional email question at the end for anyone willing.
+  form.setCollectEmail(false);
   form.setAllowResponseEdits(true);
   form.setProgressBar(true);
   form.setConfirmationMessage(
     'Got it \\u2014 thank you.\\n\\n' +
-    'Check your email: there is a link in there that reopens this form with ' +
-    'your answers still in it, so you can finish the rest whenever you like, ' +
-    'or change anything you want back.');
+    'Keep the link on this page if you want to edit your answers later, or ' +
+    'just tell us and we will fix it. If you stopped early you can reopen ' +
+    'the form any time to do the rest.');
 '''
 
 TAIL = '''
@@ -134,12 +139,11 @@ def main():
                 '  keep_going.setTitle('
                 '"That is everything we actually need. Keep going?");\n'
                 '  keep_going.setHelpText(\n'
-                '    "The rest is the fun half: the questionnaire, and the one '
-                'about gas " +\n'
-                '    "station food. Stopping here still gives us a page \\u2014 '
-                'and the " +\n'
-                '    "link in your confirmation email brings you back to finish '
-                'the rest.");\n'
+                '    "The rest is the fun half: the questionnaire, and '
+                'the one about gas " +\n'
+                '    "station food. Stopping here still gives us a page, '
+                'and you " +\n'
+                '    "can open the form again later to finish the rest.");\n'
                 '  keep_going.setRequired(true);')
 
     if last_core and first_optional:
