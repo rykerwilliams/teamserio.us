@@ -191,14 +191,16 @@
 /* ---- the B&R list as card art ---------------------------------------- */
 .vl-grid {
   display: grid; gap: .55rem; margin: .6rem 0 0; padding: 0; list-style: none;
-  grid-template-columns: repeat(auto-fill, minmax(62px, 1fr));
-  gap: .45rem;
+  /* Big enough to read, small enough that fifty-two cards do not run to six
+     rows. At 92px the grid alone was 958px tall and the page 2579px. */
+  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+  gap: .4rem;
 }
 @media (min-width: 992px) {
-  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); }
+  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); }
 }
 @media (min-width: 1500px) {
-  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); }
+  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); }
 }
 .vl-cell { position: relative; }
 .vl-cell a { display: block; text-decoration: none; color: inherit; }
@@ -563,3 +565,5 @@
 /* The app comes first and the prose after it, so the heading below the app
    needs the separation a page title would normally get from the header. */
 .vl-title { margin-top: .5rem; }
+
+.vl-btn i { margin-right: .35em; }

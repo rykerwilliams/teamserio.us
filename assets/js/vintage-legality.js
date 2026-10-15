@@ -809,8 +809,11 @@
   var viewBtn = document.getElementById("vl-view");
   function paintViewBtn() {
     if (!viewBtn) return;
-    viewBtn.textContent = VIEW === "shoebox" ? "\u25a6 Grid view"
-                                             : "\ud83d\udce6 Shoebox view";
+    // Font Awesome, not emoji: the box emoji rendered as a tofu square in
+    // the site's font stack.
+    viewBtn.innerHTML = VIEW === "shoebox"
+      ? '<i class="fa fa-table-cells" aria-hidden="true"></i> Grid view'
+      : '<i class="fa fa-box-open" aria-hidden="true"></i> Shoebox view';
     viewBtn.setAttribute("aria-pressed", VIEW === "shoebox" ? "true" : "false");
   }
   if (viewBtn) {
