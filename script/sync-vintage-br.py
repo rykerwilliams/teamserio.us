@@ -119,4 +119,7 @@ def main(repo):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "/files/docs/git/type1-build")
+    if len(sys.argv) < 2:
+        sys.exit(__doc__.strip() + "\n\nGive the path to a checkout of "
+                 "https://github.com/rykerwilliams/type1")
+    main(sys.argv[1])
