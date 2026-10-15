@@ -50,14 +50,52 @@ sections:
           help: "What it is, why you keep sleeving it, and what it never beats." }
 
   - title: The record
-    blurb: Anything you want on the page as a credit. Modesty is not useful here.
+    blurb: >-
+      Anything you want on the page as a credit. Modesty is not useful here,
+      and neither is accuracy — if you think you won it, say you won it and
+      we'll go and check.
     questions:
-      - { id: finishes, origin: ts,  type: long,
-          q: "Notable finishes?" }
-      - { id: proudest, origin: new, type: long,
-          q: "The win you're proudest of, which may not be the biggest one" }
-      - { id: beat,     origin: new, type: long,
-          q: "The loss you still think about" }
+      - id: titles
+        origin: new
+        type: long
+        q: "Notable titles, nicknames, honorifics"
+        help: >-
+          What people actually call you, who started it, and whether you
+          accept it. Earned, inflicted and self-appointed all count.
+      - id: finishes
+        origin: ts
+        type: long
+        q: "Notable finishes?"
+        help: >-
+          Events, years, placings, as near as you remember. "Second at
+          something in Sandusky, I want to say 2016" is a perfectly good
+          answer — we have the write-ups and can pin it down.
+      - id: ts_events
+        origin: new
+        type: choice
+        multi: true
+        q: "Which of ours have you been to?"
+        help: Tick anything you've played, not only ones you won.
+        options:
+          - "TSI — The Land"
+          - "TSI — Mishra's By the Maumee"
+          - "TSI — Hazard Serious Invitational"
+          - "TSI — Kegerator Serious Invitational"
+          - "TSO — All-American Warren"
+          - "TSO — the POP! Shop"
+          - "Kumite"
+          - "Castmaster"
+          - "Middle School Intercontinental"
+          - "Ohio Ante something"
+          - "Others I have forgotten"
+      - id: proudest
+        origin: new
+        type: long
+        q: "The win you're proudest of, which may not be the biggest one"
+      - id: beat
+        origin: new
+        type: long
+        q: "The loss you still think about"
 
   - title: The Team Serious questionnaire
     blurb: >-

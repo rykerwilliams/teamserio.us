@@ -54,9 +54,17 @@ function makeBioForm() {
   pet_deck.setTitle("Your deck. The one people associate with you.");
   pet_deck.setHelpText("What it is, why you keep sleeving it, and what it never beats.");
 
-  form.addPageBreakItem().setTitle("The record").setHelpText("Anything you want on the page as a credit. Modesty is not useful here.");
+  form.addPageBreakItem().setTitle("The record").setHelpText("Anything you want on the page as a credit. Modesty is not useful here, and neither is accuracy \u2014 if you think you won it, say you won it and we'll go and check.");
+  var titles = form.addParagraphTextItem();
+  titles.setTitle("Notable titles, nicknames, honorifics");
+  titles.setHelpText("What people actually call you, who started it, and whether you accept it. Earned, inflicted and self-appointed all count.");
   var finishes = form.addParagraphTextItem();
   finishes.setTitle("Notable finishes?");
+  finishes.setHelpText("Events, years, placings, as near as you remember. \"Second at something in Sandusky, I want to say 2016\" is a perfectly good answer \u2014 we have the write-ups and can pin it down.");
+  var ts_events = form.addCheckboxItem();
+  ts_events.setTitle("Which of ours have you been to?");
+  ts_events.setHelpText("Tick anything you've played, not only ones you won.");
+  ts_events.setChoiceValues(["TSI \u2014 The Land", "TSI \u2014 Mishra's By the Maumee", "TSI \u2014 Hazard Serious Invitational", "TSI \u2014 Kegerator Serious Invitational", "TSO \u2014 All-American Warren", "TSO \u2014 the POP! Shop", "Kumite", "Castmaster", "Middle School Intercontinental", "Ohio Ante something", "Others I have forgotten"]);
   var proudest = form.addParagraphTextItem();
   proudest.setTitle("The win you're proudest of, which may not be the biggest one");
   var beat = form.addParagraphTextItem();
