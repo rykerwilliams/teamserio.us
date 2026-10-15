@@ -202,6 +202,12 @@ function makeBioForm() {
   travel_with.setTitle("Who are you usually in the car with?");
 
   var page_last_thing = form.addPageBreakItem().setTitle("Last thing");
+  var suggest_questions = form.addParagraphTextItem();
+  suggest_questions.setTitle("Questions we should be asking \u2014 one per line");
+  suggest_questions.setHelpText("Put each one on its own line so we can pull them apart. Anything you would want asked of someone else counts, and anything you wish we had asked you. Good ones go into the next round and into the interviews.");
+  var suggest_people = form.addParagraphTextItem();
+  suggest_people.setTitle("Who else should we be asking \u2014 one per line");
+  suggest_people.setHelpText("Names, handles, \"the guy who ran the thing in Sandusky\". One per line. We will go and find them.");
   var anything = form.addParagraphTextItem();
   anything.setTitle("Anything we didn't ask that belongs on your page?");
   var consent = form.addMultipleChoiceItem();

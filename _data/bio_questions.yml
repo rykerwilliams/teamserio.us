@@ -248,6 +248,22 @@ sections:
 
   - title: Last thing
     questions:
+      - id: suggest_questions
+        origin: new
+        type: long
+        q: "Questions we should be asking \u2014 one per line"
+        help: >-
+          Put each one on its own line so we can pull them apart. Anything
+          you would want asked of someone else counts, and anything you wish
+          we had asked you. Good ones go into the next round and into the
+          interviews.
+      - id: suggest_people
+        origin: new
+        type: long
+        q: "Who else should we be asking \u2014 one per line"
+        help: >-
+          Names, handles, "the guy who ran the thing in Sandusky". One per
+          line. We will go and find them.
       - { id: anything,  origin: new, type: long,
           q: "Anything we didn't ask that belongs on your page?" }
       - { id: consent,   origin: new, type: choice, required: true,
