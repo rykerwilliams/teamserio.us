@@ -111,36 +111,18 @@ These have ordering constraints or deadlines attached.
 
 ## Cosmetic / layout / CSS
 
-- [ ] **Rotate the site tagline on each deploy.** The home page title currently reads
-      `TeamSerio.us | testing`. The word "testing" is not in this repo -- grepping for it
-      finds nothing but prose inside posts. It comes from the **GitHub repository's own
-      description field**, by way of chulapa's `_includes/head.html`, which on the home
-      page alone builds the title as:
+- [x] **Rotate the site tagline on each deploy.** Done, with one tagline in the
+      list. The home page title fell through to the GitHub repository's
+      description field, which read **"testing"**, so every browser tab and
+      every shared link said `TeamSerio.us | testing`. It was invisible from a
+      checkout, which is why it lasted.
 
-          metatitle1 = site.title
-          metatitle2 = site.subtitle | default: site.github.project_tagline
+      `_data/taglines.yml` holds the list and `_plugins/tagline.rb` picks one at
+      build time, so adding taglines needs no code change. The choice is
+      deterministic, seeded from the commit SHA, so rebuilding a commit does
+      not quietly change what a shared link says.
 
-      `subtitle:` is not set in `_config.yml`, so `metatitle2` falls through to
-      `site.github.project_tagline` -- the repo description, which is literally `testing`.
-      Every other page is unaffected: there `metatitle1` is the page title and
-      `metatitle2` is `site.title`. Link previews are also unaffected, because
-      `<meta name="description">` and `og:description` come from `description:` in
-      `_config.yml`, which correctly reads "Web Home Of Team Serious."
-
-      Two ways to stop it immediately: set `subtitle:` in `_config.yml` (keeps the fix in
-      the repo, where it is reviewable), or edit the repo description on GitHub. Prefer
-      the former -- the repo description is invisible from a checkout and the next person
-      to go looking will waste the same time I did.
-
-      Wanted: a set of taglines that rotates per deploy rather than one fixed string. The
-      build already runs on every push, so picking one at build time is enough; it does not
-      need to change per page view. A `_data/taglines.yml` list plus a line in the layout
-      that selects by build number or date would do it, and keeps the list editable without
-      touching the config.
-
-      Worth deciding whether the rotation should be deterministic (same deploy, same
-      tagline) so a rebuild of the same commit is reproducible, or genuinely random.
-      Deterministic is easier to reason about when a link preview looks wrong.
+      Still wanted: more taglines. Rajah has some.
 
 
 - [ ] Social media links on articles
@@ -189,6 +171,54 @@ These have ordering constraints or deadlines attached.
       Nam Tran's own TMD handles are not identified yet; adding them would help more than
       more keywords. Once a report lands here, the five `digitalmeh.net` posts linking
       these threads should point at the new post instead of the archive snapshot.
+- [ ] **"What was legal when" — a date-driven Vintage card pool.** Given a date, show the
+      Banned and Restricted list as it stood, and a Scryfall query for the legal pool, so a
+      throwback tournament can be run off a link.
+
+      **The problem with the existing sources.** Eternal Central's
+      [Timeline of Vintage](https://www.eternalcentral.com/timeline-of-vintage/) and
+      [Schools of Magic: History of Vintage](https://www.eternalcentral.com/history-of-vintage-schools-of-magic-an-alternative-history-of-the-banned-and-restricted-list/)
+      publish the *changes* — this card restricted, that one unrestricted — but never the
+      **state** on a given day. Working out what was actually legal in, say, spring 1999
+      means replaying every announcement from 1994 forward and hoping none were missed.
+
+      ⚠️ **Do not use the Schools of Magic piece as a source.** It is Menendian's
+      *alternative* history: counted mechanically it carries **23 "should have been
+      restricted/banned" statements against 3 describing what actually happened**. Scraping
+      it would silently blend the real list with the author's counterfactual one, and
+      people would be building tournament decks from the result. It is worth reading for
+      the reasoning behind each decision; it is not a record of them. Take the actual
+      actions from the timeline page, cross-checked against WotC's own B&R announcements.
+
+      **Data model.** One append-only list of events — `{date, card, action}` where action is
+      restrict / unrestrict / ban / unban — replayed to any date to get the state. Kept as a
+      reviewable JSON file in the repo, not scraped at page load, so corrections are a diff
+      and the provenance of each entry can carry a source link.
+
+      **The Scryfall part works** — tested:
+
+      | query | result |
+      |---|---|
+      | `date<=1994-12-31 game:paper` | 981 cards |
+      | `date<=2003-12-31 game:paper -is:funny -is:digital` | 6,512 cards |
+      | same, with banned cards excluded by name | works; 20 exclusions is a 478-char query |
+
+      Vintage's *banned* list is short — ante cards, Chaos Orb, Falling Star, Shahrazad,
+      conspiracies — so excluding by name is practical. Restricted cards stay legal at one
+      copy, so they are a displayed list rather than a filter.
+
+      **Open questions before building.**
+      - `date<=` matches a *printing*, so a card reprinted later still matches on its early
+        printing — needs checking that this does not let a card in before it existed.
+      - Which sets were ever Vintage-legal needs stating explicitly (Un-sets, Alchemy and
+        other digital-only sets, Portal-era oddities).
+      - Announcement date vs effective date differ, especially in the 1990s; the list should
+        key off whichever one a tournament would have used.
+      - Cards renamed or errata'd since would need mapping to current Scryfall names.
+      - Verification: reconstruct the state at a handful of known dates and diff against
+        archived copies of WotC's B&R page. Without that the page is guesswork, and people
+        would be building decks from it.
+
 - [ ] **Bios collection** — Team Serious CV pages. Interview questions:
   - Favorite Team Serious member
   - Straight up: black licorice?

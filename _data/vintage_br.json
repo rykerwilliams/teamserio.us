@@ -1,0 +1,5727 @@
+{
+ "generated_from": "https://github.com/rykerwilliams/type1",
+ "symbols": {
+  "{T}": "https://svgs.scryfall.io/card-symbols/T.svg",
+  "{Q}": "https://svgs.scryfall.io/card-symbols/Q.svg",
+  "{E}": "https://svgs.scryfall.io/card-symbols/E.svg",
+  "{P}": "https://svgs.scryfall.io/card-symbols/P.svg",
+  "{PW}": "https://svgs.scryfall.io/card-symbols/PW.svg",
+  "{CHAOS}": "https://svgs.scryfall.io/card-symbols/CHAOS.svg",
+  "{A}": "https://svgs.scryfall.io/card-symbols/A.svg",
+  "{TK}": "https://svgs.scryfall.io/card-symbols/TK.svg",
+  "{X}": "https://svgs.scryfall.io/card-symbols/X.svg",
+  "{Y}": "https://svgs.scryfall.io/card-symbols/Y.svg",
+  "{Z}": "https://svgs.scryfall.io/card-symbols/Z.svg",
+  "{0}": "https://svgs.scryfall.io/card-symbols/0.svg",
+  "{\u00bd}": "https://svgs.scryfall.io/card-symbols/HALF.svg",
+  "{1}": "https://svgs.scryfall.io/card-symbols/1.svg",
+  "{2}": "https://svgs.scryfall.io/card-symbols/2.svg",
+  "{3}": "https://svgs.scryfall.io/card-symbols/3.svg",
+  "{4}": "https://svgs.scryfall.io/card-symbols/4.svg",
+  "{5}": "https://svgs.scryfall.io/card-symbols/5.svg",
+  "{6}": "https://svgs.scryfall.io/card-symbols/6.svg",
+  "{7}": "https://svgs.scryfall.io/card-symbols/7.svg",
+  "{8}": "https://svgs.scryfall.io/card-symbols/8.svg",
+  "{9}": "https://svgs.scryfall.io/card-symbols/9.svg",
+  "{10}": "https://svgs.scryfall.io/card-symbols/10.svg",
+  "{11}": "https://svgs.scryfall.io/card-symbols/11.svg",
+  "{12}": "https://svgs.scryfall.io/card-symbols/12.svg",
+  "{13}": "https://svgs.scryfall.io/card-symbols/13.svg",
+  "{14}": "https://svgs.scryfall.io/card-symbols/14.svg",
+  "{15}": "https://svgs.scryfall.io/card-symbols/15.svg",
+  "{16}": "https://svgs.scryfall.io/card-symbols/16.svg",
+  "{17}": "https://svgs.scryfall.io/card-symbols/17.svg",
+  "{18}": "https://svgs.scryfall.io/card-symbols/18.svg",
+  "{19}": "https://svgs.scryfall.io/card-symbols/19.svg",
+  "{20}": "https://svgs.scryfall.io/card-symbols/20.svg",
+  "{100}": "https://svgs.scryfall.io/card-symbols/100.svg",
+  "{1000000}": "https://svgs.scryfall.io/card-symbols/1000000.svg",
+  "{\u221e}": "https://svgs.scryfall.io/card-symbols/INFINITY.svg",
+  "{W/U}": "https://svgs.scryfall.io/card-symbols/WU.svg",
+  "{W/B}": "https://svgs.scryfall.io/card-symbols/WB.svg",
+  "{B/R}": "https://svgs.scryfall.io/card-symbols/BR.svg",
+  "{B/G}": "https://svgs.scryfall.io/card-symbols/BG.svg",
+  "{U/B}": "https://svgs.scryfall.io/card-symbols/UB.svg",
+  "{U/R}": "https://svgs.scryfall.io/card-symbols/UR.svg",
+  "{R/G}": "https://svgs.scryfall.io/card-symbols/RG.svg",
+  "{R/W}": "https://svgs.scryfall.io/card-symbols/RW.svg",
+  "{G/W}": "https://svgs.scryfall.io/card-symbols/GW.svg",
+  "{G/U}": "https://svgs.scryfall.io/card-symbols/GU.svg",
+  "{B/G/P}": "https://svgs.scryfall.io/card-symbols/BGP.svg",
+  "{B/R/P}": "https://svgs.scryfall.io/card-symbols/BRP.svg",
+  "{G/U/P}": "https://svgs.scryfall.io/card-symbols/GUP.svg",
+  "{G/W/P}": "https://svgs.scryfall.io/card-symbols/GWP.svg",
+  "{R/G/P}": "https://svgs.scryfall.io/card-symbols/RGP.svg",
+  "{R/W/P}": "https://svgs.scryfall.io/card-symbols/RWP.svg",
+  "{U/B/P}": "https://svgs.scryfall.io/card-symbols/UBP.svg",
+  "{U/R/P}": "https://svgs.scryfall.io/card-symbols/URP.svg",
+  "{W/B/P}": "https://svgs.scryfall.io/card-symbols/WBP.svg",
+  "{W/U/P}": "https://svgs.scryfall.io/card-symbols/WUP.svg",
+  "{C/W}": "https://svgs.scryfall.io/card-symbols/CW.svg",
+  "{C/U}": "https://svgs.scryfall.io/card-symbols/CU.svg",
+  "{C/B}": "https://svgs.scryfall.io/card-symbols/CB.svg",
+  "{C/R}": "https://svgs.scryfall.io/card-symbols/CR.svg",
+  "{C/G}": "https://svgs.scryfall.io/card-symbols/CG.svg",
+  "{2/W}": "https://svgs.scryfall.io/card-symbols/2W.svg",
+  "{2/U}": "https://svgs.scryfall.io/card-symbols/2U.svg",
+  "{2/B}": "https://svgs.scryfall.io/card-symbols/2B.svg",
+  "{2/R}": "https://svgs.scryfall.io/card-symbols/2R.svg",
+  "{2/G}": "https://svgs.scryfall.io/card-symbols/2G.svg",
+  "{H}": "https://svgs.scryfall.io/card-symbols/H.svg",
+  "{W/P}": "https://svgs.scryfall.io/card-symbols/WP.svg",
+  "{U/P}": "https://svgs.scryfall.io/card-symbols/UP.svg",
+  "{B/P}": "https://svgs.scryfall.io/card-symbols/BP.svg",
+  "{R/P}": "https://svgs.scryfall.io/card-symbols/RP.svg",
+  "{G/P}": "https://svgs.scryfall.io/card-symbols/GP.svg",
+  "{C/P}": "https://svgs.scryfall.io/card-symbols/CP.svg",
+  "{HW}": "https://svgs.scryfall.io/card-symbols/HW.svg",
+  "{HR}": "https://svgs.scryfall.io/card-symbols/HR.svg",
+  "{W}": "https://svgs.scryfall.io/card-symbols/W.svg",
+  "{U}": "https://svgs.scryfall.io/card-symbols/U.svg",
+  "{B}": "https://svgs.scryfall.io/card-symbols/B.svg",
+  "{R}": "https://svgs.scryfall.io/card-symbols/R.svg",
+  "{G}": "https://svgs.scryfall.io/card-symbols/G.svg",
+  "{C}": "https://svgs.scryfall.io/card-symbols/C.svg",
+  "{S}": "https://svgs.scryfall.io/card-symbols/S.svg",
+  "{L}": "https://svgs.scryfall.io/card-symbols/L.svg",
+  "{D}": "https://svgs.scryfall.io/card-symbols/D.svg"
+ },
+ "format": "Vintage",
+ "sources": {
+  "eternalcentral": {
+   "title": "Timeline of Vintage (Steve Menendian)",
+   "url": "https://www.eternalcentral.com/timeline-of-vintage/",
+   "note": "The era chart. Carries the dates, the era names and a link to each announcement."
+  },
+  "mtgwiki": {
+   "title": "MTG Wiki B&R timeline",
+   "url": "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline",
+   "note": "Used only where the chart does not enumerate a change, such as the first list and the 18 cards of September 1999."
+  },
+  "wotc": {
+   "title": "Wizards of the Coast announcement",
+   "url": "https://magic.wizards.com/en/news/announcements",
+   "note": "Primary source. Linked per announcement where the chart cites one, and for 2025 onward."
+  },
+  "scryfall": {
+   "title": "Scryfall",
+   "url": "https://scryfall.com",
+   "note": "Card identity, original printing, and the live list the replay is checked against."
+  }
+ },
+ "categories": [
+  {
+   "name": "Ante",
+   "count": 9,
+   "since": "1994-01",
+   "rule": "Cards that reference playing for ante are banned.",
+   "cards": [
+    "Amulet of Quoz",
+    "Bronze Tablet",
+    "Contract from Below",
+    "Darkpact",
+    "Demonic Attorney",
+    "Jeweled Bird",
+    "Rebirth",
+    "Tempest Efreet",
+    "Timmerian Fiends"
+   ]
+  },
+  {
+   "name": "Conspiracy",
+   "count": 25,
+   "since": "2014-06-06",
+   "rule": "Cards with the card type Conspiracy are banned."
+  },
+  {
+   "name": "Offensive content",
+   "count": 7,
+   "since": "2020-06-10",
+   "rule": "Cards whose art, text or name is racially or culturally offensive are banned.",
+   "cards": [
+    "Cleanse",
+    "Crusade",
+    "Imprison",
+    "Invoke Prejudice",
+    "Jihad",
+    "Pradesh Gypsies",
+    "Stone-Throwing Devils"
+   ]
+  },
+  {
+   "name": "Stickers and Attractions",
+   "since": "2024-05-13",
+   "rule": "Cards that bring stickers or Attractions into play are banned."
+  }
+ ],
+ "pool_exclusions": [
+  {
+   "name": "Collectors' and International Edition",
+   "since": "1993-12-10",
+   "icon": "https://svgs.scryfall.io/sets/ced.svg?1791777600",
+   "note": "Square-bordered gift-set reprints; never tournament legal. Every card in them is a reprint of a card that was legal from Limited Edition, so excluding them changes no card's legality.",
+   "scryfall": "-st:memorabilia"
+  },
+  {
+   "name": "Silver-bordered and acorn",
+   "since": "1998-08-11",
+   "icon": "https://svgs.scryfall.io/sets/ugl.svg?1791777600",
+   "note": "Unglued onward. Never tournament legal in any format.",
+   "scryfall": "-is:funny"
+  },
+  {
+   "name": "Digital-only",
+   "since": "1997-04-01",
+   "icon": "https://svgs.scryfall.io/sets/past.svg?1791777600",
+   "note": "Astral Cards onward, through Magic Online and Arena/Alchemy. No paper printing, so never legal in paper Vintage.",
+   "scryfall": "-is:digital"
+  }
+ ],
+ "events": [
+  {
+   "seq": 1,
+   "date": "1994-01-26",
+   "precision": "day",
+   "effective": "1994-01-26",
+   "announced": null,
+   "era": 3,
+   "era_name": "Constructed Magic Begins",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Amulet of Quoz",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Contract from Below",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Darkpact",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Demonic Attorney",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Jeweled Bird",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Rebirth",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Shahrazad",
+     "action": "ban",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Timmerian Fiends",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Ali from Cairo",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Ancestral Recall",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Berserk",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Black Lotus",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Braingeyser",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Dingus Egg",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Gauntlet of Might",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Icy Manipulator",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Mox Emerald",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Mox Jet",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Mox Pearl",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Mox Ruby",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Mox Sapphire",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Orcish Oriflamme",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Rukh Egg",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Sol Ring",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Time Vault",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Time Walk",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Timetwister",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    }
+   ],
+   "sources": [
+    "https://magic.wizards.com/en/news/announcements",
+    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
+   ]
+  },
+  {
+   "seq": 2,
+   "date": "1994-03-04",
+   "precision": "day",
+   "effective": "1994-03-04",
+   "announced": null,
+   "era": 3,
+   "era_name": "Constructed Magic Begins",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Orcish Oriflamme",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Rukh Egg",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 3,
+   "date": "1994-03-23",
+   "precision": "day",
+   "effective": "1994-03-23",
+   "announced": null,
+   "era": 4,
+   "era_name": "Antiquities Arrives",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Time Vault",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Channel",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Copy Artifact",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Demonic Tutor",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Regrowth",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Wheel of Fortune",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Icy Manipulator",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 4,
+   "date": "1994-05-02",
+   "precision": "day",
+   "effective": "1994-05-02",
+   "announced": null,
+   "era": 5,
+   "era_name": "Library of Alexandria Era",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Bronze Tablet",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Candelabra of Tawnos",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Feldon's Cane",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Ivory Tower",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Library of Alexandria",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Dingus Egg",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gauntlet of Might",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 5,
+   "date": "1994-06-13",
+   "precision": "day",
+   "effective": "1994-06-13",
+   "announced": null,
+   "era": 6,
+   "era_name": "Mind Twist Metagame",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Mishra's Workshop",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 6,
+   "date": "1994-08-08",
+   "precision": "day",
+   "effective": "1994-08-08",
+   "announced": "1994-06-13",
+   "era": 7,
+   "era_name": "Creatureless Era Begins",
+   "announcement": {
+    "url": "https://groups.google.com/forum/#!msg/rec.games.deckmaster/_eDtnxy4_mQ/KWwx5bRfMdgJ",
+    "label": "Duelists' Convocation Rules Update June 13, 1994",
+    "archived": "http://web.archive.org/web/20261012110737/https://groups.google.com/forum/",
+    "archived_at": "20261012110737"
+   },
+   "actions": [
+    {
+     "card": "Divine Intervention",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Tempest Efreet",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Chaos Orb",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Falling Star",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind Twist",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mirror Universe",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Recall",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Sword of the Ages",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Underworld Dreams",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 7,
+   "date": "1994-10-11",
+   "precision": "day",
+   "effective": "1994-10-11",
+   "announced": null,
+   "era": 10,
+   "era_name": "\"93/94\" Magic",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Maze of Ith",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 8,
+   "date": "1994-11-02",
+   "precision": "day",
+   "effective": "1994-11-02",
+   "announced": null,
+   "era": null,
+   "era_name": null,
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Falling Star",
+     "action": "ban",
+     "from": "mtgwiki",
+     "note": "from the wiki"
+    },
+    {
+     "card": "Zuran Orb",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "from the wiki; chart records only the 1997 unrestriction"
+    }
+   ],
+   "sources": [
+    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
+   ]
+  },
+  {
+   "seq": 9,
+   "date": "1995-04-20",
+   "precision": "day",
+   "effective": "1995-04-20",
+   "announced": null,
+   "era": 12,
+   "era_name": "\"The Deck\" Dominates",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Balance",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Fork",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 10,
+   "date": "1995-10-31",
+   "precision": "day",
+   "effective": "1995-10-31",
+   "announced": null,
+   "era": 14,
+   "era_name": "Prelude to Bannings",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Channel",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Chaos Orb",
+     "action": "ban",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 11,
+   "date": "1996-01-31",
+   "precision": "day",
+   "effective": "1996-01-31",
+   "announced": "1995-01-01",
+   "era": 15,
+   "era_name": "Necro Winter",
+   "announcement": {
+    "url": "https://web.archive.org/web/20140802034045/http:/oracle.wizards.com/scripts/wa.exe?A2=ind9601C&L=MTG-L&P=R6502&I=-3",
+    "label": "Duelists' Convocation Rules Update January 1, 1995",
+    "archived": "https://web.archive.org/web/20140802034045/http:/oracle.wizards.com/scripts/wa.exe?A2=ind9601C&L=MTG-L&P=R6502&I=-3"
+   },
+   "actions": [
+    {
+     "card": "Mind Twist",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Black Vise",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 12,
+   "date": "1996-03-31",
+   "precision": "day",
+   "effective": "1996-03-31",
+   "announced": null,
+   "era": 16,
+   "era_name": "Type II Havoc",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Time Vault",
+     "action": "unban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Ali from Cairo",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Black Vise",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Sword of the Ages",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 13,
+   "date": "1996-09-30",
+   "precision": "day",
+   "effective": "1996-09-30",
+   "announced": null,
+   "era": 18,
+   "era_name": "Force of Will Era Begins",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Fastbond",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 14,
+   "date": "1997-06-30",
+   "precision": "day",
+   "effective": "1997-06-30",
+   "announced": null,
+   "era": 21,
+   "era_name": "Prosperty Combo Era",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Black Vise",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 15,
+   "date": "1997-09-30",
+   "precision": "day",
+   "effective": "1997-09-30",
+   "announced": null,
+   "era": 22,
+   "era_name": "Inquest Summer",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Candelabra of Tawnos",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Copy Artifact",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Feldon's Cane",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mishra's Workshop",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Zuran Orb",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 16,
+   "date": "1998-01-01",
+   "precision": "day",
+   "effective": "1998-01-01",
+   "announced": "1998-01-01",
+   "era": 24,
+   "era_name": "Blue Zoo Moment",
+   "announcement": {
+    "url": "https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/BSJWPznsuY8/m/f7fVggCYszIJ?pli=1",
+    "label": "Banned & Restricted List Update January 1, 1998",
+    "archived": "http://web.archive.org/web/20250814090652/https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/BSJWPznsuY8/m/f7fVggCYszIJ?pli=1",
+    "archived_at": "20250814090652"
+   },
+   "actions": [
+    {
+     "card": "Strip Mine",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 17,
+   "date": "1999-01-01",
+   "precision": "day",
+   "effective": "1999-01-01",
+   "announced": null,
+   "era": 28,
+   "era_name": "Type 1 is Broken: Combo Rising",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Stroke of Genius",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Tolarian Academy",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Windfall",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 18,
+   "date": "1999-04-01",
+   "precision": "day",
+   "effective": "1999-04-01",
+   "announced": "1999-03-01",
+   "era": 30,
+   "era_name": "A Jarring Month",
+   "announcement": {
+    "url": "http://members.tripod.com/blue_midget/Gossip/banned.htm",
+    "label": "Banned & Restricted List Update March 1, 1999"
+   },
+   "actions": [
+    {
+     "card": "Memory Jar",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Time Spiral",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Maze of Ith",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 19,
+   "date": "1999-09-30",
+   "precision": "day",
+   "effective": "1999-09-30",
+   "announced": "1999-09-01",
+   "era": 33,
+   "era_name": "Academy's Swan Song",
+   "announcement": {
+    "url": "http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-990901.txt",
+    "label": "Banned & Restricted List Update September 1, 1999"
+   },
+   "actions": [
+    {
+     "card": "Crop Rotation",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Doomsday",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Dream Halls",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Enlightened Tutor",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Frantic Search",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Grim Monolith",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Hurkyl's Recall",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Lotus Petal",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Mana Crypt",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Mana Vault",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Mind Over Matter",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Mox Diamond",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Mystical Tutor",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Tinker",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Vampiric Tutor",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Voltaic Key",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Yawgmoth's Bargain",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Yawgmoth's Will",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
+    },
+    {
+     "card": "Divine Intervention",
+     "action": "unban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Shahrazad",
+     "action": "unban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Ivory Tower",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mirror Universe",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Underworld Dreams",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline",
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 20,
+   "date": "2000-09-30",
+   "precision": "day",
+   "effective": "2000-09-30",
+   "announced": "2000-09-01",
+   "era": 37,
+   "era_name": "Trix Dominant",
+   "announcement": {
+    "url": "http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-000901.txt",
+    "label": "Banned & Restricted List Update September 1, 2000",
+    "archived": "http://web.archive.org/web/20250823045431/http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-000901.txt",
+    "archived_at": "20250823045431"
+   },
+   "actions": [
+    {
+     "card": "Channel",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "unbanned to restricted"
+    },
+    {
+     "card": "Demonic Consultation",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind Twist",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "unbanned to restricted"
+    },
+    {
+     "card": "Necropotence",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Channel",
+     "action": "unban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind Twist",
+     "action": "unban",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline",
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 21,
+   "date": "2002-01-01",
+   "precision": "day",
+   "effective": "2002-01-01",
+   "announced": "2001-12-01",
+   "era": 43,
+   "era_name": "The Final Chapter on Fact or Fiction",
+   "announcement": {
+    "url": "https://web.archive.org/web/20171023054948/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_1201",
+    "label": "Banned & Restricted List Update December 1, 2001",
+    "archived": "https://web.archive.org/web/20171023054948/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_1201"
+   },
+   "actions": [
+    {
+     "card": "Fact or Fiction",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 22,
+   "date": "2003-03-31",
+   "precision": "day",
+   "effective": "2003-03-31",
+   "announced": "2003-03-01",
+   "era": 48,
+   "era_name": "1st Gush Era",
+   "announcement": {
+    "url": "https://web.archive.org/web/20120229232252/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_0303",
+    "label": "Banned & Restricted List Update March 1, 2003",
+    "archived": "https://web.archive.org/web/20120229232252/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_0303"
+   },
+   "actions": [
+    {
+     "card": "Earthcraft",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Entomb",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Berserk",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Hurkyl's Recall",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Recall",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 23,
+   "date": "2003-06-30",
+   "precision": "day",
+   "effective": "2003-06-30",
+   "announced": "2003-06-01",
+   "era": 49,
+   "era_name": "1st Gush Era Continues",
+   "announcement": {
+    "url": "https://web.archive.org/web/20060626133553/http://www.wizards.com/default.asp?x=dci/announce/dci20030529a",
+    "label": "Banned & Restricted List Update June 1, 2003",
+    "archived": "https://web.archive.org/web/20060626133553/http://www.wizards.com/default.asp?x=dci/announce/dci20030529a"
+   },
+   "actions": [
+    {
+     "card": "Gush",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind's Desire",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 24,
+   "date": "2003-12-31",
+   "precision": "day",
+   "effective": "2003-12-31",
+   "announced": "2003-12-01",
+   "era": 51,
+   "era_name": "Burning Tendrils Flames Out",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-restricted-announcement-2003-12-01",
+    "label": "Banned & Restricted List Update December 1, 2003"
+   },
+   "actions": [
+    {
+     "card": "Burning Wish",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Chrome Mox",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Lion's Eye Diamond",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 25,
+   "date": "2004-10-19",
+   "precision": "day",
+   "effective": "2004-10-19",
+   "announced": "2004-09-03",
+   "era": 54,
+   "era_name": "The End of Type 1",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/september-br-list-update-2003-09-03",
+    "label": "Banned & Restricted List Update September 3, 2004",
+    "archived": "http://web.archive.org/web/20220807213330/https://magic.wizards.com/en/articles/archive/latest-developments/september-br-list-update-2003-09-03",
+    "archived_at": "20220807213330"
+   },
+   "actions": [
+    {
+     "card": "Braingeyser",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Doomsday",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Earthcraft",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Fork",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 26,
+   "date": "2005-02-19",
+   "precision": "day",
+   "effective": "2005-02-19",
+   "announced": null,
+   "era": 55,
+   "era_name": "Oath on Top",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Trinisphere",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "stated alongside a future-tense announcement the parser skips"
+    },
+    {
+     "card": "Stroke of Genius",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline",
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 27,
+   "date": "2005-10-19",
+   "precision": "day",
+   "effective": "2005-10-19",
+   "announced": "2005-09-01",
+   "era": 58,
+   "era_name": "Meandeck Gifts",
+   "announcement": {
+    "url": "http://www.wizards.com/default.asp?x=dci/announce/dci20050901a",
+    "label": "Banned & Restricted List Update September 1, 2005"
+   },
+   "actions": [
+    {
+     "card": "Imperial Seal",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Personal Tutor",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind Over Matter",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 28,
+   "date": "2007-06-19",
+   "precision": "day",
+   "effective": "2007-06-19",
+   "announced": "2007-06-01",
+   "era": 67,
+   "era_name": "Flash Breaks Out",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/gone-flash-2007-06-01",
+    "label": "Banned & Restricted List Update June 1, 2007",
+    "archived": "http://web.archive.org/web/20220626121913/https://magic.wizards.com/en/articles/archive/latest-developments/gone-flash-2007-06-01",
+    "archived_at": "20220626121913"
+   },
+   "actions": [
+    {
+     "card": "Gifts Ungiven",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Black Vise",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gush",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind Twist",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Voltaic Key",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 29,
+   "date": "2007-10-19",
+   "precision": "day",
+   "effective": "2007-10-19",
+   "announced": null,
+   "era": 68,
+   "era_name": "2nd Gush Era Begins",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/week-was/eternals-2007-08-31",
+    "label": "Vintage Champs 2007 Coverage",
+    "archived": "http://web.archive.org/web/20220122080155/https://magic.wizards.com/en/articles/archive/week-was/eternals-2007-08-31",
+    "archived_at": "20220122080155"
+   },
+   "actions": [
+    {
+     "card": "Shahrazad",
+     "action": "ban",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 30,
+   "date": "2008-06-19",
+   "precision": "day",
+   "effective": "2008-06-19",
+   "announced": "2008-06-13",
+   "era": 71,
+   "era_name": "End of the 2nd Gush Era",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/why-are-dual-lands-usually-allied-colored-2008-06-13",
+    "label": "Banned & Restricted List Update June 13, 2008"
+   },
+   "actions": [
+    {
+     "card": "Brainstorm",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Flash",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gush",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Merchant Scroll",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Ponder",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 31,
+   "date": "2008-10-01",
+   "precision": "day",
+   "effective": "2008-10-01",
+   "announced": "2008-09-24",
+   "era": 73,
+   "era_name": "The Storm Before the Tezzeret",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/september-2008-update-bulletin-2008-09-24",
+    "label": "Banned & Restricted List Update September 24, 2008",
+    "archived": "http://web.archive.org/web/20220128155037/https://magic.wizards.com/en/articles/archive/news/september-2008-update-bulletin-2008-09-24",
+    "archived_at": "20220128155037"
+   },
+   "actions": [
+    {
+     "card": "Time Vault",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Chrome Mox",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Dream Halls",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mox Diamond",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Personal Tutor",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Time Spiral",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 32,
+   "date": "2009-06-18",
+   "precision": "day",
+   "effective": "2009-06-18",
+   "announced": null,
+   "era": 76,
+   "era_name": "Tezzeret's Final Straw",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/crafting-vintage-2009-06-26",
+    "label": "Crafting a Vintage"
+   },
+   "actions": [
+    {
+     "card": "Thirst for Knowledge",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Crop Rotation",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Enlightened Tutor",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Entomb",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Grim Monolith",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 33,
+   "date": "2010-09-30",
+   "precision": "day",
+   "effective": "2010-09-30",
+   "announced": "2010-09-20",
+   "era": 82,
+   "era_name": "Jace Controls Format",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/september-20-2010-dci-banned-restricted-list-announcement-2010-09-20",
+    "label": "Banned & Restricted List Update September 20, 2010"
+   },
+   "actions": [
+    {
+     "card": "Frantic Search",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gush",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 34,
+   "date": "2011-09-30",
+   "precision": "day",
+   "effective": "2011-09-30",
+   "announced": "2011-09-20",
+   "era": 87,
+   "era_name": "Grudging the Metagame",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/september-20-2011-dci-banned-restricted-list-announcement-2011-09-20",
+    "label": "Banned & Restricted List Update September 20, 2011"
+   },
+   "actions": [
+    {
+     "card": "Fact or Fiction",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 35,
+   "date": "2012-09-20",
+   "precision": "day",
+   "effective": "2012-09-20",
+   "announced": "2012-09-20",
+   "era": 92,
+   "era_name": "RUG Xerox Emerges",
+   "announcement": {
+    "url": "https://web.archive.org/web/20120921122107/http:/www.wizards.com/Magic/magazine/Article.aspx?x=mtg/daily/other/09202012a",
+    "label": "Banned & Restricted List Update September 20, 2012",
+    "archived": "https://web.archive.org/web/20120921122107/http:/www.wizards.com/Magic/magazine/Article.aspx?x=mtg/daily/other/09202012a"
+   },
+   "actions": [
+    {
+     "card": "Burning Wish",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 36,
+   "date": "2013-05-02",
+   "precision": "day",
+   "effective": "2013-05-02",
+   "announced": "2013-04-22",
+   "era": 94,
+   "era_name": "The Burning Oath Moment",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-2013-04-22-0",
+    "label": "Banned & Restricted List Update April 22, 2013",
+    "archived": "http://web.archive.org/web/20220627021802/https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-2013-04-22-0",
+    "archived_at": "20220627021802"
+   },
+   "actions": [
+    {
+     "card": "Regrowth",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 37,
+   "date": "2015-01-22",
+   "precision": "day",
+   "effective": "2015-01-22",
+   "announced": "2015-01-19",
+   "era": 104,
+   "era_name": "Delver Dominates",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-announcement-2015-01-19",
+    "label": "Banned & Restricted List Update January 19, 2015",
+    "archived": "http://web.archive.org/web/20220916145813/https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-announcement-2015-01-19",
+    "archived_at": "20220916145813"
+   },
+   "actions": [
+    {
+     "card": "Treasure Cruise",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gifts Ungiven",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 38,
+   "date": "2015-10-01",
+   "precision": "day",
+   "effective": "2015-10-01",
+   "announced": "2015-09-28",
+   "era": 107,
+   "era_name": "Hangarback Shops Arrive",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/september-28-2015-banned-and-restricted-announcement-2015-09-28",
+    "label": "Banned & Restricted List Update September 28, 2015",
+    "archived": "http://web.archive.org/web/20221110044044/https://magic.wizards.com/en/articles/archive/news/september-28-2015-banned-and-restricted-announcement-2015-09-28",
+    "archived_at": "20221110044044"
+   },
+   "actions": [
+    {
+     "card": "Chalice of the Void",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Dig Through Time",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Thirst for Knowledge",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 39,
+   "date": "2016-04-07",
+   "precision": "day",
+   "effective": "2016-04-07",
+   "announced": "2016-04-04",
+   "era": 110,
+   "era_name": "Inferno Oath Era",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/banned-and-restricted-announcement-2016-04-04",
+    "label": "Banned & Restricted List Update April 4, 2016",
+    "archived": "http://web.archive.org/web/20220630233946/https://magic.wizards.com/en/articles/archive/news/banned-and-restricted-announcement-2016-04-04",
+    "archived_at": "20220630233946"
+   },
+   "actions": [
+    {
+     "card": "Lodestone Golem",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 40,
+   "date": "2017-04-27",
+   "precision": "day",
+   "effective": "2017-04-27",
+   "announced": "2017-04-24",
+   "era": 116,
+   "era_name": "Gush Swan Song",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/april-24-2017-banned-and-restricted-announcement-2017-04-24",
+    "label": "Banned & Restricted List Update April 24, 2017"
+   },
+   "actions": [
+    {
+     "card": "Gitaxian Probe",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gush",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 41,
+   "date": "2017-08-28",
+   "precision": "day",
+   "effective": "2017-08-28",
+   "announced": "2017-08-28",
+   "era": 118,
+   "era_name": "Mentor and Workshops Duopoly",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/august-28-2017-banned-and-restricted-announcement-2017-08-28",
+    "label": "Banned & Restricted List Update August 28, 2017",
+    "archived": "http://web.archive.org/web/20220128030717/https://magic.wizards.com/en/articles/archive/august-28-2017-banned-and-restricted-announcement-2017-08-28",
+    "archived_at": "20220128030717"
+   },
+   "actions": [
+    {
+     "card": "Monastery Mentor",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Thorn of Amethyst",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Yawgmoth's Bargain",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 42,
+   "date": "2019-08-26",
+   "precision": "day",
+   "effective": "2019-08-26",
+   "announced": null,
+   "era": 130,
+   "era_name": "BUG Dominant",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/london-mulligan-2019-06-03",
+    "label": "London Mulligan Formally Adopted Across All Formats"
+   },
+   "actions": [
+    {
+     "card": "Golgari Grave-Troll",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Karn, the Great Creator",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mental Misstep",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mystic Forge",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Fastbond",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 43,
+   "date": "2019-11-14",
+   "precision": "day",
+   "effective": "2019-11-14",
+   "announced": "2019-11-18",
+   "era": 132,
+   "era_name": "The Oko Moment",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/november-18-2019-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update November 18, 2019"
+   },
+   "actions": [
+    {
+     "card": "Narset, Parter of Veils",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 44,
+   "date": "2020-05-17",
+   "precision": "day",
+   "effective": "2020-05-17",
+   "announced": "2020-05-18",
+   "era": 135,
+   "era_name": "Cat Scratch Fever",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/may-18-2020-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update May 18, 2020",
+    "archived": "http://web.archive.org/web/20221015190443/https://magic.wizards.com/en/articles/archive/news/may-18-2020-banned-and-restricted-announcement",
+    "archived_at": "20221015190443"
+   },
+   "actions": [
+    {
+     "card": "Lurrus of the Dream-Den",
+     "action": "ban",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 45,
+   "date": "2020-06-10",
+   "precision": "day",
+   "effective": "2020-06-10",
+   "announced": null,
+   "era": null,
+   "era_name": null,
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Cleanse",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Crusade",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Imprison",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Invoke Prejudice",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Jihad",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Pradesh Gypsies",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Stone-Throwing Devils",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    }
+   ],
+   "sources": [
+    "https://magic.wizards.com/en/news/announcements"
+   ]
+  },
+  {
+   "seq": 46,
+   "date": "2021-02-15",
+   "precision": "day",
+   "effective": "2021-02-15",
+   "announced": "2021-02-15",
+   "era": 140,
+   "era_name": "GolosShops Rising",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/february-15-2021-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update February 15, 2021",
+    "archived": "http://web.archive.org/web/20220930012402/https://magic.wizards.com/en/articles/archive/news/february-15-2021-banned-and-restricted-announcement",
+    "archived_at": "20220930012402"
+   },
+   "actions": [
+    {
+     "card": "Lurrus of the Dream-Den",
+     "action": "unban",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 47,
+   "date": "2024-03-11",
+   "precision": "day",
+   "effective": "2024-03-11",
+   "announced": "2024-03-11",
+   "era": 162,
+   "era_name": null,
+   "announcement": {
+    "url": "https://magic.wizards.com/en/news/announcements/march-11-2024-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update March 11, 2024",
+    "archived": "http://web.archive.org/web/20260811141440/https://magic.wizards.com/en/news/announcements/march-11-2024-banned-and-restricted-announcement",
+    "archived_at": "20260811141440"
+   },
+   "actions": [
+    {
+     "card": "Ponder",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 48,
+   "date": "2024-08-25",
+   "precision": "day",
+   "effective": "2024-08-25",
+   "announced": "2024-08-26",
+   "era": 168,
+   "era_name": null,
+   "announcement": {
+    "url": "https://magic.wizards.com/en/news/announcements/august-26-2024-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update August 26, 2024"
+   },
+   "actions": [
+    {
+     "card": "Urza's Saga",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Vexing Bauble",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 49,
+   "date": "2026-08-10",
+   "precision": "day",
+   "effective": "2026-08-10",
+   "announced": "2026-08-10",
+   "era": null,
+   "era_name": null,
+   "announcement": {
+    "url": "https://magic.wizards.com/en/news/announcements/banned-and-restricted-august-10-2026",
+    "label": "Banned & Restricted Announcement August 10, 2026"
+   },
+   "actions": [
+    {
+     "card": "The Fantasticar",
+     "action": "restrict",
+     "from": "wotc"
+    }
+   ],
+   "sources": [
+    "https://magic.wizards.com/en/news/announcements"
+   ]
+  }
+ ],
+ "cards": {
+  "Ali from Cairo": {
+   "type_line": "Creature \u2014 Human",
+   "mana_cost": "{2}{R}{R}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/arn/36/ali-from-cairo?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/4/2/42027613-d261-4ce2-8ba1-7a2480c660f8.jpg?1783948384",
+   "total_paper_printings": 1
+  },
+  "Ancestral Recall": {
+   "type_line": "Instant",
+   "mana_cost": "{U}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/47/ancestral-recall?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/0/70e7ddf2-5604-41e7-bb9d-ddd03d3e9d0b.jpg?1783948708",
+   "total_paper_printings": 7
+  },
+  "Berserk": {
+   "type_line": "Instant",
+   "mana_cost": "{G}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/185/berserk?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/1/e173c8ce-2352-405e-ad00-e3bb94ced1ad.jpg?1783948679",
+   "total_paper_printings": 10
+  },
+  "Black Lotus": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/232/black-lotus?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/0/b0faa7f2-b547-42c4-a810-839da50dadfe.jpg?1783948669",
+   "total_paper_printings": 3
+  },
+  "Braingeyser": {
+   "type_line": "Sorcery",
+   "mana_cost": "{X}{U}{U}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/50/braingeyser?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/2/62b19a12-6914-430e-81ce-dcfca47884df.jpg?1783948707",
+   "total_paper_printings": 8
+  },
+  "Dingus Egg": {
+   "type_line": "Artifact",
+   "mana_cost": "{4}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/241/dingus-egg?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/5/65eb6cda-e512-40a8-9c1f-335b713409ff.jpg?1783948668",
+   "total_paper_printings": 14
+  },
+  "Gauntlet of Might": {
+   "type_line": "Artifact",
+   "mana_cost": "{4}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/244/gauntlet-of-might?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/d/a/da248001-ed75-4b68-9532-37d3cd5afc4c.jpg?1783948667",
+   "total_paper_printings": 3
+  },
+  "Icy Manipulator": {
+   "type_line": "Artifact",
+   "mana_cost": "{4}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/248/icy-manipulator?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/9/29dc1596-a2e7-4d60-9f99-89babaef8a06.jpg?1783948666",
+   "total_paper_printings": 16
+  },
+  "Mox Emerald": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/261/mox-emerald?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/0/b0e1427c-05cd-465b-be59-97ed6e39f7ba.jpg?1783948663",
+   "total_paper_printings": 3
+  },
+  "Mox Jet": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/262/mox-jet?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/2/92bcd1ce-19b1-4d78-8b09-95242ca08d76.jpg?1783948663",
+   "total_paper_printings": 3
+  },
+  "Mox Pearl": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/263/mox-pearl?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/e/8ebe4be7-e12a-4596-a899-fbd5b152e879.jpg?1783948663",
+   "total_paper_printings": 3
+  },
+  "Mox Ruby": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/264/mox-ruby?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/9/8945585f-4773-493d-a0fe-d707db910b38.jpg?1783948662",
+   "total_paper_printings": 3
+  },
+  "Mox Sapphire": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/265/mox-sapphire?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/2/82da0972-b17b-4600-9efd-e9430a0db04b.jpg?1783948662",
+   "total_paper_printings": 3
+  },
+  "Orcish Oriflamme": {
+   "type_line": "Enchantment",
+   "mana_cost": "{3}{R}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/166/orcish-oriflamme?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/1/911538ea-322c-4c40-a9c3-35e47fe60fce.jpg?1783948683",
+   "total_paper_printings": 16
+  },
+  "Rukh Egg": {
+   "type_line": "Creature \u2014 Bird Egg",
+   "mana_cost": "{3}{R}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/arn/43/rukh-egg?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/2/b28f9e63-e5e4-44b5-a17e-8301ff17c623.jpg?1783948383",
+   "total_paper_printings": 6
+  },
+  "Sol Ring": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/269/sol-ring?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/c/4/c4300d24-1cae-4dd5-be7e-38cc677cf5bd.jpg?1783948661",
+   "total_paper_printings": 134
+  },
+  "Time Vault": {
+   "type_line": "Artifact",
+   "mana_cost": "{2}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/274/time-vault?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/0/902441dc-c976-4c92-b897-6376eaa0fe38.jpg?1783948660",
+   "total_paper_printings": 3
+  },
+  "Time Walk": {
+   "type_line": "Sorcery",
+   "mana_cost": "{1}{U}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/83/time-walk?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/0/e0139f60-d48e-46fb-9f5a-1e3d7558c834.jpg?1783948701",
+   "total_paper_printings": 3
+  },
+  "Timetwister": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{U}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/84/timetwister?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/a/9a49dc44-616e-4bdd-8220-0bb71eccc512.jpg?1783948700",
+   "total_paper_printings": 3
+  },
+  "Amulet of Quoz": {
+   "type_line": "Artifact",
+   "mana_cost": "{6}",
+   "set": "ICE",
+   "set_name": "Ice Age",
+   "released_at": "1995-06-03",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/ice/308/amulet-of-quoz?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/6/764ec6a8-a878-446c-b7e4-6026c2a3e9a4.jpg?1783947462",
+   "total_paper_printings": 1
+  },
+  "Contract from Below": {
+   "type_line": "Sorcery",
+   "mana_cost": "{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/96/contract-from-below?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/8/9853b0ce-4763-4877-9741-f9145a3659c6.jpg?1783948698",
+   "total_paper_printings": 8
+  },
+  "Darkpact": {
+   "type_line": "Sorcery",
+   "mana_cost": "{B}{B}{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/99/darkpact?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/7/e78db688-93a2-47f5-9aa5-9158a72cd973.jpg?1783948697",
+   "total_paper_printings": 8
+  },
+  "Demonic Attorney": {
+   "type_line": "Sorcery",
+   "mana_cost": "{1}{B}{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/102/demonic-attorney?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/d/fd891fc6-d9d6-494e-ae65-8bea8f44b575.jpg?1783948696",
+   "total_paper_printings": 8
+  },
+  "Jeweled Bird": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/arn/66/jeweled-bird?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/f/bfffb65d-851d-4dc9-9233-d53abf955dcd.jpg?1783948377",
+   "total_paper_printings": 4
+  },
+  "Rebirth": {
+   "type_line": "Sorcery",
+   "mana_cost": "{3}{G}{G}{G}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/200/rebirth?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/0/a0d3ce01-e344-4608-b709-320be3600019.jpg?1783948045",
+   "total_paper_printings": 4
+  },
+  "Shahrazad": {
+   "type_line": "Sorcery",
+   "mana_cost": "{W}{W}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/arn/10/shahrazad?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/0/0014def3-4063-4929-ac51-76aef1bb2a68.jpg?1783948393",
+   "total_paper_printings": 1
+  },
+  "Timmerian Fiends": {
+   "type_line": "Creature \u2014 Horror",
+   "mana_cost": "{1}{B}{B}",
+   "set": "HML",
+   "set_name": "Homelands",
+   "released_at": "1995-10-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/hml/58/timmerian-fiends?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/0/90643766-c92f-4a25-bd02-227f3c91f391.jpg?1783947288",
+   "total_paper_printings": 1
+  },
+  "Channel": {
+   "type_line": "Sorcery",
+   "mana_cost": "{G}{G}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/188/channel?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/c/1/c1862c47-71cc-45a3-8805-a5ddc62e55ea.jpg?1783948678",
+   "total_paper_printings": 14
+  },
+  "Copy Artifact": {
+   "type_line": "Enchantment",
+   "mana_cost": "{1}{U}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/53/copy-artifact?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/d/fd5ed955-1193-4e6a-a3e2-f54c1f9bf063.jpg?1783948707",
+   "total_paper_printings": 10
+  },
+  "Demonic Tutor": {
+   "type_line": "Sorcery",
+   "mana_cost": "{1}{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/104/demonic-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/1/711d4d54-5520-4de8-9b93-79902ed8e562.jpg?1783948696",
+   "total_paper_printings": 23
+  },
+  "Regrowth": {
+   "type_line": "Sorcery",
+   "mana_cost": "{1}{G}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/214/regrowth?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/a/badc73ec-3728-4246-90c7-5f4eb7051ed5.jpg?1783948673",
+   "total_paper_printings": 20
+  },
+  "Wheel of Fortune": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{R}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/183/wheel-of-fortune?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/7/67b369c4-faa8-45c8-a1b9-98f228b69682.jpg?1783948679",
+   "total_paper_printings": 9
+  },
+  "Candelabra of Tawnos": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/atq/43/candelabra-of-tawnos?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/5/35a335bf-7358-460f-b7c9-1e8bc4300f64.jpg?1783948364",
+   "total_paper_printings": 1
+  },
+  "Feldon's Cane": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/atq/50/feldons-cane?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/b/bb6af436-bcfd-4d47-a1aa-e84b587a725a.jpg?1783948362",
+   "total_paper_printings": 11
+  },
+  "Ivory Tower": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/atq/53/ivory-tower?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/5/a5f23039-45ca-4c15-af50-bfd40ea26453.jpg?1783948362",
+   "total_paper_printings": 10
+  },
+  "Library of Alexandria": {
+   "type_line": "Land",
+   "mana_cost": null,
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/arn/76/library-of-alexandria?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/e/ee266113-34ce-4189-84e7-ee2c86a2722c.jpg?1783948374",
+   "total_paper_printings": 1
+  },
+  "Bronze Tablet": {
+   "type_line": "Artifact",
+   "mana_cost": "{6}",
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/atq/42/bronze-tablet?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/f/6fb10552-dd47-4f8a-ac7c-8c2b61e56736.jpg?1783948364",
+   "total_paper_printings": 5
+  },
+  "Mishra's Workshop": {
+   "type_line": "Land",
+   "mana_cost": null,
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/atq/81/mishras-workshop?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/3/135de5c7-6ac9-4b68-8f1a-97f120a4b125.jpg?1783948355",
+   "total_paper_printings": 2
+  },
+  "Chaos Orb": {
+   "type_line": "Artifact",
+   "mana_cost": "{2}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/235/chaos-orb?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/2/92274971-7c4a-4326-b0fe-75e2d124f718.jpg?1783948669",
+   "total_paper_printings": 3
+  },
+  "Falling Star": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{R}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/145/falling-star?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/2/f2b9983e-20d4-4d12-9e2c-ec6d9a345787.jpg?1783948056",
+   "total_paper_printings": 1
+  },
+  "Mind Twist": {
+   "type_line": "Sorcery",
+   "mana_cost": "{X}{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/115/mind-twist?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/e/eee9e106-a248-49d2-b8c8-6bbcd56ce739.jpg?1783948693",
+   "total_paper_printings": 11
+  },
+  "Mirror Universe": {
+   "type_line": "Artifact",
+   "mana_cost": "{6}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/287/mirror-universe?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/8/a8f05d5e-bb7d-4554-b880-f0c6b4688357.jpg?1783948026",
+   "total_paper_printings": 1
+  },
+  "Recall": {
+   "type_line": "Sorcery",
+   "mana_cost": "{X}{X}{U}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/70/recall?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/3/33296718-0625-4422-a65c-b21cf99c52ec.jpg?1783948072",
+   "total_paper_printings": 5
+  },
+  "Sword of the Ages": {
+   "type_line": "Artifact",
+   "mana_cost": "{6}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/296/sword-of-the-ages?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/3/b37fd4cc-ab5c-4c65-80ff-8f905b31e801.jpg?1783948025",
+   "total_paper_printings": 1
+  },
+  "Underworld Dreams": {
+   "type_line": "Enchantment",
+   "mana_cost": "{B}{B}{B}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/leg/124/underworld-dreams?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/0/a0e8f8d8-eac0-451c-a167-be84667a8e3d.jpg?1783948061",
+   "total_paper_printings": 12
+  },
+  "Divine Intervention": {
+   "type_line": "Enchantment",
+   "mana_cost": "{6}{W}{W}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/8/divine-intervention?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/e/9eae0ba1-1383-4505-b4e7-4f17dd8f20c5.jpg?1783948087",
+   "total_paper_printings": 1
+  },
+  "Tempest Efreet": {
+   "type_line": "Creature \u2014 Efreet",
+   "mana_cost": "{1}{R}{R}{R}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/166/tempest-efreet?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/b/eb562143-fdf0-4eed-83ac-551627c576d2.jpg?1783948052",
+   "total_paper_printings": 4
+  },
+  "Maze of Ith": {
+   "type_line": "Land",
+   "mana_cost": null,
+   "set": "DRK",
+   "set_name": "The Dark",
+   "released_at": "1994-08-01",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/drk/117/maze-of-ith?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/4/2/42dcceee-2a47-4eaa-a6a3-2931b3d50244.jpg?1783947922",
+   "total_paper_printings": 9
+  },
+  "Zuran Orb": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "ICE",
+   "set_name": "Ice Age",
+   "released_at": "1995-06-03",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/ice/350/zuran-orb?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/a/3a9d1082-a862-45d4-9e5e-392e879fead6.jpg?1783947454",
+   "total_paper_printings": 4
+  },
+  "Balance": {
+   "type_line": "Sorcery",
+   "mana_cost": "{1}{W}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/3/balance?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/f/6f9ea46a-411f-40ce-a873-a905180093f4.jpg?1783948717",
+   "total_paper_printings": 13
+  },
+  "Fork": {
+   "type_line": "Instant",
+   "mana_cost": "{R}{R}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/152/fork?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/6/e6b43916-fe2d-417a-a550-d7c795023297.jpg?1783948686",
+   "total_paper_printings": 6
+  },
+  "Black Vise": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/233/black-vise?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/6/76ac72f8-5b1e-4d67-a796-ef69cde27424.jpg?1783948669",
+   "total_paper_printings": 11
+  },
+  "Fastbond": {
+   "type_line": "Enchantment",
+   "mana_cost": "{G}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/192/fastbond?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/5/a575a9af-e1de-4a1d-91d8-440585377e4f.jpg?1783948678",
+   "total_paper_printings": 6
+  },
+  "Strip Mine": {
+   "type_line": "Land",
+   "mana_cost": null,
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/atq/82a/strip-mine?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/7/e7880157-7f27-4f1b-9cdc-ab36a6252376.jpg?1783948354",
+   "total_paper_printings": 17
+  },
+  "Stroke of Genius": {
+   "type_line": "Instant",
+   "mana_cost": "{X}{2}{U}",
+   "set": "JGP",
+   "set_name": "Judge Gift Cards 1998",
+   "released_at": "1998-01-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/jgp/2/stroke-of-genius?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/5/a5423cb8-38a2-4769-8999-de6ab5ebc294.jpg?1783946579",
+   "total_paper_printings": 9
+  },
+  "Tolarian Academy": {
+   "type_line": "Legendary Land",
+   "mana_cost": null,
+   "set": "USG",
+   "set_name": "Urza's Saga",
+   "released_at": "1998-10-12",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/usg/330/tolarian-academy?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/d/ad7ac9a5-340f-4509-826c-7b9416d47887.jpg?1783946296",
+   "total_paper_printings": 1
+  },
+  "Windfall": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{U}",
+   "set": "USG",
+   "set_name": "Urza's Saga",
+   "released_at": "1998-10-12",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/usg/111/windfall?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/a/2aef4608-5ba8-4636-b5e7-cac57c5c0608.jpg?1783946351",
+   "total_paper_printings": 20
+  },
+  "Memory Jar": {
+   "type_line": "Artifact",
+   "mana_cost": "{5}",
+   "set": "ULG",
+   "set_name": "Urza's Legacy",
+   "released_at": "1999-02-15",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/ulg/129/memory-jar?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/1/a15d33d6-7213-4482-a1be-ac0a73644af6.jpg?1783946221",
+   "total_paper_printings": 2
+  },
+  "Time Spiral": {
+   "type_line": "Sorcery",
+   "mana_cost": "{4}{U}{U}",
+   "set": "USG",
+   "set_name": "Urza's Saga",
+   "released_at": "1998-10-12",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/usg/103/time-spiral?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/3/f3d62dbd-63db-4ac9-950f-9852627f23f2.jpg?1783946354",
+   "total_paper_printings": 1
+  },
+  "Crop Rotation": {
+   "type_line": "Instant",
+   "mana_cost": "{G}",
+   "set": "ULG",
+   "set_name": "Urza's Legacy",
+   "released_at": "1999-02-15",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/ulg/98/crop-rotation?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/5/6563f790-862c-465a-b963-7a61f2385516.jpg?1783946231",
+   "total_paper_printings": 16
+  },
+  "Doomsday": {
+   "type_line": "Sorcery",
+   "mana_cost": "{B}{B}{B}",
+   "set": "WTH",
+   "set_name": "Weatherlight",
+   "released_at": "1997-06-09",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/wth/66/doomsday?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/b/5b3c6d87-9383-450b-bba5-33435b6b0d08.jpg?1783946736",
+   "total_paper_printings": 11
+  },
+  "Dream Halls": {
+   "type_line": "Enchantment",
+   "mana_cost": "{3}{U}{U}",
+   "set": "STH",
+   "set_name": "Stronghold",
+   "released_at": "1998-03-02",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/sth/28/dream-halls?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/f/ff4a22d9-007b-4eb7-af9e-b5c2cae36238.jpg?1783946570",
+   "total_paper_printings": 1
+  },
+  "Enlightened Tutor": {
+   "type_line": "Instant",
+   "mana_cost": "{W}",
+   "set": "MIR",
+   "set_name": "Mirage",
+   "released_at": "1996-10-08",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/mir/14/enlightened-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/c/b/cbac1d27-15e2-4e2f-82ab-625a16e096cb.jpg?1783947123",
+   "total_paper_printings": 10
+  },
+  "Frantic Search": {
+   "type_line": "Instant",
+   "mana_cost": "{2}{U}",
+   "set": "ULG",
+   "set_name": "Urza's Legacy",
+   "released_at": "1999-02-15",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/ulg/32/frantic-search?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/9/1904db14-6df7-424f-afa5-e3dfab31300a.jpg?1783946247",
+   "total_paper_printings": 16
+  },
+  "Grim Monolith": {
+   "type_line": "Artifact",
+   "mana_cost": "{2}",
+   "set": "ULG",
+   "set_name": "Urza's Legacy",
+   "released_at": "1999-02-15",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/ulg/126/grim-monolith?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/d/9ddc9fe1-17c8-4e1d-aeb8-c4214e881280.jpg?1783946223",
+   "total_paper_printings": 1
+  },
+  "Hurkyl's Recall": {
+   "type_line": "Instant",
+   "mana_cost": "{1}{U}",
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/atq/10/hurkyls-recall?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/3/f32373dd-06d8-45d1-8777-3b1411bcb30a.jpg?1783948372",
+   "total_paper_printings": 10
+  },
+  "Lotus Petal": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "TMP",
+   "set_name": "Tempest",
+   "released_at": "1997-10-14",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/tmp/294/lotus-petal?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/c/6c877da3-68fa-41d0-8a24-8c79fcd8ecc1.jpg?1783946602",
+   "total_paper_printings": 13
+  },
+  "Mana Crypt": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "PHPR",
+   "set_name": "HarperPrism Book Promos",
+   "released_at": "1995-05-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/phpr/5/mana-crypt?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/6/160cf235-6463-4e16-a426-8b5be76b10d2.jpg?1783947530",
+   "total_paper_printings": 14
+  },
+  "Mana Vault": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/259/mana-vault?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/9/19499cb7-eccb-4e69-af32-6002d447a160.jpg?1783948664",
+   "total_paper_printings": 16
+  },
+  "Mind Over Matter": {
+   "type_line": "Enchantment",
+   "mana_cost": "{2}{U}{U}{U}{U}",
+   "set": "EXO",
+   "set_name": "Exodus",
+   "released_at": "1998-06-15",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/exo/40/mind-over-matter?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/e/6e091dd6-149f-46ea-bae0-224e79e3aacb.jpg?1783946523",
+   "total_paper_printings": 1
+  },
+  "Mox Diamond": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "STH",
+   "set_name": "Stronghold",
+   "released_at": "1998-03-02",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/sth/138/mox-diamond?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/8/28028830-83ed-45e2-b495-3b9ad9d3e988.jpg?1783946538",
+   "total_paper_printings": 2
+  },
+  "Mystical Tutor": {
+   "type_line": "Instant",
+   "mana_cost": "{U}",
+   "set": "MIR",
+   "set_name": "Mirage",
+   "released_at": "1996-10-08",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/mir/80/mystical-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/d/5d98101f-e32a-4a4a-a649-faa920d111ee.jpg?1783947105",
+   "total_paper_printings": 11
+  },
+  "Tinker": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{U}",
+   "set": "ULG",
+   "set_name": "Urza's Legacy",
+   "released_at": "1999-02-15",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/ulg/45/tinker?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/d/7da23b15-dfb8-4267-9b33-d7a4c035c434.jpg?1783946244",
+   "total_paper_printings": 5
+  },
+  "Vampiric Tutor": {
+   "type_line": "Instant",
+   "mana_cost": "{B}",
+   "set": "VIS",
+   "set_name": "Visions",
+   "released_at": "1997-02-03",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/vis/72/vampiric-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/a/0a07cba3-2e8d-48ec-a6f8-4d2edfcd833d.jpg?1783946991",
+   "total_paper_printings": 14
+  },
+  "Voltaic Key": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "USG",
+   "set_name": "Urza's Saga",
+   "released_at": "1998-10-12",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/usg/314/voltaic-key?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/a/1aa4baf7-4693-4c55-af04-2fa5d901d701.jpg?1783946301",
+   "total_paper_printings": 5
+  },
+  "Yawgmoth's Bargain": {
+   "type_line": "Enchantment",
+   "mana_cost": "{4}{B}{B}",
+   "set": "UDS",
+   "set_name": "Urza's Destiny",
+   "released_at": "1999-06-07",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/uds/75/yawgmoths-bargain?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/6/86901bf2-7722-43f8-b879-7a30630371fa.jpg?1783946070",
+   "total_paper_printings": 1
+  },
+  "Yawgmoth's Will": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{B}",
+   "set": "USG",
+   "set_name": "Urza's Saga",
+   "released_at": "1998-10-12",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/usg/171/yawgmoths-will?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/d/6d3e3c3a-d351-4d91-8884-312d4b6f540d.jpg?1783946334",
+   "total_paper_printings": 2
+  },
+  "Demonic Consultation": {
+   "type_line": "Instant",
+   "mana_cost": "{B}",
+   "set": "ICE",
+   "set_name": "Ice Age",
+   "released_at": "1995-06-03",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/ice/121/demonic-consultation?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/d/8d727b9b-6114-414d-9172-16b6e1db41cc.jpg?1783947504",
+   "total_paper_printings": 5
+  },
+  "Necropotence": {
+   "type_line": "Enchantment",
+   "mana_cost": "{B}{B}{B}",
+   "set": "ICE",
+   "set_name": "Ice Age",
+   "released_at": "1995-06-03",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/ice/154/necropotence?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/4/54d7a0c1-efb4-4a8d-ad92-a96d43835052.jpg?1783947497",
+   "total_paper_printings": 10
+  },
+  "Fact or Fiction": {
+   "type_line": "Instant",
+   "mana_cost": "{3}{U}",
+   "set": "INV",
+   "set_name": "Invasion",
+   "released_at": "2000-10-02",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/inv/57/fact-or-fiction?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/f/7fd4d018-dcf3-4439-8445-02d66e44f7d3.jpg?1783945707",
+   "total_paper_printings": 31
+  },
+  "Earthcraft": {
+   "type_line": "Enchantment",
+   "mana_cost": "{1}{G}",
+   "set": "TMP",
+   "set_name": "Tempest",
+   "released_at": "1997-10-14",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/tmp/222/earthcraft?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/d/9dda7531-82a1-4f49-8858-601ddbc6e2bc.jpg?1783946620",
+   "total_paper_printings": 1
+  },
+  "Entomb": {
+   "type_line": "Instant",
+   "mana_cost": "{B}",
+   "set": "ODY",
+   "set_name": "Odyssey",
+   "released_at": "2001-10-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/ody/132/entomb?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/6/f60a2091-fb97-4f04-911b-fce9b6351044.jpg?1783945246",
+   "total_paper_printings": 10
+  },
+  "Gush": {
+   "type_line": "Instant",
+   "mana_cost": "{4}{U}",
+   "set": "MMQ",
+   "set_name": "Mercadian Masques",
+   "released_at": "1999-10-04",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/mmq/82/gush?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/7/e755bbef-bf34-49c0-ae72-d70e3599de52.jpg?1783945965",
+   "total_paper_printings": 7
+  },
+  "Mind's Desire": {
+   "type_line": "Sorcery",
+   "mana_cost": "{4}{U}{U}",
+   "set": "SCG",
+   "set_name": "Scourge",
+   "released_at": "2003-05-26",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/scg/41/minds-desire?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/c/3c7474e1-cfae-4867-a11a-d5cf9ff7ea5f.jpg?1783944885",
+   "total_paper_printings": 7
+  },
+  "Burning Wish": {
+   "type_line": "Sorcery",
+   "mana_cost": "{1}{R}",
+   "set": "JUD",
+   "set_name": "Judgment",
+   "released_at": "2002-05-27",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/jud/83/burning-wish?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/c/1c9b692a-e832-4612-a6ec-93b52f6a0410.jpg?1783945119",
+   "total_paper_printings": 3
+  },
+  "Chrome Mox": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "MRD",
+   "set_name": "Mirrodin",
+   "released_at": "2003-10-02",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/mrd/152/chrome-mox?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/a/6a058e68-70af-4a64-859c-c881e5578368.jpg?1783944526",
+   "total_paper_printings": 12
+  },
+  "Lion's Eye Diamond": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "MIR",
+   "set_name": "Mirage",
+   "released_at": "1996-10-08",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/mir/307/lions-eye-diamond?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/3/63bacc32-d6ba-420c-9b49-299c08e5fb39.jpg?1783947041",
+   "total_paper_printings": 1
+  },
+  "Trinisphere": {
+   "type_line": "Artifact",
+   "mana_cost": "{3}",
+   "set": "DST",
+   "set_name": "Darksteel",
+   "released_at": "2004-02-06",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/dst/154/trinisphere?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/d/4/d465597a-362e-4bd0-b547-f11d8807e597.jpg?1783944416",
+   "total_paper_printings": 8
+  },
+  "Imperial Seal": {
+   "type_line": "Sorcery",
+   "mana_cost": "{B}",
+   "set": "PTK",
+   "set_name": "Portal Three Kingdoms",
+   "released_at": "1999-05-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/ptk/78/imperial-seal?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/2/822e30db-40c5-4099-868b-185ad9b7c7dc.jpg?1783946114",
+   "total_paper_printings": 5
+  },
+  "Personal Tutor": {
+   "type_line": "Sorcery",
+   "mana_cost": "{U}",
+   "set": "POR",
+   "set_name": "Portal",
+   "released_at": "1997-05-01",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/por/64/personal-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/e/1edc3917-fded-4773-8f8d-62bd861c1131.jpg?1783946837",
+   "total_paper_printings": 5
+  },
+  "Gifts Ungiven": {
+   "type_line": "Instant",
+   "mana_cost": "{3}{U}",
+   "set": "CHK",
+   "set_name": "Champions of Kamigawa",
+   "released_at": "2004-10-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/chk/62/gifts-ungiven?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/2/32b91eb5-ea53-4a21-a2e5-9c545a42fa30.jpg?1783944328",
+   "total_paper_printings": 8
+  },
+  "Brainstorm": {
+   "type_line": "Instant",
+   "mana_cost": "{U}",
+   "set": "ICE",
+   "set_name": "Ice Age",
+   "released_at": "1995-06-03",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/ice/61/brainstorm?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/d/8d42d7aa-7f53-4cfc-842a-086aab2448d1.jpg?1783947518",
+   "total_paper_printings": 48
+  },
+  "Flash": {
+   "type_line": "Instant",
+   "mana_cost": "{1}{U}",
+   "set": "MIR",
+   "set_name": "Mirage",
+   "released_at": "1996-10-08",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/mir/66/flash?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/3/63af3c26-5b1f-46f6-9aa2-036c615bf5ea.jpg?1783947110",
+   "total_paper_printings": 3
+  },
+  "Merchant Scroll": {
+   "type_line": "Sorcery",
+   "mana_cost": "{1}{U}",
+   "set": "HML",
+   "set_name": "Homelands",
+   "released_at": "1995-10-01",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/hml/33/merchant-scroll?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/d/4/d4133ceb-6176-411a-9eb8-51721c1bb435.jpg?1783947295",
+   "total_paper_printings": 9
+  },
+  "Ponder": {
+   "type_line": "Sorcery",
+   "mana_cost": "{U}",
+   "set": "LRW",
+   "set_name": "Lorwyn",
+   "released_at": "2007-10-12",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/lrw/79/ponder?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/a/ba6b6fc5-5077-4812-b8e9-906783dbaf67.jpg?1783942899",
+   "total_paper_printings": 31
+  },
+  "Thirst for Knowledge": {
+   "type_line": "Instant",
+   "mana_cost": "{2}{U}",
+   "set": "MRD",
+   "set_name": "Mirrodin",
+   "released_at": "2003-10-02",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/mrd/53/thirst-for-knowledge?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/f/0ff1f608-203e-4413-8753-37fc49731c87.jpg?1783944550",
+   "total_paper_printings": 16
+  },
+  "Treasure Cruise": {
+   "type_line": "Sorcery",
+   "mana_cost": "{7}{U}",
+   "set": "KTK",
+   "set_name": "Khans of Tarkir",
+   "released_at": "2014-09-26",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/ktk/59/treasure-cruise?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/a/7a59d4b1-6cf4-44ec-8a96-1bb7094fea21.jpg?1783939083",
+   "total_paper_printings": 14
+  },
+  "Chalice of the Void": {
+   "type_line": "Artifact",
+   "mana_cost": "{X}{X}",
+   "set": "MRD",
+   "set_name": "Mirrodin",
+   "released_at": "2003-10-02",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/mrd/150/chalice-of-the-void?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/a/1a02ca71-5e39-4a5f-aaba-a1e3e10a6a3e.jpg?1783944526",
+   "total_paper_printings": 7
+  },
+  "Dig Through Time": {
+   "type_line": "Instant",
+   "mana_cost": "{6}{U}{U}",
+   "set": "KTK",
+   "set_name": "Khans of Tarkir",
+   "released_at": "2014-09-26",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/ktk/36/dig-through-time?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/c/5c18c2d8-995c-4736-bdef-464abcd1d31a.jpg?1783939089",
+   "total_paper_printings": 17
+  },
+  "Lodestone Golem": {
+   "type_line": "Artifact Creature \u2014 Golem",
+   "mana_cost": "{4}",
+   "set": "WWK",
+   "set_name": "Worldwake",
+   "released_at": "2010-02-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/wwk/127/lodestone-golem?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/b/9bb0ee6a-852a-4f1e-8f03-40b6d505bc82.jpg?1783942039",
+   "total_paper_printings": 6
+  },
+  "Gitaxian Probe": {
+   "type_line": "Sorcery",
+   "mana_cost": "{U/P}",
+   "set": "NPH",
+   "set_name": "New Phyrexia",
+   "released_at": "2011-05-13",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/nph/35/gitaxian-probe?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/9/995486ce-58bb-4753-a812-0ca73ef1a235.jpg?1783941320",
+   "total_paper_printings": 5
+  },
+  "Monastery Mentor": {
+   "type_line": "Creature \u2014 Human Monk",
+   "mana_cost": "{2}{W}",
+   "set": "FRF",
+   "set_name": "Fate Reforged",
+   "released_at": "2015-01-23",
+   "rarity": "mythic",
+   "scryfall_uri": "https://scryfall.com/card/frf/20/monastery-mentor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/b/abcd0e32-2e6b-419b-9e8a-af38f2b48a66.jpg?1783938710",
+   "total_paper_printings": 10
+  },
+  "Thorn of Amethyst": {
+   "type_line": "Artifact",
+   "mana_cost": "{2}",
+   "set": "LRW",
+   "set_name": "Lorwyn",
+   "released_at": "2007-10-12",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lrw/262/thorn-of-amethyst?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/4/e472d4f5-add4-4de3-8718-31a47a35277c.jpg?1783942851",
+   "total_paper_printings": 7
+  },
+  "Golgari Grave-Troll": {
+   "type_line": "Creature \u2014 Troll Skeleton",
+   "mana_cost": "{4}{G}",
+   "set": "RAV",
+   "set_name": "Ravnica: City of Guilds",
+   "released_at": "2005-10-07",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/rav/167/golgari-grave-troll?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/6/f61b50e6-2166-435d-bf48-c4a0cff9999c.jpg?1783943637",
+   "total_paper_printings": 7
+  },
+  "Karn, the Great Creator": {
+   "type_line": "Legendary Planeswalker \u2014 Karn",
+   "mana_cost": "{4}",
+   "set": "WAR",
+   "set_name": "War of the Spark",
+   "released_at": "2019-05-03",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/war/1/karn-the-great-creator?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/e/3ec0c0fb-1a4f-45f4-85b7-346a6d3ce2c5.jpg?1783933488",
+   "total_paper_printings": 10
+  },
+  "Mental Misstep": {
+   "type_line": "Instant",
+   "mana_cost": "{U/P}",
+   "set": "NPH",
+   "set_name": "New Phyrexia",
+   "released_at": "2011-05-13",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/nph/38/mental-misstep?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/1/61e9c6df-1c84-4eab-9076-a4feb6347c10.jpg?1783941319",
+   "total_paper_printings": 9
+  },
+  "Mystic Forge": {
+   "type_line": "Artifact",
+   "mana_cost": "{4}",
+   "set": "M20",
+   "set_name": "Core Set 2020",
+   "released_at": "2019-07-12",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/m20/233/mystic-forge?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/2/924a24e7-91b8-4ceb-a136-7a765d98c994.jpg?1783932941",
+   "total_paper_printings": 14
+  },
+  "Narset, Parter of Veils": {
+   "type_line": "Legendary Planeswalker \u2014 Narset",
+   "mana_cost": "{1}{U}{U}",
+   "set": "WAR",
+   "set_name": "War of the Spark",
+   "released_at": "2019-05-03",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/war/61/narset-parter-of-veils?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/c/8c39f9b4-02b9-4d44-b8d6-4fd02ebbb0c5.jpg?1783933458",
+   "total_paper_printings": 12
+  },
+  "Lurrus of the Dream-Den": {
+   "type_line": "Legendary Creature \u2014 Cat Nightmare",
+   "mana_cost": "{1}{W/B}{W/B}",
+   "set": "IKO",
+   "set_name": "Ikoria: Lair of Behemoths",
+   "released_at": "2020-04-24",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/iko/226/lurrus-of-the-dream-den?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/a/5ad36fb2-c44e-4085-ba0d-54277841ad3a.jpg?1783931010",
+   "total_paper_printings": 9
+  },
+  "Cleanse": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{W}{W}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/5/cleanse?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/f/2fbd611b-ac97-4516-bad7-cc9ee4ef74f7.jpg?1783948087",
+   "total_paper_printings": 1
+  },
+  "Crusade": {
+   "type_line": "Enchantment",
+   "mana_cost": "{W}{W}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/16/crusade?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/5/057986c7-20c0-4157-b4df-beae4ef5c66d.jpg?1783948714",
+   "total_paper_printings": 14
+  },
+  "Imprison": {
+   "type_line": "Enchantment \u2014 Aura",
+   "mana_cost": "{B}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/107/imprison?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/2/12671381-beb7-41b8-9484-97f8aca5c981.jpg?1783948065",
+   "total_paper_printings": 1
+  },
+  "Invoke Prejudice": {
+   "type_line": "Enchantment",
+   "mana_cost": "{U}{U}{U}{U}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/62/invoke-prejudice?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/0/903d9fde-d7da-4a0e-a337-b63023c6d74b.jpg?1783948074",
+   "total_paper_printings": 1
+  },
+  "Jihad": {
+   "type_line": "Enchantment",
+   "mana_cost": "{W}{W}{W}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/arn/5/jihad?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/6/b6c7705a-2987-4ef1-92b1-2c55d989ec6f.jpg?1783948394",
+   "total_paper_printings": 1
+  },
+  "Pradesh Gypsies": {
+   "type_line": "Creature \u2014 Human Nomad",
+   "mana_cost": "{2}{G}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/leg/197/pradesh-gypsies?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/3/0370330d-83d9-44d2-a1ed-c4827edc60fd.jpg?1783948046",
+   "total_paper_printings": 6
+  },
+  "Stone-Throwing Devils": {
+   "type_line": "Creature \u2014 Devil",
+   "mana_cost": "{B}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/arn/33/stone-throwing-devils?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/d/1/d1c387dd-1347-4443-91ce-b71f7ccdceba.jpg?1783948385",
+   "total_paper_printings": 1
+  },
+  "Urza's Saga": {
+   "type_line": "Enchantment Land \u2014 Urza's Saga",
+   "mana_cost": null,
+   "set": "PMH2",
+   "set_name": "Modern Horizons 2 Promos",
+   "released_at": "2021-05-06",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/pmh2/259s/urzas-saga?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/c/1cf96437-0943-40f9-b175-31a1504028ba.jpg?1783926931",
+   "total_paper_printings": 8
+  },
+  "Vexing Bauble": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "MH3",
+   "set_name": "Modern Horizons 3",
+   "released_at": "2024-06-14",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/mh3/212/vexing-bauble?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/9/29f11089-658f-42e6-aeb0-09b512ad2479.jpg?1783911242",
+   "total_paper_printings": 1
+  },
+  "The Fantasticar": {
+   "type_line": "Legendary Artifact \u2014 Vehicle",
+   "mana_cost": "{3}",
+   "set": "MSC",
+   "set_name": "Marvel Super Heroes Commander",
+   "released_at": "2026-06-26",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/msc/104/the-fantasticar?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/d/ed0beb69-8441-4104-9990-81bd82f81f9a.jpg?1786399169",
+   "total_paper_printings": 2
+  }
+ },
+ "change_kinds": {
+  "banned_restricted": "a card was restricted, unrestricted, banned or unbanned",
+  "errata": "a card's wording was changed, which can alter the format without any B&R action",
+  "rules": "a rules or policy change, such as a mulligan rule",
+  "format": "the format itself changed -- renamed, or a set made legal",
+  "set_release": "new cards entered the pool",
+  "_note": "change_kinds describes what the era's own 'changes' text records. boundary_kinds describes the events that BOUND the era, which is not the same thing: an era bounded by an errata did not necessarily contain one."
+ },
+ "eras": [
+  {
+   "era": 1,
+   "range_text": "August - December 1993",
+   "start": null,
+   "end": "1993-12",
+   "name": "Wild Era",
+   "changes": "No Mandatory Banned and Restricted List, Only Alpha/Beta/Unlimited and first expansion set, Arabian Nights.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/original-magic-rulebook-2004-12-25",
+    "label": "Original Magic Rule Book",
+    "archived": "http://web.archive.org/web/20220330032154/https://magic.wizards.com/en/articles/archive/original-magic-rulebook-2004-12-25",
+    "archived_at": "20220330032154"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 2,
+   "range_text": "December 1993 - January 25, 1994",
+   "start": "1993-12",
+   "end": "1994-01-25",
+   "name": "Degenerate Era",
+   "changes": "First Mandatory Banned and Restricted List Announced January 26, 1994 and format dubbed \"Constructed decks.\"",
+   "citation": {
+    "url": "https://web.archive.org/web/20150609044735/http://www.wizards.com/dci/downloads/firstdcifloorrules.txt",
+    "label": "First DCI Floor Rules January 26, 1994",
+    "archived": "https://web.archive.org/web/20150609044735/http://www.wizards.com/dci/downloads/firstdcifloorrules.txt"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted",
+    "format"
+   ]
+  },
+  {
+   "era": 3,
+   "range_text": "January 26 - March 4, 1994",
+   "start": "1994-01-26",
+   "end": "1994-03-04",
+   "name": "Constructed Magic Begins",
+   "changes": "Orcish Oriflame & Rukh Egg unrestricted in February and issued errata.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted",
+    "errata"
+   ]
+  },
+  {
+   "era": 4,
+   "range_text": "March 5 - March 23, 1994",
+   "start": "1994-03-05",
+   "end": "1994-03-23",
+   "name": "Antiquities Arrives",
+   "changes": "Channel, Copy Artifact, Demonic Tutor, Regrowth, and Wheel of Fortune restricted. Time Vault banned. Icy Manipulator unrestricted.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 5,
+   "range_text": "March 24 - May 2, 1994",
+   "start": "1994-03-24",
+   "end": "1994-05-02",
+   "name": "Library of Alexandria Era",
+   "changes": "Library of Alexandria, Feldon's Cane, Ivory Tower, and Candleabra of Tawnos restricted. Bronze Tablet banned. Dingus Egg and Gauntlet of Might unrestricted.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 6,
+   "range_text": "May 3 - June 10/13, 1994",
+   "start": "1994-05-03",
+   "end": "1994-06-13",
+   "name": "Mind Twist Metagame",
+   "changes": "Mishra's Workshop restricted June 13, Legends legal June 10.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 7,
+   "range_text": "June 10/13 - August 1/8, 1994",
+   "start": null,
+   "end": "1994-08-08",
+   "name": "Creatureless Era Begins",
+   "changes": "All-land/no-land Mulligan rule adopted. Chaos Orb, Falling Star, Mind Twist, Mirror Universe, Recall, Sword of the Ages, and Underworld Dream restricted. Divine Intervention and Tempest Efreet banned. First US National Championship held at Origins July 7-10.",
+   "citation": {
+    "url": "https://groups.google.com/forum/#!msg/rec.games.deckmaster/_eDtnxy4_mQ/KWwx5bRfMdgJ",
+    "label": "Duelists' Convocation Rules Update June 13, 1994",
+    "archived": "http://web.archive.org/web/20261012110737/https://groups.google.com/forum/",
+    "archived_at": "20261012110737"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted",
+    "rules"
+   ]
+  },
+  {
+   "era": 11,
+   "range_text": "November 2, 1994 - April 19, 1995",
+   "start": "1994-11-02",
+   "end": "1995-04-19",
+   "name": "Golden Age of Type 1",
+   "changes": "\"Constructed deck\" format rebranded as \"Type 1\" on January 10, 1995.",
+   "citation": {
+    "url": "https://groups.google.com/forum/#!msg/rec.games.deckmaster/MymOFRYudwU/0FuCZ_bXMnIJ",
+    "label": "Duelists' Convocation Rules Update January 10, 1995"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "format"
+   ]
+  },
+  {
+   "era": 12,
+   "range_text": "April 20 - Early June, 1995",
+   "start": "1995-04-20",
+   "end": "1995-06-01",
+   "name": "\"The Deck\" Dominates",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Necropotence",
+    "Brainstorm",
+    "Jester's Cap",
+    "Demonic Consultation",
+    "Mystic Remora. Mana Crypt book promo redemption now possible"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 13,
+   "range_text": "June 10 - October 14, 1995",
+   "start": "1995-06-10",
+   "end": "1995-10-14",
+   "name": "Ice Age Era",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Merchant Scroll"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 14,
+   "range_text": "October 15 - October 31, 1995",
+   "start": "1995-10-15",
+   "end": "1995-10-31",
+   "name": "Prelude to Bannings",
+   "changes": "Chaos Orb and Channel banned.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 15,
+   "range_text": "November 1, 1995 - January 31, 1996",
+   "start": "1995-11-01",
+   "end": "1996-01-31",
+   "name": "Necro Winter",
+   "changes": "Mind Twist banned. Black Vise restricted.",
+   "citation": {
+    "url": "https://web.archive.org/web/20140802034045/http:/oracle.wizards.com/scripts/wa.exe?A2=ind9601C&L=MTG-L&P=R6502&I=-3",
+    "label": "Duelists' Convocation Rules Update January 1, 1995",
+    "archived": "https://web.archive.org/web/20140802034045/http:/oracle.wizards.com/scripts/wa.exe?A2=ind9601C&L=MTG-L&P=R6502&I=-3"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 16,
+   "range_text": "February 1 - March 31, 1996",
+   "start": "1996-02-01",
+   "end": "1996-03-31",
+   "name": "Type II Havoc",
+   "changes": "Ali from Cairo, Black Vise, and Sword of the Ages unresticted. Time Vault unbanned and errated.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted",
+    "errata"
+   ]
+  },
+  {
+   "era": 17,
+   "range_text": "April 1, 1996 - June 9, 1996",
+   "start": "1996-04-01",
+   "end": "1996-06-09",
+   "name": "Late Ice Age Era",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Force of Will",
+    "Gorilla Shaman"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 18,
+   "range_text": "June 10 - September 30, 1996",
+   "start": "1996-06-10",
+   "end": "1996-09-30",
+   "name": "Force of Will Era Begins",
+   "changes": "Fastbond restricted.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 19,
+   "range_text": "October 1 - October 31, 1996",
+   "start": "1996-10-01",
+   "end": "1996-10-31",
+   "name": "Age of Storms",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Lion's Eye Diamond",
+    "Mystical Tutor",
+    "Flash",
+    "Phyrexian Dreadnought"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 20,
+   "range_text": "November 1, 1996 - March 4, 1997",
+   "start": "1996-11-01",
+   "end": "1997-03-04",
+   "name": "Zoo Era",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Vampiric Tutor",
+    "Prosperity"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 21,
+   "range_text": "March 5, 1997 - June 30, 1997",
+   "start": "1997-03-05",
+   "end": "1997-06-30",
+   "name": "Prosperty Combo Era",
+   "changes": "Black Vise re-restricted.",
+   "citation": null,
+   "notable_printings": [
+    "Null Rod",
+    "Ophidian",
+    "Doomsday"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "set_release"
+   ]
+  },
+  {
+   "era": 22,
+   "range_text": "July 1 - September 30, 1997",
+   "start": "1997-07-01",
+   "end": "1997-09-30",
+   "name": "Inquest Summer",
+   "changes": "Paris Mulligan adopted. Mishra's Workshop, Candelabra of Tawnos, Copy Artifact, Feldon's Cane, and Zuran Orb are unrestricted.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted",
+    "rules"
+   ]
+  },
+  {
+   "era": 23,
+   "range_text": "October 1 - 31, 1997",
+   "start": null,
+   "end": null,
+   "name": "O'Brien School Rising",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Wasteland",
+    "Lotus Petal"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 24,
+   "range_text": "November 1, 1997 - January 1, 1998",
+   "start": "1997-11-01",
+   "end": "1998-01-01",
+   "name": "Blue Zoo Moment",
+   "changes": "Strip Mine restricted.",
+   "citation": {
+    "url": "https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/BSJWPznsuY8/m/f7fVggCYszIJ?pli=1",
+    "label": "Banned & Restricted List Update January 1, 1998",
+    "archived": "http://web.archive.org/web/20250814090652/https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/BSJWPznsuY8/m/f7fVggCYszIJ?pli=1",
+    "archived_at": "20250814090652"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 25,
+   "range_text": "January 1 - March 31, 1998",
+   "start": "1998-01-01",
+   "end": "1998-03-31",
+   "name": "Green Zoo Metagame",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Mox Diamond"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 26,
+   "range_text": "April 1 - June 30, 1998",
+   "start": "1998-04-01",
+   "end": "1998-06-30",
+   "name": "TurboZvi Arrives",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Oath of Druids",
+    "Survival of the Fittist",
+    "Sphere of Resistence"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 27,
+   "range_text": "July 1 - October 31, 1998",
+   "start": "1998-07-01",
+   "end": "1998-10-31",
+   "name": "Oath Emergent",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Tolarian Academy",
+    "Windfall",
+    "Yawgmoth's Will",
+    "Smokestack",
+    "Voltaic Key",
+    "Show",
+    "Tell",
+    "Morphling"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 28,
+   "range_text": "November 1, 1998 - January 1, 1999",
+   "start": "1998-11-01",
+   "end": "1999-01-01",
+   "name": "Type 1 is Broken: Combo Rising",
+   "changes": "Tolarian Academy, Windfall, and Stroke of Genius restricted",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 29,
+   "range_text": "January 1 - February 28, 1999",
+   "start": "1999-01-01",
+   "end": "1999-02-28",
+   "name": "Combo Winter",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Defense Grid",
+    "Memory Jar",
+    "Grim Monolith",
+    "Goblin Welder"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 30,
+   "range_text": "March 1 - April 1, 1999",
+   "start": "1999-03-01",
+   "end": "1999-04-01",
+   "name": "A Jarring Month",
+   "changes": "Memory Jar and Time Spiral restricted, Maze of Ith unrestricted.",
+   "citation": {
+    "url": "http://members.tripod.com/blue_midget/Gossip/banned.htm",
+    "label": "Banned & Restricted List Update March 1, 1999"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 32,
+   "range_text": "June 1 - June 30, 1999",
+   "start": "1999-06-01",
+   "end": "1999-06-30",
+   "name": "Introducing the Stack",
+   "changes": "",
+   "citation": {
+    "url": "https://web.archive.org/web/20050301045851/https://www.wizards.com/magic/advanced/6e/6e_letter.asp",
+    "label": "Sixth Edition Rules Update",
+    "archived": "https://web.archive.org/web/20050301045851/https://www.wizards.com/magic/advanced/6e/6e_letter.asp"
+   },
+   "notable_printings": [
+    "Academy Rector",
+    "Yawgmoth's Bargain",
+    "Masticore",
+    "Metalworker"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 33,
+   "range_text": "July 1 - September 30, 1999",
+   "start": "1999-07-01",
+   "end": "1999-09-30",
+   "name": "Academy's Swan Song",
+   "changes": "18 cards restricted. Divine Intervention and Shahrazad unbanned. Ivory Tower, Mirror Universe, and Underworld Dreams unrestricted.",
+   "citation": {
+    "url": "http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-990901.txt",
+    "label": "Banned & Restricted List Update September 1, 1999"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 34,
+   "range_text": "October 1 - October 31, 1999",
+   "start": "1999-10-01",
+   "end": "1999-10-31",
+   "name": "Format Reset",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Misdirection",
+    "Gush",
+    "Unmask",
+    "Squee",
+    "Goblin Nabob"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 35,
+   "range_text": "November 1, 1999 - February 29, 2000",
+   "start": "1999-11-01",
+   "end": "2000-02-29",
+   "name": "Alternative Casting Cost Era",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Tangle Wire",
+    "Accumulated Knowledge"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 37,
+   "range_text": "July 1 - September 30, 2000",
+   "start": "2000-07-01",
+   "end": "2000-09-30",
+   "name": "Trix Dominant",
+   "changes": "Channel & Mind Twist Unbanned. Demonic Consultation and Necropotence restricted.",
+   "citation": {
+    "url": "http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-000901.txt",
+    "label": "Banned & Restricted List Update September 1, 2000",
+    "archived": "http://web.archive.org/web/20250823045431/http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-000901.txt",
+    "archived_at": "20250823045431"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 38,
+   "range_text": "October 1 - October 31, 2000",
+   "start": "2000-10-01",
+   "end": "2000-10-31",
+   "name": "Keeper's Return",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Fact or Fiction"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 39,
+   "range_text": "November 1, 2000 - February 28, 2001",
+   "start": "2000-11-01",
+   "end": "2001-02-28",
+   "name": "Keeper's Swan Song",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Quirion Dryad"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 40,
+   "range_text": "March 1, 2001 - June 30, 2001",
+   "start": "2001-03-01",
+   "end": "2001-06-30",
+   "name": "Fact or Fiction Dominates",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Pernicious Deed",
+    "Fire/Ice"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 42,
+   "range_text": "July 23 - October 31, 2001",
+   "start": "2001-07-23",
+   "end": "2001-10-31",
+   "name": "Fact or Fiction Dominates",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Psychatog",
+    "Standstill"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 43,
+   "range_text": "November 1, 2001 - January 1, 2002",
+   "start": "2001-11-01",
+   "end": "2002-01-01",
+   "name": "The Final Chapter on Fact or Fiction",
+   "changes": "Fact or Fiction restricted.",
+   "citation": {
+    "url": "https://web.archive.org/web/20171023054948/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_1201",
+    "label": "Banned & Restricted List Update December 1, 2001",
+    "archived": "https://web.archive.org/web/20171023054948/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_1201"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 44,
+   "range_text": "January 1 - February 28, 2002",
+   "start": "2002-01-01",
+   "end": "2002-02-28",
+   "name": "Tools 'N' Tubbies Era",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Basking Rootwalla",
+    "Deep Analysis"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 45,
+   "range_text": "March 1 - June 30, 2002",
+   "start": "2002-03-01",
+   "end": "2002-06-30",
+   "name": "Miracle Grow Moment",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Cabal Therapy",
+    "Burning Wish",
+    "Worldgorger Dragon",
+    "Cunning Wish",
+    "Wonder",
+    "Anger",
+    "Krosan Reclamation"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 46,
+   "range_text": "July 1 - October 31, 2002",
+   "start": "2002-07-01",
+   "end": "2002-10-31",
+   "name": "The Last Dance (Before Fetchlands)",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Polluted Delta",
+    "Flooded Strand",
+    "Bloodstained Mire",
+    "Wooded Foothills",
+    "Windswept Heath"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 48,
+   "range_text": "March 1 - March 31, 2003",
+   "start": "2003-03-01",
+   "end": "2003-03-31",
+   "name": "1st Gush Era",
+   "changes": "Earthcraft and Entomb restricted. Hurkyl's Recall, Berserk, and Recall unrestricted.",
+   "citation": {
+    "url": "https://web.archive.org/web/20120229232252/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_0303",
+    "label": "Banned & Restricted List Update March 1, 2003",
+    "archived": "https://web.archive.org/web/20120229232252/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_0303"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 49,
+   "range_text": "April 1 - June 30, 2003",
+   "start": "2003-04-01",
+   "end": "2003-06-30",
+   "name": "1st Gush Era Continues",
+   "changes": "Gush and Mind's Desire restricted.",
+   "citation": {
+    "url": "https://web.archive.org/web/20060626133553/http://www.wizards.com/default.asp?x=dci/announce/dci20030529a",
+    "label": "Banned & Restricted List Update June 1, 2003",
+    "archived": "https://web.archive.org/web/20060626133553/http://www.wizards.com/default.asp?x=dci/announce/dci20030529a"
+   },
+   "notable_printings": [
+    "Tendrils of Agony",
+    "Mind's Desire",
+    "Brain Freeze"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "set_release"
+   ]
+  },
+  {
+   "era": 50,
+   "range_text": "July 1 - October 19, 2003",
+   "start": "2003-07-01",
+   "end": "2003-10-19",
+   "name": "Psychatog Triumphant!",
+   "changes": "",
+   "citation": {
+    "url": "https://web.archive.org/web/20031002235227/http://www.starcitygames.com/coverage.php?Event=T1WORLDCHAMPS",
+    "label": "Vintage Champs 2003 Coverage",
+    "archived": "https://web.archive.org/web/20031002235227/http://www.starcitygames.com/coverage.php?Event=T1WORLDCHAMPS"
+   },
+   "notable_printings": [
+    "Thirst for Knolwedge",
+    "Thoughtcast",
+    "Chalice of the Void",
+    "Chrome Mox",
+    "Goblin Charbelcher",
+    "Mindslaver",
+    "Sculpting Steel"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 51,
+   "range_text": "October 20 - December 31, 2003",
+   "start": "2003-10-20",
+   "end": "2003-12-31",
+   "name": "Burning Tendrils Flames Out",
+   "changes": "Lion's Eye Diamond, Burning Wish and Chrome Mox restricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-restricted-announcement-2003-12-01",
+    "label": "Banned & Restricted List Update December 1, 2003"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 52,
+   "range_text": "January 1 - February 19, 2004",
+   "start": "2004-01-01",
+   "end": "2004-02-19",
+   "name": "Control Slaver Emerges",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Trinisphere",
+    "Arcbound Ravager",
+    "Serum Powder",
+    "Darksteel Colossus",
+    "Skullclamp"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 53,
+   "range_text": "February 20 - June 19, 2004",
+   "start": "2004-02-20",
+   "end": "2004-06-19",
+   "name": "TriniStax Arrives",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Crucible of Worlds",
+    "Auriok Salvagers",
+    "Engineered Exposives"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 54,
+   "range_text": "June 20 - October 19, 2004",
+   "start": "2004-06-20",
+   "end": "2004-10-19",
+   "name": "The End of Type 1",
+   "changes": "\"Type 1\" is rebranded \"Vintage.\" Doomsday, Fork, Braingesyer, and Earthcraft unrestricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/september-br-list-update-2003-09-03",
+    "label": "Banned & Restricted List Update September 3, 2004",
+    "archived": "http://web.archive.org/web/20220807213330/https://magic.wizards.com/en/articles/archive/latest-developments/september-br-list-update-2003-09-03",
+    "archived_at": "20220807213330"
+   },
+   "notable_printings": [
+    "Forbidden Orchard",
+    "Gifts Ungiven",
+    "Sensei's Divining Top"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "format",
+    "set_release"
+   ]
+  },
+  {
+   "era": 55,
+   "range_text": "October 20, 2004 - February 19, 2005",
+   "start": "2004-10-20",
+   "end": "2005-02-19",
+   "name": "Oath on Top",
+   "changes": "Stroke of Genius unrestricted.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 56,
+   "range_text": "February 20 - March 19, 2005",
+   "start": "2005-02-20",
+   "end": "2005-03-19",
+   "name": "Trinisphere's Last Stand",
+   "changes": "In addition to Trinisphere's restriction, it is announced that Imperial Seal and Personal tutor will be restricted 6 months later, and that Portal, Portal Second Age, Portal Three Kingdoms, and Starter (1999 and 2000) will become legal for sanctioned play in the Vintage.",
+   "citation": {
+    "url": "http://www.wizards.com/default.asp?x=dci/announce/dci20050301a",
+    "label": "Banned & Restricted List Update March 1, 2005"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted",
+    "format"
+   ]
+  },
+  {
+   "era": 57,
+   "range_text": "March 20 - June 19, 2005",
+   "start": "2005-03-20",
+   "end": "2005-06-19",
+   "name": "Gifts on the Rise",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Pithing Needle",
+    "Kataki War's Wage"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 58,
+   "range_text": "June 20 - October 19, 2005",
+   "start": "2005-06-20",
+   "end": "2005-10-19",
+   "name": "Meandeck Gifts",
+   "changes": "Portal and Starter sets legalized in Vintage. Imperial Seal and Personal Tutor restricted. Mind Over Matter unrestricted.",
+   "citation": {
+    "url": "http://www.wizards.com/default.asp?x=dci/announce/dci20050901a",
+    "label": "Banned & Restricted List Update September 1, 2005"
+   },
+   "notable_printings": [
+    "Dredge mechanic",
+    "Golgari Grave-Troll",
+    "Stinkweed Imp",
+    "Dark Confidant. Legendary rules change"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "format",
+    "set_release"
+   ]
+  },
+  {
+   "era": 59,
+   "range_text": "October 20, 2005 - February 19, 2006",
+   "start": "2005-10-20",
+   "end": "2006-02-19",
+   "name": "The Most Diverse Vintage Format Ever?",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Leyline of the Void",
+    "Shattering Spree",
+    "Repeal"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 60,
+   "range_text": "February 20 - April 20, 2006",
+   "start": "2006-02-20",
+   "end": "2006-04-20",
+   "name": "Dredge Emerges",
+   "changes": "Time Vault receives errata, neutering combination with Flame Fusillade.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/ask-wizards-april-2006-2006-04-03",
+    "label": "Ask Wizards April 2006 With Time Vault Discussion"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "errata"
+   ]
+  },
+  {
+   "era": 61,
+   "range_text": "April 21 - May 19, 2006",
+   "start": "2006-04-21",
+   "end": "2006-05-19",
+   "name": "Time Vault Wars",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Trygon Predator",
+    "Spell Snare",
+    "Research/Development"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 62,
+   "range_text": "May 20 - July 13, 2006",
+   "start": "2006-05-20",
+   "end": "2006-07-13",
+   "name": "Pitch Long Emerges",
+   "changes": "Wizards Announces Policy Change, and Removal of Power-Level Errata.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/power-level-errata-b-gone-2006-07-14",
+    "label": "Power Level Errata B Gone",
+    "archived": "http://web.archive.org/web/20220518122601/https://magic.wizards.com/en/articles/archive/latest-developments/power-level-errata-b-gone-2006-07-14",
+    "archived_at": "20220518122601"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "errata",
+    "rules"
+   ]
+  },
+  {
+   "era": 63,
+   "range_text": "July 14 - Aug 19, 2006",
+   "start": null,
+   "end": null,
+   "name": "Meandeck Gifts & Pitch Long Metagame",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Dark Depths",
+    "Counterbalance"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 64,
+   "range_text": "August 20 - October 19, 2006",
+   "start": "2006-08-20",
+   "end": "2006-10-19",
+   "name": "Meandeck Gifts Triumphant",
+   "changes": "",
+   "citation": {
+    "url": "https://magic.wizards.com/en/events/coverage/2006-vintage-championship-c-c-combos-acomin",
+    "label": "Vintage Championship 2006 Coverage"
+   },
+   "notable_printings": [
+    "Ancient Grudge",
+    "Empty the Warrens",
+    "Dread Return",
+    "Sudden Shock"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 65,
+   "range_text": "October 20, 2006 - February 19, 2007",
+   "start": "2006-10-20",
+   "end": "2007-02-19",
+   "name": "Manaless Dredge Arrives",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Simian Spirit Guide",
+    "Urborg",
+    "Tomb of Yawgmoth",
+    "Extirpate"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 66,
+   "range_text": "February 20 - May 19, 2007",
+   "start": "2007-02-20",
+   "end": "2007-05-19",
+   "name": "The Mean Deck Metagame",
+   "changes": "Flash is issued errata with the Oracle update for Future Sight (5/15/2007).",
+   "citation": {
+    "url": "https://www.yawgatog.com/resources/oracle-changes/plc-fut/",
+    "label": "Magic Oracle Changes",
+    "archived": "http://web.archive.org/web/20251129123128/https://yawgatog.com/resources/oracle-changes/plc-fut/",
+    "archived_at": "20251129123128"
+   },
+   "notable_printings": [
+    "Narcomoeba",
+    "Bridge From Below",
+    "Pact of Negation",
+    "Street Wraith",
+    "Yixlid Jailer",
+    "Tarmogoyf",
+    "Summoner's Pact",
+    "Dakmor Salvage",
+    "Dryad Arbor"
+   ],
+   "change_kinds": [
+    "errata",
+    "set_release"
+   ]
+  },
+  {
+   "era": 67,
+   "range_text": "May 20 - June 19, 2007",
+   "start": "2007-05-20",
+   "end": "2007-06-19",
+   "name": "Flash Breaks Out",
+   "changes": "Gifts Ungiven Restricted. Gush, Black Vise, Mind Twist, and Voltaic Key unrestricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/gone-flash-2007-06-01",
+    "label": "Banned & Restricted List Update June 1, 2007",
+    "archived": "http://web.archive.org/web/20220626121913/https://magic.wizards.com/en/articles/archive/latest-developments/gone-flash-2007-06-01",
+    "archived_at": "20220626121913"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 68,
+   "range_text": "June 20 - October 19, 2007",
+   "start": "2007-06-20",
+   "end": "2007-10-19",
+   "name": "2nd Gush Era Begins",
+   "changes": "Shahrazad banned in September.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/week-was/eternals-2007-08-31",
+    "label": "Vintage Champs 2007 Coverage",
+    "archived": "http://web.archive.org/web/20220122080155/https://magic.wizards.com/en/articles/archive/week-was/eternals-2007-08-31",
+    "archived_at": "20220122080155"
+   },
+   "notable_printings": [
+    "Thorn of Amythyst",
+    "Ponder",
+    "Ingot Chewer",
+    "Gaddock Teeg",
+    "Thoughtseize"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "set_release"
+   ]
+  },
+  {
+   "era": 69,
+   "range_text": "October 20, 2007 - January 31, 2008",
+   "start": "2007-10-20",
+   "end": "2008-01-31",
+   "name": "Ravager MUD Bashes Vintage",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Reveillark"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 70,
+   "range_text": "February 1 - May 1, 2008",
+   "start": "2008-02-01",
+   "end": "2008-05-01",
+   "name": "Flash Spooks Vintage",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Painter's Servant"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 71,
+   "range_text": "May 2 - June 19, 2008",
+   "start": "2008-05-02",
+   "end": "2008-06-19",
+   "name": "End of the 2nd Gush Era",
+   "changes": "Brainstorm, Gush, Merchant Scroll, Flash and Ponder restricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/why-are-dual-lands-usually-allied-colored-2008-06-13",
+    "label": "Banned & Restricted List Update June 13, 2008"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 73,
+   "range_text": "July 25 - October 1, 2008",
+   "start": "2008-07-25",
+   "end": "2008-10-01",
+   "name": "The Storm Before the Tezzeret",
+   "changes": "Time Vault errataed and restored to its original ruled functionality. Chrome Mox, Dream Halls, Mox Diamond, Personal Tutor, Time Spiral unrestricted. Time Vault restricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/september-2008-update-bulletin-2008-09-24",
+    "label": "Banned & Restricted List Update September 24, 2008",
+    "archived": "http://web.archive.org/web/20220128155037/https://magic.wizards.com/en/articles/archive/news/september-2008-update-bulletin-2008-09-24",
+    "archived_at": "20220128155037"
+   },
+   "notable_printings": [
+    "Tezzeret the Seeker",
+    "Ad Nauseum",
+    "Relic of Progenitus",
+    "Ethersworn Canonist"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "errata",
+    "set_release"
+   ]
+  },
+  {
+   "era": 74,
+   "range_text": "October 2, 2008 - February 2, 2009",
+   "start": "2008-10-02",
+   "end": "2009-02-02",
+   "name": "Tezzerett Rises",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Inkwell Leviathan",
+    "Noble Hierarch"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 75,
+   "range_text": "February 3 - April 30, 2009",
+   "start": "2009-02-03",
+   "end": "2009-04-30",
+   "name": "Tezzeret Dominates",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Sphinx of the Steel Wind",
+    "Qasali Pridemage"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 76,
+   "range_text": "May 1 - June 18, 2009",
+   "start": "2009-05-01",
+   "end": "2009-06-18",
+   "name": "Tezzeret's Final Straw",
+   "changes": "Thirst for Knowledge restricted. Crop Rotation, Enlightened Tutor, Entomb, and Grim Monolith unrestricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/crafting-vintage-2009-06-26",
+    "label": "Crafting a Vintage"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 77,
+   "range_text": "June 19 - July 10, 2009",
+   "start": "2009-06-19",
+   "end": "2009-07-10",
+   "name": "Confidant Tezzeret Era",
+   "changes": "Magic 2010 Rules Changes neuter many Vintage cards, like Research/Development and Wish cycle.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/magic-2010-rules-changes-2009-06-10",
+    "label": "Magic 2010 Rules Changes"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "rules",
+    "format"
+   ]
+  },
+  {
+   "era": 78,
+   "range_text": "July 11 - October 1, 2009",
+   "start": "2009-07-11",
+   "end": "2009-10-01",
+   "name": "Vintage Champs - Ito Victorious!",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Enemy Fetchlands",
+    "Mindbreak Trap",
+    "Spell Pierce",
+    "Ravenous Trap",
+    "Iona Shield of Emeria",
+    "Bloodghast",
+    "Vampire Hexmage",
+    "Lotus Cobra"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 79,
+   "range_text": "October 2, 2009 - February 4, 2010",
+   "start": "2009-10-02",
+   "end": "2010-02-04",
+   "name": "Zendikar's Priceless Treasures",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Lodestone Golem",
+    "Jace",
+    "The Mind Sculptor",
+    "Eye of Ugin"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 80,
+   "range_text": "February 5 - April 22, 2010",
+   "start": "2010-02-05",
+   "end": "2010-04-22",
+   "name": "Lodestone & Jace Era begins",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Eldrazi Temple",
+    "Emrakul the Aeons Torn"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 81,
+   "range_text": "April 23 - July 16, 2010",
+   "start": "2010-04-23",
+   "end": "2010-07-16",
+   "name": "Jace Rising",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Preordain",
+    "Leyline of Sanctity",
+    "Inferno Titan"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 82,
+   "range_text": "July 17 - September 30, 2010",
+   "start": "2010-07-17",
+   "end": "2010-09-30",
+   "name": "Jace Controls Format",
+   "changes": "Gush and Frantic Search unrestricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/september-20-2010-dci-banned-restricted-list-announcement-2010-09-20",
+    "label": "Banned & Restricted List Update September 20, 2010"
+   },
+   "notable_printings": [
+    "Mox Opal",
+    "Rachet Bomb",
+    "Nihil Spellbomb",
+    "Memnite",
+    "Steel Hellkite",
+    "Myr Battlesphere",
+    "Kuldotha Forgemaster",
+    "Wurmcoil Engine",
+    "Precursor Golem"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "set_release"
+   ]
+  },
+  {
+   "era": 83,
+   "range_text": "October 1, 2010-February 3, 2011",
+   "start": null,
+   "end": null,
+   "name": "Dredge Triumphant; 3rd Gush Era Begins",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Blightsteel Colossus",
+    "Phyrexian Revoker",
+    "Green Sun's Zenith"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 84,
+   "range_text": "February 4 - May 12, 2011",
+   "start": "2011-02-04",
+   "end": "2011-05-12",
+   "name": "Kuldotha MUD Smashes Vintage",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Gitaxian Probe",
+    "Mental Misstep",
+    "Surgical Extraction",
+    "Dismember",
+    "Phyrexian Metamorph"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 85,
+   "range_text": "May 13 - June 17, 2011",
+   "start": "2011-05-13",
+   "end": "2011-06-17",
+   "name": "Phyrexian Mana & TurboTezzeret",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Flusterstorm",
+    "Scavenging Ooze"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 87,
+   "range_text": "July 15 - September 29/30, 2011",
+   "start": "2011-07-15",
+   "end": "2011-09-30",
+   "name": "Grudging the Metagame",
+   "changes": "",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/september-20-2011-dci-banned-restricted-list-announcement-2011-09-20",
+    "label": "Banned & Restricted List Update September 20, 2011"
+   },
+   "notable_printings": [
+    "Snapcaster Mage",
+    "Delver of Secrets",
+    "Stony Silence",
+    "Laboratory Maniac. Fact or Fiction unrestricted"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 88,
+   "range_text": "October 1, 2011 - February 2, 2012",
+   "start": "2011-10-01",
+   "end": "2012-02-02",
+   "name": "Innistrad Arrives",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Grafdigger's Cage",
+    "Thalia",
+    "Guardian of Thraben"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 89,
+   "range_text": "February 3 - May 3, 2012",
+   "start": "2012-02-03",
+   "end": "2012-05-03",
+   "name": "\"Noble\" Vintage",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Cavern of Souls",
+    "Griselbrand"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 90,
+   "range_text": "May 4 - May 31, 2012",
+   "start": "2012-05-04",
+   "end": "2012-05-31",
+   "name": "Griselbrand Oath Arrives",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Baleful Strix"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 91,
+   "range_text": "June 1 - July 12, 2012",
+   "start": "2012-06-01",
+   "end": "2012-07-12",
+   "name": "Baleful Control Eeks it Out",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Omniscience"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 92,
+   "range_text": "July 13 - September 30/October 4, 2012",
+   "start": null,
+   "end": null,
+   "name": "RUG Xerox Emerges",
+   "changes": "",
+   "citation": {
+    "url": "https://web.archive.org/web/20120921122107/http:/www.wizards.com/Magic/magazine/Article.aspx?x=mtg/daily/other/09202012a",
+    "label": "Banned & Restricted List Update September 20, 2012",
+    "archived": "https://web.archive.org/web/20120921122107/http:/www.wizards.com/Magic/magazine/Article.aspx?x=mtg/daily/other/09202012a"
+   },
+   "notable_printings": [
+    "Deathrite Shaman",
+    "Abrupt Decay",
+    "Rest in Peace",
+    "Niv-Mizzet",
+    "Supreme Verdict. Burning Wish unrestricted"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 93,
+   "range_text": "October 5, 2012 - January 31, 2013",
+   "start": "2012-10-05",
+   "end": "2013-01-31",
+   "name": "Grixis Snapcaster Control On Top",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Thespian's Stage"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 94,
+   "range_text": "February 1 - May 2, 2013",
+   "start": "2013-02-01",
+   "end": "2013-05-02",
+   "name": "The Burning Oath Moment",
+   "changes": "",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-2013-04-22-0",
+    "label": "Banned & Restricted List Update April 22, 2013",
+    "archived": "http://web.archive.org/web/20220627021802/https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-2013-04-22-0",
+    "archived_at": "20220627021802"
+   },
+   "notable_printings": [
+    "Notion Thief",
+    "Wear/Tear. Regrowth is unrestricted"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 95,
+   "range_text": "May 3 - July 12, 2013",
+   "start": "2013-05-03",
+   "end": "2013-07-12",
+   "name": "BUG Control Answers Workshops",
+   "changes": "",
+   "citation": {
+    "url": "http://magic.wizards.com/en/articles/archive/making-magic/magic-2014-core-set-rules-preview-2013-05-23",
+    "label": "Magic 2014 Rules Changes"
+   },
+   "notable_printings": [
+    "Young Pyromancer. Legend rule change"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 96,
+   "range_text": "July 13 - September 26, 2013",
+   "start": "2013-07-13",
+   "end": "2013-09-26",
+   "name": "Pyromancer Xerox Emerges",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Ashen Rider"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 97,
+   "range_text": "September 27 - October 21, 2013",
+   "start": "2013-09-27",
+   "end": "2013-10-21",
+   "name": "GrowAMancer Clips Vintage",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Toxic Deluge",
+    "True-Name Nemesis"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 98,
+   "range_text": "Novembe 1, 2013 - February 6, 2014",
+   "start": null,
+   "end": "2014-02-06",
+   "name": "Merfolk Wins",
+   "changes": "",
+   "citation": {
+    "url": "https://magic.wizards.com/en/content/2013-vintage-championship",
+    "label": "Vintage Champs 2013 Coverage"
+   },
+   "notable_printings": [
+    "Spirit of the Labyrinth"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 99,
+   "range_text": "February 7 - May 1, 2014",
+   "start": "2014-02-07",
+   "end": "2014-05-01",
+   "name": "Delver Rising",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Mana Confluence"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 100,
+   "range_text": "May 2 - June 5, 2014",
+   "start": "2014-05-02",
+   "end": "2014-06-05",
+   "name": "Delver On Top",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Dack Fayden"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 102,
+   "range_text": "July 18 - September 25, 2014",
+   "start": "2014-07-18",
+   "end": "2014-09-25",
+   "name": "Calm Before Khans",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Treasure Cruise",
+    "Dig Through Time"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 103,
+   "range_text": "September 26 - November 6, 2014",
+   "start": "2014-09-26",
+   "end": "2014-11-06",
+   "name": "Delver Dominates",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Containment Priest"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 104,
+   "range_text": "November 7, 2014 - January 22, 2015",
+   "start": "2014-11-07",
+   "end": "2015-01-22",
+   "name": "Delver Dominates",
+   "changes": "Treasure Cruise Restricted, Gifts Ungiven Unrestricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-announcement-2015-01-19",
+    "label": "Banned & Restricted List Update January 19, 2015",
+    "archived": "http://web.archive.org/web/20220916145813/https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-announcement-2015-01-19",
+    "archived_at": "20220916145813"
+   },
+   "notable_printings": [
+    "Monastery Mentor"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "set_release"
+   ]
+  },
+  {
+   "era": 105,
+   "range_text": "January 23 - March 26, 2015",
+   "start": "2015-01-23",
+   "end": "2015-03-26",
+   "name": "Mentor Rising",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Dragonlord Dromoka"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 106,
+   "range_text": "March 27 - July 16, 2015",
+   "start": "2015-03-27",
+   "end": "2015-07-16",
+   "name": "Grixis Therapy Moment",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Jace",
+    "Vryn's Prodigy",
+    "Dark Petition",
+    "Hangarback Walker"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 107,
+   "range_text": "July 17 - October 1, 2015",
+   "start": "2015-07-17",
+   "end": "2015-10-01",
+   "name": "Hangarback Shops Arrive",
+   "changes": "Chalice of the Void, Dig Through Time restricted. Thirst for Knowledge unrestricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/september-28-2015-banned-and-restricted-announcement-2015-09-28",
+    "label": "Banned & Restricted List Update September 28, 2015",
+    "archived": "http://web.archive.org/web/20221110044044/https://magic.wizards.com/en/articles/archive/news/september-28-2015-banned-and-restricted-announcement-2015-09-28",
+    "archived_at": "20221110044044"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 108,
+   "range_text": "October 2 - November 12, 2015",
+   "start": "2015-10-02",
+   "end": "2015-11-12",
+   "name": "The Magic Online Power Nine Challenge Begins",
+   "changes": "Vancouver Mulligan adopted.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": [
+    "rules"
+   ]
+  },
+  {
+   "era": 109,
+   "range_text": "November 13, 2015 - January 21, 2016",
+   "start": "2015-11-13",
+   "end": "2016-01-21",
+   "name": "DPS Moment",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Thought-Knot Seer",
+    "Reality Smasher",
+    "Eldrazi Displacer"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 110,
+   "range_text": "January 22 - April 7, 2016",
+   "start": "2016-01-22",
+   "end": "2016-04-07",
+   "name": "Inferno Oath Era",
+   "changes": "",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/banned-and-restricted-announcement-2016-04-04",
+    "label": "Banned & Restricted List Update April 4, 2016",
+    "archived": "http://web.archive.org/web/20220630233946/https://magic.wizards.com/en/articles/archive/news/banned-and-restricted-announcement-2016-04-04",
+    "archived_at": "20220630233946"
+   },
+   "notable_printings": [
+    "Prized Amalgam. Lodestone Golem restricted"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 111,
+   "range_text": "April 8 - July 21, 2016",
+   "start": "2016-04-08",
+   "end": "2016-07-21",
+   "name": "Gush Dominates; Eldrazi Rising",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Thalia",
+    "Heretic Cathar"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 112,
+   "range_text": "July 22 - August 25, 2016",
+   "start": "2016-07-22",
+   "end": "2016-08-25",
+   "name": "Eldrazi and Jeskai Era",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Leovold",
+    "Emisarry of Trest"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 113,
+   "range_text": "August 26 - September 29, 2016",
+   "start": "2016-08-26",
+   "end": "2016-09-29",
+   "name": "Mentor Era",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Paradoxical Outcome",
+    "Fragmentize",
+    "Foundry Inspector"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 115,
+   "range_text": "November 11, 2016 - January 19, 2017",
+   "start": "2016-11-11",
+   "end": "2017-01-19",
+   "name": "Mentor Era",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Walking Ballista"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 116,
+   "range_text": "January 20 - April 24/27 2017",
+   "start": "2017-01-20",
+   "end": "2017-04-27",
+   "name": "Gush Swan Song",
+   "changes": "Gush and Gitaxian Probe restricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/april-24-2017-banned-and-restricted-announcement-2017-04-24",
+    "label": "Banned & Restricted List Update April 24, 2017"
+   },
+   "notable_printings": [
+    "By Force"
+   ],
+   "change_kinds": [
+    "banned_restricted",
+    "set_release"
+   ]
+  },
+  {
+   "era": 117,
+   "range_text": "April 28 - July 13, 2017",
+   "start": "2017-04-28",
+   "end": "2017-07-13",
+   "name": "Mentor and Workshops Dominate",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Hollow One",
+    "Ramunap Excavator",
+    "Abrade"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 118,
+   "range_text": "July 14 - August 24/28, 2017",
+   "start": "2017-07-14",
+   "end": "2017-08-28",
+   "name": "Mentor and Workshops Duopoly",
+   "changes": "Thorn of Amethyst and Monastery Mentor restricted. Yawgmoth's Bargain unrestricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/august-28-2017-banned-and-restricted-announcement-2017-08-28",
+    "label": "Banned & Restricted List Update August 28, 2017",
+    "archived": "http://web.archive.org/web/20220128030717/https://magic.wizards.com/en/articles/archive/august-28-2017-banned-and-restricted-announcement-2017-08-28",
+    "archived_at": "20220128030717"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 119,
+   "range_text": "August 25 - September 28, 2017",
+   "start": "2017-08-25",
+   "end": "2017-09-28",
+   "name": "Transition",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Sorcerous Spyglass"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 120,
+   "range_text": "September 29, 2017 - January 18, 2018",
+   "start": "2017-09-29",
+   "end": "2018-01-18",
+   "name": "Workshops & Oath Metagame",
+   "changes": "5 Workshop + 3 Oath decks in Top 8 at NA Vintage Champs. Planeswalker rule change.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/ixalan-update-bulletin-2017-09-28",
+    "label": "Ixalan Rules Update Bulletin",
+    "archived": "http://web.archive.org/web/20221104052543/https://magic.wizards.com/en/articles/archive/news/ixalan-update-bulletin-2017-09-28",
+    "archived_at": "20221104052543"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "rules",
+    "format"
+   ]
+  },
+  {
+   "era": 121,
+   "range_text": "January 19 - April 26, 2018",
+   "start": "2018-01-19",
+   "end": "2018-04-26",
+   "name": "Big Three Era: Outcome, Workshops, and Turbo Xerox",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Karn",
+    "Scion of Urza"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 125,
+   "range_text": "August 10 - October 4, 2018",
+   "start": "2018-08-10",
+   "end": "2018-10-04",
+   "name": "Survival Breaks Out",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Assassin's Trophy. Survival wins the Asian Vintage Championship"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 126,
+   "range_text": "October 5, 2018 - January 24, 2019",
+   "start": "2018-10-05",
+   "end": "2019-01-24",
+   "name": "Outcome Peaks",
+   "changes": "",
+   "citation": {
+    "url": "https://www.eternalcentral.com/vintagechamps2018/",
+    "label": "North America Vintage Champs 2018 Coverage, Decklists, and Results",
+    "archived": "http://web.archive.org/web/20260523135154/https://www.eternalcentral.com/vintagechamps2018/",
+    "archived_at": "20260523135154"
+   },
+   "notable_printings": [
+    "Lavinia",
+    "Azorious Guildmage"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 127,
+   "range_text": "January 25 - May 2, 2019",
+   "start": "2019-01-25",
+   "end": "2019-05-02",
+   "name": "Outcome Test Drives the London Mulligan",
+   "changes": "",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/magic-online/magic-online-announcements-march-2019-03-19#London%20Mulligan",
+    "label": "London Mulligan Tested for 3 Weeks on MTGO",
+    "archived": "http://web.archive.org/web/20220517122434/https://magic.wizards.com/en/articles/archive/magic-online/magic-online-announcements-march-2019-03-19",
+    "archived_at": "20220517122434"
+   },
+   "notable_printings": [
+    "Karn the Great Creator",
+    "Narset Parter of Veils",
+    "Dreadhorde Arcanist"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 128,
+   "range_text": "May 3 - June 12, 2019",
+   "start": "2019-05-03",
+   "end": "2019-06-12",
+   "name": "Karn Combo Moment",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Force of Vigor",
+    "Collector's Ouphe",
+    "Hogaak Arisen Necropolis",
+    "Force of Negation"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 129,
+   "range_text": "June 13 - July 1, 2019",
+   "start": "2019-06-13",
+   "end": "2019-07-01",
+   "name": "The Dredge Show; BUG Rises",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Mystic Forge"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 130,
+   "range_text": "July 2 - August 22/6, 2019",
+   "start": "2019-07-02",
+   "end": "2019-08-26",
+   "name": "BUG Dominant",
+   "changes": "London mulligan adopted. Mystic Forge, Karn the Great Creator, Golgari Grave-Troll, and Mental Misstep restricted. Fastbond unrestricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/london-mulligan-2019-06-03",
+    "label": "London Mulligan Formally Adopted Across All Formats"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted",
+    "rules"
+   ]
+  },
+  {
+   "era": 131,
+   "range_text": "August 23/6 - October 1, 2019",
+   "start": null,
+   "end": "2019-10-01",
+   "name": "Jeskai Rebounds",
+   "changes": "",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/august-26-2019-banned-and-restricted-announcement-2019-08-26",
+    "label": "Banned & Restricted List Update August 26, 2019",
+    "archived": "http://web.archive.org/web/20220913152504/https://magic.wizards.com/en/articles/archive/news/august-26-2019-banned-and-restricted-announcement-2019-08-26",
+    "archived_at": "20220913152504"
+   },
+   "notable_printings": [
+    "Once Upon a Time",
+    "Defeaning Silence",
+    "Oko",
+    "Thief of Crowns",
+    "Stonecoil Serpant",
+    "Mystic Sanctuary",
+    "Brazen Borrower",
+    "Emry",
+    "Lurker of the Loch"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 132,
+   "range_text": "October 2 - November 14, 2019",
+   "start": "2019-10-02",
+   "end": "2019-11-14",
+   "name": "The Oko Moment",
+   "changes": "Narset, Parter of the Veil restricted.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/november-18-2019-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update November 18, 2019"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 133,
+   "range_text": "November 15, 2019 - January 24, 2020",
+   "start": "2019-11-15",
+   "end": "2020-01-24",
+   "name": "The Trifecta Format (Outcome, Dredge, and BUG)",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Soul-Guide Lantern",
+    "Thassa's Oracle",
+    "Underworld Breach"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 134,
+   "range_text": "January 25, 2020 - April 15, 2020 (online)",
+   "start": "2020-01-25",
+   "end": null,
+   "name": "Breach Breaks Out",
+   "changes": "Notable Printin: Lurrus of the Dream Den, Zirda, the Dawnwaker, Lutri, The Spellchaser, Sprite Dragon.",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": []
+  },
+  {
+   "era": 135,
+   "range_text": "April 16, 2020 - May 17, 2020",
+   "start": "2020-04-16",
+   "end": "2020-05-17",
+   "name": "Cat Scratch Fever",
+   "changes": "Lurrus of the Dream-Den banned.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/may-18-2020-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update May 18, 2020",
+    "archived": "http://web.archive.org/web/20221015190443/https://magic.wizards.com/en/articles/archive/news/may-18-2020-banned-and-restricted-announcement",
+    "archived_at": "20221015190443"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 136,
+   "range_text": "May 17, 2020 - May 31, 2020",
+   "start": "2020-05-17",
+   "end": "2020-05-31",
+   "name": "Post Lurrus Metagame",
+   "changes": "Companion Rules Overhauled.",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/june-1-2020-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update June 1, 2020",
+    "archived": "http://web.archive.org/web/20220802213056/https://magic.wizards.com/en/articles/archive/news/june-1-2020-banned-and-restricted-announcement",
+    "archived_at": "20220802213056"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "rules"
+   ]
+  },
+  {
+   "era": 139,
+   "range_text": "September 25, 2020 - November 19, 2020",
+   "start": "2020-09-25",
+   "end": "2020-11-19",
+   "name": "Doomsday Dominant",
+   "changes": "Noteable Printings: Hullbreacher, Opposition Agent, Archon of Emeria",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": []
+  },
+  {
+   "era": 140,
+   "range_text": "November 20, 2020 - February 4th/14th, 2021",
+   "start": "2020-11-20",
+   "end": null,
+   "name": "GolosShops Rising",
+   "changes": "Lurrus unbanned",
+   "citation": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/february-15-2021-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update February 15, 2021",
+    "archived": "http://web.archive.org/web/20220930012402/https://magic.wizards.com/en/articles/archive/news/february-15-2021-banned-and-restricted-announcement",
+    "archived_at": "20220930012402"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 141,
+   "range_text": "February 15, 2021-April 22, 2021",
+   "start": null,
+   "end": null,
+   "name": "Breach Back On Top",
+   "changes": "Noteable Printing: Sedgemoor Witch, Expressive Iteration",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": []
+  },
+  {
+   "era": 142,
+   "range_text": "April 23, 2021 - June 3, 2021",
+   "start": "2021-04-23",
+   "end": "2021-06-03",
+   "name": "A Witches World",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Urza's Saga",
+    "Grief",
+    "Endurance",
+    "Fury",
+    "Ragavan",
+    "Blazing Rootwalla",
+    "Dress Down",
+    "Nettlecyst",
+    "Master of Death"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 146,
+   "range_text": "November 19, 2021 - February 17, 2022",
+   "start": "2021-11-19",
+   "end": "2022-02-17",
+   "name": "Big Blue Surge",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Boseiju",
+    "Who Endures",
+    "Patchwork Automaton"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 148,
+   "range_text": "April 28, 2022 - June 09, 2022",
+   "start": "2022-04-28",
+   "end": "2022-06-09",
+   "name": "Big Blue Falls off a Cliff; Doomsday & Hogaak Rise",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Seasoned Dungeoneer",
+    "White Plume Adventurer"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 149,
+   "range_text": "June 10, 2022 - September 8, 2022",
+   "start": "2022-06-10",
+   "end": "2022-09-08",
+   "name": "",
+   "changes": "Sheoldred",
+   "citation": null,
+   "notable_printings": [],
+   "change_kinds": []
+  },
+  {
+   "era": 153,
+   "range_text": "December 2, 2022 - February 9, 2023",
+   "start": "2022-12-02",
+   "end": "2023-02-09",
+   "name": "",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Atraxa"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 154,
+   "range_text": "February 10, 2022 - April 20, 2023",
+   "start": "2022-02-10",
+   "end": "2023-04-20",
+   "name": "",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Phyrexian Censor"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 156,
+   "range_text": "May 12, 2023 - June 22, 2023",
+   "start": "2023-05-12",
+   "end": "2023-06-22",
+   "name": "CounterVine Responds",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "The One Ring",
+    "Orcish Bowmaster",
+    "Lorien Revealed"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 157,
+   "range_text": "June 23, 2023 - September 7, 2023",
+   "start": "2023-06-23",
+   "end": "2023-09-07",
+   "name": "",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Beseech the Mirror"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 160,
+   "range_text": "November 17, 2023 - February 8, 2024",
+   "start": "2023-11-17",
+   "end": "2024-02-08",
+   "name": "Oath Responds and Jewel Shops Wins US EW",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Undercity Sewers"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 162,
+   "range_text": "February 23, 2024 - March 8/11, 2024",
+   "start": "2024-02-23",
+   "end": "2024-03-11",
+   "name": "",
+   "changes": "Ponder is unrestricted",
+   "citation": {
+    "url": "https://magic.wizards.com/en/news/announcements/march-11-2024-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update March 11, 2024",
+    "archived": "http://web.archive.org/web/20260811141440/https://magic.wizards.com/en/news/announcements/march-11-2024-banned-and-restricted-announcement",
+    "archived_at": "20260811141440"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  },
+  {
+   "era": 165,
+   "range_text": "May 13, 2024 - June 13, 2024",
+   "start": "2024-05-13",
+   "end": "2024-06-13",
+   "name": "",
+   "changes": "",
+   "citation": null,
+   "notable_printings": [
+    "Vexing Bauble",
+    "Psychic Frog",
+    "Consign to Memory",
+    "Sink into Stupor"
+   ],
+   "change_kinds": [
+    "set_release"
+   ]
+  },
+  {
+   "era": 168,
+   "range_text": "August 2, 2024 - August 25, 2024",
+   "start": "2024-08-02",
+   "end": "2024-08-25",
+   "name": "",
+   "changes": "Vexing Bauble and Urza's Saga Restricted",
+   "citation": {
+    "url": "https://magic.wizards.com/en/news/announcements/august-26-2024-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update August 26, 2024"
+   },
+   "notable_printings": [],
+   "change_kinds": [
+    "banned_restricted"
+   ]
+  }
+ ]
+}

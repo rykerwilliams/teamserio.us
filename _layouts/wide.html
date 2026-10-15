@@ -1,0 +1,41 @@
+---
+layout: minimal
+header_in_content: true
+---
+{%- comment -%}
+  chulapa's default layout puts the article in a col-lg-8 inside a
+  container-lg, which is about 740px however wide the screen is, and it
+  exposes no page option to change that. This is that layout with a wider
+  container and a full-width article, so a page that needs the room can ask
+  for it by name instead of fighting Bootstrap from a stylesheet.
+
+  The col-lg-2 aside is dropped: it only carries the author block, which a
+  page using this layout does not set.
+{%- endcomment -%}
+	{%- comment -%}
+	  header_type: none skips chulapa's header block entirely, for a page that
+	  is an application rather than an article and wants to start at the top.
+	  Such a page supplies its own heading in the content.
+	{%- endcomment -%}
+	{% unless page.header_type == "none" %}
+	{% include components/headers.html headertype= page.header_type imghero=page.header_img projects=page.project_links %}
+	{% endunless %}
+	<main class="container-lg chulapa-wide pb-3 flex-fill">
+	  {% if page.show_breadcrumb or page.show_date or page.show_sociallinks -%}
+	  {%- include components/breadcrumbdatesocial.html -%}
+	  {% endif %}
+		<div class="row pt-2">
+			<article id="maincontent" class="col-12 mt-3 e-content">
+			{{- content -}}
+			</article>
+		</div>
+	</main>
+	{%- if page.show_bottomnavs -%}
+	  {%- include components/navbeforeafter.html -%}
+	{%- endif -%}
+	{%- if page.show_tags -%}
+		{% assign size = page.tags | size %}
+		{% if size > 0 %}
+	  {%- include components/tags.html-%}
+	  {% endif %}
+	{%- endif -%}

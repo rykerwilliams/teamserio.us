@@ -73,6 +73,8 @@ navbar:
     url     : /tags
   - title   : Categories
     url     : /categories
+  - title   : B&R
+    url     : /vintage-legality
   - title   : Merch
     url     : /merch/
   - title   : Media #Label
@@ -86,7 +88,14 @@ navbar:
       - title : Serious Vintage YouTube
         url: https://www.youtube.com/@SeriousVintageCast #url
 footer:
-  copyright: "&copy; 2024 Team Serious"
+  # The Fan Content Policy is what permits the card images and symbols
+  # used across this site; it requires this notice. It was missing.
+  copyright: >-
+    &copy; 2024 Team Serious.
+    Team Serious is unofficial Fan Content permitted under the
+    <a href="https://company.wizards.com/en/legal/fancontentpolicy">Wizards of the Coast Fan Content Policy</a>.
+    Not approved/endorsed by Wizards. Portions of the materials used are
+    property of Wizards of the Coast. &copy;Wizards of the Coast LLC.
   links:
     - label: "RSS"
       icon: "fa fa-rss"
