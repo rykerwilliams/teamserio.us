@@ -40,6 +40,10 @@ def main(repo):
                     "released_at": op.get("released_at"),
                     "rarity": op.get("rarity"),
                     "scryfall_uri": op.get("scryfall_uri"),
+                    # carried so the page can show art without a Scryfall
+                    # request per card
+                    "image": op.get("image"),
+                    "total_paper_printings": c.get("total_paper_printings"),
                 }
 
     # Trim events to what the page renders: the replay plus provenance.
@@ -66,6 +70,7 @@ def main(repo):
         "format": "Vintage",
         "sources": sources,
         "categories": current.get("banned_categories", []),
+        "pool_exclusions": current.get("pool_exclusions", []),
         "events": slim,
         "cards": cards,
     }

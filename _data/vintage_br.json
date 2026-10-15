@@ -44,7 +44,7 @@
   {
    "name": "Conspiracy",
    "count": 25,
-   "since": "2014-06",
+   "since": "2014-06-06",
    "rule": "Cards with the card type Conspiracy are banned."
   },
   {
@@ -63,25 +63,29 @@
    ]
   },
   {
-   "name": "Dexterity and subgame",
-   "count": 3,
-   "since": "1995-10-15",
-   "rule": "Banned individually, not as a class; listed here so a legal-pool query can exclude them in one place.",
-   "cards": [
-    "Chaos Orb",
-    "Falling Star",
-    "Shahrazad"
-   ]
-  },
-  {
    "name": "Stickers and Attractions",
    "since": "2024-05-13",
    "rule": "Cards that bring stickers or Attractions into play are banned."
+  }
+ ],
+ "pool_exclusions": [
+  {
+   "name": "Collectors' and International Edition",
+   "since": "1993-12-10",
+   "note": "Square-bordered gift-set reprints; never tournament legal. Every card in them is a reprint of a card that was legal from Limited Edition, so excluding them changes no card's legality.",
+   "scryfall": "-st:memorabilia"
   },
   {
-   "name": "Acorn / un-set and digital-only",
-   "since": null,
-   "rule": "Cards never printed in a tournament-legal paper set were never legal; they are excluded by set, not by a B&R action."
+   "name": "Silver-bordered and acorn",
+   "since": "1998-08-11",
+   "note": "Unglued onward. Never tournament legal in any format.",
+   "scryfall": "-is:funny"
+  },
+  {
+   "name": "Digital-only",
+   "since": "1997-04-01",
+   "note": "Astral Cards onward, through Magic Online and Arena/Alchemy. No paper printing, so never legal in paper Vintage.",
+   "scryfall": "-is:digital"
   }
  ],
  "events": [
@@ -1574,7 +1578,9 @@
    "set_name": "Arabian Nights",
    "released_at": "1993-12-17",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/arn/36/ali-from-cairo?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/arn/36/ali-from-cairo?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/4/2/42027613-d261-4ce2-8ba1-7a2480c660f8.jpg?1783948384",
+   "total_paper_printings": 1
   },
   "Ancestral Recall": {
    "type_line": "Instant",
@@ -1583,7 +1589,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/47/ancestral-recall?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/47/ancestral-recall?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/0/70e7ddf2-5604-41e7-bb9d-ddd03d3e9d0b.jpg?1783948708",
+   "total_paper_printings": 7
   },
   "Berserk": {
    "type_line": "Instant",
@@ -1592,7 +1600,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/185/berserk?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/185/berserk?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/1/e173c8ce-2352-405e-ad00-e3bb94ced1ad.jpg?1783948679",
+   "total_paper_printings": 10
   },
   "Black Lotus": {
    "type_line": "Artifact",
@@ -1601,7 +1611,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/232/black-lotus?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/232/black-lotus?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/0/b0faa7f2-b547-42c4-a810-839da50dadfe.jpg?1783948669",
+   "total_paper_printings": 3
   },
   "Braingeyser": {
    "type_line": "Sorcery",
@@ -1610,7 +1622,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/50/braingeyser?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/50/braingeyser?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/2/62b19a12-6914-430e-81ce-dcfca47884df.jpg?1783948707",
+   "total_paper_printings": 8
   },
   "Dingus Egg": {
    "type_line": "Artifact",
@@ -1619,7 +1633,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/241/dingus-egg?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/241/dingus-egg?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/5/65eb6cda-e512-40a8-9c1f-335b713409ff.jpg?1783948668",
+   "total_paper_printings": 14
   },
   "Gauntlet of Might": {
    "type_line": "Artifact",
@@ -1628,7 +1644,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/244/gauntlet-of-might?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/244/gauntlet-of-might?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/d/a/da248001-ed75-4b68-9532-37d3cd5afc4c.jpg?1783948667",
+   "total_paper_printings": 3
   },
   "Icy Manipulator": {
    "type_line": "Artifact",
@@ -1637,7 +1655,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/248/icy-manipulator?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/248/icy-manipulator?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/9/29dc1596-a2e7-4d60-9f99-89babaef8a06.jpg?1783948666",
+   "total_paper_printings": 16
   },
   "Mox Emerald": {
    "type_line": "Artifact",
@@ -1646,7 +1666,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/261/mox-emerald?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/261/mox-emerald?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/0/b0e1427c-05cd-465b-be59-97ed6e39f7ba.jpg?1783948663",
+   "total_paper_printings": 3
   },
   "Mox Jet": {
    "type_line": "Artifact",
@@ -1655,7 +1677,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/262/mox-jet?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/262/mox-jet?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/2/92bcd1ce-19b1-4d78-8b09-95242ca08d76.jpg?1783948663",
+   "total_paper_printings": 3
   },
   "Mox Pearl": {
    "type_line": "Artifact",
@@ -1664,7 +1688,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/263/mox-pearl?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/263/mox-pearl?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/e/8ebe4be7-e12a-4596-a899-fbd5b152e879.jpg?1783948663",
+   "total_paper_printings": 3
   },
   "Mox Ruby": {
    "type_line": "Artifact",
@@ -1673,7 +1699,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/264/mox-ruby?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/264/mox-ruby?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/9/8945585f-4773-493d-a0fe-d707db910b38.jpg?1783948662",
+   "total_paper_printings": 3
   },
   "Mox Sapphire": {
    "type_line": "Artifact",
@@ -1682,7 +1710,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/265/mox-sapphire?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/265/mox-sapphire?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/2/82da0972-b17b-4600-9efd-e9430a0db04b.jpg?1783948662",
+   "total_paper_printings": 3
   },
   "Orcish Oriflamme": {
    "type_line": "Enchantment",
@@ -1691,7 +1721,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/166/orcish-oriflamme?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/166/orcish-oriflamme?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/1/911538ea-322c-4c40-a9c3-35e47fe60fce.jpg?1783948683",
+   "total_paper_printings": 16
   },
   "Rukh Egg": {
    "type_line": "Creature \u2014 Bird Egg",
@@ -1700,7 +1732,9 @@
    "set_name": "Arabian Nights",
    "released_at": "1993-12-17",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/arn/43/rukh-egg?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/arn/43/rukh-egg?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/2/b28f9e63-e5e4-44b5-a17e-8301ff17c623.jpg?1783948383",
+   "total_paper_printings": 6
   },
   "Sol Ring": {
    "type_line": "Artifact",
@@ -1709,7 +1743,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/269/sol-ring?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/269/sol-ring?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/c/4/c4300d24-1cae-4dd5-be7e-38cc677cf5bd.jpg?1783948661",
+   "total_paper_printings": 134
   },
   "Time Vault": {
    "type_line": "Artifact",
@@ -1718,7 +1754,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/274/time-vault?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/274/time-vault?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/0/902441dc-c976-4c92-b897-6376eaa0fe38.jpg?1783948660",
+   "total_paper_printings": 3
   },
   "Time Walk": {
    "type_line": "Sorcery",
@@ -1727,7 +1765,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/83/time-walk?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/83/time-walk?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/0/e0139f60-d48e-46fb-9f5a-1e3d7558c834.jpg?1783948701",
+   "total_paper_printings": 3
   },
   "Timetwister": {
    "type_line": "Sorcery",
@@ -1736,7 +1776,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/84/timetwister?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/84/timetwister?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/a/9a49dc44-616e-4bdd-8220-0bb71eccc512.jpg?1783948700",
+   "total_paper_printings": 3
   },
   "Shahrazad": {
    "type_line": "Sorcery",
@@ -1745,7 +1787,9 @@
    "set_name": "Arabian Nights",
    "released_at": "1993-12-17",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/arn/10/shahrazad?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/arn/10/shahrazad?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/0/0014def3-4063-4929-ac51-76aef1bb2a68.jpg?1783948393",
+   "total_paper_printings": 1
   },
   "Demonic Tutor": {
    "type_line": "Sorcery",
@@ -1754,7 +1798,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/104/demonic-tutor?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/104/demonic-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/1/711d4d54-5520-4de8-9b93-79902ed8e562.jpg?1783948696",
+   "total_paper_printings": 23
   },
   "Regrowth": {
    "type_line": "Sorcery",
@@ -1763,7 +1809,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/214/regrowth?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/214/regrowth?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/a/badc73ec-3728-4246-90c7-5f4eb7051ed5.jpg?1783948673",
+   "total_paper_printings": 20
   },
   "Wheel of Fortune": {
    "type_line": "Sorcery",
@@ -1772,7 +1820,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/183/wheel-of-fortune?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/183/wheel-of-fortune?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/7/67b369c4-faa8-45c8-a1b9-98f228b69682.jpg?1783948679",
+   "total_paper_printings": 9
   },
   "Ivory Tower": {
    "type_line": "Artifact",
@@ -1781,7 +1831,9 @@
    "set_name": "Antiquities",
    "released_at": "1994-03-04",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/atq/53/ivory-tower?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/atq/53/ivory-tower?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/5/a5f23039-45ca-4c15-af50-bfd40ea26453.jpg?1783948362",
+   "total_paper_printings": 10
   },
   "Library of Alexandria": {
    "type_line": "Land",
@@ -1790,7 +1842,9 @@
    "set_name": "Arabian Nights",
    "released_at": "1993-12-17",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/arn/76/library-of-alexandria?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/arn/76/library-of-alexandria?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/e/ee266113-34ce-4189-84e7-ee2c86a2722c.jpg?1783948374",
+   "total_paper_printings": 1
   },
   "Mirror Universe": {
    "type_line": "Artifact",
@@ -1799,7 +1853,9 @@
    "set_name": "Legends",
    "released_at": "1994-06-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/leg/287/mirror-universe?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/leg/287/mirror-universe?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/8/a8f05d5e-bb7d-4554-b880-f0c6b4688357.jpg?1783948026",
+   "total_paper_printings": 1
   },
   "Recall": {
    "type_line": "Sorcery",
@@ -1808,7 +1864,9 @@
    "set_name": "Legends",
    "released_at": "1994-06-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/leg/70/recall?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/leg/70/recall?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/3/33296718-0625-4422-a65c-b21cf99c52ec.jpg?1783948072",
+   "total_paper_printings": 5
   },
   "Underworld Dreams": {
    "type_line": "Enchantment",
@@ -1817,7 +1875,9 @@
    "set_name": "Legends",
    "released_at": "1994-06-01",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/leg/124/underworld-dreams?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/leg/124/underworld-dreams?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/0/a0e8f8d8-eac0-451c-a167-be84667a8e3d.jpg?1783948061",
+   "total_paper_printings": 12
   },
   "Divine Intervention": {
    "type_line": "Enchantment",
@@ -1826,7 +1886,9 @@
    "set_name": "Legends",
    "released_at": "1994-06-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/leg/8/divine-intervention?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/leg/8/divine-intervention?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/e/9eae0ba1-1383-4505-b4e7-4f17dd8f20c5.jpg?1783948087",
+   "total_paper_printings": 1
   },
   "Maze of Ith": {
    "type_line": "Land",
@@ -1835,7 +1897,9 @@
    "set_name": "The Dark",
    "released_at": "1994-08-01",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/drk/117/maze-of-ith?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/drk/117/maze-of-ith?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/4/2/42dcceee-2a47-4eaa-a6a3-2931b3d50244.jpg?1783947922",
+   "total_paper_printings": 9
   },
   "Balance": {
    "type_line": "Sorcery",
@@ -1844,7 +1908,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/3/balance?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/3/balance?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/f/6f9ea46a-411f-40ce-a873-a905180093f4.jpg?1783948717",
+   "total_paper_printings": 13
   },
   "Fork": {
    "type_line": "Instant",
@@ -1853,7 +1919,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/152/fork?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/152/fork?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/6/e6b43916-fe2d-417a-a550-d7c795023297.jpg?1783948686",
+   "total_paper_printings": 6
   },
   "Zuran Orb": {
    "type_line": "Artifact",
@@ -1862,7 +1930,9 @@
    "set_name": "Ice Age",
    "released_at": "1995-06-03",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/ice/350/zuran-orb?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ice/350/zuran-orb?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/a/3a9d1082-a862-45d4-9e5e-392e879fead6.jpg?1783947454",
+   "total_paper_printings": 4
   },
   "Falling Star": {
    "type_line": "Sorcery",
@@ -1871,7 +1941,9 @@
    "set_name": "Legends",
    "released_at": "1994-06-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/leg/145/falling-star?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/leg/145/falling-star?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/2/f2b9983e-20d4-4d12-9e2c-ec6d9a345787.jpg?1783948056",
+   "total_paper_printings": 1
   },
   "Channel": {
    "type_line": "Sorcery",
@@ -1880,7 +1952,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/188/channel?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/188/channel?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/c/1/c1862c47-71cc-45a3-8805-a5ddc62e55ea.jpg?1783948678",
+   "total_paper_printings": 14
   },
   "Chaos Orb": {
    "type_line": "Artifact",
@@ -1889,7 +1963,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/235/chaos-orb?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/235/chaos-orb?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/2/92274971-7c4a-4326-b0fe-75e2d124f718.jpg?1783948669",
+   "total_paper_printings": 3
   },
   "Black Vise": {
    "type_line": "Artifact",
@@ -1898,7 +1974,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/233/black-vise?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/233/black-vise?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/6/76ac72f8-5b1e-4d67-a796-ef69cde27424.jpg?1783948669",
+   "total_paper_printings": 11
   },
   "Mind Twist": {
    "type_line": "Sorcery",
@@ -1907,7 +1985,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/115/mind-twist?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/115/mind-twist?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/e/eee9e106-a248-49d2-b8c8-6bbcd56ce739.jpg?1783948693",
+   "total_paper_printings": 11
   },
   "Fastbond": {
    "type_line": "Enchantment",
@@ -1916,7 +1996,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/192/fastbond?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/192/fastbond?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/5/a575a9af-e1de-4a1d-91d8-440585377e4f.jpg?1783948678",
+   "total_paper_printings": 6
   },
   "Strip Mine": {
    "type_line": "Land",
@@ -1925,7 +2007,9 @@
    "set_name": "Antiquities",
    "released_at": "1994-03-04",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/atq/82a/strip-mine?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/atq/82a/strip-mine?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/7/e7880157-7f27-4f1b-9cdc-ab36a6252376.jpg?1783948354",
+   "total_paper_printings": 17
   },
   "Stroke of Genius": {
    "type_line": "Instant",
@@ -1934,7 +2018,9 @@
    "set_name": "Judge Gift Cards 1998",
    "released_at": "1998-01-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/jgp/2/stroke-of-genius?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/jgp/2/stroke-of-genius?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/5/a5423cb8-38a2-4769-8999-de6ab5ebc294.jpg?1783946579",
+   "total_paper_printings": 9
   },
   "Tolarian Academy": {
    "type_line": "Legendary Land",
@@ -1943,7 +2029,9 @@
    "set_name": "Urza's Saga",
    "released_at": "1998-10-12",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/usg/330/tolarian-academy?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/usg/330/tolarian-academy?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/d/ad7ac9a5-340f-4509-826c-7b9416d47887.jpg?1783946296",
+   "total_paper_printings": 1
   },
   "Windfall": {
    "type_line": "Sorcery",
@@ -1952,7 +2040,9 @@
    "set_name": "Urza's Saga",
    "released_at": "1998-10-12",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/usg/111/windfall?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/usg/111/windfall?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/a/2aef4608-5ba8-4636-b5e7-cac57c5c0608.jpg?1783946351",
+   "total_paper_printings": 20
   },
   "Memory Jar": {
    "type_line": "Artifact",
@@ -1961,7 +2051,9 @@
    "set_name": "Urza's Legacy",
    "released_at": "1999-02-15",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/ulg/129/memory-jar?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ulg/129/memory-jar?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/1/a15d33d6-7213-4482-a1be-ac0a73644af6.jpg?1783946221",
+   "total_paper_printings": 2
   },
   "Time Spiral": {
    "type_line": "Sorcery",
@@ -1970,7 +2062,9 @@
    "set_name": "Urza's Saga",
    "released_at": "1998-10-12",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/usg/103/time-spiral?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/usg/103/time-spiral?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/3/f3d62dbd-63db-4ac9-950f-9852627f23f2.jpg?1783946354",
+   "total_paper_printings": 1
   },
   "Crop Rotation": {
    "type_line": "Instant",
@@ -1979,7 +2073,9 @@
    "set_name": "Urza's Legacy",
    "released_at": "1999-02-15",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/ulg/98/crop-rotation?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ulg/98/crop-rotation?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/5/6563f790-862c-465a-b963-7a61f2385516.jpg?1783946231",
+   "total_paper_printings": 16
   },
   "Doomsday": {
    "type_line": "Sorcery",
@@ -1988,7 +2084,9 @@
    "set_name": "Weatherlight",
    "released_at": "1997-06-09",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/wth/66/doomsday?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/wth/66/doomsday?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/b/5b3c6d87-9383-450b-bba5-33435b6b0d08.jpg?1783946736",
+   "total_paper_printings": 11
   },
   "Dream Halls": {
    "type_line": "Enchantment",
@@ -1997,7 +2095,9 @@
    "set_name": "Stronghold",
    "released_at": "1998-03-02",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/sth/28/dream-halls?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/sth/28/dream-halls?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/f/ff4a22d9-007b-4eb7-af9e-b5c2cae36238.jpg?1783946570",
+   "total_paper_printings": 1
   },
   "Enlightened Tutor": {
    "type_line": "Instant",
@@ -2006,7 +2106,9 @@
    "set_name": "Mirage",
    "released_at": "1996-10-08",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/mir/14/enlightened-tutor?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mir/14/enlightened-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/c/b/cbac1d27-15e2-4e2f-82ab-625a16e096cb.jpg?1783947123",
+   "total_paper_printings": 10
   },
   "Frantic Search": {
    "type_line": "Instant",
@@ -2015,7 +2117,9 @@
    "set_name": "Urza's Legacy",
    "released_at": "1999-02-15",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/ulg/32/frantic-search?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ulg/32/frantic-search?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/9/1904db14-6df7-424f-afa5-e3dfab31300a.jpg?1783946247",
+   "total_paper_printings": 16
   },
   "Grim Monolith": {
    "type_line": "Artifact",
@@ -2024,7 +2128,9 @@
    "set_name": "Urza's Legacy",
    "released_at": "1999-02-15",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/ulg/126/grim-monolith?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ulg/126/grim-monolith?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/d/9ddc9fe1-17c8-4e1d-aeb8-c4214e881280.jpg?1783946223",
+   "total_paper_printings": 1
   },
   "Hurkyl's Recall": {
    "type_line": "Instant",
@@ -2033,7 +2139,9 @@
    "set_name": "Antiquities",
    "released_at": "1994-03-04",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/atq/10/hurkyls-recall?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/atq/10/hurkyls-recall?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/3/f32373dd-06d8-45d1-8777-3b1411bcb30a.jpg?1783948372",
+   "total_paper_printings": 10
   },
   "Lotus Petal": {
    "type_line": "Artifact",
@@ -2042,7 +2150,9 @@
    "set_name": "Tempest",
    "released_at": "1997-10-14",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/tmp/294/lotus-petal?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/tmp/294/lotus-petal?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/c/6c877da3-68fa-41d0-8a24-8c79fcd8ecc1.jpg?1783946602",
+   "total_paper_printings": 13
   },
   "Mana Crypt": {
    "type_line": "Artifact",
@@ -2051,7 +2161,9 @@
    "set_name": "HarperPrism Book Promos",
    "released_at": "1995-05-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/phpr/5/mana-crypt?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/phpr/5/mana-crypt?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/6/160cf235-6463-4e16-a426-8b5be76b10d2.jpg?1783947530",
+   "total_paper_printings": 14
   },
   "Mana Vault": {
    "type_line": "Artifact",
@@ -2060,7 +2172,9 @@
    "set_name": "Limited Edition Alpha",
    "released_at": "1993-08-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/259/mana-vault?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lea/259/mana-vault?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/9/19499cb7-eccb-4e69-af32-6002d447a160.jpg?1783948664",
+   "total_paper_printings": 16
   },
   "Mind Over Matter": {
    "type_line": "Enchantment",
@@ -2069,7 +2183,9 @@
    "set_name": "Exodus",
    "released_at": "1998-06-15",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/exo/40/mind-over-matter?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/exo/40/mind-over-matter?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/e/6e091dd6-149f-46ea-bae0-224e79e3aacb.jpg?1783946523",
+   "total_paper_printings": 1
   },
   "Mox Diamond": {
    "type_line": "Artifact",
@@ -2078,7 +2194,9 @@
    "set_name": "Stronghold",
    "released_at": "1998-03-02",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/sth/138/mox-diamond?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/sth/138/mox-diamond?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/8/28028830-83ed-45e2-b495-3b9ad9d3e988.jpg?1783946538",
+   "total_paper_printings": 2
   },
   "Mystical Tutor": {
    "type_line": "Instant",
@@ -2087,7 +2205,9 @@
    "set_name": "Mirage",
    "released_at": "1996-10-08",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/mir/80/mystical-tutor?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mir/80/mystical-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/d/5d98101f-e32a-4a4a-a649-faa920d111ee.jpg?1783947105",
+   "total_paper_printings": 11
   },
   "Tinker": {
    "type_line": "Sorcery",
@@ -2096,7 +2216,9 @@
    "set_name": "Urza's Legacy",
    "released_at": "1999-02-15",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/ulg/45/tinker?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ulg/45/tinker?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/d/7da23b15-dfb8-4267-9b33-d7a4c035c434.jpg?1783946244",
+   "total_paper_printings": 5
   },
   "Vampiric Tutor": {
    "type_line": "Instant",
@@ -2105,7 +2227,9 @@
    "set_name": "Visions",
    "released_at": "1997-02-03",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/vis/72/vampiric-tutor?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/vis/72/vampiric-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/a/0a07cba3-2e8d-48ec-a6f8-4d2edfcd833d.jpg?1783946991",
+   "total_paper_printings": 14
   },
   "Voltaic Key": {
    "type_line": "Artifact",
@@ -2114,7 +2238,9 @@
    "set_name": "Urza's Saga",
    "released_at": "1998-10-12",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/usg/314/voltaic-key?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/usg/314/voltaic-key?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/a/1aa4baf7-4693-4c55-af04-2fa5d901d701.jpg?1783946301",
+   "total_paper_printings": 5
   },
   "Yawgmoth's Bargain": {
    "type_line": "Enchantment",
@@ -2123,7 +2249,9 @@
    "set_name": "Urza's Destiny",
    "released_at": "1999-06-07",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/uds/75/yawgmoths-bargain?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/uds/75/yawgmoths-bargain?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/6/86901bf2-7722-43f8-b879-7a30630371fa.jpg?1783946070",
+   "total_paper_printings": 1
   },
   "Yawgmoth's Will": {
    "type_line": "Sorcery",
@@ -2132,7 +2260,9 @@
    "set_name": "Urza's Saga",
    "released_at": "1998-10-12",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/usg/171/yawgmoths-will?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/usg/171/yawgmoths-will?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/d/6d3e3c3a-d351-4d91-8884-312d4b6f540d.jpg?1783946334",
+   "total_paper_printings": 2
   },
   "Demonic Consultation": {
    "type_line": "Instant",
@@ -2141,7 +2271,9 @@
    "set_name": "Ice Age",
    "released_at": "1995-06-03",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/ice/121/demonic-consultation?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ice/121/demonic-consultation?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/d/8d727b9b-6114-414d-9172-16b6e1db41cc.jpg?1783947504",
+   "total_paper_printings": 5
   },
   "Necropotence": {
    "type_line": "Enchantment",
@@ -2150,7 +2282,9 @@
    "set_name": "Ice Age",
    "released_at": "1995-06-03",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/ice/154/necropotence?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ice/154/necropotence?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/4/54d7a0c1-efb4-4a8d-ad92-a96d43835052.jpg?1783947497",
+   "total_paper_printings": 10
   },
   "Fact or Fiction": {
    "type_line": "Instant",
@@ -2159,7 +2293,9 @@
    "set_name": "Invasion",
    "released_at": "2000-10-02",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/inv/57/fact-or-fiction?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/inv/57/fact-or-fiction?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/f/7fd4d018-dcf3-4439-8445-02d66e44f7d3.jpg?1783945707",
+   "total_paper_printings": 31
   },
   "Earthcraft": {
    "type_line": "Enchantment",
@@ -2168,7 +2304,9 @@
    "set_name": "Tempest",
    "released_at": "1997-10-14",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/tmp/222/earthcraft?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/tmp/222/earthcraft?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/d/9dda7531-82a1-4f49-8858-601ddbc6e2bc.jpg?1783946620",
+   "total_paper_printings": 1
   },
   "Entomb": {
    "type_line": "Instant",
@@ -2177,7 +2315,9 @@
    "set_name": "Odyssey",
    "released_at": "2001-10-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/ody/132/entomb?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ody/132/entomb?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/6/f60a2091-fb97-4f04-911b-fce9b6351044.jpg?1783945246",
+   "total_paper_printings": 10
   },
   "Gush": {
    "type_line": "Instant",
@@ -2186,7 +2326,9 @@
    "set_name": "Mercadian Masques",
    "released_at": "1999-10-04",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/mmq/82/gush?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mmq/82/gush?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/7/e755bbef-bf34-49c0-ae72-d70e3599de52.jpg?1783945965",
+   "total_paper_printings": 7
   },
   "Mind's Desire": {
    "type_line": "Sorcery",
@@ -2195,7 +2337,9 @@
    "set_name": "Scourge",
    "released_at": "2003-05-26",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/scg/41/minds-desire?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/scg/41/minds-desire?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/c/3c7474e1-cfae-4867-a11a-d5cf9ff7ea5f.jpg?1783944885",
+   "total_paper_printings": 7
   },
   "Burning Wish": {
    "type_line": "Sorcery",
@@ -2204,7 +2348,9 @@
    "set_name": "Judgment",
    "released_at": "2002-05-27",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/jud/83/burning-wish?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/jud/83/burning-wish?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/c/1c9b692a-e832-4612-a6ec-93b52f6a0410.jpg?1783945119",
+   "total_paper_printings": 3
   },
   "Chrome Mox": {
    "type_line": "Artifact",
@@ -2213,7 +2359,9 @@
    "set_name": "Mirrodin",
    "released_at": "2003-10-02",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/mrd/152/chrome-mox?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mrd/152/chrome-mox?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/a/6a058e68-70af-4a64-859c-c881e5578368.jpg?1783944526",
+   "total_paper_printings": 12
   },
   "Lion's Eye Diamond": {
    "type_line": "Artifact",
@@ -2222,7 +2370,9 @@
    "set_name": "Mirage",
    "released_at": "1996-10-08",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/mir/307/lions-eye-diamond?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mir/307/lions-eye-diamond?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/3/63bacc32-d6ba-420c-9b49-299c08e5fb39.jpg?1783947041",
+   "total_paper_printings": 1
   },
   "Trinisphere": {
    "type_line": "Artifact",
@@ -2231,7 +2381,9 @@
    "set_name": "Darksteel",
    "released_at": "2004-02-06",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/dst/154/trinisphere?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/dst/154/trinisphere?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/d/4/d465597a-362e-4bd0-b547-f11d8807e597.jpg?1783944416",
+   "total_paper_printings": 8
   },
   "Imperial Seal": {
    "type_line": "Sorcery",
@@ -2240,7 +2392,9 @@
    "set_name": "Portal Three Kingdoms",
    "released_at": "1999-05-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/ptk/78/imperial-seal?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ptk/78/imperial-seal?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/2/822e30db-40c5-4099-868b-185ad9b7c7dc.jpg?1783946114",
+   "total_paper_printings": 5
   },
   "Personal Tutor": {
    "type_line": "Sorcery",
@@ -2249,7 +2403,9 @@
    "set_name": "Portal",
    "released_at": "1997-05-01",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/por/64/personal-tutor?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/por/64/personal-tutor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/e/1edc3917-fded-4773-8f8d-62bd861c1131.jpg?1783946837",
+   "total_paper_printings": 5
   },
   "Gifts Ungiven": {
    "type_line": "Instant",
@@ -2258,7 +2414,9 @@
    "set_name": "Champions of Kamigawa",
    "released_at": "2004-10-01",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/chk/62/gifts-ungiven?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/chk/62/gifts-ungiven?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/2/32b91eb5-ea53-4a21-a2e5-9c545a42fa30.jpg?1783944328",
+   "total_paper_printings": 8
   },
   "Brainstorm": {
    "type_line": "Instant",
@@ -2267,7 +2425,9 @@
    "set_name": "Ice Age",
    "released_at": "1995-06-03",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/ice/61/brainstorm?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ice/61/brainstorm?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/d/8d42d7aa-7f53-4cfc-842a-086aab2448d1.jpg?1783947518",
+   "total_paper_printings": 48
   },
   "Flash": {
    "type_line": "Instant",
@@ -2276,7 +2436,9 @@
    "set_name": "Mirage",
    "released_at": "1996-10-08",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/mir/66/flash?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mir/66/flash?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/3/63af3c26-5b1f-46f6-9aa2-036c615bf5ea.jpg?1783947110",
+   "total_paper_printings": 3
   },
   "Merchant Scroll": {
    "type_line": "Sorcery",
@@ -2285,7 +2447,9 @@
    "set_name": "Homelands",
    "released_at": "1995-10-01",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/hml/33/merchant-scroll?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/hml/33/merchant-scroll?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/d/4/d4133ceb-6176-411a-9eb8-51721c1bb435.jpg?1783947295",
+   "total_paper_printings": 9
   },
   "Ponder": {
    "type_line": "Sorcery",
@@ -2294,7 +2458,9 @@
    "set_name": "Lorwyn",
    "released_at": "2007-10-12",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/lrw/79/ponder?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lrw/79/ponder?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/a/ba6b6fc5-5077-4812-b8e9-906783dbaf67.jpg?1783942899",
+   "total_paper_printings": 31
   },
   "Thirst for Knowledge": {
    "type_line": "Instant",
@@ -2303,7 +2469,9 @@
    "set_name": "Mirrodin",
    "released_at": "2003-10-02",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/mrd/53/thirst-for-knowledge?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mrd/53/thirst-for-knowledge?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/f/0ff1f608-203e-4413-8753-37fc49731c87.jpg?1783944550",
+   "total_paper_printings": 16
   },
   "Treasure Cruise": {
    "type_line": "Sorcery",
@@ -2312,7 +2480,9 @@
    "set_name": "Khans of Tarkir",
    "released_at": "2014-09-26",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/ktk/59/treasure-cruise?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ktk/59/treasure-cruise?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/a/7a59d4b1-6cf4-44ec-8a96-1bb7094fea21.jpg?1783939083",
+   "total_paper_printings": 14
   },
   "Chalice of the Void": {
    "type_line": "Artifact",
@@ -2321,7 +2491,9 @@
    "set_name": "Mirrodin",
    "released_at": "2003-10-02",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/mrd/150/chalice-of-the-void?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mrd/150/chalice-of-the-void?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/a/1a02ca71-5e39-4a5f-aaba-a1e3e10a6a3e.jpg?1783944526",
+   "total_paper_printings": 7
   },
   "Dig Through Time": {
    "type_line": "Instant",
@@ -2330,7 +2502,9 @@
    "set_name": "Khans of Tarkir",
    "released_at": "2014-09-26",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/ktk/36/dig-through-time?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/ktk/36/dig-through-time?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/c/5c18c2d8-995c-4736-bdef-464abcd1d31a.jpg?1783939089",
+   "total_paper_printings": 17
   },
   "Lodestone Golem": {
    "type_line": "Artifact Creature \u2014 Golem",
@@ -2339,7 +2513,9 @@
    "set_name": "Worldwake",
    "released_at": "2010-02-05",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/wwk/127/lodestone-golem?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/wwk/127/lodestone-golem?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/b/9bb0ee6a-852a-4f1e-8f03-40b6d505bc82.jpg?1783942039",
+   "total_paper_printings": 6
   },
   "Gitaxian Probe": {
    "type_line": "Sorcery",
@@ -2348,7 +2524,9 @@
    "set_name": "New Phyrexia",
    "released_at": "2011-05-13",
    "rarity": "common",
-   "scryfall_uri": "https://scryfall.com/card/nph/35/gitaxian-probe?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/nph/35/gitaxian-probe?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/9/995486ce-58bb-4753-a812-0ca73ef1a235.jpg?1783941320",
+   "total_paper_printings": 5
   },
   "Monastery Mentor": {
    "type_line": "Creature \u2014 Human Monk",
@@ -2357,7 +2535,9 @@
    "set_name": "Fate Reforged",
    "released_at": "2015-01-23",
    "rarity": "mythic",
-   "scryfall_uri": "https://scryfall.com/card/frf/20/monastery-mentor?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/frf/20/monastery-mentor?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/b/abcd0e32-2e6b-419b-9e8a-af38f2b48a66.jpg?1783938710",
+   "total_paper_printings": 10
   },
   "Thorn of Amethyst": {
    "type_line": "Artifact",
@@ -2366,7 +2546,9 @@
    "set_name": "Lorwyn",
    "released_at": "2007-10-12",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lrw/262/thorn-of-amethyst?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/lrw/262/thorn-of-amethyst?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/4/e472d4f5-add4-4de3-8718-31a47a35277c.jpg?1783942851",
+   "total_paper_printings": 7
   },
   "Golgari Grave-Troll": {
    "type_line": "Creature \u2014 Troll Skeleton",
@@ -2375,7 +2557,9 @@
    "set_name": "Ravnica: City of Guilds",
    "released_at": "2005-10-07",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/rav/167/golgari-grave-troll?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/rav/167/golgari-grave-troll?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/6/f61b50e6-2166-435d-bf48-c4a0cff9999c.jpg?1783943637",
+   "total_paper_printings": 7
   },
   "Karn, the Great Creator": {
    "type_line": "Legendary Planeswalker \u2014 Karn",
@@ -2384,7 +2568,9 @@
    "set_name": "War of the Spark",
    "released_at": "2019-05-03",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/war/1/karn-the-great-creator?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/war/1/karn-the-great-creator?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/e/3ec0c0fb-1a4f-45f4-85b7-346a6d3ce2c5.jpg?1783933488",
+   "total_paper_printings": 10
   },
   "Mental Misstep": {
    "type_line": "Instant",
@@ -2393,7 +2579,9 @@
    "set_name": "New Phyrexia",
    "released_at": "2011-05-13",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/nph/38/mental-misstep?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/nph/38/mental-misstep?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/1/61e9c6df-1c84-4eab-9076-a4feb6347c10.jpg?1783941319",
+   "total_paper_printings": 9
   },
   "Mystic Forge": {
    "type_line": "Artifact",
@@ -2402,7 +2590,9 @@
    "set_name": "Core Set 2020",
    "released_at": "2019-07-12",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/m20/233/mystic-forge?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/m20/233/mystic-forge?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/2/924a24e7-91b8-4ceb-a136-7a765d98c994.jpg?1783932941",
+   "total_paper_printings": 14
   },
   "Narset, Parter of Veils": {
    "type_line": "Legendary Planeswalker \u2014 Narset",
@@ -2411,7 +2601,9 @@
    "set_name": "War of the Spark",
    "released_at": "2019-05-03",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/war/61/narset-parter-of-veils?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/war/61/narset-parter-of-veils?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/8/c/8c39f9b4-02b9-4d44-b8d6-4fd02ebbb0c5.jpg?1783933458",
+   "total_paper_printings": 12
   },
   "Urza's Saga": {
    "type_line": "Enchantment Land \u2014 Urza's Saga",
@@ -2420,7 +2612,9 @@
    "set_name": "Modern Horizons 2 Promos",
    "released_at": "2021-05-06",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/259s/urzas-saga?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/pmh2/259s/urzas-saga?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/c/1cf96437-0943-40f9-b175-31a1504028ba.jpg?1783926931",
+   "total_paper_printings": 8
   },
   "Vexing Bauble": {
    "type_line": "Artifact",
@@ -2429,7 +2623,9 @@
    "set_name": "Modern Horizons 3",
    "released_at": "2024-06-14",
    "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/mh3/212/vexing-bauble?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/mh3/212/vexing-bauble?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/9/29f11089-658f-42e6-aeb0-09b512ad2479.jpg?1783911242",
+   "total_paper_printings": 1
   },
   "The Fantasticar": {
    "type_line": "Legendary Artifact \u2014 Vehicle",
@@ -2438,7 +2634,9 @@
    "set_name": "Marvel Super Heroes Commander",
    "released_at": "2026-06-26",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/msc/104/the-fantasticar?utm_source=api"
+   "scryfall_uri": "https://scryfall.com/card/msc/104/the-fantasticar?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/d/ed0beb69-8441-4104-9990-81bd82f81f9a.jpg?1786399169",
+   "total_paper_printings": 2
   }
  }
 }
