@@ -437,8 +437,13 @@
       var pad = 4;                        // clearance from the lip
 
       lid.querySelectorAll(".vl-thrown").forEach(function (card) {
-        var w = card.offsetWidth, h = card.offsetHeight;
-        if (!w || !h) return;
+        var w = card.offsetWidth;
+        if (!w) return;
+        // Height is DERIVED from the width, not read from the element. The
+        // art is lazy-loaded, so before it arrives the card has no laid-out
+        // height, and reading offsetHeight skipped those cards entirely --
+        // they then sat outside the lid for good. Cards are a known shape.
+        var h = w * (204 / 146);
         var rot = parseFloat(
           (card.style.getPropertyValue("--rot") || "0").replace("deg", "")) || 0;
         var rad = Math.abs(rot * Math.PI / 180);
@@ -547,10 +552,9 @@
     h.push('<span class="vl-asof-n">' + st.restricted.length +
            "<small>restricted</small></span>");
     h.push("<div><h2 class=\"vl-asof\">" + esc(prettyDate(ev)) + "</h2>");
-    if (ev.era_name) {
-      h.push('<p class="vl-era">Era ' + ev.era + " \u00b7 " +
-             esc(ev.era_name) + "</p>");
-    }
+    h.push('<p class="vl-era">' + (ev.era_name
+      ? "Era " + ev.era + " \u00b7 " + esc(ev.era_name)
+      : "\u00a0") + "</p>");
     h.push('<p class="vl-basis">' + esc(basisNote(ev)) +
            " · announcement " + ev.seq + " of " + EVENTS.length + "</p></div>");
     h.push("</div>");
@@ -942,6 +946,15 @@
       }
     });
   }
+
+  // a narrower lid can leave a card outside, so re-clamp when the box changes
+  var resizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { containCards(panel); }, 120);
+  });
+  // belt and braces: clamp again once the art has actually arrived
+  window.addEventListener("load", function () { containCards(panel); });
 
   var ns = document.querySelector(".vl-noscript");
   if (ns) ns.remove();

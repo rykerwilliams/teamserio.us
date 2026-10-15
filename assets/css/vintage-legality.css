@@ -91,10 +91,11 @@
 /* ---------- state panel ---------- */
 .vl-head-row { display: flex; align-items: baseline; gap: .75rem;
                flex-wrap: wrap;
-               /* pinned: the basis note wraps on some announcements, and a
-                  header that changes height walks the grid up and down as you
-                  step through */
-               min-height: 4.2rem; }
+               /* Pinned. The basis note wraps on some announcements and the
+                  era line is absent on others; a header that changes height
+                  walks everything below it up and down as you step through,
+                  which is most of what made playback feel jumpy. */
+               min-height: 5.4rem; }
 .vl-asof { font-size: 1.6rem; font-weight: 700; margin: 0; line-height: 1.1; }
 .vl-asof-n {
   font-variant-numeric: tabular-nums; font-size: 2.4rem; font-weight: 700;
@@ -369,15 +370,26 @@
 .vl-thrown {
   position: absolute; display: block; text-decoration: none;
   transform: rotate(var(--rot)); transform-origin: 50% 50%;
-  transition: transform .18s ease, filter .18s ease;
+  transition: filter .18s ease;
   filter: drop-shadow(0 3px 5px rgba(0,0,0,.6));
 }
-.vl-thrown img { width: 100%; height: auto; display: block; border-radius: 6%; }
-.vl-thrown:hover {
-  transform: rotate(var(--rot)) scale(2.2) translateY(-6px);
-  z-index: 2000 !important;
-  filter: drop-shadow(0 8px 14px rgba(0,0,0,.75));
+.vl-thrown img {
+  width: 100%; height: auto; display: block; border-radius: 6%;
+  border: 2px solid transparent; transition: border-color .18s;
+  /* so the card occupies its full height before the lazy art arrives;
+     without this the lid lays out around zero-height cards */
+  aspect-ratio: 146 / 204;
+  background: rgba(128,128,128,.14);
 }
+/* Hover must not change the card's GEOMETRY. Scaling it up pushed cards near
+   the rim outside the lid, where the lid's overflow sliced them in half. The
+   full-size image is already one hover away through autocard, so this only
+   lifts the card to the top of the pile and brightens it. */
+.vl-thrown:hover {
+  z-index: 3000 !important;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.8)) brightness(1.18);
+}
+.vl-thrown:hover img { border-color: var(--vl-gold); }
 
 /* thrown in on this announcement */
 .vl-thrown.is-add img {
@@ -410,7 +422,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .vl-thrown.is-add, .vl-thrown.is-gone { animation: none; }
-  .vl-thrown:hover { transform: rotate(var(--rot)) scale(1.4); }
 }
 
 /* set symbols standing in for the kinds of card outside the pool */
@@ -422,7 +433,7 @@
 .vl-pool-note li { margin: .4rem 0; }
 
 .vl-era { font-size: .82rem; opacity: .75; margin: .1rem 0 0;
-          font-style: italic; }
+          font-style: italic; min-height: 1.2em; }
 .vl-noarchive { opacity: .55; }
 
 /* what moved the format between announcements: errata, rules, format changes */
