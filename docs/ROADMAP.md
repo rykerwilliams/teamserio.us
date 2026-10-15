@@ -111,36 +111,18 @@ These have ordering constraints or deadlines attached.
 
 ## Cosmetic / layout / CSS
 
-- [ ] **Rotate the site tagline on each deploy.** The home page title currently reads
-      `TeamSerio.us | testing`. The word "testing" is not in this repo -- grepping for it
-      finds nothing but prose inside posts. It comes from the **GitHub repository's own
-      description field**, by way of chulapa's `_includes/head.html`, which on the home
-      page alone builds the title as:
+- [x] **Rotate the site tagline on each deploy.** Done, with one tagline in the
+      list. The home page title fell through to the GitHub repository's
+      description field, which read **"testing"**, so every browser tab and
+      every shared link said `TeamSerio.us | testing`. It was invisible from a
+      checkout, which is why it lasted.
 
-          metatitle1 = site.title
-          metatitle2 = site.subtitle | default: site.github.project_tagline
+      `_data/taglines.yml` holds the list and `_plugins/tagline.rb` picks one at
+      build time, so adding taglines needs no code change. The choice is
+      deterministic, seeded from the commit SHA, so rebuilding a commit does
+      not quietly change what a shared link says.
 
-      `subtitle:` is not set in `_config.yml`, so `metatitle2` falls through to
-      `site.github.project_tagline` -- the repo description, which is literally `testing`.
-      Every other page is unaffected: there `metatitle1` is the page title and
-      `metatitle2` is `site.title`. Link previews are also unaffected, because
-      `<meta name="description">` and `og:description` come from `description:` in
-      `_config.yml`, which correctly reads "Web Home Of Team Serious."
-
-      Two ways to stop it immediately: set `subtitle:` in `_config.yml` (keeps the fix in
-      the repo, where it is reviewable), or edit the repo description on GitHub. Prefer
-      the former -- the repo description is invisible from a checkout and the next person
-      to go looking will waste the same time I did.
-
-      Wanted: a set of taglines that rotates per deploy rather than one fixed string. The
-      build already runs on every push, so picking one at build time is enough; it does not
-      need to change per page view. A `_data/taglines.yml` list plus a line in the layout
-      that selects by build number or date would do it, and keeps the list editable without
-      touching the config.
-
-      Worth deciding whether the rotation should be deterministic (same deploy, same
-      tagline) so a rebuild of the same commit is reproducible, or genuinely random.
-      Deterministic is easier to reason about when a link preview looks wrong.
+      Still wanted: more taglines. Rajah has some.
 
 
 - [ ] Social media links on articles

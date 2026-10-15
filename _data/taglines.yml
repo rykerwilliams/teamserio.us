@@ -1,0 +1,9 @@
+# Taglines for the home page title: "TeamSerio.us | <tagline>".
+#
+# Add lines here and nothing else needs touching -- _plugins/tagline.rb picks
+# one at build time. With a single entry it simply always uses that one.
+#
+# Until this existed the title fell through to the GitHub repository's
+# description field, which read "testing", so every browser tab and every
+# shared link said "TeamSerio.us | testing".
+- "Web Home Of Team Serious."
