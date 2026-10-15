@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: wide
 title: What Was Legal When
 subtitle: "The Vintage Banned &amp; Restricted list, on any date since 1994"
 header_type: hero
@@ -20,6 +20,15 @@ breadcrumb_list:
 
 <div class="vl">
 
+  <p class="vl-credit">
+    Built on <strong>Steve Menendian</strong>&rsquo;s
+    <a href="https://www.eternalcentral.com/timeline-of-vintage/">Timeline of
+    Vintage</a> at Eternal Central &mdash; the era chart that records what
+    changed, when, and where it was announced. Dates, era names and citations
+    here all come from his work. Go and read it: it has the reasoning behind
+    every decision, which this page does not attempt to reproduce.
+  </p>
+
   <p>
     Published sources list the <em>changes</em> to the Banned &amp; Restricted
     list &mdash; this card restricted, that one unrestricted. None of them list
@@ -32,6 +41,8 @@ breadcrumb_list:
     changed is still listed in full further down this page.
   </p>
 
+  <div class="vl-split">
+  <div class="vl-col-controls">
   <div class="vl-chart-wrap">
     <svg id="vl-chart" class="vl-chart" preserveAspectRatio="xMidYMid meet"></svg>
   </div>
@@ -63,7 +74,10 @@ breadcrumb_list:
     </p>
   </details>
 
-  <section id="vl-state" aria-live="polite"></section>
+  </div><!-- /.vl-col-controls -->
+
+  <section id="vl-state" class="vl-col-state" aria-live="polite"></section>
+  </div><!-- /.vl-split -->
 
   <div class="vl-hist" id="vl-hist" role="dialog" aria-modal="true"
        aria-label="Card history">

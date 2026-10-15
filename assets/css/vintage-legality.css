@@ -449,3 +449,31 @@
 .vl-kind-rules  { background: rgba(70,150,210,.3);  color: #9ad2f5; }
 .vl-kind-format { background: rgba(201,162,39,.3);  color: #e8c86a; }
 .vl-kind-banned_restricted { background: rgba(255,90,82,.25); color: #ff9a94; }
+
+/* ---- the chart beside the cards --------------------------------------
+   The page asks for the `wide` layout, which gives a full-width article;
+   chulapa's default would pin it to about 740px at any screen size. */
+.chulapa-wide { max-width: min(1760px, 96vw); }
+
+.vl-split { display: block; }
+@media (min-width: 1150px) {
+  .vl-split {
+    display: grid;
+    grid-template-columns: minmax(360px, 0.85fr) minmax(560px, 1.15fr);
+    gap: 2rem;
+    align-items: start;
+  }
+  /* the chart and its controls stay in view while the piles scroll */
+  .vl-col-controls {
+    position: sticky; top: 1rem;
+    max-height: calc(100vh - 2rem); overflow-y: auto;
+  }
+  .vl-col-state { min-width: 0; }
+}
+
+/* the source credit sits above everything: the data is his work */
+.vl-credit {
+  border-left: 3px solid var(--vl-gold);
+  background: rgba(184,134,11,.08);
+  padding: .7rem .9rem; margin: 0 0 1rem; font-size: .92rem;
+}
