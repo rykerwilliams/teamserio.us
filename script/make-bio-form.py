@@ -75,13 +75,70 @@ function makeBioForm() {
     'the form any time to do the rest.');
 '''
 
-TAIL = '''
-  var ss = SpreadsheetApp.create('Team Serious \\u2014 Bios (responses)');
+TAIL = r'''
+  var ss = SpreadsheetApp.create('Team Serious — Bios (responses)');
   form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
+
+  // One nudge, to people who chose to give an address, carrying the link
+  // back into their own answers. See onBioSubmit below.
+  ScriptApp.newTrigger('onBioSubmit').forForm(form).onFormSubmit().create();
 
   Logger.log('Edit the form : ' + form.getEditUrl());
   Logger.log('Send this one : ' + form.getPublishedUrl());
   Logger.log('Responses     : ' + ss.getUrl());
+}
+
+/**
+ * Sends one email, once, with a link back into the person's own answers.
+ *
+ * This is why the form does not use Google's own "collect email" setting:
+ * that makes an address compulsory for everyone. Here the address is an
+ * ordinary optional question, and anyone who gives one gets a link they can
+ * use to finish the rest whenever they like.
+ *
+ * ONCE is enforced with ScriptProperties. The submit trigger fires again when
+ * someone edits an existing response, and nobody wants a fresh email every
+ * time they fix a typo.
+ */
+function onBioSubmit(e) {
+  var response = e.response;
+  var address = null;
+  var name = '';
+
+  response.getItemResponses().forEach(function (item) {
+    var title = item.getItem().getTitle();
+    if (title === 'Email') {
+      address = String(item.getResponse() || '').trim();
+    }
+    if (title === 'Name, as you want it on the site') {
+      name = String(item.getResponse() || '').trim();
+    }
+  });
+
+  if (!address || address.indexOf('@') < 0) { return; }
+
+  var props = PropertiesService.getScriptProperties();
+  var key = 'nudged:' + address.toLowerCase();
+  if (props.getProperty(key)) { return; }
+
+  var link = response.getEditResponseUrl();
+  var hello = name ? (name.split(' ')[0] + ',') : 'Hello,';
+  var nl = String.fromCharCode(10);
+
+  MailApp.sendEmail({
+    to: address,
+    subject: 'Your Team Serious bio — the link back',
+    body: hello + nl + nl +
+      'Thanks for filling this in. Here is the link back to your own answers:' +
+      nl + nl + link + nl + nl +
+      'It reopens the form exactly as you left it, so you can finish the rest ' +
+      'of the questions whenever you feel like it, or change anything you ' +
+      'want back. Worth keeping — it is the only one you get, and we are ' +
+      'not going to pester you again.' + nl + nl +
+      'Team Serious' + nl
+  });
+
+  props.setProperty(key, new Date().toISOString());
 }
 '''
 
