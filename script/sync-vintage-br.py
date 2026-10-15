@@ -53,16 +53,18 @@ def main(repo):
         for a in e["actions"]:
             act = {"card": a["card"], "action": a["action"],
                    "from": a.get("resolved_from")}
-            if a.get("sources_disagree"):
-                act["disagree"] = a["sources_disagree"]
-                act["claims"] = {k: v["date"] for k, v in a["claims"].items()}
+            if a.get("note"):
+                act["note"] = a["note"]
             acts.append(act)
         slim.append({
             "seq": e["seq"], "date": e["date"],
-            "basis": e["date_basis"], "precision": e["date_precision"],
-            "announced": e.get("announced"), "effective": e.get("effective"),
+            "precision": e["date_precision"],
+            "effective": e.get("effective") or e["date"],
+            "announced": e.get("announced"),
+            "era": e.get("era"), "era_name": e.get("era_name"),
+            # the announcement itself, with an archived copy where one exists
+            "announcement": e.get("announcement"),
             "actions": acts, "sources": e.get("sources", []),
-            "disputed": bool(e.get("date_conflicts")),
         })
 
     out = {

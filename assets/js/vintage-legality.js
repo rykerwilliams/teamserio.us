@@ -52,17 +52,28 @@
     if (ev.precision === "month") return MONTHS[p[1] - 1] + " " + p[0];
     return String(p[0]);
   }
-  // Say plainly what the date is and is not: most announcements do not record
-  // whether their date is the announcement or the effective date, and a
-  // tournament held between the two used the OLD list.
+  // We now have both dates from the chart, so say so rather than hedging.
+  // A tournament held between them used the OLD list.
   function basisNote(ev) {
-    var b = [];
-    if (ev.basis === "effective") b.push("effective date");
-    else if (ev.basis === "announced") b.push("announcement date");
-    else b.push("date basis unrecorded — may be announcement or effective");
-    if (ev.precision === "month") b.push("exact day unknown");
-    else if (ev.precision === "year") b.push("month and day unknown");
-    return b.join(" · ");
+    var bits = [];
+    if (ev.announced && ev.announced !== ev.effective) {
+      bits.push("announced " + prettyISO(ev.announced) +
+                ", took effect " + prettyISO(ev.effective));
+    } else if (ev.announced) {
+      bits.push("announced and effective the same day");
+    } else {
+      bits.push("effective date; announcement date not recorded");
+    }
+    if (ev.precision === "month") bits.push("exact day unknown");
+    else if (ev.precision === "year") bits.push("month and day unknown");
+    return bits.join(" \u00b7 ");
+  }
+
+  function prettyISO(d) {
+    if (!d) return "";
+    var p = d.split("-");
+    if (p.length < 3) return d;
+    return MONTHS[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
   }
 
   // ---- replay -------------------------------------------------------------
@@ -306,19 +317,33 @@
             (((h >>> 20) & 0x3ff) / 1023)];
   }
 
-  function shoeboxHtml(current, removed, added, label, id) {
+  // Each lid has a FIXED height, sized once for the largest the list ever
+  // gets, so the box does not grow and shrink as you step through. Early
+  // announcements leave it sparse, which is the right trade.
+  var LID_H = (function () {
+    function maxOf(pick) {
+      return STATES.reduce(function (m, st) {
+        return Math.max(m, pick(st).length); }, 0);
+    }
+    function heightFor(n) {
+      var cols = Math.max(6, Math.ceil(Math.sqrt(Math.max(n, 1) * 2.9)));
+      return Math.max(150, Math.ceil(Math.max(n, 1) / cols) * 44 + 62);
+    }
+    return {
+      restricted: heightFor(maxOf(function (st) {
+        return st.restricted.concat(st.removed); })),
+      banned: heightFor(maxOf(function (st) {
+        return st.banned.concat(st.bRemoved); }))
+    };
+  })();
+
+  function shoeboxHtml(current, removed, added, label, id, lidH) {
     var shown = current.slice();
     removed.forEach(function (n) { shown.push(n); });
     shown.sort(cmp);
 
-    // lay them out on a jittered grid so the lid fills evenly but reads as a
-    // heap rather than a table
-    var n = Math.max(shown.length, 1);
-    var cols = Math.max(6, Math.ceil(Math.sqrt(n * 2.9)));
-    var rows = Math.ceil(n / cols);
-    var cellW = 100 / cols;                 // percent
     var cardW = 8.5;                        // percent of lid width
-    var lidH = Math.max(150, rows * 44 + 62);
+    var cardAspect = 204 / 146;
 
     var out = ['<div class="vl-lid" id="' + id +
                '" style="height:' + lidH + 'px">'];
@@ -327,12 +352,13 @@
     shown.forEach(function (name, i) {
       var gone = current.indexOf(name) < 0;
       var isNew = added.indexOf(name) >= 0;
+      // Position comes ONLY from the card's own name. Deriving it from the
+      // card's index in the current list meant every card shifted whenever
+      // one was added or removed -- the whole pile reshuffled on every step.
+      // Hashing the name means a card lands in its spot and stays there.
       var j = jitter(name);
-      var col = i % cols, row = Math.floor(i / cols);
-      var left = col * cellW + (j[0] - 0.5) * cellW * 0.85;
-      left = Math.max(1, Math.min(100 - cardW - 1, left));
-      var top = 30 + row * ((lidH - 66) / Math.max(rows, 1)) +
-                (j[1] - 0.5) * 20;
+      var left = 1 + j[0] * (100 - cardW - 2);
+      var top = 28 + j[1] * Math.max(10, lidH - 28 - 16 - cardW * 7.4 * cardAspect);
       var rot = (j[2] - 0.5) * 46;          // -23deg .. +23deg
       var cls = "vl-thrown" + (gone ? " is-gone" : isNew ? " is-add" : "");
       var art = smallArt(name);
@@ -340,7 +366,7 @@
                ' data-card="' + esc(name) + '" title="' + esc(name) + '"' +
                ' style="left:' + left.toFixed(2) + "%;top:" + top.toFixed(0) +
                "px;width:" + cardW + "%;--rot:" + rot.toFixed(1) + "deg;z-index:" +
-               (gone ? 999 : isNew ? 900 : 100 + i) + '">' +
+               (gone ? 999 : isNew ? 900 : 100 + (hash32(name) % 300)) + '">' +
                (art ? '<img src="' + esc(art) + '" alt="' + esc(name) +
                       '" loading="lazy">'
                     : '<span class="vl-noart">' + esc(name) + "</span>") +
@@ -391,6 +417,10 @@
     h.push('<span class="vl-asof-n">' + st.restricted.length +
            "<small>restricted</small></span>");
     h.push("<div><h2 class=\"vl-asof\">" + esc(prettyDate(ev)) + "</h2>");
+    if (ev.era_name) {
+      h.push('<p class="vl-era">Era ' + ev.era + " \u00b7 " +
+             esc(ev.era_name) + "</p>");
+    }
     h.push('<p class="vl-basis">' + esc(basisNote(ev)) +
            " · announcement " + ev.seq + " of " + EVENTS.length + "</p></div>");
     h.push("</div>");
@@ -406,7 +436,7 @@
 
     if (VIEW === "shoebox") {
       h.push(shoeboxHtml(st.restricted, st.removed, st.added,
-                         "Restricted", "vl-list"));
+                         "Restricted", "vl-list", LID_H.restricted));
     } else {
       h.push('<div class="vl-sec">Restricted \u2014 one copy allowed <span class="vl-sec-n">'
              + st.restricted.length + "</span></div>");
@@ -416,7 +446,7 @@
 
     if (VIEW === "shoebox") {
       h.push(shoeboxHtml(st.banned, st.bRemoved, st.bAdded,
-                         "Banned", "vl-banned-list"));
+                         "Banned", "vl-banned-list", LID_H.banned));
     } else {
       h.push('<div class="vl-sec">Banned \u2014 not allowed at all <span class="vl-sec-n">'
              + st.banned.length + "</span></div>");
@@ -459,20 +489,17 @@
            encodeURIComponent(poolQuery(ev, st)) +
            '">Legal card pool on this date →</a>');
 
-    var disputes = ev.actions.filter(function (a) { return a.disagree; });
-    if (disputes.length) {
-      h.push('<div class="vl-dispute"><strong>Sources disagree on this date.</strong>');
-      disputes.forEach(function (a) {
-        var claims = Object.keys(a.claims || {}).sort().map(function (k) {
-          return (SOURCES[k] ? SOURCES[k].title : k) + ": " + a.claims[k];
-        }).join(" · ");
-        h.push("<div>" + esc(a.card) + " (" + esc(a.action) + ") — " +
-               esc(claims) + ". Using " +
-               esc(SOURCES[a.from] ? SOURCES[a.from].title : a.from) + ".</div>");
-      });
-      h.push("</div>");
-    }
-    if (ev.sources && ev.sources.length) {
+    var ann = ev.announcement;
+    if (ann && ann.url) {
+      h.push('<p class="vl-src"><strong>Announcement:</strong> ' +
+             '<a href="' + esc(ann.url) + '" target="_blank" ' +
+             'rel="noopener noreferrer">' + esc(ann.label || ann.url) + "</a>" +
+             (ann.archived
+               ? ' \u00b7 <a href="' + esc(ann.archived) + '" target="_blank" ' +
+                 'rel="noopener noreferrer">archived copy</a>'
+               : ' \u00b7 <span class="vl-noarchive">no archived copy</span>') +
+             "</p>");
+    } else if (ev.sources && ev.sources.length) {
       h.push('<p class="vl-src">Source: ' + ev.sources.map(function (u) {
         return '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' +
                esc(u.replace(/^https?:\/\//, "").split("/")[0]) + "</a>";

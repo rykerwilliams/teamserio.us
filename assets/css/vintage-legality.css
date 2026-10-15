@@ -410,3 +410,15 @@
   .vl-thrown.is-add, .vl-thrown.is-gone { animation: none; }
   .vl-thrown:hover { transform: rotate(var(--rot)) scale(1.4); }
 }
+
+/* set symbols standing in for the kinds of card outside the pool */
+.vl-seticon {
+  width: 1.05em; height: 1.05em; vertical-align: -.15em; margin-right: .45em;
+  /* Scryfall ships these as dark SVGs; invert so they read on a dark page */
+  filter: invert(1) brightness(1.4); opacity: .85;
+}
+.vl-pool-note li { margin: .4rem 0; }
+
+.vl-era { font-size: .82rem; opacity: .75; margin: .1rem 0 0;
+          font-style: italic; }
+.vl-noarchive { opacity: .55; }

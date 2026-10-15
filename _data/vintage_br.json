@@ -5,22 +5,22 @@
   "eternalcentral": {
    "title": "Timeline of Vintage (Steve Menendian)",
    "url": "https://www.eternalcentral.com/timeline-of-vintage/",
-   "note": "Cites its sources; preferred for dates."
+   "note": "The era chart. Carries the dates, the era names and a link to each announcement."
   },
   "mtgwiki": {
    "title": "MTG Wiki B&R timeline",
    "url": "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline",
-   "note": "Broad coverage 1994-2025; dates taken from section headings, so less precise."
+   "note": "Used only where the chart does not enumerate a change, such as the first list and the 18 cards of September 1999."
   },
   "wotc": {
    "title": "Wizards of the Coast announcement",
-   "url": "https://magic.wizards.com/en/news/announcements/banned-and-restricted-august-10-2026",
-   "note": "Primary source for 2026 onward."
+   "url": "https://magic.wizards.com/en/news/announcements",
+   "note": "Primary source. Linked per announcement where the chart cites one, and for 2025 onward."
   },
   "scryfall": {
    "title": "Scryfall",
    "url": "https://scryfall.com",
-   "note": "Card identity, original printing and the live list used to verify. Publishes no B&R history."
+   "note": "Card identity, original printing, and the live list the replay is checked against."
   }
  },
  "categories": [
@@ -72,18 +72,21 @@
   {
    "name": "Collectors' and International Edition",
    "since": "1993-12-10",
+   "icon": "https://svgs.scryfall.io/sets/ced.svg?1791777600",
    "note": "Square-bordered gift-set reprints; never tournament legal. Every card in them is a reprint of a card that was legal from Limited Edition, so excluding them changes no card's legality.",
    "scryfall": "-st:memorabilia"
   },
   {
    "name": "Silver-bordered and acorn",
    "since": "1998-08-11",
+   "icon": "https://svgs.scryfall.io/sets/ugl.svg?1791777600",
    "note": "Unglued onward. Never tournament legal in any format.",
    "scryfall": "-is:funny"
   },
   {
    "name": "Digital-only",
    "since": "1997-04-01",
+   "icon": "https://svgs.scryfall.io/sets/past.svg?1791777600",
    "note": "Astral Cards onward, through Magic Online and Arena/Alchemy. No paper printing, so never legal in paper Vintage.",
    "scryfall": "-is:digital"
   }
@@ -91,153 +94,230 @@
  "events": [
   {
    "seq": 1,
-   "date": "1994-01",
-   "basis": "unknown",
-   "precision": "month",
+   "date": "1994-01-26",
+   "precision": "day",
+   "effective": "1994-01-26",
    "announced": null,
-   "effective": null,
+   "era": 3,
+   "era_name": "Constructed Magic Begins",
+   "announcement": null,
    "actions": [
+    {
+     "card": "Amulet of Quoz",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Contract from Below",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Darkpact",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Demonic Attorney",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Jeweled Bird",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Rebirth",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
     {
      "card": "Shahrazad",
      "action": "ban",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
+    },
+    {
+     "card": "Timmerian Fiends",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
     },
     {
      "card": "Ali from Cairo",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Ancestral Recall",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Berserk",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Black Lotus",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Braingeyser",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Dingus Egg",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Gauntlet of Might",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Icy Manipulator",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Mox Emerald",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Mox Jet",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Mox Pearl",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Mox Ruby",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Mox Sapphire",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Orcish Oriflamme",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Rukh Egg",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Sol Ring",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Time Vault",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Time Walk",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     },
     {
      "card": "Timetwister",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the first list)"
     }
    ],
    "sources": [
+    "https://magic.wizards.com/en/news/announcements",
     "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+   ]
   },
   {
    "seq": 2,
-   "date": "1994-02",
-   "basis": "unknown",
-   "precision": "month",
+   "date": "1994-03-04",
+   "precision": "day",
+   "effective": "1994-03-04",
    "announced": null,
-   "effective": null,
+   "era": 3,
+   "era_name": "Constructed Magic Begins",
+   "announcement": null,
    "actions": [
     {
      "card": "Orcish Oriflamme",
      "action": "unrestrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Rukh Egg",
      "action": "unrestrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     }
    ],
    "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
    "seq": 3,
-   "date": "1994-03-05",
-   "basis": "effective",
+   "date": "1994-03-23",
    "precision": "day",
+   "effective": "1994-03-23",
    "announced": null,
-   "effective": "1994-03-05",
+   "era": 4,
+   "era_name": "Antiquities Arrives",
+   "announcement": null,
    "actions": [
     {
      "card": "Time Vault",
      "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Channel",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Copy Artifact",
+     "action": "restrict",
      "from": "eternalcentral"
     },
     {
@@ -263,17 +343,33 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
    "seq": 4,
-   "date": "1994-03-24",
-   "basis": "effective",
+   "date": "1994-05-02",
    "precision": "day",
+   "effective": "1994-05-02",
    "announced": null,
-   "effective": "1994-03-24",
+   "era": 5,
+   "era_name": "Library of Alexandria Era",
+   "announcement": null,
    "actions": [
+    {
+     "card": "Bronze Tablet",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Candelabra of Tawnos",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Feldon's Cane",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
     {
      "card": "Ivory Tower",
      "action": "restrict",
@@ -297,19 +393,50 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
    "seq": 5,
-   "date": "1994-08",
-   "basis": "unknown",
-   "precision": "month",
+   "date": "1994-06-13",
+   "precision": "day",
+   "effective": "1994-06-13",
    "announced": null,
-   "effective": null,
+   "era": 6,
+   "era_name": "Mind Twist Metagame",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Mishra's Workshop",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 6,
+   "date": "1994-08-08",
+   "precision": "day",
+   "effective": "1994-08-08",
+   "announced": "1994-06-13",
+   "era": 7,
+   "era_name": "Creatureless Era Begins",
+   "announcement": {
+    "url": "https://groups.google.com/forum/#!msg/rec.games.deckmaster/_eDtnxy4_mQ/KWwx5bRfMdgJ",
+    "label": "Duelists' Convocation Rules Update June 13, 1994",
+    "archived": "http://web.archive.org/web/20261012110737/https://groups.google.com/forum/",
+    "archived_at": "20261012110737"
+   },
    "actions": [
     {
      "card": "Divine Intervention",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Tempest Efreet",
      "action": "ban",
      "from": "eternalcentral"
     },
@@ -351,173 +478,143 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
-   "seq": 6,
-   "date": "1994-10",
-   "basis": "unknown",
-   "precision": "month",
+   "seq": 7,
+   "date": "1994-10-11",
+   "precision": "day",
+   "effective": "1994-10-11",
    "announced": null,
-   "effective": null,
+   "era": 10,
+   "era_name": "\"93/94\" Magic",
+   "announcement": null,
    "actions": [
     {
      "card": "Maze of Ith",
      "action": "restrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 7,
-   "date": "1994-11-02",
-   "basis": "effective",
-   "precision": "day",
-   "announced": null,
-   "effective": "1994-11-02",
-   "actions": [
-    {
-     "card": "Balance",
-     "action": "restrict",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "1994-04"
-     },
-     "claims": {
-      "eternalcentral": "1994-11-02",
-      "mtgwiki": "1994-04"
-     }
-    },
-    {
-     "card": "Fork",
-     "action": "restrict",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "1994-04"
-     },
-     "claims": {
-      "eternalcentral": "1994-11-02",
-      "mtgwiki": "1994-04"
-     }
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": true
+   ]
   },
   {
    "seq": 8,
-   "date": "1994-11",
-   "basis": "unknown",
-   "precision": "month",
+   "date": "1994-11-02",
+   "precision": "day",
+   "effective": "1994-11-02",
    "announced": null,
-   "effective": null,
+   "era": null,
+   "era_name": null,
+   "announcement": null,
    "actions": [
     {
      "card": "Falling Star",
      "action": "ban",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "from the wiki"
     },
     {
      "card": "Zuran Orb",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "from the wiki; chart records only the 1997 unrestriction"
     }
    ],
    "sources": [
     "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+   ]
   },
   {
    "seq": 9,
-   "date": "1995-10-15",
-   "basis": "effective",
+   "date": "1995-04-20",
    "precision": "day",
+   "effective": "1995-04-20",
    "announced": null,
-   "effective": "1995-10-15",
+   "era": 12,
+   "era_name": "\"The Deck\" Dominates",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Balance",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Fork",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 10,
+   "date": "1995-10-31",
+   "precision": "day",
+   "effective": "1995-10-31",
+   "announced": null,
+   "era": 14,
+   "era_name": "Prelude to Bannings",
+   "announcement": null,
    "actions": [
     {
      "card": "Channel",
      "action": "ban",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "1994-11"
-     },
-     "claims": {
-      "eternalcentral": "1995-10-15",
-      "mtgwiki": "1994-11"
-     }
+     "from": "eternalcentral"
     },
     {
      "card": "Chaos Orb",
      "action": "ban",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "1994-11"
-     },
-     "claims": {
-      "eternalcentral": "1995-10-15",
-      "mtgwiki": "1994-11"
-     }
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": true
+   ]
   },
   {
-   "seq": 10,
-   "date": "1995-11-01",
-   "basis": "effective",
+   "seq": 11,
+   "date": "1996-01-31",
    "precision": "day",
-   "announced": null,
-   "effective": "1995-11-01",
+   "effective": "1996-01-31",
+   "announced": "1995-01-01",
+   "era": 15,
+   "era_name": "Necro Winter",
+   "announcement": {
+    "url": "https://web.archive.org/web/20140802034045/http:/oracle.wizards.com/scripts/wa.exe?A2=ind9601C&L=MTG-L&P=R6502&I=-3",
+    "label": "Duelists' Convocation Rules Update January 1, 1995",
+    "archived": "https://web.archive.org/web/20140802034045/http:/oracle.wizards.com/scripts/wa.exe?A2=ind9601C&L=MTG-L&P=R6502&I=-3"
+   },
    "actions": [
     {
      "card": "Mind Twist",
      "action": "ban",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "1996"
-     },
-     "claims": {
-      "eternalcentral": "1995-11-01",
-      "mtgwiki": "1996"
-     }
+     "from": "eternalcentral"
     },
     {
      "card": "Black Vise",
      "action": "restrict",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "1996"
-     },
-     "claims": {
-      "eternalcentral": "1995-11-01",
-      "mtgwiki": "1996"
-     }
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": true
+   ]
   },
   {
-   "seq": 11,
-   "date": "1996-02-01",
-   "basis": "effective",
+   "seq": 12,
+   "date": "1996-03-31",
    "precision": "day",
+   "effective": "1996-03-31",
    "announced": null,
-   "effective": "1996-02-01",
+   "era": 16,
+   "era_name": "Type II Havoc",
+   "announcement": null,
    "actions": [
     {
      "card": "Time Vault",
@@ -542,62 +639,78 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
-   "seq": 12,
-   "date": "1996-06-10",
-   "basis": "effective",
+   "seq": 13,
+   "date": "1996-09-30",
    "precision": "day",
+   "effective": "1996-09-30",
    "announced": null,
-   "effective": "1996-06-10",
+   "era": 18,
+   "era_name": "Force of Will Era Begins",
+   "announcement": null,
    "actions": [
     {
      "card": "Fastbond",
      "action": "restrict",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "1996-10"
-     },
-     "claims": {
-      "eternalcentral": "1996-06-10",
-      "mtgwiki": "1996-10"
-     }
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": true
+   ]
   },
   {
-   "seq": 13,
-   "date": "1996-07",
-   "basis": "unknown",
-   "precision": "month",
+   "seq": 14,
+   "date": "1997-06-30",
+   "precision": "day",
+   "effective": "1997-06-30",
    "announced": null,
-   "effective": null,
+   "era": 21,
+   "era_name": "Prosperty Combo Era",
+   "announcement": null,
    "actions": [
     {
      "card": "Black Vise",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     }
    ],
    "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
-   "seq": 14,
-   "date": "1997-07-01",
-   "basis": "effective",
+   "seq": 15,
+   "date": "1997-09-30",
    "precision": "day",
+   "effective": "1997-09-30",
    "announced": null,
-   "effective": "1997-07-01",
+   "era": 22,
+   "era_name": "Inquest Summer",
+   "announcement": null,
    "actions": [
+    {
+     "card": "Candelabra of Tawnos",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Copy Artifact",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Feldon's Cane",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mishra's Workshop",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
     {
      "card": "Zuran Orb",
      "action": "unrestrict",
@@ -606,16 +719,22 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
-   "seq": 15,
-   "date": "1997-11-01",
-   "basis": "effective",
+   "seq": 16,
+   "date": "1998-01-01",
    "precision": "day",
-   "announced": null,
-   "effective": "1997-11-01",
+   "effective": "1998-01-01",
+   "announced": "1998-01-01",
+   "era": 24,
+   "era_name": "Blue Zoo Moment",
+   "announcement": {
+    "url": "https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/BSJWPznsuY8/m/f7fVggCYszIJ?pli=1",
+    "label": "Banned & Restricted List Update January 1, 1998",
+    "archived": "http://web.archive.org/web/20250814090652/https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/BSJWPznsuY8/m/f7fVggCYszIJ?pli=1",
+    "archived_at": "20250814090652"
+   },
    "actions": [
     {
      "card": "Strip Mine",
@@ -625,16 +744,17 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
-   "seq": 16,
-   "date": "1998-01-01",
-   "basis": "effective",
+   "seq": 17,
+   "date": "1999-01-01",
    "precision": "day",
+   "effective": "1999-01-01",
    "announced": null,
-   "effective": "1998-01-01",
+   "era": 28,
+   "era_name": "Type 1 is Broken: Combo Rising",
+   "announcement": null,
    "actions": [
     {
      "card": "Stroke of Genius",
@@ -654,16 +774,20 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
-   "seq": 17,
-   "date": "1999-03-01",
-   "basis": "effective",
+   "seq": 18,
+   "date": "1999-04-01",
    "precision": "day",
-   "announced": null,
-   "effective": "1999-03-01",
+   "effective": "1999-04-01",
+   "announced": "1999-03-01",
+   "era": 30,
+   "era_name": "A Jarring Month",
+   "announcement": {
+    "url": "http://members.tripod.com/blue_midget/Gossip/banned.htm",
+    "label": "Banned & Restricted List Update March 1, 1999"
+   },
    "actions": [
     {
      "card": "Memory Jar",
@@ -674,799 +798,890 @@
      "card": "Time Spiral",
      "action": "restrict",
      "from": "eternalcentral"
+    },
+    {
+     "card": "Maze of Ith",
+     "action": "unrestrict",
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 18,
-   "date": "1999",
-   "basis": "unknown",
-   "precision": "year",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Maze of Ith",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+   ]
   },
   {
    "seq": 19,
-   "date": "1999-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
+   "date": "1999-09-30",
+   "precision": "day",
+   "effective": "1999-09-30",
+   "announced": "1999-09-01",
+   "era": 33,
+   "era_name": "Academy's Swan Song",
+   "announcement": {
+    "url": "http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-990901.txt",
+    "label": "Banned & Restricted List Update September 1, 1999"
+   },
    "actions": [
     {
      "card": "Crop Rotation",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Doomsday",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Dream Halls",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Enlightened Tutor",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Frantic Search",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Grim Monolith",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Hurkyl's Recall",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Lotus Petal",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Mana Crypt",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Mana Vault",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Mind Over Matter",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Mox Diamond",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Mystical Tutor",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Tinker",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Vampiric Tutor",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Voltaic Key",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Yawgmoth's Bargain",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Yawgmoth's Will",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "not enumerated in the chart (the eighteen)"
     },
     {
      "card": "Divine Intervention",
      "action": "unban",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Shahrazad",
      "action": "unban",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Ivory Tower",
      "action": "unrestrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Mirror Universe",
      "action": "unrestrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Underworld Dreams",
      "action": "unrestrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     }
    ],
    "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline",
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
    "seq": 20,
-   "date": "2000-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
+   "date": "2000-09-30",
+   "precision": "day",
+   "effective": "2000-09-30",
+   "announced": "2000-09-01",
+   "era": 37,
+   "era_name": "Trix Dominant",
+   "announcement": {
+    "url": "http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-000901.txt",
+    "label": "Banned & Restricted List Update September 1, 2000",
+    "archived": "http://web.archive.org/web/20250823045431/http://mtg.icequake.net/www.crystalkeep.com/magic/rules/dci/update-000901.txt",
+    "archived_at": "20250823045431"
+   },
    "actions": [
     {
      "card": "Channel",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "unbanned to restricted"
     },
     {
      "card": "Demonic Consultation",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Mind Twist",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "mtgwiki",
+     "note": "unbanned to restricted"
     },
     {
      "card": "Necropotence",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Channel",
+     "action": "unban",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind Twist",
+     "action": "unban",
+     "from": "eternalcentral"
     }
    ],
    "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline",
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
    "seq": 21,
-   "date": "2001-12",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
+   "date": "2002-01-01",
+   "precision": "day",
+   "effective": "2002-01-01",
+   "announced": "2001-12-01",
+   "era": 43,
+   "era_name": "The Final Chapter on Fact or Fiction",
+   "announcement": {
+    "url": "https://web.archive.org/web/20171023054948/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_1201",
+    "label": "Banned & Restricted List Update December 1, 2001",
+    "archived": "https://web.archive.org/web/20171023054948/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_1201"
+   },
    "actions": [
     {
      "card": "Fact or Fiction",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     }
    ],
    "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
    "seq": 22,
-   "date": "2003",
-   "basis": "unknown",
-   "precision": "year",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Earthcraft",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Entomb",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Berserk",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Hurkyl's Recall",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Recall",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 23,
-   "date": "2003-06",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Gush",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Mind's Desire",
-     "action": "restrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 24,
-   "date": "2003-12",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Burning Wish",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Chrome Mox",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Lion's Eye Diamond",
-     "action": "restrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 25,
-   "date": "2004-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Braingeyser",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Doomsday",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Earthcraft",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Fork",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 26,
-   "date": "2005-03-01",
-   "basis": "effective",
+   "date": "2003-03-31",
    "precision": "day",
-   "announced": null,
-   "effective": "2005-03-01",
+   "effective": "2003-03-31",
+   "announced": "2003-03-01",
+   "era": 48,
+   "era_name": "1st Gush Era",
+   "announcement": {
+    "url": "https://web.archive.org/web/20120229232252/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_0303",
+    "label": "Banned & Restricted List Update March 1, 2003",
+    "archived": "https://web.archive.org/web/20120229232252/http://www.wizards.com/dci/main.asp?x=Banned_Restricted_List_0303"
+   },
    "actions": [
     {
-     "card": "Trinisphere",
+     "card": "Earthcraft",
      "action": "restrict",
      "from": "eternalcentral"
     },
     {
-     "card": "Stroke of Genius",
+     "card": "Entomb",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Berserk",
      "action": "unrestrict",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "2004-12"
-     },
-     "claims": {
-      "eternalcentral": "2005-03-01",
-      "mtgwiki": "2004-12"
-     }
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Hurkyl's Recall",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Recall",
+     "action": "unrestrict",
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 23,
+   "date": "2003-06-30",
+   "precision": "day",
+   "effective": "2003-06-30",
+   "announced": "2003-06-01",
+   "era": 49,
+   "era_name": "1st Gush Era Continues",
+   "announcement": {
+    "url": "https://web.archive.org/web/20060626133553/http://www.wizards.com/default.asp?x=dci/announce/dci20030529a",
+    "label": "Banned & Restricted List Update June 1, 2003",
+    "archived": "https://web.archive.org/web/20060626133553/http://www.wizards.com/default.asp?x=dci/announce/dci20030529a"
+   },
+   "actions": [
+    {
+     "card": "Gush",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind's Desire",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
    ],
-   "disputed": true
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 24,
+   "date": "2003-12-31",
+   "precision": "day",
+   "effective": "2003-12-31",
+   "announced": "2003-12-01",
+   "era": 51,
+   "era_name": "Burning Tendrils Flames Out",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-restricted-announcement-2003-12-01",
+    "label": "Banned & Restricted List Update December 1, 2003"
+   },
+   "actions": [
+    {
+     "card": "Burning Wish",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Chrome Mox",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Lion's Eye Diamond",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 25,
+   "date": "2004-10-19",
+   "precision": "day",
+   "effective": "2004-10-19",
+   "announced": "2004-09-03",
+   "era": 54,
+   "era_name": "The End of Type 1",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/september-br-list-update-2003-09-03",
+    "label": "Banned & Restricted List Update September 3, 2004",
+    "archived": "http://web.archive.org/web/20220807213330/https://magic.wizards.com/en/articles/archive/latest-developments/september-br-list-update-2003-09-03",
+    "archived_at": "20220807213330"
+   },
+   "actions": [
+    {
+     "card": "Braingeyser",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Doomsday",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Earthcraft",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Fork",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 26,
+   "date": "2005-02-19",
+   "precision": "day",
+   "effective": "2005-02-19",
+   "announced": null,
+   "era": 55,
+   "era_name": "Oath on Top",
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Trinisphere",
+     "action": "restrict",
+     "from": "mtgwiki",
+     "note": "stated alongside a future-tense announcement the parser skips"
+    },
+    {
+     "card": "Stroke of Genius",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline",
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
    "seq": 27,
-   "date": "2005-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
+   "date": "2005-10-19",
+   "precision": "day",
+   "effective": "2005-10-19",
+   "announced": "2005-09-01",
+   "era": 58,
+   "era_name": "Meandeck Gifts",
+   "announcement": {
+    "url": "http://www.wizards.com/default.asp?x=dci/announce/dci20050901a",
+    "label": "Banned & Restricted List Update September 1, 2005"
+   },
    "actions": [
     {
      "card": "Imperial Seal",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Personal Tutor",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Mind Over Matter",
      "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 28,
-   "date": "2007-06",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Gifts Ungiven",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Black Vise",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Gush",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Mind Twist",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Voltaic Key",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 29,
-   "date": "2007-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Shahrazad",
-     "action": "ban",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 30,
-   "date": "2008-06",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Brainstorm",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Flash",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Gush",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Merchant Scroll",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Ponder",
-     "action": "restrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 31,
-   "date": "2008-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Time Vault",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Chrome Mox",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Dream Halls",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Mox Diamond",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Personal Tutor",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Time Spiral",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 32,
-   "date": "2009-06",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Thirst for Knowledge",
-     "action": "restrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Crop Rotation",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Enlightened Tutor",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Entomb",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Grim Monolith",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 33,
-   "date": "2010-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Frantic Search",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    },
-    {
-     "card": "Gush",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 34,
-   "date": "2011-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Fact or Fiction",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 35,
-   "date": "2012-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Burning Wish",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 36,
-   "date": "2013-04-22",
-   "basis": "announced",
-   "precision": "day",
-   "announced": "2013-04-22",
-   "effective": null,
-   "actions": [
-    {
-     "card": "Regrowth",
-     "action": "unrestrict",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "2012-05"
-     },
-     "claims": {
-      "eternalcentral": "2013-04-22",
-      "mtgwiki": "2012-05"
-     }
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 28,
+   "date": "2007-06-19",
+   "precision": "day",
+   "effective": "2007-06-19",
+   "announced": "2007-06-01",
+   "era": 67,
+   "era_name": "Flash Breaks Out",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/gone-flash-2007-06-01",
+    "label": "Banned & Restricted List Update June 1, 2007",
+    "archived": "http://web.archive.org/web/20220626121913/https://magic.wizards.com/en/articles/archive/latest-developments/gone-flash-2007-06-01",
+    "archived_at": "20220626121913"
+   },
+   "actions": [
+    {
+     "card": "Gifts Ungiven",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Black Vise",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gush",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind Twist",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Voltaic Key",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
    ],
-   "disputed": true
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 29,
+   "date": "2007-10-19",
+   "precision": "day",
+   "effective": "2007-10-19",
+   "announced": null,
+   "era": 68,
+   "era_name": "2nd Gush Era Begins",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/week-was/eternals-2007-08-31",
+    "label": "Vintage Champs 2007 Coverage",
+    "archived": "http://web.archive.org/web/20220122080155/https://magic.wizards.com/en/articles/archive/week-was/eternals-2007-08-31",
+    "archived_at": "20220122080155"
+   },
+   "actions": [
+    {
+     "card": "Shahrazad",
+     "action": "ban",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 30,
+   "date": "2008-06-19",
+   "precision": "day",
+   "effective": "2008-06-19",
+   "announced": "2008-06-13",
+   "era": 71,
+   "era_name": "End of the 2nd Gush Era",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/why-are-dual-lands-usually-allied-colored-2008-06-13",
+    "label": "Banned & Restricted List Update June 13, 2008"
+   },
+   "actions": [
+    {
+     "card": "Brainstorm",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Flash",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gush",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Merchant Scroll",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Ponder",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 31,
+   "date": "2008-10-01",
+   "precision": "day",
+   "effective": "2008-10-01",
+   "announced": "2008-09-24",
+   "era": 73,
+   "era_name": "The Storm Before the Tezzeret",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/september-2008-update-bulletin-2008-09-24",
+    "label": "Banned & Restricted List Update September 24, 2008",
+    "archived": "http://web.archive.org/web/20220128155037/https://magic.wizards.com/en/articles/archive/news/september-2008-update-bulletin-2008-09-24",
+    "archived_at": "20220128155037"
+   },
+   "actions": [
+    {
+     "card": "Time Vault",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Chrome Mox",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Dream Halls",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mox Diamond",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Personal Tutor",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Time Spiral",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 32,
+   "date": "2009-06-18",
+   "precision": "day",
+   "effective": "2009-06-18",
+   "announced": null,
+   "era": 76,
+   "era_name": "Tezzeret's Final Straw",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/latest-developments/crafting-vintage-2009-06-26",
+    "label": "Crafting a Vintage"
+   },
+   "actions": [
+    {
+     "card": "Thirst for Knowledge",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Crop Rotation",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Enlightened Tutor",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Entomb",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Grim Monolith",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 33,
+   "date": "2010-09-30",
+   "precision": "day",
+   "effective": "2010-09-30",
+   "announced": "2010-09-20",
+   "era": 82,
+   "era_name": "Jace Controls Format",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/september-20-2010-dci-banned-restricted-list-announcement-2010-09-20",
+    "label": "Banned & Restricted List Update September 20, 2010"
+   },
+   "actions": [
+    {
+     "card": "Frantic Search",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gush",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 34,
+   "date": "2011-09-30",
+   "precision": "day",
+   "effective": "2011-09-30",
+   "announced": "2011-09-20",
+   "era": 87,
+   "era_name": "Grudging the Metagame",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/september-20-2011-dci-banned-restricted-list-announcement-2011-09-20",
+    "label": "Banned & Restricted List Update September 20, 2011"
+   },
+   "actions": [
+    {
+     "card": "Fact or Fiction",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 35,
+   "date": "2012-09-20",
+   "precision": "day",
+   "effective": "2012-09-20",
+   "announced": "2012-09-20",
+   "era": 92,
+   "era_name": "RUG Xerox Emerges",
+   "announcement": {
+    "url": "https://web.archive.org/web/20120921122107/http:/www.wizards.com/Magic/magazine/Article.aspx?x=mtg/daily/other/09202012a",
+    "label": "Banned & Restricted List Update September 20, 2012",
+    "archived": "https://web.archive.org/web/20120921122107/http:/www.wizards.com/Magic/magazine/Article.aspx?x=mtg/daily/other/09202012a"
+   },
+   "actions": [
+    {
+     "card": "Burning Wish",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 36,
+   "date": "2013-05-02",
+   "precision": "day",
+   "effective": "2013-05-02",
+   "announced": "2013-04-22",
+   "era": 94,
+   "era_name": "The Burning Oath Moment",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-2013-04-22-0",
+    "label": "Banned & Restricted List Update April 22, 2013",
+    "archived": "http://web.archive.org/web/20220627021802/https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-2013-04-22-0",
+    "archived_at": "20220627021802"
+   },
+   "actions": [
+    {
+     "card": "Regrowth",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
    "seq": 37,
-   "date": "2015-01-19",
-   "basis": "announced",
+   "date": "2015-01-22",
    "precision": "day",
+   "effective": "2015-01-22",
    "announced": "2015-01-19",
-   "effective": null,
+   "era": 104,
+   "era_name": "Delver Dominates",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-announcement-2015-01-19",
+    "label": "Banned & Restricted List Update January 19, 2015",
+    "archived": "http://web.archive.org/web/20220916145813/https://magic.wizards.com/en/articles/archive/feature/banned-and-restricted-announcement-2015-01-19",
+    "archived_at": "20220916145813"
+   },
    "actions": [
     {
      "card": "Treasure Cruise",
      "action": "restrict",
      "from": "eternalcentral"
+    },
+    {
+     "card": "Gifts Ungiven",
+     "action": "unrestrict",
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
    "seq": 38,
-   "date": "2015",
-   "basis": "unknown",
-   "precision": "year",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Gifts Ungiven",
-     "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 39,
-   "date": "2015-09",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
+   "date": "2015-10-01",
+   "precision": "day",
+   "effective": "2015-10-01",
+   "announced": "2015-09-28",
+   "era": 107,
+   "era_name": "Hangarback Shops Arrive",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/september-28-2015-banned-and-restricted-announcement-2015-09-28",
+    "label": "Banned & Restricted List Update September 28, 2015",
+    "archived": "http://web.archive.org/web/20221110044044/https://magic.wizards.com/en/articles/archive/news/september-28-2015-banned-and-restricted-announcement-2015-09-28",
+    "archived_at": "20221110044044"
+   },
    "actions": [
     {
      "card": "Chalice of the Void",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Dig Through Time",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Thirst for Knowledge",
      "action": "unrestrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 40,
-   "date": "2016-04",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
-   "actions": [
-    {
-     "card": "Lodestone Golem",
-     "action": "restrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 41,
-   "date": "2017-04-24",
-   "basis": "announced",
-   "precision": "day",
-   "announced": "2017-04-24",
-   "effective": null,
-   "actions": [
-    {
-     "card": "Gitaxian Probe",
-     "action": "restrict",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "2017-01"
-     },
-     "claims": {
-      "eternalcentral": "2017-04-24",
-      "mtgwiki": "2017-01"
-     }
-    },
-    {
-     "card": "Gush",
-     "action": "restrict",
-     "from": "eternalcentral",
-     "disagree": {
-      "mtgwiki": "2017-01"
-     },
-     "claims": {
-      "eternalcentral": "2017-04-24",
-      "mtgwiki": "2017-01"
-     }
+     "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": true
+   ]
   },
   {
-   "seq": 42,
-   "date": "2017-08-28",
-   "basis": "announced",
+   "seq": 39,
+   "date": "2016-04-07",
    "precision": "day",
+   "effective": "2016-04-07",
+   "announced": "2016-04-04",
+   "era": 110,
+   "era_name": "Inferno Oath Era",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/banned-and-restricted-announcement-2016-04-04",
+    "label": "Banned & Restricted List Update April 4, 2016",
+    "archived": "http://web.archive.org/web/20220630233946/https://magic.wizards.com/en/articles/archive/news/banned-and-restricted-announcement-2016-04-04",
+    "archived_at": "20220630233946"
+   },
+   "actions": [
+    {
+     "card": "Lodestone Golem",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 40,
+   "date": "2017-04-27",
+   "precision": "day",
+   "effective": "2017-04-27",
+   "announced": "2017-04-24",
+   "era": 116,
+   "era_name": "Gush Swan Song",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/april-24-2017-banned-and-restricted-announcement-2017-04-24",
+    "label": "Banned & Restricted List Update April 24, 2017"
+   },
+   "actions": [
+    {
+     "card": "Gitaxian Probe",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Gush",
+     "action": "restrict",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 41,
+   "date": "2017-08-28",
+   "precision": "day",
+   "effective": "2017-08-28",
    "announced": "2017-08-28",
-   "effective": null,
+   "era": 118,
+   "era_name": "Mentor and Workshops Duopoly",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/august-28-2017-banned-and-restricted-announcement-2017-08-28",
+    "label": "Banned & Restricted List Update August 28, 2017",
+    "archived": "http://web.archive.org/web/20220128030717/https://magic.wizards.com/en/articles/archive/august-28-2017-banned-and-restricted-announcement-2017-08-28",
+    "archived_at": "20220128030717"
+   },
    "actions": [
     {
      "card": "Monastery Mentor",
@@ -1486,55 +1701,63 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
-   ],
-   "disputed": false
+   ]
   },
   {
-   "seq": 43,
-   "date": "2019-08",
-   "basis": "unknown",
-   "precision": "month",
+   "seq": 42,
+   "date": "2019-08-26",
+   "precision": "day",
+   "effective": "2019-08-26",
    "announced": null,
-   "effective": null,
+   "era": 130,
+   "era_name": "BUG Dominant",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/london-mulligan-2019-06-03",
+    "label": "London Mulligan Formally Adopted Across All Formats"
+   },
    "actions": [
     {
      "card": "Golgari Grave-Troll",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Karn, the Great Creator",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Mental Misstep",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Mystic Forge",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Fastbond",
      "action": "unrestrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     }
    ],
    "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
-   "seq": 44,
-   "date": "2019-11-18",
-   "basis": "announced",
+   "seq": 43,
+   "date": "2019-11-14",
    "precision": "day",
+   "effective": "2019-11-14",
    "announced": "2019-11-18",
-   "effective": null,
+   "era": 132,
+   "era_name": "The Oko Moment",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/november-18-2019-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update November 18, 2019"
+   },
    "actions": [
     {
      "card": "Narset, Parter of Veils",
@@ -1544,70 +1767,190 @@
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 44,
+   "date": "2020-05-17",
+   "precision": "day",
+   "effective": "2020-05-17",
+   "announced": "2020-05-18",
+   "era": 135,
+   "era_name": "Cat Scratch Fever",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/may-18-2020-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update May 18, 2020",
+    "archived": "http://web.archive.org/web/20221015190443/https://magic.wizards.com/en/articles/archive/news/may-18-2020-banned-and-restricted-announcement",
+    "archived_at": "20221015190443"
+   },
+   "actions": [
+    {
+     "card": "Lurrus of the Dream-Den",
+     "action": "ban",
+     "from": "eternalcentral"
+    }
    ],
-   "disputed": false
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
    "seq": 45,
-   "date": "2024-03",
-   "basis": "unknown",
-   "precision": "month",
+   "date": "2020-06-10",
+   "precision": "day",
+   "effective": "2020-06-10",
    "announced": null,
-   "effective": null,
+   "era": null,
+   "era_name": null,
+   "announcement": null,
+   "actions": [
+    {
+     "card": "Cleanse",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Crusade",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Imprison",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Invoke Prejudice",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Jihad",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Pradesh Gypsies",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    },
+    {
+     "card": "Stone-Throwing Devils",
+     "action": "ban",
+     "from": "wotc",
+     "note": "banned as a class"
+    }
+   ],
+   "sources": [
+    "https://magic.wizards.com/en/news/announcements"
+   ]
+  },
+  {
+   "seq": 46,
+   "date": "2021-02-15",
+   "precision": "day",
+   "effective": "2021-02-15",
+   "announced": "2021-02-15",
+   "era": 140,
+   "era_name": "GolosShops Rising",
+   "announcement": {
+    "url": "https://magic.wizards.com/en/articles/archive/news/february-15-2021-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update February 15, 2021",
+    "archived": "http://web.archive.org/web/20220930012402/https://magic.wizards.com/en/articles/archive/news/february-15-2021-banned-and-restricted-announcement",
+    "archived_at": "20220930012402"
+   },
+   "actions": [
+    {
+     "card": "Lurrus of the Dream-Den",
+     "action": "unban",
+     "from": "eternalcentral"
+    }
+   ],
+   "sources": [
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 47,
+   "date": "2024-03-11",
+   "precision": "day",
+   "effective": "2024-03-11",
+   "announced": "2024-03-11",
+   "era": 162,
+   "era_name": null,
+   "announcement": {
+    "url": "https://magic.wizards.com/en/news/announcements/march-11-2024-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update March 11, 2024",
+    "archived": "http://web.archive.org/web/20260811141440/https://magic.wizards.com/en/news/announcements/march-11-2024-banned-and-restricted-announcement",
+    "archived_at": "20260811141440"
+   },
    "actions": [
     {
      "card": "Ponder",
      "action": "unrestrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     }
    ],
    "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
+    "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
   },
   {
-   "seq": 46,
-   "date": "2024-08",
-   "basis": "unknown",
-   "precision": "month",
-   "announced": null,
-   "effective": null,
+   "seq": 48,
+   "date": "2024-08-25",
+   "precision": "day",
+   "effective": "2024-08-25",
+   "announced": "2024-08-26",
+   "era": 168,
+   "era_name": null,
+   "announcement": {
+    "url": "https://magic.wizards.com/en/news/announcements/august-26-2024-banned-and-restricted-announcement",
+    "label": "Banned & Restricted List Update August 26, 2024"
+   },
    "actions": [
     {
      "card": "Urza's Saga",
      "action": "restrict",
-     "from": "mtgwiki"
+     "from": "eternalcentral"
     },
     {
      "card": "Vexing Bauble",
-     "action": "restrict",
-     "from": "mtgwiki"
-    }
-   ],
-   "sources": [
-    "https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline"
-   ],
-   "disputed": false
-  },
-  {
-   "seq": 47,
-   "date": "2026-08-10",
-   "basis": "announced",
-   "precision": "day",
-   "announced": "2026-08-10",
-   "effective": null,
-   "actions": [
-    {
-     "card": "The Fantasticar",
      "action": "restrict",
      "from": "eternalcentral"
     }
    ],
    "sources": [
     "https://www.eternalcentral.com/timeline-of-vintage/"
+   ]
+  },
+  {
+   "seq": 49,
+   "date": "2026-08-10",
+   "precision": "day",
+   "effective": "2026-08-10",
+   "announced": "2026-08-10",
+   "era": null,
+   "era_name": null,
+   "announcement": {
+    "url": "https://magic.wizards.com/en/news/announcements/banned-and-restricted-august-10-2026",
+    "label": "Banned & Restricted Announcement August 10, 2026"
+   },
+   "actions": [
+    {
+     "card": "The Fantasticar",
+     "action": "restrict",
+     "from": "wotc"
+    }
    ],
-   "disputed": false
+   "sources": [
+    "https://magic.wizards.com/en/news/announcements"
+   ]
   }
  ],
  "cards": {
@@ -1820,6 +2163,72 @@
    "image": "https://cards.scryfall.io/normal/front/9/a/9a49dc44-616e-4bdd-8220-0bb71eccc512.jpg?1783948700",
    "total_paper_printings": 3
   },
+  "Amulet of Quoz": {
+   "type_line": "Artifact",
+   "mana_cost": "{6}",
+   "set": "ICE",
+   "set_name": "Ice Age",
+   "released_at": "1995-06-03",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/ice/308/amulet-of-quoz?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/7/6/764ec6a8-a878-446c-b7e4-6026c2a3e9a4.jpg?1783947462",
+   "total_paper_printings": 1
+  },
+  "Contract from Below": {
+   "type_line": "Sorcery",
+   "mana_cost": "{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/96/contract-from-below?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/8/9853b0ce-4763-4877-9741-f9145a3659c6.jpg?1783948698",
+   "total_paper_printings": 8
+  },
+  "Darkpact": {
+   "type_line": "Sorcery",
+   "mana_cost": "{B}{B}{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/99/darkpact?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/7/e78db688-93a2-47f5-9aa5-9158a72cd973.jpg?1783948697",
+   "total_paper_printings": 8
+  },
+  "Demonic Attorney": {
+   "type_line": "Sorcery",
+   "mana_cost": "{1}{B}{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/102/demonic-attorney?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/d/fd891fc6-d9d6-494e-ae65-8bea8f44b575.jpg?1783948696",
+   "total_paper_printings": 8
+  },
+  "Jeweled Bird": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/arn/66/jeweled-bird?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/f/bfffb65d-851d-4dc9-9233-d53abf955dcd.jpg?1783948377",
+   "total_paper_printings": 4
+  },
+  "Rebirth": {
+   "type_line": "Sorcery",
+   "mana_cost": "{3}{G}{G}{G}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/200/rebirth?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/a/0/a0d3ce01-e344-4608-b709-320be3600019.jpg?1783948045",
+   "total_paper_printings": 4
+  },
   "Shahrazad": {
    "type_line": "Sorcery",
    "mana_cost": "{W}{W}",
@@ -1830,6 +2239,39 @@
    "scryfall_uri": "https://scryfall.com/card/arn/10/shahrazad?utm_source=api",
    "image": "https://cards.scryfall.io/normal/front/0/0/0014def3-4063-4929-ac51-76aef1bb2a68.jpg?1783948393",
    "total_paper_printings": 1
+  },
+  "Timmerian Fiends": {
+   "type_line": "Creature \u2014 Horror",
+   "mana_cost": "{1}{B}{B}",
+   "set": "HML",
+   "set_name": "Homelands",
+   "released_at": "1995-10-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/hml/58/timmerian-fiends?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/0/90643766-c92f-4a25-bd02-227f3c91f391.jpg?1783947288",
+   "total_paper_printings": 1
+  },
+  "Channel": {
+   "type_line": "Sorcery",
+   "mana_cost": "{G}{G}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/lea/188/channel?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/c/1/c1862c47-71cc-45a3-8805-a5ddc62e55ea.jpg?1783948678",
+   "total_paper_printings": 14
+  },
+  "Copy Artifact": {
+   "type_line": "Enchantment",
+   "mana_cost": "{1}{U}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/53/copy-artifact?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/d/fd5ed955-1193-4e6a-a3e2-f54c1f9bf063.jpg?1783948707",
+   "total_paper_printings": 10
   },
   "Demonic Tutor": {
    "type_line": "Sorcery",
@@ -1864,6 +2306,28 @@
    "image": "https://cards.scryfall.io/normal/front/6/7/67b369c4-faa8-45c8-a1b9-98f228b69682.jpg?1783948679",
    "total_paper_printings": 9
   },
+  "Candelabra of Tawnos": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/atq/43/candelabra-of-tawnos?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/5/35a335bf-7358-460f-b7c9-1e8bc4300f64.jpg?1783948364",
+   "total_paper_printings": 1
+  },
+  "Feldon's Cane": {
+   "type_line": "Artifact",
+   "mana_cost": "{1}",
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/atq/50/feldons-cane?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/b/bb6af436-bcfd-4d47-a1aa-e84b587a725a.jpg?1783948362",
+   "total_paper_printings": 11
+  },
   "Ivory Tower": {
    "type_line": "Artifact",
    "mana_cost": "{1}",
@@ -1885,6 +2349,28 @@
    "scryfall_uri": "https://scryfall.com/card/arn/76/library-of-alexandria?utm_source=api",
    "image": "https://cards.scryfall.io/normal/front/e/e/ee266113-34ce-4189-84e7-ee2c86a2722c.jpg?1783948374",
    "total_paper_printings": 1
+  },
+  "Bronze Tablet": {
+   "type_line": "Artifact",
+   "mana_cost": "{6}",
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/atq/42/bronze-tablet?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/6/f/6fb10552-dd47-4f8a-ac7c-8c2b61e56736.jpg?1783948364",
+   "total_paper_printings": 5
+  },
+  "Mishra's Workshop": {
+   "type_line": "Land",
+   "mana_cost": null,
+   "set": "ATQ",
+   "set_name": "Antiquities",
+   "released_at": "1994-03-04",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/atq/81/mishras-workshop?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/3/135de5c7-6ac9-4b68-8f1a-97f120a4b125.jpg?1783948355",
+   "total_paper_printings": 2
   },
   "Chaos Orb": {
    "type_line": "Artifact",
@@ -1974,6 +2460,17 @@
    "image": "https://cards.scryfall.io/normal/front/9/e/9eae0ba1-1383-4505-b4e7-4f17dd8f20c5.jpg?1783948087",
    "total_paper_printings": 1
   },
+  "Tempest Efreet": {
+   "type_line": "Creature \u2014 Efreet",
+   "mana_cost": "{1}{R}{R}{R}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/166/tempest-efreet?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/b/eb562143-fdf0-4eed-83ac-551627c576d2.jpg?1783948052",
+   "total_paper_printings": 4
+  },
   "Maze of Ith": {
    "type_line": "Land",
    "mana_cost": null,
@@ -1984,6 +2481,17 @@
    "scryfall_uri": "https://scryfall.com/card/drk/117/maze-of-ith?utm_source=api",
    "image": "https://cards.scryfall.io/normal/front/4/2/42dcceee-2a47-4eaa-a6a3-2931b3d50244.jpg?1783947922",
    "total_paper_printings": 9
+  },
+  "Zuran Orb": {
+   "type_line": "Artifact",
+   "mana_cost": "{0}",
+   "set": "ICE",
+   "set_name": "Ice Age",
+   "released_at": "1995-06-03",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/ice/350/zuran-orb?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/3/a/3a9d1082-a862-45d4-9e5e-392e879fead6.jpg?1783947454",
+   "total_paper_printings": 4
   },
   "Balance": {
    "type_line": "Sorcery",
@@ -2006,28 +2514,6 @@
    "scryfall_uri": "https://scryfall.com/card/lea/152/fork?utm_source=api",
    "image": "https://cards.scryfall.io/normal/front/e/6/e6b43916-fe2d-417a-a550-d7c795023297.jpg?1783948686",
    "total_paper_printings": 6
-  },
-  "Zuran Orb": {
-   "type_line": "Artifact",
-   "mana_cost": "{0}",
-   "set": "ICE",
-   "set_name": "Ice Age",
-   "released_at": "1995-06-03",
-   "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/ice/350/zuran-orb?utm_source=api",
-   "image": "https://cards.scryfall.io/normal/front/3/a/3a9d1082-a862-45d4-9e5e-392e879fead6.jpg?1783947454",
-   "total_paper_printings": 4
-  },
-  "Channel": {
-   "type_line": "Sorcery",
-   "mana_cost": "{G}{G}",
-   "set": "LEA",
-   "set_name": "Limited Edition Alpha",
-   "released_at": "1993-08-05",
-   "rarity": "uncommon",
-   "scryfall_uri": "https://scryfall.com/card/lea/188/channel?utm_source=api",
-   "image": "https://cards.scryfall.io/normal/front/c/1/c1862c47-71cc-45a3-8805-a5ddc62e55ea.jpg?1783948678",
-   "total_paper_printings": 14
   },
   "Black Vise": {
    "type_line": "Artifact",
@@ -2655,6 +3141,94 @@
    "scryfall_uri": "https://scryfall.com/card/war/61/narset-parter-of-veils?utm_source=api",
    "image": "https://cards.scryfall.io/normal/front/8/c/8c39f9b4-02b9-4d44-b8d6-4fd02ebbb0c5.jpg?1783933458",
    "total_paper_printings": 12
+  },
+  "Lurrus of the Dream-Den": {
+   "type_line": "Legendary Creature \u2014 Cat Nightmare",
+   "mana_cost": "{1}{W/B}{W/B}",
+   "set": "IKO",
+   "set_name": "Ikoria: Lair of Behemoths",
+   "released_at": "2020-04-24",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/iko/226/lurrus-of-the-dream-den?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/a/5ad36fb2-c44e-4085-ba0d-54277841ad3a.jpg?1783931010",
+   "total_paper_printings": 9
+  },
+  "Cleanse": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{W}{W}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/5/cleanse?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/2/f/2fbd611b-ac97-4516-bad7-cc9ee4ef74f7.jpg?1783948087",
+   "total_paper_printings": 1
+  },
+  "Crusade": {
+   "type_line": "Enchantment",
+   "mana_cost": "{W}{W}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/16/crusade?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/5/057986c7-20c0-4157-b4df-beae4ef5c66d.jpg?1783948714",
+   "total_paper_printings": 14
+  },
+  "Imprison": {
+   "type_line": "Enchantment \u2014 Aura",
+   "mana_cost": "{B}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/107/imprison?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/1/2/12671381-beb7-41b8-9484-97f8aca5c981.jpg?1783948065",
+   "total_paper_printings": 1
+  },
+  "Invoke Prejudice": {
+   "type_line": "Enchantment",
+   "mana_cost": "{U}{U}{U}{U}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/62/invoke-prejudice?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/0/903d9fde-d7da-4a0e-a337-b63023c6d74b.jpg?1783948074",
+   "total_paper_printings": 1
+  },
+  "Jihad": {
+   "type_line": "Enchantment",
+   "mana_cost": "{W}{W}{W}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/arn/5/jihad?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/b/6/b6c7705a-2987-4ef1-92b1-2c55d989ec6f.jpg?1783948394",
+   "total_paper_printings": 1
+  },
+  "Pradesh Gypsies": {
+   "type_line": "Creature \u2014 Human Nomad",
+   "mana_cost": "{2}{G}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "uncommon",
+   "scryfall_uri": "https://scryfall.com/card/leg/197/pradesh-gypsies?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/0/3/0370330d-83d9-44d2-a1ed-c4827edc60fd.jpg?1783948046",
+   "total_paper_printings": 6
+  },
+  "Stone-Throwing Devils": {
+   "type_line": "Creature \u2014 Devil",
+   "mana_cost": "{B}",
+   "set": "ARN",
+   "set_name": "Arabian Nights",
+   "released_at": "1993-12-17",
+   "rarity": "common",
+   "scryfall_uri": "https://scryfall.com/card/arn/33/stone-throwing-devils?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/d/1/d1c387dd-1347-4443-91ce-b71f7ccdceba.jpg?1783948385",
+   "total_paper_printings": 1
   },
   "Urza's Saga": {
    "type_line": "Enchantment Land \u2014 Urza's Saga",

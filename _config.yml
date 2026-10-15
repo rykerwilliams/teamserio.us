@@ -73,6 +73,8 @@ navbar:
     url     : /tags
   - title   : Categories
     url     : /categories
+  - title   : Banned & Restricted
+    url     : /vintage-legality
   - title   : Merch
     url     : /merch/
   - title   : Media #Label
