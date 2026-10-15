@@ -23,6 +23,21 @@
   var POOL = DATA.pool_exclusions || [];
   var SOURCES = DATA.sources || {};
   var ERAS = DATA.eras || [];
+  var SYMBOLS = DATA.symbols || {};
+
+  // Render a mana cost as symbols rather than the literal text "{4}".
+  // Magic's symbols are Wizards' property, used under the Fan Content Policy
+  // the site footer cites; the SVGs come from Scryfall's symbology endpoint.
+  function manaCost(cost) {
+    if (!cost) return "";
+    return cost.replace(/\{[^}]+\}/g, function (tok) {
+      var uri = SYMBOLS[tok];
+      return uri
+        ? '<img class="vl-mana" src="' + esc(uri) + '" alt="' + esc(tok) +
+          '" loading="lazy">'
+        : esc(tok);
+    });
+  }
   var KINDS = DATA.change_kinds || {};
   var ERA_BY_NO = {};
   ERAS.forEach(function (e) { ERA_BY_NO[e.era] = e; });
@@ -707,7 +722,7 @@
     }
     h.push("<h3>" + esc(name) + "</h3>");
     h.push("<p>" + esc(info.type_line || "") +
-           (info.mana_cost ? " · " + esc(info.mana_cost) : "") +
+           (info.mana_cost ? " · " + manaCost(info.mana_cost) : "") +
            (info.set_name ? "<br>First printed in <strong>" +
              esc(info.set_name) + "</strong>" +
              (info.released_at ? ", " + esc(info.released_at) : "") : "") +
@@ -718,7 +733,9 @@
     rows.forEach(function (r) {
       h.push("<tr><td>" + esc(prettyDate(r.ev)) + "</td><td><strong>" +
              esc(r.action) + "</strong></td><td style=\"opacity:.65\">" +
-             esc(r.ev.basis === "unknown" ? "basis unrecorded" : r.ev.basis) +
+             esc(r.ev.announced && r.ev.announced !== r.ev.effective
+                 ? "announced " + prettyISO(r.ev.announced)
+                 : (r.ev.era_name || "")) +
              "</td></tr>");
     });
     h.push("</tbody></table>");

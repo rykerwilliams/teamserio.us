@@ -340,12 +340,20 @@
            background: rgba(0,0,0,.55); }
 .vl-hist.is-open { display: flex; animation: vl-fade .18s both; }
 @keyframes vl-fade { from { opacity: 0 } to { opacity: 1 } }
-.vl-hist-box { background: var(--vl-box-bg, #fff); color: var(--vl-box-fg, inherit);
+.vl-hist-box {
+  /* Explicit colours, not inherit. The box defaulted to a white background
+     while the text inherited the site's dark-theme light grey, so in a
+     light-scheme browser the whole modal was white on white -- card name,
+     type line and the entire history table invisible. The site is dark; the
+     modal is dark. */
+  background: #232323; color: #ededed;
                max-width: 36rem; width: 100%; max-height: 82vh; overflow-y: auto;
                border-radius: 8px; padding: 1.25rem 1.5rem; }
 .vl-hist-box h3 { margin-top: 0; }
 .vl-hist-box table { width: 100%; font-size: .9rem; }
-.vl-hist-box td { padding: .2rem .4rem; border-bottom: 1px solid var(--vl-line); }
+.vl-hist-box td { padding: .2rem .4rem;
+                  border-bottom: 1px solid rgba(255,255,255,.14); }
+.vl-hist-box a { color: #7fb8ff; }
 .vl-hist-art { float: right; width: 9rem; margin: 0 0 .75rem 1rem;
                border-radius: 6px; }
 .vl-hist-close { float: right; background: none; border: 0; font-size: 1.5rem;
@@ -355,7 +363,6 @@
 
 @media (prefers-color-scheme: dark) {
   .vl { --vl-bg: #1d1d1d; }
-  .vl-hist-box { --vl-box-bg: #232323; --vl-box-fg: #eee; }
 }
 @media (max-width: 600px) {
   .vl-dcard { width: 6.5rem; }
@@ -525,4 +532,27 @@
    space would just push the page down. */
 @media (min-width: 1150px) {
   .vl-details { min-height: 32rem; }
+}
+
+/* The page's own heading. chulapa's header block is skipped (header_type:
+   none) because this page is an application, not an article, and the hero
+   spent most of the first screen on a title over a splash that does not
+   exist here. */
+.vl-title { margin: 0 0 .9rem; }
+.vl-title h1 {
+  font-size: 1.9rem; margin: 0; line-height: 1.15; font-weight: 700;
+}
+.vl-title p { margin: .15rem 0 0; opacity: .72; font-size: .95rem; }
+@media (min-width: 1150px) {
+  .vl-title { display: flex; align-items: baseline; gap: .85rem;
+              flex-wrap: wrap; }
+  .vl-title p { margin: 0; }
+}
+
+/* Mana symbols from Scryfall's symbology endpoint. Magic's symbols are the
+   property of Wizards of the Coast, used under the Fan Content Policy cited
+   in the site footer. */
+.vl-mana {
+  width: 1em; height: 1em; vertical-align: -.08em;
+  margin: 0 .04em; display: inline-block;
 }

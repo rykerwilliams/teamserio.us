@@ -12,7 +12,14 @@ header_in_content: true
   The col-lg-2 aside is dropped: it only carries the author block, which a
   page using this layout does not set.
 {%- endcomment -%}
+	{%- comment -%}
+	  header_type: none skips chulapa's header block entirely, for a page that
+	  is an application rather than an article and wants to start at the top.
+	  Such a page supplies its own heading in the content.
+	{%- endcomment -%}
+	{% unless page.header_type == "none" %}
 	{% include components/headers.html headertype= page.header_type imghero=page.header_img projects=page.project_links %}
+	{% endunless %}
 	<main class="container-lg chulapa-wide pb-3 flex-fill">
 	  {% if page.show_breadcrumb or page.show_date or page.show_sociallinks -%}
 	  {%- include components/breadcrumbdatesocial.html -%}

@@ -2,7 +2,7 @@
 layout: wide
 title: What Was Legal When
 subtitle: "The Vintage Banned &amp; Restricted list, on any date since 1994"
-header_type: base
+header_type: none
 permalink: /vintage-legality
 excerpt: "Drag the timeline to see the Vintage B&R list as it stood on any date since 1994."
 show_breadcrumb: true
@@ -19,6 +19,11 @@ breadcrumb_list:
 <link rel="stylesheet" href="{{ '/assets/css/vintage-legality.css' | relative_url }}">
 
 <div class="vl">
+
+  <header class="vl-title">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </header>
 
   <p class="vl-credit">
     <strong>The data behind this page is open.</strong> It lives in

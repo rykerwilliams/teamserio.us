@@ -10,7 +10,7 @@ data change arrives as a reviewable diff.
 
 Re-run it when the B&R list changes (a few times a year) and commit the result.
 """
-import io, json, os, sys
+import io, json, os, sys, urllib.request
 
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                    "_data", "vintage_br.json")
@@ -73,8 +73,26 @@ def main(repo):
             "actions": acts, "sources": e.get("sources", []),
         })
 
+    # Scryfall publishes an SVG for every mana symbol, which is what lets a
+    # mana cost render as symbols instead of the literal text "{4}". Magic's
+    # symbols are Wizards' property, used here under the Fan Content Policy
+    # that the site footer now cites.
+    symbols = {}
+    try:
+        req = urllib.request.Request(
+            "https://api.scryfall.com/symbology",
+            headers={"User-Agent": "teamserio-sync/1.0", "Accept": "application/json"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            for sym in json.load(r).get("data", []):
+                if sym.get("svg_uri"):
+                    symbols[sym["symbol"]] = sym["svg_uri"]
+        print(f"  mana symbols: {len(symbols)}")
+    except Exception as exc:
+        print(f"  mana symbols unavailable ({exc}); costs will show as text")
+
     out = {
         "generated_from": "https://github.com/rykerwilliams/type1",
+        "symbols": symbols,
         "format": "Vintage",
         "sources": sources,
         "categories": current.get("banned_categories", []),
