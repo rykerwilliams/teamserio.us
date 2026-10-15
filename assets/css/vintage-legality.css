@@ -89,13 +89,40 @@
 }
 
 /* ---------- state panel ---------- */
-.vl-head-row { display: flex; align-items: baseline; gap: .75rem;
-               flex-wrap: wrap;
+.vl-head-row { display: flex; align-items: baseline; gap: .75rem 1.25rem;
+               /* The row must NOT wrap. A long era name made the meta block
+                  demand its full width, which bumped it to a second line and
+                  made the header 35px taller on six announcements -- walking
+                  the lids down the page. The meta shrinks and ellipses
+                  instead. */
+               flex-wrap: nowrap;
                /* Pinned. The basis note wraps on some announcements and the
                   era line is absent on others; a header that changes height
                   walks everything below it up and down as you step through,
                   which is most of what made playback feel jumpy. */
-               min-height: 5.4rem; }
+               min-height: 4.4rem; }
+
+/* era and dates pushed to the right of the heading. Pinned: an era name or a
+   date line that wraps changes the header height, and that walks everything
+   below it -- the same bug as before, reintroduced by moving this block. */
+.vl-head-meta {
+  margin-left: auto; text-align: right;
+  flex: 0 1 auto; min-width: 0;        /* allowed to shrink, not to wrap the row */
+  min-height: 2.6rem;
+}
+.vl-asof { flex: 0 0 auto; }
+.vl-head-meta .vl-era,
+.vl-head-meta .vl-basis {
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+@media (max-width: 700px) {
+  .vl-head-row { flex-wrap: wrap; }
+  .vl-head-meta { min-height: 3.8rem; }
+  .vl-head-meta .vl-era, .vl-head-meta .vl-basis { white-space: normal; }
+}
+@media (max-width: 700px) {
+  .vl-head-meta { margin-left: 0; text-align: left; }
+}
 .vl-asof { font-size: 1.6rem; font-weight: 700; margin: 0; line-height: 1.1; }
 .vl-asof-n {
   font-variant-numeric: tabular-nums; font-size: 2.4rem; font-weight: 700;
@@ -103,7 +130,7 @@
 }
 .vl-asof-n small { font-size: .8rem; font-weight: 400; opacity: .7;
                    color: inherit; display: block; }
-.vl-basis { font-size: .8rem; opacity: .7; margin: .2rem 0 0; }
+.vl-basis { font-size: .8rem; opacity: .7; margin: .1rem 0 0; }
 .vl-sec { margin: 1.25rem 0 .5rem; font-size: .72rem; letter-spacing: .1em;
           text-transform: uppercase; opacity: .6;
           border-top: 1px solid var(--vl-line); padding-top: .55rem; }
@@ -432,7 +459,7 @@
 }
 .vl-pool-note li { margin: .4rem 0; }
 
-.vl-era { font-size: .82rem; opacity: .75; margin: .1rem 0 0;
+.vl-era { font-size: .82rem; opacity: .8; margin: 0;
           font-style: italic; min-height: 1.2em; }
 .vl-noarchive { opacity: .55; }
 
@@ -485,3 +512,7 @@
   background: rgba(128,128,128,.09);
 }
 .vl-repo code { font-size: .92em; }
+
+/* detail about the announcement, in the left column under the controls */
+.vl-details { margin-top: 1.25rem; }
+.vl-details .vl-sec { margin-top: 1rem; }

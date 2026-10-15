@@ -13,6 +13,7 @@
 
   var dataEl = document.getElementById("vl-data");
   var panel = document.getElementById("vl-state");
+  var details = document.getElementById("vl-details");
   if (!dataEl || !panel) return;
 
   var DATA = JSON.parse(dataEl.textContent);
@@ -547,16 +548,20 @@
   function render(i) {
     var ev = EVENTS[i], st = STATES[i];
 
-    var h = [];
+    var h = [], d = [];
     h.push('<div class="vl-head-row">');
     h.push('<span class="vl-asof-n">' + st.restricted.length +
            "<small>restricted</small></span>");
-    h.push("<div><h2 class=\"vl-asof\">" + esc(prettyDate(ev)) + "</h2>");
+    h.push("<h2 class=\"vl-asof\">" + esc(prettyDate(ev)) + "</h2>");
+    // era and dates sit out to the right of the heading rather than stacking
+    // under it, which made the header tall and the column ragged
+    h.push('<div class="vl-head-meta">');
     h.push('<p class="vl-era">' + (ev.era_name
       ? "Era " + ev.era + " \u00b7 " + esc(ev.era_name)
       : "\u00a0") + "</p>");
     h.push('<p class="vl-basis">' + esc(basisNote(ev)) +
-           " · announcement " + ev.seq + " of " + EVENTS.length + "</p></div>");
+           " \u00b7 announcement " + ev.seq + " of " + EVENTS.length + "</p>");
+    h.push("</div>");
     h.push("</div>");
 
     // The summary is rendered AFTER the grids, further down: it wraps to one
@@ -588,37 +593,40 @@
              "<p><em>No individually banned cards yet.</em></p>");
     }
 
+    // Everything from here is detail rather than the list itself, and it
+    // goes in the left column under the controls, which was otherwise empty
+    // while the right column ran long with the cards.
     // Class bans are part of the banned list, so they are shown, not hidden
     // behind a toggle.
     var cats = CATS.filter(function (c) { return c.since && c.since <= ev.date; });
     if (cats.length) {
-      h.push('<ul class="vl-classban">');
+      d.push('<ul class="vl-classban">');
       cats.forEach(function (c) {
-        h.push('<li><span class="vl-classban-n">' +
+        d.push('<li><span class="vl-classban-n">' +
                (c.count ? c.count : "all") + "</span> <strong>" +
                esc(c.name) + "</strong> \u2014 " + esc(c.rule || "") + "</li>");
       });
-      h.push("</ul>");
+      d.push("</ul>");
     }
 
-    h.push('<div class="vl-sec">What this announcement changed</div>');
-    h.push('<p class="vl-chg">' + (chg.length ? chg.join(" ") :
+    d.push('<div class="vl-sec">What this announcement changed</div>');
+    d.push('<p class="vl-chg">' + (chg.length ? chg.join(" ") :
            '<em class="vl-nochange">No change to the list.</em>') + "</p>");
 
     var pools = POOL.filter(function (p) { return !p.since || p.since <= ev.date; });
     if (pools.length) {
-      h.push('<details class="vl-pool-note"><summary>' + pools.length +
+      d.push('<details class="vl-pool-note"><summary>' + pools.length +
              " kind" + (pools.length === 1 ? "" : "s") +
              " of card outside the pool entirely</summary><ul>");
       pools.forEach(function (p) {
-        h.push("<li><strong>" + esc(p.name) + "</strong> — " +
+        d.push("<li><strong>" + esc(p.name) + "</strong> — " +
                esc(p.note || "") + "</li>");
       });
-      h.push("</ul><p style=\"opacity:.7\">These were never tournament legal, " +
+      d.push("</ul><p style=\"opacity:.7\">These were never tournament legal, " +
              "so no B&amp;R action ever applied to them.</p></details>");
     }
 
-    h.push('<a class="vl-pool" target="_blank" rel="noopener noreferrer" href="' +
+    d.push('<a class="vl-pool" target="_blank" rel="noopener noreferrer" href="' +
            "https://scryfall.com/search?q=" +
            encodeURIComponent(poolQuery(ev, st)) +
            '">Legal card pool on this date →</a>');
@@ -626,8 +634,8 @@
     // what happened in the format between the last announcement and this one
     var between = erasBetween(i, ev);
     if (between.length) {
-      h.push('<div class="vl-sec">Since the last announcement</div>');
-      h.push('<ul class="vl-between">');
+      d.push('<div class="vl-sec">Since the last announcement</div>');
+      d.push('<ul class="vl-between">');
       between.forEach(function (e) {
         var tags = (e.change_kinds || [])
           .filter(function (k) { return k !== "set_release"; })
@@ -636,7 +644,7 @@
                    esc(KINDS[k] || k) + '">' + esc(k.replace("_", " ")) +
                    "</span>";
           }).join(" ");
-        h.push("<li>" + tags + " " + esc(e.changes || e.name || "") +
+        d.push("<li>" + tags + " " + esc(e.changes || e.name || "") +
                (e.citation && e.citation.url
                  ? ' <a href="' + esc(e.citation.url) + '" target="_blank" ' +
                    'rel="noopener noreferrer">source</a>' +
@@ -646,12 +654,12 @@
                      : "")
                  : "") + "</li>");
       });
-      h.push("</ul>");
+      d.push("</ul>");
     }
 
     var ann = ev.announcement;
     if (ann && ann.url) {
-      h.push('<p class="vl-src"><strong>Announcement:</strong> ' +
+      d.push('<p class="vl-src"><strong>Announcement:</strong> ' +
              '<a href="' + esc(ann.url) + '" target="_blank" ' +
              'rel="noopener noreferrer">' + esc(ann.label || ann.url) + "</a>" +
              (ann.archived
@@ -660,13 +668,14 @@
                : ' \u00b7 <span class="vl-noarchive">no archived copy</span>') +
              "</p>");
     } else if (ev.sources && ev.sources.length) {
-      h.push('<p class="vl-src">Source: ' + ev.sources.map(function (u) {
+      d.push('<p class="vl-src">Source: ' + ev.sources.map(function (u) {
         return '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' +
                esc(u.replace(/^https?:\/\//, "").split("/")[0]) + "</a>";
       }).join(", ") + "</p>");
     }
 
     panel.innerHTML = h.join("");
+    if (details) details.innerHTML = d.join("");
     containCards(panel);
 
   }
