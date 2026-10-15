@@ -236,6 +236,11 @@
    "effective": "1994-03-05",
    "actions": [
     {
+     "card": "Time Vault",
+     "action": "ban",
+     "from": "eternalcentral"
+    },
+    {
      "card": "Demonic Tutor",
      "action": "restrict",
      "from": "eternalcentral"
@@ -309,12 +314,32 @@
      "from": "eternalcentral"
     },
     {
+     "card": "Chaos Orb",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Falling Star",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Mind Twist",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
      "card": "Mirror Universe",
      "action": "restrict",
      "from": "eternalcentral"
     },
     {
      "card": "Recall",
+     "action": "restrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Sword of the Ages",
      "action": "restrict",
      "from": "eternalcentral"
     },
@@ -495,7 +520,22 @@
    "effective": "1996-02-01",
    "actions": [
     {
+     "card": "Time Vault",
+     "action": "unban",
+     "from": "eternalcentral"
+    },
+    {
      "card": "Ali from Cairo",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Black Vise",
+     "action": "unrestrict",
+     "from": "eternalcentral"
+    },
+    {
+     "card": "Sword of the Ages",
      "action": "unrestrict",
      "from": "eternalcentral"
     }
@@ -1846,6 +1886,39 @@
    "image": "https://cards.scryfall.io/normal/front/e/e/ee266113-34ce-4189-84e7-ee2c86a2722c.jpg?1783948374",
    "total_paper_printings": 1
   },
+  "Chaos Orb": {
+   "type_line": "Artifact",
+   "mana_cost": "{2}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/235/chaos-orb?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/9/2/92274971-7c4a-4326-b0fe-75e2d124f718.jpg?1783948669",
+   "total_paper_printings": 3
+  },
+  "Falling Star": {
+   "type_line": "Sorcery",
+   "mana_cost": "{2}{R}",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/leg/145/falling-star?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/f/2/f2b9983e-20d4-4d12-9e2c-ec6d9a345787.jpg?1783948056",
+   "total_paper_printings": 1
+  },
+  "Mind Twist": {
+   "type_line": "Sorcery",
+   "mana_cost": "{X}{B}",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "rarity": "rare",
+   "scryfall_uri": "https://scryfall.com/card/lea/115/mind-twist?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/e/e/eee9e106-a248-49d2-b8c8-6bbcd56ce739.jpg?1783948693",
+   "total_paper_printings": 11
+  },
   "Mirror Universe": {
    "type_line": "Artifact",
    "mana_cost": "{6}",
@@ -1867,6 +1940,17 @@
    "scryfall_uri": "https://scryfall.com/card/leg/70/recall?utm_source=api",
    "image": "https://cards.scryfall.io/normal/front/3/3/33296718-0625-4422-a65c-b21cf99c52ec.jpg?1783948072",
    "total_paper_printings": 5
+  },
+  "Sword of the Ages": {
+   "type_line": null,
+   "mana_cost": null,
+   "set": null,
+   "set_name": null,
+   "released_at": null,
+   "rarity": null,
+   "scryfall_uri": null,
+   "image": null,
+   "total_paper_printings": null
   },
   "Underworld Dreams": {
    "type_line": "Enchantment",
@@ -1934,17 +2018,6 @@
    "image": "https://cards.scryfall.io/normal/front/3/a/3a9d1082-a862-45d4-9e5e-392e879fead6.jpg?1783947454",
    "total_paper_printings": 4
   },
-  "Falling Star": {
-   "type_line": "Sorcery",
-   "mana_cost": "{2}{R}",
-   "set": "LEG",
-   "set_name": "Legends",
-   "released_at": "1994-06-01",
-   "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/leg/145/falling-star?utm_source=api",
-   "image": "https://cards.scryfall.io/normal/front/f/2/f2b9983e-20d4-4d12-9e2c-ec6d9a345787.jpg?1783948056",
-   "total_paper_printings": 1
-  },
   "Channel": {
    "type_line": "Sorcery",
    "mana_cost": "{G}{G}",
@@ -1956,17 +2029,6 @@
    "image": "https://cards.scryfall.io/normal/front/c/1/c1862c47-71cc-45a3-8805-a5ddc62e55ea.jpg?1783948678",
    "total_paper_printings": 14
   },
-  "Chaos Orb": {
-   "type_line": "Artifact",
-   "mana_cost": "{2}",
-   "set": "LEA",
-   "set_name": "Limited Edition Alpha",
-   "released_at": "1993-08-05",
-   "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/235/chaos-orb?utm_source=api",
-   "image": "https://cards.scryfall.io/normal/front/9/2/92274971-7c4a-4326-b0fe-75e2d124f718.jpg?1783948669",
-   "total_paper_printings": 3
-  },
   "Black Vise": {
    "type_line": "Artifact",
    "mana_cost": "{1}",
@@ -1976,17 +2038,6 @@
    "rarity": "uncommon",
    "scryfall_uri": "https://scryfall.com/card/lea/233/black-vise?utm_source=api",
    "image": "https://cards.scryfall.io/normal/front/7/6/76ac72f8-5b1e-4d67-a796-ef69cde27424.jpg?1783948669",
-   "total_paper_printings": 11
-  },
-  "Mind Twist": {
-   "type_line": "Sorcery",
-   "mana_cost": "{X}{B}",
-   "set": "LEA",
-   "set_name": "Limited Edition Alpha",
-   "released_at": "1993-08-05",
-   "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/lea/115/mind-twist?utm_source=api",
-   "image": "https://cards.scryfall.io/normal/front/e/e/eee9e106-a248-49d2-b8c8-6bbcd56ce739.jpg?1783948693",
    "total_paper_printings": 11
   },
   "Fastbond": {

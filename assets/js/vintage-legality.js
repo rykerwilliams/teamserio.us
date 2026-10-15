@@ -96,7 +96,10 @@
 
   // ---- chart --------------------------------------------------------------
   var svg = document.getElementById("vl-chart");
-  var W = 900, H = 210, PAD_L = 30, PAD_R = 10, PAD_T = 12, PAD_B = 24;
+  var W = 900, H = 250, PAD_L = 30, PAD_R = 10, PAD_T = 12, PAD_B = 62;
+  // the band under the axis holds one tick row per action kind
+  var TICK_ROWS = ["restrict", "unrestrict", "ban", "unban"];
+  var TICK_H = 9;
   var X0 = asYear(EVENTS[0].date), X1 = asYear(EVENTS[EVENTS.length - 1].date);
 
   function sx(year) {
@@ -165,8 +168,40 @@
       svg.appendChild(lab);
     }
 
+    // Action ticks, one row per kind, directly under the axis. These were a
+    // separate vis-timeline widget, which meant two stacked controls with
+    // different drag behaviour -- drag-to-scrub here, drag-to-pan there. Same
+    // information, one control.
+    var rowsUsed = TICK_ROWS.filter(function (act) {
+      return EVENTS.some(function (ev) {
+        return ev.actions.some(function (a) { return a.action === act; });
+      });
+    });
+    rowsUsed.forEach(function (act, r) {
+      var y = sy(0) + 10 + r * TICK_H;
+      var lab = el("text", { class: "vl-axis-text", x: PAD_L - 5, y: y + 4,
+                             "text-anchor": "end", "font-size": "7" });
+      lab.textContent = { restrict: "restr", unrestrict: "unrestr",
+                          ban: "ban", unban: "unban" }[act];
+      svg.appendChild(lab);
+      EVENTS.forEach(function (ev, i) {
+        var n = ev.actions.filter(function (a) { return a.action === act; }).length;
+        if (!n) return;
+        var x = sx(asYear(ev.date));
+        var t = el("rect", {
+          class: "vl-tick vl-tick-" + act,
+          x: x - 1.6, y: y - 3, width: 3.2,
+          height: Math.min(7, 3 + n * 0.5), rx: 1 });
+        t.appendChild(el("title")).textContent =
+          prettyDate(ev) + " \u2014 " + n + " " + act +
+          (n === 1 ? "" : (act.slice(-1) === "n" ? "ned" : "d"));
+        svg.appendChild(t);
+      });
+    });
+
     // playhead
-    headLine = el("line", { class: "vl-head", y1: PAD_T - 6, y2: sy(0) });
+    headLine = el("line", { class: "vl-head", y1: PAD_T - 6,
+                            y2: sy(0) + 10 + rowsUsed.length * TICK_H });
     headDot = el("circle", { class: "vl-head-dot", r: 5 });
     svg.appendChild(headLine);
     svg.appendChild(headDot);
@@ -291,17 +326,31 @@
            " · announcement " + ev.seq + " of " + EVENTS.length + "</p></div>");
     h.push("</div>");
 
-    if (st.added.length || st.removed.length) {
-      h.push('<div class="vl-sec">What this announcement changed</div>');
-      h.push('<div class="vl-delta" id="vl-delta"></div>');
-    }
+    // A fixed-height strip: during playback a strip that grows and shrinks
+    // shoves the list up and down and makes it unreadable.
+    h.push('<div class="vl-sec">What this announcement changed</div>');
+    h.push('<div class="vl-delta" id="vl-delta">' +
+           (st.added.length || st.removed.length ? "" :
+            '<p class="vl-nochange">No change to the restricted list.</p>') +
+           "</div>");
 
-    h.push('<div class="vl-sec">Restricted — one copy allowed</div>');
-    if (st.restricted.length) {
+    h.push('<div class="vl-sec">Restricted \u2014 one copy allowed</div>');
+    // The FULL list every step, with this announcement's changes marked in
+    // place: a green outline for what came on, a red cross for what came off.
+    // Cards that left stay in the list for this one step so you can watch them
+    // go -- otherwise they silently vanish mid-playback.
+    var shown = st.restricted.slice();
+    st.removed.forEach(function (n) { shown.push(n); });
+    shown.sort(cmp);
+    if (shown.length) {
       h.push('<ul class="vl-cards" id="vl-list">');
-      st.restricted.forEach(function (n) {
-        h.push('<li data-card="' + esc(n) + '"' +
-               (st.added.indexOf(n) >= 0 ? ' class="vl-new"' : "") + ">" +
+      shown.forEach(function (n) {
+        var gone = st.restricted.indexOf(n) < 0;
+        var isNew = st.added.indexOf(n) >= 0;
+        h.push('<li data-card="' + esc(n) + '" class="' +
+               (gone ? "vl-gone" : isNew ? "vl-new" : "") + '">' +
+               (gone ? '<span class="vl-mark vl-x" aria-hidden="true">\u2715</span>' : "") +
+               (isNew ? '<span class="vl-mark vl-plus" aria-hidden="true">+</span>' : "") +
                '<a href="#" class="autocard vl-hist-open" data-card="' +
                esc(n) + '">' + esc(n) + "</a></li>");
       });
@@ -463,12 +512,7 @@
     moveHead(i);
     var scrub = document.getElementById("vl-scrub");
     if (scrub && +scrub.value !== i) scrub.value = i;
-    if (timeline) {
-      try {
-        timeline.setSelection(EVENTS[i].actions.map(function (_, k) {
-          return i + ":" + k; }), { focus: false });
-      } catch (err) { /* selection is cosmetic */ }
-    }
+    railSelect(i, true);
     if (pushHash && history.replaceState) {
       history.replaceState(null, "", "#" + EVENTS[i].date);
     }
@@ -532,33 +576,62 @@
   function buildRail() {
     var host = document.getElementById("vl-rail");
     if (!host || typeof vis === "undefined" || !vis.Timeline) return;
-    var items = [], groups = [
+
+    // ONE ITEM PER (ANNOUNCEMENT, ACTION), not per card. 149 card-level items
+    // stacked into an unreadable scroll and clipped their own labels at the
+    // window edge; aggregating gives ~60 items that sit on one row each, and
+    // the cards go in the tooltip where there is room for them.
+    var LABEL = { restrict: "restricted", unrestrict: "unrestricted",
+                  ban: "banned", unban: "unbanned" };
+    var items = [], used = {};
+    EVENTS.forEach(function (ev, i) {
+      var byAction = {};
+      ev.actions.forEach(function (a) {
+        (byAction[a.action] = byAction[a.action] || []).push(a.card);
+      });
+      Object.keys(byAction).forEach(function (act) {
+        var cards = byAction[act].slice().sort(cmp);
+        used[act] = 1;
+        items.push({
+          id: i + ":" + act,
+          group: act,
+          start: asDate(ev.date),
+          content: cards.length === 1 ? cards[0] : cards.length + " cards",
+          className: "vl-i-" + act,
+          title: prettyDate(ev) + " \u2014 " + cards.length + " " +
+                 LABEL[act] + ":\n" + cards.join("\n")
+        });
+      });
+    });
+
+    var groups = [
       { id: "restrict",   content: "restricted" },
       { id: "unrestrict", content: "unrestricted" },
       { id: "ban",        content: "banned" },
       { id: "unban",      content: "unbanned" }
-    ];
-    var used = {};
-    EVENTS.forEach(function (ev, i) {
-      ev.actions.forEach(function (a, k) {
-        used[a.action] = 1;
-        items.push({
-          id: i + ":" + k, group: a.action, start: asDate(ev.date),
-          content: a.card, className: "vl-i-" + a.action,
-          title: a.card + " — " + a.action + ", " + prettyDate(ev)
-        });
-      });
-    });
-    groups = groups.filter(function (g) { return used[g.id]; });
+    ].filter(function (g) { return used[g.id]; });
+
+    // leave a margin either side so labels near 1994 and 2026 are not clipped
+    var first = asDate(EVENTS[0].date);
+    var last = asDate(EVENTS[EVENTS.length - 1].date);
+    var pad = (last - first) * 0.06;
+
     try {
       timeline = new vis.Timeline(host, new vis.DataSet(items),
                                   new vis.DataSet(groups), {
-        stack: true, stackSubgroups: true,
-        min: asDate(EVENTS[0].date), max: new Date(Date.UTC(2027, 0, 1)),
-        start: asDate(EVENTS[0].date), end: new Date(Date.UTC(2027, 0, 1)),
-        zoomMin: 1000 * 60 * 60 * 24 * 60,
-        maxHeight: 300, margin: { item: 3 }, selectable: true,
-        tooltip: { followMouse: true }
+        stack: false,
+        min: new Date(first.getTime() - pad * 2),
+        max: new Date(last.getTime() + pad * 2),
+        start: new Date(first.getTime() - pad),
+        end: new Date(last.getTime() + pad),
+        zoomMin: 1000 * 60 * 60 * 24 * 120,
+        zoomMax: 1000 * 60 * 60 * 24 * 365 * 45,
+        orientation: { axis: "bottom" },
+        margin: { item: { horizontal: 2, vertical: 6 } },
+        selectable: true,
+        horizontalScroll: true,
+        zoomKey: "ctrlKey",
+        tooltip: { followMouse: true, overflowMethod: "cap" }
       });
       timeline.on("select", function (p) {
         if (!p.items || !p.items.length) return;
@@ -568,8 +641,33 @@
       var fb = document.querySelector(".vl-rail-fallback");
       if (fb) fb.remove();
     } catch (err) {
-      // the chart and scrubber are enough on their own
+      // the chart and scrubber stand alone
     }
+  }
+
+  // Highlight the selected announcement on the rail and, if it has scrolled
+  // out of view, pan to it. Panning only -- the zoom level is the reader's,
+  // so following the playhead must not undo their zoom.
+  function railSelect(i, follow) {
+    if (!timeline) return;
+    var ids = [];
+    ["restrict", "unrestrict", "ban", "unban"].forEach(function (act) {
+      if (EVENTS[i].actions.some(function (a) { return a.action === act; })) {
+        ids.push(i + ":" + act);
+      }
+    });
+    try { timeline.setSelection(ids, { focus: false }); } catch (e) { /* cosmetic */ }
+    if (follow === false) return;
+    try {
+      var when = asDate(EVENTS[i].date).getTime();
+      var win = timeline.getWindow();
+      var a = win.start.getTime(), b = win.end.getTime();
+      var inset = (b - a) * 0.12;          // treat the edges as "out of view"
+      if (when < a + inset || when > b - inset) {
+        timeline.moveTo(when, { animation: { duration: 420,
+                                             easingFunction: "easeInOutQuad" } });
+      }
+    } catch (e) { /* panning is a nicety */ }
   }
 
   // ---- deep link ----------------------------------------------------------
@@ -591,12 +689,18 @@
   moveHead(idx);
   if (scrub) scrub.value = idx;
 
-  buildRail();
-  if (timeline) {
-    try {
-      timeline.setSelection(EVENTS[idx].actions.map(function (_, k) {
-        return idx + ":" + k; }), { focus: false });
-    } catch (err) { /* cosmetic */ }
+  // The rail is a secondary, optional view. Building it inside a closed
+  // <details> gives a zero-height layout, so it is built on first open.
+  var railWrap = document.getElementById("vl-rail-wrap");
+  if (railWrap) {
+    railWrap.addEventListener("toggle", function () {
+      if (!railWrap.open) return;
+      if (!timeline) { buildRail(); }
+      railSelect(idx, false);
+      if (timeline) {
+        try { timeline.redraw(); } catch (e) { /* layout is best-effort */ }
+      }
+    });
   }
 
   var ns = document.querySelector(".vl-noscript");

@@ -36,7 +36,8 @@ breadcrumb_list:
     <svg id="vl-chart" class="vl-chart" preserveAspectRatio="xMidYMid meet"></svg>
   </div>
   <p class="vl-chart-hint">
-    Cards restricted in Vintage over time. Click or drag anywhere on the chart.
+    Cards restricted in Vintage over time; the ticks under the axis mark what
+    each announcement did. Click or drag anywhere on the chart.
   </p>
 
   <div class="vl-controls">
@@ -47,11 +48,17 @@ breadcrumb_list:
            aria-label="Scrub through announcements">
   </div>
 
-  <div class="vl-rail" id="vl-rail">
-    <p class="vl-rail-fallback" style="padding:.75rem">
-      Loading the timeline rail&hellip; the chart above works regardless.
+  <details class="vl-rail-wrap" id="vl-rail-wrap">
+    <summary>Zoom into a period &mdash; detailed timeline</summary>
+    <div class="vl-rail" id="vl-rail">
+      <p class="vl-rail-fallback" style="padding:.75rem">
+        Loading&hellip;
+      </p>
+    </div>
+    <p class="vl-chart-hint" style="margin-top:.5rem">
+      Drag to pan, ctrl+scroll to zoom. Follows the chart as you scrub.
     </p>
-  </div>
+  </details>
 
   <section id="vl-state" aria-live="polite"></section>
 
@@ -91,22 +98,40 @@ breadcrumb_list:
     pinned down.
   </p>
 
-  <h2 id="every-announcement">Every announcement</h2>
-  <p>
-    The full record, in order &mdash; also what you get with JavaScript off.
-  </p>
-  {%- for ev in br.events -%}
-    <h3 id="{{ ev.date }}">
-      {{ ev.date }}
-      {%- if ev.precision != 'day' %}<span class="vl-flag">{{ ev.precision }} precision</span>{% endif -%}
-      {%- if ev.disputed %}<span class="vl-flag">date disputed</span>{% endif -%}
-    </h3>
-    <ul>
-      {%- for a in ev.actions -%}
-        <li>{{ a.action }}: {{ a.card }}</li>
-      {%- endfor -%}
-    </ul>
-  {%- endfor -%}
+  <details class="vl-table-wrap">
+    <summary>The underlying data &mdash; {{ br.events | size }} announcements</summary>
+    <p class="vl-chart-hint">
+      The same record the timeline is built from, and what you get with
+      JavaScript off. It lives in
+      <a href="{{ br.generated_from }}">the <code>type1</code> repo</a> as
+      <code>events.json</code> plus a snapshot per announcement.
+    </p>
+    <table class="vl-table">
+      <thead>
+        <tr><th>Date</th><th>Basis</th><th>Changes</th></tr>
+      </thead>
+      <tbody>
+        {%- for ev in br.events -%}
+          <tr id="{{ ev.date }}">
+            <td class="vl-td-date">
+              {{ ev.date }}
+              {%- if ev.precision != 'day' %}<span class="vl-flag">{{ ev.precision }}</span>{% endif -%}
+            </td>
+            <td class="vl-td-basis">
+              {{ ev.basis }}
+              {%- if ev.disputed %}<span class="vl-flag">disputed</span>{% endif -%}
+            </td>
+            <td>
+              {%- for a in ev.actions -%}
+                <span class="vl-td-a vl-td-{{ a.action }}">{{ a.action }}</span>
+                {{ a.card }}{% unless forloop.last %}; {% endunless %}
+              {%- endfor -%}
+            </td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </details>
 
 </div>
 
