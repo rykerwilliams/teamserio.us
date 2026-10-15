@@ -70,24 +70,27 @@
   (function () {
     var restricted = [], banned = [];
     EVENTS.forEach(function (ev) {
-      var added = [], removed = [];
+      // deltas are tracked for BOTH halves of the list: a card moving from
+      // restricted to banned has to show as leaving one and joining the other
+      var added = [], removed = [], bAdded = [], bRemoved = [];
       ev.actions.forEach(function (a) {
         var ri = restricted.indexOf(a.card), bi = banned.indexOf(a.card);
         if (a.action === "restrict") {
           if (ri < 0) { restricted.push(a.card); added.push(a.card); }
-          if (bi >= 0) banned.splice(bi, 1);
+          if (bi >= 0) { banned.splice(bi, 1); bRemoved.push(a.card); }
         } else if (a.action === "unrestrict") {
           if (ri >= 0) { restricted.splice(ri, 1); removed.push(a.card); }
         } else if (a.action === "ban") {
-          if (bi < 0) banned.push(a.card);
+          if (bi < 0) { banned.push(a.card); bAdded.push(a.card); }
           if (ri >= 0) { restricted.splice(ri, 1); removed.push(a.card); }
         } else if (a.action === "unban") {
-          if (bi >= 0) banned.splice(bi, 1);
+          if (bi >= 0) { banned.splice(bi, 1); bRemoved.push(a.card); }
         }
       });
       STATES.push({ restricted: restricted.slice().sort(cmp),
                     banned: banned.slice().sort(cmp),
-                    added: added.sort(cmp), removed: removed.sort(cmp) });
+                    added: added.sort(cmp), removed: removed.sort(cmp),
+                    bAdded: bAdded.sort(cmp), bRemoved: bRemoved.sort(cmp) });
     });
   })();
 
@@ -242,42 +245,6 @@
     return (clientX - r.left) / r.width * W;
   }
 
-  // ---- card art -----------------------------------------------------------
-  // Only the cards an announcement touched get art: that is where the interest
-  // is, and it keeps this to a few images per step rather than fifty.
-  function artFigure(name, kind) {
-    var fig = document.createElement("figure");
-    fig.className = "vl-dcard " + (kind === "add" ? "is-add" : "is-rem");
-    var img = document.createElement("img");
-    img.alt = name;
-    img.loading = "lazy";
-    img.width = 146; img.height = 204;
-    var info = CARDS[name] || {};
-    // prefer the original printing we already recorded; fall back to the
-    // shared cache, which also prefers first printings
-    if (info.image) {
-      img.src = info.image;
-    } else if (window.TSCards && window.TSCards.image) {
-      window.TSCards.image(name, "original").then(function (u) {
-        if (u) img.src = u;
-      });
-    }
-    var cap = document.createElement("figcaption");
-    var tag = document.createElement("span");
-    tag.className = "vl-dtag";
-    tag.textContent = kind === "add" ? "restricted" : "no longer";
-    var a = document.createElement("a");
-    a.href = "#";
-    a.className = "autocard vl-hist-open";
-    a.dataset.card = name;
-    a.textContent = name;
-    cap.appendChild(tag);
-    cap.appendChild(a);
-    fig.appendChild(img);
-    fig.appendChild(cap);
-    return fig;
-  }
-
   // ---- Scryfall legal pool ------------------------------------------------
   // Excludes by NAME, never by is:ante -- Scryfall has no such filter and
   // silently ignores an unknown is: term, so that query quietly matches
@@ -304,18 +271,48 @@
   }
 
   // ---- render -------------------------------------------------------------
-  var listEl = null;
+  // Both halves of the B&R list are rendered as card art, every step. Cards
+  // this announcement ADDED get a green ring and glow; cards it REMOVED stay
+  // in place for one step, greyed out under a red cross, so you can see them
+  // go rather than having them silently vanish.
+  //
+  // Scryfall's "small" image is ~13 KB against ~140 KB for "normal": 98 cards
+  // is about 1.3 MB in total, and the URLs are identical from step to step so
+  // the browser caches them after the first pass.
+  function smallArt(name) {
+    var info = CARDS[name] || {};
+    var u = info.image || "";
+    return u ? u.replace("/normal/", "/small/") : "";
+  }
+
+  function gridHtml(current, removed, added, id) {
+    var shown = current.slice();
+    removed.forEach(function (n) { shown.push(n); });
+    shown.sort(cmp);
+    if (!shown.length) return "";
+    var out = ['<ul class="vl-grid" id="' + id + '">'];
+    shown.forEach(function (n) {
+      var gone = current.indexOf(n) < 0;
+      var isNew = added.indexOf(n) >= 0;
+      var cls = gone ? "is-gone" : (isNew ? "is-add" : "");
+      var art = smallArt(n);
+      out.push('<li class="vl-cell ' + cls + '" data-card="' + esc(n) + '">');
+      out.push('<a href="#" class="autocard vl-hist-open" data-card="' +
+               esc(n) + '" title="' + esc(n) + '">');
+      out.push(art
+        ? '<img src="' + esc(art) + '" alt="' + esc(n) +
+          '" loading="lazy" width="146" height="204">'
+        : '<span class="vl-noart">' + esc(n) + "</span>");
+      out.push('<span class="vl-cell-name">' + esc(n) + "</span>");
+      out.push("</a></li>");
+    });
+    out.push("</ul>");
+    return out.join("");
+  }
+
 
   function render(i) {
     var ev = EVENTS[i], st = STATES[i];
-
-    // measure the existing list so it can be FLIP-animated into its new order
-    var before = {};
-    if (listEl) {
-      Array.prototype.forEach.call(listEl.children, function (li) {
-        before[li.dataset.card] = li.getBoundingClientRect();
-      });
-    }
 
     var h = [];
     h.push('<div class="vl-head-row">');
@@ -326,57 +323,37 @@
            " · announcement " + ev.seq + " of " + EVENTS.length + "</p></div>");
     h.push("</div>");
 
-    // A fixed-height strip: during playback a strip that grows and shrinks
-    // shoves the list up and down and makes it unreadable.
-    h.push('<div class="vl-sec">What this announcement changed</div>');
-    h.push('<div class="vl-delta" id="vl-delta">' +
-           (st.added.length || st.removed.length ? "" :
-            '<p class="vl-nochange">No change to the restricted list.</p>') +
-           "</div>");
+    // One line, not an art strip: the grids below already show every change
+    // in place, so a second copy of the same cards just pushed them off screen.
+    var chg = [];
+    st.added.forEach(function (n) { chg.push('<span class="vl-chg-a">+ ' + esc(n) + "</span>"); });
+    st.removed.forEach(function (n) { chg.push('<span class="vl-chg-r">\u2212 ' + esc(n) + "</span>"); });
+    st.bAdded.forEach(function (n) { chg.push('<span class="vl-chg-r">banned ' + esc(n) + "</span>"); });
+    st.bRemoved.forEach(function (n) { chg.push('<span class="vl-chg-a">unbanned ' + esc(n) + "</span>"); });
+    h.push('<p class="vl-chg">' + (chg.length ? chg.join(" ") :
+           '<em class="vl-nochange">No change to the list.</em>') + "</p>");
 
-    h.push('<div class="vl-sec">Restricted \u2014 one copy allowed</div>');
-    // The FULL list every step, with this announcement's changes marked in
-    // place: a green outline for what came on, a red cross for what came off.
-    // Cards that left stay in the list for this one step so you can watch them
-    // go -- otherwise they silently vanish mid-playback.
-    var shown = st.restricted.slice();
-    st.removed.forEach(function (n) { shown.push(n); });
-    shown.sort(cmp);
-    if (shown.length) {
-      h.push('<ul class="vl-cards" id="vl-list">');
-      shown.forEach(function (n) {
-        var gone = st.restricted.indexOf(n) < 0;
-        var isNew = st.added.indexOf(n) >= 0;
-        h.push('<li data-card="' + esc(n) + '" class="' +
-               (gone ? "vl-gone" : isNew ? "vl-new" : "") + '">' +
-               (gone ? '<span class="vl-mark vl-x" aria-hidden="true">\u2715</span>' : "") +
-               (isNew ? '<span class="vl-mark vl-plus" aria-hidden="true">+</span>' : "") +
-               '<a href="#" class="autocard vl-hist-open" data-card="' +
-               esc(n) + '">' + esc(n) + "</a></li>");
-      });
-      h.push("</ul>");
-    } else {
-      h.push("<p><em>Nothing restricted yet.</em></p>");
-    }
+    h.push('<div class="vl-sec">Restricted \u2014 one copy allowed <span class="vl-sec-n">'
+           + st.restricted.length + "</span></div>");
+    h.push(gridHtml(st.restricted, st.removed, st.added, "vl-list") ||
+           "<p><em>Nothing restricted yet.</em></p>");
 
-    h.push('<div class="vl-sec">Banned outright</div>');
-    h.push('<p class="vl-banned">' + (st.banned.length
-      ? st.banned.map(function (n) {
-          return '<a href="#" class="autocard vl-hist-open" data-card="' +
-                 esc(n) + '">' + esc(n) + "</a>"; }).join(" · ")
-      : "<em>No individually banned cards yet.</em>") + "</p>");
+    h.push('<div class="vl-sec">Banned \u2014 not allowed at all <span class="vl-sec-n">'
+           + st.banned.length + "</span></div>");
+    h.push(gridHtml(st.banned, st.bRemoved, st.bAdded, "vl-banned-list") ||
+           "<p><em>No individually banned cards yet.</em></p>");
 
+    // Class bans are part of the banned list, so they are shown, not hidden
+    // behind a toggle.
     var cats = CATS.filter(function (c) { return c.since && c.since <= ev.date; });
     if (cats.length) {
-      h.push('<details class="vl-cats"><summary>' + cats.length +
-             " class ban" + (cats.length === 1 ? "" : "s") +
-             " also in force</summary><ul>");
+      h.push('<ul class="vl-classban">');
       cats.forEach(function (c) {
-        h.push("<li><strong>" + esc(c.name) + "</strong>" +
-               (c.count ? " (" + c.count + ")" : "") + " — " +
-               esc(c.rule || "") + "</li>");
+        h.push('<li><span class="vl-classban-n">' +
+               (c.count ? c.count : "all") + "</span> <strong>" +
+               esc(c.name) + "</strong> \u2014 " + esc(c.rule || "") + "</li>");
       });
-      h.push("</ul></details>");
+      h.push("</ul>");
     }
 
     var pools = POOL.filter(function (p) { return !p.since || p.since <= ev.date; });
@@ -419,29 +396,6 @@
 
     panel.innerHTML = h.join("");
 
-    var delta = document.getElementById("vl-delta");
-    if (delta) {
-      st.added.forEach(function (n) { delta.appendChild(artFigure(n, "add")); });
-      st.removed.forEach(function (n) { delta.appendChild(artFigure(n, "rem")); });
-    }
-
-    // FLIP: play the list from where the old one was to where it is now
-    listEl = document.getElementById("vl-list");
-    if (listEl && Object.keys(before).length &&
-        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      Array.prototype.forEach.call(listEl.children, function (li) {
-        var was = before[li.dataset.card];
-        if (!was) return;
-        var now = li.getBoundingClientRect();
-        var dx = was.left - now.left, dy = was.top - now.top;
-        if (!dx && !dy) return;
-        li.style.transform = "translate(" + dx + "px," + dy + "px)";
-        requestAnimationFrame(function () {
-          li.classList.add("vl-flip");
-          li.style.transform = "";
-        });
-      });
-    }
   }
 
   // ---- per-card history ---------------------------------------------------

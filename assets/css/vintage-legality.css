@@ -2,7 +2,11 @@
    Three stacked controls: a count-over-time area chart that doubles as the
    scrubber, a zoomable vis-timeline rail, then the state panel. */
 
-.vl { --vl-gold: #b8860b; --vl-add: #2e7d32; --vl-rem: #c62828;
+.vl { --vl-gold: #b8860b;
+      /* bright enough to read as a highlight on a dark page: the darker
+         material greens and reds just look muddy here */
+      --vl-add: #43d16a; --vl-add-dim: rgba(67,209,106,.22);
+      --vl-rem: #ff5a52; --vl-rem-dim: rgba(255,90,82,.20);
       --vl-line: rgba(128,128,128,.28); }
 
 /* ---------- chart scrubber ---------- */
@@ -108,12 +112,24 @@
                align-self: center; }
 .vl-dcard { width: 8.5rem; animation: vl-pop .32s cubic-bezier(.34,1.3,.64,1) both; }
 .vl-dcard img { width: 100%; border-radius: 6px; display: block;
-                border: 1px solid #333; background: rgba(128,128,128,.12); }
+                border: 2px solid transparent;
+                background: rgba(128,128,128,.12); }
+.vl-dcard.is-add img { border-color: var(--vl-add);
+                       box-shadow: 0 0 16px rgba(67,209,106,.45); }
+.vl-dcard.is-rem img { border-color: var(--vl-rem);
+                       box-shadow: 0 0 16px rgba(255,90,82,.4); }
 .vl-dcard figcaption { font-size: .72rem; margin-top: .25rem; line-height: 1.25; }
-.vl-dcard.is-rem img { filter: grayscale(.85) brightness(.75); }
+.vl-dcard { position: relative; }
+.vl-dcard.is-rem img { filter: grayscale(.9) brightness(.5); }
+.vl-dcard.is-rem::after {
+  content: "\2715"; position: absolute; top: 0; left: 0; right: 0;
+  height: 204px; display: flex; align-items: center; justify-content: center;
+  font-size: 4.5rem; font-weight: 900; color: var(--vl-rem);
+  text-shadow: 0 0 14px rgba(0,0,0,.8); pointer-events: none; opacity: .92;
+}
 .vl-dcard.is-rem figcaption { text-decoration: line-through; opacity: .75; }
-.vl-dtag { display: block; font-weight: 700; font-size: .68rem;
-           letter-spacing: .06em; text-transform: uppercase; }
+.vl-dtag { display: block; font-weight: 800; font-size: .74rem;
+           letter-spacing: .07em; text-transform: uppercase; }
 .vl-dcard.is-add .vl-dtag { color: var(--vl-add); }
 .vl-dcard.is-rem .vl-dtag { color: var(--vl-rem); }
 @keyframes vl-pop {
@@ -140,6 +156,72 @@
 .vl-td-ban        { background: rgba(192,57,43,.35); }
 .vl-td-unban      { background: rgba(192,57,43,.14); }
 
+/* ---- the B&R list as card art ---------------------------------------- */
+.vl-grid {
+  display: grid; gap: .55rem; margin: .6rem 0 0; padding: 0; list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+}
+@media (min-width: 992px) {
+  .vl-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+}
+.vl-cell { position: relative; }
+.vl-cell a { display: block; text-decoration: none; color: inherit; }
+.vl-cell img {
+  width: 100%; height: auto; display: block; border-radius: 5%;
+  border: 2px solid transparent; background: rgba(128,128,128,.14);
+  transition: transform .18s, box-shadow .18s;
+}
+.vl-cell a:hover img { transform: translateY(-3px) scale(1.03); }
+.vl-cell-name {
+  display: block; font-size: .64rem; line-height: 1.2; margin-top: .22rem;
+  opacity: .72; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.vl-noart {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  aspect-ratio: 146 / 204; font-size: .62rem; padding: .3rem;
+  border: 2px dashed var(--vl-line); border-radius: 5%;
+}
+
+/* ADDED this announcement: green ring and glow */
+.vl-cell.is-add img {
+  border-color: var(--vl-add);
+  box-shadow: 0 0 0 2px var(--vl-add), 0 0 18px rgba(67,209,106,.6);
+}
+.vl-cell.is-add .vl-cell-name { color: var(--vl-add); opacity: 1; font-weight: 700; }
+.vl-cell.is-add { animation: vl-pulse .8s cubic-bezier(.3,.9,.4,1) 1; }
+
+/* REMOVED this announcement: greyed, red ring, red cross over the art */
+.vl-cell.is-gone img {
+  filter: grayscale(.95) brightness(.45);
+  border-color: var(--vl-rem);
+  box-shadow: 0 0 0 2px var(--vl-rem), 0 0 18px rgba(255,90,82,.5);
+}
+.vl-cell.is-gone::after {
+  content: "\2715";
+  position: absolute; left: 0; right: 0; top: 0;
+  aspect-ratio: 146 / 204;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.8rem; font-weight: 900; color: var(--vl-rem);
+  text-shadow: 0 0 10px rgba(0,0,0,.9); pointer-events: none;
+}
+.vl-cell.is-gone .vl-cell-name {
+  color: var(--vl-rem); opacity: 1; text-decoration: line-through;
+}
+.vl-cell.is-gone { animation: vl-pulse .8s cubic-bezier(.3,.9,.4,1) 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-cell.is-add, .vl-cell.is-gone { animation: none; }
+  .vl-cell a:hover img { transform: none; }
+}
+
+/* the one-line change summary above the grids */
+.vl-chg { margin: .5rem 0 0; font-size: .9rem; display: flex;
+          flex-wrap: wrap; gap: .3rem .75rem; }
+.vl-chg-a { color: var(--vl-add); font-weight: 700; }
+.vl-chg-r { color: var(--vl-rem); font-weight: 700; }
+.vl-sec-n { float: right; opacity: .8; font-weight: 700; }
+
 /* the list itself, animated via FLIP */
 .vl-cards { display: flex; flex-wrap: wrap; gap: .3rem .5rem;
             margin: 0; padding: 0; list-style: none; }
@@ -147,19 +229,42 @@
   font-size: .92rem; padding: .12rem .5rem; border-radius: 3px;
   background: rgba(128,128,128,.1); transition: background .3s, color .3s;
 }
-/* this announcement's changes, marked in place in the full list */
-.vl-cards li.vl-new {
-  background: rgba(46,125,50,.18); font-weight: 600;
-  box-shadow: inset 0 0 0 2px var(--vl-add);
-}
+/* This announcement's changes, marked in place in the full list. They have to
+   be findable at a glance among fifty, and during playback the eye needs to be
+   pulled to them: bright fill, a ring, a glow, and a brief pulse. */
+.vl-cards li.vl-new,
 .vl-cards li.vl-gone {
-  background: rgba(198,40,40,.14);
-  box-shadow: inset 0 0 0 2px var(--vl-rem);
+  padding: .18rem .55rem .18rem .42rem;
+  animation: vl-pulse .8s cubic-bezier(.3,.9,.4,1) 1;
 }
-.vl-cards li.vl-gone a { text-decoration: line-through; opacity: .7; }
-.vl-mark { font-weight: 700; margin-right: .3em; }
+.vl-cards li.vl-new {
+  background: var(--vl-add-dim); font-weight: 700;
+  box-shadow: inset 0 0 0 2px var(--vl-add), 0 0 12px rgba(67,209,106,.5);
+}
+.vl-cards li.vl-new a { color: var(--vl-add); }
+.vl-cards li.vl-gone {
+  background: var(--vl-rem-dim);
+  box-shadow: inset 0 0 0 2px var(--vl-rem), 0 0 12px rgba(255,90,82,.45);
+}
+.vl-cards li.vl-gone a {
+  text-decoration: line-through; text-decoration-thickness: 2px;
+  color: var(--vl-rem); opacity: .95;
+}
+.vl-mark {
+  display: inline-block; font-weight: 900; margin-right: .35em;
+  font-size: 1.05em; line-height: 1;
+}
 .vl-x    { color: var(--vl-rem); }
 .vl-plus { color: var(--vl-add); }
+
+@keyframes vl-pulse {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.14); }
+  100% { transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vl-cards li.vl-new, .vl-cards li.vl-gone { animation: none; }
+}
 .vl-cards li a { text-decoration: none; }
 .vl-flip { transition: transform .32s cubic-bezier(.4,0,.2,1); }
 @media (prefers-reduced-motion: reduce) {
@@ -168,6 +273,17 @@
 }
 
 .vl-banned { font-size: .92rem; }
+
+/* class bans sit with the banned list, not behind a toggle */
+.vl-classban { list-style: none; margin: .6rem 0 0; padding: 0;
+               font-size: .85rem; }
+.vl-classban li { margin: .3rem 0; opacity: .9; }
+.vl-classban-n {
+  display: inline-block; min-width: 1.9rem; text-align: center;
+  font-weight: 700; font-size: .78rem; padding: .05rem .35rem;
+  border-radius: 3px; background: var(--vl-rem-dim);
+  color: var(--vl-rem); margin-right: .4em;
+}
 .vl-cats, .vl-pool-note { margin-top: .6rem; font-size: .84rem; }
 .vl-cats summary, .vl-pool-note summary { cursor: pointer; opacity: .8; }
 .vl-pool {
