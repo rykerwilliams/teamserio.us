@@ -39,8 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
       img.style.maxWidth = "350px";
       img.style.border = "1px solid #333";
       img.style.borderRadius = "8px";
+      // A page may want the preview to match how the card looks where it is
+      // sitting -- /vintage-legality draws binder wear on both.
+      var wrap = document.createElement("span");
+      wrap.className = "autocard-wrap";
+      wrap.appendChild(img);
+      if (window.TSCards && typeof window.TSCards.tooltipDecorator === "function") {
+        try { window.TSCards.tooltipDecorator(link, wrap); } catch (err) {}
+      }
       tooltip.innerHTML = "";
-      tooltip.appendChild(img);
+      tooltip.appendChild(wrap);
       tooltip.style.display = "block";
     });
   });

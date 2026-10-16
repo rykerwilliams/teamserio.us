@@ -698,67 +698,86 @@
   transition: transform .22s cubic-bezier(.3,.9,.4,1), box-shadow .22s;
 }
 .vl-incard img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.vl-incard:hover { transform: translateY(-5px) scale(1.02); z-index: 20;
+.vl-incard:hover { transform: translateY(-5px) scale(1.02) rotate(var(--tilt, 0deg)); z-index: 20;
                    box-shadow: 0 8px 16px rgba(0,0,0,.6); }
 /* pulled out of the pocket to be looked at */
-.vl-incard.is-pulled { transform: translateY(-22px) scale(1.06); z-index: 40; }
+.vl-incard.is-pulled { transform: translateY(-22px) scale(1.06) rotate(var(--tilt, 0deg)); z-index: 40; }
 
 /* ---- wear -------------------------------------------------------------
-   wear-0 mint, wear-3 beaten, driven by how long the card has been on the
-   list. The most recognisable binder wear is WHITE EDGES, where the black
-   border has rubbed through against the pocket seam and the rings, so that
-   carries most of the weight. Ring dings sit on the INNER edge -- right of a
-   left-hand page, left of a right-hand page -- because that is where the
-   rings are. */
-.vl-ding, .vl-crease { position: absolute; pointer-events: none; opacity: 0; }
+   Every value here comes from the card's own seeded PRNG as an inline custom
+   property (see wearStyle in the JS), so no two cards wear alike and the same
+   card always wears the same way.
 
+   NOTE: the whitening CANNOT live on the <img>. Replaced content paints on
+   top of its own background and inset shadows, so `box-shadow: inset` on an
+   <img> is drawn underneath the art and is never visible. It goes on .vl-edge,
+   a real element stacked above the image. */
+.vl-ding, .vl-crease, .vl-edge {
+  position: absolute; pointer-events: none;
+}
+
+/* corners first -- that is where a card actually rubs -- then each edge at
+   its own thickness and brightness, so the whitening is never a neat frame */
+.vl-edge {
+  inset: 0; z-index: 16;
+  border-radius: var(--round, 0%);
+  box-shadow: inset 0 0 var(--vig, 0) rgba(0, 0, 0, .55);
+  background:
+    radial-gradient(circle at 0 0,
+      rgba(247,243,236,var(--c1-o,0)) 0 var(--c1-i,0%),
+      transparent var(--c1,0%)),
+    radial-gradient(circle at 100% 0,
+      rgba(247,243,236,var(--c2-o,0)) 0 var(--c2-i,0%),
+      transparent var(--c2,0%)),
+    radial-gradient(circle at 100% 100%,
+      rgba(247,243,236,var(--c3-o,0)) 0 var(--c3-i,0%),
+      transparent var(--c3,0%)),
+    radial-gradient(circle at 0 100%,
+      rgba(247,243,236,var(--c4-o,0)) 0 var(--c4-i,0%),
+      transparent var(--c4,0%)),
+    linear-gradient(to bottom,
+      rgba(247,243,236,var(--et-o,0)) 0 var(--et,0%), transparent var(--et,0%)),
+    linear-gradient(to top,
+      rgba(247,243,236,var(--eb-o,0)) 0 var(--eb,0%), transparent var(--eb,0%)),
+    linear-gradient(to right,
+      rgba(247,243,236,var(--el-o,0)) 0 var(--el,0%), transparent var(--el,0%)),
+    linear-gradient(to left,
+      rgba(247,243,236,var(--er-o,0)) 0 var(--er,0%), transparent var(--er,0%));
+}
+
+/* one ding, at the height of its row's ring, jittered a little so six of them
+   down a spread are not a ruled line */
 .vl-ding {
-  width: 9px; height: 15px; border-radius: 50% / 40%;
+  top: calc(50% + var(--ding-y, 0px));
+  transform: translateY(-50%);
+  width: 9px; height: var(--ding-h, 15px); border-radius: 50% / 40%;
   background: linear-gradient(90deg, rgba(0,0,0,.55) 0 30%,
               rgba(238,232,222,.85) 55%, rgba(255,255,255,.5));
   box-shadow: 0 0 4px rgba(0,0,0,.55);
-  z-index: 15;
+  z-index: 17;
 }
-/* one ding, centred on the card, because the ring for that row is at the
-   card's own height */
-.vl-ding { top: 50%; transform: translateY(-50%); }
 .side-left  .vl-ding { right: -3px; }
 .side-right .vl-ding { left: -3px; }
 
+/* a crease is one bent line; angle, position and depth are all per-card */
 .vl-crease {
-  inset: 0; z-index: 14;
-  background: linear-gradient(118deg, transparent 0 58%,
-              rgba(255,255,255,.38) 58.5%, rgba(0,0,0,.3) 59.6%,
-              transparent 61%);
+  inset: 0; z-index: 15;
+  background: linear-gradient(var(--cr-a, 118deg),
+              transparent calc(var(--cr-p, 58%) - 3.5%),
+              rgba(255,255,255,calc(var(--cr-o, .3) * .55)) calc(var(--cr-p, 58%) - .4%),
+              rgba(255,255,255,var(--cr-o, .3)) var(--cr-p, 58%),
+              rgba(0,0,0,calc(var(--cr-o, .3) * .55)) calc(var(--cr-p, 58%) + 1.1%),
+              transparent calc(var(--cr-p, 58%) + 4.5%));
 }
 .vl-crease-2 {
-  background: linear-gradient(-71deg, transparent 0 74%,
-              rgba(255,255,255,.3) 74.5%, rgba(0,0,0,.26) 75.4%,
-              transparent 77%);
+  --cr-a: var(--cr2-a, -71deg);
+  --cr-p: var(--cr2-p, 74%);
+  --cr-o: var(--cr2-o, .25);
 }
 
-/* played: the border starts to silver along the edges */
-.wear-1 img { box-shadow: inset 0 0 0 1px rgba(242,238,230,.3); }
-.wear-1 .vl-ding { opacity: .45; }
-
-/* worn: white edges all round, all three rings have bitten, a crease */
-.wear-2 img {
-  box-shadow: inset 0 0 0 2px rgba(242,238,230,.5),
-              inset 0 0 9px rgba(0,0,0,.45);
-}
-.wear-2 .vl-ding { opacity: .8; }
-.wear-2 .vl-crease { opacity: .6; }
-
-/* beaten: thirty years in the rings -- edges gone white, corners rounded,
-   both creases, and the ink flattened the way old cardboard goes */
-.wear-3 img {
-  box-shadow: inset 0 0 0 3px rgba(244,240,232,.68),
-              inset 0 0 14px rgba(0,0,0,.6);
-  border-radius: 7%;
-}
-.wear-3 .vl-ding { opacity: 1; width: 11px; height: 18px; }
-.wear-3 .vl-crease { opacity: .85; }
-.wear-3 .vl-crease-2 { opacity: .7; }
+/* a worn card sits a touch crooked in its pocket */
+.vl-incard { transform: rotate(var(--tilt, 0deg)); }
+.vl-incard img { border-radius: var(--round, 0%); }
 
 /* the same card, in the same condition, in the popout */
 .vl-hist-cardwrap {
@@ -766,13 +785,10 @@
   pointer-events: none; z-index: 5; border-radius: 6%;
   top: 1.25rem; right: 1.5rem;
 }
-.vl-hist-cardwrap .vl-ding { width: 13px; height: 22px; }
-.vl-hist-cardwrap.wear-3 .vl-ding { width: 16px; height: 26px; }
+.vl-hist-cardwrap .vl-ding { width: 13px; }
 .vl-hist-cardwrap.side-left  .vl-ding { right: -5px; }
 .vl-hist-cardwrap.side-right .vl-ding { left: -5px; }
-.vl-hist-cardwrap.wear-1 ~ .vl-hist-art { box-shadow: inset 0 0 0 1px rgba(242,238,230,.3); }
-.vl-hist-cardwrap.wear-2 ~ .vl-hist-art,
-.vl-hist-cardwrap.wear-3 ~ .vl-hist-art { border-radius: 6%; }
+.vl-hist-cardwrap ~ .vl-hist-art { border-radius: var(--round, 6%); }
 
 .vl-binder-nav {
   display: flex; align-items: center; justify-content: center;
@@ -791,3 +807,9 @@
 @media (prefers-reduced-motion: reduce) {
   .vl-incard, .vl-incard.is-pulled { transition: none; }
 }
+
+/* the hover preview is the same physical card, so it carries the same damage */
+.autocard-wrap { position: relative; display: block; line-height: 0; }
+.autocard-wrap .vl-edge,
+.autocard-wrap .vl-crease { border-radius: 8px; }
+.autocard-wrap .vl-ding { width: 13px; }
