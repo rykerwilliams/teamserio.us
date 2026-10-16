@@ -634,10 +634,14 @@
 }
 
 /* the rings */
+/* The rings sit at the vertical centres of the three rows, so a dinged card
+   and its ring are at the same height. Padding matches the page's, and
+   space-around puts each ring in the middle of an equal third. */
 .vl-rings {
   position: relative; z-index: 35;
-  display: flex; flex-direction: column; justify-content: space-evenly;
-  align-items: center; width: 30px; padding: 12% 0;
+  display: flex; flex-direction: column; justify-content: space-around;
+  align-items: center; width: 30px;
+  padding: calc(1.3rem) 0 .75rem;
   background: linear-gradient(90deg, rgba(0,0,0,.6), rgba(0,0,0,.25) 40%,
                               rgba(0,0,0,.25) 60%, rgba(0,0,0,.6));
 }
@@ -670,7 +674,6 @@
   content: ""; position: absolute; left: 0; right: 0; top: 0; height: 13%;
   background: linear-gradient(180deg, rgba(255,255,255,.17),
                               rgba(255,255,255,.04) 60%, transparent);
-  border-bottom: 1px solid rgba(255,255,255,.1);
   border-radius: 2px 2px 0 0; z-index: 30; pointer-events: none;
 }
 /* and the shine across the polypropylene */
@@ -701,46 +704,75 @@
 .vl-incard.is-pulled { transform: translateY(-22px) scale(1.06); z-index: 40; }
 
 /* ---- wear -------------------------------------------------------------
-   wear-0 mint, wear-3 beaten. Ring dings sit on the INNER edge, which is the
-   right of a left-hand page and the left of a right-hand page. */
+   wear-0 mint, wear-3 beaten, driven by how long the card has been on the
+   list. The most recognisable binder wear is WHITE EDGES, where the black
+   border has rubbed through against the pocket seam and the rings, so that
+   carries most of the weight. Ring dings sit on the INNER edge -- right of a
+   left-hand page, left of a right-hand page -- because that is where the
+   rings are. */
 .vl-ding, .vl-crease { position: absolute; pointer-events: none; opacity: 0; }
 
 .vl-ding {
-  width: 7px; height: 11px; border-radius: 50%;
-  background: linear-gradient(90deg, rgba(0,0,0,.5), rgba(255,255,255,.22));
-  box-shadow: 0 0 3px rgba(0,0,0,.5);
+  width: 9px; height: 15px; border-radius: 50% / 40%;
+  background: linear-gradient(90deg, rgba(0,0,0,.55) 0 30%,
+              rgba(238,232,222,.85) 55%, rgba(255,255,255,.5));
+  box-shadow: 0 0 4px rgba(0,0,0,.55);
+  z-index: 15;
 }
-.side-left  .vl-ding { right: -2px; }
-.side-right .vl-ding { left: -2px; }
-.vl-ding-a { top: 16%; }
-.vl-ding-b { top: 46%; }
-.vl-ding-c { top: 76%; }
+/* one ding, centred on the card, because the ring for that row is at the
+   card's own height */
+.vl-ding { top: 50%; transform: translateY(-50%); }
+.side-left  .vl-ding { right: -3px; }
+.side-right .vl-ding { left: -3px; }
 
-/* a crease across a corner */
 .vl-crease {
-  inset: 0;
-  background: linear-gradient(118deg, transparent 0 62%,
-              rgba(255,255,255,.17) 62.4%, rgba(0,0,0,.2) 63%, transparent 64%);
+  inset: 0; z-index: 14;
+  background: linear-gradient(118deg, transparent 0 58%,
+              rgba(255,255,255,.38) 58.5%, rgba(0,0,0,.3) 59.6%,
+              transparent 61%);
+}
+.vl-crease-2 {
+  background: linear-gradient(-71deg, transparent 0 74%,
+              rgba(255,255,255,.3) 74.5%, rgba(0,0,0,.26) 75.4%,
+              transparent 77%);
 }
 
-/* played: edges start to go */
-.wear-1 { box-shadow: inset 0 0 0 1px rgba(255,255,255,.1); }
-.wear-1 .vl-ding-b { opacity: .35; }
+/* played: the border starts to silver along the edges */
+.wear-1 img { box-shadow: inset 0 0 0 1px rgba(242,238,230,.3); }
+.wear-1 .vl-ding { opacity: .45; }
 
-/* worn: all three rings have bitten, edges visibly rough */
-.wear-2 { box-shadow: inset 0 0 0 1px rgba(255,255,255,.16),
-                      inset 0 0 7px rgba(0,0,0,.4); }
-.wear-2 .vl-ding { opacity: .5; }
-.wear-2 .vl-crease { opacity: .5; }
-
-/* beaten: thirty years in the rings */
-.wear-3 {
-  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.22),
-              inset 0 0 11px rgba(0,0,0,.55);
+/* worn: white edges all round, all three rings have bitten, a crease */
+.wear-2 img {
+  box-shadow: inset 0 0 0 2px rgba(242,238,230,.5),
+              inset 0 0 9px rgba(0,0,0,.45);
 }
-.wear-3 .vl-ding { opacity: .85; width: 9px; height: 14px; }
+.wear-2 .vl-ding { opacity: .8; }
+.wear-2 .vl-crease { opacity: .6; }
+
+/* beaten: thirty years in the rings -- edges gone white, corners rounded,
+   both creases, and the ink flattened the way old cardboard goes */
+.wear-3 img {
+  box-shadow: inset 0 0 0 3px rgba(244,240,232,.68),
+              inset 0 0 14px rgba(0,0,0,.6);
+  border-radius: 7%;
+}
+.wear-3 .vl-ding { opacity: 1; width: 11px; height: 18px; }
 .wear-3 .vl-crease { opacity: .85; }
-.wear-3 img { filter: contrast(.95) saturate(.92); }
+.wear-3 .vl-crease-2 { opacity: .7; }
+
+/* the same card, in the same condition, in the popout */
+.vl-hist-cardwrap {
+  position: absolute; width: 9rem; aspect-ratio: 146 / 204;
+  pointer-events: none; z-index: 5; border-radius: 6%;
+  top: 1.25rem; right: 1.5rem;
+}
+.vl-hist-cardwrap .vl-ding { width: 13px; height: 22px; }
+.vl-hist-cardwrap.wear-3 .vl-ding { width: 16px; height: 26px; }
+.vl-hist-cardwrap.side-left  .vl-ding { right: -5px; }
+.vl-hist-cardwrap.side-right .vl-ding { left: -5px; }
+.vl-hist-cardwrap.wear-1 ~ .vl-hist-art { box-shadow: inset 0 0 0 1px rgba(242,238,230,.3); }
+.vl-hist-cardwrap.wear-2 ~ .vl-hist-art,
+.vl-hist-cardwrap.wear-3 ~ .vl-hist-art { border-radius: 6%; }
 
 .vl-binder-nav {
   display: flex; align-items: center; justify-content: center;

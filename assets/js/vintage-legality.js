@@ -592,7 +592,22 @@
     return pages;
   }
 
-  function pocketHtml(name, st, ev, side) {
+  // Only the column of pockets nearest the rings can be dinged at all: the
+  // rightmost column of a left-hand page, the leftmost of a right-hand page.
+  // The other six cards on a sheet never touch a ring, so they get handling
+  // wear and creases but no bite marks. Each dinged card takes ONE ding, at
+  // its own row's height, because that is where its ring sits.
+  // Stable per-card pick so a card's creases look the same every time you
+  // page back to it, but differ from its neighbours'.
+  function creaseVariant(name) {
+    var h = 0;
+    for (var i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) | 0;
+    return "crease-v" + (Math.abs(h) % 6);
+  }
+
+  function pocketHtml(name, st, ev, side, slot) {
+    var col = slot % 3;
+    var ringed = (side === "left" && col === 2) || (side === "right" && col === 0);
     if (!name) {
       // an empty pocket shows the back of the card behind it
       return '<li class="vl-pocket is-empty"><span class="vl-cardback"></span></li>';
@@ -602,14 +617,14 @@
     var yrs = Math.round(yearsHeld(st, ev, name));
     return '<li class="vl-pocket">' +
       '<a href="#" class="vl-incard autocard vl-hist-open wear-' + w +
-      ' side-' + side + '" data-card="' + esc(name) + '"' +
+      ' side-' + side + ' ' + creaseVariant(name) +
+      '" data-card="' + esc(name) + '"' +
       ' title="' + esc(name) + (yrs ? " \u2014 " + yrs + "yr" + (yrs === 1 ? "" : "s") + " on the list" : "") + '">' +
       (art ? '<img src="' + esc(art) + '" alt="' + esc(name) + '" loading="lazy">'
            : '<span class="vl-noart">' + esc(name) + "</span>") +
-      '<span class="vl-ding vl-ding-a"></span>' +
-      '<span class="vl-ding vl-ding-b"></span>' +
-      '<span class="vl-ding vl-ding-c"></span>' +
+      (ringed ? '<span class="vl-ding"></span>' : "") +
       '<span class="vl-crease"></span>' +
+      '<span class="vl-crease vl-crease-2"></span>' +
       "</a></li>";
   }
 
@@ -622,7 +637,7 @@
     }
     var cells = [];
     for (var i = 0; i < 9; i++) {
-      cells.push(pocketHtml(page.cards[i], st, ev, side));
+      cells.push(pocketHtml(page.cards[i], st, ev, side, i));
     }
     return '<div class="vl-page side-' + side + '">' +
            '<span class="vl-page-label">' + esc(label) + "</span>" +
@@ -840,6 +855,9 @@
   var modal = document.getElementById("vl-hist");
   var modalBox = document.getElementById("vl-hist-box");
 
+  var PULLED_WEAR = "", PULLED_SIDE = "", PULLED_CREASE = "";
+  var PULLED_RINGED = false;
+
   function openHistory(name) {
     var rows = [];
     EVENTS.forEach(function (ev) {
@@ -850,6 +868,17 @@
     var info = CARDS[name] || {};
     var h = ['<button class="vl-hist-close" aria-label="Close">×</button>'];
     if (info.image) {
+      h.push('<span class="vl-hist-cardwrap ' +
+             (VIEW === "binder"
+                ? PULLED_WEAR + " " + PULLED_SIDE + " " + PULLED_CREASE
+                : "") +
+             '">' +
+             // only if a ring actually reached this card in its pocket
+             (VIEW === "binder" && PULLED_RINGED
+                ? '<span class="vl-ding"></span>' : "") +
+             '<span class="vl-crease"></span>' +
+             '<span class="vl-crease vl-crease-2"></span>' +
+             '</span>');
       h.push('<img class="vl-hist-art" src="' + esc(info.image) +
              '" alt="" loading="lazy">');
     }
@@ -894,6 +923,15 @@
     // actually pull one to look at it
     var pulled = e.target.closest && e.target.closest(".vl-incard");
     if (pulled) {
+      // the popout shows the same card in the same condition as the one in
+      // the pocket; a pristine scan next to a chewed one looks like a bug
+      var m = pulled.className.match(/wear-\d/);
+      PULLED_WEAR = m ? m[0] : "";
+      var c = pulled.className.match(/crease-v\d/);
+      PULLED_CREASE = c ? c[0] : "";
+      PULLED_RINGED = !!pulled.querySelector(".vl-ding");
+      PULLED_SIDE = pulled.className.indexOf("side-right") >= 0
+        ? "side-right" : "side-left";
       pulled.classList.add("is-pulled");
       setTimeout(function () { pulled.classList.remove("is-pulled"); }, 420);
     }
