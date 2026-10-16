@@ -1,0 +1,278 @@
+# Questions for the Team Serious bios.
+#
+# Kept here rather than only inside a Google Form so the wording is
+# version-controlled and the form can be rebuilt from it: script/make-bio-form.js
+# generates the form from this file.
+#
+# origin: "ts"  = from Rajah's original list, kept as written or lightly sharpened
+#         "new" = added to make the answers usable as an actual bio page
+#
+# type:   short | long | choice | scale | upload | email
+# required: only the handful a page genuinely cannot be built without
+
+sections:
+  - title: Who you are
+    core: true
+    blurb: >-
+      The part that ends up at the top of your page. Keep it short; the
+      interesting stuff is further down.
+    questions:
+      - { id: name,     origin: new, type: short,  required: true,
+          q: "Name, as you want it on the site" }
+      - { id: handle,   origin: new, type: short,
+          q: "Handle(s) — TMD, Discord, wherever you post",
+          help: "So we can credit old posts and decklists to the right person." }
+      - id: email
+        origin: new
+        type: email
+        q: "Email"
+        help: >-
+          Only so we can check something, or sort out an interview time.
+          Not published, not added to anything.
+      - { id: where,    origin: new, type: short,
+          q: "Where are you?",
+          help: "City and state is plenty. 'Leng' is also an accepted answer." }
+      - id: photo
+        origin: new
+        type: upload
+        q: "A photo of you \u2014 paste a link, or say 'use one of yours'"
+        help: >-
+          Anywhere we can get at it: Google Photos, Drive, Imgur, a post you
+          are in. Or reply to the confirmation email with one attached. If you
+          would rather we dug one out of an event report, say so and we will.
+
+      - { id: day_job,  origin: new, type: short,
+          q: "What do you do when you're not doing this?" }
+      - { id: other_life, origin: new, type: long,
+          q: "Kids, pets, bands, other hobbies, anything you'd want mentioned" }
+      - { id: links,    origin: new, type: long,
+          q: "Anywhere you want linked",
+          help: "Podcast, YouTube, Bluesky, store, band. One per line." }
+
+  - title: How you got here
+    core: true
+    questions:
+      - { id: started,  origin: new, type: short,
+          q: "When did you start playing, and what pulled you in?" }
+      - { id: first_deck, origin: new, type: long,
+          q: "First deck you were proud of" }
+      - { id: found_ts, origin: new, type: long, required: true,
+          q: "How did you end up with Team Serious?",
+          help: "Who dragged you in, and to which event." }
+      - { id: formats,  origin: new, type: choice, multi: true,
+          q: "What do you actually play these days?",
+          options: ["Vintage", "Old School 93/94", "Middle School", "Premodern",
+                    "Legacy", "Commander", "Ohio Ante", "Limited",
+                    "Whatever is on the table"] }
+      - { id: pet_deck, origin: new, type: long,
+          q: "Your deck. The one people associate with you.",
+          help: "What it is, why you keep sleeving it, and what it never beats." }
+
+  - title: The record
+    core: true
+    blurb: >-
+      Anything you want on the page as a credit. Modesty is not useful here,
+      and neither is accuracy — if you think you won it, say you won it and
+      we'll go and check.
+    questions:
+      - id: titles
+        origin: new
+        type: long
+        q: "Notable titles, nicknames, honorifics"
+        help: >-
+          What people actually call you, who started it, and whether you
+          accept it. Earned, inflicted and self-appointed all count.
+      - id: finishes
+        origin: ts
+        type: long
+        q: "Notable finishes?"
+        help: >-
+          Events, years, placings, as near as you remember. "Second at
+          something in Sandusky, I want to say 2016" is a perfectly good
+          answer — we have the write-ups and can pin it down.
+      - id: ts_events
+        origin: new
+        type: choice
+        multi: true
+        q: "Which of ours have you been to?"
+        help: Tick anything you've played, not only ones you won.
+        options:
+          - "TSI — The Land"
+          - "TSI — Mishra's By the Maumee"
+          - "TSI — Hazard Serious Invitational"
+          - "TSI — Kegerator Serious Invitational"
+          - "TSO — All-American Warren"
+          - "TSO — the POP! Shop"
+          - "Kumite"
+          - "Castmaster"
+          - "Middle School Intercontinental"
+          - "Ohio Ante something"
+          - "Others I have forgotten"
+      - id: proudest
+        origin: new
+        type: long
+        q: "The win you're proudest of, which may not be the biggest one"
+      - id: beat
+        origin: new
+        type: long
+        q: "The loss you still think about"
+      - id: underrated
+        origin: new
+        type: long
+        q: "Who deserves more credit than they get?"
+        help: >-
+          Player, organiser, driver, person who always brings the food. We will
+          probably quote you.
+
+  - title: The 20th anniversary interviews
+    core: true
+    blurb: >-
+      For the anniversary we want to record a run of short "life story"
+      interviews — about fifteen minutes each, two or three per episode, so
+      nothing runs past half an hour. No prep and no wrong answers: how you
+      found Magic, how you found us, one object you bring along, one story you
+      always tell, and some rapid-fire nonsense. You finish by asking a
+      question of whoever is up next, without knowing who that is.
+    questions:
+      - { id: interview, origin: new, type: choice, required: true,
+          q: "Want to do a 15-minute life story interview for the 20th?",
+          options: ["Yes",
+                    "Yes, but talk me through it first",
+                    "Maybe later in the year",
+                    "No thanks"] }
+      - { id: interview_when, origin: new, type: choice, multi: true,
+          q: "If yes, when are you usually free?",
+          help: "Rough is fine. We will work around you.",
+          options: ["Weekday evenings", "Weekend afternoons", "Weekend evenings",
+                    "During an event", "Ask me, it varies"] }
+      - { id: interview_how, origin: new, type: choice,
+          q: "How would you rather do it?",
+          options: ["Discord or Zoom", "Phone", "In person at an event",
+                    "Whatever is easiest for you"] }
+      - { id: interview_topics, origin: new, type: long,
+          q: "Anything you'd want to talk about — or anything to avoid?",
+          help: "A story you always tell, a year that mattered, someone who should get credit." }
+      - id: interview_artifact
+        origin: new
+        type: long
+        q: "If you did one: what object would you bring?"
+        help: >-
+          A card, a trophy, a receipt, a sleeve, a photo, a scar. It is the
+          only part you get told about in advance, because choosing it is half
+          the interview. No wrong answers, and you can change your mind.
+
+  - title: The Team Serious questionnaire
+    optional: true
+    blurb: >-
+      The actual point of the exercise. Answer at whatever length you like;
+      one-word answers are a valid personality.
+    questions:
+      - { id: fav_member,   origin: ts, type: short,
+          q: "Favorite Team Serious member",
+          help: "Wrong answers will be published." }
+      - { id: licorice,     origin: ts, type: choice,
+          q: "Straight up: black licorice?",
+          options: ["Yes", "No", "Only under duress", "I need to tell you a story about this"] }
+      - { id: appetizing,   origin: ts, type: short,
+          q: "What Magic card looks most appetizing to you?" }
+      - { id: garfield,     origin: ts, type: long,
+          q: "You can ask Richard Garfield one question. What is it?" }
+      - { id: collection_age, origin: ts, type: short,
+          q: "What percentage of your collection is old enough to drive? Drink? Rent a car?" }
+      - { id: color,        origin: ts, type: choice,
+          q: "Favorite Magic color, because it's corny AF",
+          options: ["White", "Blue", "Black", "Red", "Green", "Colorless, and I'd like to explain"] }
+      - { id: fruit,        origin: ts, type: short,
+          q: "Favorite fruit-themed card?" }
+      - { id: pentagram,    origin: ts, type: short,
+          q: "Which Magic card would look better with a pentagram on it?" }
+      - { id: upkeep,       origin: ts, type: short,
+          q: "What would your cumulative upkeep be, if you had one?" }
+      - { id: family,       origin: ts, type: long,
+          q: "Who else in your family plays? What do your parents make of it?" }
+      - { id: sandwich,     origin: ts, type: choice,
+          q: "Sandwich punch? In?",
+          options: ["In", "Out", "Explain the rules again"] }
+      - { id: hotdogs,      origin: ts, type: short,
+          q: "How many hot dogs could you eat in under 10 minutes?" }
+      - { id: forty,        origin: ts, type: choice,
+          q: "Hour Power or Edward 40 Hands?",
+          options: ["Hour Power", "Edward 40 Hands", "Neither, I have children now"] }
+      - { id: mustard,      origin: ts, type: choice,
+          q: "Stadium mustard or ballpark mustard?",
+          options: ["Stadium", "Ballpark", "This question is beneath me"] }
+      - { id: proxy,        origin: new, type: choice,
+          q: "Proxies: where do you land?",
+          options: ["Real cards or nothing", "Proxy the power, own the rest",
+                    "Full proxy, more games", "Depends who's asking"] }
+      - { id: worst_take,   origin: new, type: long,
+          q: "Your worst Magic take, stated with full confidence" }
+      - { id: never_sleeve, origin: new, type: short,
+          q: "A card you would never sleeve, on principle" }
+      - { id: beat_up,      origin: new, type: long,
+          q: "Your most beat-up card, and why you won't replace it" }
+      - { id: traded_away,  origin: new, type: short,
+          q: "Something you traded away that still stings" }
+      - { id: ban_one,      origin: new, type: short,
+          q: "You may ban one card forever. Is the format grateful or furious?" }
+      - { id: sleeves,      origin: new, type: choice,
+          q: "Sleeves",
+          options: ["Matte", "Glossy", "Whatever is in the bag",
+                    "I have strong feelings and will be sharing them"] }
+      - { id: heckle,       origin: new, type: long,
+          q: "Best heckle you've given or taken" }
+      - { id: rule_wrong,   origin: new, type: short,
+          q: "A rule you had wrong for years" }
+      - { id: most_ts,      origin: new, type: long,
+          q: "The most Team Serious thing you have ever witnessed",
+          help: "You do not have to name names. You may name names." }
+      - { id: hall_of_fame, origin: new, type: short,
+          q: "One thing — not a person — for the Team Serious hall of fame" }
+      - { id: teach_one,    origin: new, type: short,
+          q: "You can teach someone one format. Which, and why that one?" }
+
+  - title: On the road
+    optional: true
+    blurb: >-
+      Half of this is the driving and the eating, and everybody knows it.
+    questions:
+      - { id: radius,   origin: new, type: choice,
+          q: "How far will you go for an event?",
+          options: ["Across town", "A couple of hours", "Half a day's drive",
+                    "I will fly", "I have driven somewhere I should not have"] }
+      - { id: car_food, origin: new, type: short,
+          q: "What's in the car for a long drive?" }
+      - { id: best_meal, origin: new, type: long,
+          q: "Best meal on a Magic trip. Be specific — name the place.",
+          help: "This is a legitimate historical record and will be treated as one." }
+      - { id: worst_venue, origin: new, type: long,
+          q: "Worst venue you've played in, and would you go back?" }
+      - { id: gas_station, origin: new, type: short,
+          q: "Defend one gas station food item" }
+      - { id: travel_with, origin: new, type: short,
+          q: "Who are you usually in the car with?" }
+
+  - title: Last thing
+    questions:
+      - id: suggest_questions
+        origin: new
+        type: long
+        q: "Questions we should be asking \u2014 one per line"
+        help: >-
+          Put each one on its own line so we can pull them apart. Anything
+          you would want asked of someone else counts, and anything you wish
+          we had asked you. Good ones go into the next round and into the
+          interviews.
+      - id: suggest_people
+        origin: new
+        type: long
+        q: "Who else should we be asking \u2014 one per line"
+        help: >-
+          Names, handles, "the guy who ran the thing in Sandusky". One per
+          line. We will go and find them.
+      - { id: anything,  origin: new, type: long,
+          q: "Anything we didn't ask that belongs on your page?" }
+      - { id: consent,   origin: new, type: choice, required: true,
+          q: "Okay to publish these answers on teamserio.us?",
+          options: ["Yes", "Yes, but check with me on the photo first",
+                    "Yes, but leave my last name off", "Ask me first"] }
