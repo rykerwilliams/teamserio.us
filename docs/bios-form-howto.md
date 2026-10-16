@@ -1,5 +1,20 @@
 # Making the bios form live
 
+## The live form
+
+**Send people this:**
+<https://docs.google.com/forms/d/e/1FAIpQLSf-2nNVt8Vcr-8jBLuWInMmDnmemidgcXRIQdLAVyqvejY9og/viewform>
+
+Built 2026-10-16. Responses land in **Team Serious — Bios (responses)** in
+Rajah's Drive. The form itself is `1Q3hBLrgx3M-J6mdKOBpqZQMUjSKqwrFhSXuSYWqEJ14`.
+
+Two earlier forms of the same name exist from runs that failed partway:
+`1UWQqP7WNqdfnV6Sodc4uKw3tYkaYu1P-Fbg9dGPtxB8` and
+`1ZotV0G08QpbvTXAaiZHOJQ89wId4RivWKIA7bp0B2y0`. Neither has a response sheet
+and neither should be shared. FormApp.create() runs before the rest of the
+script, so a run that throws still leaves a half-built form behind.
+
+
 The form is built by a script rather than by hand, so that the questions stay
 in the repo (`_data/bio_questions.yml`) and the form can be rebuilt from them.
 Running it takes about two minutes.
