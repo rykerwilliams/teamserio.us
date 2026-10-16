@@ -32,9 +32,15 @@ sections:
       - { id: where,    origin: new, type: short,
           q: "Where are you?",
           help: "City and state is plenty. 'Leng' is also an accepted answer." }
-      - { id: photo,    origin: new, type: upload,
-          q: "A photo of you",
-          help: "Playing, holding a trophy, or just a face. We can also pull one from an event report if you'd rather." }
+      - id: photo
+        origin: new
+        type: upload
+        q: "A photo of you \u2014 paste a link, or say 'use one of yours'"
+        help: >-
+          Anywhere we can get at it: Google Photos, Drive, Imgur, a post you
+          are in. Or reply to the confirmation email with one attached. If you
+          would rather we dug one out of an event report, say so and we will.
+
       - { id: day_job,  origin: new, type: short,
           q: "What do you do when you're not doing this?" }
       - { id: other_life, origin: new, type: long,

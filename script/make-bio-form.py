@@ -33,9 +33,16 @@ except ImportError:
     sys.exit("needs PyYAML:  pip install pyyaml")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Apps Script's FormApp can add Text, ParagraphText, MultipleChoice,
+# Checkbox, List, Scale, Grid, CheckboxGrid, Date, DateTime, Time, Duration,
+# PageBreak, SectionHeader, Image and Video items -- and nothing else.
+# There is NO addFileUploadItem: ItemType.FILE_UPLOAD can be read back from a
+# form that already has one, but cannot be created. A file-upload question has
+# to be added by hand in the Forms UI afterwards, so `upload` renders as a
+# paragraph question that asks for a link instead.
 TYPE = {"short": "addTextItem", "long": "addParagraphTextItem",
         "choice": "addMultipleChoiceItem", "scale": "addScaleItem",
-        "upload": "addFileUploadItem", "email": "addTextItem"}
+        "upload": "addParagraphTextItem", "email": "addTextItem"}
 
 HEAD = '''/**
  * Builds the Team Serious bios form.
@@ -183,9 +190,7 @@ def main():
                 v.append(f'  {q["id"]}.setHelpText({json.dumps(q["help"].strip())});')
             if q.get("options"):
                 v.append(f'  {q["id"]}.setChoiceValues({json.dumps(q["options"])});')
-            if q["type"] == "upload":
-                v.append(f'  {q["id"]}.setAllowedFileTypes('
-                         '[DriveApp.FileType.IMAGE]).setMaxFileSize(10);')
+
             if q.get("required"):
                 v.append(f'  {q["id"]}.setRequired(true);')
             out.append("\n".join(v))

@@ -49,10 +49,9 @@ function makeBioForm() {
   var where = form.addTextItem();
   where.setTitle("Where are you?");
   where.setHelpText("City and state is plenty. 'Leng' is also an accepted answer.");
-  var photo = form.addFileUploadItem();
-  photo.setTitle("A photo of you");
-  photo.setHelpText("Playing, holding a trophy, or just a face. We can also pull one from an event report if you'd rather.");
-  photo.setAllowedFileTypes([DriveApp.FileType.IMAGE]).setMaxFileSize(10);
+  var photo = form.addParagraphTextItem();
+  photo.setTitle("A photo of you \u2014 paste a link, or say 'use one of yours'");
+  photo.setHelpText("Anywhere we can get at it: Google Photos, Drive, Imgur, a post you are in. Or reply to the confirmation email with one attached. If you would rather we dug one out of an event report, say so and we will.");
   var day_job = form.addTextItem();
   day_job.setTitle("What do you do when you're not doing this?");
   var other_life = form.addParagraphTextItem();

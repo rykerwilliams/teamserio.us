@@ -51,6 +51,20 @@ generated.
 
 Small wording fixes to help text are safe. Question titles are not.
 
+## Adding a photo upload by hand
+
+The photo question asks for a link, because Apps Script **cannot create a
+file-upload question**. `FormApp` can add text, paragraph, multiple choice,
+checkbox, list, scale, grid, date, time, page break, section header, image and
+video items, and nothing else; `ItemType.FILE_UPLOAD` can be read back from a
+form that already has one but never created.
+
+If you want a real upload box, add it by hand in the Forms UI after running
+the script, and leave the link question in place for anyone who would rather
+send a URL. An uploaded file lands in your Drive and the sheet records a link
+to it. Note that uploads require the respondent to be signed in to Google,
+which the rest of this form deliberately does not.
+
 ## Known limits
 
 - Mail is sent from your own Gmail, with the usual consumer quota of about
