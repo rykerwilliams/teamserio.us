@@ -535,6 +535,135 @@
     return out.join("");
   }
 
+
+  // ---- binder view --------------------------------------------------------
+  // Nine-pocket pages in a three-ring binder, opened flat: two pages to a
+  // spread, eighteen cards, paged through like somebody's actual collection.
+  //
+  // The wear is not decoration. A card's condition is read off how long it
+  // has actually been on the list: Black Lotus has sat in these rings since
+  // January 1994 and looks it, a 2026 restriction is mint, and scrubbing back
+  // in time makes a card younger because it genuinely had not been in there
+  // as long. Ring dings fall on the INNER edge of each page, because that is
+  // where the rings are -- right edge on the left page, left edge on the
+  // right page.
+  var BINDER_SPREAD = 0;
+
+  function entryDateOf(st, name) {
+    var seq = (st.enteredR && st.enteredR[name]) || (st.enteredB && st.enteredB[name]);
+    if (!seq) return null;
+    var ev = EVENTS[seq - 1];
+    return ev ? ev.date : null;
+  }
+
+  function yearsHeld(st, ev, name) {
+    var from = entryDateOf(st, name);
+    if (!from) return 0;
+    var a = +from.slice(0, 4) + (+(from.slice(5, 7) || 6) - 1) / 12;
+    var b = +ev.date.slice(0, 4) + (+(ev.date.slice(5, 7) || 6) - 1) / 12;
+    return Math.max(0, b - a);
+  }
+
+  // 0 mint, 1 played, 2 worn, 3 beaten. Thresholds chosen so the Power is
+  // always at the top of the scale and a recent restriction is always clean.
+  function wearOf(years) {
+    if (years >= 20) return 3;
+    if (years >= 8) return 2;
+    if (years >= 2) return 1;
+    return 0;
+  }
+
+  function binderPages(st) {
+    // restricted first, then a divider, then banned
+    var pages = [], i, n;
+    var r = st.restricted.slice();
+    for (i = 0, n = 1; i < r.length; i += 9, n++) {
+      pages.push({ kind: "restricted", cards: r.slice(i, i + 9), n: n });
+    }
+    if (st.banned.length) {
+      pages.push({ kind: "divider", cards: [] });
+      var b = st.banned.slice();
+      // numbered within its own section: the banned pages are 1, 2 -- not 8,
+      // 9, 10 carried on through the divider from the restricted side
+      for (i = 0, n = 1; i < b.length; i += 9, n++) {
+        pages.push({ kind: "banned", cards: b.slice(i, i + 9), n: n });
+      }
+    }
+    return pages;
+  }
+
+  function pocketHtml(name, st, ev, side) {
+    if (!name) {
+      // an empty pocket shows the back of the card behind it
+      return '<li class="vl-pocket is-empty"><span class="vl-cardback"></span></li>';
+    }
+    var w = wearOf(yearsHeld(st, ev, name));
+    var art = smallArt(name);
+    var yrs = Math.round(yearsHeld(st, ev, name));
+    return '<li class="vl-pocket">' +
+      '<a href="#" class="vl-incard autocard vl-hist-open wear-' + w +
+      ' side-' + side + '" data-card="' + esc(name) + '"' +
+      ' title="' + esc(name) + (yrs ? " \u2014 " + yrs + "yr" + (yrs === 1 ? "" : "s") + " on the list" : "") + '">' +
+      (art ? '<img src="' + esc(art) + '" alt="' + esc(name) + '" loading="lazy">'
+           : '<span class="vl-noart">' + esc(name) + "</span>") +
+      '<span class="vl-ding vl-ding-a"></span>' +
+      '<span class="vl-ding vl-ding-b"></span>' +
+      '<span class="vl-ding vl-ding-c"></span>' +
+      '<span class="vl-crease"></span>' +
+      "</a></li>";
+  }
+
+  function pageHtml(page, st, ev, side, label) {
+    if (!page) {
+      return '<div class="vl-page is-blank"></div>';
+    }
+    if (page.kind === "divider") {
+      return '<div class="vl-page is-divider"><span>Banned</span></div>';
+    }
+    var cells = [];
+    for (var i = 0; i < 9; i++) {
+      cells.push(pocketHtml(page.cards[i], st, ev, side));
+    }
+    return '<div class="vl-page side-' + side + '">' +
+           '<span class="vl-page-label">' + esc(label) + "</span>" +
+           '<ul class="vl-nine">' + cells.join("") + "</ul></div>";
+  }
+
+  function binderHtml(st, ev) {
+    var pages = binderPages(st);
+    var spreads = Math.max(1, Math.ceil(pages.length / 2));
+    if (BINDER_SPREAD >= spreads) BINDER_SPREAD = spreads - 1;
+    if (BINDER_SPREAD < 0) BINDER_SPREAD = 0;
+
+    var li = BINDER_SPREAD * 2, ri = li + 1;
+    var left = pages[li], right = pages[ri];
+    function label(p) {
+      if (!p || p.kind === "divider") return "";
+      return (p.kind === "banned" ? "Banned" : "Restricted") +
+             " \u00b7 page " + p.n;
+    }
+
+    return '<div class="vl-binder">' +
+      '<div class="vl-binder-board">' +
+        pageHtml(left, st, ev, "left", label(left)) +
+        '<div class="vl-rings">' +
+          '<span class="vl-ring"></span><span class="vl-ring"></span>' +
+          '<span class="vl-ring"></span>' +
+        "</div>" +
+        pageHtml(right, st, ev, "right", label(right)) +
+      "</div>" +
+      '<div class="vl-binder-nav">' +
+        '<button type="button" class="vl-btn" id="vl-prev"' +
+          (BINDER_SPREAD === 0 ? " disabled" : "") +
+          '><i class="fa fa-chevron-left"></i> Back</button>' +
+        '<span class="vl-binder-count">spread ' + (BINDER_SPREAD + 1) +
+          " of " + spreads + "</span>" +
+        '<button type="button" class="vl-btn" id="vl-next"' +
+          (BINDER_SPREAD >= spreads - 1 ? " disabled" : "") +
+          '>Forward <i class="fa fa-chevron-right"></i></button>' +
+      "</div></div>";
+  }
+
   function gridHtml(current, removed, added, id) {
     var shown = current.slice();
     removed.forEach(function (n) { shown.push(n); });
@@ -592,7 +721,9 @@
     st.bAdded.forEach(function (n) { chg.push('<span class="vl-chg-r">banned ' + esc(n) + "</span>"); });
     st.bRemoved.forEach(function (n) { chg.push('<span class="vl-chg-a">unbanned ' + esc(n) + "</span>"); });
 
-    if (VIEW === "shoebox") {
+    if (VIEW === "binder") {
+      h.push(binderHtml(st, ev));
+    } else if (VIEW === "shoebox") {
       h.push(shoeboxHtml(st.restricted, st.removed, st.added,
                          "Restricted", "vl-list", "restricted", st.enteredR));
     } else {
@@ -602,7 +733,9 @@
              "<p><em>Nothing restricted yet.</em></p>");
     }
 
-    if (VIEW === "shoebox") {
+    if (VIEW === "binder") {
+      // the binder already holds both halves
+    } else if (VIEW === "shoebox") {
       h.push(shoeboxHtml(st.banned, st.bRemoved, st.bAdded,
                          "Banned", "vl-banned-list", "banned", st.enteredB));
     } else {
@@ -751,6 +884,19 @@
   function closeHistory() { if (modal) modal.classList.remove("is-open"); }
 
   document.addEventListener("click", function (e) {
+    var page = e.target.closest && e.target.closest("#vl-prev, #vl-next");
+    if (page) {
+      BINDER_SPREAD += (page.id === "vl-next" ? 1 : -1);
+      render(idx);
+      return;
+    }
+    // a card in a pocket lifts out before its details open, the way you would
+    // actually pull one to look at it
+    var pulled = e.target.closest && e.target.closest(".vl-incard");
+    if (pulled) {
+      pulled.classList.add("is-pulled");
+      setTimeout(function () { pulled.classList.remove("is-pulled"); }, 420);
+    }
     var hit = e.target.closest && e.target.closest(".vl-hist-open");
     if (hit) { e.preventDefault(); openHistory(hit.dataset.card); return; }
     if (e.target.closest && e.target.closest(".vl-hist-close")) {
@@ -811,15 +957,20 @@
     if (!viewBtn) return;
     // Font Awesome, not emoji: the box emoji rendered as a tofu square in
     // the site's font stack.
-    viewBtn.innerHTML = VIEW === "shoebox"
-      ? '<i class="fa fa-table-cells" aria-hidden="true"></i> Grid view'
-      : '<i class="fa fa-box-open" aria-hidden="true"></i> Shoebox view';
-    viewBtn.setAttribute("aria-pressed", VIEW === "shoebox" ? "true" : "false");
+    // grid -> shoebox -> binder -> grid; the button names where you go next
+    var next = {grid: "shoebox", shoebox: "binder", binder: "grid"}[VIEW] || "shoebox";
+    var icon = {shoebox: "fa-box-open", binder: "fa-book-open",
+                grid: "fa-table-cells"}[next];
+    var label = {shoebox: "Shoebox view", binder: "Binder view",
+                 grid: "Grid view"}[next];
+    viewBtn.innerHTML = '<i class="fa ' + icon + '" aria-hidden="true"></i> ' + label;
+    viewBtn.setAttribute("aria-pressed", VIEW !== "grid" ? "true" : "false");
   }
   if (viewBtn) {
     paintViewBtn();
     viewBtn.addEventListener("click", function () {
-      VIEW = VIEW === "shoebox" ? "grid" : "shoebox";
+      VIEW = {grid: "shoebox", shoebox: "binder", binder: "grid"}[VIEW] || "shoebox";
+      BINDER_SPREAD = 0;
       try { localStorage.setItem("vl-view", VIEW); } catch (e) { /* private mode */ }
       paintViewBtn();
       render(idx);
