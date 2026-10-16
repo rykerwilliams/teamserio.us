@@ -754,6 +754,7 @@
   background: linear-gradient(90deg, rgba(0,0,0,.55) 0 30%,
               rgba(238,232,222,.85) 55%, rgba(255,255,255,.5));
   box-shadow: 0 0 4px rgba(0,0,0,.55);
+  opacity: var(--ding-o, 1);
   z-index: 17;
 }
 .side-left  .vl-ding { right: -3px; }

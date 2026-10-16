@@ -564,18 +564,30 @@
     return Math.max(0, b - a);
   }
 
-  // 0 mint, 1 played, 2 worn, 3 beaten. Thresholds chosen so the Power is
-  // always at the top of the scale and a recent restriction is always clean.
-  // Wear is CONTINUOUS in years, not bucketed. Four buckets put Black Lotus
-  // (restricted 1994) one step from Lodestone Golem (2017), which is not the
-  // story the list tells. The exponent keeps recent restrictions nearly mint
-  // and loads the damage onto the cards that have sat in the rings for
-  // decades: at 8 years this returns ~0.10, at 31 years ~0.96.
+  // This view IS the timeline: scrub forward and a card has to visibly decay,
+  // so wear is driven by how long the card has been on the list at the date
+  // being shown. Each kind of damage starts at its own age and FADES IN over
+  // the years that follow, rather than popping into existence at a threshold
+  // -- so a card changes continuously while the timeline runs instead of
+  // sitting still for a decade and then jumping.
   var WEAR_FULL = 32;
+  var STAGE = {
+    silver:  [1.5, 9],   // edges start to silver
+    corners: [4, 16],    // corners rub through to white
+    ding:    [6, 13],    // the rings have been biting a while
+    crease:  [9, 19],    // first bend
+    round:   [14, 28],   // corners lose their square
+    crease2: [20, 30]    // second bend
+  };
+  function ramp(y, s0) {
+    var a = s0[0], b = s0[1];
+    return y <= a ? 0 : y >= b ? 1 : (y - a) / (b - a);
+  }
+  // Overall intensity. A gentler exponent than before, because the per-stage
+  // ramps now carry the separation between an old card and a recent one.
   function wearOf(years) {
     if (!years || years <= 0) return 0;
-    var k = Math.pow(Math.min(years, WEAR_FULL) / WEAR_FULL, 1.6);
-    return Math.max(0, Math.min(1, k));
+    return Math.min(1, Math.pow(Math.min(years, WEAR_FULL) / WEAR_FULL, 0.85));
   }
 
   function binderPages(st) {
@@ -620,33 +632,38 @@
 
   // Percentages, not pixels, so the same card wears identically in a pocket
   // (~110px), in the popout (144px) and in the hover preview (350px).
-  function wearStyle(name, k) {
-    if (k <= 0.02) return "";
+  function wearStyle(name, years) {
+    var k = wearOf(years);
+    if (k <= 0.01) return "";
     var r = rngFor(name);
+    var fSilver = ramp(years, STAGE.silver), fCorner = ramp(years, STAGE.corners);
+    var fCrease = ramp(years, STAGE.crease), fCrease2 = ramp(years, STAGE.crease2);
+    var fRound = ramp(years, STAGE.round), fDing = ramp(years, STAGE.ding);
     var v = [];
     function n(x) { return Math.round(x * 100) / 100; }
     // Corners go first and whitest -- that is where a card actually rubs.
     var corners = ["c1", "c2", "c3", "c4"];
     for (var i = 0; i < 4; i++) {
-      v.push("--" + corners[i] + ":" + n((2 + r() * 6) * k) + "%");
-      v.push("--" + corners[i] + "-i:" + n((0.6 + r() * 2.4) * k) + "%");
-      v.push("--" + corners[i] + "-o:" + n((0.25 + r() * 0.6) * k));
+      v.push("--" + corners[i] + ":" + n((2 + r() * 6) * k * fCorner) + "%");
+      v.push("--" + corners[i] + "-i:" + n((0.6 + r() * 2.4) * k * fCorner) + "%");
+      v.push("--" + corners[i] + "-o:" + n((0.25 + r() * 0.6) * k * fCorner));
     }
     // Each edge wears differently; a card leans in its pocket.
     var edges = ["et", "eb", "el", "er"];
     for (var j = 0; j < 4; j++) {
-      v.push("--" + edges[j] + ":" + n((0.15 + r() * 1.35) * k) + "%");
-      v.push("--" + edges[j] + "-o:" + n((0.15 + r() * 0.7) * k));
+      v.push("--" + edges[j] + ":" + n((0.15 + r() * 1.35) * k * fSilver) + "%");
+      v.push("--" + edges[j] + "-o:" + n((0.15 + r() * 0.7) * k * fSilver));
     }
     v.push("--vig:" + n(2 + r() * 20 * k) + "px");
     v.push("--cr-a:" + n(r() * 360) + "deg");
     v.push("--cr-p:" + n(22 + r() * 56) + "%");
-    v.push("--cr-o:" + n((0.12 + r() * 0.3) * k));
+    v.push("--cr-o:" + n((0.12 + r() * 0.3) * k * fCrease));
     v.push("--cr2-a:" + n(r() * 360) + "deg");
     v.push("--cr2-p:" + n(22 + r() * 56) + "%");
-    v.push("--cr2-o:" + n((0.08 + r() * 0.24) * k));
-    v.push("--round:" + n(r() * 8 * k) + "%");
+    v.push("--cr2-o:" + n((0.08 + r() * 0.24) * k * fCrease2));
+    v.push("--round:" + n(r() * 8 * fRound) + "%");
     v.push("--tilt:" + n((r() - 0.5) * 1.8 * k) + "deg");
+    v.push("--ding-o:" + n(fDing));
     v.push("--ding-y:" + n((r() - 0.5) * 5) + "px");
     v.push("--ding-h:" + n(11 + r() * 13 * k) + "px");
     return v.join(";");
@@ -654,12 +671,12 @@
 
   // One overlay, used by the pocket, the popout and the hover preview, so a
   // card cannot look pristine in one and chewed in another.
-  function wearOverlay(k, ringed) {
+  function wearOverlay(years, ringed) {
     var h = "";
-    if (k > 0.03) h += '<span class="vl-edge"></span>';
-    if (ringed && k > 0.07) h += '<span class="vl-ding"></span>';
-    if (k > 0.22) h += '<span class="vl-crease"></span>';
-    if (k > 0.55) h += '<span class="vl-crease vl-crease-2"></span>';
+    if (years > STAGE.silver[0]) h += '<span class="vl-edge"></span>';
+    if (ringed && years > STAGE.ding[0]) h += '<span class="vl-ding"></span>';
+    if (years > STAGE.crease[0]) h += '<span class="vl-crease"></span>';
+    if (years > STAGE.crease2[0]) h += '<span class="vl-crease vl-crease-2"></span>';
     return h;
   }
 
@@ -670,20 +687,21 @@
       // an empty pocket shows the back of the card behind it
       return '<li class="vl-pocket is-empty"><span class="vl-cardback"></span></li>';
     }
-    var k = wearOf(yearsHeld(st, ev, name));
-    var w = k > 0.55 ? 3 : k > 0.22 ? 2 : k > 0.03 ? 1 : 0;
+    var held = yearsHeld(st, ev, name);
+    var w = held > STAGE.crease2[0] ? 3 : held > STAGE.crease[0] ? 2
+          : held > STAGE.silver[0] ? 1 : 0;
     var art = smallArt(name);
     var yrs = Math.round(yearsHeld(st, ev, name));
     return '<li class="vl-pocket">' +
       '<a href="#" class="vl-incard autocard vl-hist-open wear-' + w +
-      ' side-' + side + '" style="' + wearStyle(name, k) + '"' +
-      ' data-wear="' + (Math.round(k * 1000) / 1000) + '"' +
+      ' side-' + side + '" style="' + wearStyle(name, held) + '"' +
+      ' data-years="' + (Math.round(held * 100) / 100) + '"' +
       ' data-ring="' + (ringed ? 1 : 0) + '"' +
       ' data-card="' + esc(name) + '"' +
       ' title="' + esc(name) + (yrs ? " \u2014 " + yrs + "yr" + (yrs === 1 ? "" : "s") + " on the list" : "") + '">' +
       (art ? '<img src="' + esc(art) + '" alt="' + esc(name) + '" loading="lazy">'
            : '<span class="vl-noart">' + esc(name) + "</span>") +
-      wearOverlay(k, ringed) +
+      wearOverlay(held, ringed) +
       "</a></li>";
   }
 
@@ -921,18 +939,18 @@
       if (VIEW !== "binder") return;
       var card = link.closest && link.closest(".vl-incard");
       if (!card) return;
-      var k = parseFloat(card.dataset.wear || "0");
-      if (k <= 0.02) return;
+      var held = parseFloat(card.dataset.years || "0");
+      if (held <= STAGE.silver[0]) return;
       wrap.className += " " +
         (card.className.indexOf("side-right") >= 0 ? "side-right" : "side-left");
       wrap.setAttribute("style",
         (wrap.getAttribute("style") || "") + ";" + (card.getAttribute("style") || ""));
       wrap.insertAdjacentHTML("beforeend",
-        wearOverlay(k, card.dataset.ring === "1"));
+        wearOverlay(held, card.dataset.ring === "1"));
     };
   }
 
-  var PULLED_STYLE = "", PULLED_SIDE = "", PULLED_K = 0;
+  var PULLED_STYLE = "", PULLED_SIDE = "", PULLED_YEARS = 0;
   var PULLED_RINGED = false;
 
   function openHistory(name) {
@@ -948,7 +966,7 @@
       h.push('<span class="vl-hist-cardwrap ' +
              (VIEW === "binder" ? PULLED_SIDE : "") + '" style="' +
              (VIEW === "binder" ? PULLED_STYLE : "") + '">' +
-             (VIEW === "binder" ? wearOverlay(PULLED_K, PULLED_RINGED) : "") +
+             (VIEW === "binder" ? wearOverlay(PULLED_YEARS, PULLED_RINGED) : "") +
              '</span>');
       h.push('<img class="vl-hist-art" src="' + esc(info.image) +
              '" alt="" loading="lazy">');
@@ -997,7 +1015,7 @@
       // the popout shows the same card in the same condition as the one in
       // the pocket; a pristine scan next to a chewed one looks like a bug
       PULLED_STYLE = pulled.getAttribute("style") || "";
-      PULLED_K = parseFloat(pulled.dataset.wear || "0");
+      PULLED_YEARS = parseFloat(pulled.dataset.years || "0");
       PULLED_SIDE = pulled.className.indexOf("side-right") >= 0
         ? "side-right" : "side-left";
       PULLED_RINGED = !!pulled.querySelector(".vl-ding");
