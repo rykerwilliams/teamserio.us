@@ -2637,12 +2637,12 @@
   "Stroke of Genius": {
    "type_line": "Instant",
    "mana_cost": "{X}{2}{U}",
-   "set": "JGP",
-   "set_name": "Judge Gift Cards 1998",
-   "released_at": "1998-01-01",
+   "set": "USG",
+   "set_name": "Urza's Saga",
+   "released_at": "1998-10-12",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/jgp/2/stroke-of-genius?utm_source=api",
-   "image": "https://cards.scryfall.io/normal/front/a/5/a5423cb8-38a2-4769-8999-de6ab5ebc294.jpg?1783946579",
+   "scryfall_uri": "https://scryfall.com/card/usg/100/stroke-of-genius?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/5/e/5e977755-8ea4-4a8b-90c4-dd175321e05d.jpg?1783946354",
    "total_paper_printings": 9
   },
   "Tolarian Academy": {
@@ -3319,12 +3319,12 @@
   "Urza's Saga": {
    "type_line": "Enchantment Land \u2014 Urza's Saga",
    "mana_cost": null,
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
    "rarity": "rare",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/259s/urzas-saga?utm_source=api",
-   "image": "https://cards.scryfall.io/normal/front/1/c/1cf96437-0943-40f9-b175-31a1504028ba.jpg?1783926931",
+   "scryfall_uri": "https://scryfall.com/card/mh2/259/urzas-saga?utm_source=api",
+   "image": "https://cards.scryfall.io/normal/front/c/1/c1e0f201-42cb-46a1-901a-65bb4fc18f6c.jpg?1783926791",
    "total_paper_printings": 8
   },
   "Vexing Bauble": {
