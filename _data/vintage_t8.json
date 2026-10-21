@@ -14495,11 +14495,16 @@
     {
      "text": "Players: 103, per Melee and mtgtop8.",
      "url": "https://melee.gg/Tournament/View/12410"
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 7) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/12410"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 3,
      "player": "Yusuke Takakuwa",
      "archetype": "Coveted Jewel",
      "main": [
@@ -14557,6 +14562,7 @@
     },
     {
      "finish": "2",
+     "seed": 1,
      "player": "Chris Schiber",
      "archetype": "Initiative Hatebear",
      "main": [
@@ -14600,6 +14606,7 @@
     },
     {
      "finish": "3",
+     "seed": 5,
      "player": "Hiroki Nakatani",
      "archetype": "Dimir Control",
      "main": [
@@ -14657,6 +14664,7 @@
     },
     {
      "finish": "4",
+     "seed": 7,
      "player": "Shota Yamaguchi",
      "archetype": "Grixis Control",
      "main": [
@@ -14723,6 +14731,7 @@
     },
     {
      "finish": "5",
+     "seed": 2,
      "player": "Youhei Tsumori",
      "archetype": "Grixis Control",
      "main": [
@@ -14788,6 +14797,7 @@
     },
     {
      "finish": "6",
+     "seed": 4,
      "player": "Ryo Jumonji",
      "archetype": "Underworld Breach",
      "main": [
@@ -14851,6 +14861,7 @@
     },
     {
      "finish": "7",
+     "seed": 6,
      "player": "Kandai Sekimoto",
      "archetype": "Bazaar Aggro",
      "main": [
@@ -14887,6 +14898,7 @@
     },
     {
      "finish": "8",
+     "seed": 8,
      "player": "Gen Shinohara",
      "archetype": "Grixis Combo",
      "notes": [
@@ -15938,11 +15950,16 @@
     },
     {
      "text": "Organized by JK Entertainment. Names differ between Melee and mtgtop8 (\"Martin Lamr\" / \"Martinho1111\", \"Fabian Weiss\" / \"Fabian Friedrich\", \"Jose Alascio\" / \"Moatzu\"); mtgtop8's are kept."
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 7) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/38335"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 1,
      "player": "Lukas Schwendinger",
      "archetype": "Esper Control",
      "main": [
@@ -16008,6 +16025,7 @@
     },
     {
      "finish": "2",
+     "seed": 6,
      "player": "Hans Jacob Goddik",
      "archetype": "Dimir Control",
      "main": [
@@ -16064,6 +16082,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 4,
      "player": "Moatzu",
      "archetype": "Grixis Control",
      "main": [
@@ -16129,6 +16148,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 7,
      "player": "Eliott_dragon",
      "archetype": "Bazaar Aggro",
      "main": [
@@ -16163,6 +16183,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 2,
      "player": "Justin Gennari",
      "archetype": "Oath of Druids",
      "main": [
@@ -16219,6 +16240,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 3,
      "player": "Martinho1111",
      "archetype": "Beseech the Mirror",
      "main": [
@@ -16278,6 +16300,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Rodmanbcn",
      "archetype": "Beseech the Mirror",
      "main": [
@@ -16337,6 +16360,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 5,
      "player": "Fabian Friedrich",
      "archetype": "Oath of Druids",
      "main": [
@@ -16446,11 +16470,16 @@
     {
      "text": "mtg-jp dates the event 25-26 November; the Top 8 profiles went up on the 26th.",
      "url": "https://mtg-jp.com/coverage/pcaichi23/article/0037436/"
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/30338"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 1,
      "player": "Daisuke Hirasawa",
      "player_native": "ヒラサワ ダイスケ",
      "archetype": "Oath",
@@ -16504,6 +16533,7 @@
     },
     {
      "finish": "2",
+     "seed": 7,
      "player": "Masanori Yamamoto",
      "player_native": "山本 政徳",
      "archetype": "Paradox Combo",
@@ -16560,6 +16590,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 3,
      "player": "Masaya Takei",
      "player_native": "武井 将也",
      "archetype": "Azorius Control",
@@ -16615,6 +16646,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 5,
      "player": "Yusuke Hayasaki",
      "player_native": "早崎 祐介",
      "archetype": "Dimir Control",
@@ -16669,6 +16701,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 2,
      "player": "Yuki Ota",
      "player_native": "太田 勇輝",
      "archetype": "Mono-White Initiative",
@@ -16710,6 +16743,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 4,
      "player": "Gen Shinohara",
      "player_native": "篠原 元",
      "archetype": "Dimir Storm",
@@ -16771,6 +16805,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Kyohei Hosomi",
      "player_native": "細見 京平",
      "archetype": "Stax",
@@ -16820,6 +16855,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Tsubasa Marumo",
      "player_native": "丸茂 翼",
      "archetype": "Mono-White Initiative",
@@ -17413,11 +17449,16 @@
     {
      "text": "Placings follow the playoff matches on the Melee page: quarterfinals Ito def. Matsumoto 2-0, Sekikawa def. Hirasawa 2-0, Yokokawa def. Hosomi 2-0, Hori def. Yajima 2-1; semifinals Sekikawa def. Ito 2-0, Yokokawa def. Hori 2-1; final Yokokawa def. Sekikawa 2-0. mtg-jp's labels (優勝, 準優勝, Top 4, Top 8) put Matsumoto, the top Swiss seed, in the Top 4 and Ito in the Top 8, which the matches contradict; mtgtop8 and MTGGoldfish have them right.",
      "url": "https://melee.gg/Tournament/View/116325"
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/116325"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 2,
      "player": "Yuta Yokokawa",
      "archetype": "Esper Control",
      "notes": [
@@ -17486,6 +17527,7 @@
     },
     {
      "finish": "2",
+     "seed": 5,
      "player": "Tsubasa Sekikawa",
      "archetype": "Esper Control",
      "notes": [
@@ -17545,6 +17587,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 3,
      "player": "Masataka Hori",
      "archetype": "Mono-Blue Shops",
      "main": [
@@ -17596,6 +17639,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 8,
      "player": "Hiroki Ito",
      "archetype": "Doomsday",
      "main": [
@@ -17644,6 +17688,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 1,
      "player": "Kazuma Matsumoto",
      "archetype": "Sultai Tempo",
      "notes": [
@@ -17705,6 +17750,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 4,
      "player": "Daisuke Hirasawa",
      "archetype": "Four-color Combo",
      "main": [
@@ -17756,6 +17802,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Hiromichi Yajima",
      "player_native": "矢島 広道",
      "archetype": "Dimir Combo",
@@ -17807,6 +17854,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Kyohei Hosomi",
      "archetype": "Mono-Blue Shops",
      "notes": [
@@ -18416,11 +18464,16 @@
     {
      "text": "Organized by JK Entertainment. Four players appear on mtgtop8 under their Melee handles; their names here are from MTGGoldfish (each deck notes the handle).",
      "url": "https://www.mtggoldfish.com/articles/vintage-101-eu-eternal-weekend-2024"
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/203530"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 2,
      "player": "Samuel Mistygatz",
      "archetype": "Dredge",
      "notes": [
@@ -18461,6 +18514,7 @@
     },
     {
      "finish": "2",
+     "seed": 1,
      "player": "Juan Eliso Soto",
      "archetype": "Esper Lurrus",
      "notes": [
@@ -18518,6 +18572,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 6,
      "player": "Brian Coval",
      "archetype": "Esper Lurrus",
      "notes": [
@@ -18576,6 +18631,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 4,
      "player": "Thilo Schramm",
      "archetype": "Initiative Hatebear",
      "notes": [
@@ -18618,6 +18674,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 3,
      "player": "Oscar Basart",
      "archetype": "Coveted Jewel",
      "main": [
@@ -18669,6 +18726,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Javier Dominguez",
      "archetype": "Dimir Control",
      "main": [
@@ -18722,6 +18780,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Stefan Schütz",
      "archetype": "Doomsday",
      "main": [
@@ -18774,6 +18833,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 5,
      "player": "Cheng Guo",
      "archetype": "Initiative Hatebear",
      "main": [
