@@ -235,21 +235,33 @@
     D.events.forEach(function (ev) {
       if (!inSeries(ev)) return;
       var y = years[year(ev)] || (years[year(ev)] = { year: year(ev), lists: 0, with: 0,
-                                                       restricted: false, evs: [] });
+                                                       copies: 0, restricted: false, evs: [] });
       y.evs.push(ev);
       if ((ev.restricted || []).indexOf(key) >= 0) y.restricted = true;
       ev.decks.forEach(function (d) {
         if (!d.main) return;
         y.lists += 1;
-        if (plays(d)[key]) y.with += 1;
+        var n = plays(d)[key];
+        if (n) { y.with += 1; y.copies += n; }
       });
     });
     var ys = Object.keys(years).map(function (k) { return years[k]; })
       .filter(function (y) { return y.lists; })
       .sort(function (a, b) { return a.year - b.year; });
     var anyR = ys.some(function (y) { return y.restricted; });
-    hint.textContent = "Share of each year's Top 8 lists that play " + name +
-      (state.side ? " (main deck or sideboard)" : " in the main deck") + "." +
+    // Follows the measure above. Copies are per Top 8 list rather than a
+    // year's total: a total mostly counts how many championships a year had
+    // (three in 2020, one in 2012), where copies per list compares the years.
+    var copies = state.measure === "copies";
+    function val(y) { return copies ? y.copies / y.lists : y.with / y.lists; }
+    function fmt(v) {
+      return copies ? (Math.round(v * 10) / 10).toString() : pct(v);
+    }
+    var top = copies ? Math.max(1, Math.ceil(Math.max.apply(null, ys.map(val)))) : 1;
+    hint.textContent = (copies
+        ? "Copies of " + name + " per Top 8 list each year"
+        : "Share of each year's Top 8 lists that play " + name) +
+      (state.side ? " (main deck and sideboard)" : " (main deck)") + "." +
       (anyR ? " Shaded years: restricted at that year's championship." : "");
 
     var W = svg.parentNode.clientWidth || 700, H = 220, PADL = 36, PADB = 22, PADT = 18;
@@ -261,32 +273,32 @@
       var y = PADT + plotH * (1 - f);
       el("line", { x1: PADL, x2: W, y1: y, y2: y, "class": f ? "vd-grid" : "vd-axis" }, svg);
       text("text", { x: PADL - 6, y: y, "class": "vd-tick", "text-anchor": "end",
-                     "dominant-baseline": "central" }, pct(f), svg);
+                     "dominant-baseline": "central" }, fmt(f * top), svg);
     });
-    var peak = ys.reduce(function (m, y) {
-      return y.with / y.lists > (m ? m.with / m.lists : -1) ? y : m;
-    }, null);
+    var peak = ys.reduce(function (m, y) { return val(y) > (m ? val(m) : -1) ? y : m; }, null);
     var every = Math.ceil(ys.length / Math.max(1, Math.floor((W - PADL) / 38)));
     ys.forEach(function (y, i) {
-      var share = y.with / y.lists, x = PADL + i * band;
+      var share = y.with / y.lists, v = val(y), x = PADL + i * band;
       var g = el("g", { "class": "vd-col", tabindex: 0,
-                        "aria-label": y.year + ": " + pct(share) }, svg);
+                        "aria-label": y.year + ": " + fmt(v) + (copies ? " per list" : "") }, svg);
       el("rect", { x: x, y: 0, width: band, height: H, "class": y.restricted ? "vd-rband" : "vd-hit" }, g);
-      if (share > 0) {
-        el("path", { d: vbar(x + (band - colW) / 2, PADT + plotH, colW, Math.max(1, share * plotH)),
+      if (v > 0) {
+        el("path", { d: vbar(x + (band - colW) / 2, PADT + plotH, colW, Math.max(1, v / top * plotH)),
                      "class": "vd-bar" }, g);
       }
-      if (y === peak && share > 0) {
-        text("text", { x: x + band / 2, y: PADT + plotH * (1 - share) - 5, "class": "vd-value",
-                       "text-anchor": "middle" }, pct(share), g);
+      if (y === peak && v > 0) {
+        text("text", { x: x + band / 2, y: PADT + plotH * (1 - v / top) - 5, "class": "vd-value",
+                       "text-anchor": "middle" }, fmt(v), g);
       }
       if (i % every === 0 || i === ys.length - 1) {
         text("text", { x: x + band / 2, y: H - 6, "class": "vd-tick", "text-anchor": "middle" },
              "'" + String(y.year).slice(2), g);
       }
       hover(g, function () {
-        var rows = [[pct(share), "of " + y.year + "'s lists"],
-                    [y.with + " of " + y.lists, "lists"]];
+        var perList = (Math.round(y.copies / y.lists * 10) / 10).toString();
+        var a = [perList, "copies per list in " + y.year],
+            b = [pct(share), "of " + y.year + "'s lists (" + y.with + " of " + y.lists + ")"];
+        var rows = copies ? [a, b, [String(y.copies), "copies in all"]] : [b, a];
         if (y.restricted) rows.push(["", "Restricted"]);
         y.evs.forEach(function (ev) { rows.push(["", ev.label]); });
         return rows;
