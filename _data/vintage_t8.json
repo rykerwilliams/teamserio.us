@@ -6376,6 +6376,10 @@
     {
      "text": "Placings from the Wizards final standings (1 Kelly, 2 Greene, 3 Brophy, 4 Mastriano, 5-8 Herbig, Shay, Grudzina, Eberhart). No standings after the last Swiss round survive, so seeds are unknown.",
      "url": "https://web.archive.org/web/20170415034546/http://magic.wizards.com/en/events/coverage/vintagechamp15/final-standings-2015-08-23"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/18222"
     }
    ],
    "decks": [
@@ -6805,6 +6809,10 @@
     {
      "text": "MTGGoldfish has the same Top 8 with an exact 1st-8th order and dates it 22 October, but two of its lists have impossible counts (a 59-card main deck and a 16-card sideboard), so it was not used.",
      "url": "https://www.mtggoldfish.com/tournament/22498"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/22498"
     }
    ],
    "decks": [
@@ -6812,7 +6820,7 @@
      "finish": "1",
      "seed": 4,
      "player": "Joan Anton Mateo",
-     "archetype": "Monastery",
+     "archetype": "Mentor Control",
      "main": [
       [1,"ed85fa82"],
       [1,"376ee366"],
@@ -6867,7 +6875,7 @@
      "finish": "2",
      "seed": 7,
      "player": "Maarten Knaepen",
-     "archetype": "MUD",
+     "archetype": "Car Shops",
      "main": [
       [4,"786b3657"],
       [3,"cef7396d"],
@@ -6912,7 +6920,7 @@
      "finish": "3-4",
      "seed": 1,
      "player": "Jose Antonio Badia Garcia",
-     "archetype": "Eldrazi Aggro",
+     "archetype": "Eldrazi White",
      "main": [
       [4,"9b1f552a"],
       [4,"786b3657"],
@@ -6955,7 +6963,7 @@
      "finish": "3-4",
      "seed": 6,
      "player": "Antonio Musarra",
-     "archetype": "MUD",
+     "archetype": "Phyrexian MUD",
      "main": [
       [1,"69d994f2"],
       [1,"74027ba4"],
@@ -7041,7 +7049,7 @@
      "finish": "5-8",
      "seed": 2,
      "player": "Ladislav Loucka",
-     "archetype": "MUD",
+     "archetype": "Car Shops",
      "main": [
       [3,"7b6b9c5a"],
       [1,"8a7c6391"],
@@ -7250,19 +7258,23 @@
      "url": "https://web.archive.org/web/20161212050848/http://www.cardtitan.com/coverage"
     },
     {
-     "text": "Card Titan names no archetypes and gives no player count or Swiss standings; archetype names and the 344 players are from mtgtop8. Seeds are unknown.",
+     "text": "Card Titan names no archetypes and gives no player count or Swiss standings; the 344 players are from mtgtop8. Seeds are unknown.",
      "url": "https://www.mtgtop8.com/event?e=13958&f=VI"
     },
     {
      "text": "Swiss was played Friday 2016-10-28; the Top 8 on Sunday 2016-10-30. mtgtop8 dates the event to the Friday.",
      "url": "https://web.archive.org/web/20161212050848/http://www.cardtitan.com/coverage"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/22546"
     }
    ],
    "decks": [
     {
      "finish": "1",
      "player": "Joseph Bogaard",
-     "archetype": "Landstill",
+     "archetype": "EmraStill",
      "main": [
       [1,"5089ec1a"],
       [1,"824597b8"],
@@ -7355,7 +7367,7 @@
     {
      "finish": "3",
      "player": "Hiromichi Ito",
-     "archetype": "MUD",
+     "archetype": "Car Shops",
      "main": [
       [1,"5089ec1a"],
       [1,"2c63e4e1"],
@@ -7399,7 +7411,7 @@
     {
      "finish": "4",
      "player": "Joe Brennan",
-     "archetype": "Monastery",
+     "archetype": "Jeskai Mentor",
      "main": [
       [1,"5089ec1a"],
       [1,"376ee366"],
@@ -7453,7 +7465,7 @@
     {
      "finish": "5",
      "player": "Michael VanDyke",
-     "archetype": "Eldrazi Aggro",
+     "archetype": "White Eldrazi",
      "main": [
       [1,"5089ec1a"],
       [1,"2c63e4e1"],
@@ -7496,7 +7508,7 @@
     {
      "finish": "6",
      "player": "Brian Pallas",
-     "archetype": "Monastery",
+     "archetype": "Esper Thoughtcast Mentor",
      "main": [
       [1,"5089ec1a"],
       [1,"376ee366"],
@@ -7553,7 +7565,7 @@
     {
      "finish": "7",
      "player": "Derek Gallacher",
-     "archetype": "Eldrazi Aggro",
+     "archetype": "JacoDrazi",
      "main": [
       [1,"a698c9f5"],
       [1,"deeb7e22","Worldbreaker"],
@@ -7597,7 +7609,7 @@
     {
      "finish": "8",
      "player": "Andrew Markiton",
-     "archetype": "Eldrazi Aggro",
+     "archetype": "TKS/Ravager Shops",
      "main": [
       [1,"5089ec1a"],
       [1,"2c63e4e1"],
@@ -7693,6 +7705,10 @@
     },
     {
      "text": "The winner's deck is \"Eldrazi Aggro\" on mtgtop8, \"White Eldrazi\" on the organizer's page and \"Displacer Taxes\" on MTGGoldfish."
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events. Kept from the earlier source where Goldfish names only colours or lists no deck: Sergio Matesanz Garcia (not on Goldfish).",
+     "url": "https://www.mtggoldfish.com/tournament/23947"
     }
    ],
    "decks": [
@@ -7700,7 +7716,7 @@
      "finish": "1",
      "seed": 1,
      "player": "Joaquín Solís",
-     "archetype": "Eldrazi Aggro",
+     "archetype": "Displacer Taxes",
      "notes": [
       {
        "text": "mtgtop8's page has the name with broken accents (\"Joaqu­n Sol­s\")."
@@ -7747,7 +7763,7 @@
      "finish": "2",
      "seed": 3,
      "player": "Aurelio Crespo",
-     "archetype": "MUD",
+     "archetype": "Ravager Shops",
      "main": [
       [1,"a698c9f5"],
       [1,"340bbe8b"],
@@ -7791,7 +7807,7 @@
      "finish": "3-4",
      "seed": 5,
      "player": "Javier Rodriguez Pozo",
-     "archetype": "2/1 Control",
+     "archetype": "Team Leovold",
      "main": [
       [1,"2bb2eda7"],
       [1,"112322ad"],
@@ -7890,7 +7906,7 @@
      "finish": "5-8",
      "seed": 4,
      "player": "Ruben Gonzalez Caballero",
-     "archetype": "Grixis Control",
+     "archetype": "Grixis Thieves",
      "main": [
       [1,"376ee366"],
       [1,"2c63e4e1"],
@@ -7942,7 +7958,7 @@
      "finish": "5-8",
      "seed": 8,
      "player": "Steven Martens",
-     "archetype": "Monastery",
+     "archetype": "Mystic Mentor",
      "main": [
       [1,"17fa98cd"],
       [1,"82004860"],
@@ -8061,7 +8077,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "Pierrick Mode",
-     "archetype": "MUD",
+     "archetype": "Hot Wheels Shops",
      "main": [
       [1,"69d994f2"],
       [1,"6ad8011d"],
@@ -8154,6 +8170,10 @@
     {
      "text": "Card Titan prints \"Rich Shay, Ph.D.\"; mtgtop8 has Patrick Fehling and Ibrahim \"Alridge\"; Eternal Central spells Vergo both \"Vergo\" and \"Vargo\".",
      "url": "https://web.archive.org/web/20171030205051/http://www.cardtitan.com/coverage"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/25507"
     }
    ],
    "decks": [
@@ -8204,7 +8224,7 @@
      "finish": "2",
      "seed": 2,
      "player": "Rich Shay",
-     "archetype": "Ravager Shops (Pirate Stompy)",
+     "archetype": "Ravager Shops",
      "main": [
       [4,"23467047"],
       [4,"5963e0ef"],
@@ -8246,7 +8266,7 @@
      "finish": "3-4",
      "seed": 3,
      "player": "Pat Fehling",
-     "archetype": "Oath of Druids",
+     "archetype": "Inferno Oath",
      "main": [
       [1,"b2c6aa39"],
       [2,"f3c7af78"],
@@ -8349,7 +8369,7 @@
      "finish": "5-8",
      "seed": 5,
      "player": "Ibrahim Aldridge",
-     "archetype": "Oath of Druids",
+     "archetype": "Oath",
      "main": [
       [1,"b2c6aa39"],
       [1,"f3c7af78"],
@@ -8410,7 +8430,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "Brian Kelly",
-     "archetype": "Inferno Titan Oath of Druids",
+     "archetype": "Inferno Oath",
      "main": [
       [1,"b2c6aa39"],
       [2,"f3c7af78"],
@@ -11653,7 +11673,7 @@
    },
    "notes": [
     {
-     "text": "Placings (1 to 8, as magic.gg numbers them) and archetype names are from magic.gg's Tolarian Academy Championship results table; mtgo.com names no archetypes.",
+     "text": "Placings (1 to 8, as magic.gg numbers them) are from magic.gg's Tolarian Academy Championship results table.",
      "url": "https://magic.gg/news/eternal-weekend-2020-vintage-highlights"
     },
     {
@@ -11667,6 +11687,10 @@
     {
      "text": "Seeds are the seeding shown in mtgo.com's Top 8 bracket.",
      "url": "https://www.mtgo.com/decklist/vintage-eternal-weekend-academy-2020-10-2412221035"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events. Kept from the earlier source where Goldfish names only colours or lists no deck: Amiracle (Goldfish: 'WUR'); Gernardi (Goldfish: 'URG'); umeck (Goldfish: 'Colorless').",
+     "url": "https://www.mtggoldfish.com/tournament/32874"
     }
    ],
    "decks": [
@@ -11883,7 +11907,7 @@
      "finish": "5",
      "seed": 5,
      "player": "MartinMedMitten",
-     "archetype": "Grixis Xerox",
+     "archetype": "Grixis Underworld Breach",
      "main": [
       [1,"550c74d4"],
       [1,"5089ec1a"],
@@ -12147,7 +12171,7 @@
    },
    "notes": [
     {
-     "text": "Placings (1 to 8, as magic.gg numbers them) and archetype names are from magic.gg's Library of Alexandria Championship results table; mtgo.com names no archetypes.",
+     "text": "Placings (1 to 8, as magic.gg numbers them) are from magic.gg's Library of Alexandria Championship results table.",
      "url": "https://magic.gg/news/eternal-weekend-2020-vintage-highlights"
     },
     {
@@ -12161,6 +12185,10 @@
     {
      "text": "Seeds are the seeding shown in mtgo.com's Top 8 bracket.",
      "url": "https://www.mtgo.com/decklist/vintage-eternal-weekend-library-2020-10-2412221036"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events. Kept from the earlier source where Goldfish names only colours or lists no deck: KevinCron (Goldfish: 'WUR'); Tezzeret01 (Goldfish: 'WUBR'); stonepeanut (Goldfish: 'Colorless'); WingedHussar (Goldfish: 'WUBRG'); 0inksterthepig (Goldfish: 'URG').",
+     "url": "https://www.mtggoldfish.com/tournament/32884"
     }
    ],
    "decks": [
@@ -12417,7 +12445,7 @@
      "finish": "6",
      "seed": 6,
      "player": "IamActuallyLvL1",
-     "archetype": "Esper Paradoxical Outcome",
+     "archetype": "Paradoxical Outcome",
      "main": [
       [1,"322f0459"],
       [1,"ededbdae"],
@@ -12629,7 +12657,7 @@
    "partial": true,
    "notes": [
     {
-     "text": "ecobaronen (Doomsday, seed 3) won the Top 8 on Magic Online, beating StaticGripped in the final, but was disqualified without prizes afterwards for agreeing a prize split in round 10. magic.gg's results table lists only seven players, StaticGripped 1st to mattb 7th, with everyone below ecobaronen moved up one place; placings and archetype names here follow that table. ecobaronen's list is left out because the official results give him no place in the Top 8; it is on mtgo.com, which (like mtgtop8) still ranks him 1st and StaticGripped 2nd.",
+     "text": "ecobaronen (Doomsday, seed 3) won the Top 8 on Magic Online, beating StaticGripped in the final, but was disqualified without prizes afterwards for agreeing a prize split in round 10. magic.gg's results table lists only seven players, StaticGripped 1st to mattb 7th, with everyone below ecobaronen moved up one place; placings here follow that table. ecobaronen's list is left out because the official results give him no place in the Top 8; it is on mtgo.com, which (like mtgtop8) still ranks him 1st and StaticGripped 2nd.",
      "url": "https://magic.gg/news/eternal-weekend-2020-vintage-highlights"
     },
     {
@@ -12651,6 +12679,10 @@
     {
      "text": "Seeds are the seeding shown in mtgo.com's Top 8 bracket.",
      "url": "https://www.mtgo.com/decklist/vintage-eternal-weekend-workshop-2020-10-2512221037"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events. Kept from the earlier source where Goldfish names only colours or lists no deck: StaticGripped (Goldfish: 'Colorless'); Bosh N Roll (Goldfish: 'URG'); Antarctica (Goldfish: 'Colorless'); Aylett (Goldfish: 'UBRG').",
+     "url": "https://www.mtggoldfish.com/tournament/32883"
     }
    ],
    "decks": [
@@ -12755,7 +12787,7 @@
      "finish": "3",
      "seed": 2,
      "player": "Magni_93",
-     "archetype": "Jeskai Xerox",
+     "archetype": "4c Underworld Breach",
      "main": [
       [1,"5089ec1a"],
       [2,"464c0150"],
@@ -12864,7 +12896,7 @@
      "finish": "5",
      "seed": 6,
      "player": "Dan9IN",
-     "archetype": "HogaakVine",
+     "archetype": "Hogaak Vine",
      "main": [
       [4,"54022a10"],
       [4,"22f1a4a4"],
@@ -13043,7 +13075,7 @@
    },
    "notes": [
     {
-     "text": "Placings are from mtgo.com (its final ranking and Top 8 bracket); there was no written coverage. mtgo.com names no archetypes; archetype names are mtgtop8's.",
+     "text": "Placings are from mtgo.com (its final ranking and Top 8 bracket); there was no written coverage. mtgo.com names no archetypes.",
      "url": "https://www.mtgtop8.com/event?e=33789&f=VI"
     },
     {
@@ -13057,6 +13089,10 @@
     {
      "text": "Seeds are the seeding shown in mtgo.com's Top 8 bracket.",
      "url": "https://www.mtgo.com/decklist/vintage-eternal-weekend-mox-emerald-2021-11-2712359294"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/37776"
     }
    ],
    "decks": [
@@ -13064,7 +13100,7 @@
      "finish": "1",
      "seed": 3,
      "player": "Vivarus",
-     "archetype": "Underworld Breach",
+     "archetype": "4c Tinker",
      "main": [
       [1,"550c74d4"],
       [1,"5089ec1a"],
@@ -13129,7 +13165,7 @@
      "finish": "2",
      "seed": 2,
      "player": "_Pady_",
-     "archetype": "UB Control",
+     "archetype": "Esper Tinker",
      "main": [
       [1,"550c74d4"],
       [1,"5089ec1a"],
@@ -13190,7 +13226,7 @@
      "finish": "3-4",
      "seed": 1,
      "player": "Nick_Fox",
-     "archetype": "Paradoxical Storm",
+     "archetype": "Paradoxical Outcome",
      "main": [
       [1,"550c74d4"],
       [1,"5089ec1a"],
@@ -13251,7 +13287,7 @@
      "finish": "3-4",
      "seed": 4,
      "player": "Vizzerdrix",
-     "archetype": "Bazaar Aggro",
+     "archetype": "Counter Vine",
      "main": [
       [4,"54022a10"],
       [4,"4e734493"],
@@ -13338,7 +13374,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "Naoto",
-     "archetype": "Planeswalker Control",
+     "archetype": "4c Tempo",
      "notes": [
       {
        "text": "Main deck of 61 cards as registered on Magic Online (mtgtop8 also has 61); kept as listed.",
@@ -13439,7 +13475,7 @@
      "finish": "5-8",
      "seed": 8,
      "player": "yamakiller",
-     "archetype": "Underworld Breach",
+     "archetype": "Grixis Underworld Breach",
      "main": [
       [1,"f9db72dc"],
       [1,"550c74d4"],
@@ -13545,7 +13581,7 @@
    },
    "notes": [
     {
-     "text": "Placings are from mtgo.com (its final ranking and Top 8 bracket); there was no written coverage. mtgo.com names no archetypes; archetype names are mtgtop8's, which has only three of these decks (abethemage, swengen, jamiewvh); the other five archetypes are null.",
+     "text": "Placings are from mtgo.com (its final ranking and Top 8 bracket); there was no written coverage. mtgo.com names no archetypes.",
      "url": "https://www.mtgtop8.com/event?e=33790&f=VI"
     },
     {
@@ -13559,6 +13595,10 @@
     {
      "text": "Seeds are the seeding shown in mtgo.com's Top 8 bracket.",
      "url": "https://www.mtgo.com/decklist/vintage-eternal-weekend-timetwister-2021-11-2712359295"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/37777"
     }
    ],
    "decks": [
@@ -13566,7 +13606,7 @@
      "finish": "1",
      "seed": 4,
      "player": "abethemage",
-     "archetype": "Grixis Control",
+     "archetype": "4c Tinker",
      "main": [
       [1,"ededbdae"],
       [1,"550c74d4"],
@@ -13625,7 +13665,7 @@
      "finish": "2",
      "seed": 2,
      "player": "swengen",
-     "archetype": "UR Aggro",
+     "archetype": "Izzet Tempo",
      "main": [
       [3,"09a70ae8"],
       [4,"c718911c"],
@@ -13676,7 +13716,7 @@
      "finish": "3-4",
      "seed": 1,
      "player": "jamiewvh",
-     "archetype": "Hatebear",
+     "archetype": "Orzhov Aggro",
      "main": [
       [1,"5089ec1a"],
       [1,"6284ef01"],
@@ -13717,6 +13757,7 @@
      "finish": "3-4",
      "seed": 3,
      "player": "SentientTea",
+     "archetype": "Izzet Tempo",
      "main": [
       [1,"550c74d4"],
       [1,"5089ec1a"],
@@ -13764,6 +13805,7 @@
      "finish": "5-8",
      "seed": 5,
      "player": "Talisker",
+     "archetype": "Grixis Underworld Breach",
      "main": [
       [1,"9d4b1e44"],
       [1,"ab26fbe2"],
@@ -13822,6 +13864,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "eggybenny",
+     "archetype": "WB",
      "main": [
       [4,"ceef2d5a"],
       [3,"774dce79"],
@@ -13874,6 +13917,7 @@
      "finish": "5-8",
      "seed": 7,
      "player": "NooxTom",
+     "archetype": "Grixis Tempo",
      "main": [
       [1,"d5ed1233"],
       [1,"ed85fa82"],
@@ -13921,6 +13965,7 @@
      "finish": "5-8",
      "seed": 8,
      "player": "discoverN",
+     "archetype": "Doomsday",
      "main": [
       [3,"cb027150"],
       [1,"d0209d3f"],
@@ -14015,7 +14060,7 @@
    },
    "notes": [
     {
-     "text": "Placings are from mtgo.com (its final ranking and Top 8 bracket); there was no written coverage. mtgo.com names no archetypes; archetype names are mtgtop8's.",
+     "text": "Placings are from mtgo.com (its final ranking and Top 8 bracket); there was no written coverage. mtgo.com names no archetypes.",
      "url": "https://www.mtgtop8.com/event?e=33788&f=VI"
     },
     {
@@ -14029,6 +14074,10 @@
     {
      "text": "Seeds are the seeding shown in mtgo.com's Top 8 bracket.",
      "url": "https://www.mtgo.com/decklist/vintage-eternal-weekend-mox-ruby-2021-11-2812359296"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/37785"
     }
    ],
    "decks": [
@@ -14036,7 +14085,7 @@
      "finish": "1",
      "seed": 3,
      "player": "CookieKid00",
-     "archetype": "Underworld Breach",
+     "archetype": "Grixis Underworld Breach",
      "main": [
       [1,"4b22be3a"],
       [1,"550c74d4"],
@@ -14095,7 +14144,7 @@
      "finish": "2",
      "seed": 1,
      "player": "VictorJudge",
-     "archetype": "Planeswalker Control",
+     "archetype": "RUG Control",
      "main": [
       [4,"09dd85aa"],
       [1,"d21a89eb"],
@@ -14139,7 +14188,7 @@
      "finish": "3-4",
      "seed": 2,
      "player": "rada2222",
-     "archetype": "Paradoxical Storm",
+     "archetype": "Paradoxical Outcome",
      "main": [
       [1,"a20dd48d"],
       [1,"ab26fbe2"],
@@ -14200,7 +14249,7 @@
      "finish": "3-4",
      "seed": 4,
      "player": "medvedev",
-     "archetype": "MUD",
+     "archetype": "Aggro Shops",
      "main": [
       [4,"09c96077"],
       [1,"5089ec1a"],
@@ -14248,7 +14297,7 @@
      "finish": "5-8",
      "seed": 5,
      "player": "lsv",
-     "archetype": "Underworld Breach",
+     "archetype": "Grixis Underworld Breach",
      "main": [
       [1,"4b22be3a"],
       [1,"ab26fbe2"],
@@ -14303,7 +14352,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "heartattackmuffin",
-     "archetype": "BUG Midrange",
+     "archetype": "Sultai Midrange",
      "main": [
       [1,"c85d824b"],
       [1,"0efb0d7e"],
@@ -14489,7 +14538,7 @@
      "text": "Held inside Players Convention Aichi 2022, organized by BIG MAGIC. mtg-jp prints card names in Japanese (Power, duals and other old cards in English); `name` is the English name, checked against Scryfall and mtg-jp's own English export, and `printed_as` the Japanese as printed. Seven lists match mtgtop8's copy of the Melee lists card for card."
     },
     {
-     "text": "Placings 1st-8th are mtg-jp's. mtgtop8's Top 8 is wrong: it ranks Chris Schiber 1st and Youhei Tsumori 2nd, puts the champion Takakuwa in 3-4, and leaves out Gen Shinohara. The final report spells the runner-up \"Chris Schiver\". mtg-jp gives no archetypes; they are mtgtop8's.",
+     "text": "Placings 1st-8th are mtg-jp's. mtgtop8's Top 8 is wrong: it ranks Chris Schiber 1st and Youhei Tsumori 2nd, puts the champion Takakuwa in 3-4, and leaves out Gen Shinohara. The final report spells the runner-up \"Chris Schiver\".",
      "url": "https://mtg-jp.com/coverage/aew22/article/0036550/"
     },
     {
@@ -14499,6 +14548,10 @@
     {
      "text": "Seeds are the standings after the last Swiss round (Round 7) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
      "url": "https://melee.gg/Tournament/View/12410"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/41301"
     }
    ],
    "decks": [
@@ -14506,7 +14559,7 @@
      "finish": "1",
      "seed": 3,
      "player": "Yusuke Takakuwa",
-     "archetype": "Coveted Jewel",
+     "archetype": "Mono-Blue Combo",
      "main": [
       [1,"b2c6aa39","島"],
       [1,"dba4fd31","トレイリアのアカデミー"],
@@ -14564,7 +14617,7 @@
      "finish": "2",
      "seed": 1,
      "player": "Chris Schiber",
-     "archetype": "Initiative Hatebear",
+     "archetype": "Mono-White Aggro",
      "main": [
       [4,"bc71ebf6","平地"],
       [2,"59119143","カラカス"],
@@ -14608,7 +14661,7 @@
      "finish": "3",
      "seed": 5,
      "player": "Hiroki Nakatani",
-     "archetype": "Dimir Control",
+     "archetype": "Dimir Combo",
      "main": [
       [1,"b2c6aa39","島"],
       [4,"4b22be3a"],
@@ -14666,7 +14719,7 @@
      "finish": "4",
      "seed": 7,
      "player": "Shota Yamaguchi",
-     "archetype": "Grixis Control",
+     "archetype": "Four-color Combo",
      "main": [
       [1,"b2c6aa39","島"],
       [1,"02418479"],
@@ -14733,7 +14786,7 @@
      "finish": "5",
      "seed": 2,
      "player": "Youhei Tsumori",
-     "archetype": "Grixis Control",
+     "archetype": "Four-color Combo",
      "main": [
       [1,"b2c6aa39","島"],
       [2,"4b22be3a"],
@@ -14863,7 +14916,7 @@
      "finish": "7",
      "seed": 6,
      "player": "Kandai Sekimoto",
-     "archetype": "Bazaar Aggro",
+     "archetype": "Hogaak Vine",
      "main": [
       [4,"7c427c3d","ガイアの揺籃の地"],
       [3,"bf1341dd","耐え抜くもの、母聖樹"],
@@ -15018,8 +15071,12 @@
      "text": "MTGO lists a card once per printing (e.g. 2 Tundra and 1 Tundra); such rows are combined here."
     },
     {
-     "text": "MTGO does not name decks; archetypes are mtgtop8's. MTGGoldfish calls the winning deck \"Counter Vine\" where mtgtop8 has \"Bazaar Aggro\".",
+     "text": "MTGO does not name decks.",
      "url": "https://www.mtgtop8.com/event?e=40174&f=VI"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/41768"
     }
    ],
    "decks": [
@@ -15027,7 +15084,7 @@
      "finish": "1",
      "seed": 4,
      "player": "JUJUBEAN__2004",
-     "archetype": "Bazaar Aggro",
+     "archetype": "Counter Vine",
      "notes": [
       {
        "text": "Identified as Julian Jakobovits (USA) by the magiclibrarities prize-painting index."
@@ -15068,7 +15125,7 @@
      "finish": "2",
      "seed": 2,
      "player": "ziofrancone",
-     "archetype": "Esper Control",
+     "archetype": "Esper Tinker",
      "notes": [
       {
        "text": "MTGO name of Franco Cicchini, the Eternal Weekend Europe 2025 winner."
@@ -15139,7 +15196,7 @@
      "finish": "3-4",
      "seed": 1,
      "player": "taruto1212",
-     "archetype": "Jeskai Xerox",
+     "archetype": "Jeskai Control",
      "main": [
       [1,"550c74d4"],
       [1,"5089ec1a"],
@@ -15190,7 +15247,7 @@
      "finish": "3-4",
      "seed": 3,
      "player": "LuisMJ",
-     "archetype": "Underworld Breach",
+     "archetype": "4c Underworld Breach",
      "main": [
       [1,"9d4b1e44"],
       [1,"550c74d4"],
@@ -15255,7 +15312,7 @@
      "finish": "5-8",
      "seed": 5,
      "player": "Hakumei1234",
-     "archetype": "Initiative Hatebear",
+     "archetype": "Mono-White Initiative",
      "main": [
       [4,"9b7f1d05"],
       [4,"ceef2d5a"],
@@ -15302,7 +15359,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "MentalMisstep",
-     "archetype": "Initiative Hatebear",
+     "archetype": "Mono-White Initiative",
      "main": [
       [4,"a67f78be"],
       [4,"ceef2d5a"],
@@ -15346,7 +15403,7 @@
      "finish": "5-8",
      "seed": 7,
      "player": "KingSedris",
-     "archetype": "Initiative Hatebear",
+     "archetype": "Mono-White Initiative",
      "main": [
       [1,"ec3d4466"],
       [1,"824597b8"],
@@ -15487,7 +15544,7 @@
    },
    "notes": [
     {
-     "text": "Lists, player names and archetype names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
+     "text": "Lists and player names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
      "url": "https://melee.gg/Tournament/View/12792"
     },
     {
@@ -15497,6 +15554,10 @@
     {
      "text": "Swiss was played on 2022-12-09; mtgtop8 dates the event to that day. The Top 8 was played on 2022-12-11.",
      "url": "https://www.mtgtop8.com/event?e=40021&f=VI"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/41463"
     }
    ],
    "decks": [
@@ -15504,7 +15565,7 @@
      "finish": "1",
      "seed": 3,
      "player": "Rajah James",
-     "archetype": "White Initiative",
+     "archetype": "Mono-White Initiative",
      "main": [
       [1,"5089ec1a"],
       [1,"7359e82b"],
@@ -15546,7 +15607,7 @@
      "finish": "2",
      "seed": 1,
      "player": "Hans Jacob Goddik",
-     "archetype": "Jeskai Xerox",
+     "archetype": "Jeskai Control",
      "main": [
       [1,"d0209d3f"],
       [1,"02090581"],
@@ -15649,7 +15710,7 @@
      "finish": "3-4",
      "seed": 7,
      "player": "Peter Coloyan",
-     "archetype": "Dimir Control",
+     "archetype": "Dimir Combo",
      "main": [
       [1,"824597b8"],
       [1,"ed85fa82"],
@@ -15707,7 +15768,7 @@
      "finish": "5-8",
      "seed": 2,
      "player": "Kiet Ngo",
-     "archetype": "Grixis Control",
+     "archetype": "Grixis Combo",
      "main": [
       [1,"1a0770e6"],
       [1,"ededbdae"],
@@ -15765,7 +15826,7 @@
      "finish": "5-8",
      "seed": 5,
      "player": "Lee Webb",
-     "archetype": "White Initiative",
+     "archetype": "Mono-White Initiative",
      "main": [
       [1,"32e5339e"],
       [1,"5089ec1a"],
@@ -15811,7 +15872,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "Stu Somers",
-     "archetype": "White Initiative",
+     "archetype": "Mono-White Initiative",
      "main": [
       [1,"2c63e4e1"],
       [1,"824597b8"],
@@ -15853,7 +15914,7 @@
      "finish": "5-8",
      "seed": 8,
      "player": "Michael O'Malley",
-     "archetype": "Bazaar Aggro",
+     "archetype": "Hogaak Vine",
      "main": [
       [1,"0677f49e"],
       [1,"376ee366"],
@@ -15954,6 +16015,10 @@
     {
      "text": "Seeds are the standings after the last Swiss round (Round 7) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
      "url": "https://melee.gg/Tournament/View/38335"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/45550"
     }
    ],
    "decks": [
@@ -15961,7 +16026,7 @@
      "finish": "1",
      "seed": 1,
      "player": "Lukas Schwendinger",
-     "archetype": "Esper Control",
+     "archetype": "Esper Combo",
      "main": [
       [1,"d5ed1233"],
       [1,"ededbdae"],
@@ -16150,7 +16215,7 @@
      "finish": "3-4",
      "seed": 7,
      "player": "Eliott_dragon",
-     "archetype": "Bazaar Aggro",
+     "archetype": "HollowVine",
      "main": [
       [4,"b2ec080f"],
       [4,"d43f5977"],
@@ -16242,7 +16307,7 @@
      "finish": "5-8",
      "seed": 3,
      "player": "Martinho1111",
-     "archetype": "Beseech the Mirror",
+     "archetype": "Dimir Combo",
      "main": [
       [1,"13575cf9"],
       [1,"fb81f95c"],
@@ -16302,7 +16367,7 @@
      "finish": "5-8",
      "seed": 8,
      "player": "Rodmanbcn",
-     "archetype": "Beseech the Mirror",
+     "archetype": "Dimir Storm",
      "main": [
       [1,"6ad8011d"],
       [1,"3aa83ed2"],
@@ -16461,7 +16526,7 @@
    },
    "notes": [
     {
-     "text": "Held inside Players Convention Aichi 2023, organized by BIG MAGIC. mtg-jp prints card names in Japanese (Power, duals and other old cards in English); `name` is the English name, checked against Scryfall, and `printed_as` the Japanese as printed. Archetypes are translated from mtg-jp's Japanese labels; English player names are from Melee. Every list matches mtgtop8's copy of the Melee lists card for card (except mtgtop8's spelling \"Lorien Revealed\")."
+     "text": "Held inside Players Convention Aichi 2023, organized by BIG MAGIC. mtg-jp prints card names in Japanese (Power, duals and other old cards in English); `name` is the English name, checked against Scryfall, and `printed_as` the Japanese as printed. English player names are from Melee. Every list matches mtgtop8's copy of the Melee lists card for card (except mtgtop8's spelling \"Lorien Revealed\")."
     },
     {
      "text": "Placings are mtg-jp's (Winner, Runner-up, Top 4, Top 8), confirmed by the playoff matches on the Melee page, entered there after the event: quarterfinals Hirasawa def. Marumo 2-1, Hayasaki def. Shinohara 2-0, Yamamoto def. Ota 2-0, Takei def. Hosomi 2-0; semifinals Hirasawa def. Hayasaki 2-0, Yamamoto def. Takei 2-1; final Hirasawa def. Yamamoto 2-1. mtgtop8, MTGGoldfish and Melee's own final standings all order the Top 8 differently, and wrongly.",
@@ -16474,6 +16539,10 @@
     {
      "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
      "url": "https://melee.gg/Tournament/View/30338"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/45612"
     }
    ],
    "decks": [
@@ -16482,7 +16551,7 @@
      "seed": 1,
      "player": "Daisuke Hirasawa",
      "player_native": "ヒラサワ ダイスケ",
-     "archetype": "Oath",
+     "archetype": "Oath of Druids",
      "main": [
       [2,"bf1341dd","耐え抜くもの、母聖樹"],
       [4,"cfd60d1f","禁忌の果樹園"],
@@ -16536,7 +16605,7 @@
      "seed": 7,
      "player": "Masanori Yamamoto",
      "player_native": "山本 政徳",
-     "archetype": "Paradox Combo",
+     "archetype": "Mono-Blue Combo",
      "notes": [
       {
        "text": "mtg-jp labels this deck 逆説コンボ (\"Paradox Combo\"); mtgtop8 and MTGGoldfish call it Coveted Jewel / Combo Shops. The list itself matches mtgtop8's card for card."
@@ -16808,7 +16877,7 @@
      "seed": 6,
      "player": "Kyohei Hosomi",
      "player_native": "細見 京平",
-     "archetype": "Stax",
+     "archetype": "Golos Stax",
      "main": [
       [4,"23467047","古えの墳墓"],
       [1,"d21a89eb","露天鉱床"],
@@ -16948,7 +17017,7 @@
    },
    "notes": [
     {
-     "text": "Lists, player names and archetype names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
+     "text": "Lists and player names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
      "url": "https://melee.gg/Tournament/View/34951"
     },
     {
@@ -16958,6 +17027,10 @@
     {
      "text": "Swiss was played on 2023-12-08; mtgtop8 dates the event to that day. The Top 8 was played on 2023-12-10.",
      "url": "https://www.mtgtop8.com/event?e=50305&f=VI"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events. Kept from the earlier source where Goldfish names only colours or lists no deck: Tom Basketball (Goldfish: 'U').",
+     "url": "https://www.mtggoldfish.com/tournament/45784"
     }
    ],
    "decks": [
@@ -16965,7 +17038,7 @@
      "finish": "1",
      "seed": 8,
      "player": "Anthony Valentine",
-     "archetype": "Coveted Jewel",
+     "archetype": "Mono-Blue Combo",
      "main": [
       [1,"09ef446c"],
       [4,"340bbe8b"],
@@ -17072,7 +17145,7 @@
      "finish": "3-4",
      "seed": 4,
      "player": "Peter Coloyan",
-     "archetype": "Coveted Jewel",
+     "archetype": "Paradoxical Outcome",
      "main": [
       [4,"340bbe8b"],
       [1,"5089ec1a"],
@@ -17179,7 +17252,7 @@
      "finish": "5-8",
      "seed": 7,
      "player": "Camden Drash",
-     "archetype": "Azorius Initiative",
+     "archetype": "Azorius Midrange",
      "main": [
       [1,"753cb2b2"],
       [1,"370c37f7"],
@@ -17236,7 +17309,7 @@
      "finish": "5-8",
      "seed": 5,
      "player": "Adam Prusa",
-     "archetype": "Coveted Jewel",
+     "archetype": "Paradoxical Outcome",
      "main": [
       [4,"340bbe8b"],
       [1,"5089ec1a"],
@@ -17453,6 +17526,10 @@
     {
      "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
      "url": "https://melee.gg/Tournament/View/116325"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/51705"
     }
    ],
    "decks": [
@@ -17961,7 +18038,7 @@
    },
    "notes": [
     {
-     "text": "Lists, player names and archetype names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
+     "text": "Lists and player names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
      "url": "https://melee.gg/Tournament/View/160879"
     },
     {
@@ -17971,6 +18048,10 @@
     {
      "text": "Swiss was played on 2024-11-22; mtgtop8 dates the event to that day. The Top 8 was played on 2024-11-24.",
      "url": "https://www.mtgtop8.com/event?e=61956&f=VI"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/52545"
     }
    ],
    "decks": [
@@ -17978,7 +18059,7 @@
      "finish": "1",
      "seed": 5,
      "player": "Max Gilmore",
-     "archetype": "Esper Lurrus",
+     "archetype": "Esper Control",
      "main": [
       [1,"040cbd8a"],
       [4,"e157ad1e"],
@@ -18200,7 +18281,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "Tyler Klein",
-     "archetype": "Coveted Jewel",
+     "archetype": "Mono-Blue Shops",
      "main": [
       [4,"340bbe8b"],
       [1,"5089ec1a"],
@@ -18251,7 +18332,7 @@
      "finish": "5-8",
      "seed": 7,
      "player": "Doug Miles",
-     "archetype": "Coveted Jewel",
+     "archetype": "Paradoxical Outcome",
      "main": [
       [4,"340bbe8b"],
       [4,"3aa83ed2"],
@@ -18303,7 +18384,7 @@
      "finish": "5-8",
      "seed": 1,
      "player": "Christopher Brill",
-     "archetype": "Esper Lurrus",
+     "archetype": "Esper Midrange",
      "main": [
       [2,"81ba3a33"],
       [4,"ea5103f5"],
@@ -18356,7 +18437,7 @@
      "finish": "5-8",
      "seed": 4,
      "player": "Dave Kaplan",
-     "archetype": "Esper Lurrus",
+     "archetype": "Esper Midrange",
      "main": [
       [4,"ea5103f5"],
       [4,"e157ad1e"],
@@ -18468,6 +18549,10 @@
     {
      "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
      "url": "https://melee.gg/Tournament/View/203530"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/52847"
     }
    ],
    "decks": [
@@ -18516,7 +18601,7 @@
      "finish": "2",
      "seed": 1,
      "player": "Juan Eliso Soto",
-     "archetype": "Esper Lurrus",
+     "archetype": "Esper Control",
      "notes": [
       {
        "text": "Melee/mtgtop8 handle \"Juanelisosoto\"."
@@ -18574,7 +18659,7 @@
      "finish": "3-4",
      "seed": 6,
      "player": "Brian Coval",
-     "archetype": "Esper Lurrus",
+     "archetype": "Esper Control",
      "notes": [
       {
        "text": "Melee/mtgtop8 handle \"Boshnroll_brian\"."
@@ -18633,7 +18718,7 @@
      "finish": "3-4",
      "seed": 4,
      "player": "Thilo Schramm",
-     "archetype": "Initiative Hatebear",
+     "archetype": "Mono-White Initiative",
      "notes": [
       {
        "text": "Melee/mtgtop8 handle \"Thiloschramm\"."
@@ -18676,7 +18761,7 @@
      "finish": "5-8",
      "seed": 3,
      "player": "Oscar Basart",
-     "archetype": "Coveted Jewel",
+     "archetype": "Paradoxical Outcome",
      "main": [
       [4,"340bbe8b"],
       [1,"4514777d"],
@@ -18728,7 +18813,7 @@
      "finish": "5-8",
      "seed": 7,
      "player": "Javier Dominguez",
-     "archetype": "Dimir Control",
+     "archetype": "Dimir Tempo",
      "main": [
       [1,"9d63ba8a"],
       [1,"16d8ee99"],
@@ -18835,7 +18920,7 @@
      "finish": "5-8",
      "seed": 5,
      "player": "Cheng Guo",
-     "archetype": "Initiative Hatebear",
+     "archetype": "Mono-White Initiative",
      "main": [
       [4,"a67f78be"],
       [4,"ceef2d5a"],
@@ -18922,7 +19007,7 @@
    },
    "notes": [
     {
-     "text": "Lists, player names and archetype names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
+     "text": "Lists and player names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
      "url": "https://melee.gg/Tournament/View/358605"
     },
     {
@@ -18932,6 +19017,10 @@
     {
      "text": "Swiss was played on 2025-10-10; mtgtop8 dates the event to that day. The Top 8 was played on 2025-10-11.",
      "url": "https://www.mtgtop8.com/event?e=74965&f=VI"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/58947"
     }
    ],
    "decks": [
@@ -18939,7 +19028,7 @@
      "finish": "1",
      "seed": 5,
      "player": "Jeremy Henry",
-     "archetype": "Hatebear",
+     "archetype": "Mono-White Initiative",
      "main": [
       [1,"5089ec1a"],
       [1,"74027ba4"],
@@ -18980,7 +19069,7 @@
      "finish": "2",
      "seed": 3,
      "player": "Dave Kaplan",
-     "archetype": "Dimir Control",
+     "archetype": "Dimir (Lurrus)",
      "main": [
       [4,"ea5103f5"],
       [4,"e157ad1e"],
@@ -19036,7 +19125,7 @@
      "finish": "3-4",
      "seed": 8,
      "player": "Max Gilmore",
-     "archetype": "BUG Midrange",
+     "archetype": "Sultai Control (Lurrus)",
      "main": [
       [1,"1d67f5ff"],
       [1,"1a0770e6"],
@@ -19089,7 +19178,7 @@
      "finish": "3-4",
      "seed": 2,
      "player": "Chad Uzzell",
-     "archetype": "Dredge",
+     "archetype": "Colorless Dredge",
      "main": [
       [4,"a426a258"],
       [4,"0d6b89dc"],
@@ -19122,7 +19211,7 @@
      "finish": "5-8",
      "seed": 4,
      "player": "Greg Mitchell",
-     "archetype": "Esper Lurrus",
+     "archetype": "Esper Control (Lurrus)",
      "main": [
       [4,"e157ad1e"],
       [3,"ea5103f5"],
@@ -19182,7 +19271,7 @@
      "finish": "5-8",
      "seed": 7,
      "player": "Stefan Vastek",
-     "archetype": "Golos MUD",
+     "archetype": "Colorless Sphere Shops",
      "main": [
       [4,"0ba86a50"],
       [3,"efe9c3e0"],
@@ -19234,7 +19323,7 @@
      "finish": "5-8",
      "seed": 1,
      "player": "Mbatista",
-     "archetype": "Mono Black Aggro",
+     "archetype": "Mono-Black Scam",
      "main": [
       [1,"4514777d"],
       [1,"9a1412db"],
@@ -19273,7 +19362,7 @@
      "finish": "5-8",
      "seed": 6,
      "player": "Andrewslafreniere",
-     "archetype": "MUD",
+     "archetype": "Colorless Raker Shops",
      "main": [
       [1,"a188fe7e"],
       [1,"d5ed1233"],
@@ -19892,6 +19981,10 @@
     {
      "text": "Organized by Hareruya, who confirm Okamoto as champion; the 2nd, 3-4 and 5-8 placings are mtgtop8's and MTGGoldfish's playoff order. mtgtop8 and MTGGoldfish date the event 13 December, the UTC date of its 08:30 JST start on the 14th.",
      "url": "https://article.hareruyamtg.com/article/104780/"
+    },
+    {
+     "text": "Archetype names are MTGGoldfish's, for consistency across events.",
+     "url": "https://www.mtggoldfish.com/tournament/60312"
     }
    ],
    "decks": [
@@ -19900,7 +19993,7 @@
      "seed": 1,
      "player": "Takuma Okamoto",
      "player_native": "岡本 卓磨",
-     "archetype": "Dimir Control",
+     "archetype": "Dimir Control (Lurrus)",
      "notes": [
       {
        "text": "Melee handle \"KaBi\"; mtgtop8 \"Kabi\"."
@@ -19963,7 +20056,7 @@
      "seed": 6,
      "player": "Kandai Sekimoto",
      "player_native": "関本 寛大",
-     "archetype": "Doomsday",
+     "archetype": "Dimir Doomsday (Lurrus)",
      "main": [
       [4,"e157ad1e"],
       [1,"1ed9e351","Tamiyo, Inquisitive Student"],
@@ -20015,7 +20108,7 @@
      "seed": 5,
      "player": "Tomoyuki Morita",
      "player_native": "森田 朋之",
-     "archetype": "Dredge",
+     "archetype": "Colorless Dredge",
      "notes": [
       {
        "text": "Melee handle \"moxsapphire\"."
@@ -20054,7 +20147,7 @@
      "seed": 7,
      "player": "Akinori Miura",
      "player_native": "三浦 聡徳",
-     "archetype": "Reanimator",
+     "archetype": "W-U-B-G Scam",
      "notes": [
       {
        "text": "Melee handle \"akinori\". The main deck has 61 cards, as in Hareruya's and MTGGoldfish's copies."
@@ -20114,7 +20207,7 @@
      "seed": 9,
      "player": "Shimpei Toyota",
      "player_native": "豊田 晋平",
-     "archetype": "Dimir Control",
+     "archetype": "Dimir Standard (Lurrus)",
      "notes": [
       {
        "text": "Melee handle \"Shimpei\"."
@@ -20178,7 +20271,7 @@
      "seed": 13,
      "player": "Hiromichi Yajima",
      "player_native": "矢島 広道",
-     "archetype": "Paradoxical Outcome",
+     "archetype": "Mono-Blue Paradoxical Outcome",
      "main": [
       [4,"099b8d2c","Marang River Regent"],
       [1,"5089ec1a"],
@@ -20232,7 +20325,7 @@
      "seed": 14,
      "player": "Kohei Takatori",
      "player_native": "高鳥 航平",
-     "archetype": "Esper Lurrus",
+     "archetype": "Esper Control (Lurrus)",
      "main": [
       [4,"ea5103f5"],
       [4,"e157ad1e"],
@@ -20289,7 +20382,7 @@
      "seed": 15,
      "player": "Yusuke Takakuwa",
      "player_native": "高桑 雄介",
-     "archetype": "Coveted Jewel",
+     "archetype": "Mono-Blue Jewel Shops",
      "main": [
       [4,"340bbe8b"],
       [4,"98492d7d"],
