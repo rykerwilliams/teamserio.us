@@ -1,10 +1,12 @@
 // /vintage-decklists -- what the Vintage championship Top 8s played.
 //
 // Two charts over one slice of the data, chosen by the filter row: the most
-// played cards (share of Top 8 lists that play each), and one card's share
+// played cards (share of Top 8 lists that play each, or total copies), and one card's share
 // year by year, with the years it was restricted shaded. A list counts once
 // per card however many copies it plays, so a restricted card and a 4-of are
-// measured the same way: how many of the best decks wanted it.
+// measured the same way: how many of the best decks wanted it. The copies
+// view answers the other question -- how much of the Top 8s' cardboard it was
+// -- where a 4-of like Force of Will outweighs every restricted card.
 //
 // Everything below the charts on the page is plain HTML; this only adds the
 // charts, and the section stays hidden if it never runs.
@@ -31,7 +33,8 @@
   SERIES.forEach(function (s) { s.labels.forEach(function (l) { seriesOf[l] = s.key; }); });
 
   var D, CARDS, byName = {};
-  var state = { series: {}, from: null, to: null, side: false, card: null };
+  var state = { series: {}, from: null, to: null, side: false, card: null,
+                measure: "lists" };
   var tip = document.getElementById("vd-tip");
 
   function el(tag, attrs, parent) {
@@ -133,16 +136,20 @@
     });
     var rows = Object.keys(tally).map(function (k) { return tally[k]; })
       .sort(function (a, b) {
-        return b.lists - a.lists || b.copies - a.copies ||
+        var m = state.measure, o = m === "lists" ? "copies" : "lists";
+        return b[m] - a[m] || b[o] - a[o] ||
                CARDS[a.key].name.localeCompare(CARDS[b.key].name);
       });
+    var copies = state.measure === "copies";
 
     var nev = events().length;
     document.getElementById("vd-top-hint").textContent = ls.length
-      ? "Share of the " + ls.length + " Top 8 lists from " + nev +
-        (nev === 1 ? " event" : " events") + " that play each card" +
-        (state.side ? ", main deck or sideboard" : " in the main deck") +
-        ". Click a card to see it year by year."
+      ? (copies ? "Total copies of each card across the "
+                : "Share of the ") + ls.length + " Top 8 lists from " + nev +
+        (nev === 1 ? " event" : " events") + (copies ? "" : " that play each card") +
+        (state.side ? ", main deck and sideboard" : ", main deck only") +
+        (copies ? ". A restricted card counts at most one per list." : ".") +
+        " Click a card to see it year by year."
       : "No lists match these filters.";
 
     var svg = document.getElementById("vd-top");
@@ -154,27 +161,35 @@
     svg.setAttribute("viewBox", "0 0 " + W + " " + H);
     svg.setAttribute("height", H);
     var span = W - LABEL - VAL;
-    // 0, 50 and 100%: enough to read a bar's length against
+    // the bar's length: a share of lists, or copies against the leader
+    var most = top.length ? top[0].copies : 1;
+    function size(r) { return copies ? r.copies / most : r.lists / ls.length; }
+    function label(r) { return copies ? String(r.copies) : pct(r.lists / ls.length); }
+    // 0, half and full scale: enough to read a bar's length against
     [0, 0.5, 1].forEach(function (f) {
       el("line", { x1: LABEL + f * span, x2: LABEL + f * span, y1: 0, y2: H,
                    "class": "vd-grid" }, svg);
     });
     top.forEach(function (r, i) {
-      var share = r.lists / ls.length, y = i * ROW;
+      var share = r.lists / ls.length, len = size(r), y = i * ROW;
       var g = el("g", { "class": "vd-row" + (r.key === state.card ? " is-on" : ""),
                         tabindex: 0, role: "button",
-                        "aria-label": CARDS[r.key].name + ", " + pct(share) }, svg);
+                        "aria-label": CARDS[r.key].name + ", " + label(r) +
+                                      (copies ? " copies" : "") }, svg);
       el("rect", { x: 0, y: y, width: W, height: ROW, "class": "vd-hit" }, g);
       text("text", { x: LABEL - 8, y: y + ROW / 2, "class": "vd-label",
                      "text-anchor": "end", "dominant-baseline": "central" },
            CARDS[r.key].name, g);
-      el("path", { d: hbar(LABEL, y + (ROW - BAR) / 2, Math.max(1, share * span), BAR),
+      el("path", { d: hbar(LABEL, y + (ROW - BAR) / 2, Math.max(1, len * span), BAR),
                    "class": "vd-bar" }, g);
-      text("text", { x: LABEL + share * span + 6, y: y + ROW / 2, "class": "vd-value",
-                     "dominant-baseline": "central" }, pct(share), g);
+      text("text", { x: LABEL + len * span + 6, y: y + ROW / 2, "class": "vd-value",
+                     "dominant-baseline": "central" }, label(r), g);
       hover(g, function () {
-        return [[pct(share), "of lists"], [r.lists + " of " + ls.length, "lists"],
-                [String(r.copies), "copies in all"], ["", CARDS[r.key].name]];
+        var a = [String(r.copies), "copies in all"],
+            b = [pct(share), "of lists (" + r.lists + " of " + ls.length + ")"];
+        var avg = (r.copies / r.lists).toFixed(1).replace(/\.0$/, "");
+        return [copies ? a : b, copies ? b : a, [avg, "per list that plays it"],
+                ["", CARDS[r.key].name]];
       });
       function pick() { selectCard(r.key, true); }
       g.addEventListener("click", pick);
@@ -358,6 +373,16 @@
     }
     from.addEventListener("change", range);
     to.addEventListener("change", range);
+    var measures = document.querySelectorAll("#vd-measure button");
+    Array.prototype.forEach.call(measures, function (b) {
+      b.addEventListener("click", function () {
+        state.measure = b.getAttribute("data-measure");
+        Array.prototype.forEach.call(measures, function (o) {
+          o.setAttribute("aria-pressed", String(o === b));
+        });
+        redraw();
+      });
+    });
     document.getElementById("vd-side").addEventListener("change", function (e) {
       state.side = e.target.checked;
       redraw();
