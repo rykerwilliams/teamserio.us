@@ -955,10 +955,14 @@
   // ---- deep link ----------------------------------------------------------
   function fromHash() {
     var h = (location.hash || "").replace(/^#/, "");
+    if (!/^\d{4}-\d\d-\d\d$/.test(h)) return -1;
+    // Any day, not only an announcement's: the decklist pages link here with
+    // the day a championship was played, and want the list in force on it.
+    var found = -1;
     for (var i = 0; i < EVENTS.length; i++) {
-      if (EVENTS[i].date === h) return i;
+      if (EVENTS[i].date <= h) found = i;
     }
-    return -1;
+    return found;
   }
   window.addEventListener("hashchange", function () {
     var i = fromHash();

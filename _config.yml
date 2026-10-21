@@ -73,8 +73,12 @@ navbar:
     url     : /tags
   - title   : Categories
     url     : /categories
-  - title   : B&R
-    url     : /vintage-legality
+  - title   : Type 1
+    child:
+      - title : Timeline
+        url: /vintage-legality
+      - title : Decklists
+        url: /vintage-decklists/
   - title   : Merch
     url     : /merch/
   - title   : Media #Label

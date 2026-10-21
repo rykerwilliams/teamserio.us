@@ -14,6 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!name || !pane) return;
 
     if (timer) clearTimeout(timer);
+    // The championship lists already know each card's original printing, so
+    // they carry its image and need no lookup at all.
+    var direct = link.getAttribute("data-image");
+    if (direct) {
+      timer = setTimeout(function () {
+        pane.style.setProperty("background-image", "url(" + direct + ")");
+      }, HOVER_DELAY);
+      return;
+    }
     timer = setTimeout(function () {
       // Cached and de-duplicated; resolves to null rather than throwing on a
       // double-faced card or a name Scryfall does not recognise.
