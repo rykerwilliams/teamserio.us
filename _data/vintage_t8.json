@@ -21632,11 +21632,11 @@
   "29e13ec1": {
    "oracle_id": "29e13ec1-a239-4217-a2bd-24ff90745ec0",
    "name": "Withered Wretch",
-   "set": "F03",
-   "set_name": "Friday Night Magic 2003",
-   "released_at": "2003-01-01",
-   "image": "https://cards.scryfall.io/normal/front/6/9/691135e8-1c41-41c4-9426-48bffe23bfd8.jpg?1783944983",
-   "scryfall_uri": "https://scryfall.com/card/f03/12/withered-wretch"
+   "set": "LGN",
+   "set_name": "Legions",
+   "released_at": "2003-02-03",
+   "image": "https://cards.scryfall.io/normal/front/b/8/b8a82948-503f-4ad4-9e3c-c080c16afd63.jpg?1783944910",
+   "scryfall_uri": "https://scryfall.com/card/lgn/86/withered-wretch"
   },
   "7f06c098": {
    "oracle_id": "7f06c098-6482-4bf3-a9a1-110d6d5b5703",
@@ -22649,11 +22649,11 @@
   "a2529491": {
    "oracle_id": "a2529491-7389-4cfa-92d2-145eda779603",
    "name": "Darksteel Ingot",
-   "set": "PAL04",
-   "set_name": "Arena League 2004",
-   "released_at": "2004-01-01",
-   "image": "https://cards.scryfall.io/normal/front/6/2/62190d2d-16fc-4d71-84fd-abdf52bb5af5.jpg?1783944458",
-   "scryfall_uri": "https://scryfall.com/card/pal04/6/darksteel-ingot"
+   "set": "DST",
+   "set_name": "Darksteel",
+   "released_at": "2004-02-06",
+   "image": "https://cards.scryfall.io/normal/front/b/0/b02b9634-77e9-48ae-a6bf-859598d12c52.jpg?1783944426",
+   "scryfall_uri": "https://scryfall.com/card/dst/112/darksteel-ingot"
   },
   "96a4e515": {
    "oracle_id": "96a4e515-2b4e-4c2d-aa1a-963597484723",
@@ -24296,11 +24296,11 @@
   "b2e950fb": {
    "oracle_id": "b2e950fb-cb7e-40a0-a311-5bbdd0477b29",
    "name": "Sun Titan",
-   "set": "PM11",
-   "set_name": "Magic 2011 Promos",
-   "released_at": "2010-07-15",
-   "image": "https://cards.scryfall.io/normal/front/b/b/bb07690e-d816-46de-84e7-617149a51b18.jpg?1783941839",
-   "scryfall_uri": "https://scryfall.com/card/pm11/35%E2%98%85/sun-titan"
+   "set": "M11",
+   "set_name": "Magic 2011",
+   "released_at": "2010-07-16",
+   "image": "https://cards.scryfall.io/normal/front/d/8/d8db2b8e-dce9-49b7-833f-381ee55288cb.jpg?1783941831",
+   "scryfall_uri": "https://scryfall.com/card/m11/35/sun-titan"
   },
   "cdc4048a": {
    "oracle_id": "cdc4048a-73ec-4ec1-a179-2b36c397bf1a",
@@ -24368,11 +24368,11 @@
   "340bbe8b": {
    "oracle_id": "340bbe8b-e987-4c3e-ab4e-9dee63e57d4f",
    "name": "Phyrexian Metamorph",
-   "set": "PNPH",
-   "set_name": "New Phyrexia Promos",
-   "released_at": "2011-05-12",
-   "image": "https://cards.scryfall.io/normal/front/8/9/8903546d-4f9a-4e90-8dd8-5ab068d40907.jpg?1783941329",
-   "scryfall_uri": "https://scryfall.com/card/pnph/42%E2%98%85/phyrexian-metamorph"
+   "set": "NPH",
+   "set_name": "New Phyrexia",
+   "released_at": "2011-05-13",
+   "image": "https://cards.scryfall.io/normal/front/d/2/d2e27911-87cb-49a0-a34f-6afe4bddd592.jpg?1783941318",
+   "scryfall_uri": "https://scryfall.com/card/nph/42/phyrexian-metamorph"
   },
   "76558381": {
    "oracle_id": "76558381-c4ae-4bc3-8c7b-fa0b717f0282",
@@ -24512,11 +24512,11 @@
   "d1a60f44": {
    "oracle_id": "d1a60f44-7696-49ee-91fb-cab5b3102962",
    "name": "Wurmcoil Engine",
-   "set": "PSOM",
-   "set_name": "Scars of Mirrodin Promos",
-   "released_at": "2010-09-30",
-   "image": "https://cards.scryfall.io/normal/front/b/9/b9bdfa34-f608-40d4-b634-b260ad620f18.jpg?1783941749",
-   "scryfall_uri": "https://scryfall.com/card/psom/223%E2%98%85/wurmcoil-engine"
+   "set": "SOM",
+   "set_name": "Scars of Mirrodin",
+   "released_at": "2010-10-01",
+   "image": "https://cards.scryfall.io/normal/front/3/3/33672990-4860-4aa6-ac1b-f9da66f5da59.jpg?1783941691",
+   "scryfall_uri": "https://scryfall.com/card/som/223/wurmcoil-engine"
   },
   "b0f99367": {
    "oracle_id": "b0f99367-4313-4bb1-a9fd-7711bc4ce40e",
@@ -24530,11 +24530,11 @@
   "6e64f1e0": {
    "oracle_id": "6e64f1e0-ddd6-4ee7-8797-086e234b02e8",
    "name": "Steel Hellkite",
-   "set": "PSOM",
-   "set_name": "Scars of Mirrodin Promos",
-   "released_at": "2010-09-30",
-   "image": "https://cards.scryfall.io/normal/front/b/2/b268cd3b-af91-4c22-ac73-347babb69200.jpg?1783941747",
-   "scryfall_uri": "https://scryfall.com/card/psom/205%E2%98%85/steel-hellkite"
+   "set": "SOM",
+   "set_name": "Scars of Mirrodin",
+   "released_at": "2010-10-01",
+   "image": "https://cards.scryfall.io/normal/front/b/1/b126ee24-9597-4ee8-9c4d-5caed585424a.jpg?1783941698",
+   "scryfall_uri": "https://scryfall.com/card/som/205/steel-hellkite"
   },
   "5fa4607a": {
    "oracle_id": "5fa4607a-6731-4599-80f3-19d6097b4b28",
@@ -24728,11 +24728,11 @@
   "3bfa088c": {
    "oracle_id": "3bfa088c-9a47-4123-aee5-4de44e355bef",
    "name": "Surgical Extraction",
-   "set": "PNPH",
-   "set_name": "New Phyrexia Promos",
-   "released_at": "2011-05-12",
-   "image": "https://cards.scryfall.io/normal/front/1/1/114834d8-4da5-48b9-9ac7-5e3e4b7ddf2d.jpg?1783941331",
-   "scryfall_uri": "https://scryfall.com/card/pnph/74%E2%98%85/surgical-extraction"
+   "set": "NPH",
+   "set_name": "New Phyrexia",
+   "released_at": "2011-05-13",
+   "image": "https://cards.scryfall.io/normal/front/d/c/dca7e072-edb5-4f7e-bdec-a3a393053c80.jpg?1783941310",
+   "scryfall_uri": "https://scryfall.com/card/nph/74/surgical-extraction"
   },
   "22f1a4a4": {
    "oracle_id": "22f1a4a4-c423-4d1c-8775-0ed604a9fa51",
@@ -24755,11 +24755,11 @@
   "dfbd3afc": {
    "oracle_id": "dfbd3afc-9905-4cff-a4f4-df08a4d0a7fa",
    "name": "Restoration Angel",
-   "set": "PAVR",
-   "set_name": "Avacyn Restored Promos",
-   "released_at": "2012-04-28",
-   "image": "https://cards.scryfall.io/normal/front/c/8/c83c7429-751e-4103-b09a-f78a9617020d.jpg?1783940746",
-   "scryfall_uri": "https://scryfall.com/card/pavr/32%E2%98%85/restoration-angel"
+   "set": "AVR",
+   "set_name": "Avacyn Restored",
+   "released_at": "2012-05-04",
+   "image": "https://cards.scryfall.io/normal/front/c/2/c2ad8639-e586-47f4-baca-2a1af5aa281b.jpg?1783940729",
+   "scryfall_uri": "https://scryfall.com/card/avr/32/restoration-angel"
   },
   "087f9ad7": {
    "oracle_id": "087f9ad7-e74f-40e2-8102-1ed2925d0418",
@@ -25133,11 +25133,11 @@
   "48d9f488": {
    "oracle_id": "48d9f488-4ebb-4fdb-a568-6930fc2f5416",
    "name": "Staff of Nin",
-   "set": "PM13",
-   "set_name": "Magic 2013 Promos",
-   "released_at": "2012-07-12",
-   "image": "https://cards.scryfall.io/normal/front/5/b/5be0ec9b-17ea-4503-b9c2-67a3ca2a2b13.jpg?1783940524",
-   "scryfall_uri": "https://scryfall.com/card/pm13/217%E2%98%85/staff-of-nin"
+   "set": "M13",
+   "set_name": "Magic 2013",
+   "released_at": "2012-07-13",
+   "image": "https://cards.scryfall.io/normal/front/6/9/69b7381a-ec4a-4f1b-b81c-bdf9f9d64f31.jpg?1783940458",
+   "scryfall_uri": "https://scryfall.com/card/m13/217/staff-of-nin"
   },
   "18f22960": {
    "oracle_id": "18f22960-87ec-43cd-82ea-ec5cabf49ad3",
@@ -25259,11 +25259,11 @@
   "594f6881": {
    "oracle_id": "594f6881-c059-46f8-aa4e-7151d502de73",
    "name": "Jace, Vryn's Prodigy // Jace, Telepath Unbound",
-   "set": "PS15",
-   "set_name": "San Diego Comic-Con 2015",
-   "released_at": "2015-07-09",
-   "image": "https://cards.scryfall.io/normal/front/e/7/e7b5705f-dc56-41af-a781-8a41aaa7c5b8.jpg?1783938373",
-   "scryfall_uri": "https://scryfall.com/card/ps15/60/jace-vryns-prodigy-jace-telepath-unbound"
+   "set": "ORI",
+   "set_name": "Magic Origins",
+   "released_at": "2015-07-17",
+   "image": "https://cards.scryfall.io/normal/front/0/2/02d6d693-f1f3-4317-bcc0-c21fa8490d38.jpg?1783938353",
+   "scryfall_uri": "https://scryfall.com/card/ori/60/jace-vryns-prodigy-jace-telepath-unbound"
   },
   "12c63a45": {
    "oracle_id": "12c63a45-7eb2-4262-b571-3358182f5610",
@@ -25349,11 +25349,11 @@
   "7346337e": {
    "oracle_id": "7346337e-ac12-4dd2-826d-77ec0013e74f",
    "name": "Spatial Contortion",
-   "set": "F16",
-   "set_name": "Friday Night Magic 2016",
-   "released_at": "2016-01-01",
-   "image": "https://cards.scryfall.io/normal/front/a/c/acaee41d-5f7c-481d-8591-f9dc47c784e4.jpg?1783937939",
-   "scryfall_uri": "https://scryfall.com/card/f16/7/spatial-contortion"
+   "set": "OGW",
+   "set_name": "Oath of the Gatewatch",
+   "released_at": "2016-01-22",
+   "image": "https://cards.scryfall.io/normal/front/4/e/4e2acf70-7625-4b77-83c1-0e08436da31f.jpg?1783937928",
+   "scryfall_uri": "https://scryfall.com/card/ogw/8/spatial-contortion"
   },
   "c7d8beb6": {
    "oracle_id": "c7d8beb6-472c-4758-9876-e8cbf98f4f72",
@@ -25439,11 +25439,11 @@
   "16437a83": {
    "oracle_id": "16437a83-be52-44cd-a768-a767c9347eb2",
    "name": "Fatal Push",
-   "set": "F17",
-   "set_name": "Friday Night Magic 2017",
-   "released_at": "2017-01-01",
-   "image": "https://cards.scryfall.io/normal/front/8/6/86d1119d-7585-4699-8649-e3743c02d7a9.jpg?1783936797",
-   "scryfall_uri": "https://scryfall.com/card/f17/8/fatal-push"
+   "set": "AER",
+   "set_name": "Aether Revolt",
+   "released_at": "2017-01-20",
+   "image": "https://cards.scryfall.io/normal/front/b/5/b5e81649-9954-424c-89d1-f87d73b66047.jpg?1783936764",
+   "scryfall_uri": "https://scryfall.com/card/aer/57/fatal-push"
   },
   "60e6a140": {
    "oracle_id": "60e6a140-c7fb-4fbe-bd74-6bbb925080e7",
@@ -25808,11 +25808,11 @@
   "24661b81": {
    "oracle_id": "24661b81-6bee-4ad8-b3ab-53cb65005c51",
    "name": "Goblin Rabblemaster",
-   "set": "PM15",
-   "set_name": "Magic 2015 Promos",
-   "released_at": "2014-07-17",
-   "image": "https://cards.scryfall.io/normal/front/8/0/80ef4153-256b-47b9-8d2c-262527412588.jpg?1783939210",
-   "scryfall_uri": "https://scryfall.com/card/pm15/145/goblin-rabblemaster"
+   "set": "M15",
+   "set_name": "Magic 2015",
+   "released_at": "2014-07-18",
+   "image": "https://cards.scryfall.io/normal/front/e/e/ee9c697e-d2c0-413b-9142-ecf5d7cf5322.jpg?1783939173",
+   "scryfall_uri": "https://scryfall.com/card/m15/145/goblin-rabblemaster"
   },
   "1962d9b3": {
    "oracle_id": "1962d9b3-f057-4d2c-9c5b-386d9a66148a",
@@ -26393,11 +26393,11 @@
   "7c427c3d": {
    "oracle_id": "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
    "name": "Gaea's Cradle",
-   "set": "JGP",
-   "set_name": "Judge Gift Cards 1998",
-   "released_at": "1998-01-01",
-   "image": "https://cards.scryfall.io/normal/front/9/a/9a3cccac-c826-41ad-b595-4d53db1ab8fa.jpg?1783946579",
-   "scryfall_uri": "https://scryfall.com/card/jgp/3/gaeas-cradle"
+   "set": "USG",
+   "set_name": "Urza's Saga",
+   "released_at": "1998-10-12",
+   "image": "https://cards.scryfall.io/normal/front/2/5/25b0b816-0583-44aa-9dc5-f3ff48993a51.jpg?1783946299",
+   "scryfall_uri": "https://scryfall.com/card/usg/321/gaeas-cradle"
   },
   "87b22b09": {
    "oracle_id": "87b22b09-4f6d-4bc5-9cfc-663e4c7c6981",
@@ -26447,20 +26447,20 @@
   "c1cbbda0": {
    "oracle_id": "c1cbbda0-e02b-4b9c-8669-ea87ca629520",
    "name": "Dress Down",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/a/0/a0b2a429-8f74-4df5-b35c-37c5215e40dd.jpg?1783926964",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/39s/dress-down"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/0/4/04f9f061-67b8-4427-9fcb-b3ccfee8fc5d.jpg?1783926882",
+   "scryfall_uri": "https://scryfall.com/card/mh2/39/dress-down"
   },
   "4c6a0c30": {
    "oracle_id": "4c6a0c30-b547-4eff-8ff4-0ca25803c076",
    "name": "Urza's Saga",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/1/c/1cf96437-0943-40f9-b175-31a1504028ba.jpg?1783926931",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/259s/urzas-saga"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/c/1/c1e0f201-42cb-46a1-901a-65bb4fc18f6c.jpg?1783926791",
+   "scryfall_uri": "https://scryfall.com/card/mh2/259/urzas-saga"
   },
   "1b5e6560": {
    "oracle_id": "1b5e6560-ff2e-4475-96cb-63f64c8a86db",
@@ -26528,29 +26528,29 @@
   "3a16bdda": {
    "oracle_id": "3a16bdda-8499-47e4-b870-b9576f4c1a83",
    "name": "Master of Death",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/1/8/1893cb1b-7c14-4c04-a98b-d6e4b23fe6ec.jpg?1783926941",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/205s/master-of-death"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/b/9/b9775175-6763-4826-afc8-dc520a235c36.jpg?1783926815",
+   "scryfall_uri": "https://scryfall.com/card/mh2/205/master-of-death"
   },
   "c85d824b": {
    "oracle_id": "c85d824b-c190-4d04-ab99-918ad0e6516c",
    "name": "Endurance",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/6/b/6b7d9545-04f5-49b9-91f6-158e95e22cb9.jpg?1783926947",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/157s/endurance"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/e/b/eb0e0404-4846-4891-acfa-bd0951ecf9c6.jpg?1783926831",
+   "scryfall_uri": "https://scryfall.com/card/mh2/157/endurance"
   },
   "fbf9f8c5": {
    "oracle_id": "fbf9f8c5-849f-45d5-8129-5fc683c21a04",
    "name": "Fury",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/b/b/bb6d2808-b75b-44b3-91c9-bb7134075b20.jpg?1783926952",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/126s/fury"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/b/d/bd281158-8180-40b9-a5b7-03cfc712d81a.jpg?1783926844",
+   "scryfall_uri": "https://scryfall.com/card/mh2/126/fury"
   },
   "e88de17c": {
    "oracle_id": "e88de17c-086d-4e2a-b5b2-2f9f57ca7c0f",
@@ -26582,11 +26582,11 @@
   "7f993ac7": {
    "oracle_id": "7f993ac7-c2cd-413c-a106-2c051a77ebf6",
    "name": "Murktide Regent",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/9/a/9a67bd6c-c3fb-4ff9-b0c4-047ae8ebba86.jpg?1783926961",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/52s/murktide-regent"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/2/0/20c4aae1-7665-4df7-bd51-a1d95bf8a17d.jpg?1783926875",
+   "scryfall_uri": "https://scryfall.com/card/mh2/52/murktide-regent"
   },
   "a3f3a5b5": {
    "oracle_id": "a3f3a5b5-b931-4961-828c-501a33e5a0a0",
@@ -26609,20 +26609,20 @@
   "37108cd4": {
    "oracle_id": "37108cd4-bbab-4ce3-9ed6-f60e8422e703",
    "name": "Ragavan, Nimble Pilferer",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/c/0/c058155b-0fe3-4e80-9f0a-6db221d00edd.jpg?1783926950",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/138s/ragavan-nimble-pilferer"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/a/9/a9738cda-adb1-47fb-9f4c-ecd930228c4d.jpg?1791803835",
+   "scryfall_uri": "https://scryfall.com/card/mh2/138/ragavan-nimble-pilferer"
   },
   "0d6b89dc": {
    "oracle_id": "0d6b89dc-23fb-48e9-a54b-cea2838ae7c8",
    "name": "Grief",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/4/0/40d77804-b81f-4e89-8528-1f3970ef3cd6.jpg?1783926957",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/87s/grief"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/e/6/e6befbc4-1320-4f26-bd9f-b1814fedda10.jpg?1783926861",
+   "scryfall_uri": "https://scryfall.com/card/mh2/87/grief"
   },
   "a0be9bb2": {
    "oracle_id": "a0be9bb2-3234-4c6c-b8ce-0879b1f43003",
@@ -26762,11 +26762,11 @@
   "04c7f4fe": {
    "oracle_id": "04c7f4fe-2098-4311-866d-6733c08d5178",
    "name": "Nettlecyst",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/8/3/83b336d3-ca04-4221-99e9-c8815410a6b0.jpg?1783926935",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/231s/nettlecyst"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/4/a/4a0bb5dc-75a6-4bd6-81f8-611197fb0fba.jpg?1783926803",
+   "scryfall_uri": "https://scryfall.com/card/mh2/231/nettlecyst"
   },
   "d412b175": {
    "oracle_id": "d412b175-2365-4b2c-a8f5-3e4e9d06280d",
@@ -26780,11 +26780,11 @@
   "0efb0d7e": {
    "oracle_id": "0efb0d7e-dea0-4817-a243-15066e9ef333",
    "name": "Grist, the Hunger Tide",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/8/e/8eadbeaf-f01c-4c85-8eaf-6a569a1bdf64.jpg?1783926946",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/202s/grist-the-hunger-tide"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/6/9/69af2825-18c2-4463-b6ba-42eaa070ccc1.jpg?1783926814",
+   "scryfall_uri": "https://scryfall.com/card/mh2/202/grist-the-hunger-tide"
   },
   "994e27e1": {
    "oracle_id": "994e27e1-0bff-47c9-a1e6-b9e3ae4ffb1e",
@@ -26909,8 +26909,8 @@
    "set": "CLB",
    "set_name": "Commander Legends: Battle for Baldur's Gate",
    "released_at": "2022-06-10",
-   "image": "https://cards.scryfall.io/normal/front/6/4/648d9da3-5790-4d64-8b52-83141d2faf36.jpg?1783922542",
-   "scryfall_uri": "https://scryfall.com/card/clb/610/seasoned-dungeoneer"
+   "image": "https://cards.scryfall.io/normal/front/7/f/7fee3f76-20a8-4621-84fb-ddf79c955532.jpg?1783922514",
+   "scryfall_uri": "https://scryfall.com/card/clb/660/seasoned-dungeoneer"
   },
   "180eda7c": {
    "oracle_id": "180eda7c-fca2-403b-85cd-8ffebaf9f408",
@@ -26924,11 +26924,11 @@
   "dcb9c2a7": {
    "oracle_id": "dcb9c2a7-ae54-4ddc-a567-640bf4bf4366",
    "name": "Solitude",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/b/6/b648cc94-7880-456b-82ea-859746d52397.jpg?1783926963",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/32s/solitude"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/4/7/47a6234f-309f-4e03-9263-66da48b57153.jpg?1783926885",
+   "scryfall_uri": "https://scryfall.com/card/mh2/32/solitude"
   },
   "34f34409": {
    "oracle_id": "34f34409-326d-4994-a0ea-1a69aa278f03",
@@ -27032,11 +27032,11 @@
   "7359e82b": {
    "oracle_id": "7359e82b-db79-488d-a1d4-75a00f12a4cf",
    "name": "Kaldra Compleat",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/9/b/9b6c6ad4-d5fb-4503-8b15-c2104f125990.jpg?1783926937",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/227s/kaldra-compleat"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/8/7/87cc2855-6b14-44dd-a398-7dc2bbae081f.jpg?1783926807",
+   "scryfall_uri": "https://scryfall.com/card/mh2/227/kaldra-compleat"
   },
   "c0adbddc": {
    "oracle_id": "c0adbddc-b070-4c5f-afe0-0474c72a9251",
@@ -27158,11 +27158,11 @@
   "7a56c6e1": {
    "oracle_id": "7a56c6e1-0509-4783-9b29-cf3163977166",
    "name": "Serra's Emissary",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/0/9/09283c34-b063-4290-a444-6730334324f0.jpg?1783926963",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/30s/serras-emissary"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/b/6/b6534049-3045-4546-b1e8-e5b1b0df5f56.jpg?1783926884",
+   "scryfall_uri": "https://scryfall.com/card/mh2/30/serras-emissary"
   },
   "3aa83ed2": {
    "oracle_id": "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
@@ -27170,8 +27170,8 @@
    "set": "LTR",
    "set_name": "The Lord of the Rings: Tales of Middle-earth",
    "released_at": "2023-06-23",
-   "image": "https://cards.scryfall.io/normal/front/9/3/93de9042-cc62-4ade-8d8d-68fdbc84bfae.jpg?1786082021",
-   "scryfall_uri": "https://scryfall.com/card/ltr/0/the-one-ring"
+   "image": "https://cards.scryfall.io/normal/front/d/5/d5806e68-1054-458e-866d-1f2470f682b2.jpg?1790212038",
+   "scryfall_uri": "https://scryfall.com/card/ltr/246/the-one-ring"
   },
   "cbbe535b": {
    "oracle_id": "cbbe535b-12d6-4e6c-8b26-9220f06a1604",
@@ -27476,8 +27476,8 @@
    "set": "M3C",
    "set_name": "Modern Horizons 3 Commander",
    "released_at": "2024-06-14",
-   "image": "https://cards.scryfall.io/normal/front/d/e/de92facf-762b-4a23-8d5e-bb673b0500c0.jpg?1783911414",
-   "scryfall_uri": "https://scryfall.com/card/m3c/82/talon-gates-of-madara"
+   "image": "https://cards.scryfall.io/normal/front/c/5/c565f8fe-acf7-40dd-8100-8f692d1e232c.jpg?1783911400",
+   "scryfall_uri": "https://scryfall.com/card/m3c/134/talon-gates-of-madara"
   },
   "7fffbe7f": {
    "oracle_id": "7fffbe7f-ad78-4bb6-a611-c37e495c6ee0",
@@ -27518,11 +27518,11 @@
   "08aaafc7": {
    "oracle_id": "08aaafc7-5fc0-4c28-a361-2a22536ec080",
    "name": "Void Mirror",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/4/e/4e6a9ef6-4244-4b02-a947-e88c69604379.jpg?1783926936",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/242s/void-mirror"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/6/f/6f906219-7a6a-427b-93c4-4d958cbd171c.jpg?1783926799",
+   "scryfall_uri": "https://scryfall.com/card/mh2/242/void-mirror"
   },
   "f1266a1b": {
    "oracle_id": "f1266a1b-bae6-4ded-b4d5-7586a5b6c5d0",
@@ -27593,8 +27593,8 @@
    "set": "M3C",
    "set_name": "Modern Horizons 3 Commander",
    "released_at": "2024-06-14",
-   "image": "https://cards.scryfall.io/normal/front/f/9/f979fc86-2c7e-49b3-965e-607a203cbfb1.jpg?1783911423",
-   "scryfall_uri": "https://scryfall.com/card/m3c/50/barrowgoyf"
+   "image": "https://cards.scryfall.io/normal/front/c/e/cea3b218-0e6e-443a-84f7-380f1021e8e1.jpg?1783911410",
+   "scryfall_uri": "https://scryfall.com/card/m3c/102/barrowgoyf"
   },
   "222fd9fc": {
    "oracle_id": "222fd9fc-7af4-4269-bbb9-cd7b8ac029bd",
@@ -27608,11 +27608,11 @@
   "f1c2dbe2": {
    "oracle_id": "f1c2dbe2-fbe0-4058-bdf1-91d1b1832786",
    "name": "Dauthi Voidwalker",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/9/b/9b7029b0-cd20-4970-9355-a27611b817bc.jpg?1783926957",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/81s/dauthi-voidwalker"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/d/c/dce5db87-4a78-4b8d-b5c2-918ccd1ba4e3.jpg?1783926864",
+   "scryfall_uri": "https://scryfall.com/card/mh2/81/dauthi-voidwalker"
   },
   "92acbbeb": {
    "oracle_id": "92acbbeb-f82b-413b-b243-f7a012f5400c",
@@ -27743,11 +27743,11 @@
   "aa1a6646": {
    "oracle_id": "aa1a6646-c1e6-4bff-9092-43ee3e137914",
    "name": "Archon of Cruelty",
-   "set": "PMH2",
-   "set_name": "Modern Horizons 2 Promos",
-   "released_at": "2021-05-06",
-   "image": "https://cards.scryfall.io/normal/front/a/f/afeb627e-0832-4724-bd95-cd8594c66e02.jpg?1783926958",
-   "scryfall_uri": "https://scryfall.com/card/pmh2/75s/archon-of-cruelty"
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/1/b/1be9d9a4-d7ee-4854-abc2-85cabf993ec9.jpg?1783926865",
+   "scryfall_uri": "https://scryfall.com/card/mh2/75/archon-of-cruelty"
   },
   "299fc083": {
    "oracle_id": "299fc083-0834-4064-8344-f895aff68867",
