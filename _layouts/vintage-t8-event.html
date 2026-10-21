@@ -43,13 +43,16 @@ header_type: none
   {%- endif %}
 
   {%- if ev.decks.size > 0 %}
+  {%- comment -%} seed: Swiss standing going in; finish: how far the playoff went {%- endcomment -%}
+  {%- assign seeded = ev.decks | where_exp: "d", "d.seed" | size -%}
   <div class="vd-scroll">
   <table class="vd-table">
-    <thead><tr><th>Finish</th><th>Player</th><th>Deck</th></tr></thead>
+    <thead><tr><th>Finish</th>{% if seeded > 0 %}<th class="vd-num" title="Swiss standing going into the Top 8">Seed</th>{% endif %}<th>Player</th><th>Deck</th></tr></thead>
     <tbody>
       {%- for d in ev.decks %}
       <tr>
         <td class="vd-num">{{ d.finish }}</td>
+        {%- if seeded > 0 %}<td class="vd-num vd-seed">{{ d.seed | default: "&ndash;" }}</td>{% endif %}
         <td>
           <a href="#deck-{{ forloop.index }}">{{ d.player }}</a>
           {%- if d.player_native %} <span class="vd-native" lang="ja">{{ d.player_native }}</span>{% endif -%}

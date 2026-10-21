@@ -3644,6 +3644,10 @@
      "text": "No Wizards coverage of the 2009 Vintage Championship was found. CoolStuffInc places the Top 8 1 to 8 without a bracket or seeds; places 3 and 4 are given here as 3-4 and places 5 to 8 as 5-8."
     },
     {
+     "text": "The playoff is only partly known, from Itou's round-by-round account: quarterfinal Itou def. Trogdon 2-1, semifinal Itou def. \"5c Stax\" (Jones, the only 5c Stax list) 2-1, final Itou def. Wu 2-1. Wu def. DeMars in the other semifinal follows from the bracket, and DeMars calls his own finish third place. How Ducommun, Speers and Donovan went out is not known. The finishes are consistent with all of it.",
+     "url": "https://articles.starcitygames.com/articles/so-many-insane-plays-interview-with-hiromichi-itou-the-2009-vintage-champion/"
+    },
+    {
      "text": "CoolStuffInc prints no archetype names; archetypes are the names on the lhc Deckbox sets.",
      "url": "https://deckbox.org/users/lhc"
     },
@@ -4611,8 +4615,12 @@
      "text": "No Wizards coverage of the 2011 Vintage Championship was found. Eternal Central places the Top 8 1 to 8; 3rd and 4th are given here as 3-4 and 5th to 8th as 5-8. Seeds are not known."
     },
     {
-     "text": "Mark Hornung beat Nick Coss, Ryan Glackin and Paul Mastriano (Hornung's report), so Mastriano was the finalist. CoolStuffInc wrongly lists Menendian as the finalist.",
-     "url": "https://articles.starcitygames.com/articles/2011-vintage-world-champs-report-challenge-accepted/"
+     "text": "Placings follow the playoff as Eternal Central reported it: quarterfinals Hornung def. Coss 2-1, Glackin def. Joseph Brown, Menendian def. Bogaard, Mastriano def. Shay; semifinals Hornung def. Glackin, Mastriano def. Menendian 2-1; final Hornung def. Mastriano 2-1. Hornung's own report agrees on his three matches. CoolStuffInc wrongly lists Menendian as the finalist.",
+     "url": "https://www.eternalcentral.com/gen-con-2011-eternal-event-news/"
+    },
+    {
+     "text": "Menendian on his semifinal loss to Mastriano.",
+     "url": "https://www.eternalcentral.com/so-many-insane-plays-the-2011-vintage-year-in-review/"
     },
     {
      "text": "Date: mtgtop8 dates the event 05/08/11 (Friday). Hornung's report has the Block Championship the night before and him wanting to \"sleep Friday\", which fits Friday 5 August; no source states the day directly.",
@@ -6780,14 +6788,19 @@
    "label": "Eternal Weekend Europe",
    "date": "2016-10-23",
    "location": "Charenton-le-Pont (Paris), France",
-   "players": 98,
+   "players": 94,
    "source": {
     "url": "https://www.mtgtop8.com/event?e=13824&f=VI",
     "label": "mtgtop8, Eternal Weekend Europe 2016"
    },
    "notes": [
     {
-     "text": "The organizer's own coverage (Bazaar of Moxen / Magic Bazar, bazaar-of-moxen.com) is gone, so mtgtop8 is the source. Placings are mtgtop8's: 1, 2, 3-4 and 5-8."
+     "text": "Placings and seeds are from the organizer's coverage (Bazaar of Moxen), archived, and the Challonge bracket it embeds: quarterfinals Badia Garcia (1) def. Dahinden (8) 2-1, Mateo (4) def. Storm (5) 2-1, Knaepen (7) def. Loucka (2) 2-1, Musarra (6) def. Mesotten (3) 2-1; semifinals Mateo def. Badia Garcia 2-1, Knaepen def. Musarra 2-1; final Mateo def. Knaepen 2-0. They agree with mtgtop8's, which the lists are copied from. Players: 94 per the organizer; mtgtop8 says 98.",
+     "url": "https://web.archive.org/web/20161027174446/http://www.bazaar-of-moxen.com:80/en/coverage,24/european-vintage-championship-2016-eternal-weekend,c363.html?event=23&evt=23"
+    },
+    {
+     "text": "The bracket, as embedded on the organizer's page.",
+     "url": "https://web.archive.org/web/20261021184115/https://challonge.com/iz77jggv/module"
     },
     {
      "text": "MTGGoldfish has the same Top 8 with an exact 1st-8th order and dates it 22 October, but two of its lists have impossible counts (a 59-card main deck and a 16-card sideboard), so it was not used.",
@@ -6797,6 +6810,7 @@
    "decks": [
     {
      "finish": "1",
+     "seed": 4,
      "player": "Joan Anton Mateo",
      "archetype": "Monastery",
      "main": [
@@ -6851,6 +6865,7 @@
     },
     {
      "finish": "2",
+     "seed": 7,
      "player": "Maarten Knaepen",
      "archetype": "MUD",
      "main": [
@@ -6895,6 +6910,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 1,
      "player": "Jose Antonio Badia Garcia",
      "archetype": "Eldrazi Aggro",
      "main": [
@@ -6937,6 +6953,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 6,
      "player": "Antonio Musarra",
      "archetype": "MUD",
      "main": [
@@ -6981,6 +6998,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 5,
      "player": "Henrik Storm",
      "archetype": "Eldrazi",
      "main": [
@@ -7021,6 +7039,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 2,
      "player": "Ladislav Loucka",
      "archetype": "MUD",
      "main": [
@@ -7067,6 +7086,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Yves Dahinden",
      "archetype": "Oath of Druids",
      "main": [
@@ -7117,6 +7137,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 3,
      "player": "Rob Mesotten",
      "archetype": "TPS",
      "main": [
@@ -7659,19 +7680,25 @@
    },
    "notes": [
     {
-     "text": "Run by Magic Bazar / Bazaar of Moxen; no source found names the city or venue (probably the Paris area). Placings are mtgtop8's: 1, 2, 3-4 and 5-8."
+     "text": "Run by Magic Bazar / Bazaar of Moxen; no source found names the city or venue (probably the Paris area). Placings and seeds are from the organizer's coverage, archived, and its Challonge bracket: quarterfinals Solís (1) def. Martens (8) 2-0, Rodriguez Pozo (5) def. Gonzalez Caballero (4) 2-0, Fougerouse (7) def. Matesanz Garcia (2) 2-0, Crespo (3) def. Mode (6) 2-0; semifinals Solís def. Rodriguez Pozo 2-0, Crespo def. Fougerouse 2-1; final Solís def. Crespo 2-1. They agree with mtgtop8's, which the lists are copied from.",
+     "url": "https://web.archive.org/web/20171001230446/http://www.bazaar-of-moxen.com/en/coverage,24/vintage-european-championship-2017,c383.html?event=25&evt=25"
+    },
+    {
+     "text": "The bracket, as embedded on the organizer's page.",
+     "url": "https://web.archive.org/web/20261021184133/https://challonge.com/europeanvintagechampionship2017/module"
     },
     {
      "text": "MTGGoldfish has the same Top 8 in an exact 1st-8th order that differs from mtgtop8's, but two of its lists have impossible counts (56-card main deck, 14-card sideboard), so it was not used.",
      "url": "https://www.mtggoldfish.com/tournament/23947"
     },
     {
-     "text": "The winner's deck is \"Eldrazi Aggro\" on mtgtop8 and \"Displacer Taxes\" on MTGGoldfish."
+     "text": "The winner's deck is \"Eldrazi Aggro\" on mtgtop8, \"White Eldrazi\" on the organizer's page and \"Displacer Taxes\" on MTGGoldfish."
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 1,
      "player": "Joaquín Solís",
      "archetype": "Eldrazi Aggro",
      "notes": [
@@ -7718,6 +7745,7 @@
     },
     {
      "finish": "2",
+     "seed": 3,
      "player": "Aurelio Crespo",
      "archetype": "MUD",
      "main": [
@@ -7761,6 +7789,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 5,
      "player": "Javier Rodriguez Pozo",
      "archetype": "2/1 Control",
      "main": [
@@ -7813,6 +7842,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 7,
      "player": "Francois Fougerouse",
      "archetype": "MUD",
      "main": [
@@ -7858,6 +7888,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 4,
      "player": "Ruben Gonzalez Caballero",
      "archetype": "Grixis Control",
      "main": [
@@ -7909,6 +7940,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Steven Martens",
      "archetype": "Monastery",
      "main": [
@@ -7972,6 +8004,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 2,
      "player": "Sergio Matesanz Garcia",
      "archetype": "Monastery",
      "main": [
@@ -8026,6 +8059,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Pierrick Mode",
      "archetype": "MUD",
      "main": [
@@ -8114,17 +8148,18 @@
      "url": "https://web.archive.org/web/20171030205051/http://www.cardtitan.com/coverage"
     },
     {
-     "text": "Card Titan marks only the winner (Andy Markiton). Rich Shay as finalist is from Hipsters of the Coast's recap (an all-Shops final). Pat Fehling and Mike Kiesel as 3-4 are from mtgtop8, which ranks the eight in the same order as Card Titan's page, so 3-4 is not confirmed by the organizer.",
-     "url": "https://www.hipstersofthecoast.com/2017/10/eternal-weekend-2017-recap"
+     "text": "Placings and seeds are from Eternal Central's coverage, which prints the seeded Top 8 bracket with Card Titan's Twitch VODs: quarterfinals Markiton (1) def. Vergo (8) 2-0, Shay (2) def. Durkin (7) 2-1, Fehling (3) def. Kelly (6) 2-1, Kiesel (4) def. Aldridge (5) 2-0; semifinals Markiton def. Kiesel 2-0, Shay def. Fehling 2-0; final Markiton def. Shay 2-1. Card Titan's own page marks only the winner.",
+     "url": "https://www.eternalcentral.com/vintagechamps2017/"
     },
     {
-     "text": "No Swiss standings survive, so seeds are unknown. Card Titan prints \"Rich Shay, Ph.D.\"; mtgtop8 has Patrick Fehling and Ibrahim \"Alridge\".",
+     "text": "Card Titan prints \"Rich Shay, Ph.D.\"; mtgtop8 has Patrick Fehling and Ibrahim \"Alridge\"; Eternal Central spells Vergo both \"Vergo\" and \"Vargo\".",
      "url": "https://web.archive.org/web/20171030205051/http://www.cardtitan.com/coverage"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 1,
      "player": "Andy Markiton",
      "archetype": "Ravager Shops",
      "main": [
@@ -8167,6 +8202,7 @@
     },
     {
      "finish": "2",
+     "seed": 2,
      "player": "Rich Shay",
      "archetype": "Ravager Shops (Pirate Stompy)",
      "main": [
@@ -8208,6 +8244,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 3,
      "player": "Pat Fehling",
      "archetype": "Oath of Druids",
      "main": [
@@ -8265,6 +8302,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 4,
      "player": "Mike Kiesel",
      "archetype": "Ravager Shops",
      "main": [
@@ -8309,6 +8347,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 5,
      "player": "Ibrahim Aldridge",
      "archetype": "Oath of Druids",
      "main": [
@@ -8369,6 +8408,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Brian Kelly",
      "archetype": "Inferno Titan Oath of Druids",
      "main": [
@@ -8429,6 +8469,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Brian Durkin",
      "archetype": "Ravager Shops",
      "main": [
@@ -8470,6 +8511,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Eric Vergo",
      "archetype": "Ravager Shops",
      "main": [
@@ -8559,17 +8601,18 @@
    },
    "notes": [
     {
-     "text": "Organized by Bazaar of Moxen / Magic Bazar. No organizer or MTGGoldfish page was found; mtgtop8 is the only source. mtgtop8 numbers the Top 8 1st to 8th; only 1st and 2nd are certain from the playoff, so 3rd-4th and 5th-8th are given as bands."
+     "text": "Organized by Magic Bazar at the Dock Eiffel, Aubervilliers. Placings are from the organizer's article, archived: quarterfinals Alascio López def. Ramagli 2-0, Cobb def. Nieto 2-0, Zarzoso def. Giani 2-0, Storm def. Romte Vilardell 2-1; semifinals Alascio López def. Cobb 2-0, Zarzoso def. Storm 2-0; final Zarzoso def. Alascio López 2-0. They agree with mtgtop8's, which the lists are copied from.",
+     "url": "https://web.archive.org/web/20201109015609/https://www.magicbazar.fr/article/52-eternal_weekend_2018"
     },
     {
-     "text": "mtgtop8 misspells several names. The winner is \"Alfonso Zarzosa\" there and \"Zarzoso\" in the magiclibrarities prize-painting index; the spellings below are mtgtop8's.",
+     "text": "mtgtop8 misspells several names. The winner is \"Zarzoso\" in the organizer's article, the magiclibrarities prize-painting index and on TheManaDrain, and \"Zarzosa\" on mtgtop8; the organizer's spelling is used. The other spellings below are mtgtop8's.",
      "url": "https://www.magiclibrarities.net/468-rarities-vintagelegacy-championship-oversized-unique-cards-english-cards-index.html"
     }
    ],
    "decks": [
     {
      "finish": "1",
-     "player": "Alfonso Zarzosa",
+     "player": "Alfonso Zarzoso",
      "archetype": "Silence Mentor",
      "main": [
       [1,"12c63a45"],
@@ -9582,8 +9625,8 @@
      "url": "https://web.archive.org/web/20181107111924/http://cardtitancloud.com/vintage/standings_round10.html"
     },
     {
-     "text": "Card Titan lists the Top 8 in seed order and does not mark results. Brian Coval as winner, Matt Sperling as finalist and Nam Tran and Kyle Dorgan as 3-4 are from mtgtop8, not confirmed by the organizer.",
-     "url": "https://www.mtgtop8.com/event?e=20486&f=VI"
+     "text": "Placings are from Eternal Central's coverage, which prints the seeded Top 8 bracket: quarterfinals Coval (1) def. Kwok (8), Shay (7) def. Sperling (2), Tran (3) def. Arthurs (6), Dorgan (4) def. Burk (5); semifinals Coval def. Dorgan, Tran def. Shay; final Coval def. Tran. Card Titan lists the Top 8 in seed order without results, and mtgtop8 copied that order, which made Sperling the finalist and left Shay in 5-8.",
+     "url": "https://www.eternalcentral.com/vintagechamps2018/"
     },
     {
      "text": "Card Titan misspells two players in places (\"Nam Tram\" in a profile, \"Como Kwok\" on a decklist); the standings have Tran and Kwok.",
@@ -9654,56 +9697,6 @@
     },
     {
      "finish": "2",
-     "seed": 2,
-     "player": "Matt Sperling",
-     "archetype": "Pyromancer Control",
-     "main": [
-      [3,"2bb2eda7"],
-      [3,"5fac139a"],
-      [1,"550c74d4"],
-      [2,"306593b0"],
-      [1,"36cd2364"],
-      [1,"f8b17b89"],
-      [1,"86bf58f2"],
-      [4,"956381ba"],
-      [1,"1d67f5ff","Gitxaian Probe"],
-      [2,"4457ed35"],
-      [4,"1a0770e6"],
-      [1,"02090581"],
-      [4,"ac641490"],
-      [2,"ecc435e2"],
-      [2,"d64b0848"],
-      [1,"d0209d3f"],
-      [1,"5b6bdf5a"],
-      [4,"9d4b1e44"],
-      [1,"7f77a84e","Jace, the Mindsculptor"],
-      [1,"5089ec1a"],
-      [1,"376ee366"],
-      [1,"ed85fa82"],
-      [1,"d5ed1233"],
-      [1,"b2c6aa39"],
-      [3,"09dd85aa"],
-      [1,"a3fb7228"],
-      [3,"cb027150"],
-      [1,"d21a89eb"],
-      [2,"74b7fe23"],
-      [4,"c718911c"],
-      [1,"09a70ae8"],
-      [1,"6587a463"]
-     ],
-     "sideboard": [
-      [1,"306593b0"],
-      [1,"b34bb2dc"],
-      [2,"753cb2b2"],
-      [4,"f4e32fc1"],
-      [1,"4457ed35"],
-      [4,"6d4e558e"],
-      [1,"2f83ca86"],
-      [1,"ecc435e2"]
-     ]
-    },
-    {
-     "finish": "3-4",
      "seed": 3,
      "player": "Nam Tran",
      "archetype": "Ravager Shops",
@@ -9806,6 +9799,100 @@
      ]
     },
     {
+     "finish": "3-4",
+     "seed": 7,
+     "player": "Rich Shay",
+     "archetype": "Ravager Shops",
+     "main": [
+      [4,"62e7e7b1"],
+      [4,"18f22960"],
+      [2,"dde55256"],
+      [1,"a698c9f5"],
+      [3,"340bbe8b"],
+      [4,"786b3657"],
+      [4,"986ae327"],
+      [1,"74f67dcf"],
+      [4,"4b515bb0"],
+      [1,"5089ec1a"],
+      [1,"74027ba4"],
+      [1,"2c63e4e1"],
+      [1,"376ee366"],
+      [1,"0677f49e"],
+      [1,"824597b8"],
+      [1,"ed85fa82"],
+      [1,"d5ed1233"],
+      [1,"6ad8011d"],
+      [4,"09c96077"],
+      [1,"0c6c5336"],
+      [1,"69d994f2"],
+      [4,"23467047"],
+      [4,"5963e0ef"],
+      [4,"ba284fe6"],
+      [1,"d21a89eb"],
+      [1,"dba4fd31"],
+      [4,"09a70ae8"]
+     ],
+     "sideboard": [
+      [1,"fd74f8eb"],
+      [4,"753cb2b2"],
+      [2,"dde55256"],
+      [2,"ca1144c2"],
+      [1,"255d752a"],
+      [3,"1573f7f9"],
+      [2,"d1a60f44"]
+     ]
+    },
+    {
+     "finish": "5-8",
+     "seed": 2,
+     "player": "Matt Sperling",
+     "archetype": "Pyromancer Control",
+     "main": [
+      [3,"2bb2eda7"],
+      [3,"5fac139a"],
+      [1,"550c74d4"],
+      [2,"306593b0"],
+      [1,"36cd2364"],
+      [1,"f8b17b89"],
+      [1,"86bf58f2"],
+      [4,"956381ba"],
+      [1,"1d67f5ff","Gitxaian Probe"],
+      [2,"4457ed35"],
+      [4,"1a0770e6"],
+      [1,"02090581"],
+      [4,"ac641490"],
+      [2,"ecc435e2"],
+      [2,"d64b0848"],
+      [1,"d0209d3f"],
+      [1,"5b6bdf5a"],
+      [4,"9d4b1e44"],
+      [1,"7f77a84e","Jace, the Mindsculptor"],
+      [1,"5089ec1a"],
+      [1,"376ee366"],
+      [1,"ed85fa82"],
+      [1,"d5ed1233"],
+      [1,"b2c6aa39"],
+      [3,"09dd85aa"],
+      [1,"a3fb7228"],
+      [3,"cb027150"],
+      [1,"d21a89eb"],
+      [2,"74b7fe23"],
+      [4,"c718911c"],
+      [1,"09a70ae8"],
+      [1,"6587a463"]
+     ],
+     "sideboard": [
+      [1,"306593b0"],
+      [1,"b34bb2dc"],
+      [2,"753cb2b2"],
+      [4,"f4e32fc1"],
+      [1,"4457ed35"],
+      [4,"6d4e558e"],
+      [1,"2f83ca86"],
+      [1,"ecc435e2"]
+     ]
+    },
+    {
      "finish": "5-8",
      "seed": 5,
      "player": "Eliot Burk",
@@ -9898,50 +9985,6 @@
       [3,"6d4e558e"],
       [1,"2f83ca86"],
       [3,"e0bea449"]
-     ]
-    },
-    {
-     "finish": "5-8",
-     "seed": 7,
-     "player": "Rich Shay",
-     "archetype": "Ravager Shops",
-     "main": [
-      [4,"62e7e7b1"],
-      [4,"18f22960"],
-      [2,"dde55256"],
-      [1,"a698c9f5"],
-      [3,"340bbe8b"],
-      [4,"786b3657"],
-      [4,"986ae327"],
-      [1,"74f67dcf"],
-      [4,"4b515bb0"],
-      [1,"5089ec1a"],
-      [1,"74027ba4"],
-      [1,"2c63e4e1"],
-      [1,"376ee366"],
-      [1,"0677f49e"],
-      [1,"824597b8"],
-      [1,"ed85fa82"],
-      [1,"d5ed1233"],
-      [1,"6ad8011d"],
-      [4,"09c96077"],
-      [1,"0c6c5336"],
-      [1,"69d994f2"],
-      [4,"23467047"],
-      [4,"5963e0ef"],
-      [4,"ba284fe6"],
-      [1,"d21a89eb"],
-      [1,"dba4fd31"],
-      [4,"09a70ae8"]
-     ],
-     "sideboard": [
-      [1,"fd74f8eb"],
-      [4,"753cb2b2"],
-      [2,"dde55256"],
-      [2,"ca1144c2"],
-      [1,"255d752a"],
-      [3,"1573f7f9"],
-      [2,"d1a60f44"]
      ]
     },
     {
@@ -10065,8 +10108,8 @@
      "url": "https://mtg-jp.com/coverage/ewa19/article/0032955/"
     },
     {
-     "text": "The semifinalists are unresolved: mtgtop8 has 3rd Kusakawa and 4th Kato (with Jumonji 8th), MTG Wiki (ja) has 3rd Kato and 4th Jumonji. mtgtop8's pair is used, as 3-4.",
-     "url": "https://www.mtgtop8.com/event?e=23232&f=VI"
+     "text": "Unresolved: the losing semifinalists are not known, so all six non-finalists are listed 5-8. The organizer, BIG MAGIC, ranks quarterfinal and semifinal losers by Swiss standing, so a 3rd/4th split in any source is not a playoff result; mtgtop8's 3rd Kusakawa and 4th Kato are simply the top two seeds. If the bracket was the usual 1v8, 4v5, 2v7, 3v6, one semifinalist was Kusakawa or Jumonji and the other Kato or Yip. MTG Wiki (ja) has Kato and Jumonji, consistent with that but uncited. mtg-jp covered only the final, and the VOD playlist is gone.",
+     "url": "https://mtg.bigmagic.net/article/eternalweekend-asia2019.html"
     },
     {
      "text": "128 registered and 125 played (mtg-jp metagame breakdown); mtgtop8 says 128.",
@@ -10179,7 +10222,7 @@
      ]
     },
     {
-     "finish": "3-4",
+     "finish": "5-8",
      "seed": 1,
      "player": "Naoto Kusakawa",
      "player_native": "草川 直人",
@@ -10233,7 +10276,7 @@
      ]
     },
     {
-     "finish": "3-4",
+     "finish": "5-8",
      "seed": 2,
      "player": "Yuki Kato",
      "player_native": "嘉藤 裕樹",
@@ -14452,11 +14495,16 @@
     {
      "text": "Players: 103, per Melee and mtgtop8.",
      "url": "https://melee.gg/Tournament/View/12410"
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 7) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/12410"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 3,
      "player": "Yusuke Takakuwa",
      "archetype": "Coveted Jewel",
      "main": [
@@ -14514,6 +14562,7 @@
     },
     {
      "finish": "2",
+     "seed": 1,
      "player": "Chris Schiber",
      "archetype": "Initiative Hatebear",
      "main": [
@@ -14557,6 +14606,7 @@
     },
     {
      "finish": "3",
+     "seed": 5,
      "player": "Hiroki Nakatani",
      "archetype": "Dimir Control",
      "main": [
@@ -14614,6 +14664,7 @@
     },
     {
      "finish": "4",
+     "seed": 7,
      "player": "Shota Yamaguchi",
      "archetype": "Grixis Control",
      "main": [
@@ -14680,6 +14731,7 @@
     },
     {
      "finish": "5",
+     "seed": 2,
      "player": "Youhei Tsumori",
      "archetype": "Grixis Control",
      "main": [
@@ -14745,6 +14797,7 @@
     },
     {
      "finish": "6",
+     "seed": 4,
      "player": "Ryo Jumonji",
      "archetype": "Underworld Breach",
      "main": [
@@ -14808,6 +14861,7 @@
     },
     {
      "finish": "7",
+     "seed": 6,
      "player": "Kandai Sekimoto",
      "archetype": "Bazaar Aggro",
      "main": [
@@ -14844,6 +14898,7 @@
     },
     {
      "finish": "8",
+     "seed": 8,
      "player": "Gen Shinohara",
      "archetype": "Grixis Combo",
      "notes": [
@@ -15432,12 +15487,12 @@
    },
    "notes": [
     {
-     "text": "Lists, placings, player names and archetype names copied from mtgtop8. The organizer (Card Titan) published the lists on melee.gg at https://melee.gg/Tournament/View/12792, which blocks automated fetching; they were not compared here.",
+     "text": "Lists, player names and archetype names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
      "url": "https://melee.gg/Tournament/View/12792"
     },
     {
-     "text": "Seeds (Swiss standings) are not given by mtgtop8 and are left null.",
-     "url": "https://www.mtgtop8.com/event?e=40021&f=VI"
+     "text": "Placings and seeds are from the organizer's Melee page: seeds are the standings after the last Swiss round, and placings follow its playoff matches (quarterfinals: Hans Jacob Goddik def. Michael O'Malley 2-0; Brian Pallas def. Lee Webb 2-0; Peter Coloyan def. Kiet Ngo 2-0; Rajah James def. Stu Somers 2-0. Semifinals: Hans Jacob Goddik def. Brian Pallas 2-0; Rajah James def. Peter Coloyan 2-0. Final: Rajah James def. Hans Jacob Goddik 2-0). mtgtop8, which the lists were copied from, orders the Top 8 roughly by Swiss standing and had Hans Jacob Goddik 1, Kiet Ngo 2, Rajah James 3-4, Peter Coloyan 5-8; corrected here.",
+     "url": "https://melee.gg/Tournament/View/12792"
     },
     {
      "text": "Swiss was played on 2022-12-09; mtgtop8 dates the event to that day. The Top 8 was played on 2022-12-11.",
@@ -15447,6 +15502,49 @@
    "decks": [
     {
      "finish": "1",
+     "seed": 3,
+     "player": "Rajah James",
+     "archetype": "White Initiative",
+     "main": [
+      [1,"5089ec1a"],
+      [1,"7359e82b"],
+      [1,"69d994f2"],
+      [1,"d5ed1233"],
+      [1,"ed85fa82"],
+      [1,"824597b8"],
+      [1,"0677f49e"],
+      [1,"376ee366"],
+      [1,"74027ba4"],
+      [1,"2c63e4e1"],
+      [1,"1a0770e6"],
+      [2,"ec3d4466"],
+      [1,"180eda7c"],
+      [2,"b3d81980"],
+      [3,"358789f9"],
+      [4,"ceef2d5a"],
+      [4,"dcb9c2a7"],
+      [4,"5ea675aa"],
+      [4,"51f091a7"],
+      [4,"9b7f1d05"],
+      [1,"d21a89eb"],
+      [1,"59119143"],
+      [4,"09a70ae8"],
+      [4,"89ca686a"],
+      [4,"23467047"],
+      [7,"bc71ebf6"]
+     ],
+     "sideboard": [
+      [4,"2f83ca86"],
+      [3,"8a76a9b9"],
+      [3,"69b409b3"],
+      [2,"d9517c5d"],
+      [2,"27ffa6e9"],
+      [1,"1da10d5c"]
+     ]
+    },
+    {
+     "finish": "2",
+     "seed": 1,
      "player": "Hans Jacob Goddik",
      "archetype": "Jeskai Xerox",
      "main": [
@@ -15498,64 +15596,8 @@
      ]
     },
     {
-     "finish": "2",
-     "player": "Kiet Ngo",
-     "archetype": "Grixis Control",
-     "main": [
-      [1,"1a0770e6"],
-      [1,"ededbdae"],
-      [1,"550c74d4"],
-      [1,"0677f49e"],
-      [1,"1b5e6560"],
-      [1,"824597b8"],
-      [1,"d5ed1233"],
-      [1,"ed85fa82"],
-      [1,"99d4d99d"],
-      [1,"13575cf9"],
-      [1,"376ee366"],
-      [1,"6ad8011d"],
-      [1,"2c63e4e1"],
-      [1,"5089ec1a"],
-      [1,"2bd111bb"],
-      [1,"370c37f7"],
-      [1,"36cd2364"],
-      [1,"82004860"],
-      [1,"1d67f5ff"],
-      [1,"c823e687"],
-      [1,"d0209d3f"],
-      [1,"a8abd966"],
-      [1,"86cebe2a"],
-      [1,"322f0459"],
-      [1,"810a6cf5"],
-      [1,"254878f0"],
-      [1,"ab26fbe2"],
-      [3,"86bf58f2"],
-      [4,"956381ba"],
-      [1,"1c96772b"],
-      [2,"1f438b8f"],
-      [2,"34f34409"],
-      [4,"2f533667"],
-      [1,"dba4fd31"],
-      [1,"13ff3222"],
-      [1,"b2c6aa39"],
-      [3,"ef86989d"],
-      [3,"cb027150"],
-      [4,"4b22be3a"],
-      [4,"4c6a0c30"]
-     ],
-     "sideboard": [
-      [4,"ed1e5d24"],
-      [4,"f4e32fc1"],
-      [2,"fd74f8eb"],
-      [1,"8b46b50c"],
-      [1,"add0f7e7"],
-      [1,"753cb2b2"],
-      [1,"69b409b3"],
-      [1,"a188fe7e"]
-     ]
-    },
-    {
      "finish": "3-4",
+     "seed": 4,
      "player": "Brian Pallas",
      "archetype": "Doomsday",
      "main": [
@@ -15605,85 +15647,7 @@
     },
     {
      "finish": "3-4",
-     "player": "Rajah James",
-     "archetype": "White Initiative",
-     "main": [
-      [1,"5089ec1a"],
-      [1,"7359e82b"],
-      [1,"69d994f2"],
-      [1,"d5ed1233"],
-      [1,"ed85fa82"],
-      [1,"824597b8"],
-      [1,"0677f49e"],
-      [1,"376ee366"],
-      [1,"74027ba4"],
-      [1,"2c63e4e1"],
-      [1,"1a0770e6"],
-      [2,"ec3d4466"],
-      [1,"180eda7c"],
-      [2,"b3d81980"],
-      [3,"358789f9"],
-      [4,"ceef2d5a"],
-      [4,"dcb9c2a7"],
-      [4,"5ea675aa"],
-      [4,"51f091a7"],
-      [4,"9b7f1d05"],
-      [1,"d21a89eb"],
-      [1,"59119143"],
-      [4,"09a70ae8"],
-      [4,"89ca686a"],
-      [4,"23467047"],
-      [7,"bc71ebf6"]
-     ],
-     "sideboard": [
-      [4,"2f83ca86"],
-      [3,"8a76a9b9"],
-      [3,"69b409b3"],
-      [2,"d9517c5d"],
-      [2,"27ffa6e9"],
-      [1,"1da10d5c"]
-     ]
-    },
-    {
-     "finish": "5-8",
-     "player": "Michael O'malley",
-     "archetype": "Bazaar Aggro",
-     "main": [
-      [1,"0677f49e"],
-      [1,"376ee366"],
-      [2,"d00ade82"],
-      [4,"5f627e45"],
-      [4,"4e734493"],
-      [3,"7fd61a18"],
-      [3,"97acd977"],
-      [4,"7ed52301"],
-      [4,"b2ec080f"],
-      [4,"b9e4d34a"],
-      [4,"d43f5977"],
-      [4,"e97f9c2b"],
-      [4,"22f1a4a4"],
-      [1,"e996cd67"],
-      [1,"22e3cf1d"],
-      [1,"b76d1ae6"],
-      [1,"bf1341dd"],
-      [1,"13ff3222"],
-      [1,"d21a89eb"],
-      [2,"67d60b24"],
-      [2,"6587a463"],
-      [4,"54022a10"],
-      [4,"09a70ae8"]
-     ],
-     "sideboard": [
-      [4,"0c4bc9ea"],
-      [4,"f4e32fc1"],
-      [2,"ecc435e2"],
-      [2,"d412b175"],
-      [2,"c85d824b"],
-      [1,"bf1341dd"]
-     ]
-    },
-    {
-     "finish": "5-8",
+     "seed": 7,
      "player": "Peter Coloyan",
      "archetype": "Dimir Control",
      "main": [
@@ -15741,6 +15705,65 @@
     },
     {
      "finish": "5-8",
+     "seed": 2,
+     "player": "Kiet Ngo",
+     "archetype": "Grixis Control",
+     "main": [
+      [1,"1a0770e6"],
+      [1,"ededbdae"],
+      [1,"550c74d4"],
+      [1,"0677f49e"],
+      [1,"1b5e6560"],
+      [1,"824597b8"],
+      [1,"d5ed1233"],
+      [1,"ed85fa82"],
+      [1,"99d4d99d"],
+      [1,"13575cf9"],
+      [1,"376ee366"],
+      [1,"6ad8011d"],
+      [1,"2c63e4e1"],
+      [1,"5089ec1a"],
+      [1,"2bd111bb"],
+      [1,"370c37f7"],
+      [1,"36cd2364"],
+      [1,"82004860"],
+      [1,"1d67f5ff"],
+      [1,"c823e687"],
+      [1,"d0209d3f"],
+      [1,"a8abd966"],
+      [1,"86cebe2a"],
+      [1,"322f0459"],
+      [1,"810a6cf5"],
+      [1,"254878f0"],
+      [1,"ab26fbe2"],
+      [3,"86bf58f2"],
+      [4,"956381ba"],
+      [1,"1c96772b"],
+      [2,"1f438b8f"],
+      [2,"34f34409"],
+      [4,"2f533667"],
+      [1,"dba4fd31"],
+      [1,"13ff3222"],
+      [1,"b2c6aa39"],
+      [3,"ef86989d"],
+      [3,"cb027150"],
+      [4,"4b22be3a"],
+      [4,"4c6a0c30"]
+     ],
+     "sideboard": [
+      [4,"ed1e5d24"],
+      [4,"f4e32fc1"],
+      [2,"fd74f8eb"],
+      [1,"8b46b50c"],
+      [1,"add0f7e7"],
+      [1,"753cb2b2"],
+      [1,"69b409b3"],
+      [1,"a188fe7e"]
+     ]
+    },
+    {
+     "finish": "5-8",
+     "seed": 5,
      "player": "Lee Webb",
      "archetype": "White Initiative",
      "main": [
@@ -15786,6 +15809,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Stu Somers",
      "archetype": "White Initiative",
      "main": [
@@ -15823,6 +15847,45 @@
       [2,"d9517c5d"],
       [1,"1573f7f9"],
       [1,"a188fe7e"]
+     ]
+    },
+    {
+     "finish": "5-8",
+     "seed": 8,
+     "player": "Michael O'Malley",
+     "archetype": "Bazaar Aggro",
+     "main": [
+      [1,"0677f49e"],
+      [1,"376ee366"],
+      [2,"d00ade82"],
+      [4,"5f627e45"],
+      [4,"4e734493"],
+      [3,"7fd61a18"],
+      [3,"97acd977"],
+      [4,"7ed52301"],
+      [4,"b2ec080f"],
+      [4,"b9e4d34a"],
+      [4,"d43f5977"],
+      [4,"e97f9c2b"],
+      [4,"22f1a4a4"],
+      [1,"e996cd67"],
+      [1,"22e3cf1d"],
+      [1,"b76d1ae6"],
+      [1,"bf1341dd"],
+      [1,"13ff3222"],
+      [1,"d21a89eb"],
+      [2,"67d60b24"],
+      [2,"6587a463"],
+      [4,"54022a10"],
+      [4,"09a70ae8"]
+     ],
+     "sideboard": [
+      [4,"0c4bc9ea"],
+      [4,"f4e32fc1"],
+      [2,"ecc435e2"],
+      [2,"d412b175"],
+      [2,"c85d824b"],
+      [1,"bf1341dd"]
      ]
     }
    ],
@@ -15887,11 +15950,16 @@
     },
     {
      "text": "Organized by JK Entertainment. Names differ between Melee and mtgtop8 (\"Martin Lamr\" / \"Martinho1111\", \"Fabian Weiss\" / \"Fabian Friedrich\", \"Jose Alascio\" / \"Moatzu\"); mtgtop8's are kept."
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 7) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/38335"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 1,
      "player": "Lukas Schwendinger",
      "archetype": "Esper Control",
      "main": [
@@ -15957,6 +16025,7 @@
     },
     {
      "finish": "2",
+     "seed": 6,
      "player": "Hans Jacob Goddik",
      "archetype": "Dimir Control",
      "main": [
@@ -16013,6 +16082,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 4,
      "player": "Moatzu",
      "archetype": "Grixis Control",
      "main": [
@@ -16078,6 +16148,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 7,
      "player": "Eliott_dragon",
      "archetype": "Bazaar Aggro",
      "main": [
@@ -16112,6 +16183,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 2,
      "player": "Justin Gennari",
      "archetype": "Oath of Druids",
      "main": [
@@ -16168,6 +16240,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 3,
      "player": "Martinho1111",
      "archetype": "Beseech the Mirror",
      "main": [
@@ -16227,6 +16300,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Rodmanbcn",
      "archetype": "Beseech the Mirror",
      "main": [
@@ -16286,6 +16360,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 5,
      "player": "Fabian Friedrich",
      "archetype": "Oath of Druids",
      "main": [
@@ -16389,17 +16464,22 @@
      "text": "Held inside Players Convention Aichi 2023, organized by BIG MAGIC. mtg-jp prints card names in Japanese (Power, duals and other old cards in English); `name` is the English name, checked against Scryfall, and `printed_as` the Japanese as printed. Archetypes are translated from mtg-jp's Japanese labels; English player names are from Melee. Every list matches mtgtop8's copy of the Melee lists card for card (except mtgtop8's spelling \"Lorien Revealed\")."
     },
     {
-     "text": "Placings are mtg-jp's (Winner, Runner-up, Top 4, Top 8), and MTGGoldfish's report agrees on 1st and 2nd. Below that the sources disagree: MTGGoldfish has 3rd Ota and 4th Hayasaki with Takei 5th; mtgtop8 has 2nd Yuki Ota, 3-4 Takei and Shinohara, and Hosomi outside the Top 8; Melee has 2nd Gen Shinohara with 0-0-0 playoff records.",
-     "url": "https://www.mtgtop8.com/event?e=49861&f=VI"
+     "text": "Placings are mtg-jp's (Winner, Runner-up, Top 4, Top 8), confirmed by the playoff matches on the Melee page, entered there after the event: quarterfinals Hirasawa def. Marumo 2-1, Hayasaki def. Shinohara 2-0, Yamamoto def. Ota 2-0, Takei def. Hosomi 2-0; semifinals Hirasawa def. Hayasaki 2-0, Yamamoto def. Takei 2-1; final Hirasawa def. Yamamoto 2-1. mtgtop8, MTGGoldfish and Melee's own final standings all order the Top 8 differently, and wrongly.",
+     "url": "https://melee.gg/Tournament/View/30338"
     },
     {
      "text": "mtg-jp dates the event 25-26 November; the Top 8 profiles went up on the 26th.",
      "url": "https://mtg-jp.com/coverage/pcaichi23/article/0037436/"
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/30338"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 1,
      "player": "Daisuke Hirasawa",
      "player_native": "ヒラサワ ダイスケ",
      "archetype": "Oath",
@@ -16453,6 +16533,7 @@
     },
     {
      "finish": "2",
+     "seed": 7,
      "player": "Masanori Yamamoto",
      "player_native": "山本 政徳",
      "archetype": "Paradox Combo",
@@ -16509,6 +16590,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 3,
      "player": "Masaya Takei",
      "player_native": "武井 将也",
      "archetype": "Azorius Control",
@@ -16564,6 +16646,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 5,
      "player": "Yusuke Hayasaki",
      "player_native": "早崎 祐介",
      "archetype": "Dimir Control",
@@ -16618,6 +16701,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 2,
      "player": "Yuki Ota",
      "player_native": "太田 勇輝",
      "archetype": "Mono-White Initiative",
@@ -16659,6 +16743,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 4,
      "player": "Gen Shinohara",
      "player_native": "篠原 元",
      "archetype": "Dimir Storm",
@@ -16720,6 +16805,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Kyohei Hosomi",
      "player_native": "細見 京平",
      "archetype": "Stax",
@@ -16769,6 +16855,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Tsubasa Marumo",
      "player_native": "丸茂 翼",
      "archetype": "Mono-White Initiative",
@@ -16861,12 +16948,12 @@
    },
    "notes": [
     {
-     "text": "Lists, placings, player names and archetype names copied from mtgtop8. The organizer (Card Titan) published the lists on melee.gg at https://melee.gg/Tournament/View/34951, which blocks automated fetching; they were not compared here.",
+     "text": "Lists, player names and archetype names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
      "url": "https://melee.gg/Tournament/View/34951"
     },
     {
-     "text": "Seeds (Swiss standings) are not given by mtgtop8 and are left null.",
-     "url": "https://www.mtgtop8.com/event?e=50305&f=VI"
+     "text": "Placings and seeds are from the organizer's Melee page: seeds are the standings after the last Swiss round, and placings follow its playoff matches (quarterfinals: Anthony Valentine def. BoshNRoll_Brian 2-0; Peter Coloyan def. Adam Prusa 2-0; Tom Basketball def. Camden Drash 2-0; Brandon Chang def. Dan Nelson 2-0. Semifinals: Anthony Valentine def. Peter Coloyan 2-1; Tom Basketball def. Brandon Chang 2-0. Final: Anthony Valentine def. Tom Basketball 2-0). They agree with mtgtop8's at every tier. Melee's own final standings list the Top 8 in a different, wrong order (Dan Nelson 1st); its match results are what count. Brian Coval played as \"BoshNRoll_Brian\".",
+     "url": "https://melee.gg/Tournament/View/34951"
     },
     {
      "text": "Swiss was played on 2023-12-08; mtgtop8 dates the event to that day. The Top 8 was played on 2023-12-10.",
@@ -16876,6 +16963,7 @@
    "decks": [
     {
      "finish": "1",
+     "seed": 8,
      "player": "Anthony Valentine",
      "archetype": "Coveted Jewel",
      "main": [
@@ -16929,6 +17017,7 @@
     },
     {
      "finish": "2",
+     "seed": 2,
      "player": "Tom Basketball",
      "archetype": "Coveted Jewel",
      "main": [
@@ -16981,6 +17070,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 4,
      "player": "Peter Coloyan",
      "archetype": "Coveted Jewel",
      "main": [
@@ -17030,6 +17120,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 3,
      "player": "Brandon Chang",
      "archetype": "Oath of Druids",
      "main": [
@@ -17086,6 +17177,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Camden Drash",
      "archetype": "Azorius Initiative",
      "main": [
@@ -17142,6 +17234,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 5,
      "player": "Adam Prusa",
      "archetype": "Coveted Jewel",
      "main": [
@@ -17191,6 +17284,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 1,
      "player": "Brian Coval",
      "archetype": "Oath of Druids",
      "main": [
@@ -17247,6 +17341,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Dan Nelson",
      "archetype": "Oath of Druids",
      "main": [
@@ -17352,13 +17447,18 @@
      "url": "https://mtg-jp.com/coverage/pcshizuoka24/article/0038194/"
     },
     {
-     "text": "Placings are mtg-jp's (優勝, 準優勝, Top 4, Top 8). mtgtop8 and MTGGoldfish's report instead put Hiroki Ito in the Top 4 and Kazuma Matsumoto in the Top 8; unresolved.",
-     "url": "https://www.mtggoldfish.com/articles/vintage-101-eternal-weekend-asia-2024"
+     "text": "Placings follow the playoff matches on the Melee page: quarterfinals Ito def. Matsumoto 2-0, Sekikawa def. Hirasawa 2-0, Yokokawa def. Hosomi 2-0, Hori def. Yajima 2-1; semifinals Sekikawa def. Ito 2-0, Yokokawa def. Hori 2-1; final Yokokawa def. Sekikawa 2-0. mtg-jp's labels (優勝, 準優勝, Top 4, Top 8) put Matsumoto, the top Swiss seed, in the Top 4 and Ito in the Top 8, which the matches contradict; mtgtop8 and MTGGoldfish have them right.",
+     "url": "https://melee.gg/Tournament/View/116325"
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/116325"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 2,
      "player": "Yuta Yokokawa",
      "archetype": "Esper Control",
      "notes": [
@@ -17427,6 +17527,7 @@
     },
     {
      "finish": "2",
+     "seed": 5,
      "player": "Tsubasa Sekikawa",
      "archetype": "Esper Control",
      "notes": [
@@ -17486,6 +17587,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 3,
      "player": "Masataka Hori",
      "archetype": "Mono-Blue Shops",
      "main": [
@@ -17537,6 +17639,56 @@
     },
     {
      "finish": "3-4",
+     "seed": 8,
+     "player": "Hiroki Ito",
+     "archetype": "Doomsday",
+     "main": [
+      [2,"f3c7af78","溢れかえる岸辺"],
+      [2,"09dd85aa","霧深い雨林"],
+      [2,"ef86989d","汚染された三角州"],
+      [2,"cb027150","沸騰する小湖"],
+      [1,"5b2460a5","冠雪の島"],
+      [1,"08d80efc","地底街の下水道"],
+      [4,"4b22be3a"],
+      [2,"1de1b591","タッサの神託者"],
+      [1,"0d6b89dc","悲嘆"],
+      [4,"bd7867f4","通りの悪霊"],
+      [1,"36cd2364","渦まく知識"],
+      [4,"86bf58f2","狼狽の嵐"],
+      [1,"1a0770e6","精神的つまづき"],
+      [4,"53f7c868","暗黒の儀式"],
+      [1,"ededbdae","吸血の教示者"],
+      [1,"ac2173f9","否定の力"],
+      [4,"956381ba","意志の力"],
+      [1,"16d8ee99","噴出"],
+      [1,"f8b17b89","時を越えた探索"],
+      [1,"1d67f5ff","ギタクシア派の調査"],
+      [4,"02090581","思案"],
+      [4,"ac641490","定業"],
+      [1,"33d405ea","強迫"],
+      [1,"82004860","悪魔の教示者"],
+      [4,"721eb5a2","最後の審判"],
+      [1,"5089ec1a","ブラック・ロータス"],
+      [1,"550c74d4"],
+      [1,"9a1412db"],
+      [1,"d0209d3f"],
+      [1,"0677f49e"],
+      [1,"d5ed1233"]
+     ],
+     "sideboard": [
+      [2,"69b409b3"],
+      [1,"16c39265","記憶への放逐"],
+      [2,"0e71fc56","鋼の妨害"],
+      [3,"16437a83","致命的な一押し"],
+      [1,"ac2173f9","否定の力"],
+      [1,"48712d36","精神壊しの罠"],
+      [4,"f4e32fc1","虚空の力線"],
+      [1,"7f993ac7","濁浪の執政"]
+     ]
+    },
+    {
+     "finish": "5-8",
+     "seed": 1,
      "player": "Kazuma Matsumoto",
      "archetype": "Sultai Tempo",
      "notes": [
@@ -17598,54 +17750,7 @@
     },
     {
      "finish": "5-8",
-     "player": "Hiroki Ito",
-     "archetype": "Doomsday",
-     "main": [
-      [2,"f3c7af78","溢れかえる岸辺"],
-      [2,"09dd85aa","霧深い雨林"],
-      [2,"ef86989d","汚染された三角州"],
-      [2,"cb027150","沸騰する小湖"],
-      [1,"5b2460a5","冠雪の島"],
-      [1,"08d80efc","地底街の下水道"],
-      [4,"4b22be3a"],
-      [2,"1de1b591","タッサの神託者"],
-      [1,"0d6b89dc","悲嘆"],
-      [4,"bd7867f4","通りの悪霊"],
-      [1,"36cd2364","渦まく知識"],
-      [4,"86bf58f2","狼狽の嵐"],
-      [1,"1a0770e6","精神的つまづき"],
-      [4,"53f7c868","暗黒の儀式"],
-      [1,"ededbdae","吸血の教示者"],
-      [1,"ac2173f9","否定の力"],
-      [4,"956381ba","意志の力"],
-      [1,"16d8ee99","噴出"],
-      [1,"f8b17b89","時を越えた探索"],
-      [1,"1d67f5ff","ギタクシア派の調査"],
-      [4,"02090581","思案"],
-      [4,"ac641490","定業"],
-      [1,"33d405ea","強迫"],
-      [1,"82004860","悪魔の教示者"],
-      [4,"721eb5a2","最後の審判"],
-      [1,"5089ec1a","ブラック・ロータス"],
-      [1,"550c74d4"],
-      [1,"9a1412db"],
-      [1,"d0209d3f"],
-      [1,"0677f49e"],
-      [1,"d5ed1233"]
-     ],
-     "sideboard": [
-      [2,"69b409b3"],
-      [1,"16c39265","記憶への放逐"],
-      [2,"0e71fc56","鋼の妨害"],
-      [3,"16437a83","致命的な一押し"],
-      [1,"ac2173f9","否定の力"],
-      [1,"48712d36","精神壊しの罠"],
-      [4,"f4e32fc1","虚空の力線"],
-      [1,"7f993ac7","濁浪の執政"]
-     ]
-    },
-    {
-     "finish": "5-8",
+     "seed": 4,
      "player": "Daisuke Hirasawa",
      "archetype": "Four-color Combo",
      "main": [
@@ -17697,6 +17802,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Hiromichi Yajima",
      "player_native": "矢島 広道",
      "archetype": "Dimir Combo",
@@ -17748,6 +17854,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Kyohei Hosomi",
      "archetype": "Mono-Blue Shops",
      "notes": [
@@ -17854,12 +17961,12 @@
    },
    "notes": [
     {
-     "text": "Lists, placings, player names and archetype names copied from mtgtop8. The organizer (Card Titan) published the lists on melee.gg at https://melee.gg/Tournament/View/160879, which blocks automated fetching; they were not compared here.",
+     "text": "Lists, player names and archetype names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
      "url": "https://melee.gg/Tournament/View/160879"
     },
     {
-     "text": "Seeds (Swiss standings) are not given by mtgtop8 and are left null.",
-     "url": "https://www.mtgtop8.com/event?e=61956&f=VI"
+     "text": "Placings and seeds are from the organizer's Melee page: seeds are the standings after the last Swiss round, and placings follow its playoff matches (quarterfinals: David Tao def. Christopher Brill 2-0; Max Gilmore def. Dave Kaplan 2-0; Chase Hoppe def. Doug Miles 2-0; Davidlyver def. Tyler Klein 2-0. Semifinals: Max Gilmore def. David Tao 2-0; Chase Hoppe def. Davidlyver 2-0. Final: Max Gilmore def. Chase Hoppe 2-0). They agree with mtgtop8's at every tier.",
+     "url": "https://melee.gg/Tournament/View/160879"
     },
     {
      "text": "Swiss was played on 2024-11-22; mtgtop8 dates the event to that day. The Top 8 was played on 2024-11-24.",
@@ -17869,6 +17976,7 @@
    "decks": [
     {
      "finish": "1",
+     "seed": 5,
      "player": "Max Gilmore",
      "archetype": "Esper Lurrus",
      "main": [
@@ -17921,6 +18029,7 @@
     },
     {
      "finish": "2",
+     "seed": 2,
      "player": "Chase Hoppe",
      "archetype": "Dimir Control",
      "main": [
@@ -17977,6 +18086,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 3,
      "player": "Davidlyver",
      "archetype": "Doomsday",
      "main": [
@@ -18028,6 +18138,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 8,
      "player": "David Tao",
      "archetype": "Oath of Druids",
      "main": [
@@ -18087,6 +18198,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Tyler Klein",
      "archetype": "Coveted Jewel",
      "main": [
@@ -18137,6 +18249,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Doug Miles",
      "archetype": "Coveted Jewel",
      "main": [
@@ -18188,6 +18301,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 1,
      "player": "Christopher Brill",
      "archetype": "Esper Lurrus",
      "main": [
@@ -18240,6 +18354,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 4,
      "player": "Dave Kaplan",
      "archetype": "Esper Lurrus",
      "main": [
@@ -18349,11 +18464,16 @@
     {
      "text": "Organized by JK Entertainment. Four players appear on mtgtop8 under their Melee handles; their names here are from MTGGoldfish (each deck notes the handle).",
      "url": "https://www.mtggoldfish.com/articles/vintage-101-eu-eternal-weekend-2024"
+    },
+    {
+     "text": "Seeds are the standings after the last Swiss round (Round 8) on the Melee page; they match the quarterfinal pairings (1v8, 2v7, 3v6, 4v5).",
+     "url": "https://melee.gg/Tournament/View/203530"
     }
    ],
    "decks": [
     {
      "finish": "1",
+     "seed": 2,
      "player": "Samuel Mistygatz",
      "archetype": "Dredge",
      "notes": [
@@ -18394,6 +18514,7 @@
     },
     {
      "finish": "2",
+     "seed": 1,
      "player": "Juan Eliso Soto",
      "archetype": "Esper Lurrus",
      "notes": [
@@ -18451,6 +18572,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 6,
      "player": "Brian Coval",
      "archetype": "Esper Lurrus",
      "notes": [
@@ -18509,6 +18631,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 4,
      "player": "Thilo Schramm",
      "archetype": "Initiative Hatebear",
      "notes": [
@@ -18551,6 +18674,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 3,
      "player": "Oscar Basart",
      "archetype": "Coveted Jewel",
      "main": [
@@ -18602,6 +18726,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Javier Dominguez",
      "archetype": "Dimir Control",
      "main": [
@@ -18655,6 +18780,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Stefan Schütz",
      "archetype": "Doomsday",
      "main": [
@@ -18707,6 +18833,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 5,
      "player": "Cheng Guo",
      "archetype": "Initiative Hatebear",
      "main": [
@@ -18795,12 +18922,12 @@
    },
    "notes": [
     {
-     "text": "Lists, placings, player names and archetype names copied from mtgtop8. The organizer (Card Titan) published the lists on melee.gg at https://melee.gg/Tournament/View/358605, which blocks automated fetching; they were not compared here.",
+     "text": "Lists, player names and archetype names copied from mtgtop8, which took them from the organizer's (Card Titan's) Melee page; the lists were not compared card for card against Melee.",
      "url": "https://melee.gg/Tournament/View/358605"
     },
     {
-     "text": "Seeds (Swiss standings) are not given by mtgtop8 and are left null.",
-     "url": "https://www.mtgtop8.com/event?e=74965&f=VI"
+     "text": "Placings and seeds are from the organizer's Melee page: seeds are the standings after the last Swiss round, and placings follow its playoff matches (quarterfinals: Max Gilmore def. mbatista 2-0; Chad Uzzell def. Stefan Vastek 2-1; Dave Kaplan def. andrewslafreniere 2-0; Jeremy Henry def. Greg Mitchell 2-0. Semifinals: Dave Kaplan def. Chad Uzzell 2-0; Jeremy Henry def. Max Gilmore 2-0. Final: Jeremy Henry def. Dave Kaplan 2-0). They agree with mtgtop8's at every tier.",
+     "url": "https://melee.gg/Tournament/View/358605"
     },
     {
      "text": "Swiss was played on 2025-10-10; mtgtop8 dates the event to that day. The Top 8 was played on 2025-10-11.",
@@ -18810,6 +18937,7 @@
    "decks": [
     {
      "finish": "1",
+     "seed": 5,
      "player": "Jeremy Henry",
      "archetype": "Hatebear",
      "main": [
@@ -18850,6 +18978,7 @@
     },
     {
      "finish": "2",
+     "seed": 3,
      "player": "Dave Kaplan",
      "archetype": "Dimir Control",
      "main": [
@@ -18905,6 +19034,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 8,
      "player": "Max Gilmore",
      "archetype": "BUG Midrange",
      "main": [
@@ -18957,6 +19087,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 2,
      "player": "Chad Uzzell",
      "archetype": "Dredge",
      "main": [
@@ -18989,6 +19120,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 4,
      "player": "Greg Mitchell",
      "archetype": "Esper Lurrus",
      "main": [
@@ -19048,6 +19180,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Stefan Vastek",
      "archetype": "Golos MUD",
      "main": [
@@ -19099,6 +19232,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 1,
      "player": "Mbatista",
      "archetype": "Mono Black Aggro",
      "main": [
@@ -19137,6 +19271,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 6,
      "player": "Andrewslafreniere",
      "archetype": "MUD",
      "main": [
@@ -19233,8 +19368,16 @@
      "url": "https://x.com/4Tournaments/status/1994657887638229041"
     },
     {
-     "text": "Only the winner (Franco Cicchini) is confirmed elsewhere. MTGGoldfish's report lists the other seven only as \"Top 8\", and names two of the decks differently (\"Lurrus Breach\" for Luca Bastianelli and Jørgen Sørlie). The 2nd, 3-4 and 5-8 placings are mtgtop8's.",
-     "url": "https://www.mtggoldfish.com/articles/vintage-101-eternal-weekend-vintage-2025"
+     "text": "Placings are from the organizer's two VODs of the Top 8: quarterfinals Chen def. Bastianelli, Javier David def. Cioffini, Sørlie def. Ratkowski, Cicchini def. Ronkainen (recap at about 11:21:50 in part 1); semifinal Chen def. Javier David (part 1); final Cicchini def. Chen 2-0 (part 2). The other semifinal, Cicchini def. Sørlie, was not streamed and follows from the bracket. They agree with mtgtop8's. Seeds are the order of the organizer's \"TOP 8\" post, which is the Swiss standing, not the result.",
+     "url": "https://web.archive.org/web/20261021184102/https://www.youtube.com/watch?v=J2WEUcfyUz4"
+    },
+    {
+     "text": "Part 2 of the VOD: the final.",
+     "url": "https://web.archive.org/web/20261021184056/https://www.youtube.com/watch?v=VFQi54ieXkk"
+    },
+    {
+     "text": "The organizer's Top 8 post, in seed order.",
+     "url": "https://x.com/4Tournaments/status/1994515092097118378"
     },
     {
      "text": "The organizer's schedule had the Vintage Championship on Friday 28 November from 10:00; the Top 8 lists were posted at 06:41 UTC on 29 November, so the Top 8 may have finished that morning. Players: 236 per the organizer's tweet as cited by mtgtop8; MTGGoldfish says about 233.",
@@ -19244,6 +19387,7 @@
    "decks": [
     {
      "finish": "1",
+     "seed": 6,
      "player": "Franco Cicchini",
      "archetype": "Esper Lurrus",
      "main": [
@@ -19297,6 +19441,7 @@
     },
     {
      "finish": "2",
+     "seed": 1,
      "player": "Shawn Chen",
      "archetype": "Paradoxical Outcome",
      "main": [
@@ -19355,6 +19500,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 5,
      "player": "Javier David",
      "archetype": "MUD",
      "main": [
@@ -19403,6 +19549,7 @@
     },
     {
      "finish": "3-4",
+     "seed": 2,
      "player": "Jørgen Sørlie",
      "archetype": "Paradoxical Outcome",
      "notes": [
@@ -19470,6 +19617,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 7,
      "player": "Eric Ratkowski",
      "archetype": "Doomsday",
      "main": [
@@ -19523,6 +19671,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 3,
      "player": "Tuomas Ronkainen",
      "archetype": "Dredge",
      "main": [
@@ -19554,6 +19703,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 8,
      "player": "Luca Bastianelli",
      "archetype": "Gifts Control",
      "main": [
@@ -19615,6 +19765,7 @@
     },
     {
      "finish": "5-8",
+     "seed": 4,
      "player": "David Cioffini",
      "archetype": "Paradoxical Outcome",
      "main": [
@@ -27011,14 +27162,14 @@
    "image": "https://cards.scryfall.io/normal/front/6/f/6f3d2dc5-7b9d-4af6-9f3b-4de90fbf63c9.jpg?1783934125",
    "scryfall_uri": "https://scryfall.com/card/grn/192/niv-mizzet-parun"
   },
-  "add0f7e7": {
-   "oracle_id": "add0f7e7-8990-4fd1-8ac7-8115f7802912",
-   "name": "Daretti, Ingenious Iconoclast",
-   "set": "CN2",
-   "set_name": "Conspiracy: Take the Crown",
-   "released_at": "2016-08-26",
-   "image": "https://cards.scryfall.io/normal/front/a/d/ad30aec2-cb67-4c92-9694-d33bef1884ee.jpg?1783937339",
-   "scryfall_uri": "https://scryfall.com/card/cn2/74/daretti-ingenious-iconoclast"
+  "7359e82b": {
+   "oracle_id": "7359e82b-db79-488d-a1d4-75a00f12a4cf",
+   "name": "Kaldra Compleat",
+   "set": "MH2",
+   "set_name": "Modern Horizons 2",
+   "released_at": "2021-06-18",
+   "image": "https://cards.scryfall.io/normal/front/8/7/87cc2855-6b14-44dd-a398-7dc2bbae081f.jpg?1783926807",
+   "scryfall_uri": "https://scryfall.com/card/mh2/227/kaldra-compleat"
   },
   "83101ba8": {
    "oracle_id": "83101ba8-a569-4827-8c53-9ca0dfcd59a7",
@@ -27029,14 +27180,14 @@
    "image": "https://cards.scryfall.io/normal/front/8/8/88bf1ebb-9d85-4b9b-a614-c7f965c0893d.jpg?1783940835",
    "scryfall_uri": "https://scryfall.com/card/dka/52/thought-scour"
   },
-  "7359e82b": {
-   "oracle_id": "7359e82b-db79-488d-a1d4-75a00f12a4cf",
-   "name": "Kaldra Compleat",
-   "set": "MH2",
-   "set_name": "Modern Horizons 2",
-   "released_at": "2021-06-18",
-   "image": "https://cards.scryfall.io/normal/front/8/7/87cc2855-6b14-44dd-a398-7dc2bbae081f.jpg?1783926807",
-   "scryfall_uri": "https://scryfall.com/card/mh2/227/kaldra-compleat"
+  "add0f7e7": {
+   "oracle_id": "add0f7e7-8990-4fd1-8ac7-8115f7802912",
+   "name": "Daretti, Ingenious Iconoclast",
+   "set": "CN2",
+   "set_name": "Conspiracy: Take the Crown",
+   "released_at": "2016-08-26",
+   "image": "https://cards.scryfall.io/normal/front/a/d/ad30aec2-cb67-4c92-9694-d33bef1884ee.jpg?1783937339",
+   "scryfall_uri": "https://scryfall.com/card/cn2/74/daretti-ingenious-iconoclast"
   },
   "c0adbddc": {
    "oracle_id": "c0adbddc-b070-4c5f-afe0-0474c72a9251",
