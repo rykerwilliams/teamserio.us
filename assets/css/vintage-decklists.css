@@ -1,0 +1,109 @@
+/* /vintage-decklists and the per-championship pages under it.
+   Marks share the B&R timeline's gold; text stays in the page's own ink. */
+
+.vd { --vd-gold: #c9a227;      /* 6.8:1 against the site's #15202b */
+      --vd-line: rgba(128,128,128,.28);
+      --vd-wash: rgba(136,153,166,.14); }
+
+.vd { overflow-wrap: anywhere; }
+.vd-title h1 { margin-bottom: .2rem; font-size: clamp(1.9rem, 6vw, 2.8rem); }
+/* a table wider than a phone scrolls inside itself, not the page */
+.vd-scroll { overflow-x: auto; margin-bottom: 1.5rem; }
+.vd-scroll .vd-table { margin-bottom: 0; }
+.vd-title p { opacity: .75; margin-bottom: 1rem; }
+.vd-meta, .vd-hint { font-size: .85rem; opacity: .75; }
+.vd-hint { margin: 0 0 .5rem; }
+.vd-partial { font-style: italic; opacity: .85; }
+.vd-notes { font-size: .85rem; opacity: .85; padding-left: 1.2rem; }
+.vd-native { opacity: .7; font-weight: normal; }
+
+/* restricted marker: a letter, so it never rests on color alone */
+.vd-r { display: inline-block; font-size: .65rem; font-weight: 700; line-height: 1;
+        padding: .15em .3em; border-radius: 3px; vertical-align: .1em;
+        color: #15202b; background: var(--vd-gold); }
+.vd-printed { font-size: .8em; opacity: .6; }
+.vd-missing { font-style: italic; opacity: .7; }
+
+/* ---------- tables ---------- */
+.vd-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: 1.5rem; }
+.vd-table th, .vd-table td { padding: .3rem .5rem; border-bottom: 1px solid var(--vd-line);
+                             text-align: left; vertical-align: top; }
+.vd-table th { font-weight: 600; opacity: .8; }
+.vd-num { text-align: right !important; font-variant-numeric: tabular-nums; }
+.vd-events .vd-year-start td { border-top: 1px solid rgba(128,128,128,.6); }
+.vd-when { white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+  .vd-events small { display: none; }
+  .vd-when { white-space: normal; min-width: 6rem; }
+  .vd-filters input[type=search] { min-width: 0; width: 100%; }
+}
+.vd-table-wrap { margin: .5rem 0 1.5rem; font-size: .9rem; }
+.vd-table-wrap > summary { cursor: pointer; opacity: .8; padding: .3rem 0; }
+.vd-hits { columns: 2 22rem; font-size: .85rem; padding-left: 1.2rem; }
+
+/* ---------- a deck ---------- */
+.vd-deck { margin: 2rem 0; scroll-margin-top: 4rem; }
+.vd-deck h2 { font-size: 1.3rem; margin-bottom: .4rem; }
+.vd-deck h2 small { display: block; font-size: .95rem; opacity: .75; margin-top: .2rem; }
+.vd-finish { display: inline-block; min-width: 2.4em; text-align: center; margin-right: .3rem;
+             font-size: .85rem; padding: .15em .4em; border-radius: 4px;
+             border: 1px solid var(--vd-gold); font-variant-numeric: tabular-nums; }
+/* decklist.css positions the preview pane absolutely at the right; the two
+   columns leave it room */
+.vd-list { padding: .75rem 1rem; min-height: 24rem; }
+.vd-list .decklist-copy-btn { position: absolute; top: .4rem; right: .4rem; color: #fdce93; }
+.vd-cols { display: flex; gap: 2rem; flex-wrap: wrap; margin-right: 280px; }
+.vd-part { flex: 1 1 13rem; min-width: 0; }
+.vd-part ul { list-style: none; padding: 0; margin: .3rem 0 0; }
+.vd-part li { line-height: 1.5; }
+.vd-n { display: inline-block; min-width: 1.4em; text-align: right; margin-right: .3em;
+        font-variant-numeric: tabular-nums; }
+.vd-list .card-link { color: inherit; }
+@media (max-width: 768px) {
+  .vd-cols { margin-right: 0; }
+  .vd-list { min-height: 0; }
+}
+
+.vd-pager { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+            border-top: 1px solid var(--vd-line); padding-top: 1rem; margin-top: 2rem; }
+.vd-pager small { display: block; opacity: .65; }
+.vd-pager a:last-child { text-align: right; }
+
+/* ---------- charts ---------- */
+.vd-charts { position: relative; margin: 1.5rem 0 2rem; }
+.vd-charts h2 { font-size: 1.3rem; margin: 1.25rem 0 .25rem; }
+.vd-filters { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center;
+              font-size: .85rem; margin-bottom: .75rem; }
+.vd-filters select, .vd-filters input[type=search] {
+  font: inherit; color: inherit; background: transparent;
+  border: 1px solid var(--vd-line); border-radius: 4px; padding: .2rem .4rem; }
+.vd-filters input[type=search] { min-width: 16rem; }
+.vd-filters select option { color: initial; }
+.vd-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.vd-chip { font: inherit; font-size: .8rem; padding: .2rem .65rem; cursor: pointer;
+           color: inherit; background: none; border: 1px solid var(--vd-line);
+           border-radius: 999px; opacity: .55; }
+.vd-chip[aria-pressed="true"] { opacity: 1; border-color: var(--vd-gold); }
+.vd-check { display: inline-flex; gap: .35rem; align-items: center; }
+
+.vd-chart { display: block; width: 100%; overflow: visible; }
+.vd-grid, .vd-axis { stroke: var(--vd-line); stroke-width: 1; }
+.vd-axis { stroke: rgba(128,128,128,.5); }
+.vd-bar { fill: var(--vd-gold); }
+.vd-label, .vd-value, .vd-tick { fill: currentColor; font-size: 12px; }
+.vd-value { opacity: .8; font-variant-numeric: tabular-nums; }
+.vd-tick { opacity: .6; font-size: 11px; font-variant-numeric: tabular-nums; }
+.vd-hit { fill: transparent; }
+.vd-rband { fill: var(--vd-wash); }
+.vd-row, .vd-col { cursor: pointer; outline: none; }
+.vd-row:hover .vd-bar, .vd-row:focus .vd-bar,
+.vd-col:hover .vd-bar, .vd-col:focus .vd-bar { fill: #e0bf4f; }
+.vd-row:hover .vd-hit, .vd-row:focus .vd-hit { fill: rgba(128,128,128,.08); }
+.vd-row.is-on .vd-label { font-weight: 700; }
+.vd-row.is-on .vd-hit { fill: rgba(201,162,39,.12); }
+
+.vd-tip { position: absolute; z-index: 5; pointer-events: none; max-width: 18rem;
+          font-size: .8rem; line-height: 1.35; padding: .45rem .6rem; border-radius: 6px;
+          background: #222; color: #eee; border: 1px solid var(--vd-line);
+          box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.vd-tip div + div { opacity: .8; }

@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /assets/data/vintage-t8.json
+---
+{{ site.data.vintage_t8 | jsonify }}

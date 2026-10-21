@@ -1,0 +1,150 @@
+---
+layout: wide
+header_type: none
+---
+{%- comment -%}
+  One championship's Top 8, generated per event by _plugins/vintage_t8_pages.rb
+  from _data/vintage_t8.json. page.event has each deck's card lines already
+  joined to their names and printings.
+{%- endcomment -%}
+{%- assign ev = page.event -%}
+<link rel="stylesheet" href="{{ '/assets/css/decklist.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/vintage-decklists.css' | relative_url }}">
+
+<div class="vd">
+
+  <header class="vd-title">
+    <h1>{{ ev.event }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </header>
+
+  <p class="vd-meta">
+    {%- if ev.players %}{{ ev.players }} players. {% endif -%}
+    Lists from
+    <a href="{{ ev.source.url }}">{{ ev.source.label }}</a>
+    {%- if ev.source.archived %} (<a href="{{ ev.source.archived }}">archived copy</a>){% endif -%}.
+    <a href="{{ '/vintage-legality' | relative_url }}#{{ ev.date }}">The restricted list that day</a>;
+    <span class="vd-r" title="restricted">R</span> marks a restricted card.
+  </p>
+
+  {%- if ev.partial %}
+  <p class="vd-partial">
+    Not every list from this event survives. Those that do are below; the rest
+    show the player and deck where that much is known.
+  </p>
+  {%- endif %}
+
+  {%- if ev.notes %}
+  <ul class="vd-notes">
+    {%- for n in ev.notes %}
+    <li>{{ n.text }}{% if n.url %} <a href="{{ n.url }}">source</a>{% endif %}</li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+
+  {%- if ev.decks.size > 0 %}
+  <div class="vd-scroll">
+  <table class="vd-table">
+    <thead><tr><th>Finish</th><th>Player</th><th>Deck</th></tr></thead>
+    <tbody>
+      {%- for d in ev.decks %}
+      <tr>
+        <td class="vd-num">{{ d.finish }}</td>
+        <td>
+          <a href="#deck-{{ forloop.index }}">{{ d.player }}</a>
+          {%- if d.player_native %} <span class="vd-native" lang="ja">{{ d.player_native }}</span>{% endif -%}
+        </td>
+        <td>{{ d.archetype }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  </div>
+  {%- else %}
+  <p>No Top 8 lists or standings from this event are known.</p>
+  {%- endif %}
+
+  {%- for d in ev.decks %}
+  <section class="vd-deck" id="deck-{{ forloop.index }}">
+    <h2>
+      <span class="vd-finish">{{ d.finish }}</span>
+      {{ d.player }}
+      {%- if d.player_native %} <span class="vd-native" lang="ja">{{ d.player_native }}</span>{% endif %}
+      <small>{{ d.archetype }}</small>
+    </h2>
+    {%- if d.source or d.seed %}
+    <p class="vd-meta">
+      {%- if d.seed %}Seed {{ d.seed }}. {% endif -%}
+      {%- if d.source %}List from <a href="{{ d.source.url }}">{{ d.source.label }}</a>{% if d.source.archived %} (<a href="{{ d.source.archived }}">archived</a>){% endif %}.{% endif -%}
+    </p>
+    {%- endif %}
+    {%- if d.notes %}
+    <ul class="vd-notes">
+      {%- for n in d.notes %}
+      <li>{{ n.text }}{% if n.url %} <a href="{{ n.url }}">source</a>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    {%- if d.main %}
+    <div class="decklist-content vd-list">
+      <button onclick="copyDecklist(this)" class="btn text-muted btn-sm decklist-copy-btn"
+              aria-label="Copy this decklist"><i class="far fa-copy"></i></button>
+      <div class="card-preview"></div>
+      <div class="copyable-decklist"><pre>{{ d.text | xml_escape }}</pre></div>
+      <div class="vd-cols">
+        {%- assign parts = "main,sideboard" | split: "," -%}
+        {%- for part in parts %}
+        {%- assign lines = d[part] -%}
+        <div class="vd-part">
+          {%- if part == "main" %}
+          <strong>Main deck ({{ d.main_count }})</strong>
+          {%- else %}
+          <strong>Sideboard{% if lines %} ({{ d.sideboard_count }}){% endif %}</strong>
+          {%- endif %}
+          {%- if lines %}
+          <ul>
+            {%- for c in lines %}
+            <li><span class="vd-n">{{ c.count }}</span>
+              <a href="{{ c.scryfall_uri }}" class="card-link" data-cardname="{{ c.name | xml_escape }}"
+                 data-image="{{ c.image }}">{{ c.name }}</a>
+              {%- if c.restricted %} <span class="vd-r" title="restricted">R</span>{% endif -%}
+              {%- if c.printed_as %} <span class="vd-printed" title="as the source printed it">({{ c.printed_as }})</span>{% endif -%}
+            </li>
+            {%- endfor %}
+          </ul>
+          {%- else %}
+          <p class="vd-missing">Not published.</p>
+          {%- endif %}
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- else %}
+    <p class="vd-missing">This list is lost.</p>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+
+  <p class="vd-meta">
+    Something wrong on this page, or cited to the wrong place?
+    <a href="https://github.com/rykerwilliams/type1/issues/new?title={{ ev.event | append: ' (' | append: ev.label | append: ')' | url_encode }}">Report it</a>
+    with a source &mdash; or see
+    <a href="https://github.com/rykerwilliams/type1/blob/HEAD/CONTRIBUTING.md">how to contribute</a>.
+  </p>
+
+  <nav class="vd-pager">
+    {%- if page.prev_event %}
+    <a href="{{ page.prev_event.url | relative_url }}">&larr; {{ page.prev_event.title }}
+      <small>{{ page.prev_event.label }}</small></a>
+    {%- else %}<span></span>{% endif %}
+    <a href="{{ '/vintage-decklists/' | relative_url }}">All championships</a>
+    {%- if page.next_event %}
+    <a href="{{ page.next_event.url | relative_url }}">{{ page.next_event.title }} &rarr;
+      <small>{{ page.next_event.label }}</small></a>
+    {%- else %}<span></span>{% endif %}
+  </nav>
+</div>
+
+<script src="{{ '/assets/js/scryfall-cache.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/decklist.js' | relative_url }}"></script>

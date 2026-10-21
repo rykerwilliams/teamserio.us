@@ -1,0 +1,115 @@
+---
+layout: wide
+title: Vintage Championship Decklists
+subtitle: "Every Top 8 that survives, from 1994 Worlds to the 2025 Eternal Weekends"
+header_type: none
+permalink: /vintage-decklists/
+excerpt: "Top 8 decklists from every Type 1 / Vintage championship, and the cards they played."
+show_breadcrumb: true
+breadcrumb_list:
+  - label: Home
+    url: /
+---
+
+{%- assign t8 = site.data.vintage_t8 -%}
+{%- assign nlists = 0 -%}
+{%- for ev in t8.events -%}{%- for d in ev.decks -%}{%- if d.main -%}{%- assign nlists = nlists | plus: 1 -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
+
+<link rel="stylesheet" href="{{ '/assets/css/vintage-decklists.css' | relative_url }}">
+
+<div class="vd">
+
+  <header class="vd-title">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </header>
+
+  <p>
+    {{ t8.events | size }} championships and {{ nlists }} Top 8 lists: the
+    Type 1 events before there was a regular championship, the Vintage
+    Championship at Gen Con, and the Eternal Weekends in North America, Europe,
+    Asia and, in 2020 and 2021, online. Each list is copied from where it was
+    first published and cites it, and each card is shown as its original
+    printing.
+  </p>
+
+  <section class="vd-charts" id="vd-charts" hidden>
+    <div class="vd-filters" role="group" aria-label="Which events to count">
+      <div class="vd-chips" id="vd-series"></div>
+      <label>From <select id="vd-from"></select></label>
+      <label>to <select id="vd-to"></select></label>
+      <label class="vd-check"><input type="checkbox" id="vd-side"> Count sideboards</label>
+    </div>
+
+    <h2>Most played cards</h2>
+    <p class="vd-hint" id="vd-top-hint"></p>
+    <svg id="vd-top" class="vd-chart" role="img" aria-labelledby="vd-top-hint"></svg>
+
+    <h2 id="vd-card-title">One card over the years</h2>
+    <div class="vd-filters">
+      <label>Card <input type="search" id="vd-card" list="vd-card-names"
+             placeholder="Click a bar above, or type a name" autocomplete="off"></label>
+      <datalist id="vd-card-names"></datalist>
+    </div>
+    <p class="vd-hint" id="vd-year-hint"></p>
+    <svg id="vd-year" class="vd-chart" role="img" aria-labelledby="vd-year-hint"></svg>
+
+    <details class="vd-table-wrap">
+      <summary>The numbers behind the chart</summary>
+      <table class="vd-table" id="vd-top-table">
+        <thead><tr><th>Card</th><th class="vd-num">Lists</th><th class="vd-num">Share</th><th class="vd-num">Copies</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </details>
+    <div class="vd-tip" id="vd-tip" role="tooltip" hidden></div>
+  </section>
+
+  <h2>The championships</h2>
+  <div class="vd-scroll">
+  <table class="vd-table vd-events">
+    <thead><tr><th>When</th><th>Event</th><th>Winner</th><th>Deck</th></tr></thead>
+    <tbody>
+      {%- assign evs = t8.events | reverse -%}
+      {%- for ev in evs %}
+      {%- assign year = ev.date | slice: 0, 4 -%}
+      {%- assign winner = ev.decks | where: "finish", "1" | first -%}
+      <tr{% if year != prev_year %} class="vd-year-start"{% endif %}>
+        <td class="vd-when">{{ ev.when }}</td>
+        <td>
+          <a href="{{ '/vintage-decklists/' | append: ev.slug | append: '/' | relative_url }}">{{ ev.label }}</a>
+          {%- if ev.event != ev.label %}<br><small>{{ ev.event }}</small>{% endif -%}
+        </td>
+        <td>
+          {%- if winner %}{{ winner.player }}{% if winner.player_native %} <span class="vd-native" lang="ja">{{ winner.player_native }}</span>{% endif %}{% else %}&mdash;{% endif -%}
+        </td>
+        <td>{% if winner %}{{ winner.archetype }}{% endif %}</td>
+      </tr>
+      {%- assign prev_year = year -%}
+      {%- endfor %}
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Where this comes from</h2>
+  <p class="vd-credit">
+    The lists live in
+    <a href="{{ t8.generated_from }}/tree/HEAD/decks"><code>rykerwilliams/type1</code></a>,
+    beside the B&amp;R history behind the
+    <a href="{{ '/vintage-legality' | relative_url }}">timeline</a>, one file per
+    event with its source. They are copied from the original event coverage
+    &mdash; Wizards, the Eternal Weekend organizers, the magazines and
+    newsgroups of the 1990s &mdash; and, only where no original survives, from
+    Jimmy&rsquo;s collection on Deckbox. Where a source printed a list wrong, a
+    second source fixed it and a note on the event says so.
+  </p>
+  <p class="vd-credit">
+    <strong>Something wrong, or missing?</strong> A miscounted card, a wrong
+    placing, a dead or mis-cited source, a lost list you have a copy of:
+    <a href="{{ t8.generated_from }}/blob/HEAD/CONTRIBUTING.md">here&rsquo;s how
+    to fix it</a>. An issue with a source is enough.
+  </p>
+</div>
+
+<script src="{{ '/assets/js/vintage-decklists.js' | relative_url }}"
+        data-src="{{ '/assets/data/vintage-t8.json' | relative_url }}"
+        data-base="{{ '/vintage-decklists/' | relative_url }}"></script>
