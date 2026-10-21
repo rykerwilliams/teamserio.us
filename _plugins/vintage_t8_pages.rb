@@ -100,6 +100,14 @@ module Jekyll
       end
       # the index page shows the same date strings without repeating the rule
       evs.each { |ev| ev["when"] = VintageT8Page.when(ev) }
+      # what the B&R timeline needs to name the championships each list was
+      # played under: a few KB, not the 800 KB of lists
+      site.data["vintage_t8_summary"] = evs.map do |ev|
+        w = ev["decks"].find { |d| d["finish"] == "1" }
+        { "slug" => ev["slug"], "date" => ev["date"], "when" => ev["when"],
+          "label" => ev["label"], "event" => ev["event"],
+          "winner" => w && w["player"], "archetype" => w && w["archetype"] }
+      end
     end
   end
 end

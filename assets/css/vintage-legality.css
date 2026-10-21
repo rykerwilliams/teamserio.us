@@ -570,3 +570,11 @@
 
 /* The title sits above the app again, so it needs no extra top margin. */
 .vl-title { margin-top: 0; margin-bottom: .7rem; }
+
+/* championships played under the selected list, linked to their decklists */
+.vl-champs { margin: 0 0 1rem; padding-left: 1.1rem; font-size: .88rem; line-height: 1.45; }
+.vl-nochamps { font-size: .85rem; opacity: .6; font-style: italic; }
+.vl-champ { cursor: pointer; }
+.vl-champ-hit { fill: transparent; }
+.vl-champ-mark { fill: currentColor; fill-opacity: .7; }
+.vl-champ:hover .vl-champ-mark, .vl-champ:focus .vl-champ-mark { fill: #c9a227; fill-opacity: 1; }
