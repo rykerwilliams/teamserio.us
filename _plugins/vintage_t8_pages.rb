@@ -27,6 +27,7 @@ module Jekyll
         "layout" => "vintage-t8-event",
         # read from the page, not the layout, by layouts/wide.html
         "header_type" => "none",
+        "og_image" => "/assets/images/site/og-black-lotus.jpg",
         "title" => ev["event"],
         "subtitle" => [ev["label"], VintageT8Page.when(ev), ev["location"]].compact.join(" · "),
         "excerpt" => "Top 8 decklists from the #{ev["event"]} (#{ev["label"]}).",

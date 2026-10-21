@@ -20,7 +20,10 @@ url: "https://teamserio.us" # the base hostname & protocol for your site, e.g. h
 #twitter_username: jekyllrb
 github_username:  rykerwilliams
 timezone: America/New_York
-og_image: assets/images/site/SeriousManaHR-blacklogo-gray.png
+# The link-preview image for every page that sets none of its own. Case
+# matters: GitHub Pages serves "blackLogo", and "blacklogo" was a 404, so
+# shared links unfurled with a blank image.
+og_image: assets/images/site/SeriousManaHR-blackLogo-gray.png
 author:
   name: Rajah James
   avatar: assets/images/avatars/310221.jpg
