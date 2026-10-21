@@ -14,6 +14,14 @@
   var dataEl = document.getElementById("vl-data");
   var panel = document.getElementById("vl-state");
   var details = document.getElementById("vl-details");
+  // the championships, from the decklist pages: each is listed under the
+  // announcement whose list it was played with
+  var champsEl = document.getElementById("vl-champs");
+  var CHAMPS = [], CHAMPS_BASE = "";
+  try {
+    CHAMPS = JSON.parse(champsEl.textContent) || [];
+    CHAMPS_BASE = champsEl.getAttribute("data-base") || "";
+  } catch (e) { /* the timeline works without them */ }
   if (!dataEl || !panel) return;
 
   var DATA = JSON.parse(dataEl.textContent);
@@ -167,7 +175,8 @@
 
   // ---- chart --------------------------------------------------------------
   var svg = document.getElementById("vl-chart");
-  var W = 900, H = 250, PAD_L = 30, PAD_R = 10, PAD_T = 12, PAD_B = 62;
+  // PAD_B holds the tick rows, the championships row and the year labels
+  var W = 900, H = 262, PAD_L = 30, PAD_R = 10, PAD_T = 12, PAD_B = 74;
   // the band under the axis holds one tick row per action kind
   var TICK_ROWS = ["restrict", "unrestrict", "ban", "unban"];
   var TICK_H = 9;
@@ -270,9 +279,33 @@
       });
     });
 
+    // Championships, one mark each in a row of their own, linking to the
+    // event's decklists. A link rather than a scrub target: pressing one
+    // must not start a drag of the playhead.
+    var champY = sy(0) + 10 + rowsUsed.length * TICK_H;
+    if (CHAMPS.length) {
+      var clab = el("text", { class: "vl-axis-text", x: PAD_L - 5, y: champY + 4,
+                              "text-anchor": "end", "font-size": "7" });
+      clab.textContent = "champs";
+      svg.appendChild(clab);
+      CHAMPS.forEach(function (c) {
+        var x = sx(asYear(c.date));
+        var a = el("a", { class: "vl-champ", href: CHAMPS_BASE + c.slug + "/" });
+        a.appendChild(el("title")).textContent =
+          c.date.slice(0, 4) + " " + c.label +
+          (c.winner ? " \u2014 " + c.winner + (c.archetype ? ", " + c.archetype : "") : "");
+        a.appendChild(el("rect", { class: "vl-champ-hit", x: x - 4, y: champY - 5,
+                                   width: 8, height: 10 }));
+        a.appendChild(el("path", { class: "vl-champ-mark",
+                                   d: "M" + x + " " + (champY - 3.2) + " l3 3.2 l-3 3.2 l-3 -3.2 z" }));
+        a.addEventListener("pointerdown", function (e) { e.stopPropagation(); });
+        svg.appendChild(a);
+      });
+    }
+
     // playhead
     headLine = el("line", { class: "vl-head", y1: PAD_T - 6,
-                            y2: sy(0) + 10 + rowsUsed.length * TICK_H });
+                            y2: champY + (CHAMPS.length ? 4 : -TICK_H) });
     headDot = el("circle", { class: "vl-head-dot", r: 5 });
     svg.appendChild(headLine);
     svg.appendChild(headDot);
@@ -683,6 +716,29 @@
     d.push('<div class="vl-sec">What this announcement changed</div>');
     d.push('<p class="vl-chg">' + (chg.length ? chg.join(" ") :
            '<em class="vl-nochange">No change to the list.</em>') + "</p>");
+
+    // Championships played while this list was in force: from this
+    // announcement's date up to the next one's, the same rule the decklists
+    // use to pick the list a deck is checked against.
+    var next = EVENTS[i + 1];
+    var under = CHAMPS.filter(function (c) {
+      return c.date >= ev.date && (!next || c.date < next.date);
+    });
+    d.push('<div class="vl-sec">Championships under this list' +
+           (under.length ? ' <span class="vl-sec-n">' + under.length + "</span>" : "") +
+           "</div>");
+    if (under.length) {
+      d.push('<ul class="vl-champs">');
+      under.forEach(function (c) {
+        d.push('<li><a href="' + esc(CHAMPS_BASE + c.slug + "/") + '">' +
+               esc(c.date.slice(0, 4) + " " + c.label) + "</a>" +
+               (c.winner ? " — " + esc(c.winner) +
+                 (c.archetype ? ", " + esc(c.archetype) : "") : "") + "</li>");
+      });
+      d.push("</ul>");
+    } else {
+      d.push('<p class="vl-nochamps">No championship was played under this list.</p>');
+    }
 
     var pools = POOL.filter(function (p) { return !p.since || p.since <= ev.date; });
     if (pools.length) {

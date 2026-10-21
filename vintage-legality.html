@@ -103,6 +103,11 @@ breadcrumb_list:
     announcements from January 1994 and checks the result against
     Scryfall&rsquo;s live list; it reproduces it exactly.
   </p>
+  <p>
+    <code>type1</code> also includes the Top 8 decklists from every Vintage
+    championship &mdash; see the
+    <a href="{{ '/vintage-decklists/' | relative_url }}">decklists page</a>.
+  </p>
   <ul>
     {%- for s in br.sources -%}
       <li><a href="{{ s[1].url }}">{{ s[1].title }}</a> &mdash; {{ s[1].note }}</li>
@@ -161,6 +166,8 @@ breadcrumb_list:
 </div>
 
 <script type="application/json" id="vl-data">{{ br | jsonify }}</script>
+<script type="application/json" id="vl-champs"
+        data-base="{{ '/vintage-decklists/' | relative_url }}">{{ site.data.vintage_t8_summary | jsonify }}</script>
 <script src="https://cdn.jsdelivr.net/npm/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
 <script src="{{ '/assets/js/scryfall-cache.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/autocard.js' | relative_url }}"></script>
