@@ -33,6 +33,7 @@
 .vd-events .vd-year-start td { border-top: 1px solid rgba(128,128,128,.6); }
 .vd-when { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .vd-seed { opacity: .7; }
+.vd-where { opacity: .85; }
 @media (max-width: 600px) {
   .vd-events small { display: none; }
   .vd-when { white-space: normal; min-width: 6rem; }
@@ -109,3 +110,23 @@
           background: #222; color: #eee; border: 1px solid var(--vd-line);
           box-shadow: 0 4px 14px rgba(0,0,0,.35); }
 .vd-tip div + div { opacity: .8; }
+
+/* ---------- /vintage-champions ---------- */
+.vc-year { font-size: 1.3rem; margin: 1.75rem 0 .4rem; padding-bottom: .2rem;
+           border-bottom: 2px solid var(--vd-gold); scroll-margin-top: 4rem; }
+.vc-champ { border-bottom: 1px solid var(--vd-line); scroll-margin-top: 4rem; }
+.vc-champ > summary { display: grid; grid-template-columns: 1.1rem 14rem 1fr 1fr;
+                      gap: .2rem 1rem; align-items: baseline; padding: .45rem .25rem;
+                      cursor: pointer; list-style: none; }
+.vc-champ > summary::-webkit-details-marker { display: none; }
+.vc-champ > summary::before { content: "\25B8"; opacity: .6; transition: transform .15s; }
+.vc-champ[open] > summary::before { transform: rotate(90deg); }
+.vc-champ > summary:hover { background: var(--vd-wash); }
+.vc-player { font-weight: 600; }
+.vc-event { opacity: .75; font-size: .9rem; }
+.vc-body { padding: .25rem 0 1.25rem 1.35rem; }
+@media (max-width: 600px) {
+  .vc-champ > summary { grid-template-columns: 1.1rem 1fr; }
+  .vc-event, .vc-arch { grid-column: 2; }
+  .vc-body { padding-left: 0; }
+}

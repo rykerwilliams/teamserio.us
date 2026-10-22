@@ -89,43 +89,7 @@ header_type: none
     </ul>
     {%- endif %}
 
-    {%- if d.main %}
-    <div class="decklist-content vd-list">
-      <button onclick="copyDecklist(this)" class="btn text-muted btn-sm decklist-copy-btn"
-              aria-label="Copy this decklist"><i class="far fa-copy"></i></button>
-      <div class="card-preview"></div>
-      <div class="copyable-decklist"><pre>{{ d.text | xml_escape }}</pre></div>
-      <div class="vd-cols">
-        {%- assign parts = "main,sideboard" | split: "," -%}
-        {%- for part in parts %}
-        {%- assign lines = d[part] -%}
-        <div class="vd-part">
-          {%- if part == "main" %}
-          <strong>Main deck ({{ d.main_count }})</strong>
-          {%- else %}
-          <strong>Sideboard{% if lines %} ({{ d.sideboard_count }}){% endif %}</strong>
-          {%- endif %}
-          {%- if lines %}
-          <ul>
-            {%- for c in lines %}
-            <li><span class="vd-n">{{ c.count }}</span>
-              <a href="{{ c.scryfall_uri }}" class="card-link" data-cardname="{{ c.name | xml_escape }}"
-                 data-image="{{ c.image }}">{{ c.name }}</a>
-              {%- if c.restricted %} <span class="vd-r" title="restricted">R</span>{% endif -%}
-              {%- if c.printed_as %} <span class="vd-printed" title="as the source printed it">({{ c.printed_as }})</span>{% endif -%}
-            </li>
-            {%- endfor %}
-          </ul>
-          {%- else %}
-          <p class="vd-missing">Not published.</p>
-          {%- endif %}
-        </div>
-        {%- endfor %}
-      </div>
-    </div>
-    {%- else %}
-    <p class="vd-missing">This list is lost.</p>
-    {%- endif %}
+    {% include vintage-t8-list.html deck=d %}
   </section>
   {%- endfor %}
 

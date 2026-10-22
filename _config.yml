@@ -82,6 +82,8 @@ navbar:
         url: /vintage-legality
       - title : Decklists
         url: /vintage-decklists/
+      - title : Champions
+        url: /vintage-champions/
   - title   : Merch
     url     : /merch/
   - title   : Media #Label

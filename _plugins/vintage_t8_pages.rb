@@ -95,9 +95,23 @@ module Jekyll
     def generate(site)
       t8 = site.data["vintage_t8"] or return
       evs = t8["events"]
-      evs.each_with_index do |ev, i|
-        site.pages << VintageT8Page.new(site, ev, i > 0 ? evs[i - 1] : nil,
-                                        evs[i + 1], t8["cards"])
+      pages = evs.each_with_index.map do |ev, i|
+        VintageT8Page.new(site, ev, i > 0 ? evs[i - 1] : nil, evs[i + 1], t8["cards"])
+      end
+      site.pages.concat(pages)
+      # /vintage-champions/: each winner with their list, joined as the event
+      # page joined it, newest first. A winner with no surviving list, or an
+      # event with no known winner, still gets its line.
+      site.data["vintage_champions"] = pages.reverse.map do |pg|
+        ev = pg.data["event"]
+        # the online years ran several championships, told apart by name:
+        # "Eternal Weekend 2020: Mox Ruby"
+        online = ev["label"].end_with?("Online") ? ev["event"][/:\s*(.+)\z/, 1] : nil
+        { "slug" => ev["slug"], "year" => ev["date"][0, 4], "date" => ev["date"],
+          "when" => VintageT8Page.when(ev), "event" => ev["event"],
+          "label" => [ev["label"], online].compact.join(" · "),
+          "players" => ev["players"], "location" => ev["location"], "url" => pg.url,
+          "deck" => ev["decks"].find { |d| d["finish"] == "1" } }
       end
       # the index page shows the same date strings without repeating the rule
       evs.each { |ev| ev["when"] = VintageT8Page.when(ev) }

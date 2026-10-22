@@ -1,0 +1,99 @@
+---
+layout: wide
+title: Hall of Champions
+subtitle: "Every Type 1 / Vintage champion, from 1994 Worlds to the 2025 Eternal Weekends"
+header_type: none
+# the link preview: Black Lotus, Alpha, art by Christopher Rush
+og_image: /assets/images/site/og-black-lotus.jpg
+permalink: /vintage-champions/
+excerpt: "Every Type 1 / Vintage champion and the list they won with."
+show_breadcrumb: true
+breadcrumb_list:
+  - label: Home
+    url: /
+---
+{%- comment -%}
+  site.data.vintage_champions is built by _plugins/vintage_t8_pages.rb from
+  the same data as the decklist pages: one entry per championship, newest
+  first, each winner's list already joined to card names.
+{%- endcomment -%}
+{%- assign champs = site.data.vintage_champions -%}
+
+<link rel="stylesheet" href="{{ '/assets/css/decklist.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/vintage-decklists.css' | relative_url }}">
+
+<div class="vd">
+
+  <header class="vd-title">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </header>
+
+  <p>
+    The winner of each of the {{ champs | size }} championships, and the list
+    they won with. Open a line to see the deck; the full Top 8 is on
+    <a href="{{ '/vintage-decklists/' | relative_url }}">the decklists page</a>.
+  </p>
+
+  {%- assign year = "" -%}
+  {%- for c in champs %}
+  {%- if c.year != year %}
+  {%- unless forloop.first %}</div>{% endunless %}
+  {%- assign year = c.year %}
+  <h2 class="vc-year" id="{{ year }}">{{ year }}</h2>
+  <div class="vc-group">
+  {%- endif %}
+  {%- assign d = c.deck %}
+  <details class="vc-champ" id="{{ c.slug }}">
+    <summary>
+      <span class="vc-player">
+        {%- if d %}{{ d.player }}{% if d.player_native %} <span class="vd-native" lang="ja">{{ d.player_native }}</span>{% endif %}
+        {%- else %}<span class="vd-missing">Winner unknown</span>{% endif -%}
+      </span>
+      <span class="vc-event">{{ c.label }}</span>
+      <span class="vc-arch">{{ d.archetype }}</span>
+    </summary>
+    <div class="vc-body">
+      <p class="vd-meta">
+        {{ c.event }}, {{ c.when }}{% if c.location %}, {{ c.location }}{% endif %}.
+        {%- if c.players %} {{ c.players }} players.{% endif %}
+        <a href="{{ c.url | relative_url }}">Full Top 8 &rarr;</a>
+        &middot; <a href="{{ '/vintage-legality' | relative_url }}#{{ c.date }}">The restricted list that day</a>
+      </p>
+      {%- if d %}
+      {% include vintage-t8-list.html deck=d %}
+      {%- else %}
+      <p class="vd-missing">
+        Who won is not known. If you know, or know where it was reported,
+        <a href="https://github.com/rykerwilliams/type1/blob/HEAD/CONTRIBUTING.md">please say so</a>.
+      </p>
+      {%- endif %}
+      {%- if d and d.main == nil %}
+      <p class="vd-meta">
+        Know where this list was published?
+        <a href="https://github.com/rykerwilliams/type1/blob/HEAD/CONTRIBUTING.md">Here's how to send it</a>.
+      </p>
+      {%- endif %}
+    </div>
+  </details>
+  {%- if forloop.last %}</div>{% endif %}
+  {%- endfor %}
+
+  <p class="vd-meta">
+    From <a href="https://github.com/rykerwilliams/type1/tree/HEAD/decks">type1</a>,
+    where every list cites where it was first published. Something wrong, or cited
+    to the wrong place?
+    <a href="https://github.com/rykerwilliams/type1/blob/HEAD/CONTRIBUTING.md">Here's how to fix it</a>.
+  </p>
+</div>
+
+<script src="{{ '/assets/js/scryfall-cache.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/decklist.js' | relative_url }}"></script>
+<script>
+  /* a link to one champion (#2022-12-11-eternal-weekend-na) opens it. Block
+     comments only: the site minifies each page onto one line. */
+  (function () {
+    var el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (el && el.tagName === "DETAILS") el.open = true;
+  })();
+</script>
