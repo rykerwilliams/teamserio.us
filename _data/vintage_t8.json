@@ -263,10 +263,15 @@
     {
      "finish": "2",
      "player": "Dennis Bentley",
+     "archetype": "White/Red Armageddon",
      "notes": [
       {
        "text": "From Rochester, NY. The Duelist describes a red/white deck with Armageddon, Balance, Blood Moon, Land Tax, Jalum Tome, Serra Angels and Juggernauts; no list.",
        "url": "https://archive.org/details/the-duelist-8"
+      },
+      {
+       "text": "'White/Red Armageddon' is Chris Otwell's name for it, promoting the 1996 event on rec.games.trading-cards.magic.misc (21 Aug 1996): 'Chip Hogan and his slow mana deprivation deck over took Dennis Bentley in the finals after 3 rough games. Dennis's White/Red Armageddon deck was not quite enough for Chips's Erhan Djinn/Juggernault mana depreviation/permission deck.' Otwell's '3 rough games' and The Duelist's 3-0 agree on three games.",
+       "url": "https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/Z7CmDeQixfs"
       }
      ],
      "main": null,
@@ -282,7 +287,7 @@
    "date": "1996-09-15",
    "date_precision": "range",
    "date_range": [
-    "1996-09-13",
+    "1996-09-12",
     "1996-09-15"
    ],
    "location": "Toledo, OH",
@@ -293,8 +298,8 @@
    "partial": true,
    "notes": [
     {
-     "text": "Date not verified. Posts dated Monday 16 Sep 1996 describe 'the Type 1 Nationals in Toledo this weekend'; the day of the final is not given, and AndCon '96's dates were not found in any archived Andon page. 15 Sep (the Sunday) is a placeholder.",
-     "url": "https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/Sc3yv2FG7SE/m/PtybGglFVwgJ"
+     "text": "AndCon '96 ran 12-15 September 1996 (Chris Otwell's announcement of the Type 1 championship on rec.games.trading-cards.magic.misc, 21 Aug 1996). The day of the final is not given; 15 Sep (the last day) is a placeholder.",
+     "url": "https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/Z7CmDeQixfs"
     },
     {
      "text": "Name: Usenet posters call it the 'Type I Natn'l Championship' / 'Type 1 Nationals'. No Andon or Wizards announcement for 1996 was found, so the official billing is not verified.",
@@ -318,6 +323,19 @@
       {
        "text": "From Chesterfield, VA. No list survives; Taylor describes blue control with Autumn Willow, Merchant Scroll, Amnesia, Demonic Tutor, Force of Will, Counterspell, Mana Drain, two main-deck Red Elemental Blasts, Library of Alexandria and Jayemdae Tome, with two Serra Angel and two Moat in the sideboard.",
        "url": "https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/Sc3yv2FG7SE/m/PtybGglFVwgJ"
+      }
+     ],
+     "main": null,
+     "sideboard": null
+    },
+    {
+     "finish": "5-8",
+     "player": "Greg Hunt",
+     "archetype": "U/W",
+     "notes": [
+      {
+       "text": "His own post (rec.games.trading-cards.magic.misc, 18 Sep 1996): 'I was playing u/w with helms and lions in the sideboard … I got beat in the final 8 by a really strange discard deck', with pump knights, Hippies, Gorilla Shamans, Racks, Hymns and Sceptres. His opponent is not named. 5-8 assumes 'final 8' means the quarterfinal; Eric Taylor says the cut was extended to 16.",
+       "url": "https://groups.google.com/g/rec.games.trading-cards.magic.misc/c/MR_R5jrTzjs"
       }
      ],
      "main": null,
@@ -749,7 +767,7 @@
    "partial": true,
    "notes": [
     {
-     "text": "Date not known. Stephen Menendian (Eternal Central, 2013) says the tournament 'kicked off in the final months of 2000' and the winner was crowned 'by the end of the year'; Oscar Tan dates it 2000. 31 December 2000 is a placeholder.",
+     "text": "Date not known. Stephen Menendian (Eternal Central, 2013) says the tournament 'kicked off in the final months of 2000' and the winner was crowned 'by the end of the year'; Oscar Tan dates it 2000. 31 December 2000 is a placeholder. Caron's primer, with his final against Bower in it, is dated 22 December 2000, so the event was over by then.",
      "url": "https://www.eternalcentral.com/schools-of-magic-history-of-vintage-2001/"
     },
     {
@@ -757,7 +775,8 @@
      "url": "https://www.eternalcentral.com/schools-of-magic-history-of-vintage-2001/"
     },
     {
-     "text": "Only the winner is known. The Beyond Dominia forum threads were not recovered from the Wayback Machine (the archive refused connections during this research)."
+     "text": "Only the two finalists are known. The forum's tournament threads were deleted in 2001; Oscar Tan ('Rakso'), posting there, says 'the old tourney threads were all deleted, except for whatever I have in my hard disk'. The surviving 'T1ToC Archived Threads' folder holds only the second Tournament of Champions.",
+     "url": "https://bdominia.com/discus/messages/9/17903.shtml"
     },
     {
      "text": "A B&R change took effect on 30 September 2000 (Channel and Demonic Consultation restricted, among others). The tournament 'kicked off in the final months of 2000', so it was probably played under the new list, which is the one the placeholder date selects; if it began before 30 September, decks registered in advance were built under the old one.",
@@ -803,15 +822,66 @@
       [1,"08cb8a30"]
      ],
      "sideboard": null
+    },
+    {
+     "finish": "2",
+     "player": "Raphaël Caron",
+     "archetype": "Deck Parfait",
+     "source": {
+      "url": "https://www.bdominia.com/discus/articles/parfait.html",
+      "label": "Raphaël Caron, 'Deck Parfait Primer', Beyond Dominia, 22 Dec 2000"
+     },
+     "notes": [
+      {
+       "text": "'K-Run' on Beyond Dominia. His own primer prints this list as 'Deck Parfait 2000, Beyond Dominia's Type I Tournament of Champions, second place, losing to Michael Bower's (aka Mikephoen) Forbidian'. No sideboard is printed, so sideboard is null. Mono-white control on Land Tax and Scroll Rack, winning with Sacred Mesa.",
+       "url": "https://www.bdominia.com/discus/articles/parfait.html"
+      },
+      {
+       "text": "His Beyond Dominia staff profile says the same: 'I made the finals of the first Type One Tournament Of Champions (T1TOC), losing to mikephoen.'",
+       "url": "https://www.bdominia.com/discus/articles/staff.html"
+      }
+     ],
+     "main": [
+      [1,"39ee576a"],
+      [1,"d416a4ed"],
+      [1,"1573f7f9"],
+      [1,"b526962e"],
+      [1,"028bc726"],
+      [2,"08cb8a30"],
+      [1,"c5229c17"],
+      [4,"6300de53"],
+      [4,"0b6c74a7"],
+      [2,"8776d14f"],
+      [1,"34515b16"],
+      [1,"17fa98cd"],
+      [1,"42208fea"],
+      [3,"a75dbe70"],
+      [4,"b1544f21"],
+      [1,"7a9d13b3"],
+      [1,"7071aee8"],
+      [2,"648bd03d"],
+      [4,"d2d9ecea"],
+      [1,"6ad8011d"],
+      [1,"f3c5978a"],
+      [1,"824597b8"],
+      [1,"5089ec1a"],
+      [1,"d21a89eb"],
+      [19,"bc71ebf6"]
+     ],
+     "sideboard": null
     }
    ],
    "restricted": [
+    "17fa98cd",
     "5089ec1a",
     "550c74d4",
     "6ad8011d",
+    "824597b8",
+    "c5229c17",
     "d0209d3f",
     "d21a89eb",
-    "d5ed1233"
+    "d5ed1233",
+    "f3c5978a"
    ]
   },
   {
@@ -1974,8 +2044,13 @@
     {
      "finish": "5-8",
      "seed": 1,
-     "player": "Brian Demars",
+     "player": "Brian DeMars",
      "archetype": "Control Slaver",
+     "notes": [
+      {
+       "text": "Wizards' coverage prints \"Demars\". Written DeMars, as the 2009 coverage spells it, so one person has one name."
+      }
+     ],
      "main": [
       [1,"dba4fd31"],
       [2,"f3c7af78"],
@@ -2717,7 +2792,7 @@
    "decks": [
     {
      "finish": "1",
-     "player": "Steve Menendian",
+     "player": "Stephen Menendian",
      "archetype": "GAT",
      "source": {
       "url": "https://deckbox.org/sets/1710297",
@@ -2731,6 +2806,9 @@
       {
        "text": "mtgtop8 copy, for comparison.",
        "url": "https://www.mtgtop8.com/event?e=15&d=101647&f=VI"
+      },
+      {
+       "text": "Wizards' coverage prints \"Steve Menendian\". The Deckbox set above and the sources for his 2004 and 2011 Top 8s say Stephen; he is listed as Stephen in all three, so one person has one name."
       }
      ],
      "main": [
@@ -2782,12 +2860,15 @@
     },
     {
      "finish": "2",
-     "player": "Richard Shay",
+     "player": "Rich Shay",
      "archetype": "GAT",
      "notes": [
       {
        "text": "Wizards prints the line \"4 Duress\" twice, for 64 cards; one is removed here, giving 60. The Deckbox copy and mtgtop8 both have 4 Duress. The extra line is almost certainly the 4 Duress missing from Menendian's list.",
        "url": "https://deckbox.org/sets/1710298"
+      },
+      {
+       "text": "Wizards' coverage prints \"Richard Shay\". Menendian's report calls him Rich Shay, as the sources for his 2011, 2015, 2017 and 2018 Top 8s do; he is listed as Rich in all five, so one person has one name."
       }
      ],
      "main": [
@@ -3294,8 +3375,13 @@
     },
     {
      "finish": "3-4",
-     "player": "Brian Demars",
+     "player": "Brian DeMars",
      "archetype": "Strategic Slaver",
+     "notes": [
+      {
+       "text": "Wizards' coverage prints \"Demars\". Written DeMars, as the 2009 coverage spells it, so one person has one name."
+      }
+     ],
      "main": [
       [3,"f3c7af78"],
       [3,"b2c6aa39"],
@@ -7608,8 +7694,13 @@
     },
     {
      "finish": "8",
-     "player": "Andrew Markiton",
+     "player": "Andy Markiton",
      "archetype": "TKS/Ravager Shops",
+     "notes": [
+      {
+       "text": "Card Titan prints \"Andrew Markiton\". He is the Andy Markiton who won the 2017 NA championship, per Rajah James of Team Serious; listed as Andy in both, the name his title was reported under, so one person has one name."
+      }
+     ],
      "main": [
       [1,"5089ec1a"],
       [1,"2c63e4e1"],
@@ -21708,6 +21799,150 @@
    "image": "https://cards.scryfall.io/normal/front/d/e/def384ff-1b6f-4c4f-8151-3c72c29b63ce.jpg?1783945960",
    "scryfall_uri": "https://scryfall.com/card/mmq/104/soothsaying"
   },
+  "39ee576a": {
+   "oracle_id": "39ee576a-0803-4063-9c84-f2b537e4d44c",
+   "name": "Jayemdae Tome",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "image": "https://cards.scryfall.io/normal/front/c/a/cac8c421-5b92-481d-b2de-560c0231ab58.jpg?1783948664",
+   "scryfall_uri": "https://scryfall.com/card/lea/254/jayemdae-tome"
+  },
+  "1573f7f9": {
+   "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+   "name": "Tormod's Crypt",
+   "set": "DRK",
+   "set_name": "The Dark",
+   "released_at": "1994-08-01",
+   "image": "https://cards.scryfall.io/normal/front/0/f/0f9668ba-d26d-4484-b4b8-6fb91fbfb617.jpg?1783947925",
+   "scryfall_uri": "https://scryfall.com/card/drk/112/tormods-crypt"
+  },
+  "b526962e": {
+   "oracle_id": "b526962e-be8a-4803-b038-57869bb96751",
+   "name": "Soldevi Digger",
+   "set": "ALL",
+   "set_name": "Alliances",
+   "released_at": "1996-06-10",
+   "image": "https://cards.scryfall.io/normal/front/5/a/5a3a0ab4-e8ef-45fd-9a73-86d1ee30cb48.jpg?1783947159",
+   "scryfall_uri": "https://scryfall.com/card/all/131/soldevi-digger"
+  },
+  "028bc726": {
+   "oracle_id": "028bc726-0e86-4c53-9648-625153ae4b01",
+   "name": "Ivory Mask",
+   "set": "MMQ",
+   "set_name": "Mercadian Masques",
+   "released_at": "1999-10-04",
+   "image": "https://cards.scryfall.io/normal/front/3/5/35ea3762-a419-412c-b2bd-0a40902d8d51.jpg?1783945980",
+   "scryfall_uri": "https://scryfall.com/card/mmq/24/ivory-mask"
+  },
+  "c5229c17": {
+   "oracle_id": "c5229c17-b7be-4b05-b683-f2277edc4849",
+   "name": "Enlightened Tutor",
+   "set": "MIR",
+   "set_name": "Mirage",
+   "released_at": "1996-10-08",
+   "image": "https://cards.scryfall.io/normal/front/c/b/cbac1d27-15e2-4e2f-82ab-625a16e096cb.jpg?1783947123",
+   "scryfall_uri": "https://scryfall.com/card/mir/14/enlightened-tutor"
+  },
+  "6300de53": {
+   "oracle_id": "6300de53-6e71-4f0e-87e1-b0acd25c59a8",
+   "name": "Abeyance",
+   "set": "WTH",
+   "set_name": "Weatherlight",
+   "released_at": "1997-06-09",
+   "image": "https://cards.scryfall.io/normal/front/1/2/125a355d-bfcf-4125-aa6c-35e7dea6f63e.jpg?1783946751",
+   "scryfall_uri": "https://scryfall.com/card/wth/1/abeyance"
+  },
+  "0b6c74a7": {
+   "oracle_id": "0b6c74a7-d7d3-4c05-84b1-bcb580bb476f",
+   "name": "Argivian Find",
+   "set": "WTH",
+   "set_name": "Weatherlight",
+   "released_at": "1997-06-09",
+   "image": "https://cards.scryfall.io/normal/front/8/9/89f23295-ad0a-4e2d-ae04-1a9c065e575d.jpg?1783946749",
+   "scryfall_uri": "https://scryfall.com/card/wth/6/argivian-find"
+  },
+  "8776d14f": {
+   "oracle_id": "8776d14f-a5a2-4ef3-98d0-e1148e579e4d",
+   "name": "Sacred Mesa",
+   "set": "MIR",
+   "set_name": "Mirage",
+   "released_at": "1996-10-08",
+   "image": "https://cards.scryfall.io/normal/front/6/6/6622f325-6bc3-49dc-ba8e-154e70772dd5.jpg?1783947117",
+   "scryfall_uri": "https://scryfall.com/card/mir/37/sacred-mesa"
+  },
+  "42208fea": {
+   "oracle_id": "42208fea-8c24-451f-861d-6d70c0a7a502",
+   "name": "Moat",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "image": "https://cards.scryfall.io/normal/front/9/5/952ba126-0915-47f0-9b6a-a0a6dcd22c6f.jpg?1783948082",
+   "scryfall_uri": "https://scryfall.com/card/leg/28/moat"
+  },
+  "a75dbe70": {
+   "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+   "name": "Seal of Cleansing",
+   "set": "NEM",
+   "set_name": "Nemesis",
+   "released_at": "2000-02-14",
+   "image": "https://cards.scryfall.io/normal/front/a/f/af6c921e-1b82-412c-9979-adfdf83440f7.jpg?1783945844",
+   "scryfall_uri": "https://scryfall.com/card/nem/18/seal-of-cleansing"
+  },
+  "7a9d13b3": {
+   "oracle_id": "7a9d13b3-3823-463a-acd9-8b7a9d5e121f",
+   "name": "Planar Birth",
+   "set": "USG",
+   "set_name": "Urza's Saga",
+   "released_at": "1998-10-12",
+   "image": "https://cards.scryfall.io/normal/front/c/7/c7cacdff-aa83-4644-b2f0-ce8c89dddfbf.jpg?1783946371",
+   "scryfall_uri": "https://scryfall.com/card/usg/31/planar-birth"
+  },
+  "7071aee8": {
+   "oracle_id": "7071aee8-b5ca-4be5-9ba0-2df7e3af303b",
+   "name": "Story Circle",
+   "set": "MMQ",
+   "set_name": "Mercadian Masques",
+   "released_at": "1999-10-04",
+   "image": "https://cards.scryfall.io/normal/front/6/7/675378bb-7dc1-4bc8-b026-27e6e8e72e18.jpg?1783945973",
+   "scryfall_uri": "https://scryfall.com/card/mmq/51/story-circle"
+  },
+  "648bd03d": {
+   "oracle_id": "648bd03d-247e-4d6f-87a9-12a67688cbf5",
+   "name": "Scroll Rack",
+   "set": "TMP",
+   "set_name": "Tempest",
+   "released_at": "1997-10-14",
+   "image": "https://cards.scryfall.io/normal/front/5/f/5f7346d8-1aef-4618-88e6-74bd8865e0f3.jpg?1783946601",
+   "scryfall_uri": "https://scryfall.com/card/tmp/308/scroll-rack"
+  },
+  "d2d9ecea": {
+   "oracle_id": "d2d9ecea-7925-420e-98b9-2f87f41f387c",
+   "name": "Land Tax",
+   "set": "LEG",
+   "set_name": "Legends",
+   "released_at": "1994-06-01",
+   "image": "https://cards.scryfall.io/normal/front/d/5/d53b20b0-67bc-4587-817b-efbf21cb2512.jpg?1783948083",
+   "scryfall_uri": "https://scryfall.com/card/leg/26/land-tax"
+  },
+  "f3c5978a": {
+   "oracle_id": "f3c5978a-70fa-431f-933b-b954bd0db0ea",
+   "name": "Mox Diamond",
+   "set": "STH",
+   "set_name": "Stronghold",
+   "released_at": "1998-03-02",
+   "image": "https://cards.scryfall.io/normal/front/2/8/28028830-83ed-45e2-b495-3b9ad9d3e988.jpg?1783946538",
+   "scryfall_uri": "https://scryfall.com/card/sth/138/mox-diamond"
+  },
+  "bc71ebf6": {
+   "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+   "name": "Plains",
+   "set": "LEA",
+   "set_name": "Limited Edition Alpha",
+   "released_at": "1993-08-05",
+   "image": "https://cards.scryfall.io/normal/front/b/1/b1623d57-4729-4796-b3f7-f1837a05c6ed.jpg?1783948658",
+   "scryfall_uri": "https://scryfall.com/card/lea/286/plains"
+  },
   "33d405ea": {
    "oracle_id": "33d405ea-7a9a-4970-b70f-9c05d90dd6f0",
    "name": "Duress",
@@ -22223,15 +22458,6 @@
    "image": "https://cards.scryfall.io/normal/front/a/4/a46e8f6a-3a1a-4c30-9348-4b31882267eb.jpg?1783946233",
    "scryfall_uri": "https://scryfall.com/card/ulg/89/rack-and-ruin"
   },
-  "1573f7f9": {
-   "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
-   "name": "Tormod's Crypt",
-   "set": "DRK",
-   "set_name": "The Dark",
-   "released_at": "1994-08-01",
-   "image": "https://cards.scryfall.io/normal/front/0/f/0f9668ba-d26d-4484-b4b8-6fb91fbfb617.jpg?1783947925",
-   "scryfall_uri": "https://scryfall.com/card/drk/112/tormods-crypt"
-  },
   "c0d8fef4": {
    "oracle_id": "c0d8fef4-65f4-4769-982d-b397d2b7e977",
    "name": "Animate Dead",
@@ -22331,15 +22557,6 @@
    "image": "https://cards.scryfall.io/normal/front/4/5/45a02d67-5931-49ae-a28e-57aa6f9c7f83.jpg?1783946072",
    "scryfall_uri": "https://scryfall.com/card/uds/65/phyrexian-negator"
   },
-  "f3c5978a": {
-   "oracle_id": "f3c5978a-70fa-431f-933b-b954bd0db0ea",
-   "name": "Mox Diamond",
-   "set": "STH",
-   "set_name": "Stronghold",
-   "released_at": "1998-03-02",
-   "image": "https://cards.scryfall.io/normal/front/2/8/28028830-83ed-45e2-b495-3b9ad9d3e988.jpg?1783946538",
-   "scryfall_uri": "https://scryfall.com/card/sth/138/mox-diamond"
-  },
   "08becc07": {
    "oracle_id": "08becc07-28bc-4a2f-a6b0-28a2998d2f50",
    "name": "Windfall",
@@ -22438,24 +22655,6 @@
    "released_at": "1993-08-05",
    "image": "https://cards.scryfall.io/normal/front/b/e/bebe39d4-21fb-46a4-a1ec-b97102e46c15.jpg?1783948660",
    "scryfall_uri": "https://scryfall.com/card/lea/281/scrubland"
-  },
-  "6300de53": {
-   "oracle_id": "6300de53-6e71-4f0e-87e1-b0acd25c59a8",
-   "name": "Abeyance",
-   "set": "WTH",
-   "set_name": "Weatherlight",
-   "released_at": "1997-06-09",
-   "image": "https://cards.scryfall.io/normal/front/1/2/125a355d-bfcf-4125-aa6c-35e7dea6f63e.jpg?1783946751",
-   "scryfall_uri": "https://scryfall.com/card/wth/1/abeyance"
-  },
-  "a75dbe70": {
-   "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
-   "name": "Seal of Cleansing",
-   "set": "NEM",
-   "set_name": "Nemesis",
-   "released_at": "2000-02-14",
-   "image": "https://cards.scryfall.io/normal/front/a/f/af6c921e-1b82-412c-9979-adfdf83440f7.jpg?1783945844",
-   "scryfall_uri": "https://scryfall.com/card/nem/18/seal-of-cleansing"
   },
   "32dc847a": {
    "oracle_id": "32dc847a-d8e9-4bc5-aa73-dfe69ff330a2",
@@ -23465,15 +23664,6 @@
    "image": "https://cards.scryfall.io/normal/front/0/d/0dcaba91-06d3-4492-9e07-36a1b858ca47.jpg?1783943673",
    "scryfall_uri": "https://scryfall.com/card/rav/82/darkblast"
   },
-  "bc71ebf6": {
-   "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
-   "name": "Plains",
-   "set": "LEA",
-   "set_name": "Limited Edition Alpha",
-   "released_at": "1993-08-05",
-   "image": "https://cards.scryfall.io/normal/front/b/1/b1623d57-4729-4796-b3f7-f1837a05c6ed.jpg?1783948658",
-   "scryfall_uri": "https://scryfall.com/card/lea/286/plains"
-  },
   "27ffa6e9": {
    "oracle_id": "27ffa6e9-c161-4f53-8b41-7fae5f199f41",
    "name": "Kataki, War's Wage",
@@ -23545,15 +23735,6 @@
    "released_at": "2002-10-07",
    "image": "https://cards.scryfall.io/normal/front/4/2/4289bdcb-6eea-458f-a4eb-89e26264673a.jpg?1783945090",
    "scryfall_uri": "https://scryfall.com/card/ons/57/true-believer"
-  },
-  "c5229c17": {
-   "oracle_id": "c5229c17-b7be-4b05-b683-f2277edc4849",
-   "name": "Enlightened Tutor",
-   "set": "MIR",
-   "set_name": "Mirage",
-   "released_at": "1996-10-08",
-   "image": "https://cards.scryfall.io/normal/front/c/b/cbac1d27-15e2-4e2f-82ab-625a16e096cb.jpg?1783947123",
-   "scryfall_uri": "https://scryfall.com/card/mir/14/enlightened-tutor"
   },
   "1da10d5c": {
    "oracle_id": "1da10d5c-36a8-473f-a5d4-782ad61d8057",
@@ -25256,15 +25437,6 @@
    "released_at": "2012-10-05",
    "image": "https://cards.scryfall.io/normal/front/4/e/4e9648f9-7a67-4717-bca1-861d1f7fed43.jpg?1783940331",
    "scryfall_uri": "https://scryfall.com/card/rtr/201/supreme-verdict"
-  },
-  "42208fea": {
-   "oracle_id": "42208fea-8c24-451f-861d-6d70c0a7a502",
-   "name": "Moat",
-   "set": "LEG",
-   "set_name": "Legends",
-   "released_at": "1994-06-01",
-   "image": "https://cards.scryfall.io/normal/front/9/5/952ba126-0915-47f0-9b6a-a0a6dcd22c6f.jpg?1783948082",
-   "scryfall_uri": "https://scryfall.com/card/leg/28/moat"
   },
   "9842734c": {
    "oracle_id": "9842734c-1eac-4509-a731-4c22017ae586",
