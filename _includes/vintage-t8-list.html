@@ -1,5 +1,5 @@
 {%- comment -%}
-  One championship decklist with its card hover and copy button: on the event
+  One championship decklist with its card hover, copy and download buttons: on the event
   pages and on /vintage-champions/. include.deck is a deck as
   _plugins/vintage_t8_pages.rb joins it, card lines already named.
 {%- endcomment -%}
@@ -7,6 +7,10 @@
 <div class="decklist-content vd-list">
   <button onclick="copyDecklist(this)" class="btn text-muted btn-sm decklist-copy-btn"
           aria-label="Copy this decklist"><i class="far fa-copy"></i></button>
+  <button onclick="downloadDecklist(this)" class="btn text-muted btn-sm decklist-download-btn"
+          data-filename="{{ include.deck.filename }}"
+          aria-label="Download for Magic Online (.txt)" title="Download for Magic Online (.txt)"><i class="fas fa-download"></i></button>
+  <pre class="mtgo-decklist" hidden>{{ include.deck.mtgo_text | xml_escape }}</pre>
   <div class="card-preview"></div>
   <div class="copyable-decklist"><pre>{{ include.deck.text | xml_escape }}</pre></div>
   <div class="vd-cols">

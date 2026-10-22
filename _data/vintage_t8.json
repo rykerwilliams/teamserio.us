@@ -21426,7 +21426,8 @@
    "set_name": "Arabian Nights",
    "released_at": "1993-12-17",
    "image": "https://cards.scryfall.io/normal/front/3/1/31bf3f14-b5df-498b-a1bb-965885c82401.jpg?1783948387",
-   "scryfall_uri": "https://scryfall.com/card/arn/29/juz%C3%A1m-djinn"
+   "scryfall_uri": "https://scryfall.com/card/arn/29/juz%C3%A1m-djinn",
+   "mtgo": "Juzam Djinn"
   },
   "94a844d2": {
    "oracle_id": "94a844d2-0574-45a7-b347-e0e329767c42",
@@ -21831,7 +21832,8 @@
    "set_name": "Apocalypse",
    "released_at": "2001-06-04",
    "image": "https://cards.scryfall.io/normal/front/f/9/f98f4538-5b5b-475d-b98f-49d01dae6f04.jpg?1783945328",
-   "scryfall_uri": "https://scryfall.com/card/apc/128/fire-ice"
+   "scryfall_uri": "https://scryfall.com/card/apc/128/fire-ice",
+   "mtgo": "Fire/Ice"
   },
   "3f8e7a45": {
    "oracle_id": "3f8e7a45-4c6e-4ee6-93d0-b7de9715ec97",
@@ -21840,7 +21842,8 @@
    "set_name": "Alliances",
    "released_at": "1996-06-10",
    "image": "https://cards.scryfall.io/normal/front/f/9/f9b0164c-2d4e-48ab-addd-322d9b504739.jpg?1783947166",
-   "scryfall_uri": "https://scryfall.com/card/all/107/lim-d%C3%BBls-vault"
+   "scryfall_uri": "https://scryfall.com/card/all/107/lim-d%C3%BBls-vault",
+   "mtgo": "Lim-Dul's Vault"
   },
   "bdb3ca68": {
    "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
@@ -24927,7 +24930,8 @@
    "set_name": "Innistrad",
    "released_at": "2011-09-30",
    "image": "https://cards.scryfall.io/normal/front/1/1/11bf83bb-c95b-4b4f-9a56-ce7a1816307a.jpg?1783940984",
-   "scryfall_uri": "https://scryfall.com/card/isd/51/delver-of-secrets-insectile-aberration"
+   "scryfall_uri": "https://scryfall.com/card/isd/51/delver-of-secrets-insectile-aberration",
+   "mtgo": "Delver of Secrets"
   },
   "5fac139a": {
    "oracle_id": "5fac139a-07d3-4e6c-98e3-d98b199f7a6f",
@@ -25269,7 +25273,8 @@
    "set_name": "Dragon's Maze",
    "released_at": "2013-05-03",
    "image": "https://cards.scryfall.io/normal/front/d/1/d169a3b2-18ae-4414-98ef-d879676fdcc0.jpg?1783940014",
-   "scryfall_uri": "https://scryfall.com/card/dgm/135/wear-tear"
+   "scryfall_uri": "https://scryfall.com/card/dgm/135/wear-tear",
+   "mtgo": "Wear/Tear"
   },
   "c5acf2a5": {
    "oracle_id": "c5acf2a5-40f4-433d-a74d-1cb56c521464",
@@ -25512,7 +25517,8 @@
    "set_name": "Magic Origins",
    "released_at": "2015-07-17",
    "image": "https://cards.scryfall.io/normal/front/0/2/02d6d693-f1f3-4317-bcc0-c21fa8490d38.jpg?1783938353",
-   "scryfall_uri": "https://scryfall.com/card/ori/60/jace-vryns-prodigy-jace-telepath-unbound"
+   "scryfall_uri": "https://scryfall.com/card/ori/60/jace-vryns-prodigy-jace-telepath-unbound",
+   "mtgo": "Jace, Vryn's Prodigy"
   },
   "12c63a45": {
    "oracle_id": "12c63a45-7eb2-4262-b571-3358182f5610",
@@ -25980,7 +25986,8 @@
    "set_name": "Ixalan",
    "released_at": "2017-09-29",
    "image": "https://cards.scryfall.io/normal/front/1/a/1a7e242e-bb48-4134-a1c2-6033713d658f.jpg?1783935781",
-   "scryfall_uri": "https://scryfall.com/card/xln/74/search-for-azcanta-azcanta-the-sunken-ruin"
+   "scryfall_uri": "https://scryfall.com/card/xln/74/search-for-azcanta-azcanta-the-sunken-ruin",
+   "mtgo": "Search for Azcanta"
   },
   "f2c10591": {
    "oracle_id": "f2c10591-4c0c-4286-af91-e8d8d10a4c9d",
@@ -25989,7 +25996,8 @@
    "set_name": "Shadows over Innistrad",
    "released_at": "2016-04-08",
    "image": "https://cards.scryfall.io/normal/front/3/5/359d1b13-6156-43b0-a9a7-6bfff36c1a91.jpg?1783937788",
-   "scryfall_uri": "https://scryfall.com/card/soi/92/thing-in-the-ice-awoken-horror"
+   "scryfall_uri": "https://scryfall.com/card/soi/92/thing-in-the-ice-awoken-horror",
+   "mtgo": "Thing in the Ice"
   },
   "b5f4b732": {
    "oracle_id": "b5f4b732-099c-46e7-a03d-d8e4c78245b8",
@@ -26385,7 +26393,8 @@
    "set_name": "Throne of Eldraine",
    "released_at": "2019-10-04",
    "image": "https://cards.scryfall.io/normal/front/c/2/c2089ec9-0665-448f-bfe9-d181de127814.jpg?1783932663",
-   "scryfall_uri": "https://scryfall.com/card/eld/39/brazen-borrower-petty-theft"
+   "scryfall_uri": "https://scryfall.com/card/eld/39/brazen-borrower-petty-theft",
+   "mtgo": "Brazen Borrower"
   },
   "64a9a6b4": {
    "oracle_id": "64a9a6b4-26b5-4d23-be86-85c54e9c4727",
@@ -27114,7 +27123,8 @@
    "set_name": "Zendikar Rising",
    "released_at": "2020-09-25",
    "image": "https://cards.scryfall.io/normal/front/1/9/193071fe-180b-4d35-ba78-9c16675c29fc.jpg?1783929396",
-   "scryfall_uri": "https://scryfall.com/card/znr/76/sea-gate-restoration-sea-gate-reborn"
+   "scryfall_uri": "https://scryfall.com/card/znr/76/sea-gate-restoration-sea-gate-reborn",
+   "mtgo": "Sea Gate Restoration"
   },
   "b28dcb41": {
    "oracle_id": "b28dcb41-5e47-4719-892f-da009a5d50b4",
@@ -27312,7 +27322,8 @@
    "set_name": "Zendikar Rising",
    "released_at": "2020-09-25",
    "image": "https://cards.scryfall.io/normal/front/c/4/c470539a-9cc7-4175-8f7c-c982b6072b6d.jpg?1783929425",
-   "scryfall_uri": "https://scryfall.com/card/znr/12/emerias-call-emeria-shattered-skyclave"
+   "scryfall_uri": "https://scryfall.com/card/znr/12/emerias-call-emeria-shattered-skyclave",
+   "mtgo": "Emeria's Call"
   },
   "66f28905": {
    "oracle_id": "66f28905-c7fc-4ada-8fa0-199626d9bedb",
@@ -27321,7 +27332,8 @@
    "set_name": "The Lord of the Rings: Tales of Middle-earth",
    "released_at": "2023-06-23",
    "image": "https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg?1783916314",
-   "scryfall_uri": "https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed"
+   "scryfall_uri": "https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed",
+   "mtgo": "Lorien Revealed"
   },
   "301d1d8e": {
    "oracle_id": "301d1d8e-d3fc-4010-8b29-4724fa0b31cd",
@@ -27510,7 +27522,8 @@
    "set_name": "Modern Horizons 3",
    "released_at": "2024-06-14",
    "image": "https://cards.scryfall.io/normal/front/2/a/2a717b98-cdac-416d-bf6c-f6b6638e65d1.jpg?1791803860",
-   "scryfall_uri": "https://scryfall.com/card/mh3/242/tamiyo-inquisitive-student-tamiyo-seasoned-scholar"
+   "scryfall_uri": "https://scryfall.com/card/mh3/242/tamiyo-inquisitive-student-tamiyo-seasoned-scholar",
+   "mtgo": "Tamiyo, Inquisitive Student"
   },
   "16c39265": {
    "oracle_id": "16c39265-72d9-4c86-a961-8dd38ff9adcd",
@@ -27564,7 +27577,8 @@
    "set_name": "Modern Horizons 3",
    "released_at": "2024-06-14",
    "image": "https://cards.scryfall.io/normal/front/5/3/5358b87a-1a29-426d-b165-40c97da2c14d.jpg?1783911236",
-   "scryfall_uri": "https://scryfall.com/card/mh3/241/sink-into-stupor-soporific-springs"
+   "scryfall_uri": "https://scryfall.com/card/mh3/241/sink-into-stupor-soporific-springs",
+   "mtgo": "Sink into Stupor"
   },
   "08d80efc": {
    "oracle_id": "08d80efc-9542-4ba2-824c-c8615d8d07f2",
@@ -27591,7 +27605,8 @@
    "set_name": "Modern Horizons 3",
    "released_at": "2024-06-14",
    "image": "https://cards.scryfall.io/normal/front/8/6/8689ecd7-e9a6-458b-99d2-6dbaca527f00.jpg?1783911234",
-   "scryfall_uri": "https://scryfall.com/card/mh3/240/hydroelectric-specimen-hydroelectric-laboratory"
+   "scryfall_uri": "https://scryfall.com/card/mh3/240/hydroelectric-specimen-hydroelectric-laboratory",
+   "mtgo": "Hydroelectric Specimen"
   },
   "727f3201": {
    "oracle_id": "727f3201-1cfc-4ab2-9dfe-be4f7251f42f",
@@ -27600,7 +27615,8 @@
    "set_name": "Modern Horizons 3",
    "released_at": "2024-06-14",
    "image": "https://cards.scryfall.io/normal/front/d/0/d0d484a6-5610-4f1d-95ec-eda273c255e4.jpg?1783911234",
-   "scryfall_uri": "https://scryfall.com/card/mh3/243/boggart-trawler-boggart-bog"
+   "scryfall_uri": "https://scryfall.com/card/mh3/243/boggart-trawler-boggart-bog",
+   "mtgo": "Boggart Trawler"
   },
   "e4275202": {
    "oracle_id": "e4275202-4960-4cde-b941-27be8163ad6e",
@@ -27645,7 +27661,8 @@
    "set_name": "Modern Horizons 3",
    "released_at": "2024-06-14",
    "image": "https://cards.scryfall.io/normal/front/a/3/a3cb782d-c459-468d-9779-9b5669abc337.jpg?1783911234",
-   "scryfall_uri": "https://scryfall.com/card/mh3/244/fell-the-profane-fell-mire"
+   "scryfall_uri": "https://scryfall.com/card/mh3/244/fell-the-profane-fell-mire",
+   "mtgo": "Fell the Profane"
   },
   "67c4b1d5": {
    "oracle_id": "67c4b1d5-757c-46cf-8bb1-9889d9ed1a1f",
@@ -27753,7 +27770,8 @@
    "set_name": "Modern Horizons 3",
    "released_at": "2024-06-14",
    "image": "https://cards.scryfall.io/normal/front/6/2/62061e7c-cf19-4f03-b8fa-2bdba62d6b0b.jpg?1783911236",
-   "scryfall_uri": "https://scryfall.com/card/mh3/239/witch-enchanter-witch-blessed-meadow"
+   "scryfall_uri": "https://scryfall.com/card/mh3/239/witch-enchanter-witch-blessed-meadow",
+   "mtgo": "Witch Enchanter"
   },
   "ed06e421": {
    "oracle_id": "ed06e421-480c-40c8-8c3e-1e466e5327b2",
@@ -27852,7 +27870,8 @@
    "set_name": "The Lord of the Rings: Tales of Middle-earth",
    "released_at": "2023-06-23",
    "image": "https://cards.scryfall.io/normal/front/a/6/a6539e26-b63b-4725-9407-caaf451de084.jpg?1783916292",
-   "scryfall_uri": "https://scryfall.com/card/ltr/111/troll-of-khazad-d%C3%BBm"
+   "scryfall_uri": "https://scryfall.com/card/ltr/111/troll-of-khazad-d%C3%BBm",
+   "mtgo": "Troll of Khazad-dum"
   },
   "f1c2dbe2": {
    "oracle_id": "f1c2dbe2-fbe0-4058-bdf1-91d1b1832786",
@@ -28032,7 +28051,8 @@
    "set_name": "Tarkir: Dragonstorm",
    "released_at": "2025-04-11",
    "image": "https://cards.scryfall.io/normal/front/f/8/f890bdc7-32e6-4492-bac7-7cabf54a8bfd.jpg?1783907393",
-   "scryfall_uri": "https://scryfall.com/card/tdm/51/marang-river-regent-coil-and-catch"
+   "scryfall_uri": "https://scryfall.com/card/tdm/51/marang-river-regent-coil-and-catch",
+   "mtgo": "Marang River Regent"
   },
   "57ee0730": {
    "oracle_id": "57ee0730-3ac5-4f17-ac82-bd4a6673c2bb",

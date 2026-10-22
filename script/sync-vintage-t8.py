@@ -12,7 +12,7 @@ dependency and a data change arrives as a reviewable diff.
 Re-run it when type1's decks/ changes (once a year per championship, plus
 corrections) and commit the result.
 """
-import io, json, os, re, sys
+import glob, gzip, io, json, os, re, sys, unicodedata
 
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                    "_data", "vintage_t8.json")
@@ -39,6 +39,34 @@ def in_force(date, sts):
         if eff <= date:
             r = ids
     return r
+
+
+def layouts(repo, oids):
+    """Scryfall's layout for each oracle_id in oids, from the bulk data that
+    type1's script/resolve-decks.py caches in .cache/scryfall/."""
+    found = sorted(glob.glob(os.path.join(repo, ".cache", "scryfall", "default-cards-*.jsonl.gz")))
+    if not found:
+        sys.exit("no Scryfall bulk data in type1's .cache/scryfall/: "
+                 "run script/resolve-decks.py there first")
+    out = {}
+    with gzip.open(found[-1], "rt", encoding="utf-8") as f:
+        for line in f:
+            if '" // ' not in line and "' // " not in line and " // " not in line:
+                continue
+            c = json.loads(line)
+            if c.get("oracle_id") in oids:
+                out.setdefault(c["oracle_id"], c["layout"])
+    return out
+
+
+def mtgo_name(name, layout):
+    """The name Magic Online's .txt import takes: a split card's halves joined
+    by a slash ("Wear/Tear", as mtgo.com prints it), any other two-part card by
+    its front face, and no accents ("Lorien Revealed", "Lim-Dul's Vault")."""
+    if " // " in name:
+        name = "/".join(name.split(" // ")) if layout == "split" else name.split(" // ")[0]
+    return "".join(ch for ch in unicodedata.normalize("NFD", name)
+                   if unicodedata.category(ch) != "Mn")
 
 
 def main(repo):
@@ -89,6 +117,13 @@ def main(repo):
         # them, without shipping the whole list 48 times
         ev["restricted"] = sorted(used & restricted)
         events.append(ev)
+
+    multi = {c["oracle_id"] for c in cards.values() if " // " in c["name"]}
+    lay = layouts(repo, multi) if multi else {}
+    for c in cards.values():
+        m = mtgo_name(c["name"], lay.get(c["oracle_id"]))
+        if m != c["name"]:
+            c["mtgo"] = m
 
     out = {"generated_from": "https://github.com/rykerwilliams/type1",
            "events": events, "cards": cards}

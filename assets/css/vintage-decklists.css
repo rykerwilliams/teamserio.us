@@ -54,6 +54,7 @@
    columns leave it room */
 .vd-list { padding: .75rem 1rem; min-height: 24rem; }
 .vd-list .decklist-copy-btn { position: absolute; top: .4rem; right: .4rem; color: #fdce93; }
+.vd-list .decklist-download-btn { position: absolute; top: .4rem; right: 2.4rem; color: #fdce93; }
 .vd-cols { display: flex; gap: 2rem; flex-wrap: wrap; margin-right: 280px; }
 .vd-part { flex: 1 1 13rem; min-width: 0; }
 .vd-part ul { list-style: none; padding: 0; margin: .3rem 0 0; }
