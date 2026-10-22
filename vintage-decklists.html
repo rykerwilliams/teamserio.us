@@ -71,24 +71,22 @@ breadcrumb_list:
   </section>
 
   <h2>The championships</h2>
+  <p class="vd-hint">Each links to its full Top 8. Who won, and with what, is in the
+    <a href="{{ '/vintage-champions/' | relative_url }}">Hall of Champions</a>.</p>
   <div class="vd-scroll">
   <table class="vd-table vd-events">
-    <thead><tr><th>When</th><th>Event</th><th>Winner</th><th>Deck</th></tr></thead>
+    <thead><tr><th>When</th><th>Event</th><th class="vd-num">Players</th></tr></thead>
     <tbody>
       {%- assign evs = t8.events | reverse -%}
       {%- for ev in evs %}
       {%- assign year = ev.date | slice: 0, 4 -%}
-      {%- assign winner = ev.decks | where: "finish", "1" | first -%}
       <tr{% if year != prev_year %} class="vd-year-start"{% endif %}>
         <td class="vd-when">{{ ev.when }}</td>
         <td>
           <a href="{{ '/vintage-decklists/' | append: ev.slug | append: '/' | relative_url }}">{{ ev.label }}</a>
           {%- if ev.event != ev.label %}<br><small>{{ ev.event }}</small>{% endif -%}
         </td>
-        <td>
-          {%- if winner %}{{ winner.player }}{% if winner.player_native %} <span class="vd-native" lang="ja">{{ winner.player_native }}</span>{% endif %}{% else %}&mdash;{% endif -%}
-        </td>
-        <td>{% if winner %}{{ winner.archetype }}{% endif %}</td>
+        <td class="vd-num">{{ ev.players | default: "&ndash;" }}</td>
       </tr>
       {%- assign prev_year = year -%}
       {%- endfor %}
