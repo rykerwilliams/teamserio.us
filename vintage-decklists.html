@@ -75,7 +75,7 @@ breadcrumb_list:
     <a href="{{ '/vintage-champions/' | relative_url }}">Hall of Champions</a>.</p>
   <div class="vd-scroll">
   <table class="vd-table vd-events">
-    <thead><tr><th>When</th><th>Event</th><th class="vd-num">Players</th></tr></thead>
+    <thead><tr><th>When</th><th>Event</th><th>Where</th><th class="vd-num">Players</th></tr></thead>
     <tbody>
       {%- assign evs = t8.events | reverse -%}
       {%- for ev in evs %}
@@ -86,6 +86,7 @@ breadcrumb_list:
           <a href="{{ '/vintage-decklists/' | append: ev.slug | append: '/' | relative_url }}">{{ ev.label }}</a>
           {%- if ev.event != ev.label %}<br><small>{{ ev.event }}</small>{% endif -%}
         </td>
+        <td class="vd-where">{{ ev.location | default: "&ndash;" }}</td>
         <td class="vd-num">{{ ev.players | default: "&ndash;" }}</td>
       </tr>
       {%- assign prev_year = year -%}

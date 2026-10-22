@@ -110,7 +110,7 @@ module Jekyll
         { "slug" => ev["slug"], "year" => ev["date"][0, 4], "date" => ev["date"],
           "when" => VintageT8Page.when(ev), "event" => ev["event"],
           "label" => [ev["label"], online].compact.join(" · "),
-          "players" => ev["players"], "url" => pg.url,
+          "players" => ev["players"], "location" => ev["location"], "url" => pg.url,
           "deck" => ev["decks"].find { |d| d["finish"] == "1" } }
       end
       # the index page shows the same date strings without repeating the rule

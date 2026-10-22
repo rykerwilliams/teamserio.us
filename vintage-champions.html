@@ -55,7 +55,7 @@ breadcrumb_list:
     </summary>
     <div class="vc-body">
       <p class="vd-meta">
-        {{ c.event }}, {{ c.when }}.
+        {{ c.event }}, {{ c.when }}{% if c.location %}, {{ c.location }}{% endif %}.
         {%- if c.players %} {{ c.players }} players.{% endif %}
         <a href="{{ c.url | relative_url }}">Full Top 8 &rarr;</a>
         &middot; <a href="{{ '/vintage-legality' | relative_url }}#{{ c.date }}">The restricted list that day</a>

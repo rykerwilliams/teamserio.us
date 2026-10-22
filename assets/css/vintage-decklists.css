@@ -33,6 +33,7 @@
 .vd-events .vd-year-start td { border-top: 1px solid rgba(128,128,128,.6); }
 .vd-when { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .vd-seed { opacity: .7; }
+.vd-where { opacity: .85; }
 @media (max-width: 600px) {
   .vd-events small { display: none; }
   .vd-when { white-space: normal; min-width: 6rem; }
