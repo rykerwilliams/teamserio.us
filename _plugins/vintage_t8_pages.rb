@@ -20,7 +20,9 @@ module Jekyll
           "sideboard" => lines(d["sideboard"], cards, restricted),
           "main_count" => d["main"]&.sum { |c| c[0] },
           "sideboard_count" => d["sideboard"]&.sum { |c| c[0] },
-          "text" => text(d, cards)
+          "text" => text(d, cards),
+          "mtgo_text" => text(d, cards, "mtgo"),
+          "filename" => "#{ev["slug"]}-#{Jekyll::Utils.slugify(d["player"].to_s, mode: "latin")}.txt"
         )
       end
       data.merge!(
@@ -81,10 +83,12 @@ module Jekyll
     end
 
     # What the copy button puts on the clipboard: plain "4 Card Name" lines,
-    # sideboard after a blank line, as every deck builder imports them.
-    def text(d, cards)
+    # sideboard after a blank line, as every deck builder imports them. With
+    # "mtgo", the names Magic Online's .txt import takes instead, for the
+    # download button (sync-vintage-t8.py records them where they differ).
+    def text(d, cards, key = "name")
       return nil if d["main"].nil?
-      fmt = ->(part) { (part || []).map { |n, k, _| "#{n} #{cards.fetch(k)["name"]}" } }
+      fmt = ->(part) { (part || []).map { |n, k, _| c = cards.fetch(k); "#{n} #{c[key] || c["name"]}" } }
       (fmt.(d["main"]) + (d["sideboard"] ? [""] + fmt.(d["sideboard"]) : [])).join("\n")
     end
   end

@@ -55,3 +55,18 @@ function copyDecklist(button) {
   // Optional: Provide feedback to the user
   alert("Decklist copied to clipboard!");
 }
+
+// Saves the list as a .txt Magic Online imports: the championship lists carry
+// a copy with Magic Online's card names in a hidden <pre> beside the list.
+function downloadDecklist(button) {
+  var text = button.closest('.decklist-content').querySelector('.mtgo-decklist').textContent;
+  var url = URL.createObjectURL(new Blob([text.replace(/\n/g, "\r\n") + "\r\n"],
+                                         { type: "text/plain" }));
+  var a = document.createElement("a");
+  a.href = url;
+  a.download = button.getAttribute("data-filename") || "decklist.txt";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function () { URL.revokeObjectURL(url); }, 0);
+}
